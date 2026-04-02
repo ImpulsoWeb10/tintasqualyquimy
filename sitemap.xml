@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ===== HOME ===== -->
+  <url>
+    <loc>https://qualyquimy.com.br/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ===== PÁGINAS INSTITUCIONAIS ===== -->
+  <url><loc>https://qualyquimy.com.br/sobre.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://qualyquimy.com.br/onde-atendemos.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qualyquimy.com.br/politica-de-privacidade.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://qualyquimy.com.br/termos-de-uso.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- ===== CATEGORIAS ===== -->
+  <url><loc>https://qualyquimy.com.br/categorias/tintas.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qualyquimy.com.br/categorias/texturas.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qualyquimy.com.br/categorias/massas.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qualyquimy.com.br/categorias/fundos.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qualyquimy.com.br/categorias/acabamentos.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- ===== PRODUTOS (9 produtos Qualy Quimy) ===== -->
+  <url><loc>https://qualyquimy.com.br/produtos/grafiato.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://qualyquimy.com.br/produtos/textura-lisa.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://qualyquimy.com.br/produtos/massa-pva.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://qualyquimy.com.br/produtos/massa-acrilica.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://qualyquimy.com.br/produtos/seladora.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://qualyquimy.com.br/produtos/q-color.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://qualyquimy.com.br/produtos/esmalte.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://qualyquimy.com.br/produtos/textura-projetada.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://qualyquimy.com.br/produtos/liqui-brilho.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+
+  <!-- ===== PÁGINAS COMERCIAIS ===== -->
+  <url><loc>https://qualyquimy.com.br/comercial/frete-gratis-itaquaquecetuba.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qualyquimy.com.br/comercial/entrega-expressa-regional.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://qualyquimy.com.br/comercial/frete-gratis-final-de-semana.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://qualyquimy.com.br/comercial/entrega-dia-programado.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+
+  <!-- ===== CIDADES (TIER 1) ===== -->
+  <url><loc>https://qualyquimy.com.br/cidades/itaquaquecetuba.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/mogi-das-cruzes.html</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/suzano.html</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/ferraz-de-vasconcelos.html</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/poa.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/aruja.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- ===== CIDADES (TIER 2) ===== -->
+  <url><loc>https://qualyquimy.com.br/cidades/guarulhos.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/guaianases.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/itaim-paulista.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/sao-miguel-paulista.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/cidade-tiradentes.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/lajeado.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+
+  <!-- ===== BAIRROS DE ITAQUAQUECETUBA ===== -->
+  <url><loc>https://qualyquimy.com.br/cidades/itaquaquecetuba/jardim-morumbi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/itaquaquecetuba/bairro-do-limoeiro.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/itaquaquecetuba/jardim-nova-itaqua.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/itaquaquecetuba/jardim-dourado.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/itaquaquecetuba/jardim-bom-clima.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/itaquaquecetuba/estancia-maia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/itaquaquecetuba/parque-piratininga.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/itaquaquecetuba/vila-virginia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/itaquaquecetuba/chacaras-calux.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qualyquimy.com.br/cidades/itaquaquecetuba/jardim-branca-flor.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ===== BLOG (Artigos estratégicos por produto) ===== -->
+  <url><loc>https://qualyquimy.com.br/blog/grafiato-o-que-e-como-aplicar.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qualyquimy.com.br/blog/diferenca-massa-pva-massa-acrilica.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qualyquimy.com.br/blog/como-calcular-tinta-por-m2.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qualyquimy.com.br/blog/seladora-quando-usar.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qualyquimy.com.br/blog/textura-lisa-vs-grafiato.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qualyquimy.com.br/blog/esmalte-para-madeira-e-metal.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qualyquimy.com.br/blog/textura-projetada-fachadas.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qualyquimy.com.br/blog/liqui-brilho-impermeabilizante.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://qualyquimy.com.br/blog/q-color-tinta-lavavel.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+</urlset>
