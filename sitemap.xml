@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HOME -->
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- PRODUTOS (9) -->
+  <url>
+    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/tintas.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/texturas.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/massas.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/fundos.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/acabamentos.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/cidades.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/produtos/grafiato.html</loc>
     <changefreq>monthly</changefreq>
@@ -54,12 +86,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
-
-  <!-- CIDADES -->
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/itaquaquecetuba.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>1.00</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/mogi-das-cruzes.html</loc>
@@ -79,12 +109,12 @@
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/poa.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/aruja.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/guarulhos.html</loc>
@@ -116,64 +146,60 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
-
-  <!-- BAIRROS — ITAQUAQUECETUBA -->
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/itaquaquecetuba/jardim-morumbi.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/itaquaquecetuba/bairro-do-limoeiro.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/itaquaquecetuba/jardim-nova-itaqua.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/itaquaquecetuba/jardim-dourado.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/itaquaquecetuba/jardim-bom-clima.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/itaquaquecetuba/estancia-maia.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/itaquaquecetuba/parque-piratininga.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/itaquaquecetuba/vila-virginia.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/itaquaquecetuba/chacaras-calux.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/cidades/itaquaquecetuba/jardim-branca-flor.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
-
-  <!-- COMERCIAL (4) -->
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/comercial/frete-gratis-itaquaquecetuba.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/comercial/entrega-expressa-regional.html</loc>
@@ -190,35 +216,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
-
-  <!-- CATEGORIAS -->
   <url>
-    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/tintas.html</loc>
+    <loc>https://tintasqualyquimy.impulsoweb10.com.br/blog/index.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
-  <url>
-    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/texturas.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/massas.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/fundos.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://tintasqualyquimy.impulsoweb10.com.br/categorias/acabamentos.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- BLOG -->
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/blog/grafiato-o-que-e-como-aplicar.html</loc>
     <changefreq>monthly</changefreq>
@@ -264,27 +266,25 @@
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-
-  <!-- INSTITUCIONAL -->
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/sobre.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.60</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/onde-atendemos.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/politica-de-privacidade.html</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.30</priority>
   </url>
   <url>
     <loc>https://tintasqualyquimy.impulsoweb10.com.br/termos-de-uso.html</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.30</priority>
   </url>
 
 </urlset>
