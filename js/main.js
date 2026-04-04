@@ -70,8 +70,8 @@ const PRODUTOS = [
     tag: null
   },
   {
-    slug: 'q-color',
-    nome: 'Q Color',
+    slug: 'tinta-economica-qualy-color-uso-interno',
+    nome: 'Tinta Econômica Qualy Color',
     categoria: 'tintas',
     categorianome: 'Tintas',
     icon: '🎨',
