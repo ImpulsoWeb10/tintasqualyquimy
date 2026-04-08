@@ -150,7 +150,7 @@
         <h2 style="font-family:var(--fonte-titulo);font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:20px;">Calcule Sua Quantidade</h2>
         <div class="calculadora-box" style="max-width:100%;padding:24px;">
           <div class="calc-field">
-            <label>rea em m</label>
+            <label>Área em m²</label>
             <input type="number" id="area-produto" placeholder="Ex: 50" min="1" />
           </div>
           <div class="calc-field">
@@ -223,7 +223,7 @@
   <div class="seo-text-inner">
     <h2>Comprar Grafiato Qualy Quimy em Itaquaquecetuba e Região</h2>
     <p>O <strong>Grafiato Qualy Quimy</strong>  um dos produtos mais buscados para acabamento de fachadas em <strong>Itaquaquecetuba, Mogi das Cruzes, Suzano e Ferraz de Vasconcelos</strong>. Com rendimento de 4,5kg por m e disponível nos tamanhos <strong>5,6kg e 25kg</strong>, atende desde projetos residenciais at obras comerciais de grande porte.</p>
-    <p>Para melhores resultados, recomendamos usar a <a href="seladora.html">Seladora Qualy Quimy</a> como preparação antes da aplicação do grafiato. Aps o acabamento, o <a href="liqui-brilho.html">Liqui Brilho</a> garante impermeabilizao e brilho duradouro. Consulte disponibilidade pelo <strong>WhatsApp (11) 95495-0044</strong> ou acesse nossa <a href="https://shopee.com.br/qualyquimy?entryPoint=ShopBySearch&searchKeyword=tintas%20qualy%20quimy" target="_blank">loja na Shopee</a>.</p>
+    <p>Para melhores resultados, recomendamos usar a <a href="seladora.html">Seladora Qualy Quimy</a> como preparação antes da aplicação do grafiato. Após o acabamento, o <a href="liqui-brilho.html">Liqui Brilho</a> garante impermeabilizao e brilho duradouro. Consulte disponibilidade pelo <strong>WhatsApp (11) 95495-0044</strong> ou acesse nossa <a href="https://shopee.com.br/qualyquimy?entryPoint=ShopBySearch&searchKeyword=tintas%20qualy%20quimy" target="_blank">loja na Shopee</a>.</p>
   </div>
 </div>
 
@@ -268,10 +268,10 @@ function calcProduto(){
   const area=parseFloat(document.getElementById('area-produto').value||0);
   const demaos=parseInt(document.getElementById('demao-produto').value||2);
   const res=document.getElementById('resultado-produto');
-  if(!area||area<=0){alert('Informe a rea em m.');return;}
+  if(!area||area<=0){alert('Informe a Área em m².');return;}
   const kg=(area*demaos*4.5).toFixed(1);
   const emb=kg>20?'Saco 25kg':'Balde 5,6kg';
-  res.innerHTML=`<h3>📦 Resultado</h3><div class="numero">${kg}kg</div><p>rea: ${area}m ?- ${demaos} demão(s)</p><p>Embalagem ideal: <strong>${emb}</strong></p><a href="https://wa.me/5511954950044?text=Quero%20${kg}kg%20de%20Grafiato%20Qualy%20Quimy" target="_blank" class="btn-primary" style="display:inline-block;margin-top:12px">💬 Pedir pelo WhatsApp</a>`;
+  res.innerHTML=`<h3>📦 Resultado</h3><div class="numero">${kg}kg</div><p>Área: ${area}m² - ${demaos} demão(s)</p><p>Embalagem ideal: <strong>${emb}</strong></p><a href="https://wa.me/5511954950044?text=Quero%20${kg}kg%20de%20Grafiato%20Qualy%20Quimy" target="_blank" class="btn-primary" style="display:inline-block;margin-top:12px">💬 Pedir pelo WhatsApp</a>`;
   res.classList.add('ativo');
 }
 </script>

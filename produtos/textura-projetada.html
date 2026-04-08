@@ -102,7 +102,7 @@
       <div>
         <h2 style="font-family:var(--fonte-titulo);font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:20px;">Calcule Sua Quantidade</h2>
         <div class="calculadora-box" style="max-width:100%;padding:24px;">
-          <div class="calc-field"><label>rea em m</label><input type="number" id="area-produto" placeholder="Ex: 30" min="1" /></div>
+          <div class="calc-field"><label>Área em m²</label><input type="number" id="area-produto" placeholder="Ex: 30" min="1" /></div>
           <div class="calc-field"><label>Demãos</label><select id="demao-produto"><option value="1">1 demão</option><option value="2" selected>2 demãos (recomendado)</option></select></div>
           <button class="btn-calc" onclick="calcProduto()">Calcular</button>
           <div class="calc-resultado" id="resultado-produto"></div>
@@ -152,10 +152,10 @@ function calcProduto(){
   const area=parseFloat(document.getElementById('area-produto').value||0);
   const demaos=parseInt(document.getElementById('demao-produto').value||2);
   const res=document.getElementById('resultado-produto');
-  if(!area||area<=0){alert('Informe a rea em m.');return;}
+  if(!area||area<=0){alert('Informe a Área em m².');return;}
   const qty=(area*demaos*3.1).toFixed(1);
   const emb=qty>20?'Saco 25kg':'Balde 5,6kg';
-  res.innerHTML=`<h3>📦 Resultado</h3><div class="numero">${qty}kg</div><p>rea: ${area}m ?- ${demaos} demão(s)</p><p>Embalagem ideal: <strong>${emb}</strong></p><a href="https://wa.me/5511954950044?text=Quero%20${qty}kg%20de%20Textura%20Projetada%20Branca%20Qualy%20Quimy" target="_blank" class="btn-primary" style="display:inline-block;margin-top:12px">💬 Pedir pelo WhatsApp</a>`;
+  res.innerHTML=`<h3>📦 Resultado</h3><div class="numero">${qty}kg</div><p>Área: ${area}m² - ${demaos} demão(s)</p><p>Embalagem ideal: <strong>${emb}</strong></p><a href="https://wa.me/5511954950044?text=Quero%20${qty}kg%20de%20Textura%20Projetada%20Branca%20Qualy%20Quimy" target="_blank" class="btn-primary" style="display:inline-block;margin-top:12px">💬 Pedir pelo WhatsApp</a>`;
   res.classList.add('ativo');
 }
 </script>

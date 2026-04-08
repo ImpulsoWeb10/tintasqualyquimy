@@ -222,7 +222,7 @@
         </h2>
         <div class="calculadora-box" style="max-width:100%;padding:24px;">
           <div class="calc-field">
-            <label>rea em m</label>
+            <label>Área em m²</label>
             <input type="number" id="area-produto" placeholder="Ex: 30" min="1" />
           </div>
           <div class="calc-field">
@@ -369,13 +369,13 @@ function calcProduto() {
   const area = parseFloat(document.getElementById('area-produto').value || 0);
   const demaos = parseInt(document.getElementById('demao-produto').value || 2);
   const resultado = document.getElementById('resultado-produto');
-  if (!area || area <= 0) { alert('Informe a rea em m.'); return; }
+  if (!area || area <= 0) { alert('Informe a Área em m².'); return; }
   const quantidade = ((area * demaos) / 11).toFixed(2);
   const embalagem = quantidade > 10 ? '18L (Lata)' : quantidade > 3 ? '3,6L' : '1L';
   resultado.innerHTML = `
     <h3>📦 Resultado</h3>
     <div class="numero">${quantidade}L</div>
-    <p>rea: ${area}m ?- ${demaos} demão(s)</p>
+    <p>Área: ${area}m² - ${demaos} demão(s)</p>
     <p>Embalagem ideal: <strong>${embalagem}</strong></p>
     <a href="https://wa.me/5511954950044?text=Quero%20${quantidade}L%20de%20Q%20Color%20Qualy%20Quimy"
        target="_blank" class="btn-primary" style="display:inline-block;margin-top:12px">💬 Pedir pelo WhatsApp</a>
