@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /rascunhos/
 
-Sitemap: https://qualyquimy.com.br/sitemap.xml
+Sitemap: https://tintasqualyquimy.impulsoweb10.com.br/sitemap.xml
