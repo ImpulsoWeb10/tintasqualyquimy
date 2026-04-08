@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Gerador de Schema Product — Qualy Quimy</title>
+<title>Gerador de Schema Product - Qualy Quimy</title>
 <meta name="robots" content="noindex, follow" />
 <link rel="canonical" href="https://tintasqualyquimy.impulsoweb10.com.br/gerador-schema-produto.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,7 +38,7 @@
     line-height: 1.6;
   }
 
-  /* ── HEADER ── */
+  /* HEADER */
   .header {
     background: var(--navy2);
     border-bottom: 1px solid var(--border);
@@ -91,14 +91,14 @@
     letter-spacing: 0.5px;
   }
 
-  /* ── LAYOUT ── */
+  /* LAYOUT */
   .layout {
     display: grid;
     grid-template-columns: 400px 1fr;
     min-height: calc(100vh - 60px);
   }
 
-  /* ── SIDEBAR FORM ── */
+  /* SIDEBAR FORM */
   .sidebar {
     background: var(--navy2);
     border-right: 1px solid var(--border);
@@ -170,7 +170,7 @@
     font-style: italic;
   }
 
-  /* ── EMBALAGENS ── */
+  /* EMBALAGENS */
   .emb-section {
     background: var(--navy3);
     border: 1px solid var(--border);
@@ -233,14 +233,14 @@
     color: var(--text);
   }
 
-  /* ── RATING ── */
+  /* RATING */
   .rating-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
 
-  /* ── BTN ── */
+  /* BTN */
   .btn-generate {
     background: var(--red);
     color: #fff;
@@ -273,14 +273,14 @@
 
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  /* ── MAIN AREA ── */
+  /* MAIN AREA */
   .main {
     display: flex;
     flex-direction: column;
     overflow: hidden;
   }
 
-  /* ── TABS ── */
+  /* TABS */
   .tabs {
     display: flex;
     gap: 0;
@@ -303,7 +303,7 @@
   .tab:hover { color: var(--text); }
   .tab.active { color: var(--text); border-bottom-color: var(--red); }
 
-  /* ── OUTPUT AREA ── */
+  /* OUTPUT AREA */
   .output {
     flex: 1;
     overflow-y: auto;
@@ -340,7 +340,7 @@
 
   .empty-state p { font-size: 14px; max-width: 320px; }
 
-  /* ── VALIDATION PANEL ── */
+  /* VALIDATION PANEL */
   .validation-panel {
     background: var(--navy2);
     border: 1px solid var(--border);
@@ -405,7 +405,7 @@
   .check-dot.fail { background: var(--error); }
   .check-dot.warn { background: var(--warn); }
 
-  /* ── CODE BLOCK ── */
+  /* CODE BLOCK */
   .code-block {
     background: var(--navy2);
     border: 1px solid var(--border);
@@ -482,7 +482,7 @@
   .tok-bool  { color: #FF7B72; }
   .tok-type  { color: var(--gold); }
 
-  /* ── HTML SNIPPET ── */
+  /* HTML SNIPPET */
   .html-snippet {
     background: var(--navy2);
     border: 1px solid var(--border);
@@ -490,7 +490,7 @@
     overflow: hidden;
   }
 
-  /* ── OFFERS LIST ── */
+  /* OFFERS LIST */
   .offers-list {
     display: flex;
     flex-direction: column;
@@ -527,7 +527,7 @@
     gap: 4px;
   }
 
-  /* ── AI DESCRIPTION ── */
+  /* AI DESCRIPTION */
   .ai-desc-section {
     background: linear-gradient(135deg, rgba(88,166,255,0.05), rgba(240,165,0,0.05));
     border: 1px solid rgba(88,166,255,0.2);
@@ -555,7 +555,7 @@
   }
 
   .ai-label::before {
-    content: '✦';
+    content: '?';
     color: var(--gold);
     font-size: 10px;
   }
@@ -590,7 +590,7 @@
 
   @keyframes blink { 50% { opacity: 0; } }
 
-  /* ── HISTORY ── */
+  /* HISTORY */
   .history-list {
     display: flex;
     flex-direction: column;
@@ -634,13 +634,13 @@
     border-radius: 20px;
   }
 
-  /* ── SCROLLBAR ── */
+  /* SCROLLBAR */
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
   ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 
-  /* ── RESPONSIVE ── */
+  /* RESPONSIVE */
   @media (max-width: 900px) {
     .layout { grid-template-columns: 1fr; }
     .sidebar { border-right: none; border-bottom: 1px solid var(--border); max-height: 60vh; }
@@ -653,27 +653,27 @@
 <header class="header">
   <div class="logo-area">
     <div class="logo-mark">QQ</div>
-    <span class="logo-text">Qualy<span>Quimy</span> · Schema Generator</span>
+    <span class="logo-text">Qualy<span>Quimy</span>  Schema Generator</span>
   </div>
   <span class="header-badge">Rich Results Ready</span>
 </header>
 
 <div class="layout">
 
-  <!-- ── SIDEBAR ── -->
+  <!-- SIDEBAR -->
   <aside class="sidebar">
-    <div class="sidebar-title">📦 Dados do Produto</div>
+    <div class="sidebar-title">Dados do Produto</div>
 
     <div class="field-group">
-      <label>Nome do Produto <span class="req">* obrigatório</span></label>
+      <label>Nome do Produto <span class="req">* obrigatrio</span></label>
       <input type="text" id="f-nome" placeholder="ex: Grafiato Qualy Quimy" oninput="liveValidate()" />
-      <span class="field-hint">Será usado em name, offers.name e aggregateRating</span>
+      <span class="field-hint">Ser usado em name, offers.name e aggregateRating</span>
     </div>
 
     <div class="field-group">
       <label>Slug da URL <span class="req">*</span></label>
       <input type="text" id="f-slug" placeholder="ex: grafiato" oninput="autoSlug(false)" />
-      <span class="field-hint">Gerado automaticamente. Apenas letras minúsculas e hífens.</span>
+      <span class="field-hint">Gerado automaticamente. Apenas letras minsculas e hfens.</span>
     </div>
 
     <div class="field-group">
@@ -682,9 +682,9 @@
     </div>
 
     <div class="field-group">
-      <label>Descrição SEO <span class="req">*</span></label>
-      <textarea id="f-desc" rows="3" placeholder="Descrição completa do produto com palavras-chave..."></textarea>
-      <span class="field-hint">Mínimo 50 caracteres. Deve mencionar 'Qualy Quimy'.</span>
+      <label>Descrio SEO <span class="req">*</span></label>
+      <textarea id="f-desc" rows="3" placeholder="Descrio completa do produto com palavras-chave..."></textarea>
+      <span class="field-hint">Mnimo 50 caracteres. Deve mencionar 'Qualy Quimy'.</span>
     </div>
 
     <div class="field-group">
@@ -700,14 +700,14 @@
 
     <!-- EMBALAGENS -->
     <div class="emb-section">
-      <div class="emb-section-title">📐 Embalagens / Variantes</div>
+      <div class="emb-section-title">Embalagens / Variantes</div>
       <div class="emb-checkboxes" id="emb-boxes">
         <!-- gerado via JS -->
       </div>
     </div>
 
     <!-- RATINGS -->
-    <div class="sidebar-title" style="margin-top:4px;">⭐ AggregateRating</div>
+    <div class="sidebar-title" style="margin-top:4px;">? AggregateRating</div>
     <div class="rating-row">
       <div class="field-group">
         <label>ratingValue</label>
@@ -727,34 +727,34 @@
     <!-- AI DESCRIPTION -->
     <div class="ai-desc-section">
       <div class="ai-desc-header">
-        <span class="ai-label">Gerar Descrição com IA</span>
-        <button class="btn-ai" id="btn-ai-desc" onclick="gerarDescricaoIA()">✦ Gerar</button>
+        <span class="ai-label">Gerar Descrio com IA</span>
+        <button class="btn-ai" id="btn-ai-desc" onclick="gerarDescricaoIA()">? Gerar</button>
       </div>
-      <div class="ai-output" id="ai-output">Preencha o nome e clique em Gerar para criar uma descrição SEO otimizada automaticamente.</div>
+      <div class="ai-output" id="ai-output">Preencha o nome e clique em Gerar para criar uma descrio SEO otimizada automaticamente.</div>
     </div>
 
     <button class="btn-generate" id="btn-gerar" onclick="gerarSchema()">
-      <span id="btn-icon">⚡</span>
+      <span id="btn-icon">?</span>
       <span id="btn-txt">Gerar Schema Product</span>
     </button>
   </aside>
 
-  <!-- ── MAIN ── -->
+  <!-- MAIN -->
   <main class="main">
     <div class="tabs">
       <div class="tab active" onclick="showTab('schema', this)">JSON-LD Schema</div>
       <div class="tab" onclick="showTab('html', this)">Bloco HTML</div>
       <div class="tab" onclick="showTab('offers', this)">Variantes / Offers</div>
-      <div class="tab" onclick="showTab('validation', this)">Validação</div>
-      <div class="tab" onclick="showTab('history', this)">Histórico</div>
+      <div class="tab" onclick="showTab('validation', this)">Validao</div>
+      <div class="tab" onclick="showTab('history', this)">Histrico</div>
     </div>
 
     <div class="output" id="output">
       <div class="empty-state" id="empty">
-        <div class="empty-icon">⚡</div>
+        <div class="empty-icon">?</div>
         <h3>Pronto para gerar</h3>
         <p>Preencha os dados do produto na lateral e clique em <strong>Gerar Schema Product</strong>.</p>
-        <p style="margin-top:8px;font-size:12px;color:var(--muted);">Todos os schemas são gerados com os 15 campos obrigatórios do Google Rich Results.</p>
+        <p style="margin-top:8px;font-size:12px;color:var(--muted);">Todos os schemas so gerados com os 15 campos obrigatrios do Google Rich Results.</p>
       </div>
     </div>
   </main>
@@ -762,10 +762,8 @@
 </div>
 
 <script>
-// ══════════════════════════════════════════════════════════
-// CONFIGURAÇÃO BASE DO PROJETO
-// ══════════════════════════════════════════════════════════
-const BASE_URL = "https://tintasqualyquimy.impulsoweb10.com.br";
+// // CONFIGURAO BASE DO PROJETO
+// const BASE_URL = "https://tintasqualyquimy.impulsoweb10.com.br";
 const IMAGE_BASE = `${BASE_URL}/imagens`;
 const BRAND = "Qualy Quimy";
 const SELLER_ORG = { "@type": "Organization", "name": BRAND, "url": BASE_URL };
@@ -779,15 +777,14 @@ const EMBALAGENS = [
   { id: "25",   label: "25kg",  skuSufx: "25",  tipo: "Saco"   },
 ];
 
-// Seleções padrão
+// Selees padro
 const embDefaults = { "56": true, "25": true };
 let selectedEmbs = { ...embDefaults };
 let schemaHistory = [];
 let currentSchema = null;
 let activeTab = "schema";
 
-// ── Render embalagens checkboxes ──
-function renderEmbs() {
+// Render embalagens checkboxes function renderEmbs() {
   const box = document.getElementById("emb-boxes");
   box.innerHTML = EMBALAGENS.map(e => `
     <label class="emb-check ${selectedEmbs[e.id] ? "checked" : ""}" onclick="toggleEmb('${e.id}', this)">
@@ -804,8 +801,7 @@ function toggleEmb(id, el) {
   el.querySelector("input").checked = selectedEmbs[id];
 }
 
-// ── Auto-slug from name ──
-function autoSlug(force = true) {
+// Auto-slug from name function autoSlug(force = true) {
   if (force || document.getElementById("f-slug").value === "") {
     const name = document.getElementById("f-nome").value;
     const slug = name.toLowerCase()
@@ -837,8 +833,7 @@ function liveValidate() {
   }
 }
 
-// ── Build Offer ──
-function buildOffer(nome, skuBase, embLabel, skuSufx, pvd) {
+// Build Offer function buildOffer(nome, skuBase, embLabel, skuSufx, pvd) {
   const url = `${BASE_URL}/produtos/${document.getElementById("f-slug").value}.html`;
   return {
     "@type": "Offer",
@@ -854,8 +849,7 @@ function buildOffer(nome, skuBase, embLabel, skuSufx, pvd) {
   };
 }
 
-// ── BUILD SCHEMA ──
-function buildSchema() {
+// BUILD SCHEMA function buildSchema() {
   const nome  = document.getElementById("f-nome").value.trim();
   const slug  = document.getElementById("f-slug").value.trim();
   const sku   = document.getElementById("f-sku").value.trim();
@@ -894,14 +888,13 @@ function buildSchema() {
   return schema;
 }
 
-// ── VALIDATE ──
-function validateSchema(schema) {
+// VALIDATE function validateSchema(schema) {
   const checks = [];
   const add = (field, ok, warn = false) => checks.push({ field, ok, warn });
 
-  add("name (≥3 chars)", schema.name && schema.name.length >= 3);
+  add("name (?3 chars)", schema.name && schema.name.length >= 3);
   add("sku (QQ- prefix)", schema.sku && schema.sku.startsWith("QQ-"));
-  add("description (≥50)", schema.description && schema.description.length >= 50);
+  add("description (?50)", schema.description && schema.description.length >= 50);
   add("brand @type", schema.brand && schema.brand["@type"] === "Brand");
   add("manufacturer", !!schema.manufacturer);
   add("image[] (2 URLs)", Array.isArray(schema.image) && schema.image.length >= 2);
@@ -932,8 +925,7 @@ function validateSchema(schema) {
   return { checks, score, passed, total };
 }
 
-// ── SYNTAX HIGHLIGHT JSON ──
-function highlight(json) {
+// SYNTAX HIGHLIGHT JSON function highlight(json) {
   return json
     .replace(/("https?:\/\/[^"]*")/g, '<span class="tok-url">$1</span>')
     .replace(/("@[a-zA-Z]+")\s*:/g, '<span class="tok-type">$1</span>:')
@@ -943,21 +935,20 @@ function highlight(json) {
     .replace(/:\s*(true|false|null)/g, ': <span class="tok-bool">$1</span>');
 }
 
-// ── RENDER TABS ──
-function renderOutput(schema) {
+// RENDER TABS function renderOutput(schema) {
   const json = JSON.stringify(schema, null, 2);
   const { checks, score, passed, total } = validateSchema(schema);
   const offerList = Array.isArray(schema.offers) ? schema.offers : [schema.offers];
   const scoreClass = score === 100 ? "score-100" : score >= 80 ? "score-warn" : "score-error";
-  const scoreLabel = score === 100 ? "100% VÁLIDO" : `${score}% (${passed}/${total})`;
+  const scoreLabel = score === 100 ? "100% VLIDO" : `${score}% (${passed}/${total})`;
 
   const tabs = {
     schema: `
       <div class="code-block">
         <div class="code-header">
-          <span class="code-lang">application/ld+json — Product Schema</span>
+          <span class="code-lang">application/ld+json - Product Schema</span>
           <div class="code-actions">
-            <button class="btn-copy" onclick="copySchema()">⎘ Copiar JSON</button>
+            <button class="btn-copy" onclick="copySchema()">? Copiar JSON</button>
           </div>
         </div>
         <div class="code-body">
@@ -968,9 +959,9 @@ function renderOutput(schema) {
     html: `
       <div class="html-snippet">
         <div class="code-header" style="background:var(--navy3);border-bottom:1px solid var(--border)">
-          <span class="code-lang">HTML — Bloco pronto para colar no &lt;head&gt;</span>
+          <span class="code-lang">HTML - Bloco pronto para colar no &lt;head&gt;</span>
           <div class="code-actions">
-            <button class="btn-copy" onclick="copyHtml()">⎘ Copiar HTML</button>
+            <button class="btn-copy" onclick="copyHtml()">? Copiar HTML</button>
           </div>
         </div>
         <div class="code-body">
@@ -979,15 +970,15 @@ function renderOutput(schema) {
       </div>
       <div class="code-block">
         <div class="code-header">
-          <span class="code-lang">Instruções de Implementação</span>
+          <span class="code-lang">Instrues de Implementao</span>
         </div>
         <div class="code-body">
-          <pre style="color:var(--muted);font-size:12px">1. Cole o bloco &lt;script&gt; imediatamente após &lt;meta charset="UTF-8" /&gt;
-2. Certifique-se de que há APENAS UM schema @type:Product por página
+          <pre style="color:var(--muted);font-size:12px">1. Cole o bloco &lt;script&gt; imediatamente aps &lt;meta charset="UTF-8" /&gt;
+2. Certifique-se de que h APENAS UM schema @type:Product por pgina
 3. Substitua as URLs de imagem assim que o arquivo .webp estiver no servidor:
-   → ${schema.image[0]}
-   → ${schema.image[1]}
-4. Quando definir preço fixo, substitua "price": "0" pelo valor numérico
+   ? ${schema.image[0]}
+   ? ${schema.image[1]}
+4. Quando definir preo fixo, substitua "price": "0" pelo valor numrico
    Exemplo: "price": "49.90"  (sem R$, ponto como decimal)
 5. Teste em: https://search.google.com/test/rich-results</pre>
         </div>
@@ -996,7 +987,7 @@ function renderOutput(schema) {
     offers: `
       <div class="validation-panel">
         <div class="validation-header">
-          <div class="validation-title">📦 Variantes (Offers) Geradas</div>
+          <div class="validation-title">Variantes (Offers) Geradas</div>
           <span class="score-badge score-100">${offerList.length} variante${offerList.length > 1 ? "s" : ""}</span>
         </div>
         <div style="padding:16px;display:flex;flex-direction:column;gap:8px;">
@@ -1004,7 +995,7 @@ function renderOutput(schema) {
             <div class="offer-row">
               <span class="offer-sku">${o.sku}</span>
               <span class="offer-name">${o.name}</span>
-              <span class="offer-status">✅ ${o.priceCurrency} · ${o.availability.split("/").pop()} · ${o.itemCondition.split("/").pop()}</span>
+              <span class="offer-status">? ${o.priceCurrency}  ${o.availability.split("/").pop()}  ${o.itemCondition.split("/").pop()}</span>
             </div>
           `).join("")}
         </div>
@@ -1014,14 +1005,14 @@ function renderOutput(schema) {
           <span class="code-lang">Mapa de SKUs</span>
         </div>
         <div class="code-body">
-          <pre>${offerList.map(o => `${o.sku.padEnd(18)} → ${o.name}`).join("\n")}</pre>
+          <pre>${offerList.map(o => `${o.sku.padEnd(18)} ? ${o.name}`).join("\n")}</pre>
         </div>
       </div>`,
 
     validation: `
       <div class="validation-panel">
         <div class="validation-header">
-          <div class="validation-title">🔍 Google Rich Results — Verificação Completa</div>
+          <div class="validation-title">Google Rich Results - Verificao Completa</div>
           <span class="score-badge ${scoreClass}">${scoreLabel}</span>
         </div>
         <div class="checks-grid">
@@ -1035,29 +1026,29 @@ function renderOutput(schema) {
       </div>
       ${score < 100 ? `
         <div style="background:rgba(248,81,73,0.08);border:1px solid rgba(248,81,73,0.2);border-radius:8px;padding:16px;">
-          <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--error);margin-bottom:10px;">❌ Campos para Corrigir</div>
-          ${checks.filter(c => !c.ok).map(c => `<div style="font-size:13px;color:var(--muted);padding:4px 0;font-family:'DM Mono',monospace;">→ ${c.field}</div>`).join("")}
+          <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--error);margin-bottom:10px;">? Campos para Corrigir</div>
+          ${checks.filter(c => !c.ok).map(c => `<div style="font-size:13px;color:var(--muted);padding:4px 0;font-family:'DM Mono',monospace;">? ${c.field}</div>`).join("")}
         </div>` : `
         <div style="background:rgba(46,160,67,0.08);border:1px solid rgba(46,160,67,0.2);border-radius:8px;padding:20px;text-align:center;">
-          <div style="font-size:32px;margin-bottom:8px;">🎉</div>
-          <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--valid);">Schema 100% Válido</div>
-          <div style="font-size:13px;color:var(--muted);margin-top:6px;">Compatível com Google Rich Results Product. Todos os ${total} campos verificados.</div>
+          <div style="font-size:32px;margin-bottom:8px;"></div>
+          <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--valid);">Schema 100% Vlido</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:6px;">Compatvel com Google Rich Results Product. Todos os ${total} campos verificados.</div>
         </div>`}`,
 
     history: schemaHistory.length === 0 ? `
       <div class="empty-state">
-        <div class="empty-icon">📋</div>
+        <div class="empty-icon"></div>
         <h3>Nenhum schema gerado ainda</h3>
-        <p>Os schemas gerados nesta sessão aparecerão aqui.</p>
+        <p>Os schemas gerados nesta sesso aparecero aqui.</p>
       </div>` : `
       <div class="history-list">
         ${schemaHistory.map((h, i) => `
           <div class="history-item" onclick="loadHistory(${i})">
             <div>
               <div class="history-name">${h.schema.name}</div>
-              <div class="history-meta">${h.schema.sku} · ${h.time} · ${Array.isArray(h.schema.offers) ? h.schema.offers.length : 1} variante(s)</div>
+              <div class="history-meta">${h.schema.sku}  ${h.time}  ${Array.isArray(h.schema.offers) ? h.schema.offers.length : 1} variante(s)</div>
             </div>
-            <span class="history-badge">100% ✓</span>
+            <span class="history-badge">100% ?</span>
           </div>
         `).join("")}
       </div>`
@@ -1081,15 +1072,14 @@ function showTab(name, el) {
   out.innerHTML = allTabs[name] || allTabs.schema;
 }
 
-// ── MAIN GENERATE ──
-function gerarSchema() {
+// MAIN GENERATE function gerarSchema() {
   const nome = document.getElementById("f-nome").value.trim();
   const slug = document.getElementById("f-slug").value.trim();
   const sku  = document.getElementById("f-sku").value.trim();
   const desc = document.getElementById("f-desc").value.trim();
 
   if (!nome || !slug || !sku || !desc) {
-    alert("Preencha: Nome, Slug, SKU e Descrição antes de gerar.");
+    alert("Preencha: Nome, Slug, SKU e Descrio antes de gerar.");
     return;
   }
 
@@ -1121,17 +1111,16 @@ function gerarSchema() {
     out.innerHTML = allTabs[activeTab] || allTabs.schema;
 
     btn.disabled = false;
-    icon.textContent = "⚡";
+    icon.textContent = "?";
     txt.textContent = "Gerar Schema Product";
   }, 300);
 }
 
-// ── COPY ──
-function copySchema() {
+// COPY function copySchema() {
   if (!currentSchema) return;
   navigator.clipboard.writeText(JSON.stringify(currentSchema, null, 2)).then(() => {
     const btn = document.querySelector(".btn-copy");
-    if (btn) { btn.textContent = "✓ Copiado!"; btn.classList.add("copied"); setTimeout(() => { btn.textContent = "⎘ Copiar JSON"; btn.classList.remove("copied"); }, 2000); }
+    if (btn) { btn.textContent = "? Copiado!"; btn.classList.add("copied"); setTimeout(() => { btn.textContent = "? Copiar JSON"; btn.classList.remove("copied"); }, 2000); }
   });
 }
 
@@ -1140,19 +1129,17 @@ function copyHtml() {
   const html = `<script type="application/ld+json">\n${JSON.stringify(currentSchema, null, 2)}\n<\/script>`;
   navigator.clipboard.writeText(html).then(() => {
     const btn = document.querySelector(".btn-copy");
-    if (btn) { btn.textContent = "✓ Copiado!"; btn.classList.add("copied"); setTimeout(() => { btn.textContent = "⎘ Copiar HTML"; btn.classList.remove("copied"); }, 2000); }
+    if (btn) { btn.textContent = "? Copiado!"; btn.classList.add("copied"); setTimeout(() => { btn.textContent = "? Copiar HTML"; btn.classList.remove("copied"); }, 2000); }
   });
 }
 
-// ── LOAD HISTORY ──
-function loadHistory(i) {
+// LOAD HISTORY function loadHistory(i) {
   currentSchema = schemaHistory[i].schema;
   allTabs = renderOutput(currentSchema);
   document.getElementById("output").innerHTML = allTabs[activeTab] || allTabs.schema;
 }
 
-// ── AI DESCRIPTION GENERATOR ──
-async function gerarDescricaoIA() {
+// AI DESCRIPTION GENERATOR async function gerarDescricaoIA() {
   const nome = document.getElementById("f-nome").value.trim();
   const cat  = document.getElementById("f-cat").value;
   const embs = EMBALAGENS.filter(e => selectedEmbs[e.id]).map(e => e.label).join(", ");
@@ -1162,11 +1149,11 @@ async function gerarDescricaoIA() {
   const btn = document.getElementById("btn-ai-desc");
   const out = document.getElementById("ai-output");
   btn.disabled = true;
-  btn.textContent = "✦ Gerando...";
+  btn.textContent = "? Gerando...";
   out.textContent = "";
   out.classList.add("ai-typing");
 
-  const prompt = `Crie uma descrição SEO para o produto abaixo. Deve ter entre 120 e 160 caracteres, mencionar "Qualy Quimy", incluir o uso principal e ser natural. Retorne APENAS a descrição, sem aspas nem explicações.
+  const prompt = `Crie uma descrio SEO para o produto abaixo. Deve ter entre 120 e 160 caracteres, mencionar "Qualy Quimy", incluir o uso principal e ser natural. Retorne APENAS a descrio, sem aspas nem explicaes.
 
 Produto: ${nome}
 Categoria: ${cat}
@@ -1184,7 +1171,7 @@ Embalagens: ${embs || "consultar"}`;
     });
     const data = await resp.json();
     const texto = data.content?.map(c => c.text || "").join("").trim()
-      || "Produto Qualy Quimy de alta qualidade para aplicações profissionais.";
+      || "Produto Qualy Quimy de alta qualidade para aplicaes profissionais.";
 
     out.classList.remove("ai-typing");
     out.textContent = texto;
@@ -1195,11 +1182,10 @@ Embalagens: ${embs || "consultar"}`;
   }
 
   btn.disabled = false;
-  btn.textContent = "✦ Gerar";
+  btn.textContent = "? Gerar";
 }
 
-// ── INIT ──
-renderEmbs();
+// INIT renderEmbs();
 </script>
 </body>
 </html>
