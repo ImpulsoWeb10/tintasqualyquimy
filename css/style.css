@@ -441,6 +441,54 @@ section { padding: 72px 24px; }
 
 .produto-card:hover .produto-cta { background: #b82020; }
 
+/* ======= ICONES AUTOMATICOS DOS CARDS ======= */
+.qq-card-svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  color: var(--cor-secundaria);
+  flex-shrink: 0;
+}
+
+.qq-card-svg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.qq-card-svg-top {
+  width: 44px;
+  height: 44px;
+  color: var(--cor-secundaria);
+  opacity: 0.9;
+}
+
+.qq-card-has-inline-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.qq-card-svg-inline {
+  width: 16px;
+  height: 16px;
+  color: rgba(255,255,255,0.92);
+}
+
+.qq-card-svg-frete {
+  width: 34px;
+  height: 34px;
+  color: var(--cor-primaria);
+}
+
+.qq-card-svg-hero {
+  width: 28px;
+  height: 28px;
+  color: var(--cor-acento);
+}
+
 /* ======= CATEGORIAS ======= */
 .categorias-grid {
   display: grid;
