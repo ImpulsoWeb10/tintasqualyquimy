@@ -1,0 +1,81 @@
+{
+  "_INSTRUCOES": "Template Universal — Product Schema Qualy Quimy. Substituir todos os campos marcados com [VALOR]. Não remover nenhum campo. Adicionar ao <head> de toda página de produto.",
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "[NOME_PRODUTO] Qualy Quimy",
+  "sku": "QQ-[SIGLA]",
+  "description": "[DESCRICAO_150_CHARS_MIN]. Marca Qualy Quimy.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Qualy Quimy"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Qualy Quimy",
+    "url": "https://tintasqualyquimy.impulsoweb10.com.br"
+  },
+  "image": [
+    "https://tintasqualyquimy.impulsoweb10.com.br/imagens/[SLUG]-qualy-quimy.webp",
+    "https://tintasqualyquimy.impulsoweb10.com.br/imagens/[SLUG]-embalagem-qualy-quimy.webp"
+  ],
+  "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/[SLUG].html",
+  "offers": [
+    {
+      "_NOTA": "Repetir este bloco para cada embalagem/variante disponível",
+      "@type": "Offer",
+      "name": "[NOME_PRODUTO] Qualy Quimy [EMBALAGEM]",
+      "sku": "QQ-[SIGLA]-[EMB_COD]",
+      "price": "0",
+      "_AVISO_PRICE": "Valor 0 = sob consulta. Quando tiver preço fixo: substituir pelo valor numerico sem R$ (ex: 49.90)",
+      "priceCurrency": "BRL",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/[SLUG].html",
+      "seller": {
+        "@type": "Organization",
+        "name": "Qualy Quimy",
+        "url": "https://tintasqualyquimy.impulsoweb10.com.br"
+      }
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "[NUMERO_AVALIACOES]",
+    "ratingCount": "[NUMERO_AVALIACOES]"
+  },
+  "_REGRAS_OBRIGATORIAS": [
+    "UMA PÁGINA = UM ÚNICO schema @type Product",
+    "Nunca usar URLs relativas — sempre absolutas com https://",
+    "priceCurrency SEMPRE = BRL",
+    "availability SEMPRE = https://schema.org/InStock",
+    "itemCondition SEMPRE = https://schema.org/NewCondition",
+    "image[] SEMPRE com URLs absolutas .webp",
+    "Cada embalagem = um Offer separado com SKU único",
+    "aggregateRating.bestRating e worstRating OBRIGATÓRIOS",
+    "aggregateRating.ratingCount = mesmo valor que reviewCount",
+    "manufacturer OBRIGATÓRIO além de brand"
+  ],
+  "_SKU_CODES": {
+    "Grafiato": "QQ-GRF",
+    "Textura Lisa": "QQ-TXL",
+    "Massa PVA": "QQ-PVA",
+    "Massa Acrilica": "QQ-MAC",
+    "Seladora": "QQ-SEL",
+    "Q Color": "QQ-QCL",
+    "Esmalte": "QQ-ESM",
+    "Textura Projetada": "QQ-TXP",
+    "Liqui Brilho": "QQ-LQB"
+  },
+  "_EMB_CODES": {
+    "1L": "1L",
+    "3,6L": "36",
+    "16L": "16",
+    "18L": "18",
+    "5,6kg": "56",
+    "25kg": "25"
+  }
+}
