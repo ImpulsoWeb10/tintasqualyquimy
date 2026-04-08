@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /rascunhos/
 
-Sitemap: https://tintasqualyquimy.impulsoweb10.com.br/sitemap.xml
+Sitemap: http://localhost:3000/sitemap.xml
