@@ -58,24 +58,7 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <meta property="og:image" content="https://tintasqualyquimy.impulsoweb10.com.br/imagens/og-qualyquimy.jpg" />
-  <!--
-=======================================================================
-  SCHEMA JSON-LD - QUALY QUIMY
-  Arquivo: schema-index-qualyquimy.html
-  
-  INSTRUÇÕES DE USO:
-  Cole todo o conteúdo entre as tags <head> e </head> do seu index.html,
-  preferencialmente antes do fechamento </head>.
-  
-  O que está incluído:
-  1. LocalBusiness  → endereço, telefone, horário, avaliação
-  2. Organization   → dados da empresa, redes sociais
-  3. WebSite        → habilita campo de busca no Google (Sitelinks Searchbox)
-  4. ItemList       → lista dos produtos (indexação enriquecida)
-=======================================================================
--->
-
-<!-- SCHEMA 1: LocalBusiness + Store (negócio local - o mais importante pro SEO local) -->
+<!-- SCHEMA 1: LocalBusiness + Store -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,17 +69,15 @@
   "description": "Loja especializada em tintas, massas, texturas e materiais para pintura da marca Qualy Quimy. Grafiato, Textura Lisa, Massa PVA, Massa Acrílica, Tinta Econômica, Seladora e Liqui Brilho. Entrega em Itaquaquecetuba, Mogi das Cruzes, Suzano, Ferraz de Vasconcelos e região.",
   "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
   "telephone": "+55-11-95495-0044",
-  "email": "",
   "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp",
   "logo": "https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Rua Leiria, 45",
+    "streetAddress": "Rua Leiria, 45 - Chácara Cuiabá",
     "addressLocality": "Itaquaquecetuba",
     "addressRegion": "SP",
     "postalCode": "08571-000",
-    "addressCountry": "BR",
-    "addressLocality": "Chácara Cuiabá, Itaquaquecetuba"
+    "addressCountry": "BR"
   },
   "geo": {
     "@type": "GeoCoordinates",
@@ -107,7 +88,7 @@
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
       "opens": "08:00",
       "closes": "18:00"
     },
@@ -129,35 +110,13 @@
   "currenciesAccepted": "BRL",
   "paymentAccepted": "Dinheiro, PIX, Cartão de Crédito, Cartão de Débito",
   "areaServed": [
-    {
-      "@type": "City",
-      "name": "Itaquaquecetuba",
-      "sameAs": "https://www.wikidata.org/wiki/Q493404"
-    },
-    {
-      "@type": "City",
-      "name": "Mogi das Cruzes"
-    },
-    {
-      "@type": "City",
-      "name": "Suzano"
-    },
-    {
-      "@type": "City",
-      "name": "Ferraz de Vasconcelos"
-    },
-    {
-      "@type": "City",
-      "name": "Poá"
-    },
-    {
-      "@type": "City",
-      "name": "Arujá"
-    },
-    {
-      "@type": "City",
-      "name": "Guarulhos"
-    }
+    {"@type": "City", "name": "Itaquaquecetuba"},
+    {"@type": "City", "name": "Mogi das Cruzes"},
+    {"@type": "City", "name": "Suzano"},
+    {"@type": "City", "name": "Ferraz de Vasconcelos"},
+    {"@type": "City", "name": "Poá"},
+    {"@type": "City", "name": "Arujá"},
+    {"@type": "City", "name": "Guarulhos"}
   ],
   "sameAs": [
     "https://wa.me/5511954950044",
@@ -167,14 +126,13 @@
     "@type": "ContactPoint",
     "telephone": "+55-11-95495-0044",
     "contactType": "customer service",
-    "contactOption": "TollFree",
     "availableLanguage": "Portuguese",
     "areaServed": "BR"
   }
 }
 </script>
 
-<!-- SCHEMA 2: Organization (credibilidade da marca) -->
+<!-- SCHEMA 2: Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -204,7 +162,7 @@
 }
 </script>
 
-<!-- SCHEMA 3: WebSite (habilita Sitelinks Searchbox no Google) -->
+<!-- SCHEMA 3: WebSite -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -228,7 +186,7 @@
 }
 </script>
 
-<!-- SCHEMA 4: ItemList - Catálogo de Produtos (aparece como lista enriquecida no Google) -->
+<!-- SCHEMA 4: ItemList com preços "a partir de" (AggregateOffer) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -242,22 +200,18 @@
       "@type": "ListItem",
       "position": 1,
       "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/grafiato.html",
-      "name": "Grafiato Qualy Quimy",
       "item": {
         "@type": "Product",
         "name": "Grafiato Qualy Quimy",
         "description": "Acabamento texturizado para fachadas e paredes. Alta durabilidade e resistência. Disponível em 5,6kg e 25kg.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Qualy Quimy"
-        },
+        "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/grafiato.webp",
+        "brand": {"@type": "Brand", "name": "Qualy Quimy"},
         "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
+          "@type": "AggregateOffer",
+          "lowPrice": "29.90",
           "priceCurrency": "BRL",
-          "seller": {
-            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
-          }
+          "availability": "https://schema.org/InStock",
+          "seller": {"@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}
         }
       }
     },
@@ -265,22 +219,18 @@
       "@type": "ListItem",
       "position": 2,
       "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/textura-lisa.html",
-      "name": "Textura Lisa Qualy Quimy",
       "item": {
         "@type": "Product",
         "name": "Textura Lisa Qualy Quimy",
         "description": "Acabamento liso e uniforme para paredes internas e externas. Disponível em 5,6kg e 25kg.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Qualy Quimy"
-        },
+        "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/textura-lisa.webp",
+        "brand": {"@type": "Brand", "name": "Qualy Quimy"},
         "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
+          "@type": "AggregateOffer",
+          "lowPrice": "29.90",
           "priceCurrency": "BRL",
-          "seller": {
-            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
-          }
+          "availability": "https://schema.org/InStock",
+          "seller": {"@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}
         }
       }
     },
@@ -288,22 +238,18 @@
       "@type": "ListItem",
       "position": 3,
       "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/massa-pva.html",
-      "name": "Massa PVA Qualy Quimy",
       "item": {
         "@type": "Product",
         "name": "Massa PVA Qualy Quimy",
         "description": "Massa corrida para nivelamento de paredes internas. Fácil aplicação. Disponível em 5,6kg e 25kg.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Qualy Quimy"
-        },
+        "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/massa-pva.webp",
+        "brand": {"@type": "Brand", "name": "Qualy Quimy"},
         "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
+          "@type": "AggregateOffer",
+          "lowPrice": "22.90",
           "priceCurrency": "BRL",
-          "seller": {
-            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
-          }
+          "availability": "https://schema.org/InStock",
+          "seller": {"@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}
         }
       }
     },
@@ -311,22 +257,18 @@
       "@type": "ListItem",
       "position": 4,
       "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/massa-acrilica.html",
-      "name": "Massa Acrílica Qualy Quimy",
       "item": {
         "@type": "Product",
         "name": "Massa Acrílica Qualy Quimy",
         "description": "Superior à Massa PVA, uso interno e externo. Maior resistência à umidade. Disponível em 5,6kg e 25kg.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Qualy Quimy"
-        },
+        "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/massa-acrilica.webp",
+        "brand": {"@type": "Brand", "name": "Qualy Quimy"},
         "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
+          "@type": "AggregateOffer",
+          "lowPrice": "28.90",
           "priceCurrency": "BRL",
-          "seller": {
-            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
-          }
+          "availability": "https://schema.org/InStock",
+          "seller": {"@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}
         }
       }
     },
@@ -334,22 +276,18 @@
       "@type": "ListItem",
       "position": 5,
       "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/seladora.html",
-      "name": "Seladora Qualy Quimy",
       "item": {
         "@type": "Product",
         "name": "Seladora Qualy Quimy",
         "description": "Preparação ideal para paredes novas. Melhora aderência e reduz consumo de tinta. Disponível em 1L, 3,6L e 16L.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Qualy Quimy"
-        },
+        "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/seladora.webp",
+        "brand": {"@type": "Brand", "name": "Qualy Quimy"},
         "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
+          "@type": "AggregateOffer",
+          "lowPrice": "15.90",
           "priceCurrency": "BRL",
-          "seller": {
-            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
-          }
+          "availability": "https://schema.org/InStock",
+          "seller": {"@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}
         }
       }
     },
@@ -357,22 +295,18 @@
       "@type": "ListItem",
       "position": 6,
       "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/tinta-economica-qualy-color-uso-interno.html",
-      "name": "Tinta Econômica Qualy Color",
       "item": {
         "@type": "Product",
         "name": "Tinta Econômica Qualy Color",
         "description": "Tinta acrílica premium lavável. Catálogo completo de cores. Uso interno e externo. Disponível em 1L, 3,6L e 18L.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Qualy Quimy"
-        },
+        "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/tinta-economica-qualy-color.webp",
+        "brand": {"@type": "Brand", "name": "Qualy Quimy"},
         "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
+          "@type": "AggregateOffer",
+          "lowPrice": "15.90",
           "priceCurrency": "BRL",
-          "seller": {
-            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
-          }
+          "availability": "https://schema.org/InStock",
+          "seller": {"@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}
         }
       }
     },
@@ -380,22 +314,18 @@
       "@type": "ListItem",
       "position": 7,
       "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/esmalte.html",
-      "name": "Esmalte Qualy Quimy",
       "item": {
         "@type": "Product",
         "name": "Esmalte Qualy Quimy",
         "description": "Esmalte sintético para madeiras e metais. Acabamento brilhante e resistente. Disponível em 3,6L.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Qualy Quimy"
-        },
+        "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/esmalte.webp",
+        "brand": {"@type": "Brand", "name": "Qualy Quimy"},
         "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
+          "@type": "AggregateOffer",
+          "lowPrice": "105.00",
           "priceCurrency": "BRL",
-          "seller": {
-            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
-          }
+          "availability": "https://schema.org/InStock",
+          "seller": {"@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}
         }
       }
     },
@@ -403,22 +333,18 @@
       "@type": "ListItem",
       "position": 8,
       "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/textura-projetada.html",
-      "name": "Textura Projetada Branca Qualy Quimy",
       "item": {
         "@type": "Product",
         "name": "Textura Projetada Branca Qualy Quimy",
         "description": "Para fachadas externas. Aplicação mecânica ou manual. Alta cobertura. Disponível em 25kg.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Qualy Quimy"
-        },
+        "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/textura-projetada.webp",
+        "brand": {"@type": "Brand", "name": "Qualy Quimy"},
         "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
+          "@type": "AggregateOffer",
+          "lowPrice": "74.90",
           "priceCurrency": "BRL",
-          "seller": {
-            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
-          }
+          "availability": "https://schema.org/InStock",
+          "seller": {"@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}
         }
       }
     },
@@ -426,22 +352,18 @@
       "@type": "ListItem",
       "position": 9,
       "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/liqui-brilho.html",
-      "name": "Liqui Brilho Qualy Quimy",
       "item": {
         "@type": "Product",
         "name": "Liqui Brilho Qualy Quimy",
         "description": "Acabamento brilhante e impermeabilizante. Transparente sobre texturas e tintas. Disponível em 1L e 3,6L.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Qualy Quimy"
-        },
+        "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/liqui-brilho.webp",
+        "brand": {"@type": "Brand", "name": "Qualy Quimy"},
         "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
+          "@type": "AggregateOffer",
+          "lowPrice": "35.00",
           "priceCurrency": "BRL",
-          "seller": {
-            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
-          }
+          "availability": "https://schema.org/InStock",
+          "seller": {"@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}
         }
       }
     }
@@ -451,27 +373,16 @@
 
 <!--
 =======================================================================
-  FIM DO SCHEMA - ONDE CADA SCHEMA DEVE FICAR:
-
-  ✅ index.html (homepage):
-     → LocalBusiness (endereço, tel, horário, avaliação) ← MAIS IMPORTANTE
-     → Organization (dados da marca)
-     → WebSite (sitelinks searchbox)
-     → ItemList (catálogo de produtos)
-
-  ✅ Cada página de produto (ex: /produtos/grafiato.html):
-     → Product schema com preço, avaliação, disponibilidade individual
-     → BreadcrumbList (navegação: Home > Texturas > Grafiato)
-
-  ✅ Páginas de cidade (ex: /cidades/itaquaquecetuba.html):
-     → LocalBusiness com areaServed focado naquela cidade
-
-  ✅ Páginas de blog:
-     → Article ou BlogPosting schema
-
-  PRÓXIMO PASSO:
-  Após adicionar ao index.html, teste em:
-  https://search.google.com/test/rich-results
+  SCHEMA v2 - COM PREÇOS "A PARTIR DE"
+  
+  O que mudou em relação à v1:
+  - Todos os produtos agora usam AggregateOffer (aceito pelo Google
+    para preços variáveis / "a partir de")
+  - Campo "lowPrice" preenchido com o menor preço de cada produto
+  - Campo "image" adicionado em cada produto (obrigatório pro Google)
+  
+  Substitua o schema anterior no index.html por este completo.
+  Teste em: search.google.com/test/rich-results
 =======================================================================
 -->
 </head>
