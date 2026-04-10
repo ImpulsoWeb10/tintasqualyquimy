@@ -138,15 +138,102 @@ const CIDADES = [
   { slug: 'lajeado', nome: 'Lajeado', uf: 'SP' }
 ];
 
+const SVG_ICONES = {
+  palette: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18h1.2a1.8 1.8 0 0 0 1.8-1.8c0-.7-.4-1.3-.9-1.7a1.9 1.9 0 0 1 1.2-3.4H17a4 4 0 0 0 0-8h-5Z"></path><path d="M7.5 10.5h.01"></path><path d="M12 7.5h.01"></path><path d="M16.5 10.5h.01"></path></svg>',
+  layers: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5-8 4.5-8-4.5L12 3Z"></path><path d="m4 12 8 4.5 8-4.5"></path><path d="m4 16.5 8 4.5 8-4.5"></path></svg>',
+  bucket: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12"></path><path d="m8 7 1.4 11.2a2 2 0 0 0 2 1.8h1.2a2 2 0 0 0 2-1.8L16 7"></path><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"></path></svg>',
+  shield: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 4.2 2.7 8.1 7 9 4.3-.9 7-4.8 7-9V6l-7-3Z"></path><path d="m9.5 12 1.7 1.7 3.3-3.4"></path></svg>',
+  sparkle: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.8 4.7L18 9.5l-4.2 1.8L12 16l-1.8-4.7L6 9.5l4.2-1.8L12 3Z"></path><path d="m19 14 1 2.5L22.5 18 20 19l-1 2.5-1-2.5L15.5 18 18 16.5 19 14Z"></path></svg>',
+  truck: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h9v12"></path><path d="M14 9h3l4 4v2a2 2 0 0 1-2 2h-1"></path><circle cx="7.5" cy="17.5" r="1.5"></circle><circle cx="17.5" cy="17.5" r="1.5"></circle></svg>',
+  clock: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>',
+  calendar: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18"></path></svg>',
+  pin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>'
+};
+
+function criarCardIcon(nome) {
+  const el = document.createElement('span');
+  el.className = 'card-icon';
+  el.innerHTML = SVG_ICONES[nome] || SVG_ICONES.palette;
+  return el;
+}
+
+function obterIconePorTexto(texto) {
+  const valor = (texto || '').toLowerCase();
+
+  if (valor.includes('grafiato') || valor.includes('textura')) return 'layers';
+  if (valor.includes('massa')) return 'bucket';
+  if (valor.includes('seladora') || valor.includes('fundo')) return 'shield';
+  if (valor.includes('liqui brilho') || valor.includes('acabamento')) return 'sparkle';
+  if (valor.includes('esmalte') || valor.includes('tinta') || valor.includes('q color')) return 'palette';
+  if (valor.includes('expressa')) return 'truck';
+  if (valor.includes('final de semana')) return 'clock';
+  if (valor.includes('programado')) return 'calendar';
+  if (valor.includes('frete')) return 'truck';
+
+  return 'pin';
+}
+
+function iniciarIconesCards() {
+  document.querySelectorAll('.hero-card').forEach((card) => {
+    const alvo = card.querySelector('.hero-card-icon');
+    const titulo = card.querySelector('strong')?.textContent || '';
+    if (!alvo) return;
+    alvo.classList.add('card-icon');
+    alvo.innerHTML = SVG_ICONES[obterIconePorTexto(titulo)];
+  });
+
+  document.querySelectorAll('.categoria-card').forEach((card) => {
+    const alvo = card.querySelector('.icon');
+    const titulo = card.querySelector('strong')?.textContent || card.textContent;
+    if (!alvo) return;
+    alvo.classList.add('card-icon');
+    alvo.innerHTML = SVG_ICONES[obterIconePorTexto(titulo)];
+  });
+
+  document.querySelectorAll('.frete-card').forEach((card) => {
+    const alvo = card.querySelector('.icon');
+    const titulo = card.querySelector('h3')?.textContent || card.textContent;
+    if (!alvo) return;
+    alvo.classList.add('card-icon');
+    alvo.innerHTML = SVG_ICONES[obterIconePorTexto(titulo)];
+  });
+
+  document.querySelectorAll('.cidade-card').forEach((card) => {
+    if (card.querySelector('.card-label')) return;
+    const texto = card.textContent.trim();
+    card.textContent = '';
+    const wrapper = document.createElement('span');
+    wrapper.className = 'card-label';
+    wrapper.appendChild(criarCardIcon('pin'));
+    const label = document.createElement('span');
+    label.textContent = texto;
+    wrapper.appendChild(label);
+    card.appendChild(wrapper);
+  });
+
+  document.querySelectorAll('.produto-card').forEach((card) => {
+    if (card.querySelector('.produto-info .card-icon')) return;
+    const info = card.querySelector('.produto-info');
+    const titulo = card.querySelector('.produto-info h3')?.textContent || card.textContent;
+    if (!info) return;
+    info.insertBefore(criarCardIcon(obterIconePorTexto(titulo)), info.firstElementChild);
+  });
+}
+
 // ========== CALCULADORA ==========
 function calcularTinta() {
   const area = parseFloat(document.getElementById('area')?.value || 0);
   const slug = document.getElementById('produto-calc')?.value;
   const demaos = parseInt(document.getElementById('demao')?.value || 2);
   const resultado = document.getElementById('resultado-calc');
+  const hint = document.getElementById('calc-hint');
 
   if (!area || area <= 0 || !slug) {
-    alert('Preencha a área e selecione o produto.');
+    atualizarEstadoCalculadora();
+    if (hint) {
+      hint.textContent = 'Preencha uma metragem válida e selecione um produto para calcular.';
+      hint.classList.remove('is-ready');
+    }
     return;
   }
 
@@ -168,19 +255,24 @@ function calcularTinta() {
 
   if (resultado) {
     resultado.innerHTML = `
-      <h3>📦 Resultado do Cálculo</h3>
+      <h3>Resultado do cálculo</h3>
       <p><strong>Produto:</strong> ${produto.nome} — Qualy Quimy</p>
       <p><strong>Área:</strong> ${area} m² × ${demaos} demão(s)</p>
       <div class="numero">${quantidade} ${unidade}</div>
       <p style="color:var(--cor-cinza);margin-top:8px">Embalagem recomendada: <strong>${embalagem}</strong></p>
       <p style="margin-top:16px">
         <a href="https://wa.me/5511954950044?text=Quero%20comprar%20${produto.nome}%20-%20${quantidade}${unidade}" 
-           target="_blank" class="btn-primary" style="display:inline-block;margin-top:8px">
-          💬 Pedir pelo WhatsApp
+           target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block;margin-top:8px">
+          Pedir pelo WhatsApp
         </a>
       </p>
     `;
     resultado.classList.add('ativo');
+  }
+
+  if (hint) {
+    hint.textContent = 'Estimativa pronta. Se quiser, use o botão abaixo para pedir pelo WhatsApp.';
+    hint.classList.add('is-ready');
   }
 }
 
@@ -196,13 +288,128 @@ function popularProdutosCalc() {
   });
 }
 
+// ========== LIGHTBOX EMBALAGENS ==========
+const EMB_IMAGENS = {
+  '1L':    'pote-1l.jpg',
+  '3,6L':  'galao-3-6l.jpg',
+  '5,6kg': 'galao-5-6kg.jpg',
+  '16L':   'balde-16l.jpg',
+  '18L':   'tinta-economica-lata-18l.png',
+  '25kg':  'barrica-25kg.jpg'
+};
+
+function getImgBase() {
+  const link = document.querySelector('link[href*="style.css"]');
+  const href = link ? link.getAttribute('href') : 'css/style.css';
+  return href.replace('css/style.css', 'imagens/');
+}
+
+function criarLightbox() {
+  if (document.getElementById('emb-lightbox')) return;
+  const lb = document.createElement('div');
+  lb.id = 'emb-lightbox';
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-modal', 'true');
+  lb.innerHTML = '<button id="emb-lightbox-close" aria-label="Fechar">&times;</button><img id="emb-lightbox-img" src="" alt="Embalagem" />';
+  document.body.appendChild(lb);
+  document.getElementById('emb-lightbox-close').addEventListener('click', fecharLightbox);
+  lb.addEventListener('click', function(e) { if (e.target === lb) fecharLightbox(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') fecharLightbox(); });
+}
+
+function abrirLightbox(src) {
+  criarLightbox();
+  document.getElementById('emb-lightbox-img').src = src;
+  document.getElementById('emb-lightbox').classList.add('ativo');
+  document.body.style.overflow = 'hidden';
+}
+
+function fecharLightbox() {
+  const lb = document.getElementById('emb-lightbox');
+  if (lb) lb.classList.remove('ativo');
+  document.body.style.overflow = '';
+}
+
+function iniciarBadgesClickaveis() {
+  const base = getImgBase();
+  document.querySelectorAll('.emb-badge').forEach(badge => {
+    const tamanho = badge.textContent.trim();
+    const imgFile = EMB_IMAGENS[tamanho];
+    if (!imgFile) return;
+    badge.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      abrirLightbox(base + imgFile);
+    });
+  });
+}
+
+function atualizarEstadoCalculadora() {
+  const areaInput = document.getElementById('area');
+  const produtoSelect = document.getElementById('produto-calc');
+  const btnCalc = document.getElementById('btn-calcular');
+  const resultado = document.getElementById('resultado-calc');
+  const hint = document.getElementById('calc-hint');
+  const box = document.querySelector('.calculadora-box');
+
+  if (!areaInput || !produtoSelect || !btnCalc || !box) return;
+
+  const area = parseFloat(areaInput.value || '0');
+  const areaValida = Number.isFinite(area) && area > 0;
+  const produtoValido = Boolean(produtoSelect.value);
+  const pronto = areaValida && produtoValido;
+
+  btnCalc.disabled = !pronto;
+  box.classList.toggle('is-valid', pronto);
+  areaInput.closest('.calc-field')?.classList.toggle('is-invalid', !areaValida && areaInput.value !== '');
+  produtoSelect.closest('.calc-field')?.classList.toggle('is-invalid', !produtoValido && produtoSelect.value === '');
+
+  if (!pronto && resultado) {
+    resultado.classList.remove('ativo');
+    resultado.innerHTML = '';
+  }
+
+  if (hint) {
+    if (pronto) {
+      hint.textContent = 'Tudo certo. Agora você já pode calcular a quantidade ideal.';
+      hint.classList.add('is-ready');
+    } else {
+      hint.textContent = 'Selecione um produto e informe a metragem para liberar o cálculo.';
+      hint.classList.remove('is-ready');
+    }
+  }
+}
+
+function iniciarMenuMobile() {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.site-nav');
+
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('is-open', !expanded);
+    document.body.classList.toggle('menu-open', !expanded);
+  });
+
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
+    });
+  });
+}
+
 // ========== WHATSAPP FLOAT ==========
 function criarWhatsFloat() {
   const btn = document.createElement('a');
   btn.href = 'https://wa.me/5511954950044?text=Olá!%20Vi%20o%20site%20e%20quero%20informações%20sobre%20tintas%20Qualy%20Quimy';
   btn.target = '_blank';
+  btn.rel = 'noopener noreferrer';
   btn.id = 'whats-float';
-  btn.innerHTML = '💬';
+  btn.innerHTML = 'WA';
   btn.title = 'Fale conosco no WhatsApp';
   btn.style.cssText = `
     position:fixed;bottom:28px;right:28px;z-index:999;
@@ -222,114 +429,24 @@ function criarWhatsFloat() {
   document.head.appendChild(style);
 }
 
-// ========== ICONES SVG AUTOMATICOS PARA CARDS ==========
-function iconeSvgPorTema(tema) {
-  const fill = 'currentColor';
-  const icons = {
-    tinta: `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="${fill}" d="M7 3h10v2h2v4h-2v2h-2v2h-2v2h-2v2H9v-2H7v-2H5v-2H3V9h2V7h2V5h2V3zm2 2v2h6V5H9zm-2 4v2h2V9H7zm10 0v2h2V9h-2zM9 11v2h6v-2H9zm-2 4v2h2v-2H7zm8 0v2h2v-2h-2z"/></svg>`,
-    textura: `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="${fill}" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/><circle cx="7" cy="7" r="1" fill="${fill}"/><circle cx="12" cy="12" r="1" fill="${fill}"/><circle cx="17" cy="17" r="1" fill="${fill}"/></svg>`,
-    massa: `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="${fill}" d="M3 14l8-8 10 10-8 5L3 14zm8.4-5.6L7.6 12.2l5.7 4.2 4.8-2.4-6.7-5.6z"/></svg>`,
-    fundo: `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="${fill}" d="M5 4h14v3H5V4zm2 4h10l2 12H5L7 8zm3 3v6h2v-6h-2zm4 0v6h2v-6h-2z"/></svg>`,
-    brilho: `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="${fill}" d="M12 2l2.1 5.4L20 9l-5.9 1.6L12 16l-2.1-5.4L4 9l5.9-1.6L12 2zm7 12l.9 2.3L22 17l-2.1.7L19 20l-.9-2.3L16 17l2.1-.7L19 14zM5 14l.9 2.3L8 17l-2.1.7L5 20l-.9-2.3L2 17l2.1-.7L5 14z"/></svg>`,
-    cidade: `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="${fill}" d="M12 2a7 7 0 0 1 7 7c0 5.3-7 13-7 13S5 14.3 5 9a7 7 0 0 1 7-7zm0 9.5A2.5 2.5 0 1 0 12 6a2.5 2.5 0 0 0 0 5.5z"/></svg>`,
-    entrega: `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="${fill}" d="M3 6h11v9H3V6zm11 3h3l4 3v3h-7V9zm-7 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm10 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>`,
-    expressa: `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="${fill}" d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>`,
-    agenda: `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="${fill}" d="M7 2h2v2h6V2h2v2h3v18H4V4h3V2zm11 8H6v10h12V10z"/></svg>`,
-    oferta: `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="${fill}" d="M3 12l9-9 9 9-9 9-9-9zm6-1a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm6 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>`,
-    blog: `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="${fill}" d="M5 4h14v16H5V4zm2 3v2h10V7H7zm0 4v2h10v-2H7zm0 4v2h6v-2H7z"/></svg>`
-  };
-  return icons[tema] || icons.blog;
-}
-
-function detectarTemaCard(texto) {
-  const t = (texto || '').toLowerCase();
-  if (t.includes('entrega expressa') || t.includes('expressa')) return 'expressa';
-  if (t.includes('dia programado') || t.includes('agend')) return 'agenda';
-  if (t.includes('frete') || t.includes('entrega')) return 'entrega';
-  if (t.includes('liqui brilho') || t.includes('verniz') || t.includes('acabamento') || t.includes('impermeabil')) return 'brilho';
-  if (t.includes('seladora') || t.includes('fundo')) return 'fundo';
-  if (t.includes('massa')) return 'massa';
-  if (t.includes('grafiato') || t.includes('textura')) return 'textura';
-  if (t.includes('tinta') || t.includes('q color') || t.includes('esmalte')) return 'tinta';
-  if (t.includes('cidade') || t.includes('bairro') || t.includes('itaqua') || t.includes('suzano') || t.includes('mogi')) return 'cidade';
-  return 'blog';
-}
-
-function criarNoIcone(tema, extraClass) {
-  const span = document.createElement('span');
-  span.className = 'qq-card-svg ' + (extraClass || '');
-  span.innerHTML = iconeSvgPorTema(tema);
-  span.setAttribute('aria-hidden', 'true');
-  return span;
-}
-
-function aplicarIconesCards() {
-  // Cards de produto: icone no topo (produto-img)
-  document.querySelectorAll('.produto-card').forEach(card => {
-    const img = card.querySelector('.produto-img');
-    if (!img || img.querySelector('.qq-card-svg')) return;
-
-    const titulo = card.querySelector('h3')?.textContent || '';
-    const categoria = card.querySelector('.produto-categoria')?.textContent || '';
-    const desc = card.querySelector('p')?.textContent || '';
-    const tema = detectarTemaCard(`${categoria} ${titulo} ${desc}`);
-
-    if ((img.textContent || '').trim().length <= 2 || (img.textContent || '').includes('?')) {
-      img.textContent = '';
-    }
-    const node = criarNoIcone(tema, 'qq-card-svg-top');
-    img.prepend(node);
-  });
-
-  // Cards de cidade: icone antes do titulo
-  document.querySelectorAll('.cidade-card').forEach(card => {
-    if (card.querySelector('.qq-card-svg')) return;
-    const node = criarNoIcone('cidade', 'qq-card-svg-inline');
-    card.prepend(node);
-    card.classList.add('qq-card-has-inline-icon');
-  });
-
-  // Cards de frete/comercial: substituir/usar bloco .icon no topo
-  document.querySelectorAll('.frete-card').forEach(card => {
-    const titulo = card.querySelector('h3')?.textContent || '';
-    const desc = card.querySelector('p')?.textContent || '';
-    const tema = detectarTemaCard(`${titulo} ${desc}`);
-
-    let iconWrap = card.querySelector('.icon');
-    if (!iconWrap) {
-      iconWrap = document.createElement('div');
-      iconWrap.className = 'icon';
-      card.prepend(iconWrap);
-    }
-    if (!iconWrap.querySelector('.qq-card-svg')) {
-      iconWrap.textContent = '';
-      iconWrap.appendChild(criarNoIcone(tema, 'qq-card-svg-frete'));
-    }
-  });
-
-  // Hero cards: icone no topo mantendo proporcao existente
-  document.querySelectorAll('.hero-card').forEach(card => {
-    let iconWrap = card.querySelector('.hero-card-icon');
-    const t = card.querySelector('strong')?.textContent || card.textContent || '';
-    const tema = detectarTemaCard(t);
-    if (!iconWrap) {
-      iconWrap = document.createElement('div');
-      iconWrap.className = 'hero-card-icon';
-      card.prepend(iconWrap);
-    }
-    if (!iconWrap.querySelector('.qq-card-svg')) {
-      iconWrap.textContent = '';
-      iconWrap.appendChild(criarNoIcone(tema, 'qq-card-svg-hero'));
-    }
-  });
-}
-
 // ========== INIT ==========
 document.addEventListener('DOMContentLoaded', () => {
   criarWhatsFloat();
   popularProdutosCalc();
-  aplicarIconesCards();
+  iniciarBadgesClickaveis();
+  iniciarIconesCards();
+  iniciarMenuMobile();
+  atualizarEstadoCalculadora();
   // Listener calculadora
   const btnCalc = document.getElementById('btn-calcular');
   if (btnCalc) btnCalc.addEventListener('click', calcularTinta);
+
+  const areaInput = document.getElementById('area');
+  const produtoSelect = document.getElementById('produto-calc');
+  const demaoSelect = document.getElementById('demao');
+
+  [areaInput, produtoSelect, demaoSelect].forEach((element) => {
+    element?.addEventListener('input', atualizarEstadoCalculadora);
+    element?.addEventListener('change', atualizarEstadoCalculadora);
+  });
 });
