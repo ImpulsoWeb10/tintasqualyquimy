@@ -58,6 +58,422 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <meta property="og:image" content="https://tintasqualyquimy.impulsoweb10.com.br/imagens/og-qualyquimy.jpg" />
+  <!--
+=======================================================================
+  SCHEMA JSON-LD - QUALY QUIMY
+  Arquivo: schema-index-qualyquimy.html
+  
+  INSTRUÇÕES DE USO:
+  Cole todo o conteúdo entre as tags <head> e </head> do seu index.html,
+  preferencialmente antes do fechamento </head>.
+  
+  O que está incluído:
+  1. LocalBusiness  → endereço, telefone, horário, avaliação
+  2. Organization   → dados da empresa, redes sociais
+  3. WebSite        → habilita campo de busca no Google (Sitelinks Searchbox)
+  4. ItemList       → lista dos produtos (indexação enriquecida)
+=======================================================================
+-->
+
+<!-- SCHEMA 1: LocalBusiness + Store (negócio local - o mais importante pro SEO local) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "Store"],
+  "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa",
+  "name": "Qualy Quimy - Tintas e Materiais para Pintura",
+  "alternateName": "Qualy Quimy",
+  "description": "Loja especializada em tintas, massas, texturas e materiais para pintura da marca Qualy Quimy. Grafiato, Textura Lisa, Massa PVA, Massa Acrílica, Tinta Econômica, Seladora e Liqui Brilho. Entrega em Itaquaquecetuba, Mogi das Cruzes, Suzano, Ferraz de Vasconcelos e região.",
+  "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+  "telephone": "+55-11-95495-0044",
+  "email": "",
+  "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp",
+  "logo": "https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Leiria, 45",
+    "addressLocality": "Itaquaquecetuba",
+    "addressRegion": "SP",
+    "postalCode": "08571-000",
+    "addressCountry": "BR",
+    "addressLocality": "Chácara Cuiabá, Itaquaquecetuba"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-23.4869",
+    "longitude": "-46.3481"
+  },
+  "hasMap": "https://maps.app.goo.gl/itaquaquecetuba",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "13:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "50"
+  },
+  "priceRange": "$$",
+  "currenciesAccepted": "BRL",
+  "paymentAccepted": "Dinheiro, PIX, Cartão de Crédito, Cartão de Débito",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Itaquaquecetuba",
+      "sameAs": "https://www.wikidata.org/wiki/Q493404"
+    },
+    {
+      "@type": "City",
+      "name": "Mogi das Cruzes"
+    },
+    {
+      "@type": "City",
+      "name": "Suzano"
+    },
+    {
+      "@type": "City",
+      "name": "Ferraz de Vasconcelos"
+    },
+    {
+      "@type": "City",
+      "name": "Poá"
+    },
+    {
+      "@type": "City",
+      "name": "Arujá"
+    },
+    {
+      "@type": "City",
+      "name": "Guarulhos"
+    }
+  ],
+  "sameAs": [
+    "https://wa.me/5511954950044",
+    "https://shopee.com.br/qualyquimy"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+55-11-95495-0044",
+    "contactType": "customer service",
+    "contactOption": "TollFree",
+    "availableLanguage": "Portuguese",
+    "areaServed": "BR"
+  }
+}
+</script>
+
+<!-- SCHEMA 2: Organization (credibilidade da marca) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#organization",
+  "name": "Qualy Quimy",
+  "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp",
+    "width": 300,
+    "height": 100
+  },
+  "description": "Marca especializada em tintas, massas e texturas para pintura. Localizada em Itaquaquecetuba - SP.",
+  "telephone": "+55-11-95495-0044",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Leiria, 45 - Chácara Cuiabá",
+    "addressLocality": "Itaquaquecetuba",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "https://shopee.com.br/qualyquimy",
+    "https://wa.me/5511954950044"
+  ]
+}
+</script>
+
+<!-- SCHEMA 3: WebSite (habilita Sitelinks Searchbox no Google) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#website",
+  "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+  "name": "Qualy Quimy | Tintas, Massas e Texturas",
+  "description": "Tintas, massas, texturas e materiais para pintura em Itaquaquecetuba e região de São Paulo.",
+  "publisher": {
+    "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#organization"
+  },
+  "inLanguage": "pt-BR",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://tintasqualyquimy.impulsoweb10.com.br/categorias/blog.html?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- SCHEMA 4: ItemList - Catálogo de Produtos (aparece como lista enriquecida no Google) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Produtos Qualy Quimy - Tintas, Massas e Texturas",
+  "description": "Catálogo completo de produtos Qualy Quimy para pintura e acabamento.",
+  "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+  "numberOfItems": 9,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/grafiato.html",
+      "name": "Grafiato Qualy Quimy",
+      "item": {
+        "@type": "Product",
+        "name": "Grafiato Qualy Quimy",
+        "description": "Acabamento texturizado para fachadas e paredes. Alta durabilidade e resistência. Disponível em 5,6kg e 25kg.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Qualy Quimy"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "BRL",
+          "seller": {
+            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/textura-lisa.html",
+      "name": "Textura Lisa Qualy Quimy",
+      "item": {
+        "@type": "Product",
+        "name": "Textura Lisa Qualy Quimy",
+        "description": "Acabamento liso e uniforme para paredes internas e externas. Disponível em 5,6kg e 25kg.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Qualy Quimy"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "BRL",
+          "seller": {
+            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/massa-pva.html",
+      "name": "Massa PVA Qualy Quimy",
+      "item": {
+        "@type": "Product",
+        "name": "Massa PVA Qualy Quimy",
+        "description": "Massa corrida para nivelamento de paredes internas. Fácil aplicação. Disponível em 5,6kg e 25kg.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Qualy Quimy"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "BRL",
+          "seller": {
+            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/massa-acrilica.html",
+      "name": "Massa Acrílica Qualy Quimy",
+      "item": {
+        "@type": "Product",
+        "name": "Massa Acrílica Qualy Quimy",
+        "description": "Superior à Massa PVA, uso interno e externo. Maior resistência à umidade. Disponível em 5,6kg e 25kg.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Qualy Quimy"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "BRL",
+          "seller": {
+            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/seladora.html",
+      "name": "Seladora Qualy Quimy",
+      "item": {
+        "@type": "Product",
+        "name": "Seladora Qualy Quimy",
+        "description": "Preparação ideal para paredes novas. Melhora aderência e reduz consumo de tinta. Disponível em 1L, 3,6L e 16L.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Qualy Quimy"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "BRL",
+          "seller": {
+            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/tinta-economica-qualy-color-uso-interno.html",
+      "name": "Tinta Econômica Qualy Color",
+      "item": {
+        "@type": "Product",
+        "name": "Tinta Econômica Qualy Color",
+        "description": "Tinta acrílica premium lavável. Catálogo completo de cores. Uso interno e externo. Disponível em 1L, 3,6L e 18L.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Qualy Quimy"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "BRL",
+          "seller": {
+            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/esmalte.html",
+      "name": "Esmalte Qualy Quimy",
+      "item": {
+        "@type": "Product",
+        "name": "Esmalte Qualy Quimy",
+        "description": "Esmalte sintético para madeiras e metais. Acabamento brilhante e resistente. Disponível em 3,6L.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Qualy Quimy"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "BRL",
+          "seller": {
+            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/textura-projetada.html",
+      "name": "Textura Projetada Branca Qualy Quimy",
+      "item": {
+        "@type": "Product",
+        "name": "Textura Projetada Branca Qualy Quimy",
+        "description": "Para fachadas externas. Aplicação mecânica ou manual. Alta cobertura. Disponível em 25kg.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Qualy Quimy"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "BRL",
+          "seller": {
+            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/liqui-brilho.html",
+      "name": "Liqui Brilho Qualy Quimy",
+      "item": {
+        "@type": "Product",
+        "name": "Liqui Brilho Qualy Quimy",
+        "description": "Acabamento brilhante e impermeabilizante. Transparente sobre texturas e tintas. Disponível em 1L e 3,6L.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Qualy Quimy"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "BRL",
+          "seller": {
+            "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa"
+          }
+        }
+      }
+    }
+  ]
+}
+</script>
+
+<!--
+=======================================================================
+  FIM DO SCHEMA - ONDE CADA SCHEMA DEVE FICAR:
+
+  ✅ index.html (homepage):
+     → LocalBusiness (endereço, tel, horário, avaliação) ← MAIS IMPORTANTE
+     → Organization (dados da marca)
+     → WebSite (sitelinks searchbox)
+     → ItemList (catálogo de produtos)
+
+  ✅ Cada página de produto (ex: /produtos/grafiato.html):
+     → Product schema com preço, avaliação, disponibilidade individual
+     → BreadcrumbList (navegação: Home > Texturas > Grafiato)
+
+  ✅ Páginas de cidade (ex: /cidades/itaquaquecetuba.html):
+     → LocalBusiness com areaServed focado naquela cidade
+
+  ✅ Páginas de blog:
+     → Article ou BlogPosting schema
+
+  PRÓXIMO PASSO:
+  Após adicionar ao index.html, teste em:
+  https://search.google.com/test/rich-results
+=======================================================================
+-->
 </head>
 <body>
 
