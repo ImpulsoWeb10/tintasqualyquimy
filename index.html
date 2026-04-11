@@ -241,6 +241,7 @@
           <div class="hero-card-icon">GR</div>
           <strong>Grafiato</strong>
           <span>5,6kg e 25kg</span>
+          <button id="btnGrafiato" type="button" class="btnHeroGrafiato">Ver Benefícios</button>
         </div>
         <div class="hero-card">
           <div class="hero-card-icon">TL</div>
@@ -725,4 +726,198 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<!-- ============================================================
+  ADIÇÃO GRAFIATO — Não modifica nenhum código existente.
+  CSS: classes exclusivas prefixadas com "grafiato__"
+  HTML: dois modais isolados
+  JS: bloco isolado no final, sem variáveis globais expostas
+============================================================ -->
+
+<!-- MODAL 1: Benefícios -->
+<div id="grafiato__modal-beneficios" class="grafiato__overlay" role="dialog" aria-modal="true" aria-labelledby="grafiato__titulo-ben" aria-hidden="true">
+  <div class="grafiato__box">
+    <button class="grafiato__fechar" data-grafiato-fecha="grafiato__modal-beneficios" aria-label="Fechar">×</button>
+    <h2 id="grafiato__titulo-ben" class="grafiato__titulo">BENEFÍCIOS DO GRAFIATO</h2>
+    <ul class="grafiato__lista">
+      <li>Alta resistência</li>
+      <li>Proteção contra umidade</li>
+      <li>Durabilidade até 20 anos*</li>
+      <li>Acabamento sofisticado</li>
+      <li>Valorização do imóvel</li>
+    </ul>
+    <p class="grafiato__nota">*Em condições ideais de aplicação e manutenção.</p>
+    <button id="grafiato__btn-ver-apres" class="grafiato__btn-primario" type="button">VER APRESENTAÇÃO</button>
+  </div>
+</div>
+
+<!-- MODAL 2: Galeria / Carrossel -->
+<div id="grafiato__modal-galeria" class="grafiato__overlay" role="dialog" aria-modal="true" aria-labelledby="grafiato__titulo-gal" aria-hidden="true">
+  <div class="grafiato__box grafiato__box--galeria">
+    <button class="grafiato__fechar" data-grafiato-fecha="grafiato__modal-galeria" aria-label="Fechar">×</button>
+    <h2 id="grafiato__titulo-gal" class="grafiato__titulo">GRAFIATO QUALY QUIMY</h2>
+    <div class="grafiato__slider" id="grafiato__slider">
+      <div class="grafiato__slide grafiato__slide--ativo" data-grafiato-slide="0">
+        <div class="grafiato__slide-img" style="background-image:url('imagens/grafiato1.jpg');" role="img" aria-label="Grafiato – foto 1"></div>
+      </div>
+      <div class="grafiato__slide" data-grafiato-slide="1">
+        <div class="grafiato__slide-img" style="background-image:url('imagens/grafiato2.jpg');" role="img" aria-label="Grafiato – foto 2"></div>
+      </div>
+      <div class="grafiato__slide" data-grafiato-slide="2">
+        <div class="grafiato__slide-img" style="background-image:url('imagens/grafiato3.jpg');" role="img" aria-label="Grafiato – foto 3"></div>
+      </div>
+      <div class="grafiato__slide" data-grafiato-slide="3">
+        <div class="grafiato__slide-img" style="background-image:url('imagens/grafiato4.jpg');" role="img" aria-label="Grafiato – foto 4"></div>
+      </div>
+      <div class="grafiato__slide grafiato__slide--cta" data-grafiato-slide="4">
+        <p class="grafiato__cta-texto">TRANSFORME SUA FACHADA HOJE</p>
+        <a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Quero%20comprar%20Grafiato%20Qualy%20Quimy"
+           target="_blank" rel="noopener noreferrer" class="grafiato__cta-btn">COMPRAR AGORA</a>
+      </div>
+    </div>
+    <div class="grafiato__dots" id="grafiato__dots" aria-label="Navegação dos slides">
+      <button class="grafiato__dot grafiato__dot--ativo" data-grafiato-ir="0" aria-label="Slide 1"></button>
+      <button class="grafiato__dot" data-grafiato-ir="1" aria-label="Slide 2"></button>
+      <button class="grafiato__dot" data-grafiato-ir="2" aria-label="Slide 3"></button>
+      <button class="grafiato__dot" data-grafiato-ir="3" aria-label="Slide 4"></button>
+      <button class="grafiato__dot" data-grafiato-ir="4" aria-label="Slide 5"></button>
+    </div>
+  </div>
+</div>
+
+<!-- CSS EXCLUSIVO GRAFIATO -->
+<style>
+.btnHeroGrafiato{display:block;margin:8px auto 0;padding:7px 14px;background:#e87722;color:#fff;border:none;border-radius:5px;font-size:.78rem;font-weight:700;cursor:pointer;letter-spacing:.04em;transition:background .2s;width:100%;box-sizing:border-box;}
+.btnHeroGrafiato:hover{background:#c9631a;}
+
+.grafiato__overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:99990;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box;}
+.grafiato__overlay[aria-hidden="true"]{display:none!important;}
+
+.grafiato__box{position:relative;background:#1a1a1a;color:#fff;border-radius:12px;padding:40px 32px 32px;max-width:480px;width:100%;box-shadow:0 8px 40px rgba(0,0,0,.6);box-sizing:border-box;}
+.grafiato__box--galeria{max-width:620px;padding:40px 24px 24px;}
+
+.grafiato__fechar{position:absolute;top:12px;right:16px;background:none;border:none;color:#fff;font-size:1.8rem;line-height:1;cursor:pointer;opacity:.75;transition:opacity .2s;}
+.grafiato__fechar:hover{opacity:1;}
+
+.grafiato__titulo{font-size:1.2rem;font-weight:800;color:#e87722;margin:0 0 20px;text-align:center;letter-spacing:.05em;}
+
+.grafiato__lista{list-style:none;padding:0;margin:0 0 12px;}
+.grafiato__lista li{padding:10px 0 10px 26px;border-bottom:1px solid rgba(255,255,255,.08);position:relative;font-size:.95rem;}
+.grafiato__lista li::before{content:"✔";position:absolute;left:0;color:#e87722;font-size:.82rem;}
+
+.grafiato__nota{font-size:.73rem;color:rgba(255,255,255,.4);margin:0 0 22px;}
+
+.grafiato__btn-primario{display:block;width:100%;padding:13px 0;background:#e87722;color:#fff;border:none;border-radius:7px;font-size:1rem;font-weight:800;cursor:pointer;letter-spacing:.06em;transition:background .2s;}
+.grafiato__btn-primario:hover{background:#c9631a;}
+
+.grafiato__slider{position:relative;overflow:hidden;border-radius:8px;background:#111;height:300px;}
+@media(max-width:480px){.grafiato__slider{height:200px;}}
+
+.grafiato__slide{display:none;width:100%;height:100%;}
+.grafiato__slide--ativo{display:flex;}
+.grafiato__slide-img{width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;}
+
+.grafiato__slide--cta{flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a1a 0%,#2d1600 100%);gap:20px;}
+.grafiato__cta-texto{font-size:1.25rem;font-weight:900;color:#fff;text-align:center;letter-spacing:.06em;margin:0;padding:0 12px;}
+.grafiato__cta-btn{display:inline-block;padding:13px 32px;background:#25d366;color:#fff;border-radius:7px;font-weight:800;font-size:.95rem;text-decoration:none;letter-spacing:.05em;transition:background .2s;}
+.grafiato__cta-btn:hover{background:#1ebe5a;}
+
+.grafiato__dots{display:flex;justify-content:center;gap:8px;margin-top:12px;}
+.grafiato__dot{width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,.25);cursor:pointer;padding:0;transition:background .2s;}
+.grafiato__dot--ativo{background:#e87722;}
+</style>
+
+<!-- JS ISOLADO GRAFIATO — IIFE, zero variáveis globais -->
+<script>
+(function(){
+  'use strict';
+
+  function abrirModal(id){
+    var el=document.getElementById(id);
+    if(!el)return;
+    el.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function fecharModal(id){
+    var el=document.getElementById(id);
+    if(!el)return;
+    el.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    clearInterval(grafiatoCarrossel.timer);
+  }
+
+  var grafiatoCarrossel={
+    total:5,
+    atual:0,
+    timer:null,
+    ir:function(n){
+      var slides=document.querySelectorAll('#grafiato__slider .grafiato__slide');
+      var dots=document.querySelectorAll('#grafiato__dots .grafiato__dot');
+      slides.forEach(function(s){s.classList.remove('grafiato__slide--ativo');});
+      dots.forEach(function(d){d.classList.remove('grafiato__dot--ativo');});
+      grafiatoCarrossel.atual=(n+grafiatoCarrossel.total)%grafiatoCarrossel.total;
+      if(slides[grafiatoCarrossel.atual])slides[grafiatoCarrossel.atual].classList.add('grafiato__slide--ativo');
+      if(dots[grafiatoCarrossel.atual])dots[grafiatoCarrossel.atual].classList.add('grafiato__dot--ativo');
+    },
+    iniciar:function(){
+      grafiatoCarrossel.ir(0);
+      grafiatoCarrossel.timer=setInterval(function(){
+        grafiatoCarrossel.ir(grafiatoCarrossel.atual+1);
+      },3000);
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded',function(){
+
+    var btnGrafiato=document.getElementById('btnGrafiato');
+    if(btnGrafiato){
+      btnGrafiato.addEventListener('click',function(e){
+        e.stopPropagation();
+        abrirModal('grafiato__modal-beneficios');
+      });
+    }
+
+    var btnApres=document.getElementById('grafiato__btn-ver-apres');
+    if(btnApres){
+      btnApres.addEventListener('click',function(){
+        fecharModal('grafiato__modal-beneficios');
+        abrirModal('grafiato__modal-galeria');
+        grafiatoCarrossel.iniciar();
+      });
+    }
+
+    document.querySelectorAll('[data-grafiato-fecha]').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        fecharModal(btn.getAttribute('data-grafiato-fecha'));
+      });
+    });
+
+    document.querySelectorAll('.grafiato__overlay').forEach(function(overlay){
+      overlay.addEventListener('click',function(e){
+        if(e.target===overlay)fecharModal(overlay.id);
+      });
+    });
+
+    document.querySelectorAll('[data-grafiato-ir]').forEach(function(dot){
+      dot.addEventListener('click',function(){
+        clearInterval(grafiatoCarrossel.timer);
+        grafiatoCarrossel.ir(parseInt(dot.getAttribute('data-grafiato-ir'),10));
+        grafiatoCarrossel.timer=setInterval(function(){
+          grafiatoCarrossel.ir(grafiatoCarrossel.atual+1);
+        },3000);
+      });
+    });
+
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){
+        ['grafiato__modal-beneficios','grafiato__modal-galeria'].forEach(function(id){
+          var el=document.getElementById(id);
+          if(el&&el.getAttribute('aria-hidden')==='false')fecharModal(id);
+        });
+      }
+    });
+
+  });
+}());
+</script>
 </body>
