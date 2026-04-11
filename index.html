@@ -666,7 +666,7 @@
       <h2 id="titulo-mapa-endereco">Nosso Endereço no Mapa</h2>
       <p>Rua Leiria, 45 - Chácara Cuiabá, Itaquaquecetuba - SP.</p>
     </div>
-    <div style="border-radius:10px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.14);border:1px solid #e9edf4;">
+    <div style="position:relative;border-radius:10px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.14);border:1px solid #e9edf4;">
       <iframe
         title="Mapa do endereço da Qualy Quimy"
         src="https://www.google.com/maps?q=Rua+Leiria+45+Itaquaquecetuba+SP&output=embed"
@@ -675,6 +675,10 @@
         style="border:0;display:block;"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:2;text-align:center;">
+        <img src='https://www.svgrepo.com/show/475656/google-maps.svg' alt='Google Maps' style='height:2.2em;vertical-align:middle;filter:drop-shadow(0 2px 8px #fff);margin-bottom:0.3em;'>
+        <div style='font-size:1.1em;font-weight:bold;color:#1a237e;text-shadow:0 2px 8px #fff;'>Tintas Qualy Quimy<br>aqui</div>
+      </div>
     </div>
   </div>
 </section>
