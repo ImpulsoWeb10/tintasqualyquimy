@@ -749,7 +749,25 @@
   </div>
 </footer>
 
+
 <script src="js/main.js"></script>
+<script>
+// Esconde o marcador visual centralizado ao clicar no mapa
+document.addEventListener('DOMContentLoaded', function() {
+  var mapaDiv = document.querySelector('section[aria-labelledby="titulo-mapa-endereco"] > div > div');
+  var overlay = mapaDiv && mapaDiv.querySelector('div[style*="position:absolute"]');
+  var iframe = mapaDiv && mapaDiv.querySelector('iframe');
+  if (iframe && overlay) {
+    iframe.addEventListener('click', function() {
+      overlay.style.display = 'none';
+    });
+    // Para mobile: também some ao tocar
+    iframe.addEventListener('touchstart', function() {
+      overlay.style.display = 'none';
+    });
+  }
+});
+</script>
 
 <!-- ============================================================
   ADIÇÃO GRAFIATO — Não modifica nenhum código existente.
