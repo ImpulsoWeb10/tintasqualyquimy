@@ -1,0 +1,3 @@
+# TODO: Baixar e salvar todos os recursos (CSS, JS, imagens) referenciados no HTML da landing page Ótica Dolce Visione.
+# Após baixar, ajustar os caminhos no index.html para uso local.
+# Validar funcionamento offline e corrigir eventuais links quebrados.

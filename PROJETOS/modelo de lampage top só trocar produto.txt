@@ -1,0 +1,162 @@
+Você é um desenvolvedor sênior especialista em:
+- Landing pages de alta conversão
+- SEO técnico avançado
+- SEO semântico (topical authority + silos)
+- Copywriting persuasivo
+- Estruturação completa de sites profissionais
+
+MISSÃO:
+Criar uma landing page COMPLETA, PROFISSIONAL e OTIMIZADA para conversão e ranqueamento no Google.
+
+TEMA:
+Grafiato (revestimento de parede)
+
+EMPRESA:
+Localizada em Itaquaquecetuba - SP
+
+DADOS REAIS:
+Endereço: R. Leiria, 45 - Chácara Cuiabá, Itaquaquecetuba - SP, 08587-100  
+Telefone/WhatsApp: (11) 95495-0044  
+Link: https://tintasqualyquimy.impulsoweb10.com.br/
+
+---
+
+# 🎯 OBJETIVO
+Gerar uma landing page extremamente completa com:
+- Alta conversão
+- SEO técnico perfeito
+- Estrutura profissional
+
+---
+
+# 🧱 ESTRUTURA OBRIGATÓRIA
+
+## 1. HTML COMPLETO
+- Documento HTML5 completo
+- Head otimizado com:
+  - Title SEO
+  - Meta description
+  - Meta keywords
+  - Open Graph
+  - Canonical
+  - Robots meta tag
+
+---
+
+## 2. SEO AVANÇADO
+- Sitemap.xml (no final)
+- Robots.txt (no final)
+- URLs amigáveis
+- Estrutura de headings correta (H1-H4)
+- Palavras-chave:
+  - grafiato preço
+  - grafiato externo
+  - grafiato interno
+  - textura grafiato parede
+  - grafiato antimofo
+  - grafiato aplicação m2
+
+---
+
+## 3. SILOS SEMÂNTICOS (OBRIGATÓRIO)
+Criar seções organizadas por intenção de busca:
+
+- O que é grafiato
+- Tipos de grafiato
+- Grafiato interno
+- Grafiato externo
+- Benefícios (antimofo, durabilidade)
+- Consumo por m² (4,5kg por m²)
+- Como aplicar grafiato
+- Cuidados (não aplicar em dias úmidos)
+- Preço e orçamento
+- FAQ completo
+
+---
+
+## 4. COPY DE ALTA CONVERSÃO
+- Headline forte
+- Subheadline persuasiva
+- Gatilhos mentais:
+  - autoridade
+  - urgência
+  - prova social
+- Botões CTA:
+  - "Peça seu orçamento agora"
+  - "Fale no WhatsApp"
+
+---
+
+## 5. DESIGN (EM HTML + CSS)
+- Layout moderno
+- Seções bem separadas
+- Responsivo (mobile first)
+- Botões destacados
+- Cores profissionais (azul, branco, cinza)
+
+---
+
+## 6. SCHEMA MARKUP (JSON-LD)
+Adicionar:
+- LocalBusiness
+- Product
+- FAQPage
+
+Com os dados reais da empresa.
+
+---
+
+## 7. FAQ (IMPORTANTE PARA SEO)
+Criar perguntas como:
+- O que é grafiato?
+- Grafiato pode molhar?
+- Quantos kg por m²?
+- Pode aplicar em dias úmidos?
+- Grafiato dá mofo?
+- Quanto custa grafiato?
+
+---
+
+## 8. SEÇÃO DE CONVERSÃO
+- Destaque do WhatsApp clicável
+- Botão fixo na tela
+- Chamada para ação forte
+
+---
+
+## 9. RODAPÉ COMPLETO
+- Endereço completo
+- Telefone clicável
+- Link do site
+
+---
+
+## 10. REGRAS CRÍTICAS
+- NÃO deixar nada incompleto
+- NÃO resumir
+- NÃO omitir código
+- GERAR TUDO pronto para uso
+- Código limpo e organizado
+
+---
+
+# ⚠️ INFORMAÇÕES IMPORTANTES DO PRODUTO
+
+- Uso interno e externo
+- Antimofo
+- Consumo médio: 4,5kg por m²
+- Não aplicar em dias úmidos
+
+---
+
+# RESULTADO FINAL
+Gerar:
+- 1 arquivo HTML completo
+- Sitemap.xml
+- Robots.txt
+
+Tudo no mesmo output
+
+---
+
+COMECE AGORA
