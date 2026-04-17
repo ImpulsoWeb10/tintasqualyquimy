@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="Xz_2AAmdPmp8Z-4dD1Ji-ZoX2YU2kUZovEK9f03HgBM" />
+
+  <!-- SEO Principal -->
+  <title>Tintas Qualy Quimy | Tintas, Massas e Texturas em Itaquaquecetuba e Região</title>
+    <meta name="description" content="Tintas, massas e texturas Tintas Qualy Quimy em Itaquaquecetuba e região. Grafiato, Textura Lisa, Massa PVA, Tinta Econômica e mais. Entrega em Mogi das Cruzes, Suzano, Ferraz e zona leste de SP. Consulte pelo WhatsApp." />
+  <meta name="keywords" content="tintas Itaquaquecetuba, grafiato zona leste SP, textura para parede, massa PVA preço, Tintas Qualy Quimy, tintas baratas SP" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Tintas Qualy Quimy" />
+  <link rel="canonical" href="https://tintasqualyquimy.impulsoweb10.com.br/" />
+
+  <!-- Open Graph (WhatsApp, Instagram, Facebook, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Tintas Qualy Quimy" />
+  <meta property="og:title" content="Tintas Qualy Quimy | Tintas, Massas e Texturas em Itaquaquecetuba" />
+  <meta property="og:description" content="Grafiato, Textura Lisa, Massa PVA, Tinta Econômica e muito mais. Entrega expressa em Itaquaquecetuba, Mogi das Cruzes, Suzano e região. Consulte pelo WhatsApp. Tintas Qualy Quimy." />
+  <meta property="og:url" content="https://tintasqualyquimy.impulsoweb10.com.br/" />
+  <meta property="og:image" content="https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="100" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tintas Qualy Quimy | Tintas, Massas e Texturas em Itaquaquecetuba" />
+  <meta name="twitter:description" content="Grafiato, Textura Lisa, Massa PVA, Tinta Econômica e muito mais. Entrega em Itaquaquecetuba e região." />
+  <meta name="twitter:image" content="https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- SCHEMA 1: LocalBusiness + Store -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "Store"],
+    "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa",
+    "name": "Tintas Qualy Quimy - Tintas e Materiais para Pintura",
+    "alternateName": "Tintas Qualy Quimy",
+    "description": "Loja especializada em tintas, massas, texturas e materiais para pintura da marca Tintas Qualy Quimy. Grafiato, Textura Lisa, Massa PVA, Massa Acrílica, Tinta Econômica, Seladora e Liqui Brilho. Entrega em Itaquaquecetuba, Mogi das Cruzes, Suzano, Ferraz de Vasconcelos e região.",
+    "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+    "telephone": "+55-11-95495-0044",
+    "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp",
+    "logo": "https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Leiria, 45 - Chácara Cuiabá",
+      "addressLocality": "Itaquaquecetuba",
+      "addressRegion": "SP",
+      "postalCode": "08571-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-23.4869",
+      "longitude": "-46.3481"
+    },
+    "hasMap": "https://maps.app.goo.gl/itaquaquecetuba",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "13:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "50"
+    },
+    "priceRange": "$$",
+    "currenciesAccepted": "BRL",
+    "paymentAccepted": "Dinheiro, PIX, Cartão de Crédito, Cartão de Débito",
+    "areaServed": [
+      {"@type": "City", "name": "Itaquaquecetuba"},
+      {"@type": "City", "name": "Mogi das Cruzes"},
+      {"@type": "City", "name": "Suzano"},
+      {"@type": "City", "name": "Ferraz de Vasconcelos"},
+      {"@type": "City", "name": "Poá"},
+      {"@type": "City", "name": "Arujá"},
+      {"@type": "City", "name": "Guarulhos"}
+    ],
+    "sameAs": [
+      "https://wa.me/5511954950044",
+      "https://shopee.com.br/tintasqualyquimy"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-11-95495-0044",
+      "contactType": "customer service",
+      "availableLanguage": "Portuguese",
+      "areaServed": "BR"
+    }
+  }
+  </script>
+
+  <!-- SCHEMA 2: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#organization",
+    "name": "Tintas Qualy Quimy",
+    "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp",
+      "width": 300,
+      "height": 100
+    },
+    "description": "Marca especializada em tintas, massas e texturas para pintura. Localizada em Itaquaquecetuba - SP.",
+    "telephone": "+55-11-95495-0044",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Leiria, 45 - Chácara Cuiabá",
+      "addressLocality": "Itaquaquecetuba",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "sameAs": [
+      "https://shopee.com.br/qualyquimy",
+      "https://wa.me/5511954950044"
+    ]
+  }
+  </script>
+
+  <!-- SCHEMA 3: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#website",
+    "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+    "name": "Qualy Quimy | Tintas, Massas e Texturas",
+    "description": "Tintas, massas, texturas e materiais para pintura em Itaquaquecetuba e região de São Paulo.",
+    "publisher": {
+      "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#organization"
+    },
+    "inLanguage": "pt-BR",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://tintasqualyquimy.impulsoweb10.com.br/categorias/blog.html?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- SCHEMA 4: ItemList com preços a partir de -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Produtos Qualy Quimy - Tintas, Massas e Texturas",
+    "description": "Catálogo completo de produtos Qualy Quimy para pintura e acabamento.",
+    "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+    "numberOfItems": 9,
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/grafiato.html","item":{"@type":"Product","name":"Grafiato Qualy Quimy","description":"Acabamento texturizado para fachadas e paredes. Alta durabilidade e resistência. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"29.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":2,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/textura-lisa.html","item":{"@type":"Product","name":"Textura Lisa Qualy Quimy","description":"Acabamento liso e uniforme para paredes internas e externas. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"29.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":3,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/massa-pva.html","item":{"@type":"Product","name":"Massa PVA Qualy Quimy","description":"Massa corrida para nivelamento de paredes internas. Fácil aplicação. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"22.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":4,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/massa-acrilica.html","item":{"@type":"Product","name":"Massa Acrílica Qualy Quimy","description":"Superior à Massa PVA, uso interno e externo. Maior resistência à umidade. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"28.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":5,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/seladora.html","item":{"@type":"Product","name":"Seladora Qualy Quimy","description":"Preparação ideal para paredes novas. Melhora aderência e reduz consumo de tinta. Disponível em 1L, 3,6L e 16L.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"15.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":6,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/tinta-economica-qualy-color-uso-interno.html","item":{"@type":"Product","name":"Tinta Econômica Qualy Color","description":"Tinta acrílica premium lavável. Catálogo completo de cores. Uso interno e externo. Disponível em 1L, 3,6L e 18L.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"15.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":7,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/esmalte.html","item":{"@type":"Product","name":"Esmalte Qualy Quimy","description":"Esmalte sintético para madeiras e metais. Acabamento brilhante e resistente. Disponível em 3,6L.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"105.00","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":8,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/textura-projetada.html","item":{"@type":"Product","name":"Textura Projetada Branca Qualy Quimy","description":"Para fachadas externas. Aplicação mecânica ou manual. Alta cobertura. Disponível em 25kg.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"74.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":9,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/liqui-brilho.html","item":{"@type":"Product","name":"Liqui Brilho Qualy Quimy","description":"Acabamento brilhante e impermeabilizante. Transparente sobre texturas e tintas. Disponível em 1L e 3,6L.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"35.00","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header role="banner">
+  <div class="header-top">
+    Entrega em Itaquaquecetuba, Mogi das Cruzes, Suzano e região -
+    <a href="comercial/frete-gratis-itaquaquecetuba.html">Frete grátis disponível</a>
+  </div>
+  <div class="header-main">
+    <a href="/" class="logo">Qualy<span>Quimy</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" id="site-menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="categorias/tintas.html">Tintas</a></li>
+        <li><a href="categorias/texturas.html">Texturas</a></li>
+        <li><a href="categorias/massas.html">Massas</a></li>
+        <li><a href="categorias/fundos.html">Fundos</a></li>
+        <li><a href="categorias/acabamentos.html">Acabamentos</a></li>
+        <li><a href="categorias/cidades.html">Cidades</a></li>
+          <li><a href="grafiato-itaquaquecetuba.html">Grafiato em Itaquaquecetuba</a></li>
+        <li><a href="categorias/blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/5511954950044?text=Olá!%20Quero%20informações%20sobre%20tintas%20Qualy%20Quimy"
+         target="_blank" rel="noopener noreferrer" class="btn-whats">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Marca Qualy Quimy - Itaquaquecetuba, SP</div>
+      <h1>Tintas e Texturas para <em>Toda a Região</em></h1>
+      <p>Grafiato, textura lisa, massa PVA, massa acrílica, tinta econômica Qualy Color e muito mais. Entrega expressa em Itaquaquecetuba, Mogi das Cruzes, Suzano, Ferraz e região.</p>
+      <div class="hero-btns">
+        <a href="#produtos" class="btn-primary">Ver Produtos</a>
+        <a href="comercial/frete-gratis-itaquaquecetuba.html" class="btn-secondary">Frete grátis em Itaquaquecetuba</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>9</strong><span>Produtos</span></div>
+        <div class="stat"><strong>4.9</strong><span>Avaliação média</span></div>
+        <div class="stat"><strong>12+</strong><span>Cidades</span></div>
+      </div>
+    </div>
+    <div class="hero-img-area">
+      <div class="hero-visual-shell" aria-hidden="true"></div>
+      <div class="hero-cards">
+        <div class="hero-card">
+          <div class="hero-card-icon">GR</div>
+          <strong>Grafiato</strong>
+          <span>5,6kg e 25kg</span>
+          <button id="btnGrafiato" type="button" class="btnHeroGrafiato">Ver Benefícios</button>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">TL</div>
+          <strong>Textura Lisa</strong>
+          <span>5,6kg e 25kg</span>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">QC</div>
+          <strong>Tinta Econômica Qualy Color</strong>
+          <span>1L / 3,6L / 18L</span>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">LB</div>
+          <strong>Liqui Brilho</strong>
+          <span>1L / 3,6L</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section style="background:#fff; padding:52px 24px;" aria-labelledby="titulo-categorias">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Navegue por Categoria</div>
+      <h2 id="titulo-categorias">O Que Você Precisa?</h2>
+    </div>
+    <nav aria-label="Categorias de produtos Qualy Quimy">
+    <div class="categorias-grid">
+      <a href="categorias/tintas.html" class="categoria-card">
+        <div class="icon" style="background:none;width:57.68px;height:57.68px;display:flex;align-items:center;justify-content:center;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAVJaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCc/Pgo8eDp4bXBtZXRhIHhtbG5zOng9J2Fkb2JlOm5zOm1ldGEvJz4KPHJkZjpSREYgeG1sbnM6cmRmPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjJz4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOkF0dHJpYj0naHR0cDovL25zLmF0dHJpYnV0aW9uLmNvbS9hZHMvMS4wLyc+CiAgPEF0dHJpYjpBZHM+CiAgIDxyZGY6U2VxPgogICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSdSZXNvdXJjZSc+CiAgICAgPEF0dHJpYjpDcmVhdGVkPjIwMjYtMDQtMDk8L0F0dHJpYjpDcmVhdGVkPgogICAgIDxBdHRyaWI6RGF0YT57JnF1b3Q7ZG9jJnF1b3Q7OiZxdW90O0RBR3h6R1VFMzFrJnF1b3Q7LCZxdW90O3VzZXImcXVvdDs6JnF1b3Q7VUFEOU9mcnpxUGsmcXVvdDssJnF1b3Q7YnJhbmQmcXVvdDs6JnF1b3Q7QkFEOU9aWEZ0WG8mcXVvdDt9PC9BdHRyaWI6RGF0YT4KICAgICA8QXR0cmliOkV4dElkPmUzY2U2MzliLWFkZjEtNDgwMC04M2RmLThhZWI1YjNiYzFlODwvQXR0cmliOkV4dElkPgogICAgIDxBdHRyaWI6RmJJZD41MjUyNjU5MTQxNzk1ODA8L0F0dHJpYjpGYklkPgogICAgIDxBdHRyaWI6VG91Y2hUeXBlPjI8L0F0dHJpYjpUb3VjaFR5cGU+CiAgICA8L3JkZjpsaT4KICAgPC9yZGY6U2VxPgogIDwvQXR0cmliOkFkcz4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6ZGM9J2h0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" alt="Tintas" style="width:57.68px;height:57.68px;object-fit:contain;display:block;"></div>
+        <strong>Tintas</strong>
+        <span>Tinta Econômica Qualy Color e Esmalte</span>
+      </a>
+      <a href="categorias/texturas.html" class="categoria-card">
+        <div class="icon" style="background:none;width:57.68px;height:57.68px;display:flex;align-items:center;justify-content:center;"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QC+RXhpZgAATU0AKgAAAAgABgESAAMAAAABAAEAAAEaAAUAAAABAAAAVgEbAAUAAAABAAAAXgEoAAMAAAABAAIAAAITAAMAAAABAAEAAIdpAAQAAAABAAAAZgAAAAAAAABgAAAAAQAAAGAAAAABAAaQAAAHAAAABDAyMTCRAQAHAAAABAECAwCgAAAHAAAABDAxMDCgAQADAAAAAf//AACgAgADAAAAAQQ4AACgAwADAAAAAQQ4AAAAAAAAAAD/4Q5AaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCc/Pg0KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyI+DQoJPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4NCgkJPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6QXR0cmliPSJodHRwOi8vbnMuYXR0cmlidXRpb24uY29tL2Fkcy8xLjAvIj4NCgkJCTxBdHRyaWI6QWRzPg0KCQkJCTxyZGY6U2VxPg0KCQkJCQk8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4NCgkJCQkJCTxBdHRyaWI6Q3JlYXRlZD4yMDI1LTA3LTE2PC9BdHRyaWI6Q3JlYXRlZD4NCgkJCQkJCTxBdHRyaWI6RXh0SWQ+ZTQ3ZTAwNDAtMGI1NS00ZTQxLTg3MGUtNmM3ZGVkYzljOWYwPC9BdHRyaWI6RXh0SWQ+DQoJCQkJCQk8QXR0cmliOkZiSWQ+NTI1MjY1OTE0MTc5NTgwPC9BdHRyaWI6RmJJZD4NCgkJCQkJCTxBdHRyaWI6VG91Y2hUeXBlPjI8L0F0dHJpYjpUb3VjaFR5cGU+DQoJCQkJCTwvcmRmOmxpPg0KCQkJCTwvcmRmOlNlcT4NCgkJCTwvQXR0cmliOkFkcz4NCgkJPC9yZGY6RGVzY3JpcHRpb24+DQoJCTxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyI+DQoJCQk8ZGM6dGl0bGU+DQoJCQkJPHJkZjpBbHQ+DQoJCQkJCTxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCI+RGVzaWduIHNlbSBub21lIC0gMTwvcmRmOmxpPg0KCQkJCTwvcmRmOkFsdD4NCgkJCTwvZGM6dGl0bGU+DQoJCTwvcmRmOkRlc2NyaXB0aW9uPg0KCQk8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczpwZGY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGRmLzEuMy8iPg0KCQkJPHBkZjpBdXRob3I+UmFmYWVsIEdvbmNhbHZlczwvcGRmOkF1dGhvcj4NCgkJPC9yZGY6RGVzY3JpcHRpb24+DQoJCTxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+DQoJCQk8eG1wOkNyZWF0b3JUb29sPkNhbnZhIChSZW5kZXJlcikgZG9jPURBR3RYekhEMlNZIHVzZXI9VUFEOU9mcnpxUGsgYnJhbmQ9QkFEOU9aWEZ0WG8gdGVtcGxhdGU9PC94bXA6Q3JlYXRvclRvb2w+DQoJCTwvcmRmOkRlc2NyaXB0aW9uPg0KCTwvcmRmOlJERj4NCjwveDp4bXBtZXRhPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPD94cGFja2V0IGVuZD0ndyc/Pv/bAEMAAgEBAgEBAgICAgICAgIDBQMDAwMDBgQEAwUHBgcHBwYHBwgJCwkICAoIBwcKDQoKCwwMDAwHCQ4PDQwOCwwMDP/bAEMBAgICAwMDBgMDBgwIBwgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIADwAPAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP38rxv9tT9vv4U/8E+fhtD4o+KnimDQbW+dodOs44Xur/Vp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" alt="Texturas" style="width:57.68px;height:57.68px;object-fit:contain;display:block;"></div>
+        <strong>Texturas</strong>
+        <span>Grafiato, lisa e projetada</span>
+      </a>
+      <a href="categorias/massas.html" class="categoria-card">
+        <div class="icon" style="background:none;width:57.68px;height:57.68px;display:flex;align-items:center;justify-content:center;"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4Q/sRXhpZgAATU0AKgAAAAgADAEAAAMAAAABD/AAAAEBAAMAAAABDAAAAAEPAAIAAAAJAAAAngEQAAIAAAAJAAAAqAESAAMAAAABAAEAAAEaAAUAAAABAAAAsgEbAAUAAAABAAAAugEoAAMAAAABAAIAAAEyAAIAAAAUAAAAwgITAAMAAAABAAEAAIdpAAQAAAABAAAA1oglAAQAAAABAAAHFgAAB/Ztb3Rvcm9sYQAAbW90byBnMzIAAAAAAEgAAAABAAAASAAAAAEyMDI0OjA1OjE1IDE0OjE1OjQ1AAAigpoABQAAAAEAAAJ0gp0ABQAAAAEAAAJ8iCIAAwAAAAEAAgAAiCcAAwAAAAEBsgAAkAAABwAAAAQwMjIwkAMAAgAAABQAAAKEkAQAAgAAABQAAAKYkQEABwAAAAQBAgMAkgEACgAAAAEAAAKskgIABQAAAAEAAAK0kgMACgAAAAEAAAK8kgQACgAAAAEAAALEkgUABQAAAAEAAALMkgcAAwAAAAEAAgAAkggAAwAAAAEAFQAAkgkAAwAAAAEAEAAAkgoABQAAAAEAAALUknwABwAABAQAAALckpAAAgAAAAcAAAbgkpEAAgAAAAcAAAbokpIAAgAAAAcAAAbwoAAABwAAAAQwMTAwoAEAAwAAAAEAAQAAoAIAAwAAAAEP8AAAoAMAAwAAAAEMAAAAoAUABAAAAAEAAAb4ohcAAwAAAAEAAQAAowEAAQAAAAEBAAAApAIAAwAAAAEAAAAApAMAAwAAAAEAAAAApAQABQAAAAEAAAcMpAUAAwAAAAEAHAAApAYAAwAAAAEAAAAA6h0ACQAAAAEAAABCAAAAAAAAAAEAAAAeAAAAtAAAAGQyMDI0OjA1OjE1IDE0OjE1OjQ1ADIwMjQ6MDU6MTUgMTQ6MTU6NDUAAAATKgAAA+gAAACpAAAAZP///+MAAABkAAAAAAAAAAYAAACpAAAAZAAAEKoAAAPoTU9UAAEBAQEAMlUAAAIAAAASAAACYlUCAAEAAAABMAAAAFUDAAEAAAABHQAAAFURAAQAAAABAAAAAFUSAAQAAAABAAAAAFUgAAgAAAABAAIAAFUxAAgAAAABAAQAAFVAAAEAAAABXwAAAFVQAAEAAAABXwAAAFVhAAgAAAABAAEAAFXpAAIAAAAIAAACdGAAAAkAAAABAAAAAGQAAAIAAAAFAAACfGQQAAIAAAADTk8AAGQgAAIAAAAfAAACgWQzAAIAAAACMAAAAGQ0AAIAAAACMAAAAGRRAAIAAAACMQAAAGRcAAIAAAAFAAACoGTQAAIAAAAkAAACpWZAAAIAAAAFAAACyWZeAAIAAAAVAAACzmZfAAkAAAABAAAAAGZgAAkAAAABAAAAAGZhAAkAAAABAAAAAGZiAAkAAAABAAAAAGZjAAkAAAABAAAAAGZnAAIAAAAKAAAC42ZoAAIAAAAHAAAC7WZpAAIAAAAKAAAC9GcAAAIAAAAhAAAC/mcBAAIAAAALAAADH2cCAAIAAAAEWkVUAGcDAAIAAAAGAAADKmcEAAIAAAADTkMAAGcFAAIAAAAJAAADMGcGAAIAAAADNDkAAHEOAAIAAAAlAAADOXEPAAIAAABJAAADXnEQAAIAAAAwAAADp3EUAAIAAAARAAAD13EXAAIAAAAFAAAD6HEYAAIAAAAFAAAD7XEZAAkAAAABAAAAAHEaAAIAAAANAAAD8nFAAAkAAAABCFoAAHFhAAEAAAABAAAAAHGRAAEAAAABAAAAAHGSAAIAAAAFAAAD/3GWAAIAAAADTk8AAFQyU05TMzMuNzMtMjItMy01AERvbmd3b28AQVVUTwBTY2VuZTogTEx8QXNMTCwgQXNMTF8wLE9LLCA0LzMATk9ORQBMb3dfTGlnaHRfRnJhbWVfU3RhY2tfU3RhdGVfTWFjaGluZQAweDMxAGJhY2stbWFpbi1tb3RfczVram4xADkuMC44NS4zMgAyLjAuNTkAMDUuMTAuMDIxADA1ZDUwODhlOGQzMGZmZmZmZmZmZmZmZmZmZmZmZmZmAFNDMjhEMzE2NTkAT2ZpbG0AMjAyMi83LzkANzMwLjg4OTsgNzMwLjc5NDsgNzMwLjY4NTsgNzMwLjUxOTsgADExMTA4OTA4NTcyMjAxMDk7IDExMTA4OTA4OTA2MTk5MDA7IDExMTA4OTA5MjQwMTk2NDA7IDExMTA4OTA5NTc0MTk0MzI7IAAoc3RhdGU6cG9zKTogMjozLjYyMzsgMjozLjYyMzsgMjozLjYyMzsgMjozLjYyMwAxMTEwODkwNjk0MDAwMDAwAE5PTkUATk9ORQAwOyAwOyAwOyAwOyAAQVVUTwA4MTg0NTUAADgxODQ1NQAAODE4NDU1AAAAAQABAAIAAAAEUjk4AAAAAAAAAAAAAJgAAABkAAAACQABAAIAAAACUwAAAAACAAUAAAADAAAHiAADAAIAAAACVwAAAAAEAAUAAAADAAAHoAAFAAEAAAABAAAAAAAGAAUAAAABAAAHuAAHAAUAAAADAAAHwAAbAAcAAAAPAAAH2AAdAAIAAAALAAAH6AAAAAAAAAAXAAAAAQAAABsAAAABAAJSawAAJxAAAAAuAAAAAQAAABUAAAABAAFOaAAAJxAADBNoAAAD6AAAABEAAAABAAAADwAAAAEAAAAsAAAAAUFTQ0lJAAAAQ0VMTElEAAAyMDI0OjA1OjE1AAAAAAAHAQMAAwAAAAEABgAAARIAAwAAAAEAAQAAARoABQAAAAEAAAhQARsABQAAAAEAAAhYASgAAwAAAAEAAgAAAgEABAAAAAEAAAhgAgIABAAAAAEAAAeDAAAAAAAAAEgAAAABAAAASAAAAAH/2P/bAEMACAYGBwYFCAcHBwkJCAoMFA0MCwsMGRITDxQdGh8eHRocHCAkLicgIiwjHBwoNyksMDE0NDQfJzk9ODI8LjM0Mv/bAEMBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADwAPAMBIQACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APfyQBknAFcf4g8eR6XdGz06wk1G7RtsiKxQRk42joSSc5HHIBrfD0PbT5b2Xcyq1PZxva5kSeK/HTRfaI9B0+OEruVXZmf/AL5BBz7YqJfGvjRSRL4ft2yAV2RycfXk16SweCa0m7/L/I4niMUn8CGJ4v8AHso3Lo+morNhfMilGOcc/PkfXFJJ468Y6fdqt7omnzw4JY2zOMY4POW6Ejt7fRvB4NvljN3+VvyBYjFLWUVY7rRPEVhr0LtaOweJ/LkR0ZSHxkgbgM8H/HFa1eRUpunJxZ6EZKSujE8Y3UVn4M1mafzBELORWMahmG5SuQCRnGfWvlNfEjwTl7b7XG4zhhIoIH13cV6GAxlPDxlGavc5MVhp1ZJxexL/AMJ7q6kL/aGq9cYE5P8A7NVq18WeJNQaQWlzq8xjQySbLjO1AQCx+bgDI5967P7SwnWH4IwWDr/zfiysfHesg86lqXXBIus/+zU0eOdWV2YX2pAvgMRccn6/NS/tHCfyfgg+p1/5vxZ1vwk1uC7+IliJnnWRhIEMhB3sUbgnPuT9frX0tXmY3ERr1eeKsjsw1KVKHLJkN1aW19bPbXdvFcW8gw8UyB1b6g8GvItR+Efhs39zKwgtUlmk2BpGUd2wBuA4VScDoAfSuTXodBU0/wCFvgjU2MVjqlndSoMlba53kDjkgOfX9awtU8A6PpUtpe6J4n0+23o5hmS72tydu9G81enzDqR1461SpVG7KL+4V0i8dK8Ea7FLc6pbyTTQMYptSsbS48uRxyxcxp5ZY7gSw65B6YrXf4IaCELRMGXHUl8/+h0Tpzp6SGmnsdV4H+H+ieHJJ5YrCB5gyPHLIpdozg8qWJ2k55xjOBXeVCAKyrm2gmmmimiSWMur7ZFDDIwwOD6Hke4p3a1QHG+OINMn0FrrZd6i968axW8V3PJHL0YMsStsIAXf0x8ueehxtM8T6GNN8628MWZkJ+z6gLbT1TZE5BUnP8DpnAcjJ468Hb296Spwl711psrPq7em5lThOWIfN8Ci3frddO2t0d5pF/pmq6ef7PVltrciDymtng8vCqQux1UgbWXHGMEYqX7HLbZa2m2A87CNy1z+ptsadgGKM7AKwO0hfun3q5TQgqlOoF1kDqozQwMnXfD1n4h0x9PvEUwSPudtuXUgHayHPysDg5wRgEY5rFt/h7p9m8n2K+1C1SSBbd4oZvkeNegYEHcVUkKSSeT1rCcanPGUZWS3/T7jalUUFJOKfMrak2q6jD4F8PwSSzX17GHEK+ayMzMVGWZsAkkqxzzy57fd2tPu21LSre78oIJ41kVQScZAPcA/mAfYdBrf3rGb7mzB/qV/H+dSVZIVWuAPNjPcgg0MDJttctrm2W5hXdCXVGdbiFgjkrlSQ+MruJIGfunGeM3oby0uJWiguoJZFGSiSBiBgHp9GU/8CHrUgYnjW6srPw1di9hMqSIyLhFbYxGA3PoSPU85xwao/D26e80BWlvPNmVhvgCBBDxxwAOCMHsMEcZySupdvdO5X7i/SlqyAqhq01xbWqz21us7I3zoz7fk7kH8v/rdamTsrjiruxinXZpXMY0+6SN2+YkpkpjHykS5U5/L61KdfuI4DmwaZ1GchljBH0y2D27/AOHN9bpm/wBWl3RR1nX2lX7DHZxyWs8W24uHm2qgOQy7SATx3HrWjomn2WkmK00vT0htpF3PJ5jFs498kjp1NUq8ZStHUTpOMfeOhorpMAooAKKACigAooA//9kA/9sAQwACAQECAQECAgICAgICAgMFAwMDAwMGBAQDBQcGBwcHBgcHCAkLCQgICggHBwoNCgoLDAwMDAcJDg8NDA4LDAwM/9sAQwECAgIDAwMGAwMGDAgHCAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8AAEQgAPAA8AwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/fqSVYY2d2VVUZZicAD1NfIP7YP/AAVosPgL4wk8KeA/BWpfE7xZZzfZtRs4LhrNNNlYRGBGHlSSO0ok3IFTDojsrHjPqX/BSfx3pnw2/YA+MmrawdSXTE8I6jbXElhAk9xCs8DQeYiPJGrbTIGILrkKcHOK/lTtf22Lrwp4hlu/D3/CYaZdwBliuY7+CGSJCecMJxt9x/8Arr7vgvLMjxMp1s5rqHLtCV0pX6txaenZflo/luJMdmdHkpZfRcubeStePlZprXuz+gDVv+CgH7Zl3o7a3Y/BX4b6Xo88Hn28F5c3V1fgbSQpgjmSYscA7PJVgD823BIx7L/gqD+1tYzzR6h8DvDNwZYkmt/smn6liNSSGDnzGBIx0+VgMHGDmvwpb/grh8UbKRYR46+Lxw4TYmuu3OOnyznjqM9M5HWun8A/8FCPj98XrrUI/DOvfGjWpNKspdQvhZa8z/ZLSJ0SW4lxcfJEhkXc7YUBwScHNfocaPCqi4ynhbf4aif38z+Z8p/wuNqSVdP/ABQa/wDSUftLpv8AwUd/bU12BbiH4V/DCxguJxFB9u0rVIWTL7FMga6DIuSCXZQoGWOByI9a/wCCr/7Vnwe8aww+LvhD8OfEGjGKR55PD015GYCjeW2ZjLMvySNGGOwrkldwYMF/DuT/AIKxfFeCVQ3j74p7g212TxSW3H6i5IPr1756VDF/wVW+Jlne3Uy+MvilDLeBUupIvEJVpgBtUuRcZyBgcnjAFDp8KyfLOeG5dtI1E/v5gtnkVeKrc3nKDX3WP6sf2W/2zvBP7Wmg3tx4avLhb3SbsadqFndWk9q8F0IlleJPOjjaTarAnChgCNyoTivWa/mp/wCDdz9qHSPiB/wVW8Ex6tc+ILfUbqHUYrJ790l+2zPaXGY2fzcLxJLJk5LMNoUs4Nf0rV+Q8TYHLsLjnSyut7WnZO9tm91527+duh99kuKxeIwynjafs53tbv5+V+xj+Pvh7oHxV8IX3h/xRoej+JNB1JBHeabqtnHeWd2oYMBJFIGRwGUHDA8gHtX5F/GT/g3X+AFx8S/E2pzx+H/CVnrWsXwtIri/ubaFf9dcNHEi3EafJBDLJtQbVjikO0Kpx+xleV+NfBOj+JNd1fTdU02z1XT5LqC7a2vYEnhEqMk6SBGBBZJVWRT1VlUjBGR862k1zbeR65+TXwf/AOCCP7H/AMcLp9O8H/EfwP4t1TT4/Olh8O+JjfTRR7ly7ql47BQXCliB99e+M+F/Hn/gkV8KfgHrPhLxd8IP2iPhv4XGoWd5Lo+rWviz7PdLvdrb7bZXC6tAcIRcQkmaRCwdShKvn9EP+CqHhP4e+Kv2abrxItn4x+Jl14+vdPttJ0PS/FWvahpusk7J0nt9Mtrr7JMkUNu11nYIiIDIfMbCSeN/A39uv4Nw/CddW0D9njwQ2oM//CPfEFPD/gCCwFhpt68MltLLu4WzvbEuyJdyRiZwqAF9sTeqqOW+wVX2kpTclH2a5edcydnbV8raaUuVL3XfuuLD16+Ix08BSg/cpuo5vSCUd05Oy5rNPlvd80eW7aR4Zcfs/fse/tWaJquvfEjRNR1zWvDVy2j6t8QvBnhLxA2m6lexASzvey6baCwkuXM6StcRgCQSRMGMZUn1rUv+DWP4Lx2TzabMlxblQQ7vfLKOGxjbdbSD14z68Zr9Cv2dPi38Pfj58LnPge3urfw74ZaPQDpk/hy88Ptpapa280NuLO7ggkji+yz27JiPYY5UKZBArVHw41DwQ003h/VvsMchDG0ljFxasMdFUkYzznbjk+xrzMRKg3bDxlFf3pJ/lGJ2RU07VN/S36s8L/4JW/8ABIH4RfsV6trWo6d4L8P32tRTWd3p2o30D39zpcqrOGltnuWka3d1cKzRFS4RNxO1QPu+uP8AhPbzTWM11cRx21wjG3ljtyfIlICnzFXt1wB2Hr1rsKinfl1G9wrjPFlmkfjTeqhTNbKz/wC0csufyUflXZ1znjKGMavYvtG+RWVjnGQCuB/48fzpz2EjxT9rH9jfwr+2J8Ir3wT4qtbWXRNWuzdXk7Qb9QtZVhkEFxZTbgLW5hlMTrIySoUSSNo2WUkeM+D/APgjh4F+GmoXzeEfGXxG8I2eqaFD4eu9O0rVz9h1HToW2xQ3Uciv57wQNJFBJK7OqzOG8wDFe9eC/wBqfw/448I2+v6XD9r0lrqGwuruDXtFnh067ZrZZbWWWO+ZPOgW4keREZiVtJtnmM0Im7Tw78R/C/jDWbjTNH8SaBqmoW8Rme0tNQinnijCQvuZFYsBsuLdicY2zxno658uvgIVq9LE3alTva0pJO9r3imlLb3W03F6rdp92FzCvho1YUWkqi5ZaJ3S2V2mfNPx9+Muk/8ABKP9mDQb7UdV8e+PNPguodDtjqdxaXF3eTvBGzz3V0Uid5JHtZ5Wcs3769kJVYVUQe0fCD4izfG74MeHvFB0+Oxj8RadbahDbpLI5jE0SOQfMiidSGLKA8aPhQWSNi0a8H/wVB8f+E/hz+yJ4qXxbpM2sWuq2U9nB5dnDc/2fNJGYY7s+dlVEcs0R3Kruu7cEZVcjhv+COvjq5+JX7MlvNqHij+1tYtLmJbvRltI7OPQSyDywsKqpCzRBJlKqkRWRNqGQTSydDcvbb6W2M3Dmpe1e9/vPtnwsuzQoR7see3zGtCorFdllCvoijj6VLXatjlCuD/aF8Ra74L8Fw61oGiW2vT6ddK15bTXRtiLQqwkdXCthlOxuVIIUglQS695RUVIylBxi7Pv2LpyUZJyV12PluX9rDVvEGoNYR+CPF1jY6hckXMrtaeZLZNH5ebd4tSV4ZSwBDAKF3EjLjLakv7XGuaR4dm3eCrrWb23VmWVbiDToZ03YGUaadkbOVxuYMV3ZG4qn0hRXk/U8w6V4/8Agv8A+3PQWKwa/wCXP/k7/wAj43/aY/a7n120Pg2x8J6fqnhXxFpgg8Q65dasLe109JdyXVuYHjSSQGHKh0ZQDICSArV6J+y18IPCP7PEuk+Gfhz4J0/RfDmpQm6vb06jM90ZRGwC7ZhJJIi4RRulULuOF9foSitqeFxfPzVKqtpooW29ZS38tSJ4rD+z9nTpvrvK+vfRLVfd5BRRRXqHnn//2Q==" alt="Massas" style="width:57.68px;height:57.68px;object-fit:contain;display:block;"></div>
+        <strong>Massas</strong>
+        <span>PVA e acrílica</span>
+      </a>
+      <a href="categorias/fundos.html" class="categoria-card">
+        <div class="icon" style="background:none;width:57.68px;height:57.68px;display:flex;align-items:center;justify-content:center;"><img src="data:image/jpeg;base64,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" alt="Fundos" style="width:57.68px;height:57.68px;object-fit:contain;display:block;"></div>
+        <strong>Fundos</strong>
+        <span>Seladora</span>
+      </a>
+      <a href="categorias/acabamentos.html" class="categoria-card">
+        <div class="icon" style="background:none;width:57.68px;height:57.68px;display:flex;align-items:center;justify-content:center;"><img src="data:image/jpeg;base64,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" alt="Acabamentos" style="width:57.68px;height:57.68px;object-fit:contain;display:block;"></div>
+        <strong>Acabamentos</strong>
+        <span>Liqui Brilho</span>
+      </a>
+    </div>
+    </nav>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos" style="background:var(--cor-claro);" aria-labelledby="titulo-produtos">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Catálogo Completo</div>
+      <h2 id="titulo-produtos">Produtos Qualy Quimy</h2>
+      <p>Todos os produtos são da marca Qualy Quimy. Consulte disponibilidade e preços pelo WhatsApp.</p>
+    </div>
+    <div class="produtos-grid">
+
+      <article class="produto-card" itemscope itemtype="https://schema.org/Product">
+        <a href="produtos/grafiato.html" aria-label="Ver produto: Grafiato Qualy Quimy">
+        <div class="produto-img" style="background-image:url('imagens/galao-5-6kg.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;" role="img" aria-label="Imagem do produto Grafiato Qualy Quimy">
+        </div>
+        <div class="produto-info">
+          <div class="produto-categoria" itemprop="category">Texturas e Grafiato</div>
+          <h3 itemprop="name">Grafiato Qualy Quimy</h3>
+          <p itemprop="description">Acabamento texturizado para fachadas e paredes. Alta durabilidade e resistência.</p>
+          <div class="produto-embalagens" aria-label="Embalagens disponíveis">
+            <span class="emb-badge">5,6kg</span>
+            <span class="emb-badge">25kg</span>
+          </div>
+          <div class="produto-cta">Ver produto</div>
+        </div>
+        </a>
+                <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+            <meta itemprop="lowPrice" content="29.90" />
+            <meta itemprop="priceCurrency" content="BRL" />
+            <link itemprop="availability" href="https://schema.org/InStock" />
+          </div>
+      </article>
+
+      <article class="produto-card" itemscope itemtype="https://schema.org/Product">
+        <a href="produtos/textura-lisa.html" aria-label="Ver produto: Textura Lisa Qualy Quimy">
+        <div class="produto-img" style="background-image:url('imagens/galao-5-6kg.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;" role="img" aria-label="Imagem do produto Textura Lisa Qualy Quimy">
+        </div>
+        <div class="produto-info">
+          <div class="produto-categoria" itemprop="category">Texturas e Grafiato</div>
+          <h3 itemprop="name">Textura Lisa Qualy Quimy</h3>
+          <p itemprop="description">Acabamento liso e uniforme para paredes internas e externas.</p>
+          <div class="produto-embalagens" aria-label="Embalagens disponíveis">
+            <span class="emb-badge">5,6kg</span>
+            <span class="emb-badge">25kg</span>
+          </div>
+          <div class="produto-cta">Ver produto</div>
+        </div>
+        </a>
+                <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+            <meta itemprop="lowPrice" content="29.90" />
+            <meta itemprop="priceCurrency" content="BRL" />
+            <link itemprop="availability" href="https://schema.org/InStock" />
+          </div>
+      </article>
+
+      <article class="produto-card" itemscope itemtype="https://schema.org/Product">
+        <a href="produtos/massa-pva.html" aria-label="Ver produto: Massa PVA Qualy Quimy">
+        <div class="produto-img" style="background-image:url('imagens/galao-5-6kg.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;" role="img" aria-label="Imagem do produto Massa PVA Qualy Quimy">
+        </div>
+        <div class="produto-info">
+          <div class="produto-categoria" itemprop="category">Massas</div>
+          <h3 itemprop="name">Massa PVA Qualy Quimy</h3>
+          <p itemprop="description">Massa corrida para nivelamento de paredes internas. Fácil aplicação.</p>
+          <div class="produto-embalagens" aria-label="Embalagens disponíveis">
+            <span class="emb-badge">5,6kg</span>
+            <span class="emb-badge">25kg</span>
+          </div>
+          <div class="produto-cta">Ver produto</div>
+        </div>
+        </a>
+                <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+            <meta itemprop="lowPrice" content="22.90" />
+            <meta itemprop="priceCurrency" content="BRL" />
+            <link itemprop="availability" href="https://schema.org/InStock" />
+          </div>
+      </article>
+
+      <article class="produto-card" itemscope itemtype="https://schema.org/Product">
+        <a href="produtos/massa-acrilica.html" aria-label="Ver produto: Massa Acrílica Qualy Quimy">
+        <div class="produto-img" style="background-image:url('imagens/galao-5-6kg.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;" role="img" aria-label="Imagem do produto Massa Acrílica Qualy Quimy">
+        </div>
+        <div class="produto-info">
+          <div class="produto-categoria" itemprop="category">Massas</div>
+          <h3 itemprop="name">Massa Acrílica Qualy Quimy</h3>
+          <p itemprop="description">Superior à Massa PVA, uso interno e externo. Maior resistência à umidade.</p>
+          <div class="produto-embalagens" aria-label="Embalagens disponíveis">
+            <span class="emb-badge">5,6kg</span>
+            <span class="emb-badge">25kg</span>
+          </div>
+          <div class="produto-cta">Ver produto</div>
+        </div>
+        </a>
+                <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+            <meta itemprop="lowPrice" content="28.90" />
+            <meta itemprop="priceCurrency" content="BRL" />
+            <link itemprop="availability" href="https://schema.org/InStock" />
+          </div>
+      </article>
+
+      <article class="produto-card" itemscope itemtype="https://schema.org/Product">
+        <a href="produtos/seladora.html" aria-label="Ver produto: Seladora Qualy Quimy">
+        <div class="produto-img" style="background-image:url('imagens/balde-16l.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;" role="img" aria-label="Imagem do produto Seladora Qualy Quimy">
+        </div>
+        <div class="produto-info">
+          <div class="produto-categoria" itemprop="category">Fundos e Seladores</div>
+          <h3 itemprop="name">Seladora Qualy Quimy</h3>
+          <p itemprop="description">Preparação ideal para paredes novas. Melhora a aderência e reduz o consumo de tinta.</p>
+          <div class="produto-embalagens" aria-label="Embalagens disponíveis">
+            <span class="emb-badge">1L</span>
+            <span class="emb-badge">3,6L</span>
+            <span class="emb-badge">16L</span>
+          </div>
+          <div class="produto-cta">Ver produto</div>
+        </div>
+        </a>
+                <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+            <meta itemprop="lowPrice" content="15.90" />
+            <meta itemprop="priceCurrency" content="BRL" />
+            <link itemprop="availability" href="https://schema.org/InStock" />
+          </div>
+      </article>
+
+      <article class="produto-card" itemscope itemtype="https://schema.org/Product">
+        <a href="produtos/tinta-economica-qualy-color-uso-interno.html" aria-label="Ver produto: Tinta Econômica Qualy Color">
+        <div class="produto-img" style="background-image:url('imagens/tinta-economica-lata-18l.png');background-size:contain;background-repeat:no-repeat;background-position:center;" role="img" aria-label="Imagem do produto Tinta Econômica Qualy Color">
+          <div class="produto-tag">MAIS VENDIDA</div>
+        </div>
+        <div class="produto-info">
+          <div class="produto-categoria" itemprop="category">Tintas</div>
+          <h3 itemprop="name">Tinta Econômica Qualy Color</h3>
+          <p itemprop="description">Tinta acrílica premium lavável. Catálogo completo de cores. Uso interno e externo.</p>
+          <div class="produto-embalagens" aria-label="Embalagens disponíveis">
+            <span class="emb-badge">1L</span>
+            <span class="emb-badge">3,6L</span>
+            <span class="emb-badge">18L</span>
+          </div>
+          <div class="produto-cta">Ver produto</div>
+        </div>
+        </a>
+                <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+            <meta itemprop="lowPrice" content="15.90" />
+            <meta itemprop="priceCurrency" content="BRL" />
+            <link itemprop="availability" href="https://schema.org/InStock" />
+          </div>
+      </article>
+
+      <article class="produto-card" itemscope itemtype="https://schema.org/Product">
+        <a href="produtos/esmalte.html" aria-label="Ver produto: Esmalte Sintético Qualy Quimy">
+        <div class="produto-img" style="background-image:url('imagens/galao-3-6l.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;" role="img" aria-label="Imagem do produto Esmalte Sintético Qualy Quimy">
+        </div>
+        <div class="produto-info">
+          <div class="produto-categoria" itemprop="category">Tintas</div>
+          <h3 itemprop="name">Esmalte Sintético Qualy Quimy</h3>
+          <p itemprop="description">Esmalte sintético para madeiras e metais. Acabamento brilhante e resistente.</p>
+          <div class="produto-embalagens" aria-label="Embalagens disponíveis">
+            <span class="emb-badge">3,6L</span>
+          </div>
+          <div class="produto-cta">Ver produto</div>
+        </div>
+        </a>
+                <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+            <meta itemprop="lowPrice" content="105.00" />
+            <meta itemprop="priceCurrency" content="BRL" />
+            <link itemprop="availability" href="https://schema.org/InStock" />
+          </div>
+      </article>
+
+      <article class="produto-card" itemscope itemtype="https://schema.org/Product">
+        <a href="produtos/textura-projetada.html" aria-label="Ver produto: Textura Projetada Branca Qualy Quimy">
+        <div class="produto-img" style="background-image:url('imagens/barrica-25kg.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;" role="img" aria-label="Imagem do produto Textura Projetada Branca Qualy Quimy">
+        </div>
+        <div class="produto-info">
+          <div class="produto-categoria" itemprop="category">Texturas e Grafiato</div>
+          <h3 itemprop="name">Textura Projetada Branca Qualy Quimy</h3>
+          <p itemprop="description">Para fachadas externas. Aplicação mecânica ou manual. Alta cobertura.</p>
+          <div class="produto-embalagens" aria-label="Embalagens disponíveis">
+            <span class="emb-badge">25kg</span>
+          </div>
+          <div class="produto-cta">Ver produto</div>
+        </div>
+        </a>
+                <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+            <meta itemprop="lowPrice" content="74.90" />
+            <meta itemprop="priceCurrency" content="BRL" />
+            <link itemprop="availability" href="https://schema.org/InStock" />
+          </div>
+      </article>
+
+      <article class="produto-card" itemscope itemtype="https://schema.org/Product">
+        <a href="produtos/liqui-brilho.html" aria-label="Ver produto: Liqui Brilho Qualy Quimy">
+        <div class="produto-img" style="background-image:url('imagens/pote-1l.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;" role="img" aria-label="Imagem do produto Liqui Brilho Qualy Quimy">
+          <div class="produto-tag">NOVIDADE</div>
+        </div>
+        <div class="produto-info">
+          <div class="produto-categoria" itemprop="category">Acabamentos</div>
+          <h3 itemprop="name">Liqui Brilho Qualy Quimy</h3>
+          <p itemprop="description">Acabamento brilhante e impermeabilizante. Transparente sobre texturas e tintas.</p>
+          <div class="produto-embalagens" aria-label="Embalagens disponíveis">
+            <span class="emb-badge">1L</span>
+            <span class="emb-badge">3,6L</span>
+          </div>
+          <div class="produto-cta">Ver produto</div>
+        </div>
+        </a>
+                <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+            <meta itemprop="lowPrice" content="35.00" />
+            <meta itemprop="priceCurrency" content="BRL" />
+            <link itemprop="availability" href="https://schema.org/InStock" />
+          </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CALCULADORA -->
+<section style="background:#fff;" aria-labelledby="titulo-calculadora">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Ferramenta Gratuita</div>
+      <h2 id="titulo-calculadora">Calculadora de Tinta</h2>
+      <p>Informe a área e o produto para saber exatamente quanto comprar.</p>
+    </div>
+    <div class="calculadora-box">
+      <div class="calc-field">
+        <label for="produto-calc">Produto Qualy Quimy</label>
+        <select id="produto-calc">
+          <option value="">Selecione o produto...</option>
+        </select>
+      </div>
+      <div class="calc-field">
+        <label for="area">Área em m²</label>
+        <input type="number" id="area" placeholder="Ex: 20" min="1" />
+      </div>
+      <div class="calc-field">
+        <label for="demao">Número de demãos</label>
+        <select id="demao">
+          <option value="1">1 demão</option>
+          <option value="2" selected>2 demãos (recomendado)</option>
+          <option value="3">3 demãos</option>
+        </select>
+      </div>
+      <p class="calc-hint" id="calc-hint">Selecione um produto e informe a metragem para liberar o cálculo.</p>
+      <button class="btn-calc" id="btn-calcular" disabled>Calcular quantidade</button>
+      <div class="calc-resultado" id="resultado-calc" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section class="prova-social" aria-labelledby="titulo-avaliacoes">
+  <div class="container">
+    <div class="section-header" style="color:#fff;">
+      <div class="section-label">Confiança Comprovada</div>
+      <h2 id="titulo-avaliacoes" style="color:#fff;">Avaliações e Reputação</h2>
+    </div>
+    <div class="prova-grid">
+      <div class="avaliacao-widget">
+        <div class="avaliacao-header">
+          <div class="nota-grande">4.9</div>
+          <div>
+            <div class="estrelas" aria-label="Avaliação média de 4.9 de 5 estrelas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p>Avaliação média dos clientes</p>
+            <p style="margin-top:4px">Qualy Quimy no Google</p>
+          </div>
+        </div>
+        <a href="https://cliquetintas-art.github.io/avaliacaoqualyquimy.html/" 
+           target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block">
+          Ver todas as avaliações
+        </a>
+      </div>
+      <div class="shopee-box">
+        <h3>Loja Oficial na Shopee</h3>
+        <p>Compre pela Shopee com toda a segurança da plataforma. Vendedor verificado e bem avaliado.</p>
+        <a href="https://shopee.com.br/qualyquimy?entryPoint=ShopBySearch&searchKeyword=tintas%20qualy%20quimy" 
+           target="_blank" rel="noopener noreferrer" class="btn-shopee">Acessar loja na Shopee</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTREGAS ESPECIAIS -->
+<section style="background:var(--cor-claro);" aria-labelledby="titulo-entregas">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Entrega Facilitada</div>
+      <h2 id="titulo-entregas">Opções de Envio</h2>
+    </div>
+    <div class="frete-grid">
+      <a href="comercial/frete-gratis-itaquaquecetuba.html" class="frete-card">
+        <div class="icon">24h</div>
+        <h3>Frete Grátis Itaquaquecetuba</h3>
+        <p>Entrega gratuita dentro de Itaquaquecetuba para pedidos acima do valor mínimo.</p>
+        <span class="cta-link">Saiba mais</span>
+      </a>
+      <a href="comercial/entrega-expressa-regional.html" class="frete-card">
+        <div class="icon">EXP</div>
+        <h3>Entrega Expressa Regional</h3>
+        <p>Receba no mesmo dia ou no próximo dia útil em cidades da região.</p>
+        <span class="cta-link">Saiba mais</span>
+      </a>
+      <a href="comercial/frete-gratis-final-de-semana.html" class="frete-card">
+        <div class="icon">WK</div>
+        <h3>Frete Grátis Final de Semana</h3>
+        <p>Promoção especial de frete grátis aos sábados e domingos.</p>
+        <span class="cta-link">Saiba mais</span>
+      </a>
+      <a href="comercial/entrega-dia-programado.html" class="frete-card">
+        <div class="icon">DIA</div>
+        <h3>Entrega em Dia Programado</h3>
+        <p>Agende a entrega para o dia exato que você precisa receber.</p>
+        <span class="cta-link">Saiba mais</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CIDADES ATENDIDAS -->
+<section style="background:#fff;" aria-labelledby="titulo-cidades">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Dominação Regional</div>
+      <h2 id="titulo-cidades">Cidades Atendidas</h2>
+      <p>Entregamos tintas e materiais para pintura Qualy Quimy em toda a região.</p>
+    </div>
+    <nav aria-label="Cidades atendidas pela Qualy Quimy">
+    <div class="cidades-grid">
+      <a href="cidades/itaquaquecetuba.html" class="cidade-card" style="border-left-color:var(--cor-acento);background:var(--cor-primaria);">
+        Itaquaquecetuba
+      </a>
+      <a href="grafiato-itaquaquecetuba.html" class="cidade-card" style="border-left-color:#f9a825;background:#fffbe7;font-weight:bold;">
+        Grafiato em Itaquaquecetuba
+      </a>
+      <a href="cidades/mogi-das-cruzes.html" class="cidade-card">Mogi das Cruzes</a>
+      <a href="cidades/suzano.html" class="cidade-card">Suzano</a>
+      <a href="cidades/ferraz-de-vasconcelos.html" class="cidade-card">Ferraz de Vasconcelos</a>
+      <a href="cidades/poa.html" class="cidade-card">Poá</a>
+      <a href="cidades/aruja.html" class="cidade-card">Arujá</a>
+      <a href="cidades/guarulhos.html" class="cidade-card">Guarulhos</a>
+      <a href="cidades/guaianases.html" class="cidade-card">Guaianases</a>
+      <a href="cidades/itaim-paulista.html" class="cidade-card">Itaim Paulista</a>
+      <a href="cidades/sao-miguel-paulista.html" class="cidade-card">São Miguel Paulista</a>
+      <a href="cidades/cidade-tiradentes.html" class="cidade-card">Cidade Tiradentes</a>
+      <a href="cidades/lajeado.html" class="cidade-card">Lajeado</a>
+    </div>
+    </nav>
+  </div>
+</section>
+
+<!-- SEO TEXT -->
+<div class="seo-text" role="complementary" aria-label="Sobre a Qualy Quimy">
+  <div class="seo-text-inner">
+    <h2>Tintas e Materiais para Pintura em Itaquaquecetuba e Região</h2>
+    <p>A <strong>Qualy Quimy</strong> é uma marca especializada em tintas, massas, texturas e materiais para pintura, com base em <strong>Itaquaquecetuba - SP</strong>. Nosso catálogo inclui produtos para todos os tipos de acabamento: desde a preparação da parede com a <strong>Seladora</strong>, passando pela regularização com <strong>Massa PVA</strong> ou <strong>Massa Acrílica</strong>, até o acabamento final com <strong>Grafiato</strong>, <strong>Textura Lisa</strong>, <strong>Tinta Econômica Qualy Color</strong> e <strong>Liqui Brilho</strong>.</p>
+    <p>Atendemos <strong>Mogi das Cruzes, Suzano, Ferraz de Vasconcelos, Poá, Arujá e Guarulhos</strong>, além de toda a zona leste de São Paulo. Nossos produtos estão disponíveis para entrega rápida ou retirada em nosso endereço na <strong>Rua Leiria, 45 - Chácara Cuiabá, Itaquaquecetuba</strong>.</p>
+    <p>Também vendemos pela <strong>Shopee</strong>, com avaliação de 4,9 estrelas. Consulte preços e disponibilidade pelo <strong>WhatsApp</strong>.</p>
+  </div>
+</div>
+
+<section style="background:#fff;" aria-labelledby="titulo-mapa-endereco">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Ponto de Retirada</div>
+      <h2 id="titulo-mapa-endereco">Nosso Endereço no Mapa</h2>
+      <p>Rua Leiria, 45 - Chácara Cuiabá, Itaquaquecetuba - SP.</p>
+    </div>
+    <div style="position:relative;border-radius:10px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.14);border:1px solid #e9edf4;">
+      <iframe
+        title="Mapa do endereço da Qualy Quimy"
+        src="https://www.google.com/maps?q=Rua+Leiria+45+Itaquaquecetuba+SP&output=embed"
+        width="100%"
+        height="420"
+        style="border:0;display:block;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:2;text-align:center;">
+        <img src='https://www.svgrepo.com/show/475656/google-maps.svg' alt='Google Maps' style='height:2.2em;vertical-align:middle;filter:drop-shadow(0 2px 8px #fff);margin-bottom:0.3em;'>
+        <div style='font-size:1.1em;font-weight:bold;color:#1a237e;text-shadow:0 2px 8px #fff;'>Tintas Qualy Quimy<br>aqui</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="logo">Qualy<span style="color:var(--cor-acento)">Quimy</span></a>
+      <p>Tintas, massas, texturas e materiais para pintura em Itaquaquecetuba e toda a região de São Paulo.</p>
+      <div class="endereco">
+        Rua Leiria, 45 - Chácara Cuiabá<br>
+        Itaquaquecetuba - SP<br>
+        (11) 95495-0044<br>
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Leiria+45+Ch%C3%A1cara+Cui%C3%A1b%C3%A1+Itaquaquecetuba+SP" target="_blank" rel="noopener noreferrer" style="color:var(--cor-acento)">
+           <img src="https://www.svgrepo.com/show/475656/google-maps.svg" alt="Google Maps" style="height:1em;vertical-align:middle;margin-right:0.3em;">Ver no Google Maps
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Produtos</h4>
+      <ul>
+        <li><a href="produtos/grafiato.html">Grafiato</a></li>
+        <li><a href="produtos/textura-lisa.html">Textura Lisa</a></li>
+        <li><a href="produtos/massa-pva.html">Massa PVA</a></li>
+        <li><a href="produtos/massa-acrilica.html">Massa Acrílica</a></li>
+        <li><a href="produtos/seladora.html">Seladora</a></li>
+        <li><a href="produtos/tinta-economica-qualy-color-uso-interno.html">Tinta Econômica Qualy Color</a></li>
+        <li><a href="produtos/esmalte.html">Esmalte</a></li>
+        <li><a href="produtos/textura-projetada.html">Textura Projetada</a></li>
+        <li><a href="produtos/liqui-brilho.html">Liqui Brilho</a></li>
+        <li><a href="grafiato-itaquaquecetuba.html">Grafiato em Itaquaquecetuba</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Cidades</h4>
+      <ul>
+        <li><a href="cidades/itaquaquecetuba.html">Itaquaquecetuba</a></li>
+        <li><a href="cidades/mogi-das-cruzes.html">Mogi das Cruzes</a></li>
+        <li><a href="cidades/suzano.html">Suzano</a></li>
+        <li><a href="cidades/ferraz-de-vasconcelos.html">Ferraz de Vasconcelos</a></li>
+        <li><a href="cidades/poa.html">Poá</a></li>
+        <li><a href="cidades/aruja.html">Arujá</a></li>
+        <li><a href="cidades/guarulhos.html">Guarulhos</a></li>
+        <li><a href="categorias/cidades.html">Ver todas</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="comercial/frete-gratis-itaquaquecetuba.html">Frete Grátis</a></li>
+        <li><a href="categorias/blog.html">Blog e Dicas</a></li>
+        <li><a href="https://cliquetintas-art.github.io/avaliacaoqualyquimy.html/" target="_blank" rel="noopener noreferrer">Avaliações</a></li>
+        <li><a href="https://shopee.com.br/qualyquimy?entryPoint=ShopBySearch&searchKeyword=tintas%20qualy%20quimy" target="_blank" rel="noopener noreferrer">Shopee</a></li>
+        <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+        <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Direitos Reservados — Qualy Quimy</span>
+    <span>
+      Desenvolvido por 
+      <a href="https://impulsoweb10.com.br" target="_blank" rel="noopener noreferrer">ImpulsoWeb10</a>
+      <a href="politica-de-privacidade.html">Política de Privacidade</a>
+      <a href="termos-de-uso.html">Termos de Uso</a>
+    </span>
+  </div>
+</footer>
+
+
+<script src="js/main.js"></script>
+<script>
+// Esconde o marcador visual centralizado ao clicar no mapa
+document.addEventListener('DOMContentLoaded', function() {
+  var mapaDiv = document.querySelector('section[aria-labelledby="titulo-mapa-endereco"] > div > div');
+  var overlay = mapaDiv && mapaDiv.querySelector('div[style*="position:absolute"]');
+  var iframe = mapaDiv && mapaDiv.querySelector('iframe');
+  if (iframe && overlay) {
+    iframe.addEventListener('click', function() {
+      overlay.style.display = 'none';
+    });
+    // Para mobile: também some ao tocar
+    iframe.addEventListener('touchstart', function() {
+      overlay.style.display = 'none';
+    });
+  }
+});
+</script>
+
+<!-- ============================================================
+  ADIÇÃO GRAFIATO — Não modifica nenhum código existente.
+  CSS: classes exclusivas prefixadas com "grafiato__"
+  HTML: dois modais isolados
+  JS: bloco isolado no final, sem variáveis globais expostas
+============================================================ -->
+
+<!-- MODAL 1: Benefícios -->
+<div id="grafiato__modal-beneficios" class="grafiato__overlay" role="dialog" aria-modal="true" aria-labelledby="grafiato__titulo-ben" aria-hidden="true">
+  <div class="grafiato__box">
+    <button class="grafiato__fechar" data-grafiato-fecha="grafiato__modal-beneficios" aria-label="Fechar">×</button>
+    <h2 id="grafiato__titulo-ben" class="grafiato__titulo">BENEFÍCIOS DO GRAFIATO</h2>
+    <ul class="grafiato__lista">
+      <li>Alta resistência</li>
+      <li>Proteção contra umidade</li>
+      <li>Durabilidade até 20 anos*</li>
+      <li>Acabamento sofisticado</li>
+      <li>Valorização do imóvel</li>
+    </ul>
+    <p class="grafiato__nota">*Em condições ideais de aplicação e manutenção.</p>
+    <button id="grafiato__btn-ver-apres" class="grafiato__btn-primario" type="button">VER APRESENTAÇÃO</button>
+  </div>
+</div>
+
+<!-- MODAL 2: Galeria / Carrossel -->
+<div id="grafiato__modal-galeria" class="grafiato__overlay" role="dialog" aria-modal="true" aria-labelledby="grafiato__titulo-gal" aria-hidden="true">
+  <div class="grafiato__box grafiato__box--galeria">
+    <button class="grafiato__fechar" data-grafiato-fecha="grafiato__modal-galeria" aria-label="Fechar">×</button>
+    <h2 id="grafiato__titulo-gal" class="grafiato__titulo">GRAFIATO QUALY QUIMY</h2>
+    <div class="grafiato__slider" id="grafiato__slider">
+      <div class="grafiato__slide grafiato__slide--ativo" data-grafiato-slide="0">
+        <div class="grafiato__slide-img" style="background-image:url('imagens/grafiato1.png');" role="img" aria-label="Grafiato – foto 1"></div>
+      </div>
+      <div class="grafiato__slide" data-grafiato-slide="1">
+        <div class="grafiato__slide-img" style="background-image:url('imagens/grafiato2.png');" role="img" aria-label="Grafiato – foto 2"></div>
+      </div>
+      <div class="grafiato__slide" data-grafiato-slide="2">
+        <div class="grafiato__slide-img" style="background-image:url('imagens/grafiato3.png');" role="img" aria-label="Grafiato – foto 3"></div>
+      </div>
+      <div class="grafiato__slide" data-grafiato-slide="3">
+        <div class="grafiato__slide-img" style="background-image:url('imagens/grafiato4.png');" role="img" aria-label="Grafiato – foto 4"></div>
+      </div>
+      <div class="grafiato__slide grafiato__slide--cta" data-grafiato-slide="4">
+        <p class="grafiato__cta-texto">TRANSFORME SUA FACHADA HOJE</p>
+        <a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Quero%20comprar%20Grafiato%20Qualy%20Quimy"
+           target="_blank" rel="noopener noreferrer" class="grafiato__cta-btn">COMPRAR AGORA</a>
+      </div>
+    </div>
+    <div class="grafiato__dots" id="grafiato__dots" aria-label="Navegação dos slides">
+      <button class="grafiato__dot grafiato__dot--ativo" data-grafiato-ir="0" aria-label="Slide 1"></button>
+      <button class="grafiato__dot" data-grafiato-ir="1" aria-label="Slide 2"></button>
+      <button class="grafiato__dot" data-grafiato-ir="2" aria-label="Slide 3"></button>
+      <button class="grafiato__dot" data-grafiato-ir="3" aria-label="Slide 4"></button>
+      <button class="grafiato__dot" data-grafiato-ir="4" aria-label="Slide 5"></button>
+    </div>
+  </div>
+</div>
+
+<!-- CSS EXCLUSIVO GRAFIATO -->
+<style>
+.btnHeroGrafiato{display:block;margin:8px auto 0;padding:7px 14px;background:#e87722;color:#fff;border:none;border-radius:5px;font-size:.78rem;font-weight:700;cursor:pointer;letter-spacing:.04em;transition:background .2s;width:100%;box-sizing:border-box;}
+.btnHeroGrafiato:hover{background:#c9631a;}
+
+.grafiato__overlay{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:99990;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;}
+.grafiato__overlay[aria-hidden="true"]{display:none!important;}
+
+.grafiato__box{position:relative;background:linear-gradient(160deg,#212121 0%,#181818 100%);color:#fff;border-radius:16px;padding:48px 40px 36px;max-width:560px;width:100%;box-shadow:0 16px 60px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.06);box-sizing:border-box;}
+.grafiato__box--galeria{max-width:min(94vw,1100px);width:min(94vw,1100px);padding:48px 32px 28px;}
+
+.grafiato__fechar{position:absolute;top:14px;right:16px;background:rgba(255,255,255,.08);border:none;color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;opacity:.9;transition:all .2s;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.grafiato__fechar:hover{opacity:1;background:rgba(232,119,34,.35);}
+
+.grafiato__titulo{font-size:1.35rem;font-weight:900;color:#e87722;margin:0 0 24px;text-align:center;letter-spacing:.08em;text-transform:uppercase;padding-bottom:16px;border-bottom:1px solid rgba(232,119,34,.25);}
+
+.grafiato__lista{list-style:none;padding:0;margin:0 0 16px;}
+.grafiato__lista li{padding:12px 0 12px 32px;border-bottom:1px solid rgba(255,255,255,.07);position:relative;font-size:1rem;font-weight:500;}
+.grafiato__lista li::before{content:"✔";position:absolute;left:0;top:50%;transform:translateY(-50%);color:#e87722;font-size:.88rem;}
+
+.grafiato__nota{font-size:.73rem;color:rgba(255,255,255,.4);margin:0 0 22px;}
+
+.grafiato__btn-primario{display:block;width:100%;padding:15px 0;background:linear-gradient(90deg,#e87722,#d06318);color:#fff;border:none;border-radius:8px;font-size:1.05rem;font-weight:900;cursor:pointer;letter-spacing:.08em;transition:all .2s;box-shadow:0 4px 18px rgba(232,119,34,.35);}
+.grafiato__btn-primario:hover{background:linear-gradient(90deg,#d06318,#b8541a);box-shadow:0 6px 24px rgba(232,119,34,.5);transform:translateY(-1px);}
+
+.grafiato__slider{position:relative;overflow:visible;border-radius:12px;background:#111;height:auto;box-shadow:0 4px 24px rgba(0,0,0,.5);}
+@media(max-width:480px){.grafiato__slider{height:auto;}}
+
+.grafiato__slide{display:none;width:100%;height:auto;}
+.grafiato__slide--ativo{display:flex;}
+.grafiato__slide-img{width:100%;aspect-ratio:3/2;background-size:contain;background-position:center;background-repeat:no-repeat;max-height:75vh;border-radius:10px;}
+
+.grafiato__slide--cta{flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#1c1c1c 0%,#3a1e00 60%,#1c1c1c 100%);gap:24px;border-radius:10px;}
+.grafiato__cta-texto{font-size:1.45rem;font-weight:900;color:#fff;text-align:center;letter-spacing:.07em;margin:0;padding:0 20px;text-shadow:0 2px 12px rgba(0,0,0,.4);}
+.grafiato__cta-btn{display:inline-block;padding:15px 40px;background:linear-gradient(90deg,#25d366,#1db954);color:#fff;border-radius:8px;font-weight:900;font-size:1rem;text-decoration:none;letter-spacing:.06em;transition:all .2s;box-shadow:0 4px 18px rgba(37,211,102,.35);}
+.grafiato__cta-btn:hover{background:linear-gradient(90deg,#1db954,#18a349);box-shadow:0 6px 24px rgba(37,211,102,.5);transform:translateY(-1px);}
+
+.grafiato__dots{display:flex;justify-content:center;gap:10px;margin-top:16px;}
+.grafiato__dot{width:8px;height:8px;border-radius:50%;border:none;background:rgba(255,255,255,.22);cursor:pointer;padding:0;transition:all .3s;}
+.grafiato__dot--ativo{background:#e87722;width:24px;border-radius:4px;box-shadow:0 0 8px rgba(232,119,34,.6);}
+</style>
+
+<!-- JS ISOLADO GRAFIATO — IIFE, zero variáveis globais -->
+<script>
+(function(){
+  'use strict';
+
+  function abrirModal(id){
+    var el=document.getElementById(id);
+    if(!el)return;
+    el.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function fecharModal(id){
+    var el=document.getElementById(id);
+    if(!el)return;
+    el.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    clearInterval(grafiatoCarrossel.timer);
+  }
+
+  var grafiatoCarrossel={
+    total:5,
+    atual:0,
+    timer:null,
+    ir:function(n){
+      var slides=document.querySelectorAll('#grafiato__slider .grafiato__slide');
+      var dots=document.querySelectorAll('#grafiato__dots .grafiato__dot');
+      slides.forEach(function(s){s.classList.remove('grafiato__slide--ativo');});
+      dots.forEach(function(d){d.classList.remove('grafiato__dot--ativo');});
+      grafiatoCarrossel.atual=(n+grafiatoCarrossel.total)%grafiatoCarrossel.total;
+      if(slides[grafiatoCarrossel.atual])slides[grafiatoCarrossel.atual].classList.add('grafiato__slide--ativo');
+      if(dots[grafiatoCarrossel.atual])dots[grafiatoCarrossel.atual].classList.add('grafiato__dot--ativo');
+    },
+    iniciar:function(){
+      grafiatoCarrossel.ir(0);
+      grafiatoCarrossel.timer=setInterval(function(){
+        grafiatoCarrossel.ir(grafiatoCarrossel.atual+1);
+      },3000);
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded',function(){
+
+    var btnGrafiato=document.getElementById('btnGrafiato');
+    if(btnGrafiato){
+      btnGrafiato.addEventListener('click',function(e){
+        e.stopPropagation();
+        abrirModal('grafiato__modal-beneficios');
+      });
+    }
+
+    var btnApres=document.getElementById('grafiato__btn-ver-apres');
+    if(btnApres){
+      btnApres.addEventListener('click',function(){
+        fecharModal('grafiato__modal-beneficios');
+        abrirModal('grafiato__modal-galeria');
+        grafiatoCarrossel.iniciar();
+      });
+    }
+
+    document.querySelectorAll('[data-grafiato-fecha]').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        fecharModal(btn.getAttribute('data-grafiato-fecha'));
+      });
+    });
+
+    document.querySelectorAll('.grafiato__overlay').forEach(function(overlay){
+      overlay.addEventListener('click',function(e){
+        if(e.target===overlay)fecharModal(overlay.id);
+      });
+    });
+
+    document.querySelectorAll('[data-grafiato-ir]').forEach(function(dot){
+      dot.addEventListener('click',function(){
+        clearInterval(grafiatoCarrossel.timer);
+        grafiatoCarrossel.ir(parseInt(dot.getAttribute('data-grafiato-ir'),10));
+        grafiatoCarrossel.timer=setInterval(function(){
+          grafiatoCarrossel.ir(grafiatoCarrossel.atual+1);
+        },3000);
+      });
+    });
+
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){
+        ['grafiato__modal-beneficios','grafiato__modal-galeria'].forEach(function(id){
+          var el=document.getElementById(id);
+          if(el&&el.getAttribute('aria-hidden')==='false')fecharModal(id);
+        });
+      }
+    });
+
+  });
+}());
+</script>
+</body>
