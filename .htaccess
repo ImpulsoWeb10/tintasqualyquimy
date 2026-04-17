@@ -1,0 +1,81 @@
+# Headers de Segurança - Tintas Qualy Quimy
+# Configuração para Apache/Nginx
+
+# Content Security Policy (CSP)
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://wa.me;"
+    
+    # X-Frame-Options - Prevenir clickjacking
+    Header always set X-Frame-Options "DENY"
+    
+    # X-Content-Type-Options - Prevenir MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # X-XSS-Protection - Proteção XSS do navegador
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Referrer Policy - Controlar informações de referência
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Permissions Policy - Controlar APIs do navegador
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=()"
+    
+    # Strict-Transport-Security - HTTPS only (descomentar em produção)
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# Compressão GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Cache Control
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType text/html "access plus 1 day"
+</IfModule>
+
+# Ocultar versão do servidor
+ServerTokens Prod
+ServerSignature Off
+
+# Prevenir acesso a arquivos sensíveis
+<Files ~ "^\.">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<FilesMatch "^(README|LICENSE|CHANGELOG|composer\.lock|package\.json|\.env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Limitar tamanho de upload
+LimitRequestBody 10485760
+
+# Prevenir listagem de diretórios
+Options -Indexes
+
+# Forçar HTTPS (descomentar em produção)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
