@@ -949,35 +949,61 @@ document.addEventListener('DOMContentLoaded', function() {
     if(btnGrafiato){
       btnGrafiato.addEventListener('click',function(e){
         e.stopPropagation();
-        abrirModal('grafiato__modal-beneficios');
+        var modal = document.getElementById('grafiato__modal-beneficios');
+        if(modal) {
+          modal.setAttribute('aria-hidden','false');
+          document.body.style.overflow='hidden';
+        }
       });
     }
 
     var btnApres=document.getElementById('grafiato__btn-ver-apres');
     if(btnApres){
       btnApres.addEventListener('click',function(){
-        fecharModal('grafiato__modal-beneficios');
-        abrirModal('grafiato__modal-galeria');
+        var modalBeneficios = document.getElementById('grafiato__modal-beneficios');
+        if(modalBeneficios) {
+          modalBeneficios.setAttribute('aria-hidden','true');
+          document.body.style.overflow='';
+        }
+        var modalGaleria = document.getElementById('grafiato__modal-galeria');
+        if(modalGaleria) {
+          modalGaleria.setAttribute('aria-hidden','false');
+          document.body.style.overflow='hidden';
+        }
         grafiatoCarrossel.iniciar();
       });
     }
 
     document.querySelectorAll('[data-grafiato-fecha]').forEach(function(btn){
       btn.addEventListener('click',function(){
-        fecharModal(btn.getAttribute('data-grafiato-fecha'));
+        var modalId = btn.getAttribute('data-grafiato-fecha');
+        var modal = document.getElementById(modalId);
+        if(modal) {
+          modal.setAttribute('aria-hidden','true');
+          document.body.style.overflow='';
+          clearInterval(grafiatoCarrossel.timer);
+        }
       });
     });
 
     document.querySelectorAll('.grafiato__overlay').forEach(function(overlay){
       overlay.addEventListener('click',function(e){
-        if(e.target===overlay)fecharModal(overlay.id);
+        if(e.target===overlay){
+          var modalId = overlay.id;
+          var modal = document.getElementById(modalId);
+          if(modal) {
+            modal.setAttribute('aria-hidden','true');
+            document.body.style.overflow='';
+            clearInterval(grafiatoCarrossel.timer);
+          }
+        }
       });
     });
 
     document.querySelectorAll('[data-grafiato-ir]').forEach(function(dot){
       dot.addEventListener('click',function(){
         clearInterval(grafiatoCarrossel.timer);
-        grafiatoCarrossel.ir(parseInt(dot.getAttribute('data-grafiato-ir'),10));
+        grafiatoCarrossel.ir(parseInt(dot.getAttribute('data-grafiato-ir')));
         grafiatoCarrossel.timer=setInterval(function(){
           grafiatoCarrossel.ir(grafiatoCarrossel.atual+1);
         },3000);
@@ -988,7 +1014,11 @@ document.addEventListener('DOMContentLoaded', function() {
       if(e.key==='Escape'){
         ['grafiato__modal-beneficios','grafiato__modal-galeria'].forEach(function(id){
           var el=document.getElementById(id);
-          if(el&&el.getAttribute('aria-hidden')==='false')fecharModal(id);
+          if(el&&el.getAttribute('aria-hidden')==='false'){
+            el.setAttribute('aria-hidden','true');
+            document.body.style.overflow='';
+            clearInterval(grafiatoCarrossel.timer);
+          }
         });
       }
     });
