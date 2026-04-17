@@ -503,21 +503,32 @@ function criarWhatsFloat() {
 // ========== INIT ==========
 document.addEventListener('DOMContentLoaded', () => {
   criarWhatsFloat();
-  popularProdutosCalc();
-  iniciarBadgesClickaveis();
-  iniciarIconesCards();
-  iniciarMenuMobile();
-  atualizarEstadoCalculadora();
-  // Listener calculadora
-  const btnCalc = document.getElementById('btn-calcular');
-  if (btnCalc) btnCalc.addEventListener('click', calcularTinta);
+  // Verificar se os elementos existem antes de usá-los
+  if (document.getElementById('produto-calc')) {
+    popularProdutosCalc();
+    iniciarBadgesClickaveis();
+  }
+  
+  if (document.querySelector('.icon-card')) {
+    iniciarIconesCards();
+  }
+  
+  if (document.querySelector('.menu-toggle')) {
+    iniciarMenuMobile();
+  }
+  
+  if (document.getElementById('btn-calcular')) {
+    atualizarEstadoCalculadora();
+    const btnCalc = document.getElementById('btn-calcular');
+    if (btnCalc) btnCalc.addEventListener('click', calcularTinta);
 
-  const areaInput = document.getElementById('area');
-  const produtoSelect = document.getElementById('produto-calc');
-  const demaoSelect = document.getElementById('demao');
+    const areaInput = document.getElementById('area');
+    const produtoSelect = document.getElementById('produto-calc');
+    const demaoSelect = document.getElementById('demao');
 
-  [areaInput, produtoSelect, demaoSelect].forEach((element) => {
-    element?.addEventListener('input', atualizarEstadoCalculadora);
-    element?.addEventListener('change', atualizarEstadoCalculadora);
-  });
+    [areaInput, produtoSelect, demaoSelect].forEach((element) => {
+      element?.addEventListener('input', atualizarEstadoCalculadora);
+      element?.addEventListener('change', atualizarEstadoCalculadora);
+    });
+  }
 });
