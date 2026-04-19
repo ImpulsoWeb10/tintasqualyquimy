@@ -1,24 +1,57 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="Xz_2AAmdPmp8Z-4dD1Ji-ZoX2YU2kUZovEK9f03HgBM" />
-  <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://tintasqualyquimy.impulsoweb10.com.br/categorias/blog.html" />
-  <meta name="description" content="Dicas e tutoriais sobre tintas, grafiato, textura e massa Qualy Quimy para pintores em Itaquaquecetuba, Mogi das Cruzes, Suzano e região SP." />
-  <title>Blog Qualy Quimy | Dicas de Pintura e Materiais em Itaquaquecetuba</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link href="../css/style-min.css" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Security Headers Meta -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://wa.me;">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-  <script type="application/ld+json">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="Xz_2AAmdPmp8Z-4dD1Ji-ZoX2YU2kUZovEK9f03HgBM" />
+
+<!-- ══ CORREÇÃO 1: noindex → index ══
+  ERA: <meta name="robots" content="noindex, follow">
+  A página estava INVISÍVEL para o Google. -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+<link rel="canonical" href="https://tintasqualyquimy.impulsoweb10.com.br/categorias/blog.html" />
+<meta name="description" content="Dicas e tutoriais sobre tintas, grafiato, textura e massa Qualy Quimy para pintores em Itaquaquecetuba, Mogi das Cruzes, Suzano e região SP." />
+<title>Blog Qualy Quimy | Dicas de Pintura e Materiais em Itaquaquecetuba</title>
+
+<!-- Open Graph (consolidado e movido para posição correta) -->
+<meta property="og:title" content="Blog Qualy Quimy | Dicas de Pintura e Materiais em Itaquaquecetuba" />
+<meta property="og:description" content="Dicas e tutoriais sobre tintas, grafiato, textura e massa Qualy Quimy para pintores em Itaquaquecetuba, Mogi das Cruzes, Suzano e região SP." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tintasqualyquimy.impulsoweb10.com.br/categorias/blog.html" />
+<meta property="og:image" content="https://tintasqualyquimy.impulsoweb10.com.br/imagens/og-qualyquimy.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Qualy Quimy" />
+
+<!-- Security Headers -->
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+<!-- ══ CORREÇÃO 2: CSP bloqueava o GA4 ══
+  ERA: connect-src não incluia google-analytics.com
+  Isso fazia o GA4 falhar silenciosamente e disparava
+  os erros de cookie no console. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://wa.me;">
+
+<!-- Preconnects -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<!-- ══ CORREÇÃO 3: CSS duplicado removido ══
+  ERA: style-min.css + style.css (duplicado no fim do <head>)
+  Mantemos apenas style-min.css. -->
+<link href="../css/style-min.css" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- JSON-LD (corrigido: "qual escolher??" → "qual escolher?") -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
@@ -33,75 +66,44 @@
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Grafiato: o que é e como aplicar",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/grafiato-o-que-e-como-aplicar.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Diferença entre Massa PVA e Massa Acrílica",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/diferenca-massa-pva-massa-acrilica.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Como calcular tinta por m²",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/como-calcular-tinta-por-m2.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Seladora: quando e como usar",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/seladora-quando-usar.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "name": "Textura Lisa vs Grafiato: qual escolher??",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/textura-lisa-vs-grafiato.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "name": "Esmalte para madeira e metal: guia completo",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/esmalte-para-madeira-e-metal.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "name": "Textura Projetada para fachadas externas",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/textura-projetada-fachadas.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 8,
-        "name": "Liqui Brilho: brilho e impermeabilização",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/liqui-brilho-impermeabilizante.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 9,
-        "name": "Q Color: a tinta lavável premium Qualy Quimy",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/tinta-economica-qualy-color.html"
-      }
+      {"@type":"ListItem","position":1,"name":"Grafiato: o que é e como aplicar","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/grafiato-o-que-e-como-aplicar.html"},
+      {"@type":"ListItem","position":2,"name":"Diferença entre Massa PVA e Massa Acrílica","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/diferenca-massa-pva-massa-acrilica.html"},
+      {"@type":"ListItem","position":3,"name":"Como calcular tinta por m²","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/como-calcular-tinta-por-m2.html"},
+      {"@type":"ListItem","position":4,"name":"Seladora: quando e como usar","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/seladora-quando-usar.html"},
+      {"@type":"ListItem","position":5,"name":"Textura Lisa vs Grafiato: qual escolher?","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/textura-lisa-vs-grafiato.html"},
+      {"@type":"ListItem","position":6,"name":"Esmalte para madeira e metal: guia completo","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/esmalte-para-madeira-e-metal.html"},
+      {"@type":"ListItem","position":7,"name":"Textura Projetada para fachadas externas","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/textura-projetada-fachadas.html"},
+      {"@type":"ListItem","position":8,"name":"Liqui Brilho: brilho e impermeabilização","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/liqui-brilho-impermeabilizante.html"},
+      {"@type":"ListItem","position":9,"name":"Q Color: a tinta lavável premium Qualy Quimy","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/tinta-economica-qualy-color.html"}
     ]
   }
 }
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFTJ9MRF64"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HFTJ9MRF64');</script>
-  <link rel="stylesheet" href="../css/style.css" />
-  <meta property="og:image" content="https://tintasqualyquimy.impulsoweb10.com.br/imagens/og-qualyquimy.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+</script>
+
+<!-- ══ CORREÇÃO 4: GA4 cookie_domain incorreto ══
+  ERA: gtag sem configuração de domínio explícita.
+  O cookie _ga era rejeitado porque o gtag tentava
+  definir o cookie no domínio ".com.br" (muito amplo)
+  em vez do subdomínio correto.
+  CORRIGIDO: cookie_domain explícito + SameSite flags. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HFTJ9MRF64"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-HFTJ9MRF64', {
+    cookie_domain: 'tintasqualyquimy.impulsoweb10.com.br',
+    cookie_flags: 'SameSite=None;Secure',
+    cookie_update: true
+  });
+</script>
+
 </head>
 <body>
+
 <header>
   <div class="header-top">
-    Entrega em Itaquaquecetuba, Mogi das Cruzes, Suzano e região "
+    Entrega em Itaquaquecetuba, Mogi das Cruzes, Suzano e região —
     <a href="../comercial/frete-gratis-itaquaquecetuba.html">Frete Grátis disponível!</a>
   </div>
   <div class="header-main">
@@ -118,14 +120,19 @@
       </ul>
     </nav>
     <div class="header-cta">
-      <a href="https://wa.me/5511954950044?text=Olá!%20Quero%20informações%20sobre%20tintas%20Qualy%20Quimy"
+      <a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Quero%20informa%C3%A7%C3%B5es%20sobre%20tintas%20Qualy%20Quimy"
          target="_blank" rel="noopener noreferrer" class="btn-whats">WhatsApp</a>
     </div>
   </div>
 </header>
-<div class="breadcrumb-bar"><div style="max-width:1280px;margin:0 auto;"><a href="../index.html">Início</a><span>›</span> Blog e Dicas</div></div>
 
-<!-- HERO DA CATEGORIA -->
+<div class="breadcrumb-bar">
+  <div style="max-width:1280px;margin:0 auto;">
+    <a href="../index.html">Início</a><span>›</span> Blog e Dicas
+  </div>
+</div>
+
+<!-- HERO DA CATEGORIA — sem alteração visual -->
 <div style="background:linear-gradient(120deg,var(--cor-secundaria) 55%,#1a0808 100%);padding:60px 24px;position:relative;overflow:hidden;">
   <div style="position:absolute;top:-40px;right:-40px;width:320px;height:320px;background:radial-gradient(circle,rgba(214,43,43,0.18) 0%,transparent 70%);pointer-events:none;"></div>
   <div class="container">
@@ -133,13 +140,13 @@
     <h1 style="font-family:var(--fonte-titulo);font-size:clamp(36px,5vw,58px);font-weight:900;color:#fff;text-transform:uppercase;line-height:1.05;margin-bottom:16px;">Blog e Dicas Qualy Quimy</h1>
     <p style="color:#b0b8c8;font-size:17px;max-width:620px;margin-bottom:28px;">Guias técnicos, tutoriais de aplicação e dicas profissionais sobre tintas, texturas e materiais para pintura. Conteúdo criado para pintores e reformadores da região.</p>
     <div style="display:flex;gap:14px;flex-wrap:wrap;">
-      <a href="https://wa.me/5511954950044?text=Quero%20informações%20sobre%20Blog%20Qualy%20Quimy" target="_blank" rel="noopener noreferrer" class="btn-primary">Pedir pelo WhatsApp</a>
-      <a href="../index.html#produtos" class="btn-secondary">Ver todosãos produtos</a>
+      <a href="https://wa.me/5511954950044?text=Quero%20informa%C3%A7%C3%B5es%20sobre%20Blog%20Qualy%20Quimy" target="_blank" rel="noopener noreferrer" class="btn-primary">Pedir pelo WhatsApp</a>
+      <a href="../index.html#produtos" class="btn-secondary">Ver todos os produtos</a>
     </div>
   </div>
 </div>
 
-<!-- PRODUTOS / ARTIGOS -->
+<!-- ARTIGOS -->
 <section style="background:var(--cor-claro);">
   <div class="container">
     <div class="section-header">
@@ -147,7 +154,8 @@
       <h2>Blog e Dicas Qualy Quimy</h2>
     </div>
     <div class="produtos-grid">
-<a href="../blog/grafiato-o-que-e-como-aplicar.html" class="produto-card">
+
+      <a href="../blog/grafiato-o-que-e-como-aplicar.html" class="produto-card">
         <div class="produto-img" style="background-image:url('../imagens/galao-5-6kg.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
         <div class="produto-info">
           <div class="produto-categoria">Dicas &amp; Tutoriais</div>
@@ -157,7 +165,8 @@
           <div class="produto-cta">Ler artigo</div>
         </div>
       </a>
-<a href="../blog/diferenca-massa-pva-massa-acrilica.html" class="produto-card">
+
+      <a href="../blog/diferenca-massa-pva-massa-acrilica.html" class="produto-card">
         <div class="produto-img" style="background-image:url('../imagens/galao-5-6kg.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
         <div class="produto-info">
           <div class="produto-categoria">Dicas &amp; Tutoriais</div>
@@ -167,17 +176,20 @@
           <div class="produto-cta">Ler artigo</div>
         </div>
       </a>
-<a href="../blog/como-calcular-tinta-por-m2.html" class="produto-card">
+
+      <a href="../blog/como-calcular-tinta-por-m2.html" class="produto-card">
         <div class="produto-img" style="background-image:url('../imagens/tinta-economica-lata-18l.png');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
         <div class="produto-info">
           <div class="produto-categoria">Dicas &amp; Tutoriais</div>
           <h3>Como calcular tinta por m²</h3>
-          <p>Use nossa fórmula e calculadora para nunca desperdiar nem faltar tinta.</p>
+          <!-- CORREÇÃO 5: Typo "desperdiar" → "desperdiçar" -->
+          <p>Use nossa fórmula e calculadora para nunca desperdiçar nem faltar tinta.</p>
           <div class="produto-embalagens"><span class="emb-badge">Leia grátis</span></div>
           <div class="produto-cta">Ler artigo</div>
         </div>
       </a>
-<a href="../blog/seladora-quando-usar.html" class="produto-card">
+
+      <a href="../blog/seladora-quando-usar.html" class="produto-card">
         <div class="produto-img" style="background-image:url('../imagens/balde-16l.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
         <div class="produto-info">
           <div class="produto-categoria">Dicas &amp; Tutoriais</div>
@@ -187,37 +199,45 @@
           <div class="produto-cta">Ler artigo</div>
         </div>
       </a>
-<a href="../blog/textura-lisa-vs-grafiato.html" class="produto-card">
+
+      <a href="../blog/textura-lisa-vs-grafiato.html" class="produto-card">
         <div class="produto-img" style="background-image:url('../imagens/galao-5-6kg.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
         <div class="produto-info">
           <div class="produto-categoria">Dicas &amp; Tutoriais</div>
-          <h3>Textura Lisa vs Grafiato: qual escolher??</h3>
-          <p>Compare as duasãopções e descubra qual se adapta melhor ao seu projeto.</p>
+          <!-- CORREÇÃO 6: "qual escolher??" → "qual escolher?" (duplo ponto de interrogação) -->
+          <h3>Textura Lisa vs Grafiato: qual escolher?</h3>
+          <!-- CORREÇÃO 7: "duasãopções" → "duas opções" (caractere colado) -->
+          <p>Compare as duas opções e descubra qual se adapta melhor ao seu projeto.</p>
           <div class="produto-embalagens"><span class="emb-badge">Leia grátis</span></div>
           <div class="produto-cta">Ler artigo</div>
         </div>
       </a>
-<a href="../blog/esmalte-para-madeira-e-metal.html" class="produto-card">
+
+      <a href="../blog/esmalte-para-madeira-e-metal.html" class="produto-card">
         <div class="produto-img" style="background-image:url('../imagens/galao-3-6l.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
         <div class="produto-info">
           <div class="produto-categoria">Dicas &amp; Tutoriais</div>
           <h3>Esmalte para madeira e metal: guia completo</h3>
-          <p>Aprenda a aplicar esmalte corretamente em portas, grades e superfícies metlicas.</p>
+          <!-- CORREÇÃO 8: "metlicas" → "metálicas" (typo) -->
+          <p>Aprenda a aplicar esmalte corretamente em portas, grades e superfícies metálicas.</p>
           <div class="produto-embalagens"><span class="emb-badge">Leia grátis</span></div>
           <div class="produto-cta">Ler artigo</div>
         </div>
       </a>
-<a href="../blog/textura-projetada-fachadas.html" class="produto-card">
+
+      <a href="../blog/textura-projetada-fachadas.html" class="produto-card">
         <div class="produto-img" style="background-image:url('../imagens/barrica-25kg.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
         <div class="produto-info">
           <div class="produto-categoria">Dicas &amp; Tutoriais</div>
           <h3>Textura Projetada para fachadas externas</h3>
-          <p>Como usar a textura projetada branca para grandesãobras e reformas.</p>
+          <!-- CORREÇÃO 9: "grandesãobras" → "grandes obras" (caractere colado) -->
+          <p>Como usar a textura projetada branca para grandes obras e reformas.</p>
           <div class="produto-embalagens"><span class="emb-badge">Leia grátis</span></div>
           <div class="produto-cta">Ler artigo</div>
         </div>
       </a>
-<a href="../blog/liqui-brilho-impermeabilizante.html" class="produto-card">
+
+      <a href="../blog/liqui-brilho-impermeabilizante.html" class="produto-card">
         <div class="produto-img" style="background-image:url('../imagens/pote-1l.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
         <div class="produto-info">
           <div class="produto-categoria">Dicas &amp; Tutoriais</div>
@@ -227,7 +247,8 @@
           <div class="produto-cta">Ler artigo</div>
         </div>
       </a>
-<a href="../blog/tinta-economica-qualy-color.html" class="produto-card">
+
+      <a href="../blog/tinta-economica-qualy-color.html" class="produto-card">
         <div class="produto-img" style="background-image:url('../imagens/tinta-economica-lata-18l.png');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
         <div class="produto-info">
           <div class="produto-categoria">Dicas &amp; Tutoriais</div>
@@ -237,7 +258,8 @@
           <div class="produto-cta">Ler artigo</div>
         </div>
       </a>
-</div>
+
+    </div>
   </div>
 </section>
 
@@ -265,7 +287,8 @@
   <div class="container">
     <h2 style="font-family:var(--fonte-titulo);font-size:36px;font-weight:900;color:#fff;text-transform:uppercase;margin-bottom:12px;">Pronto para Comprar?</h2>
     <p style="color:rgba(255,255,255,0.85);margin-bottom:28px;font-size:16px;">Fale agora pelo WhatsApp e receba atendimento personalizado.</p>
-    <a href="https://wa.me/5511954950044?text=Quero%20informa%C3%A7%C3%B5es%20sobre%20Blog%20Qualy%20Quimy" target="_blank" rel="noopener noreferrer" class="btn-primary"
+    <a href="https://wa.me/5511954950044?text=Quero%20informa%C3%A7%C3%B5es%20sobre%20Blog%20Qualy%20Quimy"
+       target="_blank" rel="noopener noreferrer" class="btn-primary"
        style="background:#fff;color:var(--cor-primaria);display:inline-block;padding:16px 40px;font-size:18px;">
       Falar no WhatsApp
     </a>
@@ -276,7 +299,6 @@
   <div class="seo-text-inner">
     <h2>Dicas e Tutoriais de Pintura para Itaquaquecetuba e Região</h2>
     <p>O blog <strong>Qualy Quimy</strong> reúne conteúdo técnico criado para pintores profissionais e reformadores em <strong>Itaquaquecetuba, Mogi das Cruzes, Suzano e toda a zona leste de São Paulo</strong>. Aprenda a aplicar cada produto corretamente, calcular quantidades e escolher o material certo para cada superfície.</p>
-    
   </div>
 </div>
 
@@ -289,7 +311,8 @@
         Rua Leiria, 45 - Chácara Cuiabá<br>
         Itaquaquecetuba - SP<br>
         (11) 95495-0044<br>
-        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Leiria+45+Ch%C3%A1cara+Cui%C3%A1b%C3%A1+Itaquaquecetuba+SP" target="_blank" style="color:var(--cor-acento)">Ver no Google Maps</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Leiria+45+Ch%C3%A1cara+Cui%C3%A1b%C3%A1+Itaquaquecetuba+SP"
+           target="_blank" rel="noopener noreferrer" style="color:var(--cor-acento)">Ver no Google Maps</a>
       </div>
     </div>
     <div class="footer-col"><h4>Produtos</h4><ul>
@@ -313,8 +336,8 @@
       <li><a href="../categorias/blog.html">Blog e Dicas</a></li>
     </ul></div>
     <div class="footer-col"><h4>Institucional</h4><ul>
-      <li><a href="https://cliquetintas-art.github.io/avaliacaoqualyquimy.html/" target="_blank">Avaliações</a></li>
-      <li><a href="https://shopee.com.br/qualyquimy?entryPoint=ShopBySearch&searchKeyword=tintas%20qualy%20quimy" target="_blank">Shopee</a></li>
+      <li><a href="https://cliquetintas-art.github.io/avaliacaoqualyquimy.html/" target="_blank" rel="noopener noreferrer">Avaliações</a></li>
+      <li><a href="https://shopee.com.br/qualyquimy?entryPoint=ShopBySearch&searchKeyword=tintas%20qualy%20quimy" target="_blank" rel="noopener noreferrer">Shopee</a></li>
       <li><a href="../comercial/frete-gratis-itaquaquecetuba.html">Frete Grátis</a></li>
       <li><a href="../politica-de-privacidade.html">Política de Privacidade</a></li>
       <li><a href="../termos-de-uso.html">Termos de Uso</a></li>
@@ -322,47 +345,44 @@
   </div>
   <div class="footer-bottom">
     <span>© Direitos Reservados — Qualy Quimy</span>
-    <span>Desenvolvido por <a href="https://impulsoweb10.com.br" target="_blank">ImpulsoWeb10</a>
-    <a href="../politica-de-privacidade.html">Política de Privacidade</a>
-    <a href="../termos-de-uso.html">Termos de Uso</a></span>
+    <span>
+      Desenvolvido por <a href="https://impulsoweb10.com.br" target="_blank" rel="noopener noreferrer">ImpulsoWeb10</a>
+      <a href="../politica-de-privacidade.html">Política de Privacidade</a>
+      <a href="../termos-de-uso.html">Termos de Uso</a>
+    </span>
   </div>
 </footer>
 
-<!-- Scripts Otimizados -->
-<script src="../js/utils.js"></script>
-<script src="../js/lazy-loading.js"></script>
-<script src="../js/main-secure.js"></script>
+<!-- ══ CORREÇÃO 10: Scripts com caminhos errados (404) ══
+  ERA (original):
+    <script src="../js/utils.js">         (linha 329)
+    <script src="../js/lazy-loading.js">  (linha 330)
+    <script src="../js/main-secure.js">   (linha 331)
 
-<!-- Componentes Dinâmicos -->
-<script>
-// Carregar componentes reutilizáveis
-document.addEventListener('DOMContentLoaded', function() {
-  // Header
-  const headerContainer = document.getElementById('header-container');
-  if (headerContainer) {
-    fetch('../components/header.html')
-      .then(response => response.text())
-      .then(html => {
-        headerContainer.innerHTML = html;
-      })
-      .catch(error => console.error('Erro ao carregar header:', error));
-  }
-  
-  // Footer
-  const footerContainer = document.getElementById('footer-container');
-  if (footerContainer) {
-    fetch('../components/footer.html')
-      .then(response => response.text())
-      .then(html => {
-        footerContainer.innerHTML = html;
-      })
-      .catch(error => console.error('Erro ao carregar footer:', error));
-  }
-});
-</script>
+  O console mostrava: "Falha no carregamento do script com
+  origem em https://.../categorias/js/utils.js"
+
+  Isso prova que o servidor serve o arquivo a partir de
+  /categorias/, então "../js/" resolvia para "/categorias/js/"
+  em vez de "/js/" na raiz.
+
+  CORREÇÃO: caminhos absolutos a partir da raiz do domínio.
+  ADICIONADO: defer para não bloquear o render.
+  ADICIONADO: onerror para log limpo sem quebrar a página. -->
+<script defer src="/js/utils.js"
+  onerror="console.warn('[QQ] utils.js não encontrado em /js/utils.js')"></script>
+<script defer src="/js/lazy-loading.js"
+  onerror="console.warn('[QQ] lazy-loading.js não encontrado em /js/lazy-loading.js')"></script>
+<script defer src="/js/main-secure.js"
+  onerror="console.warn('[QQ] main-secure.js não encontrado em /js/main-secure.js')"></script>
+
+<!-- ══ CORREÇÃO 11: Fetch de componentes mortos removido ══
+  ERA: código tentava fetch('../components/header.html') e
+  fetch('../components/footer.html') para elementos
+  #header-container e #footer-container que NÃO EXISTEM
+  no DOM — era código morto disparando requisições 404
+  desnecessárias a cada carregamento.
+  SOLUÇÃO: bloco removido. Header/footer já estão no HTML. -->
+
 </body>
 </html>
-
-
-
-
