@@ -586,27 +586,27 @@
     </div>
 
     <h2 class="oferta-titulo">Corra antes que <span>acabe!</span></h2>
-    <p class="oferta-subtitulo">Grafiato Qualy Quimy 25 kg — à vista com desconto exclusivo</p>
+    <p class="oferta-subtitulo">Grafiato Qualy Quimy — leve 2 ou mais e ganhe <strong style="color:#ffd700;">15% OFF</strong> à vista!</p>
 
     <div class="oferta-produtos">
       <div class="oferta-card">
         <div class="oferta-card-nome">Grafiato Qualy Quimy</div>
-        <div class="oferta-card-peso">Balde 25 kg</div>
+        <div class="oferta-card-peso">Barrica 25 kg</div>
         <div class="oferta-preco-box">
-          <span class="oferta-badge-desc">15% OFF</span>
-          <span class="oferta-preco-de">De R$ 129,90</span>
-          <span class="oferta-preco-por">R$ 110,41</span>
-          <span class="oferta-preco-label">à vista no PIX / Dinheiro</span>
+          <span class="oferta-preco-de">Unitário: R$ 54,90</span>
+          <span class="oferta-badge-desc">2+ unid = 15% OFF</span>
+          <span class="oferta-preco-por">R$ 46,67</span>
+          <span class="oferta-preco-label">cada — à vista PIX / Dinheiro</span>
         </div>
       </div>
       <div class="oferta-card">
         <div class="oferta-card-nome">Grafiato Qualy Quimy</div>
-        <div class="oferta-card-peso">2 Baldes × 25 kg</div>
+        <div class="oferta-card-peso">Balde 25 kg</div>
         <div class="oferta-preco-box">
-          <span class="oferta-badge-desc">15% OFF</span>
-          <span class="oferta-preco-de">De R$ 259,80</span>
-          <span class="oferta-preco-por">R$ 220,83</span>
-          <span class="oferta-preco-label">à vista no PIX / Dinheiro</span>
+          <span class="oferta-preco-de">Unitário: R$ 69,90</span>
+          <span class="oferta-badge-desc">2+ unid = 15% OFF</span>
+          <span class="oferta-preco-por">R$ 59,42</span>
+          <span class="oferta-preco-label">cada — à vista PIX / Dinheiro</span>
         </div>
       </div>
     </div>
@@ -628,34 +628,25 @@
     <div class="modal-header">
       <button class="modal-fechar" onclick="fecharModal()" aria-label="Fechar">✕</button>
       <div class="modal-header-badge">⚡ Oferta especial</div>
-      <h3 id="modalTitulo">Grafiato 25 kg<br>com 15% OFF à vista!</h3>
+      <h3 id="modalTitulo">15% OFF a partir de 2 unidades<br><span style="font-size:14px;font-weight:400;opacity:.8;">Barrica 25kg ou Balde 25kg</span></h3>
       <p>Frete Grátis em Itaquaquecetuba e região</p>
     </div>
 
     <div class="modal-body">
 
-      <div class="modal-produto-linha">
-        <div class="modal-produto-info">
-          <strong>Grafiato Qualy Quimy</strong>
-          <span>Balde 25 kg — 1 unidade</span>
-        </div>
-        <div class="modal-produto-preco">
-          <div class="de">R$ 129,90</div>
-          <div class="por">R$ 110,41</div>
-          <div class="avista">à vista PIX/Dinheiro</div>
-        </div>
-      </div>
+      <!-- Tabela de preços -->
+      <div style="background:#f7f7f7;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
+        <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#888;margin-bottom:10px;">Preços à vista (PIX / Dinheiro)</div>
+        <div style="display:grid;grid-template-columns:1fr auto auto;gap:6px 14px;align-items:center;">
+          <span style="font-size:13px;font-weight:700;color:#1a1a1a;">Barrica 25 kg</span>
+          <span style="font-size:12px;color:#aaa;text-decoration:line-through;">R$ 54,90</span>
+          <span style="font-size:16px;font-weight:900;color:#b80000;">R$ 46,67 <span style="font-size:10px;font-weight:600;color:#888;">c/ 15% OFF</span></span>
 
-      <div class="modal-produto-linha">
-        <div class="modal-produto-info">
-          <strong>Grafiato Qualy Quimy</strong>
-          <span>2 Baldes × 25 kg — combo</span>
+          <span style="font-size:13px;font-weight:700;color:#1a1a1a;">Balde 25 kg</span>
+          <span style="font-size:12px;color:#aaa;text-decoration:line-through;">R$ 69,90</span>
+          <span style="font-size:16px;font-weight:900;color:#b80000;">R$ 59,42 <span style="font-size:10px;font-weight:600;color:#888;">c/ 15% OFF</span></span>
         </div>
-        <div class="modal-produto-preco">
-          <div class="de">R$ 259,80</div>
-          <div class="por">R$ 220,83</div>
-          <div class="avista">à vista PIX/Dinheiro</div>
-        </div>
+        <div style="margin-top:10px;font-size:11px;color:#e07000;font-weight:700;background:#fff3e0;border-radius:6px;padding:6px 10px;display:inline-block;">⚠️ Desconto válido somente a partir de 2 unidades</div>
       </div>
 
       <div class="modal-destaque">
@@ -663,15 +654,22 @@
         Atendimento rápido via WhatsApp — resposta em minutos!
       </div>
 
-      <div class="modal-qtd">
-        <label for="qtdBaldes">Quantos baldes?</label>
-        <select id="qtdBaldes">
-          <option value="1">1 balde (25 kg)</option>
-          <option value="2" selected>2 baldes (50 kg) — mais pedido</option>
-          <option value="3">3 baldes (75 kg)</option>
-          <option value="4">4 baldes (100 kg)</option>
-          <option value="5">5+ baldes — consultar</option>
-        </select>
+      <div class="modal-qtd" style="flex-direction:column;align-items:stretch;gap:8px;">
+        <label style="font-size:13px;color:#555;font-weight:700;">Escolha o produto e quantidade:</label>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <select id="tipoProduto" style="flex:1;min-width:140px;padding:10px 12px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-weight:600;color:#1a1a1a;outline:none;cursor:pointer;">
+            <option value="barrica">Barrica 25 kg — R$ 54,90</option>
+            <option value="balde">Balde 25 kg — R$ 69,90</option>
+          </select>
+          <select id="qtdBaldes" style="flex:1;min-width:130px;padding:10px 12px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;font-weight:600;color:#1a1a1a;outline:none;cursor:pointer;">
+            <option value="1">1 unidade</option>
+            <option value="2" selected>2 unidades ✅ 15% OFF</option>
+            <option value="3">3 unidades ✅ 15% OFF</option>
+            <option value="4">4 unidades ✅ 15% OFF</option>
+            <option value="5">5+ unidades ✅ 15% OFF</option>
+          </select>
+        </div>
+        <div id="resumoPreco" style="background:#f0fff5;border:1.5px solid #25D366;border-radius:8px;padding:10px 14px;font-size:13px;color:#1a5c35;font-weight:700;text-align:center;"></div>
       </div>
 
       <a id="btnModalWpp" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-wpp">
@@ -766,25 +764,64 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') fecharModal();
 });
 
-// ——— Link dinâmico do WhatsApp conforme quantidade ———
-function atualizarLinkWpp() {
-  var sel = document.getElementById('qtdBaldes');
-  var qtd = sel ? sel.value : '2';
-  var mensagens = {
-    '1': 'Olá!%20Vi%20a%20oferta%20de%2015%25%20OFF%20no%20Grafiato%2025kg%20e%20quero%20pedir%201%20balde.%20Ainda%20está%20disponível%3F',
-    '2': 'Olá!%20Vi%20a%20oferta%20de%2015%25%20OFF%20no%20Grafiato%2025kg%20e%20quero%20pedir%202%20baldes.%20Ainda%20está%20disponível%3F',
-    '3': 'Olá!%20Vi%20a%20oferta%20de%2015%25%20OFF%20no%20Grafiato%2025kg%20e%20quero%20pedir%203%20baldes.%20Ainda%20está%20disponível%3F',
-    '4': 'Olá!%20Vi%20a%20oferta%20de%2015%25%20OFF%20no%20Grafiato%2025kg%20e%20quero%20pedir%204%20baldes.%20Ainda%20está%20disponível%3F',
-    '5': 'Olá!%20Vi%20a%20oferta%20de%2015%25%20OFF%20no%20Grafiato%2025kg%20e%20quero%20pedir%20mais%20de%205%20baldes.%20Podem%20me%20fazer%20um%20orçamento%3F'
-  };
-  var link = 'https://wa.me/5511954950044?text=' + (mensagens[qtd] || mensagens['2']);
-  document.getElementById('btnModalWpp').href = link;
+// ——— Preços base ———
+var precos = { barrica: 54.90, balde: 69.90 };
+var nomes  = { barrica: 'Barrica 25 kg', balde: 'Balde 25 kg' };
+
+function fmt(v) {
+  return 'R$ ' + v.toFixed(2).replace('.', ',');
 }
 
-// Atualizar link quando mudar quantidade
+function atualizarLinkWpp() {
+  var tipo = document.getElementById('tipoProduto') ? document.getElementById('tipoProduto').value : 'balde';
+  var qtdEl = document.getElementById('qtdBaldes');
+  var qtdStr = qtdEl ? qtdEl.value : '2';
+  var qtd = parseInt(qtdStr) || 2;
+  var qtdLabel = qtd >= 5 ? '5 ou mais' : qtd;
+
+  var precoUnit = precos[tipo] || 69.90;
+  var nomeProd = nomes[tipo] || 'Balde 25 kg';
+  var temDesconto = qtd >= 2;
+  var precoFinal = temDesconto ? precoUnit * 0.85 : precoUnit;
+  var totalFinal = qtd >= 5 ? null : precoFinal * qtd;
+
+  // Resumo no modal
+  var resumo = document.getElementById('resumoPreco');
+  if (resumo) {
+    if (temDesconto) {
+      var txt = qtd >= 5
+        ? '✅ ' + qtdLabel + '× ' + nomeProd + ' — ' + fmt(precoFinal) + ' cada (15% OFF) — peça orçamento'
+        : '✅ ' + qtd + '× ' + nomeProd + ' — ' + fmt(precoFinal) + ' cada = <strong>' + fmt(totalFinal) + ' total</strong> (15% OFF)';
+      resumo.innerHTML = txt;
+      resumo.style.background = '#f0fff5';
+      resumo.style.borderColor = '#25D366';
+      resumo.style.color = '#1a5c35';
+    } else {
+      resumo.innerHTML = '1× ' + nomeProd + ' — ' + fmt(precoUnit) + ' (sem desconto)<br><small style="font-weight:400">Leve 2+ para ganhar 15% OFF!</small>';
+      resumo.style.background = '#fff8f0';
+      resumo.style.borderColor = '#e07000';
+      resumo.style.color = '#7a3800';
+    }
+  }
+
+  // Mensagem WhatsApp
+  var msg;
+  if (qtd >= 5) {
+    msg = 'Olá!%20Vi%20a%20oferta%20do%20Grafiato%20(' + encodeURIComponent(nomeProd) + ')%20com%2015%25%20OFF%20e%20quero%20pedir%205%20ou%20mais%20unidades.%20Podem%20me%20passar%20um%20orçamento%3F';
+  } else if (temDesconto) {
+    msg = 'Olá!%20Vi%20a%20oferta%20do%20Grafiato%20(' + encodeURIComponent(nomeProd) + ')%20com%2015%25%20OFF%20e%20quero%20pedir%20' + qtd + '%20unidades.%20Total%3A%20' + encodeURIComponent(fmt(totalFinal)) + '.%20Ainda%20está%20disponível%3F';
+  } else {
+    msg = 'Olá!%20Quero%20comprar%201%20' + encodeURIComponent(nomeProd) + '%20de%20Grafiato%20Qualy%20Quimy.%20Podem%20me%20ajudar%3F';
+  }
+
+  document.getElementById('btnModalWpp').href = 'https://wa.me/5511954950044?text=' + msg;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-  var sel = document.getElementById('qtdBaldes');
-  if (sel) sel.addEventListener('change', atualizarLinkWpp);
+  var tipo = document.getElementById('tipoProduto');
+  var qtd  = document.getElementById('qtdBaldes');
+  if (tipo) tipo.addEventListener('change', atualizarLinkWpp);
+  if (qtd)  qtd.addEventListener('change', atualizarLinkWpp);
   atualizarLinkWpp();
 });
 </script>
