@@ -10,7 +10,7 @@ import re
 from datetime import date
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-BASE_URL = "https://tintasqualyquimy.impulsoweb10.com.br"
+BASE_URL = "https://tintasqualyquimy.com.br"
 HOJE = date.today().strftime("%Y-%m-%d")
 
 def ler(caminho):

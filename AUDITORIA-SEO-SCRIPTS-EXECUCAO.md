@@ -173,7 +173,7 @@ python3 script1_3_encoding.py
 
 echo "🔴 [SCRIPT 1.4] Corrigindo OG:URL em index.html..."
 
-BASE_URL="https://tintasqualyquimy.impulsoweb10.com.br"
+BASE_URL="https://tintasqualyquimy.com.br"
 
 # Substitui og:url incorreta
 sed -i "s|content=\"https://qualyquimy\.com\.br/\"|content=\"${BASE_URL}/\"|g" index.html
@@ -243,7 +243,7 @@ bash script1_5_maps.sh
 import os
 import re
 
-BASE_URL = "https://tintasqualyquimy.impulsoweb10.com.br"
+BASE_URL = "https://tintasqualyquimy.com.br"
 
 PRODUTOS = [
     {
@@ -434,7 +434,7 @@ python3 script2_1_product_schema.py
 
 import os
 
-BASE_URL = "https://tintasqualyquimy.impulsoweb10.com.br"
+BASE_URL = "https://tintasqualyquimy.com.br"
 
 CIDADES = [
     ("cidades/itaquaquecetuba.html", "Itaquaquecetuba", "itaquaquecetuba"),
@@ -523,7 +523,7 @@ python3 script2_2_localbusiness_schema.py
 
 echo "🟡 [SCRIPT 2.3] Adicionando og:image em todas as páginas..."
 
-BASE_URL="https://tintasqualyquimy.impulsoweb10.com.br"
+BASE_URL="https://tintasqualyquimy.com.br"
 OG_IMAGE="${BASE_URL}/img/og-qualyquimy.jpg"
 
 arquivos_modificados=0

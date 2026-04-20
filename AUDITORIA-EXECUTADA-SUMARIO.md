@@ -300,7 +300,7 @@ Receita:           +R$ 28k-36k/mês
 
 **Status:** ✅ Auditoria SEO Completa  
 **Repositório:** github.com/ImpulsoWeb10/tintasqualyquimy  
-**Site:** tintasqualyquimy.impulsoweb10.com.br  
+**Site:** tintasqualyquimy.com.br  
 **Data:** 10 de Abril de 2026
 
 **Recomendação Executiva:**

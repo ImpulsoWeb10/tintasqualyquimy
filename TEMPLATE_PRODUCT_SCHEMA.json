@@ -12,13 +12,13 @@
   "manufacturer": {
     "@type": "Organization",
     "name": "Qualy Quimy",
-    "url": "https://tintasqualyquimy.impulsoweb10.com.br"
+    "url": "https://tintasqualyquimy.com.br"
   },
   "image": [
-    "https://tintasqualyquimy.impulsoweb10.com.br/imagens/[SLUG]-qualy-quimy.webp",
-    "https://tintasqualyquimy.impulsoweb10.com.br/imagens/[SLUG]-embalagem-qualy-quimy.webp"
+    "https://tintasqualyquimy.com.br/imagens/[SLUG]-qualy-quimy.webp",
+    "https://tintasqualyquimy.com.br/imagens/[SLUG]-embalagem-qualy-quimy.webp"
   ],
-  "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/[SLUG].html",
+  "url": "https://tintasqualyquimy.com.br/produtos/[SLUG].html",
   "offers": [
     {
       "_NOTA": "Repetir este bloco para cada embalagem/variante disponível",
@@ -31,11 +31,11 @@
       "priceValidUntil": "2026-12-31",
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",
-      "url": "https://tintasqualyquimy.impulsoweb10.com.br/produtos/[SLUG].html",
+      "url": "https://tintasqualyquimy.com.br/produtos/[SLUG].html",
       "seller": {
         "@type": "Organization",
         "name": "Qualy Quimy",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br"
+        "url": "https://tintasqualyquimy.com.br"
       }
     }
   ],

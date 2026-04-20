@@ -2,7 +2,7 @@
 
 ## O que foi concluido
 - Padronizacao das navegacoes para categorias/cidades e categorias/blog.
-- Atualizacao do robots.txt com sitemap correto em tintasqualyquimy.impulsoweb10.com.br.
+- Atualizacao do robots.txt com sitemap correto em tintasqualyquimy.com.br.
 - Limpeza de duplicidades no sitemap.xml.
 - Criacao de rotas de compatibilidade:
   - /onde-atendemos.html -> /categorias/cidades.html

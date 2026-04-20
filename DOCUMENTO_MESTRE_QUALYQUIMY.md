@@ -4,7 +4,7 @@
 
 *Arquitetura SEO · Regras do Projeto · Padrão de Expansão*
 
-tintasqualyquimy.impulsoweb10.com.br
+tintasqualyquimy.com.br
 
   ----------------------------------- -----------------------------------
   **Marca**                           Tintas Qualy Quimy
@@ -31,7 +31,7 @@ tintasqualyquimy.impulsoweb10.com.br
   **Modelo**            Marketplace regional escalável --- vendas online +
                         atendimento local
 
-  **Site**              tintasqualyquimy.impulsoweb10.com.br
+  **Site**              tintasqualyquimy.com.br
 
   **Endereço**          Rua Leiria, 45 --- Chácara Cuiabá, Itaquaquecetuba --
                         SP
@@ -630,7 +630,7 @@ como modelo base.
 **11. CONTATOS E REFERÊNCIAS OFICIAIS**
 
   --------------------- ------------------------------------------------------
-  **Site em Produção**  tintasqualyquimy.impulsoweb10.com.br
+  **Site em Produção**  tintasqualyquimy.com.br
 
   **WhatsApp Negócio**  \(11\) 95495-0044
 

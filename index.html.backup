@@ -11,15 +11,15 @@
   <meta name="keywords" content="tintas Itaquaquecetuba, grafiato zona leste SP, textura para parede, massa PVA preço, Tintas Qualy Quimy, tintas baratas SP" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Tintas Qualy Quimy" />
-  <link rel="canonical" href="https://tintasqualyquimy.impulsoweb10.com.br/" />
+  <link rel="canonical" href="https://tintasqualyquimy.com.br/" />
 
   <!-- Open Graph (WhatsApp, Instagram, Facebook, LinkedIn) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Tintas Qualy Quimy" />
   <meta property="og:title" content="Tintas Qualy Quimy | Tintas, Massas e Texturas em Itaquaquecetuba" />
   <meta property="og:description" content="Grafiato, Textura Lisa, Massa PVA, Tinta Econômica e muito mais. Entrega expressa em Itaquaquecetuba, Mogi das Cruzes, Suzano e região. Consulte pelo WhatsApp. Tintas Qualy Quimy." />
-  <meta property="og:url" content="https://tintasqualyquimy.impulsoweb10.com.br/" />
-  <meta property="og:image" content="https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp" />
+  <meta property="og:url" content="https://tintasqualyquimy.com.br/" />
+  <meta property="og:image" content="https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp" />
   <meta property="og:image:width" content="300" />
   <meta property="og:image:height" content="100" />
   <meta property="og:locale" content="pt_BR" />
@@ -28,7 +28,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Tintas Qualy Quimy | Tintas, Massas e Texturas em Itaquaquecetuba" />
   <meta name="twitter:description" content="Grafiato, Textura Lisa, Massa PVA, Tinta Econômica e muito mais. Entrega em Itaquaquecetuba e região." />
-  <meta name="twitter:image" content="https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp" />
+  <meta name="twitter:image" content="https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
@@ -38,14 +38,14 @@
   {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "Store"],
-    "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#empresa",
+    "@id": "https://tintasqualyquimy.com.br/#empresa",
     "name": "Tintas Qualy Quimy - Tintas e Materiais para Pintura",
     "alternateName": "Tintas Qualy Quimy",
     "description": "Loja especializada em tintas, massas, texturas e materiais para pintura da marca Tintas Qualy Quimy. Grafiato, Textura Lisa, Massa PVA, Massa Acrílica, Tinta Econômica, Seladora e Liqui Brilho. Entrega em Itaquaquecetuba, Mogi das Cruzes, Suzano, Ferraz de Vasconcelos e região.",
-    "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+    "url": "https://tintasqualyquimy.com.br/",
     "telephone": "+55-11-95495-0044",
-    "image": "https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp",
-    "logo": "https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp",
+    "image": "https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp",
+    "logo": "https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rua Leiria, 45 - Chácara Cuiabá",
@@ -112,12 +112,12 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#organization",
+    "@id": "https://tintasqualyquimy.com.br/#organization",
     "name": "Tintas Qualy Quimy",
-    "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+    "url": "https://tintasqualyquimy.com.br/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp",
+      "url": "https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp",
       "width": 300,
       "height": 100
     },
@@ -142,19 +142,19 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#website",
-    "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+    "@id": "https://tintasqualyquimy.com.br/#website",
+    "url": "https://tintasqualyquimy.com.br/",
     "name": "Qualy Quimy | Tintas, Massas e Texturas",
     "description": "Tintas, massas, texturas e materiais para pintura em Itaquaquecetuba e região de São Paulo.",
     "publisher": {
-      "@id": "https://tintasqualyquimy.impulsoweb10.com.br/#organization"
+      "@id": "https://tintasqualyquimy.com.br/#organization"
     },
     "inLanguage": "pt-BR",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://tintasqualyquimy.impulsoweb10.com.br/categorias/blog.html?q={search_term_string}"
+        "urlTemplate": "https://tintasqualyquimy.com.br/categorias/blog.html?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -168,18 +168,18 @@
     "@type": "ItemList",
     "name": "Produtos Qualy Quimy - Tintas, Massas e Texturas",
     "description": "Catálogo completo de produtos Qualy Quimy para pintura e acabamento.",
-    "url": "https://tintasqualyquimy.impulsoweb10.com.br/",
+    "url": "https://tintasqualyquimy.com.br/",
     "numberOfItems": 9,
     "itemListElement": [
-      {"@type":"ListItem","position":1,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/grafiato.html","item":{"@type":"Product","name":"Grafiato Qualy Quimy","description":"Acabamento texturizado para fachadas e paredes. Alta durabilidade e resistência. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"29.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
-      {"@type":"ListItem","position":2,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/textura-lisa.html","item":{"@type":"Product","name":"Textura Lisa Qualy Quimy","description":"Acabamento liso e uniforme para paredes internas e externas. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"29.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
-      {"@type":"ListItem","position":3,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/massa-pva.html","item":{"@type":"Product","name":"Massa PVA Qualy Quimy","description":"Massa corrida para nivelamento de paredes internas. Fácil aplicação. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"22.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
-      {"@type":"ListItem","position":4,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/massa-acrilica.html","item":{"@type":"Product","name":"Massa Acrílica Qualy Quimy","description":"Superior à Massa PVA, uso interno e externo. Maior resistência à umidade. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"28.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
-      {"@type":"ListItem","position":5,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/seladora.html","item":{"@type":"Product","name":"Seladora Qualy Quimy","description":"Preparação ideal para paredes novas. Melhora aderência e reduz consumo de tinta. Disponível em 1L, 3,6L e 16L.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"15.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
-      {"@type":"ListItem","position":6,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/tinta-economica-qualy-color-uso-interno.html","item":{"@type":"Product","name":"Tinta Econômica Qualy Color","description":"Tinta acrílica premium lavável. Catálogo completo de cores. Uso interno e externo. Disponível em 1L, 3,6L e 18L.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"15.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
-      {"@type":"ListItem","position":7,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/esmalte.html","item":{"@type":"Product","name":"Esmalte Qualy Quimy","description":"Esmalte sintético para madeiras e metais. Acabamento brilhante e resistente. Disponível em 3,6L.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"105.00","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
-      {"@type":"ListItem","position":8,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/textura-projetada.html","item":{"@type":"Product","name":"Textura Projetada Branca Qualy Quimy","description":"Para fachadas externas. Aplicação mecânica ou manual. Alta cobertura. Disponível em 25kg.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"74.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}},
-      {"@type":"ListItem","position":9,"url":"https://tintasqualyquimy.impulsoweb10.com.br/produtos/liqui-brilho.html","item":{"@type":"Product","name":"Liqui Brilho Qualy Quimy","description":"Acabamento brilhante e impermeabilizante. Transparente sobre texturas e tintas. Disponível em 1L e 3,6L.","image":"https://tintasqualyquimy.impulsoweb10.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"35.00","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.impulsoweb10.com.br/#empresa"}}}}
+      {"@type":"ListItem","position":1,"url":"https://tintasqualyquimy.com.br/produtos/grafiato.html","item":{"@type":"Product","name":"Grafiato Qualy Quimy","description":"Acabamento texturizado para fachadas e paredes. Alta durabilidade e resistência. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"29.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":2,"url":"https://tintasqualyquimy.com.br/produtos/textura-lisa.html","item":{"@type":"Product","name":"Textura Lisa Qualy Quimy","description":"Acabamento liso e uniforme para paredes internas e externas. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"29.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":3,"url":"https://tintasqualyquimy.com.br/produtos/massa-pva.html","item":{"@type":"Product","name":"Massa PVA Qualy Quimy","description":"Massa corrida para nivelamento de paredes internas. Fácil aplicação. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"22.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":4,"url":"https://tintasqualyquimy.com.br/produtos/massa-acrilica.html","item":{"@type":"Product","name":"Massa Acrílica Qualy Quimy","description":"Superior à Massa PVA, uso interno e externo. Maior resistência à umidade. Disponível em 5,6kg e 25kg.","image":"https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"28.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":5,"url":"https://tintasqualyquimy.com.br/produtos/seladora.html","item":{"@type":"Product","name":"Seladora Qualy Quimy","description":"Preparação ideal para paredes novas. Melhora aderência e reduz consumo de tinta. Disponível em 1L, 3,6L e 16L.","image":"https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"15.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":6,"url":"https://tintasqualyquimy.com.br/produtos/tinta-economica-qualy-color-uso-interno.html","item":{"@type":"Product","name":"Tinta Econômica Qualy Color","description":"Tinta acrílica premium lavável. Catálogo completo de cores. Uso interno e externo. Disponível em 1L, 3,6L e 18L.","image":"https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"15.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":7,"url":"https://tintasqualyquimy.com.br/produtos/esmalte.html","item":{"@type":"Product","name":"Esmalte Qualy Quimy","description":"Esmalte sintético para madeiras e metais. Acabamento brilhante e resistente. Disponível em 3,6L.","image":"https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"105.00","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":8,"url":"https://tintasqualyquimy.com.br/produtos/textura-projetada.html","item":{"@type":"Product","name":"Textura Projetada Branca Qualy Quimy","description":"Para fachadas externas. Aplicação mecânica ou manual. Alta cobertura. Disponível em 25kg.","image":"https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"74.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.com.br/#empresa"}}}},
+      {"@type":"ListItem","position":9,"url":"https://tintasqualyquimy.com.br/produtos/liqui-brilho.html","item":{"@type":"Product","name":"Liqui Brilho Qualy Quimy","description":"Acabamento brilhante e impermeabilizante. Transparente sobre texturas e tintas. Disponível em 1L e 3,6L.","image":"https://tintasqualyquimy.com.br/img/logo-qualy-quimy.webp","brand":{"@type":"Brand","name":"Qualy Quimy"},"offers":{"@type":"AggregateOffer","lowPrice":"35.00","priceCurrency":"BRL","availability":"https://schema.org/InStock","seller":{"@id":"https://tintasqualyquimy.com.br/#empresa"}}}}
     ]
   }
   </script>

@@ -264,7 +264,7 @@ CENTRAL-IA/
 
 **Data:** 10 de Abril de 2026  
 **Status:** ✅ Auditoria SEO Completa  
-**Site:** tintasqualyquimy.impulsoweb10.com.br  
+**Site:** tintasqualyquimy.com.br  
 **Repositório:** github.com/ImpulsoWeb10/tintasqualyquimy  
 
 **Recomendação:**  

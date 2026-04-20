@@ -1,7 +1,7 @@
 # Relatório de Auditoria Frontend e UX - Qualy Quimy
 
 **Data:** 9 de abril de 2026  
-**Site auditado:** tintasqualyquimy.impulsoweb10.com.br  
+**Site auditado:** tintasqualyquimy.com.br  
 **Escopo:** interface pública da pasta `tintasqualyquimy` com foco em home, páginas comerciais, categorias, cidades e componentes compartilhados.
 
 ---

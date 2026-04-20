@@ -1,6 +1,6 @@
 # 🔍 AUDITORIA SEO EXECUTADA — QUALY QUIMY
 **Repositório:** github.com/ImpulsoWeb10/tintasqualyquimy  
-**Site:** tintasqualyquimy.impulsoweb10.com.br  
+**Site:** tintasqualyquimy.com.br  
 **Data de Execução:** 10 de Abril de 2026  
 **Status:** ✅ ANÁLISE COMPLETA
 
@@ -137,7 +137,7 @@ for root, dirs, files in os.walk('.'):
 <meta property="og:url" content="https://qualyquimy.com.br/" />
 
 <!-- ✅ CORRETO — Domínio real -->
-<meta property="og:url" content="https://tintasqualyquimy.impulsoweb10.com.br/" />
+<meta property="og:url" content="https://tintasqualyquimy.com.br/" />
 ```
 
 **Impacto:** 
@@ -190,12 +190,12 @@ Status: ❌ Reduz click-through rate
 ```xml
 <!-- ❌ ERRADO -->
 <url>
-  <loc>https://tintasqualyquimy.impulsoweb10.com.br/produtos/grafiato.html</loc>
+  <loc>https://tintasqualyquimy.com.br/produtos/grafiato.html</loc>
 </url>
 
 <!-- ✅ CORRETO -->
 <url>
-  <loc>https://tintasqualyquimy.impulsoweb10.com.br/produtos/grafiato.html</loc>
+  <loc>https://tintasqualyquimy.com.br/produtos/grafiato.html</loc>
   <lastmod>2026-04-10</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>

@@ -1,6 +1,6 @@
 # Relatório de Auditoria Completa + Correção Estrutural
 **Data:** 7 de abril de 2026  
-**Site:** tintasqualyquimy.impulsoweb10.com.br  
+**Site:** tintasqualyquimy.com.br  
 **Total de arquivos HTML auditados:** 63
 
 ---

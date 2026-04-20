@@ -70,7 +70,7 @@ DISTRIBUIÇÃO DE PROBLEMAS ENCONTRADOS
 
 ### 6. OG:URL Apontando para Domínio Inexistente
 - **Erro:** `<meta property="og:url" content="https://qualyquimy.com.br/">`
-- **URL Real:** `https://tintasqualyquimy.impulsoweb10.com.br/`
+- **URL Real:** `https://tintasqualyquimy.com.br/`
 - **Impacto:**
   - Duplicação canônica para Google
   - Share no WhatsApp não carrega preview
