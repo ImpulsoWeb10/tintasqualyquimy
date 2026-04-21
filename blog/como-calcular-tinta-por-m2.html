@@ -62,7 +62,7 @@
             "name": "Como calcular a quantidade de tinta por m²?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Divida a área total a pintar (em m²) pelo rendimento da tinta (em m²/L) e multiplique pelo número de demãos. Por exemplo: 30 m² ÷ 11 m²/L × 2 demãos = 5,45 litros. Arredonde sempre para cima e compre o tamanho de embalagem imediatamente superior."
+              "text": "Divida a área total a pintar (em m²) pelo rendimento da tinta (em m²/L) e multiplique pelo número de demãos. Por exemplo: 30 m² ÷ 8,30 m²/L × 2 demãos = 5,45 litros. Arredonde sempre para cima e compre o tamanho de embalagem imediatamente superior."
             }
           },
           {
@@ -70,7 +70,7 @@
             "name": "Quantos litros de tinta são necessários para pintar um quarto de 10 m²?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Um quarto de 10 m² com pé-direito de 2,80 m tem aproximadamente 28 m² de parede (descontando portas e janelas, cerca de 22–24 m²). Com 2 demãos de Q Color (rendimento 11 m²/L), você precisará de cerca de 4 a 5 litros."
+              "text": "Um quarto de 10 m² com pé-direito de 2,80 m tem aproximadamente 28 m² de parede (descontando portas e janelas, cerca de 22–24 m²). Com 2 demãos de Q Color (rendimento 8,30 m²/L), você precisará de cerca de 4 a 5 litros."
             }
           },
           {
@@ -731,7 +731,7 @@
         <tbody>
           <tr>
             <td><strong>Q Color</strong> <span class="badge-produto">Mais vendido</span></td>
-            <td><strong>11 m²/L</strong></td>
+            <td><strong>8,30 m²/L</strong></td>
             <td>Por litro</td>
             <td>1L · 3,6L · 18L</td>
           </tr>
@@ -809,7 +809,7 @@
         <div class="calc-field">
           <label for="produto">Produto</label>
           <select id="produto">
-            <option value="11">Q Color (11 m²/L)</option>
+            <option value="8,30">Q Color (11 m²/L)</option>
             <option value="8">Seladora (8 m²/L)</option>
             <option value="12">Esmalte (12 m²/L)</option>
             <option value="8l">Liqui Brilho (8 m²/L)</option>
@@ -850,7 +850,7 @@
       <div class="linha"><span>Área total das paredes</span><span>50,4 m²</span></div>
       <div class="linha"><span>Desconto de 2 janelas + 1 porta</span><span>− 5,0 m²</span></div>
       <div class="linha"><span>Área líquida</span><span>45,4 m²</span></div>
-      <div class="linha"><span>Q Color, 2 demãos (11 m²/L)</span><span>8,3 L</span></div>
+      <div class="linha"><span>Q Color, 2 demãos (8,30 m²/L)</span><span>8,3 L</span></div>
       <div class="linha"><span>Comprar</span><span>2× emb. 3,6L + 1× emb. 1L = 8,2L ✓</span></div>
     </div>
 
@@ -859,7 +859,7 @@
       <div class="linha"><span>Área total das paredes</span><span>36,4 m²</span></div>
       <div class="linha"><span>Desconto de 1 janela + 1 porta</span><span>− 3,0 m²</span></div>
       <div class="linha"><span>Área líquida</span><span>33,4 m²</span></div>
-      <div class="linha"><span>Q Color, 2 demãos (11 m²/L)</span><span>6,1 L</span></div>
+      <div class="linha"><span>Q Color, 2 demãos (8,30 m²/L)</span><span>6,1 L</span></div>
       <div class="linha"><span>Comprar</span><span>2× emb. 3,6L = 7,2L ✓</span></div>
     </div>
 
@@ -928,7 +928,7 @@
           <span class="seta">▾</span>
         </button>
         <div class="faq-resposta">
-          Depende do produto. O Q Color Qualy Quimy rende 11 m²/L, ou seja, 1 litro cobre 11 m² em 1 demão. Para 2 demãos em 1 m², você usa cerca de 0,18 L — menos de um quinto de litro por m² de parede.
+          Depende do produto. O Q Color Qualy Quimy rende 8,30 m²/L, ou seja, 1 litro cobre 8,30 m² em 1 demão. Para 2 demãos em 1 m², você usa cerca de 0,18 L — menos de um quinto de litro por m² de parede.
         </div>
       </div>
 
@@ -938,7 +938,7 @@
           <span class="seta">▾</span>
         </button>
         <div class="faq-resposta">
-          Uma casa de 60 m² tem aproximadamente 130–160 m² de área de parede interna (considerando pé-direito de 2,80 m e descontando aberturas). Com 2 demãos de Q Color (11 m²/L), você precisa de cerca de 24 a 30 litros — o equivalente a 2 embalagens de 18L, com folga de segurança.
+          Uma casa de 60 m² tem aproximadamente 130–160 m² de área de parede interna (considerando pé-direito de 2,80 m e descontando aberturas). Com 2 demãos de Q Color (8,30 m²/L), você precisa de cerca de 24 a 30 litros — o equivalente a 2 embalagens de 18L, com folga de segurança.
         </div>
       </div>
 
@@ -1025,7 +1025,7 @@
 <script>
   // Calculadora inline
   const rendimentos = {
-    '11':   { fator: 11,  unidade: 'litros', tipo: 'L' },
+    '8,30':   { fator: 8,30,  unidade: 'litros', tipo: 'L' },
     '8':    { fator: 8,   unidade: 'litros', tipo: 'L' },
     '12':   { fator: 12,  unidade: 'litros', tipo: 'L' },
     '8l':   { fator: 8,   unidade: 'litros', tipo: 'L' },
