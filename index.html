@@ -13,12 +13,9 @@
   <meta name="author" content="Tintas Qualy Quimy" />
   <link rel="canonical" href="https://tintasqualyquimy.com.br/" />
 
-  <!-- Headers de Segurança -->
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.googletagmanager.com;">
+  <!-- Headers de Segurança (X-Frame-Options, X-Content-Type-Options, X-XSS-Protection e Referrer-Policy
+       devem ser configurados via HTTP headers no servidor. CSP via meta tag foi removido pois não oferece
+       proteção real e pode bloquear recursos externos durante o crawl do Googlebot/Bingbot.) -->
 
   <!-- Open Graph (WhatsApp, Instagram, Facebook, LinkedIn) -->
   <meta property="og:type" content="website" />
@@ -58,7 +55,15 @@
     .lazy-loading.loaded {
       opacity: 1;
     }
+    /* Fallback para crawlers (Googlebot/Bingbot) e JS desabilitado:
+       garante que imagens nunca fiquem invisíveis se o JS não executar */
+    .no-js .lazy-loading,
+    .lazy-loading[data-src]:not([src=""]) {
+      opacity: 1;
+    }
   </style>
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <noscript><style>.lazy-loading { opacity: 1 !important; }</style></noscript>
 
   <!-- SCHEMA 1: LocalBusiness + Store -->
   <script type="application/ld+json">
