@@ -1,271 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tinta Emborrachada de alta performance pela Tintas Qualy Quimy. Diga adeus a infiltrações e fissuras. Atendimento em Itaquaquecetuba, Suzano e Mogi das Cruzes.">
-    <meta name="keywords" content="tinta emborrachada Itaquaquecetuba, impermeabilização Suzano, loja de tintas Mogi das Cruzes, Tintas Qualy Quimy, acabar com infiltração">
-    <title>Tinta Emborrachada Premium | Tintas Qualy Quimy - Itaquaquecetuba e Região</title>
-    <style>
-        /* CSS Reset & Variáveis */
-        :root {
-            --primary-color: #004aad;
-            --secondary-color: #ffde59;
-            --whatsapp-green: #25d366;
-            --whatsapp-hover: #1ebd5b;
-            --text-dark: #333333;
-            --text-light: #666666;
-            --bg-light: #f8f9fa;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        
-        /* Tipografia */
-        h1, h2, h3 { color: var(--primary-color); }
-        .text-center { text-align: center; }
-        
-        /* Botão do WhatsApp */
-        .btn-whatsapp {
-            display: inline-block;
-            background-color: var(--whatsapp-green);
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 50px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: background 0.3s ease, transform 0.2s ease;
-            text-align: center;
-        }
-        .btn-whatsapp:hover {
-            background-color: var(--whatsapp-hover);
-            transform: scale(1.05);
-        }
-        .btn-whatsapp.pulse {
-            animation: pulse 2s infinite;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
+<title>Tinta Emborrachada Premium | Tintas Qualy Quimy</title>
 
-        /* Seções Gerais */
-        section { padding: 60px 20px; }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+<style>
+:root {
+    --primary: #004aad;
+    --whatsapp: #25d366;
+}
 
-        /* Hero Section (Topo) */
-        .hero {
-            background-color: var(--bg-light);
-            text-align: center;
-            padding: 80px 20px;
-        }
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            color: var(--text-dark);
-        }
-        .hero h1 span {
-            color: var(--primary-color);
-        }
-        .hero p {
-            font-size: 1.3rem;
-            color: var(--text-light);
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+body {
+    margin:0;
+    font-family: Arial;
+}
 
-        /* Vantagens */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .benefit-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: center;
-            border-bottom: 4px solid var(--primary-color);
-        }
-        .benefit-card h3 { margin-bottom: 15px; font-size: 1.3rem; }
+/* HERO */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
 
-        /* Oferta Especial */
-        .offer {
-            background-color: var(--primary-color);
-            color: #fff;
-            text-align: center;
-        }
-        .offer h2 { color: var(--secondary-color); font-size: 2.2rem; margin-bottom: 15px; }
-        .offer p { font-size: 1.2rem; margin-bottom: 30px; }
-        .offer-box {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px dashed var(--secondary-color);
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
+.hero img {
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    filter:brightness(0.5);
+}
 
-        /* Prova Social */
-        .social-proof { background-color: var(--bg-light); }
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-        .review-card {
-            background: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            font-style: italic;
-            position: relative;
-        }
-        .review-card::before {
-            content: "“";
-            font-size: 4rem;
-            color: var(--primary-color);
-            opacity: 0.2;
-            position: absolute;
-            top: -10px;
-            left: 20px;
-        }
-        .review-author {
-            margin-top: 15px;
-            font-weight: bold;
-            font-style: normal;
-            color: var(--primary-color);
-        }
+.hero-content {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+}
 
-        /* Rodapé / Local SEO */
-        footer {
-            background-color: var(--text-dark);
-            color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        footer p { margin-bottom: 10px; opacity: 0.8; }
-        .seo-tags {
-            font-size: 0.8rem;
-            color: #888;
-            margin-top: 20px;
-        }
+.hero h1 {
+    font-size:2.5rem;
+}
 
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1.1rem; }
-        }
-    </style>
+.btn {
+    background: var(--whatsapp);
+    color:white;
+    padding:15px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:20px;
+}
+
+/* SEÇÕES */
+section {
+    padding:50px 20px;
+    text-align:center;
+}
+
+.container {
+    max-width:1000px;
+    margin:auto;
+}
+
+/* BENEFICIOS */
+.grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap:20px;
+}
+
+.card {
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* OFERTA */
+.oferta {
+    background:#004aad;
+    color:white;
+}
+
+/* FOOTER */
+footer {
+    background:#222;
+    color:white;
+    padding:30px;
+}
+</style>
 </head>
+
 <body>
 
-    <header class="hero">
-       <img src="banner.jpg" class="hero-img">
-    <div class="container">
-        <h1>Diga Adeus às Infiltrações com <span>Tinta Emborrachada Premium</span></h1>
-        <p>Proteção total contra chuva, mofo e calor.</p>
-        <a href="https://wa.me/5511954950044" target="_blank" class="btn-whatsapp pulse">
-            ✅ Falar no WhatsApp
-            </a>
-        </div>
-    </header>
+<!-- HERO -->
+<header class="hero">
+<img src="banner.jpg">
+<div class="hero-content">
+<h1>Tinta Emborrachada Premium</h1>
+<p>Acabe com infiltração, mofo e calor na sua parede</p>
+<a href="https://wa.me/5511954950044" class="btn">Falar no WhatsApp</a>
+</div>
+</header>
 
-    <section class="container">
-        <h2 class="text-center">Por que escolher nossa Tinta Emborrachada?</h2>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <h3>💧 100% Impermeável</h3>
-                <p>Bloqueia a umidade da chuva e evita que a água penetre nas paredes, protegendo a estrutura da sua casa.</p>
-            </div>
-            <div class="benefit-card">
-                <h3>🌡️ Conforto Térmico</h3>
-                <p>Reflete os raios solares e reduz a temperatura interna dos ambientes, deixando sua casa mais fresca.</p>
-            </div>
-            <div class="benefit-card">
-                <h3>🧱 Cobre Microfissuras</h3>
-                <p>Possui tecnologia elástica que acompanha a dilatação da parede, cobrindo e prevenindo o surgimento de trincas.</p>
-            </div>
-            <div class="benefit-card">
-                <h3>🛡️ Ação Antimofo</h3>
-                <p>Sua fórmula especial combate a proliferação de fungos, algas e mofo, garantindo ambientes mais saudáveis.</p>
-            </div>
-        </div>
-    </section>
+<!-- BENEFICIOS -->
+<section>
+<div class="container">
+<h2>Por que escolher nossa tinta?</h2>
 
-    <section class="offer">
-        <div class="container">
-            <h2>Condição Exclusiva de Fábrica</h2>
-            <p>Compre direto de quem entende do assunto em Itaquaquecetuba com um preço que você não encontra em lojas comuns.</p>
-            
-            <div class="offer-box">
-                Compre 1 Unidade e Ganhe <span style="color: var(--secondary-color);">20% DE DESCONTO</span> na 2ª Unidade!
-            </div>
-            <br>
-            <a href="https://wa.me/5511954950044?text=Ol%C3%A1%21%20Vi%20a%20oferta%20de%2020%25%20de%20desconto%20na%20segunda%20unidade%20da%20Tinta%20Emborrachada.%20Podemos%20fechar%3F" target="_blank" class="btn-whatsapp">
-                🏷️ Garantir Meu Desconto Agora
-            </a>
-        </div>
-    </section>
+<div class="grid">
 
-    <section class="social-proof">
-        <div class="container">
-            <h2 class="text-center">O que nossos clientes do Alto Tietê dizem</h2>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <p>"Sofria com infiltrações na minha casa toda vez que chovia forte. Depois que apliquei a tinta da Qualy Quimy, o problema acabou. Recomendo muito!"</p>
-                    <div class="review-author">- Carlos Eduardo, Suzano - SP</div>
-                </div>
-                <div class="review-card">
-                    <p>"Atendimento excelente. Comprei para a laje do meu comércio e a diferença de temperatura interna foi imediata. Produto rende muito."</p>
-                    <div class="review-author">- Roberto Mendes, Mogi das Cruzes - SP</div>
-                </div>
-                <div class="review-card">
-                    <p>"Melhor custo-benefício da região. Fui até a fábrica aqui mesmo na cidade, tirei todas as dúvidas pelo WhatsApp e o resultado na pintura externa ficou incrível."</p>
-                    <div class="review-author">- Ana Paula, Itaquaquecetuba - SP</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="card">
+<img src="impermeavel.png" width="60">
+<h3>Impermeável</h3>
+<p>Protege contra chuva e infiltração</p>
+</div>
 
-    <footer>
-        <div class="container">
-            <h3>Tintas Qualy Quimy</h3>
-            <p>Excelência em Tintas Emborrachadas e Impermeabilizantes</p>
-            <br>
-            <a href="https://wa.me/5511954950044?text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento%20para%20Tinta%20Emborrachada." target="_blank" class="btn-whatsapp">
-                💬 Solicitar Orçamento pelo WhatsApp
-            </a>
-            <p style="margin-top: 30px;">📞 WhatsApp: (11) 95495-0044</p>
-            
-            <div class="seo-tags">
-                <p>Atendemos toda a região: Itaquaquecetuba, Suzano, Mogi das Cruzes, Ferraz de Vasconcelos e Poá.</p>
-                <p>Especialistas em: Tinta Emborrachada, Tinta Impermeabilizante, Tinta Térmica, Eliminar Infiltração em Parede, Tinta para Fachada.</p>
-                <p>&copy; 2026 Tintas Qualy Quimy. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+<div class="card">
+<img src="termico.png" width="60">
+<h3>Térmico</h3>
+<p>Reduz o calor interno</p>
+</div>
+
+<div class="card">
+<img src="fissura.png" width="60">
+<h3>Cobre fissuras</h3>
+<p>Evita rachaduras</p>
+</div>
+
+<div class="card">
+<img src="antimofo.png" width="60">
+<h3>Anti-mofo</h3>
+<p>Ambiente mais saudável</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ANTES E DEPOIS -->
+<section>
+<h2>Veja o Resultado</h2>
+<img src="antes-depois.jpg" style="width:100%; max-width:700px; border-radius:10px;">
+</section>
+
+<!-- OFERTA -->
+<section class="oferta">
+<h2>🔥 Oferta Especial</h2>
+<p>Ganhe 20% OFF na segunda unidade</p>
+<a href="https://wa.me/5511954950044" class="btn">Garantir desconto</a>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section>
+<h2>Clientes satisfeitos</h2>
+
+<div class="grid">
+
+<div class="card">
+<p>"Acabou infiltração da minha casa!"</p>
+</div>
+
+<div class="card">
+<p>"Casa ficou mais fresca!"</p>
+</div>
+
+<div class="card">
+<p>"Melhor tinta que já usei"</p>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<h3>Tintas Qualy Quimy</h3>
+<p>Itaquaquecetuba, Suzano, Mogi</p>
+<a href="https://wa.me/5511954950044" class="btn">Chamar no WhatsApp</a>
+</footer>
 
 </body>
 </html>
