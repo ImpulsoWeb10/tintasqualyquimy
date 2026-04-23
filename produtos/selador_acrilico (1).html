@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selador Acrílico – Tintas Qualy Quimy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --azul: #1a2e6e;
+      --amarelo: #f5c400;
+      --vermelho: #c0392b;
+      --cinza-claro: #f4f4f4;
+      --branco: #ffffff;
+      --texto: #1e1e1e;
+      --sombra: 0 4px 24px rgba(0,0,0,0.12);
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--cinza-claro);
+      color: var(--texto);
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--azul);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    header img {
+      height: 64px;
+      object-fit: contain;
+    }
+    header .tagline {
+      color: var(--amarelo);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ── HERO BANNER ── */
+    .hero {
+      background: linear-gradient(135deg, var(--azul) 0%, #0d1b4a 100%);
+      color: var(--branco);
+      padding: 48px 32px 40px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 300px; height: 300px;
+      background: var(--amarelo);
+      border-radius: 50%;
+      opacity: 0.08;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 260px; height: 260px;
+      background: var(--vermelho);
+      border-radius: 50%;
+      opacity: 0.07;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: var(--amarelo);
+      color: var(--azul);
+      font-weight: 900;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 52px);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--amarelo); }
+    .hero p {
+      font-size: 15px;
+      opacity: 0.85;
+      max-width: 540px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* ── PRODUCT SECTION ── */
+    .product-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 48px;
+    }
+    @media(max-width: 720px) {
+      .product-section { grid-template-columns: 1fr; }
+    }
+
+    /* ── IMAGE GALLERY ── */
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .gallery .main-img {
+      background: var(--branco);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--sombra);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 320px;
+    }
+    .gallery .main-img img {
+      max-height: 280px;
+      max-width: 100%;
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
+    .gallery .main-img img:hover { transform: scale(1.04); }
+
+    .thumbnails {
+      display: flex;
+      gap: 12px;
+    }
+    .thumb {
+      flex: 1;
+      background: var(--branco);
+      border-radius: 10px;
+      padding: 12px 8px;
+      box-shadow: var(--sombra);
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+      text-align: center;
+    }
+    .thumb:hover { border-color: var(--azul); transform: translateY(-2px); }
+    .thumb.active { border-color: var(--amarelo); }
+    .thumb img {
+      max-height: 80px;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 6px;
+    }
+    .thumb span {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--azul);
+      display: block;
+    }
+
+    /* ── PRODUCT INFO ── */
+    .product-info { display: flex; flex-direction: column; gap: 20px; }
+
+    .product-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: var(--azul);
+      line-height: 1.2;
+    }
+    .product-info .subtitle {
+      font-size: 14px;
+      color: #666;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .stars { color: var(--amarelo); font-size: 18px; letter-spacing: 2px; }
+
+    .desc {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #444;
+      border-left: 4px solid var(--amarelo);
+      padding-left: 16px;
+    }
+
+    /* ── VOLUMES ── */
+    .volume-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--azul);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .volumes {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .vol-btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 2px solid var(--azul);
+      background: var(--branco);
+      color: var(--azul);
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .vol-btn:hover, .vol-btn.active {
+      background: var(--azul);
+      color: var(--branco);
+    }
+
+    /* ── CTA ── */
+    .cta-block {
+      background: var(--azul);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .cta-block p {
+      color: rgba(255,255,255,0.75);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .btn-whats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #25d366;
+      color: var(--branco);
+      font-weight: 900;
+      font-size: 15px;
+      padding: 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 0.5px;
+    }
+    .btn-whats:hover { background: #1ebe5d; transform: translateY(-2px); }
+    .btn-whats svg { width: 22px; height: 22px; fill: currentColor; flex-shrink: 0; }
+    .btn-orcamento {
+      display: block;
+      text-align: center;
+      background: var(--amarelo);
+      color: var(--azul);
+      font-weight: 900;
+      font-size: 14px;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-orcamento:hover { background: #e0b000; }
+
+    /* ── FICHAS TÉCNICAS ── */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: var(--azul);
+      margin-bottom: 24px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 60px; height: 4px;
+      background: var(--amarelo);
+      border-radius: 2px;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .spec-card {
+      background: var(--branco);
+      border-radius: 12px;
+      padding: 20px 16px;
+      box-shadow: var(--sombra);
+      border-top: 4px solid var(--azul);
+      transition: transform 0.2s;
+    }
+    .spec-card:hover { transform: translateY(-3px); }
+    .spec-card .icon { font-size: 26px; margin-bottom: 8px; }
+    .spec-card .label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .spec-card .value {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--azul);
+    }
+
+    /* ── VANTAGENS ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .feature-card {
+      background: var(--branco);
+      border-radius: 14px;
+      padding: 24px 20px;
+      box-shadow: var(--sombra);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: transform 0.2s;
+    }
+    .feature-card:hover { transform: translateY(-3px); }
+    .feature-card .icon-circle {
+      width: 44px; height: 44px;
+      background: var(--azul);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .feature-card h4 { font-size: 14px; font-weight: 700; color: var(--azul); margin-bottom: 4px; }
+    .feature-card p { font-size: 13px; color: #666; line-height: 1.5; }
+
+    /* ── APLICAÇÃO ── */
+    .aplicacao-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .aplic-card {
+      background: var(--azul);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      color: var(--branco);
+      transition: transform 0.2s;
+    }
+    .aplic-card:hover { transform: translateY(-3px); }
+    .aplic-card .icon { font-size: 32px; margin-bottom: 10px; }
+    .aplic-card p { font-size: 13px; font-weight: 600; }
+
+    /* ── TABELA RENDIMENTO ── */
+    .table-wrap {
+      background: var(--branco);
+      border-radius: 14px;
+      box-shadow: var(--sombra);
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead { background: var(--azul); color: var(--branco); }
+    thead th { padding: 14px 20px; text-align: left; font-weight: 700; letter-spacing: 0.5px; }
+    tbody tr:nth-child(even) { background: #f8f8f8; }
+    tbody td { padding: 13px 20px; border-bottom: 1px solid #eee; color: #333; }
+    tbody td strong { color: var(--azul); }
+
+    /* ── FRETE BANNER ── */
+    .frete-banner {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      box-shadow: var(--sombra);
+    }
+    .frete-banner img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--azul);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+    }
+    footer strong { color: var(--amarelo); }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="logo.jpeg" alt="Tintas Qualy Quimy" onerror="this.style.display='none'" />
+  <div class="tagline">Qualidade em tintas e texturas</div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="badge">✦ Linha Profissional</span>
+  <h1>Selador <span>Acrílico</span></h1>
+  <p>Alta performance de fixação para superfícies novas e repinturas. Proporciona maior aderência, economia de tinta e acabamento superior.</p>
+</div>
+
+<div class="container">
+
+  <!-- PRODUCT MAIN -->
+  <div class="product-section">
+
+    <!-- GALLERY -->
+    <div class="gallery">
+      <div class="main-img">
+        <img id="mainImg"
+          src="https://lh3.googleusercontent.com/unSDo9DRfBX_X8JH4p7XmYVGLGZpj0gUlxJ-Lk8Z_fdH6Pn3joIbyrLFjcSTpholgQC5S_AkCaiGjpOZMg=w1506"
+          alt="Selador Acrílico 1 litro" />
+      </div>
+      <div class="thumbnails">
+        <div class="thumb active" onclick="setImg(this, '1l')">
+          <img src="https://lh3.googleusercontent.com/unSDo9DRfBX_X8JH4p7XmYVGLGZpj0gUlxJ-Lk8Z_fdH6Pn3joIbyrLFjcSTpholgQC5S_AkCaiGjpOZMg=w1506" alt="1 litro" />
+          <span>1 litro</span>
+        </div>
+        <div class="thumb" onclick="setImg(this, '3.6l')">
+          <img src="https://lh3.googleusercontent.com/rbbhO8dWEujcgmWrPZcB_8AZBFzB_CFULRIyBiDi5Ep1r9KNBMWF-PUT8GyQV4lCh6SMUKWp_nzKYmkS3A=w1506" alt="Galão 3,6 litros" />
+          <span>3,6 litros</span>
+        </div>
+        <div class="thumb" onclick="setImg(this, '18l')">
+          <img src="https://lh3.googleusercontent.com/vXdjQ6gxou4EYrIi-DnY6b50vaRXTf32t9awjNVSbP91M_tzL_h7xrUNRE5a-IR9zUr6mmCOfGohGOaaYQ=w1506" alt="Balde 18 litros" />
+          <span>18 litros</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="product-info">
+      <div>
+        <div class="subtitle">Tintas Qualy Quimy</div>
+        <h2>Selador Acrílico</h2>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <p class="desc">
+        Selador de base aquosa desenvolvido para preparar superfícies de alvenaria, concreto e gesso antes da aplicação de tintas. Penetra na superfície consolidando o substrato, reduzindo a absorção e garantindo excelente aderência da camada de acabamento.
+      </p>
+
+      <div>
+        <div class="volume-label">Escolha o volume:</div>
+        <div class="volumes">
+          <button class="vol-btn active" onclick="selectVol(this)">1 litro</button>
+          <button class="vol-btn" onclick="selectVol(this)">3,6 litros</button>
+          <button class="vol-btn" onclick="selectVol(this)">18 litros</button>
+        </div>
+      </div>
+
+      <div class="cta-block">
+        <p>Solicite seu orçamento agora</p>
+        <a class="btn-whats" href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Selador Acrílico Qualy Quimy." target="_blank">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.514 5.836L.053 23.667A1 1 0 001.333 24l5.912-1.471A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.001-1.369l-.358-.213-3.713.924.938-3.63-.233-.374A9.789 9.789 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182 17.43 2.182 21.818 6.57 21.818 12c0 5.43-4.388 9.818-9.818 9.818z"/>
+          </svg>
+          Pedir pelo WhatsApp
+        </a>
+        <a class="btn-orcamento" href="mailto:contato@tintasqualyquimy.com.br">
+          📧 Solicitar Orçamento por E-mail
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FICHAS TÉCNICAS -->
+  <h3 class="section-title">Ficha Técnica</h3>
+  <div class="specs-grid">
+    <div class="spec-card">
+      <div class="icon">🎨</div>
+      <div class="label">Tipo</div>
+      <div class="value">Selador Acrílico Base Água</div>
+    </div>
+    <div class="spec-card">
+      <div class="icon">🏠</div>
+      <div class="label">Acabamento</div>
+      <div class="value">Fosco / Transparente</div>
+    </div>
+    <div class="spec-card">
+      <div class="icon">⏱️</div>
+      <div class="label">Secagem ao toque</div>
+      <div class="value">30 minutos</div>
+    </div>
+    <div class="spec-card">
+      <div class="icon">🔁</div>
+      <div class="label">Repintura</div>
+      <div class="value">2 a 4 horas</div>
+    </div>
+    <div class="spec-card">
+      <div class="icon">📐</div>
+      <div class="label">Rendimento</div>
+      <div class="value">8–12 m² / litro</div>
+    </div>
+    <div class="spec-card">
+      <div class="icon">💧</div>
+      <div class="label">Diluição</div>
+      <div class="value">Até 20% água limpa</div>
+    </div>
+    <div class="spec-card">
+      <div class="icon">🖌️</div>
+      <div class="label">Aplicação</div>
+      <div class="value">Rolo, pincel ou pistola</div>
+    </div>
+    <div class="spec-card">
+      <div class="icon">🌡️</div>
+      <div class="label">Temperatura ideal</div>
+      <div class="value">10°C a 40°C</div>
+    </div>
+  </div>
+
+  <!-- VANTAGENS -->
+  <h3 class="section-title">Vantagens do Produto</h3>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="icon-circle">🛡️</div>
+      <div>
+        <h4>Alta Aderência</h4>
+        <p>Garante excelente fixação das camadas de tinta sobre qualquer substrato.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="icon-circle">💰</div>
+      <div>
+        <h4>Economia de Tinta</h4>
+        <p>Reduz a absorção da superfície, diminuindo o consumo de tinta de acabamento.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="icon-circle">🌿</div>
+      <div>
+        <h4>Baixo Odor</h4>
+        <p>Formulação à base de água, segura para ambientes residenciais e comerciais.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="icon-circle">⚡</div>
+      <div>
+        <h4>Secagem Rápida</h4>
+        <p>Pronto para repintura em apenas 2 horas, otimizando o tempo de obra.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="icon-circle">🏗️</div>
+      <div>
+        <h4>Consolida Superfícies</h4>
+        <p>Penetra no substrato, consolidando partes frágeis ou esfarelentas.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="icon-circle">✅</div>
+      <div>
+        <h4>Fácil Aplicação</h4>
+        <p>Pode ser aplicado com rolo, pincel ou pistola de forma prática e uniforme.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUPERFÍCIES DE APLICAÇÃO -->
+  <h3 class="section-title">Superfícies de Aplicação</h3>
+  <div class="aplicacao-grid">
+    <div class="aplic-card">
+      <div class="icon">🧱</div>
+      <p>Alvenaria nova</p>
+    </div>
+    <div class="aplic-card">
+      <div class="icon">🏢</div>
+      <p>Concreto</p>
+    </div>
+    <div class="aplic-card">
+      <div class="icon">🪨</div>
+      <p>Reboco</p>
+    </div>
+    <div class="aplic-card">
+      <div class="icon">🧴</div>
+      <p>Gesso</p>
+    </div>
+    <div class="aplic-card">
+      <div class="icon">🔄</div>
+      <p>Repintura</p>
+    </div>
+    <div class="aplic-card">
+      <div class="icon">🏠</div>
+      <p>Drywall</p>
+    </div>
+  </div>
+
+  <!-- TABELA RENDIMENTO -->
+  <h3 class="section-title">Tabela de Rendimento</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Volume</th>
+          <th>Rendimento (mín.)</th>
+          <th>Rendimento (máx.)</th>
+          <th>Superfície estimada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1 litro</strong></td>
+          <td>8 m²</td>
+          <td>12 m²</td>
+          <td>Até ~10 m²</td>
+        </tr>
+        <tr>
+          <td><strong>3,6 litros (galão)</strong></td>
+          <td>29 m²</td>
+          <td>43 m²</td>
+          <td>Até ~36 m²</td>
+        </tr>
+        <tr>
+          <td><strong>18 litros (balde)</strong></td>
+          <td>144 m²</td>
+          <td>216 m²</td>
+          <td>Até ~180 m²</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FRETE BANNER -->
+  <h3 class="section-title">Entregamos até Você</h3>
+  <div class="frete-banner">
+    <img src="frete.png" alt="Levamos qualidade até você – Tintas Qualy Quimy" />
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <p>© 2024 <strong>Tintas Qualy Quimy</strong> · Qualidade em tintas e texturas · Todos os direitos reservados</p>
+</footer>
+
+<script>
+  const imgs = {
+    '1l': 'https://lh3.googleusercontent.com/unSDo9DRfBX_X8JH4p7XmYVGLGZpj0gUlxJ-Lk8Z_fdH6Pn3joIbyrLFjcSTpholgQC5S_AkCaiGjpOZMg=w1506',
+    '3.6l': 'https://lh3.googleusercontent.com/rbbhO8dWEujcgmWrPZcB_8AZBFzB_CFULRIyBiDi5Ep1r9KNBMWF-PUT8GyQV4lCh6SMUKWp_nzKYmkS3A=w1506',
+    '18l': 'https://lh3.googleusercontent.com/vXdjQ6gxou4EYrIi-DnY6b50vaRXTf32t9awjNVSbP91M_tzL_h7xrUNRE5a-IR9zUr6mmCOfGohGOaaYQ=w1506',
+  };
+
+  function setImg(el, key) {
+    document.getElementById('mainImg').src = imgs[key];
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+  function selectVol(el) {
+    document.querySelectorAll('.vol-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    const map = { '1 litro': '1l', '3,6 litros': '3.6l', '18 litros': '18l' };
+    const key = map[el.textContent.trim()];
+    if (key) {
+      const thumb = document.querySelectorAll('.thumb');
+      const keys = ['1l', '3.6l', '18l'];
+      const idx = keys.indexOf(key);
+      if (idx >= 0) setImg(thumb[idx], key);
+    }
+  }
+</script>
+
+</body>
+</html>
