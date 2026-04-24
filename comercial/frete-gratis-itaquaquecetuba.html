@@ -737,6 +737,18 @@
   .emb-nome { font-family: 'Bebas Neue', sans-serif; font-size: 1.15rem; color: var(--brand-dark); margin-bottom: 0.2rem; }
   .emb-desc { font-size: 0.75rem; color: var(--brand-mid); }
 
+  /* ── PULSE BANNER ── */
+  @keyframes bannerPulse {
+    0%   { opacity: 1; transform: scale(1); }
+    50%  { opacity: 0.88; transform: scale(1.012); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  .banner-pulse {
+    animation: bannerPulse 2s ease-in-out infinite;
+    display: block;
+    transform-origin: center;
+  }
+
   /* Animations */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -752,13 +764,13 @@
 
 <!-- FRETE BANNER -->
 <div role="banner" aria-label="Frete grátis para Itaquaquecetuba" style="line-height:0;">
-  <img src="frete_gratis.png" alt="Frete Grátis para Itaquaquecetuba — Semana Imperdível 27/04 a 01/05" style="width:100%; display:block; max-height:520px; object-fit:cover;">
+  <img src="frete_gratis.png" class="banner-pulse" alt="Frete Grátis para Itaquaquecetuba — Semana Imperdível 27/04 a 01/05" style="width:100%; display:block; max-height:520px; object-fit:cover;">
 </div>
 
 <!-- HEADER -->
 <header>
   <div class="header-inner">
-    <a href="#" class="logo-wrap" aria-label="Qualy Quimy Tintas">
+    <a href="https://tintasqualyquimy.com.br" class="logo-wrap" aria-label="Qualy Quimy Tintas — Site Principal" target="_blank" rel="noopener">
       <div class="logo-icon" aria-hidden="true">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
           <path d="M14 4C14 4 6 10 6 17a8 8 0 0016 0C22 10 14 4 14 4z" fill="white" opacity="0.9"/>
@@ -791,8 +803,14 @@
         Falar agora →
       </a>
     </div>
-    <div class="hero-img-side" role="img" aria-label="Galão 3,6 Litros Tintas Qualy Quimy">
-      <img src="galao_3_6lts.png" class="hero-img-placeholder" alt="Galão 3,6 Litros — Tintas Qualy Quimy Itaquaquecetuba">
+    <div class="hero-img-side" role="img" aria-label="Área para imagem do produto">
+      <!-- SUBSTITUA A TAG ABAIXO COM SUA IMAGEM:
+           <img src="sua-imagem.png" class="hero-img-placeholder" alt="Tintas Qualy Quimy"> -->
+      <div class="img-upload-hint" aria-hidden="true">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M19 7v3h-2V7h-3V5h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"/></svg>
+        Insira sua imagem aqui
+        <span style="font-size:0.65rem; opacity:0.6">src="sua-imagem.png"</span>
+      </div>
     </div>
   </div>
 </section>
@@ -856,24 +874,24 @@
     </div>
     <div class="emb-grid">
       <div class="emb-card">
-        <img src="1_litro.png" alt="Embalagem 1 Litro — Tintas Qualy Quimy" style="width:100px;height:100px;object-fit:contain;margin:0 auto 0.5rem;">
+        <div class="emb-icon">🥫</div>
         <div class="emb-nome">1 Litro</div>
         <div class="emb-desc">Ideal para reparos e ambientes pequenos</div>
       </div>
       <div class="emb-card">
-        <img src="galao_3_6lts.png" alt="Galão 3,6 Litros — Tintas Qualy Quimy" style="width:100px;height:100px;object-fit:contain;margin:0 auto 0.5rem;">
+        <div class="emb-icon">🪣</div>
         <div class="emb-nome">Galão 3,6L</div>
         <div class="emb-desc">Perfeito para quartos, banheiros e cozinhas</div>
       </div>
       <div class="emb-card">
-        <img src="barrica.png" alt="Barrica 25kg — Tintas Qualy Quimy" style="width:100px;height:100px;object-fit:contain;margin:0 auto 0.5rem;">
+        <div class="emb-icon">🛢️</div>
         <div class="emb-nome">Barrica 25kg</div>
         <div class="emb-desc">Para obras de médio porte e prestadores</div>
       </div>
       <div class="emb-card">
-        <img src="balde_16lts.png" alt="Balde 16 Litros — Tintas Qualy Quimy" style="width:100px;height:100px;object-fit:contain;margin:0 auto 0.5rem;">
-        <div class="emb-nome">Balde 16L</div>
-        <div class="emb-desc">Para reformas completas e pintores profissionais</div>
+        <div class="emb-icon">🏗️</div>
+        <div class="emb-nome">Balde 25kg</div>
+        <div class="emb-desc">Grafiato e textura para fachadas e obras</div>
       </div>
     </div>
   </div>
@@ -893,7 +911,11 @@
         <div class="carousel-slide" role="group" aria-label="Slide 1 de 3: Embalagem 1 Litro">
           <div class="carousel-slide-inner">
             <div class="slide-img s1" role="img" aria-label="Imagem da embalagem 1 Litro">
-              <img src="1_litro.png" alt="Tinta Acrílica 1 Litro — Qualy Quimy" style="width:100%;height:100%;object-fit:contain;padding:1.5rem;">
+              <!-- Insira: <img src="1litro.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+              <div class="slide-img-hint" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.5"><path d="M19 7v3h-2V7h-3V5h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"/></svg>
+                Sua imagem aqui<br>1 Litro
+              </div>
             </div>
             <div class="slide-content">
               <span class="slide-tag">🥫 Embalagem 1L</span>
@@ -908,7 +930,10 @@
         <div class="carousel-slide" role="group" aria-label="Slide 2 de 3: Galão 3,6 Litros">
           <div class="carousel-slide-inner">
             <div class="slide-img s2" role="img" aria-label="Imagem do galão 3,6 litros">
-              <img src="galao_3_6lts.png" alt="Galão 3,6 Litros — Qualy Quimy" style="width:100%;height:100%;object-fit:contain;padding:1.5rem;">
+              <div class="slide-img-hint" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.5"><path d="M19 7v3h-2V7h-3V5h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"/></svg>
+                Sua imagem aqui<br>Galão 3,6L
+              </div>
             </div>
             <div class="slide-content">
               <span class="slide-tag">🪣 Mais Vendido</span>
@@ -923,7 +948,10 @@
         <div class="carousel-slide" role="group" aria-label="Slide 3 de 3: Balde 16 Litros">
           <div class="carousel-slide-inner">
             <div class="slide-img s3" role="img" aria-label="Imagem do balde 16 litros">
-              <img src="balde_16lts.png" alt="Balde 16 Litros — Qualy Quimy" style="width:100%;height:100%;object-fit:contain;padding:1.5rem;">
+              <div class="slide-img-hint" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.5"><path d="M19 7v3h-2V7h-3V5h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"/></svg>
+                Sua imagem aqui<br>Balde 16L
+              </div>
             </div>
             <div class="slide-content">
               <span class="slide-tag">🛢️ Para Obras</span>
@@ -959,7 +987,7 @@
         <div class="mapa-badge">
           <div class="mapa-badge-icon">📍</div>
           <div class="mapa-badge-text">
-            Rua Leiria, 45 — Chácara Cuiabá
+            <a href="https://www.google.com/maps?client=firefox-b-d&um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=KZMQGG6yfc6UMRECbD178tUD&daddr=R.+Leiria,+45+-+Ch%C3%A1cara+Cuiab%C3%A1,+Itaquaquecetuba+-+SP,+08587-100" target="_blank" rel="noopener" style="color:var(--brand-red); text-decoration:none; font-weight:700;">Rua Leiria, 45 — Chácara Cuiabá</a>
             <span>CEP 08587-100 · Itaquaquecetuba — SP</span>
           </div>
         </div>
@@ -985,11 +1013,11 @@
     </div>
     <div class="map-frame">
       <iframe
-        src="https://www.google.com/maps?q=Rua+Leiria+45+Ch%C3%A1cara+Cuiab%C3%A1+08587-100&output=embed"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58974.12345678901!2d-46.34!3d-23.48!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b5e0e0e0e0e%3A0x0!2sItaquaquecetuba%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        title="Localização Qualy Quimy Tintas — Rua Leiria, 45, Chácara Cuiabá, Itaquaquecetuba SP">
+        title="Localização Qualy Quimy Tintas em Itaquaquecetuba SP">
       </iframe>
     </div>
   </div>
@@ -998,7 +1026,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p><strong>Qualy Quimy Tintas</strong> · Itaquaquecetuba — SP · Tintas, Grafiato, Textura e Complementos</p>
+  <p><a href="https://tintasqualyquimy.com.br" target="_blank" rel="noopener" style="color:var(--white); text-decoration:none;"><strong>Qualy Quimy Tintas</strong></a> · Itaquaquecetuba — SP · Tintas, Grafiato, Textura e Complementos</p>
   <p style="margin-top:0.4rem">Frete grátis para Itaquaquecetuba • Atendimento pelo WhatsApp</p>
 </footer>
 
