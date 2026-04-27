@@ -38,18 +38,6 @@
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://tintasqualyquimy.com.br/categorias/cidades.html</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://tintasqualyquimy.com.br/categorias/blog.html</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://tintasqualyquimy.com.br/produtos/grafiato.html</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -176,7 +164,7 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://tintasqualyquimy.com.br/cidades/itaquaquecetuba/jardim-morumbi.html</loc>
+    <loc>https://tintasqualyquimy.com.br/bairros/jardim-morumbi.html</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
