@@ -1,6 +1,33 @@
 // ============================================================
-// QUALY QUIMY — JS Principal
+// QUALY QUIMY - JS Principal (Versão Segura)
 // ============================================================
+
+// Função de sanitização para prevenir XSS
+function sanitizeHTML(str) {
+  const temp = document.createElement('div');
+  temp.textContent = str;
+  return temp.innerHTML;
+}
+
+// Função segura para criar elementos com conteúdo
+function setSecureHTML(element, content) {
+  if (typeof content === 'string') {
+    // Para conteúdo simples, usa textContent
+    if (!content.includes('<')) {
+      element.textContent = content;
+      return;
+    }
+    // Para HTML complexo, cria elementos manualmente
+    const temp = document.createElement('div');
+    temp.innerHTML = content;
+    // Move nós filhos de forma segura
+    while (temp.firstChild) {
+      element.appendChild(temp.firstChild);
+    }
+  } else {
+    element.appendChild(content);
+  }
+}
 
 // Dados dos produtos (fonte única de verdade)
 const PRODUTOS = [
@@ -9,7 +36,7 @@ const PRODUTOS = [
     nome: 'Grafiato',
     categoria: 'texturas',
     categorianome: 'Texturas e Grafiato',
-    icon: '🧱',
+    icon: 'layers',
     embalagens: ['5,6kg', '25kg'],
     rendimento: 4.5,
     unidadeRend: 'kg/m²',
@@ -22,7 +49,7 @@ const PRODUTOS = [
     nome: 'Textura Lisa',
     categoria: 'texturas',
     categorianome: 'Texturas e Grafiato',
-    icon: '🏠',
+    icon: 'layers',
     embalagens: ['5,6kg', '25kg'],
     rendimento: 3.1,
     unidadeRend: 'kg/m²',
@@ -35,7 +62,7 @@ const PRODUTOS = [
     nome: 'Massa PVA',
     categoria: 'massas',
     categorianome: 'Massas',
-    icon: '🪣',
+    icon: 'bucket',
     embalagens: ['5,6kg', '25kg'],
     rendimento: 1.0,
     unidadeRend: 'kg/m²',
@@ -48,7 +75,7 @@ const PRODUTOS = [
     nome: 'Massa Acrílica',
     categoria: 'massas',
     categorianome: 'Massas',
-    icon: '🪣',
+    icon: 'bucket',
     embalagens: ['5,6kg', '25kg'],
     rendimento: 1.0,
     unidadeRend: 'kg/m²',
@@ -61,7 +88,7 @@ const PRODUTOS = [
     nome: 'Seladora',
     categoria: 'fundos',
     categorianome: 'Fundos e Seladores',
-    icon: '🔧',
+    icon: 'shield',
     embalagens: ['1L', '3,6L', '16L'],
     rendimento: 8.0,
     unidadeRend: 'm²/L',
@@ -74,7 +101,7 @@ const PRODUTOS = [
     nome: 'Tinta Econômica Qualy Color',
     categoria: 'tintas',
     categorianome: 'Tintas',
-    icon: '🎨',
+    icon: 'palette',
     embalagens: ['1L', '3,6L', '18L'],
     rendimento: 11.0,
     unidadeRend: 'm²/L',
@@ -87,7 +114,7 @@ const PRODUTOS = [
     nome: 'Esmalte',
     categoria: 'tintas',
     categorianome: 'Tintas',
-    icon: '🎨',
+    icon: 'palette',
     embalagens: ['3,6L'],
     rendimento: 12.0,
     unidadeRend: 'm²/L',
@@ -100,7 +127,7 @@ const PRODUTOS = [
     nome: 'Textura Projetada Branca',
     categoria: 'texturas',
     categorianome: 'Texturas e Grafiato',
-    icon: '🏗️',
+    icon: 'layers',
     embalagens: ['25kg'],
     rendimento: 3.1,
     unidadeRend: 'kg/m²',
@@ -113,7 +140,7 @@ const PRODUTOS = [
     nome: 'Liqui Brilho',
     categoria: 'acabamentos',
     categorianome: 'Acabamentos e Vernizes',
-    icon: '✨',
+    icon: 'sparkle',
     embalagens: ['1L', '3,6L'],
     rendimento: 8.0,
     unidadeRend: 'm²/L',
@@ -138,6 +165,7 @@ const CIDADES = [
   { slug: 'lajeado', nome: 'Lajeado', uf: 'SP' }
 ];
 
+// SVG Icons como strings seguras
 const SVG_ICONES = {
   palette: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18h1.2a1.8 1.8 0 0 0 1.8-1.8c0-.7-.4-1.3-.9-1.7a1.9 1.9 0 0 1 1.2-3.4H17a4 4 0 0 0 0-8h-5Z"></path><path d="M7.5 10.5h.01"></path><path d="M12 7.5h.01"></path><path d="M16.5 10.5h.01"></path></svg>',
   layers: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5-8 4.5-8-4.5L12 3Z"></path><path d="m4 12 8 4.5 8-4.5"></path><path d="m4 16.5 8 4.5 8-4.5"></path></svg>',
@@ -153,7 +181,7 @@ const SVG_ICONES = {
 function criarCardIcon(nome) {
   const el = document.createElement('span');
   el.className = 'card-icon';
-  el.innerHTML = SVG_ICONES[nome] || SVG_ICONES.palette;
+  setSecureHTML(el, SVG_ICONES[nome] || SVG_ICONES.palette);
   return el;
 }
 
@@ -179,7 +207,7 @@ function iniciarIconesCards() {
     const titulo = card.querySelector('strong')?.textContent || '';
     if (!alvo) return;
     alvo.classList.add('card-icon');
-    alvo.innerHTML = SVG_ICONES[obterIconePorTexto(titulo)];
+    setSecureHTML(alvo, SVG_ICONES[obterIconePorTexto(titulo)]);
   });
 
   document.querySelectorAll('.categoria-card').forEach((card) => {
@@ -187,7 +215,7 @@ function iniciarIconesCards() {
     const titulo = card.querySelector('strong')?.textContent || card.textContent;
     if (!alvo) return;
     alvo.classList.add('card-icon');
-    alvo.innerHTML = SVG_ICONES[obterIconePorTexto(titulo)];
+    setSecureHTML(alvo, SVG_ICONES[obterIconePorTexto(titulo)]);
   });
 
   document.querySelectorAll('.frete-card').forEach((card) => {
@@ -195,7 +223,7 @@ function iniciarIconesCards() {
     const titulo = card.querySelector('h3')?.textContent || card.textContent;
     if (!alvo) return;
     alvo.classList.add('card-icon');
-    alvo.innerHTML = SVG_ICONES[obterIconePorTexto(titulo)];
+    setSecureHTML(alvo, SVG_ICONES[obterIconePorTexto(titulo)]);
   });
 
   document.querySelectorAll('.cidade-card').forEach((card) => {
@@ -254,19 +282,46 @@ function calcularTinta() {
   }
 
   if (resultado) {
-    resultado.innerHTML = `
-      <h3>Resultado do cálculo</h3>
-      <p><strong>Produto:</strong> ${produto.nome} — Qualy Quimy</p>
-      <p><strong>Área:</strong> ${area} m² × ${demaos} demão(s)</p>
-      <div class="numero">${quantidade} ${unidade}</div>
-      <p style="color:var(--cor-cinza);margin-top:8px">Embalagem recomendada: <strong>${embalagem}</strong></p>
-      <p style="margin-top:16px">
-        <a href="https://wa.me/5511954950044?text=Quero%20comprar%20${produto.nome}%20-%20${quantidade}${unidade}" 
-           target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block;margin-top:8px">
-          Pedir pelo WhatsApp
-        </a>
-      </p>
-    `;
+    // Limpa o conteúdo anterior de forma segura
+    while (resultado.firstChild) {
+      resultado.removeChild(resultado.firstChild);
+    }
+    
+    // Cria elementos de forma segura
+    const h3 = document.createElement('h3');
+    h3.textContent = 'Resultado do cálculo';
+    resultado.appendChild(h3);
+    
+    const p1 = document.createElement('p');
+    p1.innerHTML = `<strong>Produto:</strong> ${sanitizeHTML(produto.nome)} - Qualy Quimy`;
+    resultado.appendChild(p1);
+    
+    const p2 = document.createElement('p');
+    p2.innerHTML = `<strong>Área:</strong> ${area} m² × ${demaos} demão(s)`;
+    resultado.appendChild(p2);
+    
+    const div = document.createElement('div');
+    div.className = 'numero';
+    div.textContent = `${quantidade} ${unidade}`;
+    resultado.appendChild(div);
+    
+    const p3 = document.createElement('p');
+    p3.style.cssText = 'color:var(--cor-cinza);margin-top:8px';
+    p3.innerHTML = `Embalagem recomendada: <strong>${sanitizeHTML(embalagem)}</strong>`;
+    resultado.appendChild(p3);
+    
+    const p4 = document.createElement('p');
+    p4.style.cssText = 'margin-top:16px';
+    const a = document.createElement('a');
+    a.href = `https://wa.me/5511954950044?text=Quero%20comprar%20${encodeURIComponent(produto.nome)}%20-%20${quantidade}${unidade}`;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.className = 'btn-primary';
+    a.style.cssText = 'display:inline-block;margin-top:8px';
+    a.textContent = 'Pedir pelo WhatsApp';
+    p4.appendChild(a);
+    resultado.appendChild(p4);
+    
     resultado.classList.add('ativo');
   }
 
@@ -310,7 +365,20 @@ function criarLightbox() {
   lb.id = 'emb-lightbox';
   lb.setAttribute('role', 'dialog');
   lb.setAttribute('aria-modal', 'true');
-  lb.innerHTML = '<button id="emb-lightbox-close" aria-label="Fechar">&times;</button><img id="emb-lightbox-img" src="" alt="Embalagem" />';
+  
+  // Cria conteúdo de forma segura
+  const closeBtn = document.createElement('button');
+  closeBtn.id = 'emb-lightbox-close';
+  closeBtn.setAttribute('aria-label', 'Fechar');
+  closeBtn.textContent = '×';
+  lb.appendChild(closeBtn);
+  
+  const img = document.createElement('img');
+  img.id = 'emb-lightbox-img';
+  img.src = '';
+  img.alt = 'Embalagem';
+  lb.appendChild(img);
+  
   document.body.appendChild(lb);
   document.getElementById('emb-lightbox-close').addEventListener('click', fecharLightbox);
   lb.addEventListener('click', function(e) { if (e.target === lb) fecharLightbox(); });
@@ -366,7 +434,10 @@ function atualizarEstadoCalculadora() {
 
   if (!pronto && resultado) {
     resultado.classList.remove('ativo');
-    resultado.innerHTML = '';
+    // Limpa de forma segura
+    while (resultado.firstChild) {
+      resultado.removeChild(resultado.firstChild);
+    }
   }
 
   if (hint) {
@@ -409,7 +480,7 @@ function criarWhatsFloat() {
   btn.target = '_blank';
   btn.rel = 'noopener noreferrer';
   btn.id = 'whats-float';
-  btn.innerHTML = 'WA';
+  btn.textContent = 'WA';
   btn.title = 'Fale conosco no WhatsApp';
   btn.style.cssText = `
     position:fixed;bottom:28px;right:28px;z-index:999;
@@ -432,21 +503,32 @@ function criarWhatsFloat() {
 // ========== INIT ==========
 document.addEventListener('DOMContentLoaded', () => {
   criarWhatsFloat();
-  popularProdutosCalc();
-  iniciarBadgesClickaveis();
-  iniciarIconesCards();
-  iniciarMenuMobile();
-  atualizarEstadoCalculadora();
-  // Listener calculadora
-  const btnCalc = document.getElementById('btn-calcular');
-  if (btnCalc) btnCalc.addEventListener('click', calcularTinta);
+  // Verificar se os elementos existem antes de usá-los
+  if (document.getElementById('produto-calc')) {
+    popularProdutosCalc();
+    iniciarBadgesClickaveis();
+  }
+  
+  if (document.querySelector('.icon-card')) {
+    iniciarIconesCards();
+  }
+  
+  if (document.querySelector('.menu-toggle')) {
+    iniciarMenuMobile();
+  }
+  
+  if (document.getElementById('btn-calcular')) {
+    atualizarEstadoCalculadora();
+    const btnCalc = document.getElementById('btn-calcular');
+    if (btnCalc) btnCalc.addEventListener('click', calcularTinta);
 
-  const areaInput = document.getElementById('area');
-  const produtoSelect = document.getElementById('produto-calc');
-  const demaoSelect = document.getElementById('demao');
+    const areaInput = document.getElementById('area');
+    const produtoSelect = document.getElementById('produto-calc');
+    const demaoSelect = document.getElementById('demao');
 
-  [areaInput, produtoSelect, demaoSelect].forEach((element) => {
-    element?.addEventListener('input', atualizarEstadoCalculadora);
-    element?.addEventListener('change', atualizarEstadoCalculadora);
-  });
+    [areaInput, produtoSelect, demaoSelect].forEach((element) => {
+      element?.addEventListener('input', atualizarEstadoCalculadora);
+      element?.addEventListener('change', atualizarEstadoCalculadora);
+    });
+  }
 });
