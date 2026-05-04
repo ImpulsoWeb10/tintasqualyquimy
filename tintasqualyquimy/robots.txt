@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /rascunhos/
+
+Sitemap: https://tintasqualyquimy.com.br/sitemap.xml
