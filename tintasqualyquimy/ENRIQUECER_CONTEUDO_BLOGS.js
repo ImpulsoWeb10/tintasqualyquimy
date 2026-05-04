@@ -1579,6 +1579,336 @@ function enriquecerBlogTexturaLisa() {
     return conteudoEnriquecido;
 }
 
+function enriquecerBlogTexturaProjetada() {
+    console.log('\n🎨 ENRIQUECENDO: textura-projetada-fachadas.html');
+    
+    const conteudoEnriquecido = `
+                <h2>O que é Textura Projetada?</h2>
+                <p>Textura projetada é um revestimento arquitetônico aplicado através de equipamento especializado que projeta a massa diretamente na parede. Criada para fachadas e áreas externas, oferece acabamento texturizado uniforme com excelente durabilidade e proteção climática.</p>
+                
+                <h2>Tipos de Textura Projetada</h2>
+                
+                <h3>Textura Projetada Rústica</h3>
+                <ul>
+                    <li><strong>Característica:</strong> Grãos mais visíveis e marcados</li>
+                    <li><strong>Indicação:</strong> Fachadas residenciais</li>
+                    <li><strong>Vantagem:</strong> Disfarça imperfeições</li>
+                    <li><strong>Rendimento:</strong> 6-8m² por saco de 25kg</li>
+                </ul>
+                
+                <h3>Textura Projetada Lisa</h3>
+                <ul>
+                    <li><strong>Característica:</strong> Superfície mais uniforme</li>
+                    <li><strong>Indicação:</strong> Edifícios comerciais</li>
+                    <li><strong>Vantagem:</strong> Visual moderno</li>
+                    <li><strong>Rendimento:</strong> 8-10m² por saco de 25kg</li>
+                </ul>
+                
+                <h3>Textura Projetada Granito</h3>
+                <ul>
+                    <li><strong>Característica:</strong> Efeito pedra natural</li>
+                    <li><strong>Indicação:</strong> Áreas de alto padrão</li>
+                    <li><strong>Vantagem:</strong> Estética sofisticada</li>
+                    <li><strong>Rendimento:</strong> 5-7m² por saco de 25kg</li>
+                </ul>
+                
+                <h2>Quando Usar Textura Projetada?</h2>
+                
+                <h3>✅ Situações Ideais:</h3>
+                <ul>
+                    <li><strong>Fachadas residenciais:</strong> Proteção e beleza</li>
+                    <li><strong>Edifícios comerciais:</strong> Acabamento profissional</li>
+                    <li><strong>Muros externos:</strong> Durabilidade</li>
+                    <li><strong>Áreas de lazer:</strong> Resistência climática</li>
+                    <li><strong>Coberturas e beirais:</strong> Proteção extra</li>
+                </ul>
+                
+                <h3>❌ Quando Evitar:</h3>
+                <ul>
+                    <li><strong>Áreas internas:</strong> Custo elevado desnecessário</li>
+                    <li><strong>Superfícies muito pequenas:</strong> Justifica aplicação</li>
+                    <li><strong>Áreas com pouca ventilação:</strong> Secagem comprometida</li>
+                    <li><strong>Superfícies já tratadas:</strong> Pode não aderir</li>
+                </ul>
+                
+                <h2>Onde Aplicar Textura Projetada?</h2>
+                
+                <h3>Residencial:</h3>
+                <ul>
+                    <li><strong>Fachadas principais:</strong> Impacto visual</li>
+                    <li><strong>Muros de divisa:</strong> Proteção e privacidade</li>
+                    <li><strong>Garagens externas:</strong> Durabilidade</li>
+                    <li><strong>Áreas de serviço:</strong> Resistência</li>
+                </ul>
+                
+                <h3>Comercial:</h3>
+                <ul>
+                    <li><strong>Fachadas de lojas:</strong> Atração visual</li>
+                    <li><strong>Edifícios corporativos:</strong> Imagem profissional</li>
+                    <li><strong>Condomínios:</strong> Padronização visual</li>
+                    <li><strong>Áreas industriais:</strong> Proteção</li>
+                </ul>
+                
+                <h2>Ferramentas e Equipamentos</h2>
+                
+                <h3>Equipamentos de Aplicação:</h3>
+                <ul>
+                    <li><strong>Máquina projetora:</strong> R$ 3.000-8.000 (aluguel R$ 150-300/dia)</li>
+                    <li><strong>Compressor de ar:</strong> R$ 2.000-5.000 (aluguel R$ 100-200/dia)</li>
+                    <li><strong>Mangueiras e conexões:</strong> R$ 200-400</li>
+                    <li><strong>Bicos projetores:</strong> R$ 50-150 cada</li>
+                </ul>
+                
+                <h3>Ferramentas de Preparo:</h3>
+                <ul>
+                    <li><strong>Betoneira:</strong> R$ 150-300 (aluguel R$ 50-80/dia)</li>
+                    <li><strong>Colher de pedreiro:</strong> R$ 15-25</li>
+                    <li><strong>Desempenadeira:</strong> R$ 20-35</li>
+                    <li><strong>Lixas e lixadeira:</strong> R$ 100-200</li>
+                </ul>
+                
+                <h3>Equipamentos de Segurança:</h3>
+                <ul>
+                    <li><strong>Máscara respiratória:</strong> R$ 80-150</li>
+                    <li><strong>Óculos de proteção:</strong> R$ 25-50</li>
+                    <li><strong>Luvas resistentes:</strong> R$ 20-40</li>
+                    <li><strong>Capa de proteção:</strong> R$ 30-60</li>
+                </ul>
+                
+                <h2>Passo a Passo Detalhado</h2>
+                
+                <h3>1. Preparação da Superfície</h3>
+                <p><strong>Tempo estimado:</strong> 4-6 horas</p>
+                <ul>
+                    <li>Limpe completamente a superfície</li>
+                    <li>Remova tinta solta e resíduos</li>
+                    <li>Verifique fissuras e trincas</li>
+                    <li>Repare imperfeições graves</li>
+                    <li>Lixe áreas muito lisas</li>
+                    <li>Limpe o pó com jato de ar</li>
+                    <li>Aplique selador se necessário</li>
+                </ul>
+                
+                <h3>2. Preparação da Massa</h3>
+                <p><strong>Tempo estimado:</strong> 30-45 minutos</p>
+                <ul>
+                    <li>Meça os materiais corretamente</li>
+                    <li>Adicione água conforme fabricante</li>
+                    <li>Misture na betoneira por 3-5 minutos</li>
+                    <li>Verifique consistência ideal</li>
+                    <li>Deixe descansar 10 minutos</li>
+                    <li>Misture novamente antes de usar</li>
+                </ul>
+                
+                <h3>3. Configuração do Equipamento</h3>
+                <p><strong>Tempo estimado:</strong> 20-30 minutos</p>
+                <ul>
+                    <li>Monte a máquina projetora</li>
+                    <li>Conecte mangueiras e compressor</li>
+                    <li>Regule a pressão de ar (40-60 PSI)</li>
+                    <li>Teste em área pequena</li>
+                    <li>Ajuste bico projetor</li>
+                    <li>Verifique fluxo e textura</li>
+                </ul>
+                
+                <h3>4. Aplicação da Textura</h3>
+                <p><strong>Tempo estimado:</strong> 2-4 horas por 50m²</p>
+                <ul>
+                    <li>Mantenha distância constante (30-50cm)</li>
+                    <li>Aplique em movimentos uniformes</li>
+                    <li>Trabalhe em faixas sobrepostas</li>
+                    <li>Mantenha ângulo de 90°</li>
+                    <li>Evite paradas bruscas</li>
+                    <li>Controle espessura (3-5mm)</li>
+                </ul>
+                
+                <h3>5. Acabamento Final</h3>
+                <p><strong>Tempo estimado:</strong> 1-2 horas</p>
+                <ul>
+                    <li>Aguarde 20-30 minutos</li>
+                    <li>Use desempenadeira para uniformizar</li>
+                    <li>Remova excessos</li>
+                    <li>Corrija imperfeições</li>
+                    <li>Verifique espessura uniforme</li>
+                    <li>Proteja contra chuva</li>
+                </ul>
+                
+                <h3>6. Secagem e Cura</h3>
+                <p><strong>Tempo estimado:</strong> 7-14 dias</p>
+                <ul>
+                    <li>Proteja nas primeiras 24 horas</li>
+                    <li>Mantenha umidade controlada</li>
+                    <li>Evite exposição solar direta</li>
+                    <li>Aguarde cura completa</li>
+                    <li>Verifique resistência</li>
+                    <li>Proceda com selamento se necessário</li>
+                </ul>
+                
+                <h2>Rendimento e Cálculo</h2>
+                
+                <h3>Rendimento por Tipo:</h3>
+                <ul>
+                    <li><strong>Rústica:</strong> 6-8m²/saco 25kg</li>
+                    <li><strong>Lisa:</strong> 8-10m²/saco 25kg</li>
+                    <li><strong>Granito:</strong> 5-7m²/saco 25kg</li>
+                </ul>
+                
+                <h3>Cálculo Prático:</h3>
+                <p><strong>Exemplo: Fachada de 100m²</strong></p>
+                <ul>
+                    <li>Área total: 100m²</li>
+                    <li>Textura lisa: 100 ÷ 9 = 11,1 sacos (12 sacos)</li>
+                    <li>Textura rústica: 100 ÷ 7 = 14,3 sacos (15 sacos)</li>
+                    <li><strong>Total: 12-15 sacos de 25kg</strong></li>
+                </ul>
+                
+                <h2>Cuidados Especiais</h2>
+                
+                <h3>Condições Ideais de Aplicação:</h3>
+                <ul>
+                    <li><strong>Temperatura:</strong> 15-30°C</li>
+                    <li><strong>Umidade relativa:</strong> Abaixo de 80%</li>
+                    <li><strong>Vento:</strong> Abaixo de 20km/h</li>
+                    <li><strong>Chuva:</strong> Sem previsão para 24 horas</li>
+                    <li><strong>Sol intenso:</strong> Evitar horários de pico</li>
+                </ul>
+                
+                <h3>Quando NÃO Aplicar:</h3>
+                <ul>
+                    <li><strong>Temperatura abaixo 10°C:</strong> Risco de congelamento</li>
+                    <li><strong>Umidade acima 85%:</strong> Secagem comprometida</li>
+                    <li><strong>Vento forte:</strong> Projeto comprometido</li>
+                    <li><strong>Chuva iminente:</strong> Perda total</li>
+                    <li><strong>Superfície molhada:</strong> Não adere</li>
+                </ul>
+                
+                <h2>Tempo de Secagem e Cura</h2>
+                
+                <h3>Cronograma de Secagem:</h3>
+                <ul>
+                    <li><strong>Ao toque:</strong> 2-4 horas</li>
+                    <li><strong>Para manuseio:</strong> 8-12 horas</li>
+                    <li><strong>Segunda camada:</strong> 24-48 horas</li>
+                    <li><strong>Exposição climática:</strong> 72 horas</li>
+                    <li><strong>Cura completa:</strong> 7-14 dias</li>
+                </ul>
+                
+                <h3>Fatores que Influenciam:</h3>
+                <ul>
+                    <li><strong>Umidade ambiente:</strong> Principal fator</li>
+                    <li><strong>Temperatura:</strong> Afeta velocidade</li>
+                    <li><strong>Ventilação:</strong> Acelera processo</li>
+                    <li><strong>Espessura:</strong> Mais espesso = mais tempo</li>
+                </ul>
+                
+                <h2>Manutenção e Durabilidade</h2>
+                
+                <h3>Manutenção Preventiva:</h3>
+                <ul>
+                    <li><strong>Inspeção visual:</strong> A cada 6 meses</li>
+                    <li><strong>Limpeza suave:</strong> Anualmente</li>
+                    <li><strong>Retoques:</strong> Em áreas danificadas</li>
+                    <li><strong>Proteção:</strong> Em áreas de impacto</li>
+                </ul>
+                
+                <h3>Manutenção Corretiva:</h3>
+                <ul>
+                    <li><strong>Fissuras:</strong> Reparar imediatamente</li>
+                    <li><strong>Descascamento:</strong> Remover e reaplicar</li>
+                    <li><strong>Manchas:</strong> Limpeza especializada</li>
+                    <li><strong>Repintura:</strong> A cada 8-12 anos</li>
+                </ul>
+                
+                <h2>Problemas Comuns e Soluções</h2>
+                
+                <h3>Fissuras na Superfície:</h3>
+                <ul>
+                    <li><strong>Causa:</strong> Secagem rápida ou espessura excessiva</li>
+                    <li><strong>Solução:</strong> Selar com resina adequada</li>
+                    <li><strong>Prevenção:</strong> Controle umidade e espessura</li>
+                </ul>
+                
+                <h3>Descascamento:</h3>
+                <ul>
+                    <li><strong>Causa:</strong> Preparo inadequado ou umidade</li>
+                    <li><strong>Solução:</strong> Remover e reaplicar</li>
+                    <li><strong>Prevenção:</strong> Preparo correto e proteção</li>
+                </ul>
+                
+                <h3>Desuniformidade:</h3>
+                <ul>
+                    <li><strong>Causa:</strong> Aplicação errada ou equipamento</li>
+                    <li><strong>Solução:</strong> Reparar localmente</li>
+                    <li><strong>Prevenção:</strong> Técnica correta e manutenção</li>
+                </ul>
+                
+                <h2>Custos Estimados (2026)</h2>
+                
+                <h3>Materiais por m²:</h3>
+                <ul>
+                    <li><strong>Textura projetada:</strong> R$ 45-70/m²</li>
+                    <li><strong>Selador:</strong> R$ 8-15/m²</li>
+                    <li><strong>Aditivos:</strong> R$ 5-10/m²</li>
+                    <li><strong>Equipamentos:</strong> R$ 15-25/m²</li>
+                    <li><strong>Total materiais:</strong> R$ 73-120/m²</li>
+                </ul>
+                
+                <h3>Mão de Obra:</h3>
+                <ul>
+                    <li><strong>Aplicador especializado:</strong> R$ 50-80/m²</li>
+                    <li><strong>Ajudante:</strong> R$ 25-40/m²</li>
+                    <li><strong>Equipamentista:</strong> R$ 30-50/m²</li>
+                    <li><strong>Total mão de obra:</strong> R$ 105-170/m²</li>
+                </ul>
+                
+                <h3>Custo Total por m²:</h3>
+                <ul>
+                    <li><strong>Faixa econômica:</strong> R$ 180-250/m²</li>
+                    <li><strong>Faixa padrão:</strong> R$ 250-350/m²</li>
+                    <li><strong>Faixa premium:</strong> R$ 350-500/m²</li>
+                </ul>
+                
+                <h2>Dicas Profissionais</h2>
+                
+                <h3>Dicas de Aplicação:</h3>
+                <ul>
+                    <li>Teste sempre em área pequena</li>
+                    <li>Mantenha equipamento limpo</li>
+                    <li>Trabalhe com equipe experiente</li>
+                    <li>Respeite condições climáticas</li>
+                    <li>Faça manutenção preventiva</li>
+                </ul>
+                
+                <h3>Dicas de Qualidade:</h3>
+                <ul>
+                    <li>Use materiais de qualidade</li>
+                    <li>Não economize no preparo</li>
+                    <li>Contrate profissionais experientes</li>
+                    <li>Siga especificações do fabricante</li>
+                    <li>Invista em equipamentos adequados</li>
+                </ul>
+                
+                <h2>Benefícios da Textura Projetada</h2>
+                
+                <h3>Vantagens Principais:</h3>
+                <ul>
+                    <li><strong>Durabilidade:</strong> 15-20 anos</li>
+                    <li><strong>Proteção climática:</strong> Excelente</li>
+                    <li><strong>Estética:</strong> Acabamento sofisticado</li>
+                    <li><strong>Isolamento:</strong> Térmico e acústico</li>
+                    <li><strong>Baixo custo manutenção:</strong> Mínima</li>
+                    <li><strong>Aplicação rápida:</strong> Grandes áreas</li>
+                </ul>
+                
+                <h2>Considerações Finais</h2>
+                <p>Textura projetada é a solução ideal para fachadas que exigem durabilidade, proteção climática e acabamento sofisticado. Apesar do investimento inicial mais elevado, o custo-benefício a longo prazo é excelente devido à baixa manutenção e alta durabilidade.</p>
+                
+                <p><strong>Importante:</strong> O sucesso da aplicação depende 90% do preparo da superfície e 10% da técnica. Invista tempo e recursos no preparo para garantir resultado perfeito e duradouro.</p>
+            `;
+    
+    return conteudoEnriquecido;
+}
+
 function enriquecerBlogMassaPVAAcrilica() {
     console.log('\n🎨 ENRIQUECENDO: diferenca-massa-pva-massa-acrilica.html');
     
@@ -2053,6 +2383,10 @@ function enriquecerTodosBlogs() {
         {
             arquivo: 'textura-lisa-vs-grafiato.html',
             funcao: enriquecerBlogTexturaLisa
+        },
+        {
+            arquivo: 'textura-projetada-fachadas.html',
+            funcao: enriquecerBlogTexturaProjetada
         }
     ];
     
