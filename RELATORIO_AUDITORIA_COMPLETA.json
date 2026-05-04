@@ -1,0 +1,4812 @@
+{
+  "auditoria": {
+    "data": "2026-05-04T03:37:55.149Z",
+    "versao": "1.0",
+    "base": "DOCUMENTO_MESTRE_QUALYQUIMY.md"
+  },
+  "estrutura": {
+    "raiz": [
+      {
+        "nome": ".htaccess",
+        "caminho": ".htaccess",
+        "tamanho": 3269,
+        "extensao": ""
+      },
+      {
+        "nome": ".nojekyll",
+        "caminho": ".nojekyll",
+        "tamanho": 6,
+        "extensao": ""
+      },
+      {
+        "nome": "404.html",
+        "caminho": "404.html",
+        "tamanho": 3904,
+        "extensao": ".html"
+      },
+      {
+        "nome": "appescolha.html",
+        "caminho": "appescolha.html",
+        "tamanho": 46564,
+        "extensao": ".html"
+      },
+      {
+        "nome": "appescolha2.html",
+        "caminho": "appescolha2.html",
+        "tamanho": 55728,
+        "extensao": ".html"
+      },
+      {
+        "nome": "AUDITORIA-EXECUTADA-SUMARIO.md",
+        "caminho": "AUDITORIA-EXECUTADA-SUMARIO.md",
+        "tamanho": 9149,
+        "extensao": ".md"
+      },
+      {
+        "nome": "AUDITORIA-SEO-DASHBOARD-MONITORAMENTO.md",
+        "caminho": "AUDITORIA-SEO-DASHBOARD-MONITORAMENTO.md",
+        "tamanho": 17571,
+        "extensao": ".md"
+      },
+      {
+        "nome": "AUDITORIA-SEO-QUALYQUIMY-EXECUTADA.md",
+        "caminho": "AUDITORIA-SEO-QUALYQUIMY-EXECUTADA.md",
+        "tamanho": 13928,
+        "extensao": ".md"
+      },
+      {
+        "nome": "AUDITORIA-SEO-RESUMO-EXECUTIVO.md",
+        "caminho": "AUDITORIA-SEO-RESUMO-EXECUTIVO.md",
+        "tamanho": 7258,
+        "extensao": ".md"
+      },
+      {
+        "nome": "AUDITORIA-SEO-SCRIPTS-EXECUCAO.md",
+        "caminho": "AUDITORIA-SEO-SCRIPTS-EXECUCAO.md",
+        "tamanho": 21347,
+        "extensao": ".md"
+      },
+      {
+        "nome": "AUDITORIA_COMPLETA_SISTEMA.js",
+        "caminho": "AUDITORIA_COMPLETA_SISTEMA.js",
+        "tamanho": 14738,
+        "extensao": ".js"
+      },
+      {
+        "nome": "auditoria_fix.py",
+        "caminho": "auditoria_fix.py",
+        "tamanho": 23770,
+        "extensao": ".py"
+      },
+      {
+        "nome": "blog.tintasqualyquimy.html",
+        "caminho": "blog.tintasqualyquimy.html",
+        "tamanho": 3325,
+        "extensao": ".html"
+      },
+      {
+        "nome": "check_models.ps1",
+        "caminho": "check_models.ps1",
+        "tamanho": 961,
+        "extensao": ".ps1"
+      },
+      {
+        "nome": "CLAUDE.md",
+        "caminho": "CLAUDE.md",
+        "tamanho": 550,
+        "extensao": ".md"
+      },
+      {
+        "nome": "CNAME",
+        "caminho": "CNAME",
+        "tamanho": 25,
+        "extensao": ""
+      },
+      {
+        "nome": "COMANDOS-GITHUB.md",
+        "caminho": "COMANDOS-GITHUB.md",
+        "tamanho": 1541,
+        "extensao": ".md"
+      },
+      {
+        "nome": "DATABASE_PRODUTOS.md",
+        "caminho": "DATABASE_PRODUTOS.md",
+        "tamanho": 1329,
+        "extensao": ".md"
+      },
+      {
+        "nome": "DOCUMENTO_MESTRE.md",
+        "caminho": "DOCUMENTO_MESTRE.md",
+        "tamanho": 393,
+        "extensao": ".md"
+      },
+      {
+        "nome": "DOCUMENTO_MESTRE_QUALYQUIMY.docx",
+        "caminho": "DOCUMENTO_MESTRE_QUALYQUIMY.docx",
+        "tamanho": 25276,
+        "extensao": ".docx"
+      },
+      {
+        "nome": "DOCUMENTO_MESTRE_QUALYQUIMY.md",
+        "caminho": "DOCUMENTO_MESTRE_QUALYQUIMY.md",
+        "tamanho": 30300,
+        "extensao": ".md"
+      },
+      {
+        "nome": "DOCUMENTO_MESTRE_QUALYQUIMY_docx",
+        "caminho": "DOCUMENTO_MESTRE_QUALYQUIMY_docx",
+        "tamanho": 31486,
+        "extensao": ""
+      },
+      {
+        "nome": "FINALIZACAO-LINKS.md",
+        "caminho": "FINALIZACAO-LINKS.md",
+        "tamanho": 856,
+        "extensao": ".md"
+      },
+      {
+        "nome": "force-update.md",
+        "caminho": "force-update.md",
+        "tamanho": 919,
+        "extensao": ".md"
+      },
+      {
+        "nome": "gerador-schema-produto.html",
+        "caminho": "gerador-schema-produto.html",
+        "tamanho": 40067,
+        "extensao": ".html"
+      },
+      {
+        "nome": "grafiato-itaquaquecetuba.html",
+        "caminho": "grafiato-itaquaquecetuba.html",
+        "tamanho": 69505,
+        "extensao": ".html"
+      },
+      {
+        "nome": "GUIA-REPLICACAO.md",
+        "caminho": "GUIA-REPLICACAO.md",
+        "tamanho": 8358,
+        "extensao": ".md"
+      },
+      {
+        "nome": "hub-cidades.html",
+        "caminho": "hub-cidades.html",
+        "tamanho": 16231,
+        "extensao": ".html"
+      },
+      {
+        "nome": "INDEX-AUDITORIA-SEO.md",
+        "caminho": "INDEX-AUDITORIA-SEO.md",
+        "tamanho": 8019,
+        "extensao": ".md"
+      },
+      {
+        "nome": "index.html",
+        "caminho": "index.html",
+        "tamanho": 106881,
+        "extensao": ".html"
+      },
+      {
+        "nome": "index.html.backup",
+        "caminho": "index.html.backup",
+        "tamanho": 100383,
+        "extensao": ".backup"
+      },
+      {
+        "nome": "indexgemini.html",
+        "caminho": "indexgemini.html",
+        "tamanho": 11890,
+        "extensao": ".html"
+      },
+      {
+        "nome": "INICIO-RAPIDO-AUDITORIA-SEO.md",
+        "caminho": "INICIO-RAPIDO-AUDITORIA-SEO.md",
+        "tamanho": 8272,
+        "extensao": ".md"
+      },
+      {
+        "nome": "onde-atendemos.html",
+        "caminho": "onde-atendemos.html",
+        "tamanho": 3204,
+        "extensao": ".html"
+      },
+      {
+        "nome": "politica-de-privacidade.html",
+        "caminho": "politica-de-privacidade.html",
+        "tamanho": 10201,
+        "extensao": ".html"
+      },
+      {
+        "nome": "README.md",
+        "caminho": "README.md",
+        "tamanho": 6041,
+        "extensao": ".md"
+      },
+      {
+        "nome": "RELATORIO-AUDITORIA-2026-04-07-v2.md",
+        "caminho": "RELATORIO-AUDITORIA-2026-04-07-v2.md",
+        "tamanho": 4645,
+        "extensao": ".md"
+      },
+      {
+        "nome": "RELATORIO-AUDITORIA-COMPLETA-2026-04-07.md",
+        "caminho": "RELATORIO-AUDITORIA-COMPLETA-2026-04-07.md",
+        "tamanho": 3565,
+        "extensao": ".md"
+      },
+      {
+        "nome": "RELATORIO-AUDITORIA-FRONTEND-UX-2026-04-09.md",
+        "caminho": "RELATORIO-AUDITORIA-FRONTEND-UX-2026-04-09.md",
+        "tamanho": 12760,
+        "extensao": ".md"
+      },
+      {
+        "nome": "RELATORIO-CORRECAO-VISUAL-GLOBAL-2026-04-07.md",
+        "caminho": "RELATORIO-CORRECAO-VISUAL-GLOBAL-2026-04-07.md",
+        "tamanho": 2848,
+        "extensao": ".md"
+      },
+      {
+        "nome": "robots.txt",
+        "caminho": "robots.txt",
+        "tamanho": 123,
+        "extensao": ".txt"
+      },
+      {
+        "nome": "script_encoding.py",
+        "caminho": "script_encoding.py",
+        "tamanho": 1981,
+        "extensao": ".py"
+      },
+      {
+        "nome": "sitemap.xml",
+        "caminho": "sitemap.xml",
+        "tamanho": 11022,
+        "extensao": ".xml"
+      },
+      {
+        "nome": "sobre.html",
+        "caminho": "sobre.html",
+        "tamanho": 9738,
+        "extensao": ".html"
+      },
+      {
+        "nome": "TEMPLATE_PRODUCT_SCHEMA.json",
+        "caminho": "TEMPLATE_PRODUCT_SCHEMA.json",
+        "tamanho": 2853,
+        "extensao": ".json"
+      },
+      {
+        "nome": "termos-de-uso.html",
+        "caminho": "termos-de-uso.html",
+        "tamanho": 9963,
+        "extensao": ".html"
+      },
+      {
+        "nome": "test_models.ps1",
+        "caminho": "test_models.ps1",
+        "tamanho": 1440,
+        "extensao": ".ps1"
+      },
+      {
+        "nome": "update-all-html.js",
+        "caminho": "update-all-html.js",
+        "tamanho": 4992,
+        "extensao": ".js"
+      },
+      {
+        "nome": "update-images-lazy.js",
+        "caminho": "update-images-lazy.js",
+        "tamanho": 3883,
+        "extensao": ".js"
+      }
+    ],
+    "pastas": {
+      "11": {
+        "caminho": ".git\\objects\\11",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "3481cc46dda84e1525061b024efcc7909e0ff6",
+            "caminho": ".git\\objects\\11\\3481cc46dda84e1525061b024efcc7909e0ff6",
+            "tamanho": 4454,
+            "extensao": ""
+          },
+          {
+            "nome": "a09653483de9f485718fc4ed177da17778f992",
+            "caminho": ".git\\objects\\11\\a09653483de9f485718fc4ed177da17778f992",
+            "tamanho": 3728,
+            "extensao": ""
+          }
+        ]
+      },
+      "12": {
+        "caminho": ".git\\objects\\12",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "2f66f7840674bf0bac571f15c746b4af8774b3",
+            "caminho": ".git\\objects\\12\\2f66f7840674bf0bac571f15c746b4af8774b3",
+            "tamanho": 3635,
+            "extensao": ""
+          }
+        ]
+      },
+      "13": {
+        "caminho": ".git\\objects\\13",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "3010fd1b4638c113e291ea4a6e2f3bfa337436",
+            "caminho": ".git\\objects\\13\\3010fd1b4638c113e291ea4a6e2f3bfa337436",
+            "tamanho": 5826,
+            "extensao": ""
+          }
+        ]
+      },
+      "15": {
+        "caminho": ".git\\objects\\15",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "c9cbbfe3da4503f332a5252a192750ebcfd3c1",
+            "caminho": ".git\\objects\\15\\c9cbbfe3da4503f332a5252a192750ebcfd3c1",
+            "tamanho": 12187,
+            "extensao": ""
+          }
+        ]
+      },
+      "16": {
+        "caminho": ".git\\objects\\16",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "48dd41624b1aec0f26ab892f6b5e62c8c23066",
+            "caminho": ".git\\objects\\16\\48dd41624b1aec0f26ab892f6b5e62c8c23066",
+            "tamanho": 4091,
+            "extensao": ""
+          },
+          {
+            "nome": "b5b15005ca9d7988ec7cc741fe2844d3c1d803",
+            "caminho": ".git\\objects\\16\\b5b15005ca9d7988ec7cc741fe2844d3c1d803",
+            "tamanho": 117,
+            "extensao": ""
+          }
+        ]
+      },
+      "17": {
+        "caminho": ".git\\objects\\17",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "31240e597c970ca3a5dc75e964904f71ee0789",
+            "caminho": ".git\\objects\\17\\31240e597c970ca3a5dc75e964904f71ee0789",
+            "tamanho": 495,
+            "extensao": ""
+          }
+        ]
+      },
+      "18": {
+        "caminho": ".git\\objects\\18",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "170e962380e0f624c17ca0ad51ef0ede6b4569",
+            "caminho": ".git\\objects\\18\\170e962380e0f624c17ca0ad51ef0ede6b4569",
+            "tamanho": 360693,
+            "extensao": ""
+          },
+          {
+            "nome": "d6446e0c1a8acaea6cc813c55178c2fbf039e0",
+            "caminho": ".git\\objects\\18\\d6446e0c1a8acaea6cc813c55178c2fbf039e0",
+            "tamanho": 11105,
+            "extensao": ""
+          },
+          {
+            "nome": "f732cb2495dce4e4d7d43c2f5ee5ec7943a2cf",
+            "caminho": ".git\\objects\\18\\f732cb2495dce4e4d7d43c2f5ee5ec7943a2cf",
+            "tamanho": 6273,
+            "extensao": ""
+          }
+        ]
+      },
+      "19": {
+        "caminho": ".git\\objects\\19",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "555cb0279b0e225f4ed0ce4cbbb130c435746d",
+            "caminho": ".git\\objects\\19\\555cb0279b0e225f4ed0ce4cbbb130c435746d",
+            "tamanho": 566,
+            "extensao": ""
+          }
+        ]
+      },
+      "20": {
+        "caminho": ".git\\objects\\20",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "8c251d67594ed79d0e585f153011d9b377fdf7",
+            "caminho": ".git\\objects\\20\\8c251d67594ed79d0e585f153011d9b377fdf7",
+            "tamanho": 932,
+            "extensao": ""
+          },
+          {
+            "nome": "bf6eaeea78790bcc1a1ff5676c710c36fb906f",
+            "caminho": ".git\\objects\\20\\bf6eaeea78790bcc1a1ff5676c710c36fb906f",
+            "tamanho": 4554,
+            "extensao": ""
+          }
+        ]
+      },
+      "22": {
+        "caminho": ".git\\objects\\22",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "114f624a645e3ab8ed87a54ad13042ed935b30",
+            "caminho": ".git\\objects\\22\\114f624a645e3ab8ed87a54ad13042ed935b30",
+            "tamanho": 143,
+            "extensao": ""
+          }
+        ]
+      },
+      "24": {
+        "caminho": ".git\\objects\\24",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "b86ed17bcc053c8302f225d2d82d9471e5b60e",
+            "caminho": ".git\\objects\\24\\b86ed17bcc053c8302f225d2d82d9471e5b60e",
+            "tamanho": 6339,
+            "extensao": ""
+          }
+        ]
+      },
+      "25": {
+        "caminho": ".git\\objects\\25",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "540152460e6fc33b7b3f92c1eae54529f6c680",
+            "caminho": ".git\\objects\\25\\540152460e6fc33b7b3f92c1eae54529f6c680",
+            "tamanho": 4456,
+            "extensao": ""
+          }
+        ]
+      },
+      "27": {
+        "caminho": ".git\\objects\\27",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "70d7e54a5d1724090d96a1067e8c9b93e6bd27",
+            "caminho": ".git\\objects\\27\\70d7e54a5d1724090d96a1067e8c9b93e6bd27",
+            "tamanho": 3717,
+            "extensao": ""
+          }
+        ]
+      },
+      "28": {
+        "caminho": ".git\\objects\\28",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "c51a7ee2f128b3d70dc1fe41095b09dc9d06e7",
+            "caminho": ".git\\objects\\28\\c51a7ee2f128b3d70dc1fe41095b09dc9d06e7",
+            "tamanho": 3725,
+            "extensao": ""
+          }
+        ]
+      },
+      "30": {
+        "caminho": ".git\\objects\\30",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "391c42cdda1c30c6c33e8212bcf9ba89bba28b",
+            "caminho": ".git\\objects\\30\\391c42cdda1c30c6c33e8212bcf9ba89bba28b",
+            "tamanho": 1690,
+            "extensao": ""
+          },
+          {
+            "nome": "c73c777649f63916a5888ce49db4b8a1aacd24",
+            "caminho": ".git\\objects\\30\\c73c777649f63916a5888ce49db4b8a1aacd24",
+            "tamanho": 5718,
+            "extensao": ""
+          }
+        ]
+      },
+      "31": {
+        "caminho": ".git\\objects\\31",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "2de2d22ea80dc4aba98e76419b462a7ee7e9e9",
+            "caminho": ".git\\objects\\31\\2de2d22ea80dc4aba98e76419b462a7ee7e9e9",
+            "tamanho": 117,
+            "extensao": ""
+          },
+          {
+            "nome": "52bc95f37bc875f289b3b9a50ed0e7abfb0bb4",
+            "caminho": ".git\\objects\\31\\52bc95f37bc875f289b3b9a50ed0e7abfb0bb4",
+            "tamanho": 4818,
+            "extensao": ""
+          }
+        ]
+      },
+      "32": {
+        "caminho": ".git\\objects\\32",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "8e6292e16a8764e3d99eb89b77de1ec7f6d08a",
+            "caminho": ".git\\objects\\32\\8e6292e16a8764e3d99eb89b77de1ec7f6d08a",
+            "tamanho": 4639,
+            "extensao": ""
+          }
+        ]
+      },
+      "34": {
+        "caminho": ".git\\objects\\34",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "0f82b9e27ca000a42b31d0d17ffd8e637bf1ae",
+            "caminho": ".git\\objects\\34\\0f82b9e27ca000a42b31d0d17ffd8e637bf1ae",
+            "tamanho": 4596,
+            "extensao": ""
+          }
+        ]
+      },
+      "40": {
+        "caminho": ".git\\objects\\40",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "13c179e4703071a5ec041ce24894d9850a99b5",
+            "caminho": ".git\\objects\\40\\13c179e4703071a5ec041ce24894d9850a99b5",
+            "tamanho": 12446,
+            "extensao": ""
+          }
+        ]
+      },
+      "41": {
+        "caminho": ".git\\objects\\41",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "cdf8bf9356a4940e527cc2b64692ef0bef69c5",
+            "caminho": ".git\\objects\\41\\cdf8bf9356a4940e527cc2b64692ef0bef69c5",
+            "tamanho": 5790,
+            "extensao": ""
+          }
+        ]
+      },
+      "43": {
+        "caminho": ".git\\objects\\43",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "bff1ccb4aa3fb741404e1775281f9ea0ddd964",
+            "caminho": ".git\\objects\\43\\bff1ccb4aa3fb741404e1775281f9ea0ddd964",
+            "tamanho": 296,
+            "extensao": ""
+          }
+        ]
+      },
+      "45": {
+        "caminho": ".git\\objects\\45",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "0548492550467b246f444d1ef19620a93b0bd9",
+            "caminho": ".git\\objects\\45\\0548492550467b246f444d1ef19620a93b0bd9",
+            "tamanho": 6551,
+            "extensao": ""
+          },
+          {
+            "nome": "48964bde3d22af5a278c8aaf5d84fba2fb727a",
+            "caminho": ".git\\objects\\45\\48964bde3d22af5a278c8aaf5d84fba2fb727a",
+            "tamanho": 5759,
+            "extensao": ""
+          }
+        ]
+      },
+      "46": {
+        "caminho": ".git\\objects\\46",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "1c3b8305da7538e40726e49255e5dcfe2b39ba",
+            "caminho": ".git\\objects\\46\\1c3b8305da7538e40726e49255e5dcfe2b39ba",
+            "tamanho": 483,
+            "extensao": ""
+          },
+          {
+            "nome": "3d18a6e14f5e3c6cbff8bfe908f7f9ca7f4576",
+            "caminho": ".git\\objects\\46\\3d18a6e14f5e3c6cbff8bfe908f7f9ca7f4576",
+            "tamanho": 1661,
+            "extensao": ""
+          },
+          {
+            "nome": "bcd2071e803bad20210c7769d5d3a3148ab8a0",
+            "caminho": ".git\\objects\\46\\bcd2071e803bad20210c7769d5d3a3148ab8a0",
+            "tamanho": 4140,
+            "extensao": ""
+          }
+        ]
+      },
+      "47": {
+        "caminho": ".git\\objects\\47",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "3571e59d4db5138fbcbb10bb1728d5e5c31f58",
+            "caminho": ".git\\objects\\47\\3571e59d4db5138fbcbb10bb1728d5e5c31f58",
+            "tamanho": 12932,
+            "extensao": ""
+          }
+        ]
+      },
+      "48": {
+        "caminho": ".git\\objects\\48",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "46149b3a02512800d5b403c06f1f076b66ef09",
+            "caminho": ".git\\objects\\48\\46149b3a02512800d5b403c06f1f076b66ef09",
+            "tamanho": 475,
+            "extensao": ""
+          },
+          {
+            "nome": "a2c9117b5e7b24cfc552def3ff1afb219f90f3",
+            "caminho": ".git\\objects\\48\\a2c9117b5e7b24cfc552def3ff1afb219f90f3",
+            "tamanho": 4575,
+            "extensao": ""
+          }
+        ]
+      },
+      "49": {
+        "caminho": ".git\\objects\\49",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "4e398ec1bad129efe890a0506f41c56c0ed77e",
+            "caminho": ".git\\objects\\49\\4e398ec1bad129efe890a0506f41c56c0ed77e",
+            "tamanho": 4123,
+            "extensao": ""
+          }
+        ]
+      },
+      "50": {
+        "caminho": ".git\\objects\\50",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "07c620349e21fff295f4c854f6fcbe10170068",
+            "caminho": ".git\\objects\\50\\07c620349e21fff295f4c854f6fcbe10170068",
+            "tamanho": 767,
+            "extensao": ""
+          }
+        ]
+      },
+      "51": {
+        "caminho": ".git\\objects\\51",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "62a4828f46a09ed2cb97ca586ec35c8c7cd3d1",
+            "caminho": ".git\\objects\\51\\62a4828f46a09ed2cb97ca586ec35c8c7cd3d1",
+            "tamanho": 941,
+            "extensao": ""
+          },
+          {
+            "nome": "757d056d9d9e490fa2d5e91b3396d6f7da9735",
+            "caminho": ".git\\objects\\51\\757d056d9d9e490fa2d5e91b3396d6f7da9735",
+            "tamanho": 4597,
+            "extensao": ""
+          }
+        ]
+      },
+      "53": {
+        "caminho": ".git\\objects\\53",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "4ace239c163034fd4a743701c960a6a0e192da",
+            "caminho": ".git\\objects\\53\\4ace239c163034fd4a743701c960a6a0e192da",
+            "tamanho": 6360,
+            "extensao": ""
+          },
+          {
+            "nome": "644b949c8056eaf2eaa3bbb97550d4d81d76ad",
+            "caminho": ".git\\objects\\53\\644b949c8056eaf2eaa3bbb97550d4d81d76ad",
+            "tamanho": 5715,
+            "extensao": ""
+          }
+        ]
+      },
+      "54": {
+        "caminho": ".git\\objects\\54",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "8df8017982a1332a61a025d10e920462d5c005",
+            "caminho": ".git\\objects\\54\\8df8017982a1332a61a025d10e920462d5c005",
+            "tamanho": 4648,
+            "extensao": ""
+          }
+        ]
+      },
+      "57": {
+        "caminho": ".git\\objects\\57",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "c88fe46b78a4427fa13e95138ba73daec9d549",
+            "caminho": ".git\\objects\\57\\c88fe46b78a4427fa13e95138ba73daec9d549",
+            "tamanho": 3281,
+            "extensao": ""
+          }
+        ]
+      },
+      "58": {
+        "caminho": ".git\\objects\\58",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "b48fdc3d370f9f74f9c51867cba35ca8b04b7c",
+            "caminho": ".git\\objects\\58\\b48fdc3d370f9f74f9c51867cba35ca8b04b7c",
+            "tamanho": 494,
+            "extensao": ""
+          }
+        ]
+      },
+      "62": {
+        "caminho": ".git\\objects\\62",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "62b5f84444ceab3f356cb8eea09921cc94a87f",
+            "caminho": ".git\\objects\\62\\62b5f84444ceab3f356cb8eea09921cc94a87f",
+            "tamanho": 241,
+            "extensao": ""
+          }
+        ]
+      },
+      "63": {
+        "caminho": ".git\\objects\\63",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "31a0140d859d195e40ce1cd6fff52d3fe3ed5b",
+            "caminho": ".git\\objects\\63\\31a0140d859d195e40ce1cd6fff52d3fe3ed5b",
+            "tamanho": 3756,
+            "extensao": ""
+          }
+        ]
+      },
+      "64": {
+        "caminho": ".git\\objects\\64",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "209a4c4de850ff0415fb9240c24afbf10ffe96",
+            "caminho": ".git\\objects\\64\\209a4c4de850ff0415fb9240c24afbf10ffe96",
+            "tamanho": 12483,
+            "extensao": ""
+          },
+          {
+            "nome": "892d1e4ea49e9c0aacdfb9f8a93ba48caf1c6f",
+            "caminho": ".git\\objects\\64\\892d1e4ea49e9c0aacdfb9f8a93ba48caf1c6f",
+            "tamanho": 5668,
+            "extensao": ""
+          }
+        ]
+      },
+      "66": {
+        "caminho": ".git\\objects\\66",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "2ad1b9bdea2dacca44320cb5dde4879c6b31cf",
+            "caminho": ".git\\objects\\66\\2ad1b9bdea2dacca44320cb5dde4879c6b31cf",
+            "tamanho": 4125,
+            "extensao": ""
+          },
+          {
+            "nome": "3a3475e89218af9e920ef6bd00470d78f46d76",
+            "caminho": ".git\\objects\\66\\3a3475e89218af9e920ef6bd00470d78f46d76",
+            "tamanho": 144,
+            "extensao": ""
+          },
+          {
+            "nome": "4a1a0e10c8adacfb6acd56bb00b8aa3199b758",
+            "caminho": ".git\\objects\\66\\4a1a0e10c8adacfb6acd56bb00b8aa3199b758",
+            "tamanho": 4128,
+            "extensao": ""
+          }
+        ]
+      },
+      "67": {
+        "caminho": ".git\\objects\\67",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "87effa83dd76e171fdd8e49dd7d48393403798",
+            "caminho": ".git\\objects\\67\\87effa83dd76e171fdd8e49dd7d48393403798",
+            "tamanho": 523,
+            "extensao": ""
+          }
+        ]
+      },
+      "68": {
+        "caminho": ".git\\objects\\68",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "84cb4d92be6f8839e8efa2bc307a5a509b410a",
+            "caminho": ".git\\objects\\68\\84cb4d92be6f8839e8efa2bc307a5a509b410a",
+            "tamanho": 2868,
+            "extensao": ""
+          }
+        ]
+      },
+      "69": {
+        "caminho": ".git\\objects\\69",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "01c2930d5fe018d741a6f0b90823bf5b79d28a",
+            "caminho": ".git\\objects\\69\\01c2930d5fe018d741a6f0b90823bf5b79d28a",
+            "tamanho": 4536,
+            "extensao": ""
+          },
+          {
+            "nome": "0b897caff85d2160d8c29f40ef761e93e73168",
+            "caminho": ".git\\objects\\69\\0b897caff85d2160d8c29f40ef761e93e73168",
+            "tamanho": 4457,
+            "extensao": ""
+          },
+          {
+            "nome": "8dbe249be6a2849ae3470acb424791dd059409",
+            "caminho": ".git\\objects\\69\\8dbe249be6a2849ae3470acb424791dd059409",
+            "tamanho": 117,
+            "extensao": ""
+          },
+          {
+            "nome": "a7b8581c80959ed63cdf7a89d48e7c9fa9ca6d",
+            "caminho": ".git\\objects\\69\\a7b8581c80959ed63cdf7a89d48e7c9fa9ca6d",
+            "tamanho": 558,
+            "extensao": ""
+          }
+        ]
+      },
+      "74": {
+        "caminho": ".git\\objects\\74",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "1075d826de588c696035dcc1e65edcd9df2dd0",
+            "caminho": ".git\\objects\\74\\1075d826de588c696035dcc1e65edcd9df2dd0",
+            "tamanho": 6344,
+            "extensao": ""
+          },
+          {
+            "nome": "798204365d7373be537900805d2786a44d4447",
+            "caminho": ".git\\objects\\74\\798204365d7373be537900805d2786a44d4447",
+            "tamanho": 3727,
+            "extensao": ""
+          }
+        ]
+      },
+      "77": {
+        "caminho": ".git\\objects\\77",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "3c558096636cb33e5e937f90a045715d1d9b91",
+            "caminho": ".git\\objects\\77\\3c558096636cb33e5e937f90a045715d1d9b91",
+            "tamanho": 4118,
+            "extensao": ""
+          },
+          {
+            "nome": "484ab543fe9460be761d2f9005678eaf9118ae",
+            "caminho": ".git\\objects\\77\\484ab543fe9460be761d2f9005678eaf9118ae",
+            "tamanho": 4444,
+            "extensao": ""
+          }
+        ]
+      },
+      "79": {
+        "caminho": ".git\\objects\\79",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "471f8ff57c8596095c8e68f1aa4dcd1f97a1b1",
+            "caminho": ".git\\objects\\79\\471f8ff57c8596095c8e68f1aa4dcd1f97a1b1",
+            "tamanho": 4566,
+            "extensao": ""
+          }
+        ]
+      },
+      "80": {
+        "caminho": ".git\\objects\\80",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "6154265c1f48c4ab078b407160650f3da186b2",
+            "caminho": ".git\\objects\\80\\6154265c1f48c4ab078b407160650f3da186b2",
+            "tamanho": 4464,
+            "extensao": ""
+          }
+        ]
+      },
+      "81": {
+        "caminho": ".git\\objects\\81",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "ae308b3acaf62145eaf5ad1e65331c3b44a27e",
+            "caminho": ".git\\objects\\81\\ae308b3acaf62145eaf5ad1e65331c3b44a27e",
+            "tamanho": 58,
+            "extensao": ""
+          },
+          {
+            "nome": "c09bd89a5fee2ef4ac197d82fed57bd1bf81d9",
+            "caminho": ".git\\objects\\81\\c09bd89a5fee2ef4ac197d82fed57bd1bf81d9",
+            "tamanho": 800,
+            "extensao": ""
+          }
+        ]
+      },
+      "83": {
+        "caminho": ".git\\objects\\83",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "1da1ef58efe7313fcbb246608f4bb03dbd4e43",
+            "caminho": ".git\\objects\\83\\1da1ef58efe7313fcbb246608f4bb03dbd4e43",
+            "tamanho": 143,
+            "extensao": ""
+          },
+          {
+            "nome": "58c30972f27cd0ab9e685e737c11e0a2298dbc",
+            "caminho": ".git\\objects\\83\\58c30972f27cd0ab9e685e737c11e0a2298dbc",
+            "tamanho": 1693,
+            "extensao": ""
+          }
+        ]
+      },
+      "85": {
+        "caminho": ".git\\objects\\85",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "a89d176fa41f89ef24967ec690d8e25245e67d",
+            "caminho": ".git\\objects\\85\\a89d176fa41f89ef24967ec690d8e25245e67d",
+            "tamanho": 6020,
+            "extensao": ""
+          }
+        ]
+      },
+      "87": {
+        "caminho": ".git\\objects\\87",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "05078cdb34551eb470542471ff36cc1f2dff6e",
+            "caminho": ".git\\objects\\87\\05078cdb34551eb470542471ff36cc1f2dff6e",
+            "tamanho": 5031,
+            "extensao": ""
+          }
+        ]
+      },
+      "88": {
+        "caminho": ".git\\objects\\88",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "bab0a1d56db9b09d3b423fbbff5275ed81de23",
+            "caminho": ".git\\objects\\88\\bab0a1d56db9b09d3b423fbbff5275ed81de23",
+            "tamanho": 143,
+            "extensao": ""
+          },
+          {
+            "nome": "d15923b77e12f5129def4c8e8a021fe2c08a69",
+            "caminho": ".git\\objects\\88\\d15923b77e12f5129def4c8e8a021fe2c08a69",
+            "tamanho": 4537,
+            "extensao": ""
+          }
+        ]
+      },
+      "89": {
+        "caminho": ".git\\objects\\89",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "0f1ae04f1156deba6905bbe8069419d2efafb0",
+            "caminho": ".git\\objects\\89\\0f1ae04f1156deba6905bbe8069419d2efafb0",
+            "tamanho": 4130,
+            "extensao": ""
+          }
+        ]
+      },
+      "94": {
+        "caminho": ".git\\objects\\94",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "65731dc3443e8c4b83c4d818df9882cf0b01e7",
+            "caminho": ".git\\objects\\94\\65731dc3443e8c4b83c4d818df9882cf0b01e7",
+            "tamanho": 4816,
+            "extensao": ""
+          }
+        ]
+      },
+      "95": {
+        "caminho": ".git\\objects\\95",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "0131c9adc19f3a0368dec39b8cc86f0d019151",
+            "caminho": ".git\\objects\\95\\0131c9adc19f3a0368dec39b8cc86f0d019151",
+            "tamanho": 276,
+            "extensao": ""
+          }
+        ]
+      },
+      "99": {
+        "caminho": ".git\\objects\\99",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "8d94b11c16036d9600df1c2712f1d05e248e44",
+            "caminho": ".git\\objects\\99\\8d94b11c16036d9600df1c2712f1d05e248e44",
+            "tamanho": 41117,
+            "extensao": ""
+          },
+          {
+            "nome": "ae3f76fee3389011cf55951eac2590356dba55",
+            "caminho": ".git\\objects\\99\\ae3f76fee3389011cf55951eac2590356dba55",
+            "tamanho": 241,
+            "extensao": ""
+          }
+        ]
+      },
+      ".git": {
+        "caminho": ".git",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": "COMMIT_EDITMSG",
+            "caminho": ".git\\COMMIT_EDITMSG",
+            "tamanho": 531,
+            "extensao": ""
+          },
+          {
+            "nome": "config",
+            "caminho": ".git\\config",
+            "tamanho": 311,
+            "extensao": ""
+          },
+          {
+            "nome": "description",
+            "caminho": ".git\\description",
+            "tamanho": 73,
+            "extensao": ""
+          },
+          {
+            "nome": "FETCH_HEAD",
+            "caminho": ".git\\FETCH_HEAD",
+            "tamanho": 108,
+            "extensao": ""
+          },
+          {
+            "nome": "HEAD",
+            "caminho": ".git\\HEAD",
+            "tamanho": 21,
+            "extensao": ""
+          },
+          {
+            "nome": "index",
+            "caminho": ".git\\index",
+            "tamanho": 15299,
+            "extensao": ""
+          },
+          {
+            "nome": "ORIG_HEAD",
+            "caminho": ".git\\ORIG_HEAD",
+            "tamanho": 41,
+            "extensao": ""
+          },
+          {
+            "nome": "packed-refs",
+            "caminho": ".git\\packed-refs",
+            "tamanho": 580,
+            "extensao": ""
+          }
+        ]
+      },
+      "hooks": {
+        "caminho": ".git\\hooks",
+        "profundidade": 1,
+        "arquivos": [
+          {
+            "nome": "applypatch-msg.sample",
+            "caminho": ".git\\hooks\\applypatch-msg.sample",
+            "tamanho": 478,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "commit-msg.sample",
+            "caminho": ".git\\hooks\\commit-msg.sample",
+            "tamanho": 896,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "fsmonitor-watchman.sample",
+            "caminho": ".git\\hooks\\fsmonitor-watchman.sample",
+            "tamanho": 4726,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "post-update.sample",
+            "caminho": ".git\\hooks\\post-update.sample",
+            "tamanho": 189,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "pre-applypatch.sample",
+            "caminho": ".git\\hooks\\pre-applypatch.sample",
+            "tamanho": 424,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "pre-commit.sample",
+            "caminho": ".git\\hooks\\pre-commit.sample",
+            "tamanho": 1649,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "pre-merge-commit.sample",
+            "caminho": ".git\\hooks\\pre-merge-commit.sample",
+            "tamanho": 416,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "pre-push.sample",
+            "caminho": ".git\\hooks\\pre-push.sample",
+            "tamanho": 1374,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "pre-rebase.sample",
+            "caminho": ".git\\hooks\\pre-rebase.sample",
+            "tamanho": 4898,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "pre-receive.sample",
+            "caminho": ".git\\hooks\\pre-receive.sample",
+            "tamanho": 544,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "prepare-commit-msg.sample",
+            "caminho": ".git\\hooks\\prepare-commit-msg.sample",
+            "tamanho": 1492,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "push-to-checkout.sample",
+            "caminho": ".git\\hooks\\push-to-checkout.sample",
+            "tamanho": 2783,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "sendemail-validate.sample",
+            "caminho": ".git\\hooks\\sendemail-validate.sample",
+            "tamanho": 2308,
+            "extensao": ".sample"
+          },
+          {
+            "nome": "update.sample",
+            "caminho": ".git\\hooks\\update.sample",
+            "tamanho": 3650,
+            "extensao": ".sample"
+          }
+        ]
+      },
+      "info": {
+        "caminho": ".git\\objects\\info",
+        "profundidade": 2,
+        "arquivos": []
+      },
+      "logs": {
+        "caminho": ".git\\logs",
+        "profundidade": 1,
+        "arquivos": [
+          {
+            "nome": "HEAD",
+            "caminho": ".git\\logs\\HEAD",
+            "tamanho": 2599,
+            "extensao": ""
+          }
+        ]
+      },
+      "refs": {
+        "caminho": ".git\\refs",
+        "profundidade": 1,
+        "arquivos": []
+      },
+      "heads": {
+        "caminho": ".git\\refs\\heads",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "main",
+            "caminho": ".git\\refs\\heads\\main",
+            "tamanho": 41,
+            "extensao": ""
+          }
+        ]
+      },
+      "remotes": {
+        "caminho": ".git\\refs\\remotes",
+        "profundidade": 2,
+        "arquivos": []
+      },
+      "origin": {
+        "caminho": ".git\\refs\\remotes\\origin",
+        "profundidade": 3,
+        "arquivos": [
+          {
+            "nome": "HEAD",
+            "caminho": ".git\\refs\\remotes\\origin\\HEAD",
+            "tamanho": 30,
+            "extensao": ""
+          },
+          {
+            "nome": "main",
+            "caminho": ".git\\refs\\remotes\\origin\\main",
+            "tamanho": 41,
+            "extensao": ""
+          }
+        ]
+      },
+      "objects": {
+        "caminho": ".git\\objects",
+        "profundidade": 1,
+        "arquivos": []
+      },
+      "03": {
+        "caminho": ".git\\objects\\03",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "0afc9f70810c2e1ad865700b45bcdb523d8a8b",
+            "caminho": ".git\\objects\\03\\0afc9f70810c2e1ad865700b45bcdb523d8a8b",
+            "tamanho": 2957,
+            "extensao": ""
+          },
+          {
+            "nome": "9fded728f4fdd5d0ee1554918f0c4ba138d8d0",
+            "caminho": ".git\\objects\\03\\9fded728f4fdd5d0ee1554918f0c4ba138d8d0",
+            "tamanho": 3752,
+            "extensao": ""
+          }
+        ]
+      },
+      "05": {
+        "caminho": ".git\\objects\\05",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "5dfdeaf5b00e084d78ccbe49e02a1e9f3506f7",
+            "caminho": ".git\\objects\\05\\5dfdeaf5b00e084d78ccbe49e02a1e9f3506f7",
+            "tamanho": 1056,
+            "extensao": ""
+          }
+        ]
+      },
+      "06": {
+        "caminho": ".git\\objects\\06",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "23efa3c1a405ced57d2d64baf500d68df5bb15",
+            "caminho": ".git\\objects\\06\\23efa3c1a405ced57d2d64baf500d68df5bb15",
+            "tamanho": 41116,
+            "extensao": ""
+          },
+          {
+            "nome": "b436a9af8624b07730f5dece2faecbb3319e37",
+            "caminho": ".git\\objects\\06\\b436a9af8624b07730f5dece2faecbb3319e37",
+            "tamanho": 4641,
+            "extensao": ""
+          }
+        ]
+      },
+      "07": {
+        "caminho": ".git\\objects\\07",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "285db77b1899c25a8fb1cbe6cffc9b9fd62661",
+            "caminho": ".git\\objects\\07\\285db77b1899c25a8fb1cbe6cffc9b9fd62661",
+            "tamanho": 2867,
+            "extensao": ""
+          }
+        ]
+      },
+      "0a": {
+        "caminho": ".git\\objects\\0a",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "0a53bdb46ec2908dc707c60d38cce4ddc15e1d",
+            "caminho": ".git\\objects\\0a\\0a53bdb46ec2908dc707c60d38cce4ddc15e1d",
+            "tamanho": 3638,
+            "extensao": ""
+          },
+          {
+            "nome": "8aa7192eb309f376fbe80c0c0164914bcec459",
+            "caminho": ".git\\objects\\0a\\8aa7192eb309f376fbe80c0c0164914bcec459",
+            "tamanho": 5605,
+            "extensao": ""
+          },
+          {
+            "nome": "d47e9d9c989e653e6d60f69fbace9f2f2cb581",
+            "caminho": ".git\\objects\\0a\\d47e9d9c989e653e6d60f69fbace9f2f2cb581",
+            "tamanho": 10275,
+            "extensao": ""
+          }
+        ]
+      },
+      "0c": {
+        "caminho": ".git\\objects\\0c",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "212aeadf420a23e7e342f4e735adc1b22c1610",
+            "caminho": ".git\\objects\\0c\\212aeadf420a23e7e342f4e735adc1b22c1610",
+            "tamanho": 4133,
+            "extensao": ""
+          }
+        ]
+      },
+      "0d": {
+        "caminho": ".git\\objects\\0d",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "81b6efdb0e6019521014ccbf5c573222aeb431",
+            "caminho": ".git\\objects\\0d\\81b6efdb0e6019521014ccbf5c573222aeb431",
+            "tamanho": 144,
+            "extensao": ""
+          }
+        ]
+      },
+      "0e": {
+        "caminho": ".git\\objects\\0e",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "5f9d562e4d6acd2b3946af13747af41831dd55",
+            "caminho": ".git\\objects\\0e\\5f9d562e4d6acd2b3946af13747af41831dd55",
+            "tamanho": 4445,
+            "extensao": ""
+          }
+        ]
+      },
+      "0f": {
+        "caminho": ".git\\objects\\0f",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "2bb4d21ac53f6388e23499c5ce22dd0dd92342",
+            "caminho": ".git\\objects\\0f\\2bb4d21ac53f6388e23499c5ce22dd0dd92342",
+            "tamanho": 6364,
+            "extensao": ""
+          }
+        ]
+      },
+      "1a": {
+        "caminho": ".git\\objects\\1a",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "3cfd242f73b264f8f28b33bf2010187011a949",
+            "caminho": ".git\\objects\\1a\\3cfd242f73b264f8f28b33bf2010187011a949",
+            "tamanho": 4604,
+            "extensao": ""
+          },
+          {
+            "nome": "d0533c5c92171dd6b4b98c3ef4305a0a00c7da",
+            "caminho": ".git\\objects\\1a\\d0533c5c92171dd6b4b98c3ef4305a0a00c7da",
+            "tamanho": 4114,
+            "extensao": ""
+          },
+          {
+            "nome": "d592a23208b62a97919a3471d19afa2c05ba1c",
+            "caminho": ".git\\objects\\1a\\d592a23208b62a97919a3471d19afa2c05ba1c",
+            "tamanho": 611,
+            "extensao": ""
+          }
+        ]
+      },
+      "1b": {
+        "caminho": ".git\\objects\\1b",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "0544b2557c4103f5845fa3c5cf69eb4b4b739d",
+            "caminho": ".git\\objects\\1b\\0544b2557c4103f5845fa3c5cf69eb4b4b739d",
+            "tamanho": 895,
+            "extensao": ""
+          },
+          {
+            "nome": "2dfd0a144a434cf28ac6fda378b00a0118c763",
+            "caminho": ".git\\objects\\1b\\2dfd0a144a434cf28ac6fda378b00a0118c763",
+            "tamanho": 397,
+            "extensao": ""
+          },
+          {
+            "nome": "8f91d34765df2a0516ef4dad4d8edac70a613a",
+            "caminho": ".git\\objects\\1b\\8f91d34765df2a0516ef4dad4d8edac70a613a",
+            "tamanho": 3719,
+            "extensao": ""
+          },
+          {
+            "nome": "da6ead58ac7c7261c4b03900627f245eb40483",
+            "caminho": ".git\\objects\\1b\\da6ead58ac7c7261c4b03900627f245eb40483",
+            "tamanho": 3742,
+            "extensao": ""
+          }
+        ]
+      },
+      "1c": {
+        "caminho": ".git\\objects\\1c",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "0dd85b182388b377745ab52c064fbd3b9145db",
+            "caminho": ".git\\objects\\1c\\0dd85b182388b377745ab52c064fbd3b9145db",
+            "tamanho": 4126,
+            "extensao": ""
+          }
+        ]
+      },
+      "1d": {
+        "caminho": ".git\\objects\\1d",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "0d9da3d66bfc436bb8da4f9c4e130d9f1a7987",
+            "caminho": ".git\\objects\\1d\\0d9da3d66bfc436bb8da4f9c4e130d9f1a7987",
+            "tamanho": 3756,
+            "extensao": ""
+          },
+          {
+            "nome": "4e17789c1b8a9b956c6d750de351a2271ce77c",
+            "caminho": ".git\\objects\\1d\\4e17789c1b8a9b956c6d750de351a2271ce77c",
+            "tamanho": 1139,
+            "extensao": ""
+          }
+        ]
+      },
+      "1f": {
+        "caminho": ".git\\objects\\1f",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "27034f2a2e1eba1167d6fbcf3f0fbe5d898796",
+            "caminho": ".git\\objects\\1f\\27034f2a2e1eba1167d6fbcf3f0fbe5d898796",
+            "tamanho": 4569,
+            "extensao": ""
+          }
+        ]
+      },
+      "2b": {
+        "caminho": ".git\\objects\\2b",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "9280edb9203ed80abc63ec8782d21548ee90b3",
+            "caminho": ".git\\objects\\2b\\9280edb9203ed80abc63ec8782d21548ee90b3",
+            "tamanho": 4598,
+            "extensao": ""
+          }
+        ]
+      },
+      "2d": {
+        "caminho": ".git\\objects\\2d",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "e46c1dd83316beac3c57c8b6ab0d0670f2b9e5",
+            "caminho": ".git\\objects\\2d\\e46c1dd83316beac3c57c8b6ab0d0670f2b9e5",
+            "tamanho": 6059,
+            "extensao": ""
+          }
+        ]
+      },
+      "2e": {
+        "caminho": ".git\\objects\\2e",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "2f8c50a3552a807a6aac1e1533ddc585009006",
+            "caminho": ".git\\objects\\2e\\2f8c50a3552a807a6aac1e1533ddc585009006",
+            "tamanho": 192,
+            "extensao": ""
+          },
+          {
+            "nome": "4919909509a3dae45dc50b6a71f56755655f42",
+            "caminho": ".git\\objects\\2e\\4919909509a3dae45dc50b6a71f56755655f42",
+            "tamanho": 4595,
+            "extensao": ""
+          },
+          {
+            "nome": "6452ad04740b727ec3d4a70b19a4b9914f381f",
+            "caminho": ".git\\objects\\2e\\6452ad04740b727ec3d4a70b19a4b9914f381f",
+            "tamanho": 1651,
+            "extensao": ""
+          }
+        ]
+      },
+      "3c": {
+        "caminho": ".git\\objects\\3c",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "5ea9cc5c74b30760d6225fc7123b2512852344",
+            "caminho": ".git\\objects\\3c\\5ea9cc5c74b30760d6225fc7123b2512852344",
+            "tamanho": 551,
+            "extensao": ""
+          },
+          {
+            "nome": "fe489e013f29c5e5075b019f1bca7f479b5c97",
+            "caminho": ".git\\objects\\3c\\fe489e013f29c5e5075b019f1bca7f479b5c97",
+            "tamanho": 58,
+            "extensao": ""
+          }
+        ]
+      },
+      "3d": {
+        "caminho": ".git\\objects\\3d",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "6f94d1ad7fd5d9047c185673d2efbef1e1f199",
+            "caminho": ".git\\objects\\3d\\6f94d1ad7fd5d9047c185673d2efbef1e1f199",
+            "tamanho": 4086,
+            "extensao": ""
+          }
+        ]
+      },
+      "4b": {
+        "caminho": ".git\\objects\\4b",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "4b6de4d7ea9413a342964b905e0afdedf11902",
+            "caminho": ".git\\objects\\4b\\4b6de4d7ea9413a342964b905e0afdedf11902",
+            "tamanho": 10314,
+            "extensao": ""
+          }
+        ]
+      },
+      "4c": {
+        "caminho": ".git\\objects\\4c",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "60f23be42f82646b92277259116ff27a141c90",
+            "caminho": ".git\\objects\\4c\\60f23be42f82646b92277259116ff27a141c90",
+            "tamanho": 4823,
+            "extensao": ""
+          },
+          {
+            "nome": "74d0c8a760655abb2c655c58a67eb38120eb16",
+            "caminho": ".git\\objects\\4c\\74d0c8a760655abb2c655c58a67eb38120eb16",
+            "tamanho": 143,
+            "extensao": ""
+          }
+        ]
+      },
+      "4d": {
+        "caminho": ".git\\objects\\4d",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "df0557bbcad8582c9e6c56f6fecd5734b84222",
+            "caminho": ".git\\objects\\4d\\df0557bbcad8582c9e6c56f6fecd5734b84222",
+            "tamanho": 3634,
+            "extensao": ""
+          }
+        ]
+      },
+      "4f": {
+        "caminho": ".git\\objects\\4f",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "88c146f90cf159f847f79b6c6c72ea854740ac",
+            "caminho": ".git\\objects\\4f\\88c146f90cf159f847f79b6c6c72ea854740ac",
+            "tamanho": 12255,
+            "extensao": ""
+          },
+          {
+            "nome": "f367dc043eb6c19100dbf4be9d8b5944ff8d24",
+            "caminho": ".git\\objects\\4f\\f367dc043eb6c19100dbf4be9d8b5944ff8d24",
+            "tamanho": 12483,
+            "extensao": ""
+          }
+        ]
+      },
+      "5b": {
+        "caminho": ".git\\objects\\5b",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "4ee85f3180a0af312c618823eba8d80eecdcca",
+            "caminho": ".git\\objects\\5b\\4ee85f3180a0af312c618823eba8d80eecdcca",
+            "tamanho": 3279,
+            "extensao": ""
+          }
+        ]
+      },
+      "5c": {
+        "caminho": ".git\\objects\\5c",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "4deba53b1c2ca8782b67735c0d3acb166f1f12",
+            "caminho": ".git\\objects\\5c\\4deba53b1c2ca8782b67735c0d3acb166f1f12",
+            "tamanho": 5716,
+            "extensao": ""
+          }
+        ]
+      },
+      "5d": {
+        "caminho": ".git\\objects\\5d",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "4ecc3eb3f6b3e2c2ca1d4d0e21fc7fdbf94aec",
+            "caminho": ".git\\objects\\5d\\4ecc3eb3f6b3e2c2ca1d4d0e21fc7fdbf94aec",
+            "tamanho": 4457,
+            "extensao": ""
+          }
+        ]
+      },
+      "6a": {
+        "caminho": ".git\\objects\\6a",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "1ff50c90a02b5b018c6690c8dfa02865cf3d31",
+            "caminho": ".git\\objects\\6a\\1ff50c90a02b5b018c6690c8dfa02865cf3d31",
+            "tamanho": 5606,
+            "extensao": ""
+          }
+        ]
+      },
+      "6b": {
+        "caminho": ".git\\objects\\6b",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "f8aed4337cdcedde5a30fa771364d4b88ae2f1",
+            "caminho": ".git\\objects\\6b\\f8aed4337cdcedde5a30fa771364d4b88ae2f1",
+            "tamanho": 4120,
+            "extensao": ""
+          }
+        ]
+      },
+      "6c": {
+        "caminho": ".git\\objects\\6c",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "1ef2b13876067c6cb2306778b33f02b1e226ea",
+            "caminho": ".git\\objects\\6c\\1ef2b13876067c6cb2306778b33f02b1e226ea",
+            "tamanho": 525,
+            "extensao": ""
+          }
+        ]
+      },
+      "6d": {
+        "caminho": ".git\\objects\\6d",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "1c00bce3d60ba2bd33779fba96eee7550d7a7d",
+            "caminho": ".git\\objects\\6d\\1c00bce3d60ba2bd33779fba96eee7550d7a7d",
+            "tamanho": 1020,
+            "extensao": ""
+          }
+        ]
+      },
+      "6f": {
+        "caminho": ".git\\objects\\6f",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "1a256d2eb4f37af766f62e0d78e7f0891572b0",
+            "caminho": ".git\\objects\\6f\\1a256d2eb4f37af766f62e0d78e7f0891572b0",
+            "tamanho": 4139,
+            "extensao": ""
+          }
+        ]
+      },
+      "7b": {
+        "caminho": ".git\\objects\\7b",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "1321b4f6f8bc98874d95d3b31999a046bd3f50",
+            "caminho": ".git\\objects\\7b\\1321b4f6f8bc98874d95d3b31999a046bd3f50",
+            "tamanho": 4128,
+            "extensao": ""
+          }
+        ]
+      },
+      "7c": {
+        "caminho": ".git\\objects\\7c",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "c22ffaef6513621ed3f0c3d029275d376c5593",
+            "caminho": ".git\\objects\\7c\\c22ffaef6513621ed3f0c3d029275d376c5593",
+            "tamanho": 1260,
+            "extensao": ""
+          }
+        ]
+      },
+      "7d": {
+        "caminho": ".git\\objects\\7d",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "0be82d3cb21d74abaa8a2014d4a531f06e314a",
+            "caminho": ".git\\objects\\7d\\0be82d3cb21d74abaa8a2014d4a531f06e314a",
+            "tamanho": 552,
+            "extensao": ""
+          },
+          {
+            "nome": "584a3924624bb057cdcc0f4cdeb533d7a6cafd",
+            "caminho": ".git\\objects\\7d\\584a3924624bb057cdcc0f4cdeb533d7a6cafd",
+            "tamanho": 3754,
+            "extensao": ""
+          }
+        ]
+      },
+      "7e": {
+        "caminho": ".git\\objects\\7e",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "23a3b7fd5ee8a5ddf7246f8d76e661a076078f",
+            "caminho": ".git\\objects\\7e\\23a3b7fd5ee8a5ddf7246f8d76e661a076078f",
+            "tamanho": 4555,
+            "extensao": ""
+          }
+        ]
+      },
+      "8a": {
+        "caminho": ".git\\objects\\8a",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "548b15160a5909d6b0513f8552c6971367f280",
+            "caminho": ".git\\objects\\8a\\548b15160a5909d6b0513f8552c6971367f280",
+            "tamanho": 5788,
+            "extensao": ""
+          }
+        ]
+      },
+      "8b": {
+        "caminho": ".git\\objects\\8b",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "8fcaa26d2d8ec256f045a5aeebffd7fdab9a21",
+            "caminho": ".git\\objects\\8b\\8fcaa26d2d8ec256f045a5aeebffd7fdab9a21",
+            "tamanho": 4550,
+            "extensao": ""
+          },
+          {
+            "nome": "c6ac440824e56c9102aedf442dd65d56fe67f8",
+            "caminho": ".git\\objects\\8b\\c6ac440824e56c9102aedf442dd65d56fe67f8",
+            "tamanho": 1367,
+            "extensao": ""
+          }
+        ]
+      },
+      "8d": {
+        "caminho": ".git\\objects\\8d",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "756e6b7e7f4017c6eaaf95b149b2a4b2fc0e00",
+            "caminho": ".git\\objects\\8d\\756e6b7e7f4017c6eaaf95b149b2a4b2fc0e00",
+            "tamanho": 3740,
+            "extensao": ""
+          }
+        ]
+      },
+      "8e": {
+        "caminho": ".git\\objects\\8e",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "a54ad964156ca0963caf83dc52fcb2df6e41be",
+            "caminho": ".git\\objects\\8e\\a54ad964156ca0963caf83dc52fcb2df6e41be",
+            "tamanho": 5664,
+            "extensao": ""
+          }
+        ]
+      },
+      "9b": {
+        "caminho": ".git\\objects\\9b",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "a1bd825b430bbca92a0081417eb3762d081035",
+            "caminho": ".git\\objects\\9b\\a1bd825b430bbca92a0081417eb3762d081035",
+            "tamanho": 4991,
+            "extensao": ""
+          }
+        ]
+      },
+      "9c": {
+        "caminho": ".git\\objects\\9c",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "1355dfbf257262f38b2d47701ee49f2c7a5e89",
+            "caminho": ".git\\objects\\9c\\1355dfbf257262f38b2d47701ee49f2c7a5e89",
+            "tamanho": 5824,
+            "extensao": ""
+          }
+        ]
+      },
+      "9d": {
+        "caminho": ".git\\objects\\9d",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "54235241187aa8a461a51c666ac80127f54a72",
+            "caminho": ".git\\objects\\9d\\54235241187aa8a461a51c666ac80127f54a72",
+            "tamanho": 552,
+            "extensao": ""
+          },
+          {
+            "nome": "f6444a42ce3a16ddadae9dfc4d24c57e71e6a2",
+            "caminho": ".git\\objects\\9d\\f6444a42ce3a16ddadae9dfc4d24c57e71e6a2",
+            "tamanho": 740,
+            "extensao": ""
+          }
+        ]
+      },
+      "9e": {
+        "caminho": ".git\\objects\\9e",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "74e1b3172ba0290b86c68df296ad383654d326",
+            "caminho": ".git\\objects\\9e\\74e1b3172ba0290b86c68df296ad383654d326",
+            "tamanho": 10275,
+            "extensao": ""
+          }
+        ]
+      },
+      "a0": {
+        "caminho": ".git\\objects\\a0",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "6f99bcdee5e19558e85780173a768f05fa73c3",
+            "caminho": ".git\\objects\\a0\\6f99bcdee5e19558e85780173a768f05fa73c3",
+            "tamanho": 6058,
+            "extensao": ""
+          }
+        ]
+      },
+      "a4": {
+        "caminho": ".git\\objects\\a4",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "e934a171efc6241aaf37f4c98a68b9ac13a953",
+            "caminho": ".git\\objects\\a4\\e934a171efc6241aaf37f4c98a68b9ac13a953",
+            "tamanho": 3730,
+            "extensao": ""
+          }
+        ]
+      },
+      "a5": {
+        "caminho": ".git\\objects\\a5",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "282b888d222eee21220c5136ccf6525ee370ef",
+            "caminho": ".git\\objects\\a5\\282b888d222eee21220c5136ccf6525ee370ef",
+            "tamanho": 3739,
+            "extensao": ""
+          },
+          {
+            "nome": "6b379ec5a3e5936c61d5da0ab23be6346b801f",
+            "caminho": ".git\\objects\\a5\\6b379ec5a3e5936c61d5da0ab23be6346b801f",
+            "tamanho": 4598,
+            "extensao": ""
+          },
+          {
+            "nome": "86d50a015241cc7b1fce4bd9850a97c898a478",
+            "caminho": ".git\\objects\\a5\\86d50a015241cc7b1fce4bd9850a97c898a478",
+            "tamanho": 3747,
+            "extensao": ""
+          },
+          {
+            "nome": "fe8935148efad9c26347fcdce19c76e295e389",
+            "caminho": ".git\\objects\\a5\\fe8935148efad9c26347fcdce19c76e295e389",
+            "tamanho": 4460,
+            "extensao": ""
+          }
+        ]
+      },
+      "a6": {
+        "caminho": ".git\\objects\\a6",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "4f9bfcde85a7c91f88de31fa7aa4f12e19d06e",
+            "caminho": ".git\\objects\\a6\\4f9bfcde85a7c91f88de31fa7aa4f12e19d06e",
+            "tamanho": 1258,
+            "extensao": ""
+          },
+          {
+            "nome": "dbeecd7f0f2feb2081e6b386372d525453eb13",
+            "caminho": ".git\\objects\\a6\\dbeecd7f0f2feb2081e6b386372d525453eb13",
+            "tamanho": 10268,
+            "extensao": ""
+          }
+        ]
+      },
+      "a7": {
+        "caminho": ".git\\objects\\a7",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "c7c890ad4e03c466110e95c3fc093746e5b07b",
+            "caminho": ".git\\objects\\a7\\c7c890ad4e03c466110e95c3fc093746e5b07b",
+            "tamanho": 3726,
+            "extensao": ""
+          }
+        ]
+      },
+      "a9": {
+        "caminho": ".git\\objects\\a9",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "2da82133831517a6700d9b84f9acc2bb88ca04",
+            "caminho": ".git\\objects\\a9\\2da82133831517a6700d9b84f9acc2bb88ca04",
+            "tamanho": 5603,
+            "extensao": ""
+          },
+          {
+            "nome": "6498fc98738634116600ec55103c3ca276390a",
+            "caminho": ".git\\objects\\a9\\6498fc98738634116600ec55103c3ca276390a",
+            "tamanho": 1694,
+            "extensao": ""
+          }
+        ]
+      },
+      "aa": {
+        "caminho": ".git\\objects\\aa",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "8737c6a34e754fb6356ac4cea1678b6e9c1855",
+            "caminho": ".git\\objects\\aa\\8737c6a34e754fb6356ac4cea1678b6e9c1855",
+            "tamanho": 6061,
+            "extensao": ""
+          }
+        ]
+      },
+      "ab": {
+        "caminho": ".git\\objects\\ab",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "6cb032acd531add85504514e0b19dfc393691c",
+            "caminho": ".git\\objects\\ab\\6cb032acd531add85504514e0b19dfc393691c",
+            "tamanho": 10314,
+            "extensao": ""
+          }
+        ]
+      },
+      "ae": {
+        "caminho": ".git\\objects\\ae",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "8b01e17004425fcb283be990e25e6078d3e521",
+            "caminho": ".git\\objects\\ae\\8b01e17004425fcb283be990e25e6078d3e521",
+            "tamanho": 6343,
+            "extensao": ""
+          },
+          {
+            "nome": "b910e6028cc7c487da7c34b7434bdf3abcdc83",
+            "caminho": ".git\\objects\\ae\\b910e6028cc7c487da7c34b7434bdf3abcdc83",
+            "tamanho": 4820,
+            "extensao": ""
+          },
+          {
+            "nome": "cca910d15371f2c16e50efc6db5a87a262d78c",
+            "caminho": ".git\\objects\\ae\\cca910d15371f2c16e50efc6db5a87a262d78c",
+            "tamanho": 19041,
+            "extensao": ""
+          }
+        ]
+      },
+      "b0": {
+        "caminho": ".git\\objects\\b0",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "58e05fe6fc71842f94391fdb78c89805e7aff2",
+            "caminho": ".git\\objects\\b0\\58e05fe6fc71842f94391fdb78c89805e7aff2",
+            "tamanho": 3635,
+            "extensao": ""
+          }
+        ]
+      },
+      "b2": {
+        "caminho": ".git\\objects\\b2",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "239f14c5da964717c82a69e569a3f69c656c08",
+            "caminho": ".git\\objects\\b2\\239f14c5da964717c82a69e569a3f69c656c08",
+            "tamanho": 3744,
+            "extensao": ""
+          },
+          {
+            "nome": "7165a30cf13273b6f7e4a31935cb0f83001b8e",
+            "caminho": ".git\\objects\\b2\\7165a30cf13273b6f7e4a31935cb0f83001b8e",
+            "tamanho": 240,
+            "extensao": ""
+          }
+        ]
+      },
+      "b4": {
+        "caminho": ".git\\objects\\b4",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "3cb391714e370eb4ece2f6b1b20a64e1eea894",
+            "caminho": ".git\\objects\\b4\\3cb391714e370eb4ece2f6b1b20a64e1eea894",
+            "tamanho": 5763,
+            "extensao": ""
+          },
+          {
+            "nome": "b872e7725703fd52ed7e449f73fe3afec04035",
+            "caminho": ".git\\objects\\b4\\b872e7725703fd52ed7e449f73fe3afec04035",
+            "tamanho": 991,
+            "extensao": ""
+          },
+          {
+            "nome": "f8dce82b42774a60b4a5ebd18c93c8e81cba63",
+            "caminho": ".git\\objects\\b4\\f8dce82b42774a60b4a5ebd18c93c8e81cba63",
+            "tamanho": 9915,
+            "extensao": ""
+          }
+        ]
+      },
+      "b5": {
+        "caminho": ".git\\objects\\b5",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "98aed8665f04b9218599f9c47746a5a886d5ad",
+            "caminho": ".git\\objects\\b5\\98aed8665f04b9218599f9c47746a5a886d5ad",
+            "tamanho": 1278,
+            "extensao": ""
+          }
+        ]
+      },
+      "b6": {
+        "caminho": ".git\\objects\\b6",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "a9423587abfc4db7945edde2aabbe50d0ee0e5",
+            "caminho": ".git\\objects\\b6\\a9423587abfc4db7945edde2aabbe50d0ee0e5",
+            "tamanho": 570,
+            "extensao": ""
+          }
+        ]
+      },
+      "b7": {
+        "caminho": ".git\\objects\\b7",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "59eabcdc9b7d37d26206e9cdea36e1c293cae8",
+            "caminho": ".git\\objects\\b7\\59eabcdc9b7d37d26206e9cdea36e1c293cae8",
+            "tamanho": 1103,
+            "extensao": ""
+          },
+          {
+            "nome": "bf49deb6691fc8844f644ca644ddcf568d7574",
+            "caminho": ".git\\objects\\b7\\bf49deb6691fc8844f644ca644ddcf568d7574",
+            "tamanho": 143,
+            "extensao": ""
+          }
+        ]
+      },
+      "b8": {
+        "caminho": ".git\\objects\\b8",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "770b37587b646644168b0fa8656de630ced50e",
+            "caminho": ".git\\objects\\b8\\770b37587b646644168b0fa8656de630ced50e",
+            "tamanho": 604,
+            "extensao": ""
+          }
+        ]
+      },
+      "b9": {
+        "caminho": ".git\\objects\\b9",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "277b8f769609cd2bffcc1d59a40d4edc294213",
+            "caminho": ".git\\objects\\b9\\277b8f769609cd2bffcc1d59a40d4edc294213",
+            "tamanho": 4461,
+            "extensao": ""
+          }
+        ]
+      },
+      "bc": {
+        "caminho": ".git\\objects\\bc",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "d965914fb36f53d870a77bb2abcdd9152aaee6",
+            "caminho": ".git\\objects\\bc\\d965914fb36f53d870a77bb2abcdd9152aaee6",
+            "tamanho": 1376,
+            "extensao": ""
+          }
+        ]
+      },
+      "be": {
+        "caminho": ".git\\objects\\be",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "6be21330d7f29e797a3f489526dd04510ab3b2",
+            "caminho": ".git\\objects\\be\\6be21330d7f29e797a3f489526dd04510ab3b2",
+            "tamanho": 4993,
+            "extensao": ""
+          }
+        ]
+      },
+      "c1": {
+        "caminho": ".git\\objects\\c1",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "2733da694cfb645de9182e0f09ad0c3b78a34f",
+            "caminho": ".git\\objects\\c1\\2733da694cfb645de9182e0f09ad0c3b78a34f",
+            "tamanho": 19046,
+            "extensao": ""
+          }
+        ]
+      },
+      "c2": {
+        "caminho": ".git\\objects\\c2",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "019922f4c1c1c2cf125b7543bef4ef1f8dfce4",
+            "caminho": ".git\\objects\\c2\\019922f4c1c1c2cf125b7543bef4ef1f8dfce4",
+            "tamanho": 1293,
+            "extensao": ""
+          },
+          {
+            "nome": "4adbab8eeb6702a5f6d7178a5a76a779f92978",
+            "caminho": ".git\\objects\\c2\\4adbab8eeb6702a5f6d7178a5a76a779f92978",
+            "tamanho": 4992,
+            "extensao": ""
+          },
+          {
+            "nome": "9357cca765dd22e0713996c81e0840c39a0cd3",
+            "caminho": ".git\\objects\\c2\\9357cca765dd22e0713996c81e0840c39a0cd3",
+            "tamanho": 4455,
+            "extensao": ""
+          }
+        ]
+      },
+      "c3": {
+        "caminho": ".git\\objects\\c3",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "6282664ceb72b9d28e22ecda24dce0d003d23a",
+            "caminho": ".git\\objects\\c3\\6282664ceb72b9d28e22ecda24dce0d003d23a",
+            "tamanho": 242,
+            "extensao": ""
+          },
+          {
+            "nome": "b2bfeeddeea54bdb1d419dce83eb5552c5e3ce",
+            "caminho": ".git\\objects\\c3\\b2bfeeddeea54bdb1d419dce83eb5552c5e3ce",
+            "tamanho": 5822,
+            "extensao": ""
+          }
+        ]
+      },
+      "c6": {
+        "caminho": ".git\\objects\\c6",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "64441a807adf77baebd82d43755696eb76c094",
+            "caminho": ".git\\objects\\c6\\64441a807adf77baebd82d43755696eb76c094",
+            "tamanho": 3753,
+            "extensao": ""
+          },
+          {
+            "nome": "6bd388b59c4f596e5dced968a7cec4506591d1",
+            "caminho": ".git\\objects\\c6\\6bd388b59c4f596e5dced968a7cec4506591d1",
+            "tamanho": 117,
+            "extensao": ""
+          },
+          {
+            "nome": "92e8f498af23163598adfada88ac429120ccb3",
+            "caminho": ".git\\objects\\c6\\92e8f498af23163598adfada88ac429120ccb3",
+            "tamanho": 2866,
+            "extensao": ""
+          }
+        ]
+      },
+      "ca": {
+        "caminho": ".git\\objects\\ca",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "2aee19f9153af0d2771367af1f49544a9c8cd2",
+            "caminho": ".git\\objects\\ca\\2aee19f9153af0d2771367af1f49544a9c8cd2",
+            "tamanho": 12935,
+            "extensao": ""
+          }
+        ]
+      },
+      "cc": {
+        "caminho": ".git\\objects\\cc",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "b75dad8d2808fcfe9a98af7854b3e6a97731c4",
+            "caminho": ".git\\objects\\cc\\b75dad8d2808fcfe9a98af7854b3e6a97731c4",
+            "tamanho": 12935,
+            "extensao": ""
+          }
+        ]
+      },
+      "cd": {
+        "caminho": ".git\\objects\\cd",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "77d3b1b955aedd541058a03d0783c0739038ab",
+            "caminho": ".git\\objects\\cd\\77d3b1b955aedd541058a03d0783c0739038ab",
+            "tamanho": 727,
+            "extensao": ""
+          }
+        ]
+      },
+      "ce": {
+        "caminho": ".git\\objects\\ce",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "5bc355c6c33b7e03fcb5afdeaced69c1df0095",
+            "caminho": ".git\\objects\\ce\\5bc355c6c33b7e03fcb5afdeaced69c1df0095",
+            "tamanho": 3713,
+            "extensao": ""
+          }
+        ]
+      },
+      "d0": {
+        "caminho": ".git\\objects\\d0",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "5c2a2ac25183752a88434a6d5056301bffa83d",
+            "caminho": ".git\\objects\\d0\\5c2a2ac25183752a88434a6d5056301bffa83d",
+            "tamanho": 634,
+            "extensao": ""
+          }
+        ]
+      },
+      "d1": {
+        "caminho": ".git\\objects\\d1",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "12ebe7796ad76b4b32f817212e09902d17adf9",
+            "caminho": ".git\\objects\\d1\\12ebe7796ad76b4b32f817212e09902d17adf9",
+            "tamanho": 482,
+            "extensao": ""
+          }
+        ]
+      },
+      "d4": {
+        "caminho": ".git\\objects\\d4",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "ae090357f7bfbea251f786c3940d34a9d7d720",
+            "caminho": ".git\\objects\\d4\\ae090357f7bfbea251f786c3940d34a9d7d720",
+            "tamanho": 3283,
+            "extensao": ""
+          }
+        ]
+      },
+      "d5": {
+        "caminho": ".git\\objects\\d5",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "bdf1d4751f448c019ee4588b8747bce2ef2069",
+            "caminho": ".git\\objects\\d5\\bdf1d4751f448c019ee4588b8747bce2ef2069",
+            "tamanho": 831,
+            "extensao": ""
+          },
+          {
+            "nome": "ee768cfc6c6e385e1885f6a51a4616a4fc2838",
+            "caminho": ".git\\objects\\d5\\ee768cfc6c6e385e1885f6a51a4616a4fc2838",
+            "tamanho": 1374,
+            "extensao": ""
+          }
+        ]
+      },
+      "d7": {
+        "caminho": ".git\\objects\\d7",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "b20d07339c12db2cd761b173df7456cfdd2dfe",
+            "caminho": ".git\\objects\\d7\\b20d07339c12db2cd761b173df7456cfdd2dfe",
+            "tamanho": 482,
+            "extensao": ""
+          }
+        ]
+      },
+      "da": {
+        "caminho": ".git\\objects\\da",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "0cc8b116b1144ed958cfe3c63ea6ca93a4710b",
+            "caminho": ".git\\objects\\da\\0cc8b116b1144ed958cfe3c63ea6ca93a4710b",
+            "tamanho": 4133,
+            "extensao": ""
+          }
+        ]
+      },
+      "db": {
+        "caminho": ".git\\objects\\db",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "f8419b7d17b7836429d6e93929ef333f093f72",
+            "caminho": ".git\\objects\\db\\f8419b7d17b7836429d6e93929ef333f093f72",
+            "tamanho": 117,
+            "extensao": ""
+          }
+        ]
+      },
+      "dc": {
+        "caminho": ".git\\objects\\dc",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "5460837655aa3a413011776e6c8ade27f28a28",
+            "caminho": ".git\\objects\\dc\\5460837655aa3a413011776e6c8ade27f28a28",
+            "tamanho": 4137,
+            "extensao": ""
+          },
+          {
+            "nome": "b7d95983442b5935b236acce0bbaa776f45a55",
+            "caminho": ".git\\objects\\dc\\b7d95983442b5935b236acce0bbaa776f45a55",
+            "tamanho": 3640,
+            "extensao": ""
+          }
+        ]
+      },
+      "dd": {
+        "caminho": ".git\\objects\\dd",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "976abe7e49a2b6c66763aad374ff0bc43a7422",
+            "caminho": ".git\\objects\\dd\\976abe7e49a2b6c66763aad374ff0bc43a7422",
+            "tamanho": 473,
+            "extensao": ""
+          }
+        ]
+      },
+      "de": {
+        "caminho": ".git\\objects\\de",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "bc47816ad7f7f65d272a1c4e9a5282c6fe50cb",
+            "caminho": ".git\\objects\\de\\bc47816ad7f7f65d272a1c4e9a5282c6fe50cb",
+            "tamanho": 4552,
+            "extensao": ""
+          }
+        ]
+      },
+      "df": {
+        "caminho": ".git\\objects\\df",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "5c6683b16d9d8f1ad54d152790ef710ec5e277",
+            "caminho": ".git\\objects\\df\\5c6683b16d9d8f1ad54d152790ef710ec5e277",
+            "tamanho": 3724,
+            "extensao": ""
+          }
+        ]
+      },
+      "e0": {
+        "caminho": ".git\\objects\\e0",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "14d4b442d3e0658f90778ac49d459f9b3c6a4d",
+            "caminho": ".git\\objects\\e0\\14d4b442d3e0658f90778ac49d459f9b3c6a4d",
+            "tamanho": 5665,
+            "extensao": ""
+          },
+          {
+            "nome": "1d54bc8e993ee1bd96da6d1d1e8c1645bc11ec",
+            "caminho": ".git\\objects\\e0\\1d54bc8e993ee1bd96da6d1d1e8c1645bc11ec",
+            "tamanho": 5786,
+            "extensao": ""
+          },
+          {
+            "nome": "983e9b51b331f4e612ce24e78af9313356843a",
+            "caminho": ".git\\objects\\e0\\983e9b51b331f4e612ce24e78af9313356843a",
+            "tamanho": 3720,
+            "extensao": ""
+          }
+        ]
+      },
+      "e1": {
+        "caminho": ".git\\objects\\e1",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "aa7a003342031f7433c7d9269f9313896d2779",
+            "caminho": ".git\\objects\\e1\\aa7a003342031f7433c7d9269f9313896d2779",
+            "tamanho": 1599,
+            "extensao": ""
+          }
+        ]
+      },
+      "e3": {
+        "caminho": ".git\\objects\\e3",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "3e6b4b880a4bfb4315c6b64bc99c690a43dba4",
+            "caminho": ".git\\objects\\e3\\3e6b4b880a4bfb4315c6b64bc99c690a43dba4",
+            "tamanho": 4088,
+            "extensao": ""
+          },
+          {
+            "nome": "673594ebeda87d183585bd84c386656efa0695",
+            "caminho": ".git\\objects\\e3\\673594ebeda87d183585bd84c386656efa0695",
+            "tamanho": 241,
+            "extensao": ""
+          }
+        ]
+      },
+      "e6": {
+        "caminho": ".git\\objects\\e6",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "6113f0ed6414da29793c01955ac866b6eabcce",
+            "caminho": ".git\\objects\\e6\\6113f0ed6414da29793c01955ac866b6eabcce",
+            "tamanho": 506,
+            "extensao": ""
+          },
+          {
+            "nome": "7d679ea4e654419cd5b15fe5f40e1cadba6775",
+            "caminho": ".git\\objects\\e6\\7d679ea4e654419cd5b15fe5f40e1cadba6775",
+            "tamanho": 470,
+            "extensao": ""
+          }
+        ]
+      },
+      "e7": {
+        "caminho": ".git\\objects\\e7",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "4a5240aa93dba2a62cd6cdde1577a21a3ccdc7",
+            "caminho": ".git\\objects\\e7\\4a5240aa93dba2a62cd6cdde1577a21a3ccdc7",
+            "tamanho": 4570,
+            "extensao": ""
+          },
+          {
+            "nome": "5410e7dced8c8e65434ba2b4460d6fa4b319d1",
+            "caminho": ".git\\objects\\e7\\5410e7dced8c8e65434ba2b4460d6fa4b319d1",
+            "tamanho": 4124,
+            "extensao": ""
+          },
+          {
+            "nome": "5fff643dbeb41d03ee9386eba3740eb08e8cf1",
+            "caminho": ".git\\objects\\e7\\5fff643dbeb41d03ee9386eba3740eb08e8cf1",
+            "tamanho": 399,
+            "extensao": ""
+          }
+        ]
+      },
+      "e9": {
+        "caminho": ".git\\objects\\e9",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "90117338b7d50918d15a4323b91f16aa2fe658",
+            "caminho": ".git\\objects\\e9\\90117338b7d50918d15a4323b91f16aa2fe658",
+            "tamanho": 5761,
+            "extensao": ""
+          },
+          {
+            "nome": "96f50f9d1be725afc19e2112e44241347bc04f",
+            "caminho": ".git\\objects\\e9\\96f50f9d1be725afc19e2112e44241347bc04f",
+            "tamanho": 3745,
+            "extensao": ""
+          }
+        ]
+      },
+      "ec": {
+        "caminho": ".git\\objects\\ec",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "4147193a128489aab325ae997b3b084f9be643",
+            "caminho": ".git\\objects\\ec\\4147193a128489aab325ae997b3b084f9be643",
+            "tamanho": 4825,
+            "extensao": ""
+          },
+          {
+            "nome": "5ed9eb1aa59805595d23c265a1604c62103944",
+            "caminho": ".git\\objects\\ec\\5ed9eb1aa59805595d23c265a1604c62103944",
+            "tamanho": 6362,
+            "extensao": ""
+          }
+        ]
+      },
+      "ed": {
+        "caminho": ".git\\objects\\ed",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "add7c41db947329475fb52c19a42803193b45e",
+            "caminho": ".git\\objects\\ed\\add7c41db947329475fb52c19a42803193b45e",
+            "tamanho": 4565,
+            "extensao": ""
+          },
+          {
+            "nome": "d971c89e623d524bd6f2d760b346183b1aa88f",
+            "caminho": ".git\\objects\\ed\\d971c89e623d524bd6f2d760b346183b1aa88f",
+            "tamanho": 4124,
+            "extensao": ""
+          }
+        ]
+      },
+      "ef": {
+        "caminho": ".git\\objects\\ef",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "b220508c8d586a2710d706823added0eb2f89e",
+            "caminho": ".git\\objects\\ef\\b220508c8d586a2710d706823added0eb2f89e",
+            "tamanho": 483,
+            "extensao": ""
+          }
+        ]
+      },
+      "f0": {
+        "caminho": ".git\\objects\\f0",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "1e813e42a7b88eb6771c59fbdbedc1837999e1",
+            "caminho": ".git\\objects\\f0\\1e813e42a7b88eb6771c59fbdbedc1837999e1",
+            "tamanho": 880,
+            "extensao": ""
+          },
+          {
+            "nome": "58cda8dc52b54937c9c01d54514dcbff0bdd35",
+            "caminho": ".git\\objects\\f0\\58cda8dc52b54937c9c01d54514dcbff0bdd35",
+            "tamanho": 1452,
+            "extensao": ""
+          },
+          {
+            "nome": "e80a451db9edea26dbe5c205bdd8eeb93271e0",
+            "caminho": ".git\\objects\\f0\\e80a451db9edea26dbe5c205bdd8eeb93271e0",
+            "tamanho": 41117,
+            "extensao": ""
+          }
+        ]
+      },
+      "f1": {
+        "caminho": ".git\\objects\\f1",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "7bf3518ecb654ec79e75f583bfcb70b0e0dd2d",
+            "caminho": ".git\\objects\\f1\\7bf3518ecb654ec79e75f583bfcb70b0e0dd2d",
+            "tamanho": 4129,
+            "extensao": ""
+          }
+        ]
+      },
+      "f2": {
+        "caminho": ".git\\objects\\f2",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "95cdd6940ead22fcf5e3827b9ce6e486d262b0",
+            "caminho": ".git\\objects\\f2\\95cdd6940ead22fcf5e3827b9ce6e486d262b0",
+            "tamanho": 3714,
+            "extensao": ""
+          }
+        ]
+      },
+      "f3": {
+        "caminho": ".git\\objects\\f3",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "3f0e4ea85be3598c971e472a58ab7d2b98a8df",
+            "caminho": ".git\\objects\\f3\\3f0e4ea85be3598c971e472a58ab7d2b98a8df",
+            "tamanho": 3722,
+            "extensao": ""
+          },
+          {
+            "nome": "5ca6882aa4700a6d5eb56966e1c746ad7ec64c",
+            "caminho": ".git\\objects\\f3\\5ca6882aa4700a6d5eb56966e1c746ad7ec64c",
+            "tamanho": 3636,
+            "extensao": ""
+          }
+        ]
+      },
+      "f4": {
+        "caminho": ".git\\objects\\f4",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "bef33766bcb1840e0580a8ba52a27de88b60a7",
+            "caminho": ".git\\objects\\f4\\bef33766bcb1840e0580a8ba52a27de88b60a7",
+            "tamanho": 10323,
+            "extensao": ""
+          }
+        ]
+      },
+      "f5": {
+        "caminho": ".git\\objects\\f5",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "e6e8139a70b2ba483b942cc59fe224b326310c",
+            "caminho": ".git\\objects\\f5\\e6e8139a70b2ba483b942cc59fe224b326310c",
+            "tamanho": 352,
+            "extensao": ""
+          }
+        ]
+      },
+      "f6": {
+        "caminho": ".git\\objects\\f6",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "74f7d6e795bddece60646d014977deee920db5",
+            "caminho": ".git\\objects\\f6\\74f7d6e795bddece60646d014977deee920db5",
+            "tamanho": 4122,
+            "extensao": ""
+          },
+          {
+            "nome": "f68e97916b902ae261aaeaf462973fc68acaf6",
+            "caminho": ".git\\objects\\f6\\f68e97916b902ae261aaeaf462973fc68acaf6",
+            "tamanho": 4121,
+            "extensao": ""
+          }
+        ]
+      },
+      "f7": {
+        "caminho": ".git\\objects\\f7",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "2bc4e47f6f95f9ecf99c18df19a50790ea53e0",
+            "caminho": ".git\\objects\\f7\\2bc4e47f6f95f9ecf99c18df19a50790ea53e0",
+            "tamanho": 3753,
+            "extensao": ""
+          },
+          {
+            "nome": "9982a18378a594b9db80283107d2406147ff7e",
+            "caminho": ".git\\objects\\f7\\9982a18378a594b9db80283107d2406147ff7e",
+            "tamanho": 4463,
+            "extensao": ""
+          }
+        ]
+      },
+      "f9": {
+        "caminho": ".git\\objects\\f9",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "3e8c269fa231044e4e4ce7ee61cdd0d94e7214",
+            "caminho": ".git\\objects\\f9\\3e8c269fa231044e4e4ce7ee61cdd0d94e7214",
+            "tamanho": 698,
+            "extensao": ""
+          },
+          {
+            "nome": "c1fc6b34c43b96f9e08ea3a72d7ab1128e4520",
+            "caminho": ".git\\objects\\f9\\c1fc6b34c43b96f9e08ea3a72d7ab1128e4520",
+            "tamanho": 6020,
+            "extensao": ""
+          },
+          {
+            "nome": "e9b1c0ac587e3935c6b67271eb100b3b9a29f6",
+            "caminho": ".git\\objects\\f9\\e9b1c0ac587e3935c6b67271eb100b3b9a29f6",
+            "tamanho": 4575,
+            "extensao": ""
+          }
+        ]
+      },
+      "fb": {
+        "caminho": ".git\\objects\\fb",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "6677c4a1a7d92b2f2dd371ca0c534e81a7e2ae",
+            "caminho": ".git\\objects\\fb\\6677c4a1a7d92b2f2dd371ca0c534e81a7e2ae",
+            "tamanho": 4533,
+            "extensao": ""
+          },
+          {
+            "nome": "d8eba1565dcdfb6aaeddbe733ed74c15ebb0ee",
+            "caminho": ".git\\objects\\fb\\d8eba1565dcdfb6aaeddbe733ed74c15ebb0ee",
+            "tamanho": 1366,
+            "extensao": ""
+          }
+        ]
+      },
+      "fc": {
+        "caminho": ".git\\objects\\fc",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "79aa80b8049ea748c8b31aa8f5a4166f959129",
+            "caminho": ".git\\objects\\fc\\79aa80b8049ea748c8b31aa8f5a4166f959129",
+            "tamanho": 241,
+            "extensao": ""
+          }
+        ]
+      },
+      "fd": {
+        "caminho": ".git\\objects\\fd",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "7873ca9920f787556b5d3a5aeb3a7856a30ee5",
+            "caminho": ".git\\objects\\fd\\7873ca9920f787556b5d3a5aeb3a7856a30ee5",
+            "tamanho": 5030,
+            "extensao": ""
+          }
+        ]
+      },
+      "fe": {
+        "caminho": ".git\\objects\\fe",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "59001394437a5c711e8977b1fb507055a098df",
+            "caminho": ".git\\objects\\fe\\59001394437a5c711e8977b1fb507055a098df",
+            "tamanho": 4142,
+            "extensao": ""
+          }
+        ]
+      },
+      "ff": {
+        "caminho": ".git\\objects\\ff",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "befa1c78917ff1111062b30edf590ee063e75f",
+            "caminho": ".git\\objects\\ff\\befa1c78917ff1111062b30edf590ee063e75f",
+            "tamanho": 4442,
+            "extensao": ""
+          }
+        ]
+      },
+      "pack": {
+        "caminho": ".git\\objects\\pack",
+        "profundidade": 2,
+        "arquivos": [
+          {
+            "nome": "pack-3e8c10775d0692947143b52392f89e19445b14b3.idx",
+            "caminho": ".git\\objects\\pack\\pack-3e8c10775d0692947143b52392f89e19445b14b3.idx",
+            "tamanho": 75496,
+            "extensao": ".idx"
+          },
+          {
+            "nome": "pack-3e8c10775d0692947143b52392f89e19445b14b3.pack",
+            "caminho": ".git\\objects\\pack\\pack-3e8c10775d0692947143b52392f89e19445b14b3.pack",
+            "tamanho": 47861298,
+            "extensao": ".pack"
+          },
+          {
+            "nome": "pack-3e8c10775d0692947143b52392f89e19445b14b3.rev",
+            "caminho": ".git\\objects\\pack\\pack-3e8c10775d0692947143b52392f89e19445b14b3.rev",
+            "tamanho": 10684,
+            "extensao": ".rev"
+          }
+        ]
+      },
+      "tags": {
+        "caminho": ".git\\refs\\tags",
+        "profundidade": 2,
+        "arquivos": []
+      },
+      "assets": {
+        "caminho": "assets",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": ".gitkeep",
+            "caminho": "assets\\.gitkeep",
+            "tamanho": 0,
+            "extensao": ""
+          },
+          {
+            "nome": "auditoria_fix.py",
+            "caminho": "assets\\auditoria_fix.py",
+            "tamanho": 23770,
+            "extensao": ".py"
+          },
+          {
+            "nome": "CLAUDE.md",
+            "caminho": "assets\\CLAUDE.md",
+            "tamanho": 550,
+            "extensao": ".md"
+          },
+          {
+            "nome": "DATABASE_PRODUTOS.md",
+            "caminho": "assets\\DATABASE_PRODUTOS.md",
+            "tamanho": 1329,
+            "extensao": ".md"
+          },
+          {
+            "nome": "DOCUMENTO_MESTRE.md",
+            "caminho": "assets\\DOCUMENTO_MESTRE.md",
+            "tamanho": 30339,
+            "extensao": ".md"
+          },
+          {
+            "nome": "gerador-schema-produto.html",
+            "caminho": "assets\\gerador-schema-produto.html",
+            "tamanho": 40067,
+            "extensao": ".html"
+          },
+          {
+            "nome": "GUIA-REPLICACAO.md",
+            "caminho": "assets\\GUIA-REPLICACAO.md",
+            "tamanho": 8358,
+            "extensao": ".md"
+          },
+          {
+            "nome": "script_encoding.py",
+            "caminho": "assets\\script_encoding.py",
+            "tamanho": 1981,
+            "extensao": ".py"
+          },
+          {
+            "nome": "TEMPLATE_PRODUCT_SCHEMA.json",
+            "caminho": "assets\\TEMPLATE_PRODUCT_SCHEMA.json",
+            "tamanho": 2853,
+            "extensao": ".json"
+          },
+          {
+            "nome": "update-all-html.js",
+            "caminho": "assets\\update-all-html.js",
+            "tamanho": 4992,
+            "extensao": ".js"
+          },
+          {
+            "nome": "update-images-lazy.js",
+            "caminho": "assets\\update-images-lazy.js",
+            "tamanho": 3883,
+            "extensao": ".js"
+          }
+        ]
+      },
+      "blog": {
+        "caminho": "blog",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": "cidades.html",
+            "caminho": "blog\\cidades.html",
+            "tamanho": 3310,
+            "extensao": ".html"
+          },
+          {
+            "nome": "como-calcular-tinta-por-m2.html",
+            "caminho": "blog\\como-calcular-tinta-por-m2.html",
+            "tamanho": 41623,
+            "extensao": ".html"
+          },
+          {
+            "nome": "diferenca-massa-pva-massa-acrilica.html",
+            "caminho": "blog\\diferenca-massa-pva-massa-acrilica.html",
+            "tamanho": 36186,
+            "extensao": ".html"
+          },
+          {
+            "nome": "esmalte-para-madeira-e-metal.html",
+            "caminho": "blog\\esmalte-para-madeira-e-metal.html",
+            "tamanho": 14256,
+            "extensao": ".html"
+          },
+          {
+            "nome": "grafiato-o-que-e-como-aplicar.html",
+            "caminho": "blog\\grafiato-o-que-e-como-aplicar.html",
+            "tamanho": 43986,
+            "extensao": ".html"
+          },
+          {
+            "nome": "index.html",
+            "caminho": "blog\\index.html",
+            "tamanho": 22778,
+            "extensao": ".html"
+          },
+          {
+            "nome": "liqui-brilho-impermeabilizante.html",
+            "caminho": "blog\\liqui-brilho-impermeabilizante.html",
+            "tamanho": 14454,
+            "extensao": ".html"
+          },
+          {
+            "nome": "q-color-tinta-lavavel.html",
+            "caminho": "blog\\q-color-tinta-lavavel.html",
+            "tamanho": 3269,
+            "extensao": ".html"
+          },
+          {
+            "nome": "seladora-quando-usar.html",
+            "caminho": "blog\\seladora-quando-usar.html",
+            "tamanho": 38771,
+            "extensao": ".html"
+          },
+          {
+            "nome": "textura-lisa-vs-grafiato.html",
+            "caminho": "blog\\textura-lisa-vs-grafiato.html",
+            "tamanho": 14268,
+            "extensao": ".html"
+          },
+          {
+            "nome": "textura-projetada-fachadas.html",
+            "caminho": "blog\\textura-projetada-fachadas.html",
+            "tamanho": 14390,
+            "extensao": ".html"
+          },
+          {
+            "nome": "tinta-economica-qualy-color.html",
+            "caminho": "blog\\tinta-economica-qualy-color.html",
+            "tamanho": 9164,
+            "extensao": ".html"
+          }
+        ]
+      },
+      "categorias": {
+        "caminho": "categorias",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": "acabamentos.html",
+            "caminho": "categorias\\acabamentos.html",
+            "tamanho": 13327,
+            "extensao": ".html"
+          },
+          {
+            "nome": "blog.html",
+            "caminho": "categorias\\blog.html",
+            "tamanho": 35779,
+            "extensao": ".html"
+          },
+          {
+            "nome": "cidades.html",
+            "caminho": "categorias\\cidades.html",
+            "tamanho": 16231,
+            "extensao": ".html"
+          },
+          {
+            "nome": "fundos.html",
+            "caminho": "categorias\\fundos.html",
+            "tamanho": 13320,
+            "extensao": ".html"
+          },
+          {
+            "nome": "massas.html",
+            "caminho": "categorias\\massas.html",
+            "tamanho": 13482,
+            "extensao": ".html"
+          },
+          {
+            "nome": "texturas.html",
+            "caminho": "categorias\\texturas.html",
+            "tamanho": 15064,
+            "extensao": ".html"
+          },
+          {
+            "nome": "tintas.html",
+            "caminho": "categorias\\tintas.html",
+            "tamanho": 13511,
+            "extensao": ".html"
+          }
+        ]
+      },
+      "cidades": {
+        "caminho": "cidades",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": "aruja.html",
+            "caminho": "cidades\\aruja.html",
+            "tamanho": 10894,
+            "extensao": ".html"
+          },
+          {
+            "nome": "cidade-tiradentes.html",
+            "caminho": "cidades\\cidade-tiradentes.html",
+            "tamanho": 11666,
+            "extensao": ".html"
+          },
+          {
+            "nome": "ferraz-de-vasconcelos.html",
+            "caminho": "cidades\\ferraz-de-vasconcelos.html",
+            "tamanho": 11726,
+            "extensao": ".html"
+          },
+          {
+            "nome": "guaianases.html",
+            "caminho": "cidades\\guaianases.html",
+            "tamanho": 11508,
+            "extensao": ".html"
+          },
+          {
+            "nome": "guarulhos.html",
+            "caminho": "cidades\\guarulhos.html",
+            "tamanho": 11486,
+            "extensao": ".html"
+          },
+          {
+            "nome": "itaim-paulista.html",
+            "caminho": "cidades\\itaim-paulista.html",
+            "tamanho": 11600,
+            "extensao": ".html"
+          },
+          {
+            "nome": "itaquaquecetuba.html",
+            "caminho": "cidades\\itaquaquecetuba.html",
+            "tamanho": 20210,
+            "extensao": ".html"
+          },
+          {
+            "nome": "lajeado.html",
+            "caminho": "cidades\\lajeado.html",
+            "tamanho": 11442,
+            "extensao": ".html"
+          },
+          {
+            "nome": "mogi-das-cruzes.html",
+            "caminho": "cidades\\mogi-das-cruzes.html",
+            "tamanho": 13311,
+            "extensao": ".html"
+          },
+          {
+            "nome": "poa.html",
+            "caminho": "cidades\\poa.html",
+            "tamanho": 10870,
+            "extensao": ".html"
+          },
+          {
+            "nome": "sao-miguel-paulista.html",
+            "caminho": "cidades\\sao-miguel-paulista.html",
+            "tamanho": 11709,
+            "extensao": ".html"
+          },
+          {
+            "nome": "suzano.html",
+            "caminho": "cidades\\suzano.html",
+            "tamanho": 11420,
+            "extensao": ".html"
+          }
+        ]
+      },
+      "itaquaquecetuba": {
+        "caminho": "itaquaquecetuba",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": "jardim-morumbi.html",
+            "caminho": "itaquaquecetuba\\jardim-morumbi.html",
+            "tamanho": 3299,
+            "extensao": ".html"
+          }
+        ]
+      },
+      "comercial": {
+        "caminho": "comercial",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": "1_litro.png",
+            "caminho": "comercial\\1_litro.png",
+            "tamanho": 479280,
+            "extensao": ".png"
+          },
+          {
+            "nome": "balde_16lts.png",
+            "caminho": "comercial\\balde_16lts.png",
+            "tamanho": 651807,
+            "extensao": ".png"
+          },
+          {
+            "nome": "barrica.png",
+            "caminho": "comercial\\barrica.png",
+            "tamanho": 205794,
+            "extensao": ".png"
+          },
+          {
+            "nome": "entrega-dia-programado.html",
+            "caminho": "comercial\\entrega-dia-programado.html",
+            "tamanho": 20263,
+            "extensao": ".html"
+          },
+          {
+            "nome": "entrega-expressa-regional.html",
+            "caminho": "comercial\\entrega-expressa-regional.html",
+            "tamanho": 20306,
+            "extensao": ".html"
+          },
+          {
+            "nome": "frete-gratis-final-de-semana.html",
+            "caminho": "comercial\\frete-gratis-final-de-semana.html",
+            "tamanho": 20272,
+            "extensao": ".html"
+          },
+          {
+            "nome": "frete-gratis-itaquaquecetuba.html",
+            "caminho": "comercial\\frete-gratis-itaquaquecetuba.html",
+            "tamanho": 51345,
+            "extensao": ".html"
+          },
+          {
+            "nome": "frete_gratis.png",
+            "caminho": "comercial\\frete_gratis.png",
+            "tamanho": 809346,
+            "extensao": ".png"
+          },
+          {
+            "nome": "galao_3_6lts.png",
+            "caminho": "comercial\\galao_3_6lts.png",
+            "tamanho": 577259,
+            "extensao": ".png"
+          },
+          {
+            "nome": "sua-imagem.png",
+            "caminho": "comercial\\sua-imagem.png",
+            "tamanho": 1766767,
+            "extensao": ".png"
+          }
+        ]
+      },
+      "comoaplicar": {
+        "caminho": "comoaplicar",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": "grafiato.html",
+            "caminho": "comoaplicar\\grafiato.html",
+            "tamanho": 32397,
+            "extensao": ".html"
+          },
+          {
+            "nome": "index.html",
+            "caminho": "comoaplicar\\index.html",
+            "tamanho": 2,
+            "extensao": ".html"
+          }
+        ]
+      },
+      "components": {
+        "caminho": "components",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": "footer.html",
+            "caminho": "components\\footer.html",
+            "tamanho": 4808,
+            "extensao": ".html"
+          },
+          {
+            "nome": "header.html",
+            "caminho": "components\\header.html",
+            "tamanho": 4367,
+            "extensao": ".html"
+          }
+        ]
+      },
+      "css": {
+        "caminho": "css",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": "style-min.css",
+            "caminho": "css\\style-min.css",
+            "tamanho": 21956,
+            "extensao": ".css"
+          },
+          {
+            "nome": "style.css",
+            "caminho": "css\\style.css",
+            "tamanho": 28184,
+            "extensao": ".css"
+          }
+        ]
+      },
+      "imagens": {
+        "caminho": "imagens",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": ".gitkeep",
+            "caminho": "imagens\\.gitkeep",
+            "tamanho": 0,
+            "extensao": ""
+          },
+          {
+            "nome": "acabamento.jpg",
+            "caminho": "imagens\\acabamento.jpg",
+            "tamanho": 6873,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "balde-16l.jpg",
+            "caminho": "imagens\\balde-16l.jpg",
+            "tamanho": 4028677,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "barrica-25kg.jpg",
+            "caminho": "imagens\\barrica-25kg.jpg",
+            "tamanho": 71622,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "casabonita.jpeg",
+            "caminho": "imagens\\casabonita.jpeg",
+            "tamanho": 479968,
+            "extensao": ".jpeg"
+          },
+          {
+            "nome": "fundos.jpg",
+            "caminho": "imagens\\fundos.jpg",
+            "tamanho": 6083,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "galao-3-6l.jpg",
+            "caminho": "imagens\\galao-3-6l.jpg",
+            "tamanho": 4045036,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "galao-5-6kg.jpg",
+            "caminho": "imagens\\galao-5-6kg.jpg",
+            "tamanho": 4045036,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "grafiato.png",
+            "caminho": "imagens\\grafiato.png",
+            "tamanho": 483727,
+            "extensao": ".png"
+          },
+          {
+            "nome": "grafiato1.png",
+            "caminho": "imagens\\grafiato1.png",
+            "tamanho": 2188463,
+            "extensao": ".png"
+          },
+          {
+            "nome": "grafiato2.png",
+            "caminho": "imagens\\grafiato2.png",
+            "tamanho": 2107085,
+            "extensao": ".png"
+          },
+          {
+            "nome": "grafiato3.png",
+            "caminho": "imagens\\grafiato3.png",
+            "tamanho": 2133212,
+            "extensao": ".png"
+          },
+          {
+            "nome": "grafiato4.png",
+            "caminho": "imagens\\grafiato4.png",
+            "tamanho": 2340884,
+            "extensao": ".png"
+          },
+          {
+            "nome": "massas.jpg",
+            "caminho": "imagens\\massas.jpg",
+            "tamanho": 7060,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "pote-1l.jpg",
+            "caminho": "imagens\\pote-1l.jpg",
+            "tamanho": 2922677,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "produtos.jpg",
+            "caminho": "imagens\\produtos.jpg",
+            "tamanho": 193884,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "sua-imagem.png",
+            "caminho": "imagens\\sua-imagem.png",
+            "tamanho": 1766767,
+            "extensao": ".png"
+          },
+          {
+            "nome": "texturaegrafiato.jpg",
+            "caminho": "imagens\\texturaegrafiato.jpg",
+            "tamanho": 711405,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "texturas.jpg",
+            "caminho": "imagens\\texturas.jpg",
+            "tamanho": 6510,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "tinta-economica-balde-18l.png",
+            "caminho": "imagens\\tinta-economica-balde-18l.png",
+            "tamanho": 795483,
+            "extensao": ".png"
+          },
+          {
+            "nome": "tinta-economica-galao-3-6l.png",
+            "caminho": "imagens\\tinta-economica-galao-3-6l.png",
+            "tamanho": 480974,
+            "extensao": ".png"
+          },
+          {
+            "nome": "tinta-economica-lata-18l.png",
+            "caminho": "imagens\\tinta-economica-lata-18l.png",
+            "tamanho": 413305,
+            "extensao": ".png"
+          },
+          {
+            "nome": "tinta-standard-galao-3-6l.jpg",
+            "caminho": "imagens\\tinta-standard-galao-3-6l.jpg",
+            "tamanho": 3749976,
+            "extensao": ".jpg"
+          },
+          {
+            "nome": "tinta-standard-lata-18l.png",
+            "caminho": "imagens\\tinta-standard-lata-18l.png",
+            "tamanho": 1027471,
+            "extensao": ".png"
+          },
+          {
+            "nome": "tintas.png",
+            "caminho": "imagens\\tintas.png",
+            "tamanho": 7172,
+            "extensao": ".png"
+          }
+        ]
+      },
+      "js": {
+        "caminho": "js",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": "lazy-loading.js",
+            "caminho": "js\\lazy-loading.js",
+            "tamanho": 2662,
+            "extensao": ".js"
+          },
+          {
+            "nome": "main-min.js",
+            "caminho": "js\\main-min.js",
+            "tamanho": 14471,
+            "extensao": ".js"
+          },
+          {
+            "nome": "main-secure.js",
+            "caminho": "js\\main-secure.js",
+            "tamanho": 20571,
+            "extensao": ".js"
+          },
+          {
+            "nome": "main.js",
+            "caminho": "js\\main.js",
+            "tamanho": 20571,
+            "extensao": ".js"
+          },
+          {
+            "nome": "utils.js",
+            "caminho": "js\\utils.js",
+            "tamanho": 7971,
+            "extensao": ".js"
+          }
+        ]
+      },
+      "produtos": {
+        "caminho": "produtos",
+        "profundidade": 0,
+        "arquivos": [
+          {
+            "nome": "esmalte.html",
+            "caminho": "produtos\\esmalte.html",
+            "tamanho": 16976,
+            "extensao": ".html"
+          },
+          {
+            "nome": "exemplo-embalagens.html",
+            "caminho": "produtos\\exemplo-embalagens.html",
+            "tamanho": 9533,
+            "extensao": ".html"
+          },
+          {
+            "nome": "grafiato.html",
+            "caminho": "produtos\\grafiato.html",
+            "tamanho": 20524,
+            "extensao": ".html"
+          },
+          {
+            "nome": "grafiato.png",
+            "caminho": "produtos\\grafiato.png",
+            "tamanho": 483727,
+            "extensao": ".png"
+          },
+          {
+            "nome": "liqui-brilho.html",
+            "caminho": "produtos\\liqui-brilho.html",
+            "tamanho": 18277,
+            "extensao": ".html"
+          },
+          {
+            "nome": "massa-acrilica.html",
+            "caminho": "produtos\\massa-acrilica.html",
+            "tamanho": 18511,
+            "extensao": ".html"
+          },
+          {
+            "nome": "massa-pva.html",
+            "caminho": "produtos\\massa-pva.html",
+            "tamanho": 19821,
+            "extensao": ".html"
+          },
+          {
+            "nome": "q-color.html",
+            "caminho": "produtos\\q-color.html",
+            "tamanho": 2976,
+            "extensao": ".html"
+          },
+          {
+            "nome": "seladora.html",
+            "caminho": "produtos\\seladora.html",
+            "tamanho": 18813,
+            "extensao": ".html"
+          },
+          {
+            "nome": "selador_acrilico.html",
+            "caminho": "produtos\\selador_acrilico.html",
+            "tamanho": 484404,
+            "extensao": ".html"
+          },
+          {
+            "nome": "textura-lisa.html",
+            "caminho": "produtos\\textura-lisa.html",
+            "tamanho": 18271,
+            "extensao": ".html"
+          },
+          {
+            "nome": "textura-projetada.html",
+            "caminho": "produtos\\textura-projetada.html",
+            "tamanho": 17292,
+            "extensao": ".html"
+          },
+          {
+            "nome": "tinta-economica-qualy-color-uso-interno.html",
+            "caminho": "produtos\\tinta-economica-qualy-color-uso-interno.html",
+            "tamanho": 22023,
+            "extensao": ".html"
+          }
+        ]
+      }
+    },
+    "arquivosHtml": [
+      {
+        "nome": "404.html",
+        "caminho": "404.html",
+        "tamanho": 3904,
+        "extensao": ".html"
+      },
+      {
+        "nome": "appescolha.html",
+        "caminho": "appescolha.html",
+        "tamanho": 46564,
+        "extensao": ".html"
+      },
+      {
+        "nome": "appescolha2.html",
+        "caminho": "appescolha2.html",
+        "tamanho": 55728,
+        "extensao": ".html"
+      },
+      {
+        "nome": "gerador-schema-produto.html",
+        "caminho": "assets\\gerador-schema-produto.html",
+        "tamanho": 40067,
+        "extensao": ".html"
+      },
+      {
+        "nome": "cidades.html",
+        "caminho": "blog\\cidades.html",
+        "tamanho": 3310,
+        "extensao": ".html"
+      },
+      {
+        "nome": "como-calcular-tinta-por-m2.html",
+        "caminho": "blog\\como-calcular-tinta-por-m2.html",
+        "tamanho": 41623,
+        "extensao": ".html"
+      },
+      {
+        "nome": "diferenca-massa-pva-massa-acrilica.html",
+        "caminho": "blog\\diferenca-massa-pva-massa-acrilica.html",
+        "tamanho": 36186,
+        "extensao": ".html"
+      },
+      {
+        "nome": "esmalte-para-madeira-e-metal.html",
+        "caminho": "blog\\esmalte-para-madeira-e-metal.html",
+        "tamanho": 14256,
+        "extensao": ".html"
+      },
+      {
+        "nome": "grafiato-o-que-e-como-aplicar.html",
+        "caminho": "blog\\grafiato-o-que-e-como-aplicar.html",
+        "tamanho": 43986,
+        "extensao": ".html"
+      },
+      {
+        "nome": "index.html",
+        "caminho": "blog\\index.html",
+        "tamanho": 22778,
+        "extensao": ".html"
+      },
+      {
+        "nome": "liqui-brilho-impermeabilizante.html",
+        "caminho": "blog\\liqui-brilho-impermeabilizante.html",
+        "tamanho": 14454,
+        "extensao": ".html"
+      },
+      {
+        "nome": "q-color-tinta-lavavel.html",
+        "caminho": "blog\\q-color-tinta-lavavel.html",
+        "tamanho": 3269,
+        "extensao": ".html"
+      },
+      {
+        "nome": "seladora-quando-usar.html",
+        "caminho": "blog\\seladora-quando-usar.html",
+        "tamanho": 38771,
+        "extensao": ".html"
+      },
+      {
+        "nome": "textura-lisa-vs-grafiato.html",
+        "caminho": "blog\\textura-lisa-vs-grafiato.html",
+        "tamanho": 14268,
+        "extensao": ".html"
+      },
+      {
+        "nome": "textura-projetada-fachadas.html",
+        "caminho": "blog\\textura-projetada-fachadas.html",
+        "tamanho": 14390,
+        "extensao": ".html"
+      },
+      {
+        "nome": "tinta-economica-qualy-color.html",
+        "caminho": "blog\\tinta-economica-qualy-color.html",
+        "tamanho": 9164,
+        "extensao": ".html"
+      },
+      {
+        "nome": "blog.tintasqualyquimy.html",
+        "caminho": "blog.tintasqualyquimy.html",
+        "tamanho": 3325,
+        "extensao": ".html"
+      },
+      {
+        "nome": "acabamentos.html",
+        "caminho": "categorias\\acabamentos.html",
+        "tamanho": 13327,
+        "extensao": ".html"
+      },
+      {
+        "nome": "blog.html",
+        "caminho": "categorias\\blog.html",
+        "tamanho": 35779,
+        "extensao": ".html"
+      },
+      {
+        "nome": "cidades.html",
+        "caminho": "categorias\\cidades.html",
+        "tamanho": 16231,
+        "extensao": ".html"
+      },
+      {
+        "nome": "fundos.html",
+        "caminho": "categorias\\fundos.html",
+        "tamanho": 13320,
+        "extensao": ".html"
+      },
+      {
+        "nome": "massas.html",
+        "caminho": "categorias\\massas.html",
+        "tamanho": 13482,
+        "extensao": ".html"
+      },
+      {
+        "nome": "texturas.html",
+        "caminho": "categorias\\texturas.html",
+        "tamanho": 15064,
+        "extensao": ".html"
+      },
+      {
+        "nome": "tintas.html",
+        "caminho": "categorias\\tintas.html",
+        "tamanho": 13511,
+        "extensao": ".html"
+      },
+      {
+        "nome": "aruja.html",
+        "caminho": "cidades\\aruja.html",
+        "tamanho": 10894,
+        "extensao": ".html"
+      },
+      {
+        "nome": "cidade-tiradentes.html",
+        "caminho": "cidades\\cidade-tiradentes.html",
+        "tamanho": 11666,
+        "extensao": ".html"
+      },
+      {
+        "nome": "ferraz-de-vasconcelos.html",
+        "caminho": "cidades\\ferraz-de-vasconcelos.html",
+        "tamanho": 11726,
+        "extensao": ".html"
+      },
+      {
+        "nome": "guaianases.html",
+        "caminho": "cidades\\guaianases.html",
+        "tamanho": 11508,
+        "extensao": ".html"
+      },
+      {
+        "nome": "guarulhos.html",
+        "caminho": "cidades\\guarulhos.html",
+        "tamanho": 11486,
+        "extensao": ".html"
+      },
+      {
+        "nome": "itaim-paulista.html",
+        "caminho": "cidades\\itaim-paulista.html",
+        "tamanho": 11600,
+        "extensao": ".html"
+      },
+      {
+        "nome": "bairro-do-limoeiro.html",
+        "caminho": "cidades\\itaquaquecetuba\\bairro-do-limoeiro.html",
+        "tamanho": 13027,
+        "extensao": ".html"
+      },
+      {
+        "nome": "chacaras-calux.html",
+        "caminho": "cidades\\itaquaquecetuba\\chacaras-calux.html",
+        "tamanho": 12925,
+        "extensao": ".html"
+      },
+      {
+        "nome": "estancia-maia.html",
+        "caminho": "cidades\\itaquaquecetuba\\estancia-maia.html",
+        "tamanho": 12902,
+        "extensao": ".html"
+      },
+      {
+        "nome": "jardim-bom-clima.html",
+        "caminho": "cidades\\itaquaquecetuba\\jardim-bom-clima.html",
+        "tamanho": 12985,
+        "extensao": ".html"
+      },
+      {
+        "nome": "jardim-branca-flor.html",
+        "caminho": "cidades\\itaquaquecetuba\\jardim-branca-flor.html",
+        "tamanho": 13027,
+        "extensao": ".html"
+      },
+      {
+        "nome": "jardim-dourado.html",
+        "caminho": "cidades\\itaquaquecetuba\\jardim-dourado.html",
+        "tamanho": 12941,
+        "extensao": ".html"
+      },
+      {
+        "nome": "jardim-morumbi.html",
+        "caminho": "cidades\\itaquaquecetuba\\jardim-morumbi.html",
+        "tamanho": 12971,
+        "extensao": ".html"
+      },
+      {
+        "nome": "jardim-nova-itaqua.html",
+        "caminho": "cidades\\itaquaquecetuba\\jardim-nova-itaqua.html",
+        "tamanho": 13009,
+        "extensao": ".html"
+      },
+      {
+        "nome": "parque-piratininga.html",
+        "caminho": "cidades\\itaquaquecetuba\\parque-piratininga.html",
+        "tamanho": 13025,
+        "extensao": ".html"
+      },
+      {
+        "nome": "vila-virginia.html",
+        "caminho": "cidades\\itaquaquecetuba\\vila-virginia.html",
+        "tamanho": 12902,
+        "extensao": ".html"
+      },
+      {
+        "nome": "itaquaquecetuba.html",
+        "caminho": "cidades\\itaquaquecetuba.html",
+        "tamanho": 20210,
+        "extensao": ".html"
+      },
+      {
+        "nome": "lajeado.html",
+        "caminho": "cidades\\lajeado.html",
+        "tamanho": 11442,
+        "extensao": ".html"
+      },
+      {
+        "nome": "mogi-das-cruzes.html",
+        "caminho": "cidades\\mogi-das-cruzes.html",
+        "tamanho": 13311,
+        "extensao": ".html"
+      },
+      {
+        "nome": "poa.html",
+        "caminho": "cidades\\poa.html",
+        "tamanho": 10870,
+        "extensao": ".html"
+      },
+      {
+        "nome": "sao-miguel-paulista.html",
+        "caminho": "cidades\\sao-miguel-paulista.html",
+        "tamanho": 11709,
+        "extensao": ".html"
+      },
+      {
+        "nome": "suzano.html",
+        "caminho": "cidades\\suzano.html",
+        "tamanho": 11420,
+        "extensao": ".html"
+      },
+      {
+        "nome": "entrega-dia-programado.html",
+        "caminho": "comercial\\entrega-dia-programado.html",
+        "tamanho": 20263,
+        "extensao": ".html"
+      },
+      {
+        "nome": "entrega-expressa-regional.html",
+        "caminho": "comercial\\entrega-expressa-regional.html",
+        "tamanho": 20306,
+        "extensao": ".html"
+      },
+      {
+        "nome": "frete-gratis-final-de-semana.html",
+        "caminho": "comercial\\frete-gratis-final-de-semana.html",
+        "tamanho": 20272,
+        "extensao": ".html"
+      },
+      {
+        "nome": "frete-gratis-itaquaquecetuba.html",
+        "caminho": "comercial\\frete-gratis-itaquaquecetuba.html",
+        "tamanho": 51345,
+        "extensao": ".html"
+      },
+      {
+        "nome": "grafiato.html",
+        "caminho": "comoaplicar\\grafiato.html",
+        "tamanho": 32397,
+        "extensao": ".html"
+      },
+      {
+        "nome": "index.html",
+        "caminho": "comoaplicar\\index.html",
+        "tamanho": 2,
+        "extensao": ".html"
+      },
+      {
+        "nome": "footer.html",
+        "caminho": "components\\footer.html",
+        "tamanho": 4808,
+        "extensao": ".html"
+      },
+      {
+        "nome": "header.html",
+        "caminho": "components\\header.html",
+        "tamanho": 4367,
+        "extensao": ".html"
+      },
+      {
+        "nome": "gerador-schema-produto.html",
+        "caminho": "gerador-schema-produto.html",
+        "tamanho": 40067,
+        "extensao": ".html"
+      },
+      {
+        "nome": "grafiato-itaquaquecetuba.html",
+        "caminho": "grafiato-itaquaquecetuba.html",
+        "tamanho": 69505,
+        "extensao": ".html"
+      },
+      {
+        "nome": "hub-cidades.html",
+        "caminho": "hub-cidades.html",
+        "tamanho": 16231,
+        "extensao": ".html"
+      },
+      {
+        "nome": "index.html",
+        "caminho": "index.html",
+        "tamanho": 106881,
+        "extensao": ".html"
+      },
+      {
+        "nome": "indexgemini.html",
+        "caminho": "indexgemini.html",
+        "tamanho": 11890,
+        "extensao": ".html"
+      },
+      {
+        "nome": "jardim-morumbi.html",
+        "caminho": "itaquaquecetuba\\jardim-morumbi.html",
+        "tamanho": 3299,
+        "extensao": ".html"
+      },
+      {
+        "nome": "onde-atendemos.html",
+        "caminho": "onde-atendemos.html",
+        "tamanho": 3204,
+        "extensao": ".html"
+      },
+      {
+        "nome": "politica-de-privacidade.html",
+        "caminho": "politica-de-privacidade.html",
+        "tamanho": 10201,
+        "extensao": ".html"
+      },
+      {
+        "nome": "esmalte.html",
+        "caminho": "produtos\\esmalte.html",
+        "tamanho": 16976,
+        "extensao": ".html"
+      },
+      {
+        "nome": "exemplo-embalagens.html",
+        "caminho": "produtos\\exemplo-embalagens.html",
+        "tamanho": 9533,
+        "extensao": ".html"
+      },
+      {
+        "nome": "grafiato.html",
+        "caminho": "produtos\\grafiato.html",
+        "tamanho": 20524,
+        "extensao": ".html"
+      },
+      {
+        "nome": "liqui-brilho.html",
+        "caminho": "produtos\\liqui-brilho.html",
+        "tamanho": 18277,
+        "extensao": ".html"
+      },
+      {
+        "nome": "massa-acrilica.html",
+        "caminho": "produtos\\massa-acrilica.html",
+        "tamanho": 18511,
+        "extensao": ".html"
+      },
+      {
+        "nome": "massa-pva.html",
+        "caminho": "produtos\\massa-pva.html",
+        "tamanho": 19821,
+        "extensao": ".html"
+      },
+      {
+        "nome": "q-color.html",
+        "caminho": "produtos\\q-color.html",
+        "tamanho": 2976,
+        "extensao": ".html"
+      },
+      {
+        "nome": "seladora.html",
+        "caminho": "produtos\\seladora.html",
+        "tamanho": 18813,
+        "extensao": ".html"
+      },
+      {
+        "nome": "selador_acrilico.html",
+        "caminho": "produtos\\selador_acrilico.html",
+        "tamanho": 484404,
+        "extensao": ".html"
+      },
+      {
+        "nome": "textura-lisa.html",
+        "caminho": "produtos\\textura-lisa.html",
+        "tamanho": 18271,
+        "extensao": ".html"
+      },
+      {
+        "nome": "textura-projetada.html",
+        "caminho": "produtos\\textura-projetada.html",
+        "tamanho": 17292,
+        "extensao": ".html"
+      },
+      {
+        "nome": "tinta-economica-qualy-color-uso-interno.html",
+        "caminho": "produtos\\tinta-economica-qualy-color-uso-interno.html",
+        "tamanho": 22023,
+        "extensao": ".html"
+      },
+      {
+        "nome": "sobre.html",
+        "caminho": "sobre.html",
+        "tamanho": 9738,
+        "extensao": ".html"
+      },
+      {
+        "nome": "termos-de-uso.html",
+        "caminho": "termos-de-uso.html",
+        "tamanho": 9963,
+        "extensao": ".html"
+      }
+    ],
+    "arquivosCss": [
+      {
+        "nome": "style-min.css",
+        "caminho": "css\\style-min.css",
+        "tamanho": 21956,
+        "extensao": ".css"
+      },
+      {
+        "nome": "style.css",
+        "caminho": "css\\style.css",
+        "tamanho": 28184,
+        "extensao": ".css"
+      }
+    ],
+    "arquivosJs": [
+      {
+        "nome": "update-all-html.js",
+        "caminho": "assets\\update-all-html.js",
+        "tamanho": 4992,
+        "extensao": ".js"
+      },
+      {
+        "nome": "update-images-lazy.js",
+        "caminho": "assets\\update-images-lazy.js",
+        "tamanho": 3883,
+        "extensao": ".js"
+      },
+      {
+        "nome": "AUDITORIA_COMPLETA_SISTEMA.js",
+        "caminho": "AUDITORIA_COMPLETA_SISTEMA.js",
+        "tamanho": 14738,
+        "extensao": ".js"
+      },
+      {
+        "nome": "lazy-loading.js",
+        "caminho": "js\\lazy-loading.js",
+        "tamanho": 2662,
+        "extensao": ".js"
+      },
+      {
+        "nome": "main-min.js",
+        "caminho": "js\\main-min.js",
+        "tamanho": 14471,
+        "extensao": ".js"
+      },
+      {
+        "nome": "main-secure.js",
+        "caminho": "js\\main-secure.js",
+        "tamanho": 20571,
+        "extensao": ".js"
+      },
+      {
+        "nome": "main.js",
+        "caminho": "js\\main.js",
+        "tamanho": 20571,
+        "extensao": ".js"
+      },
+      {
+        "nome": "utils.js",
+        "caminho": "js\\utils.js",
+        "tamanho": 7971,
+        "extensao": ".js"
+      },
+      {
+        "nome": "update-all-html.js",
+        "caminho": "update-all-html.js",
+        "tamanho": 4992,
+        "extensao": ".js"
+      },
+      {
+        "nome": "update-images-lazy.js",
+        "caminho": "update-images-lazy.js",
+        "tamanho": 3883,
+        "extensao": ".js"
+      }
+    ],
+    "imagens": [
+      {
+        "nome": "1_litro.png",
+        "caminho": "comercial\\1_litro.png",
+        "tamanho": 479280,
+        "extensao": ".png"
+      },
+      {
+        "nome": "balde_16lts.png",
+        "caminho": "comercial\\balde_16lts.png",
+        "tamanho": 651807,
+        "extensao": ".png"
+      },
+      {
+        "nome": "barrica.png",
+        "caminho": "comercial\\barrica.png",
+        "tamanho": 205794,
+        "extensao": ".png"
+      },
+      {
+        "nome": "frete_gratis.png",
+        "caminho": "comercial\\frete_gratis.png",
+        "tamanho": 809346,
+        "extensao": ".png"
+      },
+      {
+        "nome": "galao_3_6lts.png",
+        "caminho": "comercial\\galao_3_6lts.png",
+        "tamanho": 577259,
+        "extensao": ".png"
+      },
+      {
+        "nome": "sua-imagem.png",
+        "caminho": "comercial\\sua-imagem.png",
+        "tamanho": 1766767,
+        "extensao": ".png"
+      },
+      {
+        "nome": "acabamento.jpg",
+        "caminho": "imagens\\acabamento.jpg",
+        "tamanho": 6873,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "balde-16l.jpg",
+        "caminho": "imagens\\balde-16l.jpg",
+        "tamanho": 4028677,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "barrica-25kg.jpg",
+        "caminho": "imagens\\barrica-25kg.jpg",
+        "tamanho": 71622,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "casabonita.jpeg",
+        "caminho": "imagens\\casabonita.jpeg",
+        "tamanho": 479968,
+        "extensao": ".jpeg"
+      },
+      {
+        "nome": "fundos.jpg",
+        "caminho": "imagens\\fundos.jpg",
+        "tamanho": 6083,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "galao-3-6l.jpg",
+        "caminho": "imagens\\galao-3-6l.jpg",
+        "tamanho": 4045036,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "galao-5-6kg.jpg",
+        "caminho": "imagens\\galao-5-6kg.jpg",
+        "tamanho": 4045036,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "grafiato.png",
+        "caminho": "imagens\\grafiato.png",
+        "tamanho": 483727,
+        "extensao": ".png"
+      },
+      {
+        "nome": "grafiato1.png",
+        "caminho": "imagens\\grafiato1.png",
+        "tamanho": 2188463,
+        "extensao": ".png"
+      },
+      {
+        "nome": "grafiato2.png",
+        "caminho": "imagens\\grafiato2.png",
+        "tamanho": 2107085,
+        "extensao": ".png"
+      },
+      {
+        "nome": "grafiato3.png",
+        "caminho": "imagens\\grafiato3.png",
+        "tamanho": 2133212,
+        "extensao": ".png"
+      },
+      {
+        "nome": "grafiato4.png",
+        "caminho": "imagens\\grafiato4.png",
+        "tamanho": 2340884,
+        "extensao": ".png"
+      },
+      {
+        "nome": "massas.jpg",
+        "caminho": "imagens\\massas.jpg",
+        "tamanho": 7060,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "pote-1l.jpg",
+        "caminho": "imagens\\pote-1l.jpg",
+        "tamanho": 2922677,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "produtos.jpg",
+        "caminho": "imagens\\produtos.jpg",
+        "tamanho": 193884,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "sua-imagem.png",
+        "caminho": "imagens\\sua-imagem.png",
+        "tamanho": 1766767,
+        "extensao": ".png"
+      },
+      {
+        "nome": "texturaegrafiato.jpg",
+        "caminho": "imagens\\texturaegrafiato.jpg",
+        "tamanho": 711405,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "texturas.jpg",
+        "caminho": "imagens\\texturas.jpg",
+        "tamanho": 6510,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "tinta-economica-balde-18l.png",
+        "caminho": "imagens\\tinta-economica-balde-18l.png",
+        "tamanho": 795483,
+        "extensao": ".png"
+      },
+      {
+        "nome": "tinta-economica-galao-3-6l.png",
+        "caminho": "imagens\\tinta-economica-galao-3-6l.png",
+        "tamanho": 480974,
+        "extensao": ".png"
+      },
+      {
+        "nome": "tinta-economica-lata-18l.png",
+        "caminho": "imagens\\tinta-economica-lata-18l.png",
+        "tamanho": 413305,
+        "extensao": ".png"
+      },
+      {
+        "nome": "tinta-standard-galao-3-6l.jpg",
+        "caminho": "imagens\\tinta-standard-galao-3-6l.jpg",
+        "tamanho": 3749976,
+        "extensao": ".jpg"
+      },
+      {
+        "nome": "tinta-standard-lata-18l.png",
+        "caminho": "imagens\\tinta-standard-lata-18l.png",
+        "tamanho": 1027471,
+        "extensao": ".png"
+      },
+      {
+        "nome": "tintas.png",
+        "caminho": "imagens\\tintas.png",
+        "tamanho": 7172,
+        "extensao": ".png"
+      },
+      {
+        "nome": "grafiato.png",
+        "caminho": "produtos\\grafiato.png",
+        "tamanho": 483727,
+        "extensao": ".png"
+      }
+    ],
+    "problemas": []
+  },
+  "validacoes": {
+    "estruturaCorreta": false,
+    "paginasObrigatorias": [
+      "index.html"
+    ],
+    "paginasFaltantes": [
+      "categorias/tintas.html",
+      "categorias/texturas.html",
+      "categorias/massas.html",
+      "categorias/fundos.html",
+      "categorias/acabamentos.html"
+    ],
+    "paginasExtras": [],
+    "arquivosDuplicados": [],
+    "problemas": []
+  },
+  "analiseHtml": {
+    "total": 76,
+    "comProblemas": 68,
+    "problemas": [
+      {
+        "arquivo": "404.html",
+        "problemas": [
+          "Schema JSON-LD ausente"
+        ]
+      },
+      {
+        "arquivo": "appescolha.html",
+        "problemas": [
+          "Google Analytics ausente",
+          "Schema JSON-LD ausente"
+        ]
+      },
+      {
+        "arquivo": "appescolha2.html",
+        "problemas": [
+          "Google Analytics ausente",
+          "Schema JSON-LD ausente"
+        ]
+      },
+      {
+        "arquivo": "assets\\gerador-schema-produto.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "blog\\cidades.html",
+        "problemas": [
+          "Schema JSON-LD ausente",
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "blog\\esmalte-para-madeira-e-metal.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "blog\\liqui-brilho-impermeabilizante.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "blog\\q-color-tinta-lavavel.html",
+        "problemas": [
+          "Schema JSON-LD ausente",
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "blog\\textura-lisa-vs-grafiato.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "blog\\textura-projetada-fachadas.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "blog\\tinta-economica-qualy-color.html",
+        "problemas": [
+          "Schema JSON-LD ausente",
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "blog.tintasqualyquimy.html",
+        "problemas": [
+          "Google Analytics ausente",
+          "Schema JSON-LD ausente"
+        ]
+      },
+      {
+        "arquivo": "categorias\\acabamentos.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "categorias\\cidades.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "categorias\\fundos.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "categorias\\massas.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "categorias\\texturas.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "categorias\\tintas.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\aruja.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\cidade-tiradentes.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\ferraz-de-vasconcelos.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\guaianases.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\guarulhos.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaim-paulista.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaquaquecetuba\\bairro-do-limoeiro.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaquaquecetuba\\chacaras-calux.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaquaquecetuba\\estancia-maia.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaquaquecetuba\\jardim-bom-clima.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaquaquecetuba\\jardim-branca-flor.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaquaquecetuba\\jardim-dourado.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaquaquecetuba\\jardim-morumbi.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaquaquecetuba\\jardim-nova-itaqua.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaquaquecetuba\\parque-piratininga.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaquaquecetuba\\vila-virginia.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\itaquaquecetuba.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\lajeado.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\mogi-das-cruzes.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\poa.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\sao-miguel-paulista.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "cidades\\suzano.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "comercial\\entrega-dia-programado.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "comercial\\entrega-expressa-regional.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "comercial\\frete-gratis-final-de-semana.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "comercial\\frete-gratis-itaquaquecetuba.html",
+        "problemas": [
+          "Google Analytics ausente",
+          "Schema JSON-LD ausente"
+        ]
+      },
+      {
+        "arquivo": "comoaplicar\\index.html",
+        "problemas": [
+          "Google Analytics ausente",
+          "Schema JSON-LD ausente"
+        ]
+      },
+      {
+        "arquivo": "components\\footer.html",
+        "problemas": [
+          "Google Analytics ausente",
+          "Schema JSON-LD ausente"
+        ]
+      },
+      {
+        "arquivo": "components\\header.html",
+        "problemas": [
+          "Google Analytics ausente",
+          "Schema JSON-LD ausente"
+        ]
+      },
+      {
+        "arquivo": "gerador-schema-produto.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "grafiato-itaquaquecetuba.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "hub-cidades.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "index.html",
+        "problemas": [
+          "Link quebrado: href=\"categorias/",
+          "Link quebrado: href=\"produtos/",
+          "Link quebrado: href=\"cidades/",
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "indexgemini.html",
+        "problemas": [
+          "Google Analytics ausente",
+          "Schema JSON-LD ausente",
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "itaquaquecetuba\\jardim-morumbi.html",
+        "problemas": [
+          "Schema JSON-LD ausente",
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "onde-atendemos.html",
+        "problemas": [
+          "Schema JSON-LD ausente",
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "politica-de-privacidade.html",
+        "problemas": [
+          "Schema JSON-LD ausente",
+          "Link quebrado: href=\"categorias/",
+          "Link quebrado: href=\"produtos/",
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "produtos\\esmalte.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "produtos\\exemplo-embalagens.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "produtos\\grafiato.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "produtos\\liqui-brilho.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "produtos\\massa-acrilica.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "produtos\\q-color.html",
+        "problemas": [
+          "Schema JSON-LD ausente",
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "produtos\\seladora.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "produtos\\selador_acrilico.html",
+        "problemas": [
+          "Google Analytics ausente",
+          "Schema JSON-LD ausente"
+        ]
+      },
+      {
+        "arquivo": "produtos\\textura-lisa.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "produtos\\textura-projetada.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "produtos\\tinta-economica-qualy-color-uso-interno.html",
+        "problemas": [
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "sobre.html",
+        "problemas": [
+          "Schema JSON-LD ausente",
+          "Link quebrado: href=\"categorias/",
+          "Link quebrado: href=\"produtos/",
+          "Link quebrado: src=\"js/"
+        ]
+      },
+      {
+        "arquivo": "termos-de-uso.html",
+        "problemas": [
+          "Schema JSON-LD ausente",
+          "Link quebrado: href=\"categorias/",
+          "Link quebrado: href=\"produtos/",
+          "Link quebrado: src=\"js/"
+        ]
+      }
+    ],
+    "googleAnalytics": {
+      "correto": 67,
+      "incorreto": 0,
+      "ausente": 9
+    },
+    "metaTags": {
+      "title": 73,
+      "description": 63,
+      "canonical": 67,
+      "verification": 68
+    },
+    "schema": {
+      "presente": 57,
+      "ausente": 19,
+      "incorreto": 0
+    },
+    "links": {
+      "quebrados": 68,
+      "relativos": 0,
+      "absolutos": 0
+    }
+  },
+  "verificacao": {
+    "imagens": {
+      "total": 31,
+      "semAlt": 0,
+      "muitoGrandes": 24,
+      "formatosIncorretos": 0
+    },
+    "css": {
+      "total": 2,
+      "duplicados": 0,
+      "inline": 0
+    },
+    "js": {
+      "total": 10,
+      "duplicados": 2,
+      "inline": 0
+    }
+  },
+  "performance": {
+    "arquivosGrandes": [
+      {
+        "arquivo": "index.html",
+        "tamanho": 106881
+      },
+      {
+        "arquivo": "produtos\\selador_acrilico.html",
+        "tamanho": 484404
+      }
+    ],
+    "arquivosDuplicados": [],
+    "otimizacoes": []
+  },
+  "resumo": {
+    "statusGeral": "CRÍTICO",
+    "problemasCriticos": 73,
+    "problemasMedios": 0,
+    "problemasBaixos": 0,
+    "recomendacoes": [
+      "Criar páginas faltantes conforme documento mestre",
+      "Adicionar Google Analytics correto em todas as páginas",
+      "Adicionar canonical em todas as páginas",
+      "Otimizar imagens grandes (WebP, compressão)"
+    ]
+  }
+}
