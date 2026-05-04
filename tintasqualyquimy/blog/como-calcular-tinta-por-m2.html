@@ -690,321 +690,280 @@
 
   <!-- CORPO -->
   <article class="article-body">
-
-    <p>Calcular a quantidade de tinta parece simples — e é — mas a maioria das pessoas erra na hora de comprar. Resultado: ou sobra meia lata no fundo do depósito, ou falta tinta na segunda demão e a parede fica manchada. Neste guia você vai aprender a fórmula exata, ver os rendimentos reais de cada produto Qualy Quimy e usar nossa calculadora para chegar no número certo.</p>
-
-    <!-- FÓRMULA -->
-    <h2 id="formula">1. A Fórmula Correta para Calcular Tinta</h2>
-
-    <p>A lógica é simples: você precisa saber <strong>quantos metros quadrados vai pintar</strong> e <strong>qual o rendimento da tinta por litro (ou por kg)</strong>. Com esses dois números, a conta fecha.</p>
-
-    <div class="destaque-box">
-      <p><strong>Fórmula base:</strong></p>
-      <div class="formula">Litros necessários = (Área m² ÷ Rendimento m²/L) × Nº de demãos</div>
-      <p>Para produtos em kg (Grafiato, Texturas, Massas):</p>
-      <div class="formula">Kg necessários = Área m² × Rendimento kg/m² × Nº de demãos</div>
-    </div>
-
-    <h3>Como medir a área a pintar</h3>
-    <p>Meça a <strong>largura × altura</strong> de cada parede. Depois <strong>subtraia as áreas de portas e janelas</strong> (uma porta padrão tem ~1,8 m², uma janela média ~1,2 m²). Somar todas as paredes e descontar aberturas te dá a área líquida a pintar.</p>
-
-    <div class="dica-box">
-      <div class="icon">💡</div>
-      <p><strong>Dica profissional:</strong> sempre arredonde para cima e compre 10% a mais do que o cálculo indica. A diferença de lote entre duas embalagens pode gerar variação de cor — e repintar só metade da parede é um pesadelo.</p>
-    </div>
-
-    <!-- RENDIMENTOS -->
-    <h2 id="rendimentos">2. Rendimento Oficial dos Produtos Qualy Quimy</h2>
-
-    <p>Esses são os rendimentos reais dos nossos produtos — sem arredondar, sem inflacionar. Use esses números na sua calculadora.</p>
-
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Produto</th>
-            <th>Rendimento</th>
-            <th>Unidade</th>
-            <th>Embalagens</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Q Color</strong> <span class="badge-produto">Mais vendido</span></td>
-            <td><strong>8,30 m²/L</strong></td>
-            <td>Por litro</td>
-            <td>1L · 3,6L · 18L</td>
-          </tr>
-          <tr>
-            <td><strong>Seladora</strong></td>
-            <td><strong>8 m²/L</strong></td>
-            <td>Por litro</td>
-            <td>1L · 3,6L · 16L</td>
-          </tr>
-          <tr>
-            <td><strong>Esmalte</strong></td>
-            <td><strong>12 m²/L</strong></td>
-            <td>Por litro</td>
-            <td>3,6L</td>
-          </tr>
-          <tr>
-            <td><strong>Liqui Brilho</strong></td>
-            <td><strong>15 m²/L</strong></td>
-            <td>Por litro</td>
-            <td>1L · 3,6L</td>
-          </tr>
-          <tr>
-            <td><strong>Massa PVA</strong></td>
-            <td><strong>1 kg/m²</strong></td>
-            <td>Por kg</td>
-            <td>5,6kg · 25kg</td>
-          </tr>
-          <tr>
-            <td><strong>Massa Acrílica</strong></td>
-            <td><strong>1 kg/m²</strong></td>
-            <td>Por kg</td>
-            <td>5,6kg · 25kg</td>
-          </tr>
-          <tr>
-            <td><strong>Textura Lisa</strong></td>
-            <td><strong>3,1 kg/m²</strong></td>
-            <td>Por kg</td>
-            <td>5,6kg · 25kg</td>
-          </tr>
-          <tr>
-            <td><strong>Textura Projetada</strong></td>
-            <td><strong>3,1 kg/m²</strong></td>
-            <td>Por kg</td>
-            <td>25kg</td>
-          </tr>
-          <tr>
-            <td><strong>Grafiato</strong></td>
-            <td><strong>4,5 kg/m²</strong></td>
-            <td>Por kg</td>
-            <td>5,6kg · 25kg</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- CALCULADORA -->
-    <h2 id="calculadora">3. Calculadora de Tinta Online — Gratuita</h2>
-    <p>Preencha os campos abaixo e descubra exatamente quanto produto você precisa comprar.</p>
-
-    <div class="calc-inline">
-      <h3>🧮 Calcule Aqui</h3>
-      <div class="calc-grid">
-        <div class="calc-field">
-          <label for="largura">Largura da parede (m)</label>
-          <input type="number" id="largura" placeholder="Ex: 4" min="0.1" step="0.1">
-        </div>
-        <div class="calc-field">
-          <label for="altura">Altura do pé-direito (m)</label>
-          <input type="number" id="altura" placeholder="Ex: 2.80" min="0.1" step="0.1" value="2.80">
-        </div>
-        <div class="calc-field">
-          <label for="aberturas">Portas + Janelas (m²)</label>
-          <input type="number" id="aberturas" placeholder="Ex: 3" min="0" step="0.1" value="3">
-        </div>
-        <div class="calc-field">
-          <label for="produto">Produto</label>
-          <select id="produto">
-            <option value="8,30">Q Color (11 m²/L)</option>
-            <option value="8">Seladora (8 m²/L)</option>
-            <option value="12">Esmalte (12 m²/L)</option>
-            <option value="8l">Liqui Brilho (15 m²/L)</option>
-            <option value="1m">Massa PVA (1 kg/m²)</option>
-            <option value="1ma">Massa Acrílica (1 kg/m²)</option>
-            <option value="3.1t">Textura Lisa (3,1 kg/m²)</option>
-            <option value="3.1tp">Textura Projetada (3,1 kg/m²)</option>
-            <option value="4.5g">Grafiato (4,5 kg/m²)</option>
-          </select>
-        </div>
-        <div class="calc-field">
-          <label for="demaos">Número de demãos</label>
-          <select id="demaos">
-            <option value="1">1 demão</option>
-            <option value="2" selected>2 demãos</option>
-            <option value="3">3 demãos</option>
-          </select>
-        </div>
-        <div class="calc-field">
-          <label for="paredes">Número de paredes</label>
-          <input type="number" id="paredes" placeholder="Ex: 4" min="1" step="1" value="4">
-        </div>
-      </div>
-      <button class="btn-calcular" onclick="calcularTinta()">CALCULAR QUANTIDADE</button>
-      <div class="calc-resultado" id="resultado">
-        <div class="numero" id="qtd-resultado">—</div>
-        <div class="label-res" id="label-resultado">—</div>
-        <div style="margin-top:1rem; font-size:.88rem; color:rgba(255,255,255,.65)">Já incluímos 10% de margem de segurança ✓</div>
-      </div>
-    </div>
-
-    <!-- EXEMPLOS -->
-    <h2 id="exemplos">4. Exemplos Práticos por Ambiente</h2>
-    <p>Veja quanto produto você precisaria em situações reais do dia a dia.</p>
-
-    <div class="exemplo-card">
-      <div class="titulo-exemplo">🛋️ Sala de Estar — 4m × 5m, pé-direito 2,80m</div>
-      <div class="linha"><span>Área total das paredes</span><span>50,4 m²</span></div>
-      <div class="linha"><span>Desconto de 2 janelas + 1 porta</span><span>− 5,0 m²</span></div>
-      <div class="linha"><span>Área líquida</span><span>45,4 m²</span></div>
-      <div class="linha"><span>Q Color, 2 demãos (8,30 m²/L)</span><span>8,3 L</span></div>
-      <div class="linha"><span>Comprar</span><span>2× emb. 3,6L + 1× emb. 1L = 8,2L ✓</span></div>
-    </div>
-
-    <div class="exemplo-card">
-      <div class="titulo-exemplo">🛏️ Quarto — 3m × 3,5m, pé-direito 2,80m</div>
-      <div class="linha"><span>Área total das paredes</span><span>36,4 m²</span></div>
-      <div class="linha"><span>Desconto de 1 janela + 1 porta</span><span>− 3,0 m²</span></div>
-      <div class="linha"><span>Área líquida</span><span>33,4 m²</span></div>
-      <div class="linha"><span>Q Color, 2 demãos (8,30 m²/L)</span><span>6,1 L</span></div>
-      <div class="linha"><span>Comprar</span><span>2× emb. 3,6L = 7,2L ✓</span></div>
-    </div>
-
-    <div class="exemplo-card">
-      <div class="titulo-exemplo">🏠 Fachada — 8m × 3m</div>
-      <div class="linha"><span>Área total</span><span>24 m²</span></div>
-      <div class="linha"><span>Desconto de 1 portão + janelas</span><span>− 5,0 m²</span></div>
-      <div class="linha"><span>Área líquida</span><span>19 m²</span></div>
-      <div class="linha"><span>Grafiato, 1 demão (4,5 kg/m²)</span><span>85,5 kg</span></div>
-      <div class="linha"><span>Comprar</span><span>4× emb. 25kg = 100kg (sobra de reserva) ✓</span></div>
-    </div>
-
-    <!-- DEMÃOS -->
-    <h2 id="demaos">5. Quantas Demãos Usar?</h2>
-    <p>A quantidade de demãos muda tudo no cálculo — e na qualidade final da pintura. Veja a regra geral:</p>
-    <ul style="margin: 1rem 0 1.25rem 1.5rem; display:flex; flex-direction:column; gap:.6rem;">
-      <li><strong>Paredes novas sem seladora:</strong> aplicar seladora (1 demão) + 2 demãos de tinta</li>
-      <li><strong>Paredes já pintadas, cor clara sobre clara:</strong> 2 demãos são suficientes</li>
-      <li><strong>Cor escura sobre cor clara (ou vice-versa):</strong> 3 demãos — sempre</li>
-      <li><strong>Grafiato e Texturas:</strong> 1 demão, aplicação única (mas com maior consumo por m²)</li>
-      <li><strong>Massa PVA/Acrílica:</strong> 2 demãos, lixar entre elas</li>
-    </ul>
-
-    <div class="dica-box">
-      <div class="icon">⚠️</div>
-      <p><strong>Atenção:</strong> aplicar menos demãos do que o recomendado para "economizar" tinta é o erro mais caro que existe. A tinta vai desgastar mais rápido e você vai repintar em 12 meses. Faça certo da primeira vez.</p>
-    </div>
-
-    <!-- CTA MEIO DO ARTIGO -->
-    <div class="cta-produto">
-      <h3>Já tem o m² em mãos?<br>A gente faz o cálculo por você.</h3>
-      <p>Mande o tamanho das suas paredes pelo WhatsApp e nossa equipe indica o produto certo e a quantidade exata — sem custo, sem compromisso.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/5511954950044?text=Olá!%20Quero%20calcular%20a%20quantidade%20de%20tinta%20para%20minha%20obra" class="btn-wpp-cta" target="_blank" rel="noopener">
-          💬 Calcular pelo WhatsApp
-        </a>
-        <a href="../produtos/q-color.html" class="btn-ver-produto">Ver Produtos</a>
-      </div>
-    </div>
-
-    <!-- ERROS -->
-    <h2 id="erros">6. Os 5 Erros Mais Comuns ao Calcular Tinta</h2>
-
-    <h3>❌ Erro 1: Usar o rendimento máximo do fabricante</h3>
-    <p>Muitos fabricantes divulgam rendimentos em condições ideais de laboratório — superfície lisa, temperatura controlada, aplicação perfeita. No mundo real, o rendimento real é 10 a 20% menor. Use sempre os rendimentos que declaramos neste artigo — são valores reais de campo.</p>
-
-    <h3>❌ Erro 2: Esquecer de descontar as aberturas</h3>
-    <p>Calcular a área total das paredes sem descontar portas e janelas gera desperdício de 8 a 15% dependendo do ambiente. Sempre meça e subtraia as aberturas.</p>
-
-    <h3>❌ Erro 3: Não considerar o estado da parede</h3>
-    <p>Paredes muito porosas, ásperas ou antigas absorvem mais tinta. Se a parede é nova ou áspera, adicione 20% ao total calculado.</p>
-
-    <h3>❌ Erro 4: Misturar lotes diferentes</h3>
-    <p>Se você perceber no meio da obra que faltou tinta e comprar um novo lote, pode aparecer uma diferença sutil de cor. Para obras grandes, compre tudo de uma vez — e compre um pouco a mais.</p>
-
-    <h3>❌ Erro 5: Ignorar a diluição</h3>
-    <p>Algumas tintas permitem diluição em água (até 10–20%). Se você diluir sem compensar na quantidade, vai faltar produto. Sempre faça o cálculo com base no volume final, não no da embalagem.</p>
-
-    <!-- FAQ -->
-    <h2 id="faq">7. Perguntas Frequentes</h2>
-    <div class="faq-section">
-
-      <div class="faq-item">
-        <button class="faq-pergunta" onclick="toggleFaq(this)">
-          Quantos litros de tinta rendem para 1 m²?
-          <span class="seta">▾</span>
-        </button>
-        <div class="faq-resposta">
-          Depende do produto. O Q Color Qualy Quimy rende 8,30 m²/L, ou seja, 1 litro cobre 8,30 m² em 1 demão. Para 2 demãos em 1 m², você usa cerca de 0,18 L — menos de um quinto de litro por m² de parede.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-pergunta" onclick="toggleFaq(this)">
-          Quantas latas de tinta para pintar uma casa de 60 m²?
-          <span class="seta">▾</span>
-        </button>
-        <div class="faq-resposta">
-          Uma casa de 60 m² tem aproximadamente 130–160 m² de área de parede interna (considerando pé-direito de 2,80 m e descontando aberturas). Com 2 demãos de Q Color (8,30 m²/L), você precisa de cerca de 24 a 30 litros — o equivalente a 2 embalagens de 18L, com folga de segurança.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-pergunta" onclick="toggleFaq(this)">
-          O Grafiato tem o mesmo cálculo que a tinta comum?
-          <span class="seta">▾</span>
-        </button>
-        <div class="faq-resposta">
-          Não. O Grafiato é medido em kg/m², não em litros. O Grafiato Qualy Quimy consome 4,5 kg por m² em 1 demão. Para 10 m² de parede, você precisa de 45 kg — o equivalente a 2 embalagens de 25 kg, com sobra mínima de reserva.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-pergunta" onclick="toggleFaq(this)">
-          Qual o rendimento da Textura Lisa vs Grafiato?
-          <span class="seta">▾</span>
-        </button>
-        <div class="faq-resposta">
-          A Textura Lisa consome 3,1 kg/m², enquanto o Grafiato consome 4,5 kg/m². A textura lisa é mais econômica por m², mas o grafiato cria um acabamento mais encorpado e tridimensional — para fachadas expostas, o grafiato tem maior durabilidade.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-pergunta" onclick="toggleFaq(this)">
-          Preciso de seladora antes de pintar paredes novas?
-          <span class="seta">▾</span>
-        </button>
-        <div class="faq-resposta">
-          Sim. Paredes novas (reboco, gesso) são muito porosas e absorvem tinta de forma irregular. A Seladora Qualy Quimy sela os poros, melhora a aderência e reduz o consumo total de tinta — no final, usar seladora <em>economiza</em> tinta, não desperdiça.
-        </div>
-      </div>
-
-    </div>
-
-    <!-- CTA FINAL -->
-    <div class="cta-produto" style="margin-top:3rem;">
-      <h3>Pronto para comprar?<br>Entregamos em Itaquaquecetuba e Região.</h3>
-      <p>Frete grátis e entrega rápida. Todos os produtos deste guia estão disponíveis na Qualy Quimy.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/5511954950044?text=Olá!%20Quero%20pedir%20tinta%20para%20minha%20obra.%20Vi%20o%20guia%20de%20cálculo%20de%20m²" class="btn-wpp-cta" target="_blank" rel="noopener">
-          💬 Pedir pelo WhatsApp
-        </a>
-        <a href="https://shopee.com.br/qualyquimy" class="btn-ver-produto" target="_blank" rel="noopener">Ver na Shopee</a>
-      </div>
-    </div>
-
-    <!-- RELACIONADOS -->
-    <div class="relacionados">
-      <h3>Leia também</h3>
-      <div class="rel-grid">
-        <a href="massa-pva-ou-acrilica-qual-usar.html" class="rel-card">
-          <div class="cat">Produtos</div>
-          <h4>Massa PVA ou Acrílica: qual é a certa para sua obra?</h4>
-        </a>
-        <a href="quando-usar-seladora-antes-de-pintar.html" class="rel-card">
-          <div class="cat">Técnico</div>
-          <h4>Seladora: quando usar e por que é obrigatória em parede nova</h4>
-        </a>
-        <a href="../produtos/q-color.html" class="rel-card">
-          <div class="cat">Produto</div>
-          <h4>Q Color — Tinta Econômica Qualy Quimy: Uso Interno</h4>
-        </a>
-      </div>
-    </div>
-
+    
+                <h2>Como Calcular Tinta por m² - Guia Completo 2026</h2>
+                <p>Calcular a quantidade de tinta necessária é fundamental para o sucesso de qualquer projeto de pintura. Um cálculo correto evita desperdício, retrabalho e garante economia. Este guia completo ensinará tudo sobre cálculo de tinta por metro quadrado.</p>
+                
+                <h2>Fatores que Influenciam o Consumo de Tinta</h2>
+                
+                <h3>Tipo de Superfície</h3>
+                <ul>
+                    <li><strong>Paredes lisas:</strong> Menor consumo</li>
+                    <li><strong>Paredes rugosas:</strong> 20-30% a mais</li>
+                    <li><strong>Gesso:</strong> Consumo médio</li>
+                    <li><strong>Concreto:</strong> 25-35% a mais</li>
+                    <li><strong>Madeira:</strong> 30-40% a mais</li>
+                    <li><strong>Metal:</strong> Menor consumo</li>
+                </ul>
+                
+                <h3>Tipo de Tinta</h3>
+                <ul>
+                    <li><strong>Tinta látex PVA:</strong> 10-12m²/L/demão</li>
+                    <li><strong>Tinta acrílica:</strong> 8-10m²/L/demão</li>
+                    <li><strong>Tinta econômica:</strong> 8m²/L/demão</li>
+                    <li><strong>Tinta premium:</strong> 12-15m²/L/demão</li>
+                    <li><strong>Esmalte:</strong> 10-12m²/L/demão</li>
+                </ul>
+                
+                <h3>Número de Demãos</h3>
+                <ul>
+                    <li><strong>1 demão:</strong> Apenas repintura sobre cor similar</li>
+                    <li><strong>2 demãos:</strong> Padrão para maioria dos casos</li>
+                    <li><strong>3 demãos:</strong> Mudança drástica de cor</li>
+                    <li><strong>4+ demãos:</strong> Cores muito escuras sobre claras</li>
+                </ul>
+                
+                <h2>Cálculo Básico por Ambiente</h2>
+                
+                <h3>Quarto Padrão (3x4m)</h3>
+                <ul>
+                    <li><strong>Área das paredes:</strong> 28m²</li>
+                    <li><strong>Área do teto:</strong> 12m²</li>
+                    <li><strong>Área total:</strong> 40m²</li>
+                    <li><strong>Com 2 demãos:</strong> 80m²</li>
+                    <li><strong>Tinta acrílica:</strong> 80 ÷ 9 = 8,9L (9L)</li>
+                    <li><strong>Tinta econômica:</strong> 80 ÷ 8 = 10L</li>
+                </ul>
+                
+                <h3>Sala de Estar (4x5m)</h3>
+                <ul>
+                    <li><strong>Área das paredes:</strong> 36m²</li>
+                    <li><strong>Área do teto:</strong> 20m²</li>
+                    <li><strong>Área total:</strong> 56m²</li>
+                    <li><strong>Com 2 demãos:</strong> 112m²</li>
+                    <li><strong>Tinta acrílica:</strong> 112 ÷ 9 = 12,4L (13L)</li>
+                    <li><strong>Tinta econômica:</strong> 112 ÷ 8 = 14L</li>
+                </ul>
+                
+                <h3>Cozinha Pequena (3x3m)</h3>
+                <ul>
+                    <li><strong>Área das paredes:</strong> 12m² (descontando armários)</li>
+                    <li><strong>Área do teto:</strong> 9m²</li>
+                    <li><strong>Área total:</strong> 21m²</li>
+                    <li><strong>Com 2 demãos:</strong> 42m²</li>
+                    <li><strong>Tinta acrílica:</strong> 42 ÷ 9 = 4,7L (5L)</li>
+                    <li><strong>Tinta econômica:</strong> 42 ÷ 8 = 5,3L (6L)</li>
+                </ul>
+                
+                <h2>Cálculo Avançado - Considerando Descontos</h2>
+                
+                <h3>Descontos Padronizados</h3>
+                <ul>
+                    <li><strong>Portas:</strong> 1,5m² cada (2m² com batentes)</li>
+                    <li><strong>Janelas:</strong> 1,2m² cada (1,5m² com batentes)</li>
+                    <li><strong>Armários embutidos:</strong> Área total</li>
+                    <li><strong>Azulejos:</strong> Área total</li>
+                    <li><strong>Painéis:</strong> Área total</li>
+                </ul>
+                
+                <h3>Cálculo Exemplo Completo</h3>
+                <p><strong>Apartamento: 2 quartos, sala, cozinha, banheiro</strong></p>
+                <ul>
+                    <li><strong>Quarto 1:</strong> 40m² - 2m² (porta/janela) = 38m²</li>
+                    <li><strong>Quarto 2:</strong> 40m² - 2m² (porta/janela) = 38m²</li>
+                    <li><strong>Sala:</strong> 56m² - 3m² (portas/janelas) = 53m²</li>
+                    <li><strong>Cozinha:</strong> 21m² - 8m² (armários) = 13m²</li>
+                    <li><strong>Banheiro:</strong> 15m² - 6m² (azulejos) = 9m²</li>
+                    <li><strong>Área total pintável:</strong> 151m²</li>
+                    <li><strong>Com 2 demãos:</strong> 302m²</li>
+                    <li><strong>Tinta acrílica:</strong> 302 ÷ 9 = 33,6L (34L)</li>
+                    <li><strong>Tinta econômica:</strong> 302 ÷ 8 = 37,8L (38L)</li>
+                </ul>
+                
+                <h2>Ferramentas e Materiais para Cálculo</h2>
+                
+                <h3>Equipamentos de Medição:</h3>
+                <ul>
+                    <li><strong>Trena metálica:</strong> R$ 20-40</li>
+                    <li><strong>Laser medidor:</strong> R$ 80-150</li>
+                    <li><strong>Papel e caneta:</strong> R$ 5-10</li>
+                    <li><strong>Calculadora:</strong> R$ 15-30</li>
+                    <li><strong>Aplicativo de cálculo:</strong> R$ 10-30</li>
+                </ul>
+                
+                <h3>Como Medir Corretamente:</h3>
+                <ul>
+                    <li>Me altura x largura de cada parede</li>
+                    <li>Me comprimento x largura do teto</li>
+                    <li>Me área de portas e janelas</li>
+                    <li>Some todas as áreas</li>
+                    <li>Subtraia áreas não pintáveis</li>
+                    <li>Multiplique pelo número de demãos</li>
+                </ul>
+                
+                <h2>Rendimento por Tipo de Produto</h2>
+                
+                <h3>Tintas para Paredes</h3>
+                <table border="1" style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <th style="padding: 10px; background: #f0f0f0;">Produto</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Rendimento m²/L</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Preço/L</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Custo/m²</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Tinta Econômica</td>
+                        <td style="padding: 10px;">8m²</td>
+                        <td style="padding: 10px;">R$ 25-35</td>
+                        <td style="padding: 10px;">R$ 3,1-4,4</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Tinta PVA</td>
+                        <td style="padding: 10px;">10-12m²</td>
+                        <td style="padding: 10px;">R$ 35-50</td>
+                        <td style="padding: 10px;">R$ 2,9-5,0</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Tinta Acrílica</td>
+                        <td style="padding: 10px;">8-10m²</td>
+                        <td style="padding: 10px;">R$ 45-65</td>
+                        <td style="padding: 10px;">R$ 4,5-8,1</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Tinta Premium</td>
+                        <td style="padding: 10px;">12-15m²</td>
+                        <td style="padding: 10px;">R$ 60-90</td>
+                        <td style="padding: 10px;">R$ 4,0-7,5</td>
+                    </tr>
+                </table>
+                
+                <h3>Outros Produtos</h3>
+                <table border="1" style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <th style="padding: 10px; background: #f0f0f0;">Produto</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Rendimento m²/L</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Preço/L</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Custo/m²</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Esmalte</td>
+                        <td style="padding: 10px;">10-12m²</td>
+                        <td style="padding: 10px;">R$ 40-60</td>
+                        <td style="padding: 10px;">R$ 3,3-6,0</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Seladora</td>
+                        <td style="padding: 10px;">10-15m²</td>
+                        <td style="padding: 10px;">R$ 30-45</td>
+                        <td style="padding: 10px;">R$ 2,0-4,5</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Massa Correr</td>
+                        <td style="padding: 10px;">8-10m²/kg</td>
+                        <td style="padding: 10px;">R$ 8-15/kg</td>
+                        <td style="padding: 10px;">R$ 0,8-1,9</td>
+                    </tr>
+                </table>
+                
+                <h2>Cálculo para Projetos Específicos</h2>
+                
+                <h3>Casa Completa (100m²)</h3>
+                <ul>
+                    <li><strong>Área total paredes:</strong> 250m²</li>
+                    <li><strong>Área tetos:</strong> 100m²</li>
+                    <li><strong>Descontos:</strong> 50m² (portas/janelas)</li>
+                    <li><strong>Área pintável:</strong> 300m²</li>
+                    <li><strong>Com 2 demãos:</strong> 600m²</li>
+                    <li><strong>Tinta econômica:</strong> 600 ÷ 8 = 75L</li>
+                    <li><strong>Tinta acrílica:</strong> 600 ÷ 9 = 67L</li>
+                    <li><strong>Custo econômico:</strong> 75L x R$ 30 = R$ 2.250</li>
+                    <li><strong>Custo acrílico:</strong> 67L x R$ 55 = R$ 3.685</li>
+                </ul>
+                
+                <h3>Edifício Residencial (10 andares)</h3>
+                <ul>
+                    <li><strong>Área por andar:</strong> 200m²</li>
+                    <li><strong>Área total:</strong> 2.000m²</li>
+                    <li><strong>Descontos:</strong> 300m²</li>
+                    <li><strong>Área pintável:</strong> 1.700m²</li>
+                    <li><strong>Com 2 demãos:</strong> 3.400m²</li>
+                    <li><strong>Tinta acrílica:</strong> 3.400 ÷ 9 = 378L</li>
+                    <li><strong>Custo total:</strong> 378L x R$ 55 = R$ 20.790</li>
+                </ul>
+                
+                <h2>Dicas para Economizar Tinta</h2>
+                
+                <h3>Planejamento:</h3>
+                <ul>
+                    <li>Calcule com precisão para evitar desperdício</li>
+                    <li>Compre 10% a mais para segurança</li>
+                    <li>Use seladora para reduzir consumo</li>
+                    <li>Escolha produtos de bom rendimento</li>
+                </ul>
+                
+                <h3>Aplicação:</h3>
+                <ul>
+                    <li>Use ferramentas adequadas</li>
+                    <li>Aplique camadas finas e uniformes</li>
+                    <li>Evite escorrimentos</li>
+                    <li>Limpe bem as ferramentas</li>
+                </ul>
+                
+                <h3>Armazenamento:</h3>
+                <ul>
+                    <li>Guarde sobras corretamente</li>
+                    <li>Use para retocar futuros</li>
+                    <li>Identifique cada lata</li>
+                    <li>Armazene em local adequado</li>
+                </ul>
+                
+                <h2>Erros Comuns no Cálculo</h2>
+                
+                <h3>Esquecer Descontos:</h3>
+                <ul>
+                    <li><strong>Erro:</strong> Não descontar portas e janelas</li>
+                    <li><strong>Consequência:</strong> Compra excessiva de tinta</li>
+                    <li><strong>Solução:</strong> Meça todas as aberturas</li>
+                </ul>
+                
+                <h3>Ignorar Tipo de Superfície:</h3>
+                <ul>
+                    <li><strong>Erro:</strong> Usar mesmo rendimento para todas</li>
+                    <li><strong>Consequência:</strong> Falta de tinta</li>
+                    <li><strong>Solução:</strong> Ajuste conforme superfície</li>
+                </ul>
+                
+                <h3>Não Considerar Demãos:</h3>
+                <ul>
+                    <li><strong>Erro:</strong> Calcular apenas 1 demão</li>
+                    <li><strong>Consequência:</strong> Falta de produto</li>
+                    <li><strong>Solução:</strong> Multiplique pelo número de demãos</li>
+                </ul>
+                
+                <h2>Calculadoras e Apps Úteis</h2>
+                
+                <h3>Aplicativos Recomendados:</h3>
+                <ul>
+                    <li><strong>Calculadora de Tinta:</strong> R$ 10-20</li>
+                    <li><strong>Medidor de Área:</strong> R$ 15-30</li>
+                    <li><strong>Planejador de Pintura:</strong> R$ 20-40</li>
+                    <li><strong>Apps gratuitos:</strong> Disponíveis online</li>
+                </ul>
+                
+                <h3>Como Usar:</h3>
+                <ul>
+                    <li>Insira medidas do ambiente</li>
+                    <li>Selecione tipo de tinta</li>
+                    <li>Defina número de demãos</li>
+                    <li>Obtenha cálculo automático</li>
+                    <li>Compare custos</li>
+                </ul>
+                
+                <h2>Considerações Finais</h2>
+                <p>Calcular corretamente a quantidade de tinta é o primeiro passo para uma pintura de sucesso. Um bom cálculo economiza dinheiro, tempo e garante resultado profissional.</p>
+                
+                <p><strong>Dica final:</strong> Sempre compre um pouco a mais (10%) para segurança. É melhor sobrar um pouco do que faltar no meio do trabalho.</p>
+            
   </article>
 </div>
 

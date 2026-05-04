@@ -1909,6 +1909,612 @@ function enriquecerBlogTexturaProjetada() {
     return conteudoEnriquecido;
 }
 
+function enriquecerBlogSeladora() {
+    console.log('\n🎨 ENRIQUECENDO: seladora-quando-usar.html');
+    
+    const conteudoEnriquecido = `
+                <h2>O que é Seladora e Para Que Serve?</h2>
+                <p>Seladora é um produto fundamental no processo de pintura que cria uma camada de preparação entre a superfície e a tinta final. Sua função é selar porosidades, uniformizar a absorção e garantir maior aderência e durabilidade da pintura.</p>
+                
+                <h2>Tipos de Seladora</h2>
+                
+                <h3>Seladora Acrílica</h3>
+                <ul>
+                    <li><strong>Composição:</strong> Resina acrílica em base água</li>
+                    <li><strong>Indicação:</strong> Paredes internas e tetos</li>
+                    <li><strong>Vantagem:</strong> Secagem rápida, baixo odor</li>
+                    <li><strong>Rendimento:</strong> 12-15m² por litro/demão</li>
+                </ul>
+                
+                <h3>Seladora PVA</h3>
+                <ul>
+                    <li><strong>Composição:</strong> Resina PVA em base água</li>
+                    <li><strong>Indicação:</strong> Superfícies internas porosas</li>
+                    <li><strong>Vantagem:</strong> Excelente custo-benefício</li>
+                    <li><strong>Rendimento:</strong> 10-12m² por litro/demão</li>
+                </ul>
+                
+                <h3>Seladora para Madeira</h3>
+                <ul>
+                    <li><strong>Composição:</strong> Resina especial para madeira</li>
+                    <li><strong>Indicação:</strong> Móveis, portas, janelas</li>
+                    <li><strong>Vantagem:</strong> Protege contra umidade</li>
+                    <li><strong>Rendimento:</strong> 8-10m² por litro/demão</li>
+                </ul>
+                
+                <h3>Seladora para Metal</h3>
+                <ul>
+                    <li><strong>Composição:</strong> Antiferrugem com resina</li>
+                    <li><strong>Indicação:</strong> Estruturas metálicas</li>
+                    <li><strong>Vantagem:</strong> Previne corrosão</li>
+                    <li><strong>Rendimento:</strong> 10-12m² por litro/demão</li>
+                </ul>
+                
+                <h2>Quando Usar Seladora?</h2>
+                
+                <h3>✅ Situações Obrigatórias:</h3>
+                <ul>
+                    <li><strong>Superfícies novas:</strong> Gesso, concreto, madeira</li>
+                    <li><strong>Paredes muito porosas:</strong> Absorvem muita tinta</li>
+                    <li><strong>Mudança de cor drastical:</strong> Escuro para claro</li>
+                    <li><strong>Superfícies manchadas:</strong> Nicotina, umidade</li>
+                    <li><strong>Reformas:</strong> Pintura sobre pintura antiga</li>
+                </ul>
+                
+                <h3>✅ Situações Recomendadas:</h3>
+                <ul>
+                    <li><strong>Economia de tinta:</strong> Reduz consumo 20-30%</li>
+                    <li><strong>Uniformização:</strong> Acabamento mais profissional</li>
+                    <li><strong>Durabilidade:</strong> Aumenta vida útil da pintura</li>
+                    <li><strong>Proteção:</strong> Barreira contra umidade</li>
+                </ul>
+                
+                <h3>❌ Quando Não é Necessário:</h3>
+                <ul>
+                    <li><strong>Superfícies já seladas:</strong> Pintura recente em bom estado</li>
+                    <li><strong>Retoque pequeno:</strong> Áreas mínimas</li>
+                    <li><strong>Superfícies não porosas:</strong> Azulejos, metais pintados</li>
+                    <li><strong>Pinturas especiais:</strong> Algumas tintas já contêm selador</li>
+                </ul>
+                
+                <h2>Onde Aplicar Seladora?</h2>
+                
+                <h3>Áreas Internas:</h3>
+                <ul>
+                    <li><strong>Paredes de gesso:</strong> Essencial</li>
+                    <li><strong>Tetos:</strong> Recomendado</li>
+                    <li><strong>Reboques novos:</strong> Obrigatório</li>
+                    <li><strong>Madeiras internas:</strong> Proteção</li>
+                    <li><strong>Superfícies reparadas:</strong> Uniformização</li>
+                </ul>
+                
+                <h3>Áreas Externas:</h3>
+                <ul>
+                    <li><strong>Fachadas novas:</strong> Fundamental</li>
+                    <li><strong>Muros não pintados:</strong> Necessário</li>
+                    <li><strong>Estruturas de madeira:</strong> Proteção climática</li>
+                    <li><strong>Metais expostos:</strong> Antiferrugem</li>
+                </ul>
+                
+                <h2>Ferramentas Necessárias</h2>
+                
+                <h3>Equipamentos Básicos:</h3>
+                <ul>
+                    <li><strong>Rolo de espuma 9mm:</strong> R$ 15-25</li>
+                    <li><strong>Trincha 25mm:</strong> R$ 8-15</li>
+                    <li><strong>Bandeja de plástico:</strong> R$ 5-10</li>
+                    <li><strong>Fita crepe:</strong> R$ 8-15</li>
+                    <li><strong>Lixa 100-120:</strong> R$ 5-10</li>
+                    <li><strong>Pano de limpeza:</strong> R$ 5-8</li>
+                </ul>
+                
+                <h3>Equipamentos de Preparo:</h3>
+                <ul>
+                    <li><strong>Recipiente para mistura:</strong> R$ 10-20</li>
+                    <li><strong>Misturador:</strong> R$ 15-30</li>
+                    <li><strong>Funil:</strong> R$ 5-10</li>
+                    <li><strong>Vassoura:</strong> R$ 15-25</li>
+                </ul>
+                
+                <h2>Passo a Passo Detalhado</h2>
+                
+                <h3>1. Preparação da Superfície</h3>
+                <p><strong>Tempo estimado:</strong> 2-3 horas</p>
+                <ul>
+                    <li>Limpe completamente a superfície</li>
+                    <li>Remova poeira, gordura e resíduos</li>
+                    <li>Raspe áreas soltas ou descascadas</li>
+                    <li>Lixe para uniformizar</li>
+                    <li>Aspire todo o pó</li>
+                    <li>Limpe com pano úmido</li>
+                    <li>Aguarde secagem total</li>
+                </ul>
+                
+                <h3>2. Preparação da Seladora</h3>
+                <p><strong>Tempo estimado:</strong> 10-15 minutos</p>
+                <ul>
+                    <li>Misture bem o produto</li>
+                    <li>Verifique consistência ideal</li>
+                    <li>Dilua se necessário (5-10% água)</li>
+                    <li>Coe para remover impurezas</li>
+                    <li>Prepare quantidade adequada</li>
+                </ul>
+                
+                <h3>3. Aplicação da Primeira Demão</h3>
+                <p><strong>Tempo estimado:</strong> 1-2 horas por ambiente</p>
+                <ul>
+                    <li>Proteja áreas adjacentes</li>
+                    <li>Use trincha para cantos e detalhes</li>
+                    <li>Use rolo para áreas grandes</li>
+                    <li>Aplique camada fina e uniforme</li>
+                    <li>Mantenha o "filme molhado"</li>
+                    <li>Evite excessos e escorrimentos</li>
+                </ul>
+                
+                <h3>4. Secagem e Verificação</h3>
+                <p><strong>Tempo estimado:</strong> 2-4 horas</p>
+                <ul>
+                    <li>Aguarde secagem ao toque</li>
+                    <li>Verifique cobertura uniforme</li>
+                    <li>Identifique áreas porosas</li>
+                    <li>Teste absorção com água</li>
+                    <li>Decida necessidade de segunda demão</li>
+                </ul>
+                
+                <h3>5. Segunda Demão (se necessário)</h3>
+                <p><strong>Tempo estimado:</strong> 1-2 horas</p>
+                <ul>
+                    <li>Aplique apenas se necessário</li>
+                    <li>Use mesma técnica da primeira</li>
+                    <li>Mantenha espessura fina</li>
+                    <li>Respeite tempo de secagem</li>
+                </ul>
+                
+                <h3>6. Preparo para Pintura Final</h3>
+                <p><strong>Tempo estimado:</strong> 30-60 minutos</p>
+                <ul>
+                    <li>Aguarde cura mínima 4 horas</li>
+                    <li>Lixe levemente se necessário</li>
+                    <li>Remova todo o pó</li>
+                    <li>Verifique superfície lisa</li>
+                    <li>Prossiga com pintura final</li>
+                </ul>
+                
+                <h2>Rendimento e Cálculo</h2>
+                
+                <h3>Rendimento por Tipo:</h3>
+                <ul>
+                    <li><strong>Seladora acrílica:</strong> 12-15m²/L/demão</li>
+                    <li><strong>Seladora PVA:</strong> 10-12m²/L/demão</li>
+                    <li><strong>Seladora madeira:</strong> 8-10m²/L/demão</li>
+                    <li><strong>Seladora metal:</strong> 10-12m²/L/demão</li>
+                </ul>
+                
+                <h3>Cálculo Prático:</h3>
+                <p><strong>Exemplo: Sala de 20m² (paredes)</strong></p>
+                <ul>
+                    <li>Área total: 20m²</li>
+                    <li>Com 1 demão: 20m²</li>
+                    <li>Seladora acrílica: 20 ÷ 13 = 1,5L (2L)</li>
+                    <li>Seladora PVA: 20 ÷ 11 = 1,8L (2L)</li>
+                    <li><strong>Total: 2 litros</strong></li>
+                </ul>
+                
+                <h2>Cuidados Especiais</h2>
+                
+                <h3>Condições Ideais de Aplicação:</h3>
+                <ul>
+                    <li><strong>Temperatura:</strong> 18-25°C</li>
+                    <li><strong>Umidade:</strong> Abaixo de 70%</li>
+                    <li><strong>Ventilação:</strong> Boa circulação de ar</li>
+                    <li><strong>Superfície:</strong> Limpa e seca</li>
+                    <li><strong>Proteção:</strong> Cubra móveis e pisos</li>
+                </ul>
+                
+                <h3>Quando NÃO Aplicar:</h3>
+                <ul>
+                    <li><strong>Superfícies molhadas:</strong> Não adere</li>
+                    <li><strong>Umidade acima 80%:</strong> Compromete secagem</li>
+                    <li><strong>Temperatura abaixo 15°C:</strong> Secagem lenta</li>
+                    <li><strong>Chuva:</strong> Áreas externas</li>
+                    <li><strong>Superfícies oleosas:</strong> Precisa limpeza</li>
+                </ul>
+                
+                <h2>Tempo de Secagem e Cura</h2>
+                
+                <h3>Cronograma de Secagem:</h3>
+                <ul>
+                    <li><strong>Ao toque:</strong> 30-60 minutos</li>
+                    <li><strong>Para manuseio:</strong> 2-4 horas</li>
+                    <li><strong>Segunda demão:</strong> 4-6 horas</li>
+                    <li><strong>Pintura final:</strong> 4-8 horas</li>
+                    <li><strong>Cura completa:</strong> 24-48 horas</li>
+                </ul>
+                
+                <h3>Fatores que Influenciam:</h3>
+                <ul>
+                    <li><strong>Temperatura ambiente:</strong> Mais quente = mais rápido</li>
+                    <li><strong>Umidade relativa:</strong> Mais úmido = mais lento</li>
+                    <li><strong>Ventilação:</strong> Melhor = mais rápido</li>
+                    <li><strong>Espessura da camada:</strong> Mais grossa = mais tempo</li>
+                </ul>
+                
+                <h2>Benefícios da Seladora</h2>
+                
+                <h3>Economia:</h3>
+                <ul>
+                    <li><strong>Redução de consumo:</strong> 20-30% menos tinta</li>
+                    <li><strong>Menos demãos:</strong> Melhor cobertura</li>
+                    <li><strong>Durabilidade:</strong> Pintura dura mais</li>
+                    <li><strong>Menos retrabalho:</strong> Acabamento perfeito</li>
+                </ul>
+                
+                <h3>Qualidade:</h3>
+                <ul>
+                    <li><strong>Uniformidade:</strong> Cor consistente</li>
+                    <li><strong>Aderência:</strong> Tinta não descasca</li>
+                    <li><strong>Proteção:</strong> Barreira contra umidade</li>
+                    <li><strong>Acabamento:</strong> Profissional</li>
+                </ul>
+                
+                <h2>Problemas Comuns e Soluções</h2>
+                
+                <h3>Absorção Desigual:</h3>
+                <ul>
+                    <li><strong>Causa:</strong> Superfície mal preparada</li>
+                    <li><strong>Solução:</strong> Lixe e reaplique</li>
+                    <li><strong>Prevenção:</strong> Preparo adequado</li>
+                </ul>
+                
+                <h3>Bolhas:</h3>
+                <ul>
+                    <li><strong>Causa:</strong> Umidade ou aplicação errada</li>
+                    <li><strong>Solução:</strong> Lixe e reaplique</li>
+                    <li><strong>Prevenção:</strong> Controle umidade</li>
+                </ul>
+                
+                <h3>Escorrimento:</h3>
+                <ul>
+                    <li><strong>Causa:</strong> Demão muito grossa</li>
+                    <li><strong>Solução:</strong> Lixe e aplique mais fino</li>
+                    <li><strong>Prevenção:</strong> Camadas finas</li>
+                </ul>
+                
+                <h2>Custos Estimados (2026)</h2>
+                
+                <h3>Materiais por m²:</h3>
+                <ul>
+                    <li><strong>Seladora acrílica:</strong> R$ 8-12/m²</li>
+                    <li><strong>Seladora PVA:</strong> R$ 6-10/m²</li>
+                    <li><strong>Seladora madeira/metal:</strong> R$ 10-15/m²</li>
+                    <li><strong>Ferramentas:</strong> R$ 2-4/m²</li>
+                    <li><strong>Total materiais:</strong> R$ 16-31/m²</li>
+                </ul>
+                
+                <h3>Mão de Obra:</h3>
+                <ul>
+                    <li><strong>Pintor profissional:</strong> R$ 15-25/m²</li>
+                    <li><strong>Ajudante:</strong> R$ 8-15/m²</li>
+                    <li><strong>Total mão de obra:</strong> R$ 23-40/m²</li>
+                </ul>
+                
+                <h3>Custo Total por m²:</h3>
+                <ul>
+                    <li><strong>Faixa econômica:</strong> R$ 40-60/m²</li>
+                    <li><strong>Faixa padrão:</strong> R$ 60-80/m²</li>
+                    <li><strong>Faixa premium:</strong> R$ 80-120/m²</li>
+                </ul>
+                
+                <h2>Dicas Profissionais</h2>
+                
+                <h3>Dicas de Aplicação:</h3>
+                <ul>
+                    <li>Teste em área pequena primeiro</li>
+                    <li>Use produtos de qualidade</li>
+                    <li>Mantenha ambiente ventilado</li>
+                    <li>Respeite tempos de secagem</li>
+                    <li>Proteja bem as áreas</li>
+                </ul>
+                
+                <h3>Dicas de Qualidade:</h3>
+                <ul>
+                    <li>Não pule o preparo</li>
+                    <li>Use ferramentas adequadas</li>
+                    <li>Meça bem os materiais</li>
+                    <li>Trabalhe com paciência</li>
+                    <li>Verifique resultado antes de continuar</li>
+                </ul>
+                
+                <h2>Considerações Finais</h2>
+                <p>A seladora é um investimento que compensa. Embora pareça um passo extra, ela economiza tempo, dinheiro e garante um resultado profissional duradouro. A economia de tinta e a qualidade final justificam totalmente seu uso.</p>
+                
+                <p><strong>Regra de ouro:</strong> Quando em dúvida, use seladora. O custo adicional é mínimo comparado aos benefícios de uma pintura perfeita e duradoura.</p>
+            `;
+    
+    return conteudoEnriquecido;
+}
+
+function enriquecerBlogCalculoTinta() {
+    console.log('\n🎨 ENRIQUECENDO: como-calcular-tinta-por-m2.html');
+    
+    const conteudoEnriquecido = `
+                <h2>Como Calcular Tinta por m² - Guia Completo 2026</h2>
+                <p>Calcular a quantidade de tinta necessária é fundamental para o sucesso de qualquer projeto de pintura. Um cálculo correto evita desperdício, retrabalho e garante economia. Este guia completo ensinará tudo sobre cálculo de tinta por metro quadrado.</p>
+                
+                <h2>Fatores que Influenciam o Consumo de Tinta</h2>
+                
+                <h3>Tipo de Superfície</h3>
+                <ul>
+                    <li><strong>Paredes lisas:</strong> Menor consumo</li>
+                    <li><strong>Paredes rugosas:</strong> 20-30% a mais</li>
+                    <li><strong>Gesso:</strong> Consumo médio</li>
+                    <li><strong>Concreto:</strong> 25-35% a mais</li>
+                    <li><strong>Madeira:</strong> 30-40% a mais</li>
+                    <li><strong>Metal:</strong> Menor consumo</li>
+                </ul>
+                
+                <h3>Tipo de Tinta</h3>
+                <ul>
+                    <li><strong>Tinta látex PVA:</strong> 10-12m²/L/demão</li>
+                    <li><strong>Tinta acrílica:</strong> 8-10m²/L/demão</li>
+                    <li><strong>Tinta econômica:</strong> 8m²/L/demão</li>
+                    <li><strong>Tinta premium:</strong> 12-15m²/L/demão</li>
+                    <li><strong>Esmalte:</strong> 10-12m²/L/demão</li>
+                </ul>
+                
+                <h3>Número de Demãos</h3>
+                <ul>
+                    <li><strong>1 demão:</strong> Apenas repintura sobre cor similar</li>
+                    <li><strong>2 demãos:</strong> Padrão para maioria dos casos</li>
+                    <li><strong>3 demãos:</strong> Mudança drástica de cor</li>
+                    <li><strong>4+ demãos:</strong> Cores muito escuras sobre claras</li>
+                </ul>
+                
+                <h2>Cálculo Básico por Ambiente</h2>
+                
+                <h3>Quarto Padrão (3x4m)</h3>
+                <ul>
+                    <li><strong>Área das paredes:</strong> 28m²</li>
+                    <li><strong>Área do teto:</strong> 12m²</li>
+                    <li><strong>Área total:</strong> 40m²</li>
+                    <li><strong>Com 2 demãos:</strong> 80m²</li>
+                    <li><strong>Tinta acrílica:</strong> 80 ÷ 9 = 8,9L (9L)</li>
+                    <li><strong>Tinta econômica:</strong> 80 ÷ 8 = 10L</li>
+                </ul>
+                
+                <h3>Sala de Estar (4x5m)</h3>
+                <ul>
+                    <li><strong>Área das paredes:</strong> 36m²</li>
+                    <li><strong>Área do teto:</strong> 20m²</li>
+                    <li><strong>Área total:</strong> 56m²</li>
+                    <li><strong>Com 2 demãos:</strong> 112m²</li>
+                    <li><strong>Tinta acrílica:</strong> 112 ÷ 9 = 12,4L (13L)</li>
+                    <li><strong>Tinta econômica:</strong> 112 ÷ 8 = 14L</li>
+                </ul>
+                
+                <h3>Cozinha Pequena (3x3m)</h3>
+                <ul>
+                    <li><strong>Área das paredes:</strong> 12m² (descontando armários)</li>
+                    <li><strong>Área do teto:</strong> 9m²</li>
+                    <li><strong>Área total:</strong> 21m²</li>
+                    <li><strong>Com 2 demãos:</strong> 42m²</li>
+                    <li><strong>Tinta acrílica:</strong> 42 ÷ 9 = 4,7L (5L)</li>
+                    <li><strong>Tinta econômica:</strong> 42 ÷ 8 = 5,3L (6L)</li>
+                </ul>
+                
+                <h2>Cálculo Avançado - Considerando Descontos</h2>
+                
+                <h3>Descontos Padronizados</h3>
+                <ul>
+                    <li><strong>Portas:</strong> 1,5m² cada (2m² com batentes)</li>
+                    <li><strong>Janelas:</strong> 1,2m² cada (1,5m² com batentes)</li>
+                    <li><strong>Armários embutidos:</strong> Área total</li>
+                    <li><strong>Azulejos:</strong> Área total</li>
+                    <li><strong>Painéis:</strong> Área total</li>
+                </ul>
+                
+                <h3>Cálculo Exemplo Completo</h3>
+                <p><strong>Apartamento: 2 quartos, sala, cozinha, banheiro</strong></p>
+                <ul>
+                    <li><strong>Quarto 1:</strong> 40m² - 2m² (porta/janela) = 38m²</li>
+                    <li><strong>Quarto 2:</strong> 40m² - 2m² (porta/janela) = 38m²</li>
+                    <li><strong>Sala:</strong> 56m² - 3m² (portas/janelas) = 53m²</li>
+                    <li><strong>Cozinha:</strong> 21m² - 8m² (armários) = 13m²</li>
+                    <li><strong>Banheiro:</strong> 15m² - 6m² (azulejos) = 9m²</li>
+                    <li><strong>Área total pintável:</strong> 151m²</li>
+                    <li><strong>Com 2 demãos:</strong> 302m²</li>
+                    <li><strong>Tinta acrílica:</strong> 302 ÷ 9 = 33,6L (34L)</li>
+                    <li><strong>Tinta econômica:</strong> 302 ÷ 8 = 37,8L (38L)</li>
+                </ul>
+                
+                <h2>Ferramentas e Materiais para Cálculo</h2>
+                
+                <h3>Equipamentos de Medição:</h3>
+                <ul>
+                    <li><strong>Trena metálica:</strong> R$ 20-40</li>
+                    <li><strong>Laser medidor:</strong> R$ 80-150</li>
+                    <li><strong>Papel e caneta:</strong> R$ 5-10</li>
+                    <li><strong>Calculadora:</strong> R$ 15-30</li>
+                    <li><strong>Aplicativo de cálculo:</strong> R$ 10-30</li>
+                </ul>
+                
+                <h3>Como Medir Corretamente:</h3>
+                <ul>
+                    <li>Me altura x largura de cada parede</li>
+                    <li>Me comprimento x largura do teto</li>
+                    <li>Me área de portas e janelas</li>
+                    <li>Some todas as áreas</li>
+                    <li>Subtraia áreas não pintáveis</li>
+                    <li>Multiplique pelo número de demãos</li>
+                </ul>
+                
+                <h2>Rendimento por Tipo de Produto</h2>
+                
+                <h3>Tintas para Paredes</h3>
+                <table border="1" style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <th style="padding: 10px; background: #f0f0f0;">Produto</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Rendimento m²/L</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Preço/L</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Custo/m²</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Tinta Econômica</td>
+                        <td style="padding: 10px;">8m²</td>
+                        <td style="padding: 10px;">R$ 25-35</td>
+                        <td style="padding: 10px;">R$ 3,1-4,4</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Tinta PVA</td>
+                        <td style="padding: 10px;">10-12m²</td>
+                        <td style="padding: 10px;">R$ 35-50</td>
+                        <td style="padding: 10px;">R$ 2,9-5,0</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Tinta Acrílica</td>
+                        <td style="padding: 10px;">8-10m²</td>
+                        <td style="padding: 10px;">R$ 45-65</td>
+                        <td style="padding: 10px;">R$ 4,5-8,1</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Tinta Premium</td>
+                        <td style="padding: 10px;">12-15m²</td>
+                        <td style="padding: 10px;">R$ 60-90</td>
+                        <td style="padding: 10px;">R$ 4,0-7,5</td>
+                    </tr>
+                </table>
+                
+                <h3>Outros Produtos</h3>
+                <table border="1" style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <th style="padding: 10px; background: #f0f0f0;">Produto</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Rendimento m²/L</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Preço/L</th>
+                        <th style="padding: 10px; background: #f0f0f0;">Custo/m²</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Esmalte</td>
+                        <td style="padding: 10px;">10-12m²</td>
+                        <td style="padding: 10px;">R$ 40-60</td>
+                        <td style="padding: 10px;">R$ 3,3-6,0</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Seladora</td>
+                        <td style="padding: 10px;">10-15m²</td>
+                        <td style="padding: 10px;">R$ 30-45</td>
+                        <td style="padding: 10px;">R$ 2,0-4,5</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Massa Correr</td>
+                        <td style="padding: 10px;">8-10m²/kg</td>
+                        <td style="padding: 10px;">R$ 8-15/kg</td>
+                        <td style="padding: 10px;">R$ 0,8-1,9</td>
+                    </tr>
+                </table>
+                
+                <h2>Cálculo para Projetos Específicos</h2>
+                
+                <h3>Casa Completa (100m²)</h3>
+                <ul>
+                    <li><strong>Área total paredes:</strong> 250m²</li>
+                    <li><strong>Área tetos:</strong> 100m²</li>
+                    <li><strong>Descontos:</strong> 50m² (portas/janelas)</li>
+                    <li><strong>Área pintável:</strong> 300m²</li>
+                    <li><strong>Com 2 demãos:</strong> 600m²</li>
+                    <li><strong>Tinta econômica:</strong> 600 ÷ 8 = 75L</li>
+                    <li><strong>Tinta acrílica:</strong> 600 ÷ 9 = 67L</li>
+                    <li><strong>Custo econômico:</strong> 75L x R$ 30 = R$ 2.250</li>
+                    <li><strong>Custo acrílico:</strong> 67L x R$ 55 = R$ 3.685</li>
+                </ul>
+                
+                <h3>Edifício Residencial (10 andares)</h3>
+                <ul>
+                    <li><strong>Área por andar:</strong> 200m²</li>
+                    <li><strong>Área total:</strong> 2.000m²</li>
+                    <li><strong>Descontos:</strong> 300m²</li>
+                    <li><strong>Área pintável:</strong> 1.700m²</li>
+                    <li><strong>Com 2 demãos:</strong> 3.400m²</li>
+                    <li><strong>Tinta acrílica:</strong> 3.400 ÷ 9 = 378L</li>
+                    <li><strong>Custo total:</strong> 378L x R$ 55 = R$ 20.790</li>
+                </ul>
+                
+                <h2>Dicas para Economizar Tinta</h2>
+                
+                <h3>Planejamento:</h3>
+                <ul>
+                    <li>Calcule com precisão para evitar desperdício</li>
+                    <li>Compre 10% a mais para segurança</li>
+                    <li>Use seladora para reduzir consumo</li>
+                    <li>Escolha produtos de bom rendimento</li>
+                </ul>
+                
+                <h3>Aplicação:</h3>
+                <ul>
+                    <li>Use ferramentas adequadas</li>
+                    <li>Aplique camadas finas e uniformes</li>
+                    <li>Evite escorrimentos</li>
+                    <li>Limpe bem as ferramentas</li>
+                </ul>
+                
+                <h3>Armazenamento:</h3>
+                <ul>
+                    <li>Guarde sobras corretamente</li>
+                    <li>Use para retocar futuros</li>
+                    <li>Identifique cada lata</li>
+                    <li>Armazene em local adequado</li>
+                </ul>
+                
+                <h2>Erros Comuns no Cálculo</h2>
+                
+                <h3>Esquecer Descontos:</h3>
+                <ul>
+                    <li><strong>Erro:</strong> Não descontar portas e janelas</li>
+                    <li><strong>Consequência:</strong> Compra excessiva de tinta</li>
+                    <li><strong>Solução:</strong> Meça todas as aberturas</li>
+                </ul>
+                
+                <h3>Ignorar Tipo de Superfície:</h3>
+                <ul>
+                    <li><strong>Erro:</strong> Usar mesmo rendimento para todas</li>
+                    <li><strong>Consequência:</strong> Falta de tinta</li>
+                    <li><strong>Solução:</strong> Ajuste conforme superfície</li>
+                </ul>
+                
+                <h3>Não Considerar Demãos:</h3>
+                <ul>
+                    <li><strong>Erro:</strong> Calcular apenas 1 demão</li>
+                    <li><strong>Consequência:</strong> Falta de produto</li>
+                    <li><strong>Solução:</strong> Multiplique pelo número de demãos</li>
+                </ul>
+                
+                <h2>Calculadoras e Apps Úteis</h2>
+                
+                <h3>Aplicativos Recomendados:</h3>
+                <ul>
+                    <li><strong>Calculadora de Tinta:</strong> R$ 10-20</li>
+                    <li><strong>Medidor de Área:</strong> R$ 15-30</li>
+                    <li><strong>Planejador de Pintura:</strong> R$ 20-40</li>
+                    <li><strong>Apps gratuitos:</strong> Disponíveis online</li>
+                </ul>
+                
+                <h3>Como Usar:</h3>
+                <ul>
+                    <li>Insira medidas do ambiente</li>
+                    <li>Selecione tipo de tinta</li>
+                    <li>Defina número de demãos</li>
+                    <li>Obtenha cálculo automático</li>
+                    <li>Compare custos</li>
+                </ul>
+                
+                <h2>Considerações Finais</h2>
+                <p>Calcular corretamente a quantidade de tinta é o primeiro passo para uma pintura de sucesso. Um bom cálculo economiza dinheiro, tempo e garante resultado profissional.</p>
+                
+                <p><strong>Dica final:</strong> Sempre compre um pouco a mais (10%) para segurança. É melhor sobrar um pouco do que faltar no meio do trabalho.</p>
+            `;
+    
+    return conteudoEnriquecido;
+}
+
 function enriquecerBlogMassaPVAAcrilica() {
     console.log('\n🎨 ENRIQUECENDO: diferenca-massa-pva-massa-acrilica.html');
     
@@ -2387,6 +2993,14 @@ function enriquecerTodosBlogs() {
         {
             arquivo: 'textura-projetada-fachadas.html',
             funcao: enriquecerBlogTexturaProjetada
+        },
+        {
+            arquivo: 'seladora-quando-usar.html',
+            funcao: enriquecerBlogSeladora
+        },
+        {
+            arquivo: 'como-calcular-tinta-por-m2.html',
+            funcao: enriquecerBlogCalculoTinta
         }
     ];
     
