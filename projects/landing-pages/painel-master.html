@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Painel Supremo Qualy Quimy</title>
+
+<style>
+body{
+font-family:Arial;
+background:#111;
+color:white;
+margin:0;
+padding:30px;
+}
+
+input,button{
+padding:12px;
+font-size:16px;
+border-radius:6px;
+border:none;
+}
+
+button{
+background:#00c853;
+color:white;
+cursor:pointer;
+}
+
+.painel{
+margin-top:30px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.box{
+background:#222;
+padding:20px;
+border-radius:10px;
+}
+
+.preview{
+background:white;
+color:black;
+padding:15px;
+margin-top:10px;
+border-radius:6px;
+white-space:pre-wrap;
+}
+</style>
+</head>
+
+<body>
+
+<h1>PAINEL SUPREMO DE ANÚNCIOS</h1>
+
+<input id="produtoInput" placeholder="Digite o produto (ex: grafiato)">
+<button onclick="gerar()">CRIAR PACOTE</button>
+
+<div class="painel">
+
+<div class="box">
+<h2>Shopee</h2>
+<div id="shopeePreview" class="preview"></div>
+</div>
+
+<div class="box">
+<h2>Landing Page</h2>
+<div id="landingPreview" class="preview"></div>
+</div>
+
+<div class="box">
+<h2>WhatsApp</h2>
+<div id="whatsPreview" class="preview"></div>
+</div>
+
+<div class="box">
+<h2>Social</h2>
+<div id="socialPreview" class="preview"></div>
+</div>
+
+</div>
+
+<script>
+
+function baixar(nome, conteudo, tipo="text/plain"){
+  const blob = new Blob([conteudo], { type: tipo });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = nome;
+  a.click();
+}
+
+function gerar(){
+
+let produto = document.getElementById("produtoInput").value;
+
+if(!produto){
+alert("Digite o produto");
+return;
+}
+
+// textos
+let shopee = `Produto: ${produto}
+Descrição profissional Qualy Quimy`;
+
+let whats = `Olá! Quero orçamento do ${produto}`;
+
+let social = `${produto} Qualy Quimy
+Resultado profissional`;
+
+// 🔥 LANDING PROFISSIONAL (SEM BUG)
+let landing = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${produto}</title>
+<style>
+body{margin:0;font-family:Arial;background:#f5f5f5;text-align:center;}
+.topo{background:#00c853;color:white;padding:30px;}
+.sec{padding:30px;}
+.btn{background:#25D366;color:white;padding:15px;border:none;border-radius:8px;font-size:18px;}
+footer{padding:20px;font-size:14px;}
+</style>
+</head>
+
+<body>
+
+<div class="topo">
+<h1>${produto}</h1>
+<a href="https://wa.me/5511954950044">
+<button class="btn">Falar no WhatsApp</button>
+</a>
+</div>
+
+<div class="sec">
+<h2>Benefícios</h2>
+<p>✔ Alta durabilidade</p>
+<p>✔ Fácil aplicação</p>
+<p>✔ Resultado profissional</p>
+</div>
+
+<div class="sec">
+<h2>Contato</h2>
+<p>(11) 95495-0044</p>
+<a href="https://wa.me/5511954950044">
+<button class="btn">Chamar agora</button>
+</a>
+</div>
+
+<div class="sec">
+<h2>FAQ</h2>
+<p><b>Como usar?</b> Fácil aplicação</p>
+<p><b>Entrega?</b> Rápida</p>
+</div>
+
+<footer>
+Desenvolvido por ImpulsoWeb10<br>
+https://impulsoweb10.com.br
+</footer>
+
+</body>
+</html>`;
+
+// mostrar
+document.getElementById("shopeePreview").innerText = shopee;
+document.getElementById("landingPreview").innerText = "Landing criada ✔";
+document.getElementById("whatsPreview").innerText = whats;
+document.getElementById("socialPreview").innerText = social;
+
+// baixar
+baixar(produto+"-shopee.txt", shopee);
+baixar(produto+"-whatsapp.txt", whats);
+baixar(produto+"-social.txt", social);
+baixar(produto+"-landing.html", landing, "text/html");
+
+alert("🚀 PACOTE PROFISSIONAL GERADO!");
+
+}
+
+</script>
+
+</body>
+</html>

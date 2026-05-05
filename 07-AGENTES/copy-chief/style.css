@@ -1,0 +1,556 @@
+/* ──────────────────────────────────────────────────────────────── */
+/* COPY CHIEF - Estilos Profissionais */
+/* ──────────────────────────────────────────────────────────────── */
+
+/* Variáveis CSS */
+:root {
+  /* Cores da Marca */
+  --vermelho: #e63312;
+  --bege: #f5f0e8;
+  --preto: #0f0f0f;
+  
+  /* Cores Auxiliares */
+  --cinza: #6b7280;
+  --cinza-claro: #f3f4f6;
+  --branco: #ffffff;
+  
+  /* Gradientes */
+  --gradient-vermelho: linear-gradient(135deg, #e63312, #d62910);
+  --gradient-instagram: linear-gradient(135deg, #833ab4, #e1306c, #fcb045);
+  
+  /* Sombras */
+  --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --sombra-media: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --sombra-forte: 0 8px 32px rgba(0, 0, 0, 0.2);
+  
+  /* Bordas */
+  --radius: 8px;
+  --radius-lg: 12px;
+  
+  /* Fontes */
+  --fonte-titulo: 'Bebas Neue', sans-serif;
+  --fonte-corpo: 'DM Sans', sans-serif;
+}
+
+/* Reset Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  background: var(--bege);
+  color: var(--preto);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ──────────────────────────────────────────────────────────────── */
+/* HEADER */
+/* ──────────────────────────────────────────────────────────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--branco);
+  box-shadow: var(--sombra-suave);
+}
+
+.header-top {
+  background: var(--gradient-vermelho);
+  color: var(--branco);
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.empresa-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.empresa-nome {
+  font-weight: 700;
+}
+
+.separador {
+  opacity: 0.7;
+}
+
+.whatsapp-link {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.whatsapp-link:hover {
+  opacity: 0.8;
+}
+
+.header-main {
+  padding: 20px 0;
+  background: var(--branco);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.5rem;
+  color: var(--preto);
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--vermelho);
+}
+
+.badge {
+  background: var(--gradient-vermelho);
+  color: var(--branco);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ──────────────────────────────────────────────────────────────── */
+/* LAYOUT PRINCIPAL */
+/* ──────────────────────────────────────────────────────────────── */
+.main {
+  padding: 40px 0;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ──────────────────────────────────────────────────────────────── */
+/* SEÇÃO DO FORMULÁRIO */
+/* ──────────────────────────────────────────────────────────────── */
+.form-card {
+  background: var(--branco);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: var(--sombra-media);
+}
+
+.form-card h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.8rem;
+  color: var(--preto);
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid var(--vermelho);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--preto);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e5e5;
+  border-radius: var(--radius);
+  font-family: var(--fonte-corpo);
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: var(--branco);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--vermelho);
+  box-shadow: 0 0 0 3px rgba(230, 51, 18, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e5e5e5;
+  background: var(--branco);
+  border-radius: var(--radius);
+  font-family: var(--fonte-corpo);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.toggle-btn:hover {
+  border-color: var(--vermelho);
+  background: rgba(230, 51, 18, 0.05);
+}
+
+.toggle-btn.ativo {
+  background: var(--gradient-vermelho);
+  color: var(--branco);
+  border-color: var(--vermelho);
+}
+
+/* Botão Principal */
+.btn-primary {
+  width: 100%;
+  padding: 16px 24px;
+  background: var(--gradient-vermelho);
+  color: var(--branco);
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--fonte-corpo);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-forte);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid var(--branco);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ──────────────────────────────────────────────────────────────── */
+/* SEÇÃO DE RESULTADOS */
+/* ──────────────────────────────────────────────────────────────── */
+.results-header {
+  background: var(--branco);
+  border-radius: var(--radius-lg);
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  box-shadow: var(--sombra-suave);
+}
+
+.results-header h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.8rem;
+  color: var(--preto);
+}
+
+.output-area {
+  min-height: 400px;
+}
+
+.placeholder {
+  background: var(--branco);
+  border-radius: var(--radius-lg);
+  padding: 60px 30px;
+  text-align: center;
+  box-shadow: var(--sombra-suave);
+  border: 2px dashed #e5e5e5;
+}
+
+.placeholder p {
+  font-size: 18px;
+  color: var(--cinza);
+  line-height: 1.6;
+}
+
+.placeholder-loading {
+  background: var(--branco);
+  border-radius: var(--radius-lg);
+  padding: 60px 30px;
+  text-align: center;
+  box-shadow: var(--sombra-suave);
+  border: 2px solid var(--vermelho);
+}
+
+.placeholder-loading p {
+  font-size: 18px;
+  color: var(--vermelho);
+  font-weight: 600;
+}
+
+.erro-msg {
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  color: #dc2626;
+}
+
+/* ──────────────────────────────────────────────────────────────── */
+/* CARDS DE RESULTADO */
+/* ──────────────────────────────────────────────────────────────── */
+.output-card {
+  background: var(--branco);
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+  box-shadow: var(--sombra-media);
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 16px 20px;
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-header h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.btn-copiar {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--branco);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-copiar:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.card-conteudo {
+  padding: 20px;
+  line-height: 1.7;
+  color: var(--preto);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.card-codigo {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: var(--radius);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Badges de Contador */
+.badge-ok {
+  background: #10b981;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-aviso {
+  background: #f59e0b;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-erro {
+  background: #ef4444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Botão Visualizar */
+.btn-visualizar {
+  margin: 15px 20px;
+  padding: 12px 20px;
+  background: var(--gradient-vermelho);
+  color: var(--branco);
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-visualizar:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-media);
+}
+
+/* ──────────────────────────────────────────────────────────────── */
+/* TOAST DE NOTIFICAÇÃO */
+/* ──────────────────────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--preto);
+  color: var(--branco);
+  padding: 16px 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--sombra-forte);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2000;
+  font-weight: 500;
+}
+
+.toast.visivel {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ──────────────────────────────────────────────────────────────── */
+/* RESPONSIVO */
+/* ──────────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .form-section {
+    order: 2;
+  }
+  
+  .results-section {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .main {
+    padding: 20px 0;
+  }
+  
+  .form-card {
+    padding: 20px;
+  }
+  
+  .logo h1 {
+    font-size: 2rem;
+  }
+  
+  .empresa-info {
+    font-size: 13px;
+    gap: 8px;
+  }
+  
+  .toggle-buttons {
+    flex-direction: column;
+  }
+  
+  .toggle-btn {
+    min-width: auto;
+  }
+  
+  .card-header {
+    padding: 12px 16px;
+  }
+  
+  .card-header h3 {
+    font-size: 1rem;
+  }
+  
+  .card-conteudo {
+    padding: 16px;
+    font-size: 14px;
+  }
+  
+  .toast {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .empresa-info {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+  
+  .separador {
+    display: none;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  
+  .btn-primary {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}

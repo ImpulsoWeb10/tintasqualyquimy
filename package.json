@@ -1,0 +1,117 @@
+{
+  "name": "@xquads/aios-squads",
+  "version": "2.0.0",
+  "description": "Professional AI agents squads system for Synkra AIOS",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "postbuild": "cp -r src/squads/data dist/squads/",
+    "docs:generate": "typedoc src/index.ts",
+    "docker:build": "docker build -t xquads/aios-squads .",
+    "docker:run": "docker run -p 3000:3000 xquads/aios-squads"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "squads",
+    "synkra",
+    "aios",
+    "typescript",
+    "professional"
+  ],
+  "author": "Synkra AIOS Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SynkraAI/xquads-squads.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SynkraAI/xquads-squads/issues"
+  },
+  "homepage": "https://xquads.vercel.app",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "winston": "^3.11.0",
+    "config": "^3.3.9",
+    "joi": "^17.11.0",
+    "uuid": "^9.0.1",
+    "lodash": "^4.17.21",
+    "yaml": "^2.3.4",
+    "zod": "^3.22.4",
+    "rate-limiter-flexible": "^4.0.1",
+    "cache-manager": "^5.4.0",
+    "cache-manager-redis-store": "^3.0.1",
+    "bull": "^4.12.2",
+    "ioredis": "^5.3.2",
+    "ws": "^8.14.2",
+    "socket.io": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/morgan": "^1.9.9",
+    "@types/uuid": "^9.0.7",
+    "@types/lodash": "^4.14.202",
+    "@types/jest": "^29.5.8",
+    "@types/supertest": "^2.0.16",
+    "@types/ws": "^8.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.2",
+    "tsx": "^4.6.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "supertest": "^6.3.3",
+    "tsc-alias": "^1.8.8",
+    "typedoc": "^0.25.4",
+    "rimraf": "^5.0.5",
+    "nodemon": "^3.0.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/src",
+      "<rootDir>/tests"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.ts",
+      "**/?(*.)+(spec|test).ts"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.d.ts",
+      "!src/**/index.ts"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+  }
+}

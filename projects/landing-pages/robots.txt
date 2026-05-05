@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://qualyquimy.com.br/sitemap.xml
+
+# Block common bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay for respectful crawling
+User-agent: *
+Crawl-delay: 1
