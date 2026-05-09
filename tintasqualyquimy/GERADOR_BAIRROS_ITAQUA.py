@@ -184,191 +184,205 @@ class GeradorBairrosItaqua:
         html = f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
-    <meta name="description" content="{description}">
-    <link rel="canonical" href="{self.dominio}/cidades/itaquaquecetuba/{slug}.html">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="{title}">
-    <meta property="og:description" content="{description}">
-    <meta property="og:url" content="{self.dominio}/cidades/itaquaquecetuba/{slug}.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Tintas Qualy Quimy">
-    
-    <!-- Schema.org -->
-    <script type="application/ld+json">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="Xz_2AAmdPmp8Z-4dD1Ji-ZoX2YU2kUZovEK9f03HgBM" />
+
+  <!-- SEO Principal -->
+  <title>{title}</title>
+  <meta name="description" content="{description}" />
+  <meta name="keywords" content="tintas {bairro.lower()}, grafiato {bairro.lower()}, textura para parede {bairro.lower()}, massa PVA preço {bairro.lower()}, Tintas Qualy Quimy {bairro.lower()}, tintas baratas {bairro.lower()}" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Tintas Qualy Quimy" />
+  <link rel="canonical" href="{self.dominio}/cidades/itaquaquecetuba/{slug}.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Tintas Qualy Quimy" />
+  <meta property="og:title" content="{title}" />
+  <meta property="og:description" content="{description}" />
+  <meta property="og:url" content="{self.dominio}/cidades/itaquaquecetuba/{slug}.html" />
+  <meta property="og:image" content="{self.dominio}/img/logo-qualy-quimy.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="100" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{title}" />
+  <meta name="twitter:description" content="{description}" />
+  <meta name="twitter:image" content="{self.dominio}/img/logo-qualy-quimy.webp" />
+  
+  <!-- Schema.org -->
+  <script type="application/ld+json">
 {self.gerar_schema_localbusiness(bairro)}
-    </script>
-    
-    <script type="application/ld+json">
+  </script>
+  
+  <script type="application/ld+json">
 {self.gerar_schema_faq(bairro)}
-    </script>
-    
-    <link rel="stylesheet" href="{self.dominio}/css/style.css">
+  </script>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="{self.dominio}/css/style-min.css" />
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="{self.dominio}/">
-                        <img src="{self.dominio}/img/logo-qualy-quimy.webp" alt="Tintas Qualy Quimy">
-                    </a>
-                </div>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="{self.dominio}/">Início</a></li>
-                        <li><a href="{self.dominio}/categorias/tintas.html">Tintas</a></li>
-                        <li><a href="{self.dominio}/categorias/texturas.html">Texturas</a></li>
-                        <li><a href="{self.dominio}/categorias/massas.html">Massas</a></li>
-                        <li><a href="{self.dominio}/categorias/fundos.html">Fundos</a></li>
-                        <li><a href="{self.dominio}/categorias/acabamentos.html">Acabamentos</a></li>
-                        <li><a href="{self.dominio}/categorias/cidades.html">Cidades</a></li>
-                        <li><a href="{self.dominio}/blog.html">Blog</a></li>
-                    </ul>
-                </nav>
-                <div class="header-actions">
-                    <a href="https://wa.me/5511954950044?text=Olá!%20Tenho%20interesse%20nos%20produtos%20Qualy%20Quimy" class="btn-whatsapp" target="_blank">
-                        <i class="icon-whatsapp"></i>
-                        (11) 95495-0044
-                    </a>
-                </div>
-            </div>
+  <header>
+    <div class="header-top">
+      <a href="{self.dominio}/">Tintas Qualy Quimy | Tintas, Massas e Texturas</a>
+      <span>Entregas em {bairro} e região</span>
+    </div>
+    
+    <div class="header-main">
+      <div class="logo">
+        <a href="{self.dominio}/">
+          <img src="{self.dominio}/img/logo-qualy-quimy.webp" alt="Tintas Qualy Quimy" width="200" height="60" loading="lazy">
+        </a>
+      </div>
+      
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="{self.dominio}/">Início</a></li>
+          <li><a href="{self.dominio}/categorias/tintas.html">Tintas</a></li>
+          <li><a href="{self.dominio}/categorias/texturas.html">Texturas</a></li>
+          <li><a href="{self.dominio}/categorias/massas.html">Massas</a></li>
+          <li><a href="{self.dominio}/categorias/fundos.html">Fundos</a></li>
+          <li><a href="{self.dominio}/categorias/acabamentos.html">Acabamentos</a></li>
+          <li><a href="{self.dominio}/categorias/cidades.html">Cidades</a></li>
+          <li><a href="{self.dominio}/blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="https://wa.me/5511954950044?text=Olá!%20Tenho%20interesse%20nos%20produtos%20Qualy%20Quimy%20em%20{bairro.replace(' ', '%20')}" class="btn-whatsapp" target="_blank">
+          <i class="icon-whatsapp"></i>
+          (11) 95495-0044
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb-list">
+      <li><a href="{self.dominio}/">Início</a></li>
+      <li><a href="{self.dominio}/categorias/cidades.html">Cidades</a></li>
+      <li><a href="{self.dominio}/cidades/itaquaquecetuba.html">Itaquaquecetuba</a></li>
+      <li class="current">{bairro}</li>
+    </ol>
+  </nav>
+
+  <main class="main-content">
+    <div class="container">
+      <section class="hero-section">
+        <h1>Tintas em {bairro}, Itaquaquecetuba</h1>
+        <p class="hero-description">{intro}</p>
+        <div class="hero-cta">
+          <a href="https://wa.me/5511954950044?text=Olá!%20Quero%20comprar%20tintas%20em%20{bairro.replace(' ', '%20')}" class="btn-primary" target="_blank">
+            {cta}
+          </a>
         </div>
-    </header>
+      </section>
 
-    <nav aria-label="Breadcrumb">
-        <ol class="breadcrumb-list">
-            <li><a href="{self.dominio}/">Início</a></li>
-            <li><a href="{self.dominio}/categorias/cidades.html">Cidades</a></li>
-            <li><a href="{self.dominio}/cidades/itaquaquecetuba.html">Itaquaquecetuba</a></li>
-            <li class="current">{bairro}</li>
-        </ol>
-    </nav>
-
-    <main class="main-content">
-        <div class="container">
-            <section class="hero-section">
-                <h1>Tintas em {bairro}, Itaquaquecetuba</h1>
-                <p class="hero-description">{intro}</p>
-                <div class="hero-cta">
-                    <a href="https://wa.me/5511954950044?text=Olá!%20Quero%20comprar%20tintas%20em%20{bairro.replace(' ', '%20')}" class="btn-primary" target="_blank">
-                        {cta}
-                    </a>
-                </div>
-            </section>
-
-            <section class="products-section">
-                <h2>Produtos Disponíveis em {bairro}</h2>
-                <div class="products-grid">
-                    {''.join([f'<div class="product-card"><h3>{produto}</h3><p>Alta qualidade para {bairro}</p><a href="https://wa.me/5511954950044?text=Quero%20{produto.replace(' ', '%20')}%20em%20{bairro.replace(' ', '%20')}" class="btn-outline" target="_blank">Pedir agora</a></div>' for produto in random.sample(self.produtos_relacionados, 4)])}
-                </div>
-            </section>
-
-            <section class="benefits-section">
-                <h2>Por que escolher Qualy Quimy em {bairro}?</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <h3>Entenda Rápida</h3>
-                        <p>Recebemos seu pedido em {bairro} em até 24 horas</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>Qualidade Garantida</h3>
-                        <p>Produtos premium com durabilidade comprovada</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>Preço Especial</h3>
-                        <p>Condições exclusivas para moradores de {bairro}</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="faq-section">
-                <h2>Dúvidas Frequentes - {bairro}</h2>
-                <div class="faq-list">
-                    {''.join([f'<div class="faq-item"><h3>{question.format(bairro=bairro)}</h3><p>{answer.format(bairro=bairro)}</p></div>' for question, answer in self.faq_questions[:3]])}
-                </div>
-            </section>
-
-            <section class="links-section">
-                <h2>Outras Localidades Atendidas</h2>
-                <div class="links-grid">
-                    {''.join([f'<div class="link-item">{link}</div>' for link in links_internos[:6]])}
-                </div>
-            </section>
+      <section class="products-section">
+        <h2>Produtos Disponíveis em {bairro}</h2>
+        <div class="products-grid">
+          {''.join([f'<div class="product-card"><h3>{produto}</h3><p>Alta qualidade para {bairro}</p><a href="https://wa.me/5511954950044?text=Quero%20{produto.replace(" ", "%20")}%20em%20{bairro.replace(" ", "%20")}" class="btn-outline" target="_blank">Pedir agora</a></div>' for produto in random.sample(self.produtos_relacionados, 4)])}
         </div>
-    </main>
+      </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Tintas Qualy Quimy</h3>
-                <p>Tintas, massas e texturas de alta qualidade para sua obra ou reforma.</p>
-                <div class="social-links">
-                    <a href="https://wa.me/5511954950044" target="_blank">
-                        <i class="icon-whatsapp"></i>
-                    </a>
-                    <a href="https://shopee.com.br/qualyquimy" target="_blank">
-                        <i class="icon-store"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Produtos</h3>
-                <ul>
-                    <li><a href="{self.dominio}/categorias/tintas.html">Tintas</a></li>
-                    <li><a href="{self.dominio}/categorias/texturas.html">Texturas</a></li>
-                    <li><a href="{self.dominio}/categorias/massas.html">Massas</a></li>
-                    <li><a href="{self.dominio}/categorias/fundos.html">Fundos</a></li>
-                    <li><a href="{self.dominio}/categorias/acabamentos.html">Acabamentos</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Atendimento</h3>
-                <ul>
-                    <li><a href="{self.dominio}/categorias/cidades.html">Cidades Atendidas</a></li>
-                    <li><a href="{self.dominio}/blog.html">Blog</a></li>
-                    <li><a href="{self.dominio}/sobre.html">Sobre Nós</a></li>
-                    <li><a href="{self.dominio}/politica-de-privacidade.html">Política de Privacidade</a></li>
-                    <li><a href="{self.dominio}/termos-de-uso.html">Termos de Uso</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contato</h3>
-                <p><strong>WhatsApp:</strong> (11) 95495-0044</p>
-                <p><strong>Endereço:</strong> Rua Leiria, 45 - Chácara Cuiabá, Itaquaquecetuba - SP</p>
-                <p><strong>Shopee:</strong> shopee.com.br/qualyquimy</p>
-            </div>
+      <section class="benefits-section">
+        <h2>Por que escolher Qualy Quimy em {bairro}?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <h3>Entrega Rápida</h3>
+            <p>Recebemos seu pedido em {bairro} em até 24 horas</p>
+          </div>
+          <div class="benefit-card">
+            <h3>Qualidade Garantida</h3>
+            <p>Produtos premium com durabilidade comprovada</p>
+          </div>
+          <div class="benefit-card">
+            <h3>Preço Especial</h3>
+            <p>Condições exclusivas para moradores de {bairro}</p>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Tintas Qualy Quimy - Todos os direitos reservados | Desenvolvido por <a href="https://impulsoweb10.com.br" target="_blank">ImpulsoWeb10</a></p>
-        </div>
-    </footer>
+      </section>
 
-    <script>
-        // WhatsApp flutuante
-        document.addEventListener('DOMContentLoaded', function() {{
-            const btn = document.createElement('a');
-            btn.href = 'https://wa.me/5511954950044?text=Olá!%20Vi%20o%20site%20e%20quero%20informações%20sobre%20tintas%20Qualy%20Quimy';
-            btn.target = '_blank';
-            btn.rel = 'noopener noreferrer';
-            btn.id = 'whats-float';
-            btn.textContent = 'WA';
-            btn.title = 'Fale conosco no WhatsApp';
-            btn.style.cssText = `
-                position:fixed;bottom:28px;right:28px;z-index:999;
-                background:#25D366;color:#fff;border-radius:50%;
-                width:60px;height:60px;display:flex;align-items:center;
-                justify-content:center;font-size:28px;text-decoration:none;
-                box-shadow:0 4px 20px rgba(37,211,102,0.45);
-                transition:transform 0.2s,box-shadow 0.2s;
-                animation:pulse 2.5s infinite;
-            `;
-            document.body.appendChild(btn);
-        }});
-    </script>
+      <section class="faq-section">
+        <h2>Dúvidas Frequentes - {bairro}</h2>
+        <div class="faq-list">
+          {''.join([f'<div class="faq-item"><h3>{question.format(bairro=bairro)}</h3><p>{answer.format(bairro=bairro)}</p></div>' for question, answer in self.faq_questions[:3]])}
+        </div>
+      </section>
+
+      <section class="links-section">
+        <h2>Outras Localidades Atendidas</h2>
+        <div class="links-grid">
+          {''.join([f'<div class="link-item">{link}</div>' for link in links_internos[:6]])}
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Tintas Qualy Quimy</h3>
+        <p>Tintas, massas e texturas de alta qualidade para sua obra ou reforma.</p>
+        <div class="social-links">
+          <a href="https://wa.me/5511954950044" target="_blank">
+            <i class="icon-whatsapp"></i>
+          </a>
+          <a href="https://shopee.com.br/qualyquimy" target="_blank">
+            <i class="icon-store"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Produtos</h3>
+        <ul>
+          <li><a href="{self.dominio}/categorias/tintas.html">Tintas</a></li>
+          <li><a href="{self.dominio}/categorias/texturas.html">Texturas</a></li>
+          <li><a href="{self.dominio}/categorias/massas.html">Massas</a></li>
+          <li><a href="{self.dominio}/categorias/fundos.html">Fundos</a></li>
+          <li><a href="{self.dominio}/categorias/acabamentos.html">Acabamentos</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Atendimento</h3>
+        <ul>
+          <li><a href="{self.dominio}/categorias/cidades.html">Cidades Atendidas</a></li>
+          <li><a href="{self.dominio}/blog.html">Blog</a></li>
+          <li><a href="{self.dominio}/sobre.html">Sobre Nós</a></li>
+          <li><a href="{self.dominio}/politica-de-privacidade.html">Política de Privacidade</a></li>
+          <li><a href="{self.dominio}/termos-de-uso.html">Termos de Uso</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contato</h3>
+        <p><strong>WhatsApp:</strong> (11) 95495-0044</p>
+        <p><strong>Endereço:</strong> Rua Leiria, 45 - Chácara Cuiabá, Itaquaquecetuba - SP</p>
+        <p><strong>Shopee:</strong> shopee.com.br/qualyquimy</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Tintas Qualy Quimy - Todos os direitos reservados | Desenvolvido por <a href="https://impulsoweb10.com.br" target="_blank">ImpulsoWeb10</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Principal -->
+  <script src="{self.dominio}/js/app-min.js"></script>
+  
+  <!-- Lazy Loading -->
+  <script src="{self.dominio}/js/lazy-loading.js"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </body>
 </html>"""
         
