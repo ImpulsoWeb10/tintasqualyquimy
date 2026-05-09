@@ -18,82 +18,14 @@
     <meta property="og:url" content="https://tintasqualyquimy.com.br/">
     
     <!-- Structured Data para Conversão -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Grafiato Qualy Quimy 25kg",
-        "description": "Revestimento texturizado premium com entrega 24h em SP",
-        "brand": {
-            "@type": "Brand",
-            "name": "Qualy Quimy"
-        },
-        "offers": {
-            "@type": "Offer",
-            "url": "https://tintasqualyquimy.com.br/",
-            "priceCurrency": "BRL",
-            "price": "89.90",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-                "@type": "LocalBusiness",
-                "name": "Qualy Quimy",
-                "telephone": "+55-11-95495-0044"
-            },
-            "shippingDetails": {
-                "@type": "OfferShippingDetails",
-                "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": 0,
-                    "currency": "BRL"
-                },
-                "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "businessDays": {
-                        "@type": "OpeningHoursSpecification",
-                        "dayOfWeek": [
-                            "https://schema.org/Monday",
-                            "https://schema.org/Tuesday",
-                            "https://schema.org/Wednesday",
-                            "https://schema.org/Thursday",
-                            "https://schema.org/Friday"
-                        ],
-                        "opens": "09:00",
-                        "closes": "18:00"
-                    },
-                    "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 1,
-                        "maxValue": 1,
-                        "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 1,
-                        "maxValue": 2,
-                        "unitCode": "DAY"
-                    }
-                }
-            }
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "127"
-        }
-    }
-    </script>
+    
     
     <!-- CSS existente mantido -->
     <link rel="stylesheet" href="css/style-min.css">
     
     <!-- Google Analytics mantido -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFTJ9MRF64"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-HFTJ9MRF64');
-    </script>
+    
+    
 </head>
 <body>
     <!-- Header mantido sem alterações visuais -->
@@ -643,32 +575,9 @@
     </footer>
 
     <!-- Scripts mantidos -->
-    <script src="js/main-min.js"></script>
+    
     
     <!-- Event Tracking para Conversão -->
-    <script>
-    // Track CTA clicks
-    document.addEventListener('click', function(e) {
-        if (e.target.closest('a[href*="wa.me"]')) {
-            gtag('event', 'conversion', {
-                'event_category': 'WhatsApp',
-                'event_label': 'Grafiato_Compra',
-                'value': 89.90
-            });
-        }
-    });
     
-    // Track FAQ interactions
-    document.querySelectorAll('.faq-item').forEach(item => {
-        item.addEventListener('toggle', function() {
-            if (item.open) {
-                gtag('event', 'engagement', {
-                    'event_category': 'FAQ',
-                    'event_label': item.querySelector('summary').textContent
-                });
-            }
-        });
-    });
-    </script>
 </body>
 </html>

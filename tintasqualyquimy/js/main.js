@@ -2,6 +2,17 @@
 // QUALY QUIMY - JS Principal (Versão Segura)
 // ============================================================
 
+// Configuração global de debug
+window.QualyQuimy = window.QualyQuimy || {};
+window.QualyQuimy.debugMode = localStorage.getItem('debug') === 'true';
+
+// Função de log condicional
+window.QualyQuimy.log = function(message) {
+  if (window.QualyQuimy.debugMode) {
+    console.log('[DEBUG]', message);
+  }
+};
+
 // Função de sanitização para prevenir XSS
 function sanitizeHTML(str) {
   const temp = document.createElement('div');
@@ -29,126 +40,22 @@ function setSecureHTML(element, content) {
   }
 }
 
-// Dados dos produtos (fonte única de verdade)
-const PRODUTOS = [
-  {
-    slug: 'grafiato',
-    nome: 'Grafiato',
-    categoria: 'texturas',
-    categorianome: 'Texturas e Grafiato',
-    icon: 'layers',
-    embalagens: ['5,6kg', '25kg'],
-    rendimento: 4.5,
-    unidadeRend: 'kg/m²',
-    descricao: 'Acabamento texturizado para fachadas e paredes internas. Alta durabilidade e resistência às intempéries.',
-    aplicacao: 'Interno e Externo',
-    tag: null
-  },
-  {
-    slug: 'textura-lisa',
-    nome: 'Textura Lisa',
-    categoria: 'texturas',
-    categorianome: 'Texturas e Grafiato',
-    icon: 'layers',
-    embalagens: ['5,6kg', '25kg'],
-    rendimento: 3.1,
-    unidadeRend: 'kg/m²',
-    descricao: 'Textura lisa de alta qualidade para paredes internas e externas. Acabamento uniforme e elegante.',
-    aplicacao: 'Interno e Externo',
-    tag: null
-  },
-  {
-    slug: 'massa-pva',
-    nome: 'Massa PVA',
-    categoria: 'massas',
-    categorianome: 'Massas',
-    icon: 'bucket',
-    embalagens: ['5,6kg', '25kg'],
-    rendimento: 1.0,
-    unidadeRend: 'kg/m²',
-    descricao: 'Massa corrida PVA para nivelamento e acabamento de paredes internas. Fácil de aplicar e lixar.',
-    aplicacao: 'Somente Interno',
-    tag: null
-  },
-  {
-    slug: 'massa-acrilica',
-    nome: 'Massa Acrílica',
-    categoria: 'massas',
-    categorianome: 'Massas',
-    icon: 'bucket',
-    embalagens: ['5,6kg', '25kg'],
-    rendimento: 1.0,
-    unidadeRend: 'kg/m²',
-    descricao: 'Massa acrílica para uso interno e externo. Superior à PVA em resistência à umidade e durabilidade.',
-    aplicacao: 'Interno e Externo',
-    tag: null
-  },
-  {
-    slug: 'seladora',
-    nome: 'Seladora',
-    categoria: 'fundos',
-    categorianome: 'Fundos e Seladores',
-    icon: 'shield',
-    embalagens: ['1L', '3,6L', '16L'],
-    rendimento: 8.0,
-    unidadeRend: 'm²/L',
-    descricao: 'Seladora acrílica para preparação de paredes novas. Melhora a aderência e uniformiza a absorção.',
-    aplicacao: 'Interno e Externo',
-    tag: null
-  },
-  {
-    slug: 'tinta-economica-qualy-color-uso-interno',
-    nome: 'Tinta Econômica Qualy Color',
-    categoria: 'tintas',
-    categorianome: 'Tintas',
-    icon: 'palette',
-    embalagens: ['1L', '3,6L', '18L'],
-    rendimento: 11.0,
-    unidadeRend: 'm²/L',
-    descricao: 'Tinta acrílica premium lavável para uso interno e externo. Catálogo completo de cores disponível.',
-    aplicacao: 'Interno e Externo',
-    tag: 'MAIS VENDIDA'
-  },
-  {
-    slug: 'esmalte',
-    nome: 'Esmalte',
-    categoria: 'tintas',
-    categorianome: 'Tintas',
-    icon: 'palette',
-    embalagens: ['3,6L'],
-    rendimento: 12.0,
-    unidadeRend: 'm²/L',
-    descricao: 'Esmalte sintético de alta resistência para madeiras, metais e superfícies diversas. Acabamento brilhante e duradouro.',
-    aplicacao: 'Madeira e Metal',
-    tag: null
-  },
-  {
-    slug: 'textura-projetada',
-    nome: 'Textura Projetada Branca',
-    categoria: 'texturas',
-    categorianome: 'Texturas e Grafiato',
-    icon: 'layers',
-    embalagens: ['25kg'],
-    rendimento: 3.1,
-    unidadeRend: 'kg/m²',
-    descricao: 'Textura projetada branca para fachadas e paredes externas. Aplicação por projeção mecânica ou manual.',
-    aplicacao: 'Interno e Externo',
-    tag: null
-  },
-  {
-    slug: 'liqui-brilho',
-    nome: 'Liqui Brilho',
-    categoria: 'acabamentos',
-    categorianome: 'Acabamentos e Vernizes',
-    icon: 'sparkle',
-    embalagens: ['1L', '3,6L'],
-    rendimento: 8.0,
-    unidadeRend: 'm²/L',
-    descricao: 'Acabamento com brilho e impermeabilização. Transparente, ideal sobre texturas, grafiato e pinturas.',
-    aplicacao: 'Interno e Externo',
-    tag: 'NOVIDADE'
+// Carregar produtos dinamicamente do JSON
+let PRODUTOS = [];
+
+// Função para carregar produtos do arquivo JSON
+async function carregarProdutos() {
+  try {
+    const response = await fetch('../data/produtos.json');
+    PRODUTOS = await response.json();
+    console.log('Produtos carregados:', PRODUTOS.length, 'itens');
+  } catch (error) {
+    console.error('Erro ao carregar produtos:', error);
+    // Em caso de erro, mantém array vazio e mostra mensagem
+    PRODUTOS = [];
+    console.error('Não foi possível carregar produtos. Verifique o arquivo data/produtos.json');
   }
-];
+}
 
 const CIDADES = [
   { slug: 'itaquaquecetuba', nome: 'Itaquaquecetuba', uf: 'SP', destaque: true },
@@ -501,7 +408,10 @@ function criarWhatsFloat() {
 }
 
 // ========== INIT ==========
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  // Carregar produtos dinamicamente antes de inicializar componentes
+  await carregarProdutos();
+  
   criarWhatsFloat();
   // Verificar se os elementos existem antes de usá-los
   if (document.getElementById('produto-calc')) {
@@ -509,7 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
     iniciarBadgesClickaveis();
   }
   
-  if (document.querySelector('.icon-card')) {
+  if (document.querySelector('.icon-icon')) {
     iniciarIconesCards();
   }
   

@@ -1,0 +1,30 @@
+{
+  "name": "tintasqualyquimy",
+  "version": "1.0.0",
+  "description": "Tintas Qualy Quimy - Site institucional e e-commerce",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "npx clean-css-cli -o css/style-min.css css/style.css",
+    "build:js": "npx uglify-js js/main.js js/utils.js js/lazy-loading.js -o js/app-min.js",
+    "build:components": "node build.js",
+    "build": "npm run build:css && npm run build:js && npm run build:components",
+    "dev": "npm run build:components && node -e \"const http = require('http'); const fs = require('fs'); const path = require('path'); http.createServer((req, res) => { const filePath = path.join(__dirname, 'dist', req.url === '/' ? 'index.html' : req.url); const ext = path.extname(filePath); const contentType = ext === '.css' ? 'text/css' : ext === '.js' ? 'application/javascript' : ext === '.json' ? 'application/json' : 'text/html'; try { const content = fs.readFileSync(filePath); res.writeHead(200, {'Content-Type': contentType}); res.end(content); } catch(err) { res.writeHead(404); res.end('Not found'); } }).listen(3000, () => console.log('Servidor rodando em http://localhost:3000'));\""
+  },
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "uglify-js": "^3.19.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ImpulsoWeb10/tintasqualyquimy.git"
+  },
+  "keywords": [
+    "tintas",
+    "pintura",
+    "construção",
+    "e-commerce",
+    "qualy quimy"
+  ],
+  "author": "Qualy Quimy",
+  "license": "MIT"
+}
