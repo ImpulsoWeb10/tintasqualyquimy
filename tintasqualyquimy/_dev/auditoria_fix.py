@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 AUDITORIA_QUALYQUIMY_v1 — Execução completa de todos os scripts de correção.
@@ -122,8 +122,8 @@ idx = os.path.join(BASE_DIR, "index.html")
 conteudo, enc = ler(idx)
 if conteudo:
     novo = conteudo
-    novo = novo.replace('content="https://qualyquimy.com.br/"', f'content="{BASE_URL}/"')
-    novo = novo.replace('"url": "https://qualyquimy.com.br"', f'"url": "{BASE_URL}"')
+    novo = novo.replace('content="https://tintasqualyquimy.com.br/"', f'content="{BASE_URL}/"')
+    novo = novo.replace('"url": "https://tintasqualyquimy.com.br"', f'"url": "{BASE_URL}"')
     novo = novo.replace('<span> Direitos', '<span>© Direitos')
     og_img = f'<meta property="og:image" content="{BASE_URL}/imagens/og-qualyquimy.jpg" />'
     if 'og:image' not in novo:
@@ -408,3 +408,4 @@ print(f"  OK: meta verificação adicionada em {s14_count} páginas.")
 print("\n" + "="*60)
 print("AUDITORIA CONCLUÍDA — todos os 14 scripts executados.")
 print("="*60)
+

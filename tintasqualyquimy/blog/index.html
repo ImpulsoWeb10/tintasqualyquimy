@@ -48,56 +48,13 @@
   Mantemos apenas style-min.css. -->
 <link href="/css/style-min.css" rel="stylesheet" />
 
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- JSON-LD (corrigido: "qual escolher??" → "qual escolher?") -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Blog Qualy Quimy",
-  "url": "https://tintasqualyquimy.com.br/blog/index.html",
-  "description": "Blog e dicas técnicas sobre tintas e materiais Qualy Quimy em Itaquaquecetuba e região.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Qualy Quimy",
-    "url": "https://tintasqualyquimy.com.br"
-  },
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {"@type":"ListItem","position":1,"name":"Grafiato: o que é e como aplicar","url":"https://tintasqualyquimy.com.br/blog/grafiato-o-que-e-como-aplicar.html"},
-      {"@type":"ListItem","position":2,"name":"Diferença entre Massa PVA e Massa Acrílica","url":"https://tintasqualyquimy.com.br/blog/diferenca-massa-pva-massa-acrilica.html"},
-      {"@type":"ListItem","position":3,"name":"Como calcular tinta por m²","url":"https://tintasqualyquimy.com.br/blog/como-calcular-tinta-por-m2.html"},
-      {"@type":"ListItem","position":4,"name":"Seladora: quando e como usar","url":"https://tintasqualyquimy.com.br/blog/seladora-quando-usar.html"},
-      {"@type":"ListItem","position":5,"name":"Textura Lisa vs Grafiato: qual escolher?","url":"https://tintasqualyquimy.com.br/blog/textura-lisa-vs-grafiato.html"},
-      {"@type":"ListItem","position":6,"name":"Esmalte para madeira e metal: guia completo","url":"https://tintasqualyquimy.com.br/blog/esmalte-para-madeira-e-metal.html"},
-      {"@type":"ListItem","position":7,"name":"Textura Projetada para fachadas externas","url":"https://tintasqualyquimy.com.br/blog/textura-projetada-fachadas.html"},
-      {"@type":"ListItem","position":8,"name":"Liqui Brilho: brilho e impermeabilização","url":"https://tintasqualyquimy.com.br/blog/liqui-brilho-impermeabilizante.html"},
-      {"@type":"ListItem","position":9,"name":"Q Color: a tinta lavável premium Qualy Quimy","url":"https://tintasqualyquimy.com.br/blog/tinta-economica-qualy-color.html"}
-    ]
-  }
-}
-</script>
-
-<!-- ══ CORREÇÃO 4: GA4 cookie_domain incorreto ══
-  ERA: gtag sem configuração de domínio explícita.
-  O cookie _ga era rejeitado porque o gtag tentava
-  definir o cookie no domínio ".com.br" (muito amplo)
-  em vez do subdomínio correto.
-  CORRIGIDO: cookie_domain explícito + SameSite flags. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFTJ9MRF64"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-HFTJ9MRF64', {
-    cookie_domain: 'tintasqualyquimy.tintasqualyquimy.com.br',
-    cookie_flags: 'SameSite=None;Secure',
-    cookie_update: true
-  });
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HFTJ9MRF64', {'anonymize_ip': true});
 </script>
-
 </head>
 <body>
 
