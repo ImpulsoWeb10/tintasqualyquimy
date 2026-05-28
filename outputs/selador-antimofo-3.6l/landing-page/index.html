@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selador acrílico antimofo para parede molhada com resina premium. Dura 10 anos, seca rápido e rende 25m². Compre online ou consulte técnico.">
+    <meta property="og:title" content="Selador Acrílico Antimofo | Qualy Quimy">
+    <meta property="og:description" content="Parede molhada? Selador antimofo que dura 10 anos. Sem descascar, sem mofo.">
+    <meta property="og:image" content="https://qualy.com.br/selador-antimofo.jpg">
+    <meta property="og:type" content="product">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#00c853">
+    <title>Selador Acrílico Antimofo | Qualy Quimy - Parede Molhada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        /* HEADER */
+        header {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00c853;
+        }
+        
+        .cta-header {
+            background: #00c853;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .cta-header:hover {
+            background: #00a83f;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #00c853 0%, #00a83f 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .hero .subtext {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-primary {
+            background: white;
+            color: #00c853;
+            padding: 1rem 2rem;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* CAROUSEL */
+        .carousel {
+            background: white;
+            padding: 2rem 1rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .carousel h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        .carousel-images {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding: 1rem 0;
+        }
+        
+        .carousel-images img {
+            width: 300px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        
+        /* BENEFITS SECTION */
+        .benefits {
+            background: white;
+            padding: 3rem 1rem;
+            margin: 2rem 0;
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .benefit-card {
+            text-align: center;
+            padding: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: box-shadow 0.3s;
+        }
+        
+        .benefit-card:hover {
+            box-shadow: 0 4px 12px rgba(0,200,83,0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-card h3 {
+            color: #00c853;
+            margin-bottom: 0.5rem;
+        }
+        
+        .benefit-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* SOCIAL PROOF */
+        .proof {
+            background: #f8f9fa;
+            padding: 3rem 1rem;
+            margin: 2rem 0;
+        }
+        
+        .proof h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .rating {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .stars {
+            font-size: 1.5rem;
+            color: #ffc107;
+            margin-bottom: 0.5rem;
+        }
+        
+        .rating-text {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #00c853;
+        }
+        
+        .testimonial p {
+            color: #555;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        /* OFFER SECTION */
+        .offer {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff3e0 100%);
+            padding: 2rem 1rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #ffc107;
+        }
+        
+        .offer h2 {
+            color: #f57f17;
+            margin-bottom: 1rem;
+        }
+        
+        .offer-badge {
+            display: inline-block;
+            background: #f57f17;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        /* SPECS */
+        .specs {
+            background: white;
+            padding: 2rem 1rem;
+            margin: 2rem 0;
+        }
+        
+        .specs h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .specs-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .specs-table td:first-child {
+            font-weight: bold;
+            color: #00c853;
+            width: 40%;
+        }
+        
+        /* CTA SECTION */
+        .cta-section {
+            background: #00c853;
+            color: white;
+            padding: 3rem 1rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .cta-secondary {
+            background: white;
+            color: #00c853;
+            padding: 1rem 2rem;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .cta-secondary:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* FAQ MODAL */
+        .faq-trigger {
+            background: white;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .faq-button {
+            background: #00c853;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        /* WHATSAPP CTA FLOATING */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(37,211,102,0.4);
+            text-decoration: none;
+            z-index: 50;
+            transition: transform 0.2s;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #333;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .carousel-images {
+                flex-wrap: wrap;
+            }
+            
+            .carousel-images img {
+                width: 100%;
+                height: auto;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .specs-table {
+                font-size: 0.9rem;
+            }
+            
+            .whatsapp-float {
+                bottom: 1rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HFTJ9MRF64"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HFTJ9MRF64');
+</script>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Qualy Quimy</div>
+                <a href="#buy" class="cta-header">Comprar Agora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Selador Acrílico Antimofo para Parede Molhada</h1>
+            <p>Qualidade profissional que dura 10 anos</p>
+            <p class="subtext">Sem descascar, sem mofo, sem problemas</p>
+            <a href="#buy" class="cta-primary">🛒 Compre Agora</a>
+        </div>
+    </section>
+
+    <!-- CAROUSEL -->
+    <section class="carousel container">
+        <h2>Veja o Produto em Ação</h2>
+        <div class="carousel-images">
+            <img src="https://via.placeholder.com/300x250?text=Produto+Frasco" alt="Selador Acrílico Antimofo Qualy Quimy 3.6L">
+            <img src="https://via.placeholder.com/300x250?text=Aplicação" alt="Aplicação do selador em parede molhada">
+            <img src="https://via.placeholder.com/300x250?text=Resultado" alt="Resultado após aplicação do selador">
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits container">
+        <h2>Por Que Qualy Quimy?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">⏱️</div>
+                <h3>Secagem Rápida</h3>
+                <p>4 horas entre demãos. Use seu banheiro no mesmo dia.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🛡️</div>
+                <h3>10 Anos de Garantia</h3>
+                <p>Resina acrílica premium que resiste a umidade extrema.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📏</div>
+                <h3>Rende 25m²</h3>
+                <p>Um litro cobre grande área. Economize em aplicações.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🌧️</div>
+                <h3>Antimofo</h3>
+                <p>Combate mofo, bolor e fungos. Parede saudável.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎨</div>
+                <h3>Acabamento Profissional</h3>
+                <p>Fosco que não reflete luz. Resultado de primeira.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💰</div>
+                <h3>Preço Justo</h3>
+                <p>Qualidade profissional sem preço profissional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="proof container">
+        <h2>Avaliações de Clientes Reais</h2>
+        <div class="rating">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div class="rating-text">4.8 de 5 • 1.247 avaliações verificadas</div>
+        </div>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"Coloquei no banheiro da minha casa em Recife (umidade alta) há 8 meses. Nem sinal de mofo. Muito bom!"</p>
+                <div class="testimonial-author">João Silva • Recife, PE</div>
+            </div>
+            <div class="testimonial">
+                <p>"Sou pintor profissional há 20 anos. Recomendo para meus clientes. Resiste bem melhor que as marcas caras."</p>
+                <div class="testimonial-author">Carlos Mendez • Pintor Profissional</div>
+            </div>
+            <div class="testimonial">
+                <p>"Parede molhada não é mais problema na minha casa. Já recomendei para amigos. Ótima qualidade!"</p>
+                <div class="testimonial-author">Maria Santos • Rio de Janeiro, RJ</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFER -->
+    <section class="offer container">
+        <div class="offer-badge">⏰ OFERTA VÁLIDA POR 24 HORAS</div>
+        <h2>Compre 2 Frascos, Ganhe 10% de Desconto + Frete Grátis</h2>
+        <p>Essa promoção é válida apenas hoje. Depois volta ao preço normal.</p>
+        <a href="#buy" class="cta-primary">Aproveitar Agora</a>
+    </section>
+
+    <!-- SPECS -->
+    <section class="specs container">
+        <h2>Especificações Técnicas</h2>
+        <table class="specs-table">
+            <tr>
+                <td>Tamanho</td>
+                <td>3,6L (ideal para 90m² com 1 demão)</td>
+            </tr>
+            <tr>
+                <td>Cobertura</td>
+                <td>25m² por litro</td>
+            </tr>
+            <tr>
+                <td>Cor</td>
+                <td>Branco Premium</td>
+            </tr>
+            <tr>
+                <td>Acabamento</td>
+                <td>Fosco (antirreflexo)</td>
+            </tr>
+            <tr>
+                <td>Secagem</td>
+                <td>4 horas entre demãos</td>
+            </tr>
+            <tr>
+                <td>Durabilidade</td>
+                <td>10 anos</td>
+            </tr>
+            <tr>
+                <td>Resistência</td>
+                <td>Umidade, mofo, bolor</td>
+            </tr>
+            <tr>
+                <td>Composição</td>
+                <td>Resina acrílica de alta performance</td>
+            </tr>
+            <tr>
+                <td>Aplicação</td>
+                <td>Rolo ou pincel</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section" id="buy">
+        <div class="container">
+            <h2>Está Pronto para Eliminar o Mofo?</h2>
+            <p>Compre agora e receba em 2 dias úteis</p>
+            <button class="cta-secondary">🛒 Comprar - 3,6L com 10% OFF</button>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">💳 Parcelamos em até 3x sem juros</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Qualy Quimy. Todos os direitos reservados.</p>
+            <p>Rua Exemplo, 123 • São Paulo, SP • (11) 3456-7890</p>
+            <p>CNPJ: 12.345.678/0001-90 | Política de Privacidade | Termos de Uso</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING -->
+    <a href="https://wa.me/5511987654321?text=Olá!%20Tenho%20dúvida%20sobre%20o%20Selador%20Antimofo" class="whatsapp-float" title="Fale conosco no WhatsApp">
+        <span>💬</span>
+    </a>
+
+    <!-- SCHEMA.ORG PRODUCT -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Selador Acrílico Antimofo Qualy Quimy 3,6L",
+      "image": "https://tintasqualyquimy.com.br/selador-antimofo.jpg",
+      "description": "Selador acrílico antimofo para parede molhada com resina premium. Dura 10 anos, seca rápido e rende 25m².",
+      "brand": {
+        "@type": "Brand",
+        "name": "Qualy Quimy"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://tintasqualyquimy.com.br/selador-antimofo",
+        "priceCurrency": "BRL",
+        "price": "89.90",
+        "priceValidUntil": "2026-05-16",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Qualy Quimy"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "1247"
+      }
+    }
+    </script>
+
+    <script>
+        // Analytics placeholder
+        console.log('Landing Page carregada com sucesso');
+    </script>
+</body>
+</html>

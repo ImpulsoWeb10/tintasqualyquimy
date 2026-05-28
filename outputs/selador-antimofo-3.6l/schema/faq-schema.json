@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quanto rende o Selador Acrílico Antimofo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rende 25m² por litro. Um frasco de 3,6L rende 90m² com 1 demão ou 45m² com 2 demãos (recomendado)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto tempo seca?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seca em 4 horas entre demãos. Cura completa em 7 dias."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual a diferença com selador comum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seladores comuns (PVA) descascam em 6 meses. Nosso Selador Acrílico dura 10 anos por usar resina de alta performance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tem garantia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, 12 meses contra defeito de fabricação. Além disso, 30 dias de satisfação garantida ou dinheiro de volta."
+      }
+    }
+  ]
+}

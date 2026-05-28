@@ -1,0 +1,96 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Selador Acrílico Antimofo Qualy Quimy 3,6L",
+  "image": [
+    "https://qualy.com.br/images/selador-antimofo-1.jpg",
+    "https://qualy.com.br/images/selador-antimofo-2.jpg",
+    "https://qualy.com.br/images/selador-antimofo-3.jpg"
+  ],
+  "description": "Selador acrílico antimofo para parede molhada com resina premium. Dura 10 anos, seca rápido (4h) e rende 25m². Combate mofo, bolor e fungos.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Qualy Quimy"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Qualy Quimy Ltda",
+    "url": "https://qualy.com.br"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://qualy.com.br/selador-antimofo",
+    "priceCurrency": "BRL",
+    "price": "80.91",
+    "priceValidUntil": "2026-05-16",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Qualy Quimy"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "1247",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "João Silva"
+      },
+      "datePublished": "2026-04-15",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Coloquei no banheiro da minha casa em Recife há 8 meses. Nem sinal de mofo. Muito bom!"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Carlos Mendez"
+      },
+      "datePublished": "2026-04-10",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Sou pintor profissional. Recomendo para meus clientes. Resiste bem melhor que as marcas caras."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Maria Santos"
+      },
+      "datePublished": "2026-04-05",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Parede molhada não é mais problema na minha casa. Já recomendei para amigos."
+    }
+  ],
+  "sku": "0001-SELAN-ANTIMOFO-36L",
+  "weight": {
+    "@type": "QuantitativeValue",
+    "value": "5",
+    "unitCode": "KGM"
+  },
+  "dimensions": {
+    "@type": "QuantitativeValue",
+    "height": {
+      "@type": "Distance",
+      "value": "0.36"
+    }
+  }
+}
