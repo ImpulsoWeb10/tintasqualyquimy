@@ -1,0 +1,44 @@
+name: SEO Checks
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  seo-checks:
+    name: Validate sitemaps, robots and HTML
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies if present
+        run: |
+          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
+
+      - name: Run sitemap and robots validation
+        run: |
+          python tools/validate_sitemaps.py | tee validate_sitemaps.out
+          if grep -iE "missing|parse error" validate_sitemaps.out; then echo "Sitemap validation failed" >&2; exit 1; fi
+
+      - name: Run HTML report and fail on missing GA
+        run: |
+          python report_html_issues.py | tee html_report.out
+          MISSING=$(grep -E '^Missing GA:' html_report.out | awk '{print $3}' || echo 0)
+          echo "Missing GA count: $MISSING"
+          if [ "$MISSING" -gt 0 ]; then echo "Found pages missing GA snippet" >&2; cat html_report.out; exit 1; fi
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-reports
+          path: |
+            validate_sitemaps.out
+            html_report.out
