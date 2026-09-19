@@ -369,12 +369,12 @@
   CORREÇÃO: caminhos absolutos a partir da raiz do domínio.
   ADICIONADO: defer para não bloquear o render.
   ADICIONADO: onerror para log limpo sem quebrar a página. -->
-<script defer src="/js/utils.js"
-  onerror="console.warn('[QQ] utils.js não encontrado em /js/utils.js')"></script>
-<script defer src="/js/lazy-loading.js"
-  onerror="console.warn('[QQ] lazy-loading.js não encontrado em /js/lazy-loading.js')"></script>
-<script defer src="/js/main-secure.js"
-  onerror="console.warn('[QQ] main-secure.js não encontrado em /js/main-secure.js')"></script>
+<script defer src="../js/utils.js"
+  onerror="console.warn('[QQ] utils.js não encontrado em ../js/utils.js')"></script>
+<script defer src="../js/lazy-loading.js"
+  onerror="console.warn('[QQ] lazy-loading.js não encontrado em ../js/lazy-loading.js')"></script>
+<script defer src="../js/main-secure.js"
+  onerror="console.warn('[QQ] main-secure.js não encontrado em ../js/main-secure.js')"></script>
 
 <!-- ══ CORREÇÃO 11: Fetch de componentes mortos removido ══
   ERA: código tentava fetch('../components/header.html') e
