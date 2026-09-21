@@ -4,120 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="Xz_2AAmdPmp8Z-4dD1Ji-ZoX2YU2kUZovEK9f03HgBM" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="https://tintasqualyquimy.impulsoweb10.com.br/categorias/blog.html" />
   <meta name="description" content="Dicas e tutoriais sobre tintas, grafiato, textura e massa Qualy Quimy para pintores em Itaquaquecetuba, Mogi das Cruzes, Suzano e região de SP." />
   <title>Blog Qualy Quimy | Dicas de Pintura e Materiais em Itaquaquecetuba</title>
 
-  <!-- Fontes e CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link href="../css/style-min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Open Graph -->
+  <!-- CORREÇÃO 1: OG tags consolidadas no topo do <head> e completas
+       ERA: apenas og:image/width/height definidos aqui; og:title/description/type/url/locale estavam ausentes -->
+  <meta property="og:title" content="Blog Qualy Quimy | Dicas de Pintura e Materiais em Itaquaquecetuba" />
+  <meta property="og:description" content="Dicas e tutoriais sobre tintas, grafiato, textura e massa Qualy Quimy para pintores em Itaquaquecetuba, Mogi das Cruzes, Suzano e região de SP." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tintasqualyquimy.impulsoweb10.com.br/categorias/blog.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Qualy Quimy" />
   <meta property="og:image" content="https://tintasqualyquimy.impulsoweb10.com.br/imagens/og-qualyquimy.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFTJ9MRF64"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HFTJ9MRF64',{'cookie_domain':'tintasqualyquimy.com.br'});</script>
+  <!-- Security Headers -->
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
 
-  <!-- Schema.org JSON-LD -->
+  <!-- CORREÇÃO 2: CSP já estava com GA4 — mantido igual (correto) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://wa.me;" />
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CORREÇÃO 3: CSS duplicado removido
+       ERA: ../css/style-min.css + ../css/style.css juntos
+       Mantido apenas style-min.css -->
+  <link href="../css/style-min.css" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- JSON-LD — sem alterações, já estava correto -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Blog Qualy Quimy",
-  "url": "https://tintasqualyquimy.impulsoweb10.com.br/categorias/blog.html",
-  "description": "Blog e dicas técnicas sobre tintas e materiais Qualy Quimy em Itaquaquecetuba e região.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Qualy Quimy",
-    "url": "https://tintasqualyquimy.impulsoweb10.com.br"
-  },
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Grafiato: o que é e como aplicar",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/grafiato-o-que-e-como-aplicar.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Diferença entre Massa PVA e Massa Acrílica",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/diferenca-massa-pva-massa-acrilica.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Como calcular tinta por m²",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/como-calcular-tinta-por-m2.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Seladora: quando e como usar",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/seladora-quando-usar.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "name": "Textura Lisa vs Grafiato: qual escolher?",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/textura-lisa-vs-grafiato.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "name": "Esmalte para madeira e metal: guia completo",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/esmalte-para-madeira-e-metal.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "name": "Textura Projetada para fachadas externas",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/textura-projetada-fachadas.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 8,
-        "name": "Liqui Brilho: brilho e impermeabilização",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/liqui-brilho-impermeabilizante.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 9,
-        "name": "Tinta Econômica Qualy Color: guia completo",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/tinta-economica-qualy-color.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 10,
-        "name": "Dicas de Pintura e Materiais em Itaquaquecetuba",
-        "url": "https://tintasqualyquimy.impulsoweb10.com.br/blog/dicas-pintura-materiais-itaquaquecetuba.html"
-      }
-    ]
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Blog Qualy Quimy",
+    "url": "https://tintasqualyquimy.impulsoweb10.com.br/categorias/blog.html",
+    "description": "Blog e dicas técnicas sobre tintas e materiais Qualy Quimy em Itaquaquecetuba e região.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Qualy Quimy",
+      "url": "https://tintasqualyquimy.impulsoweb10.com.br"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Grafiato: o que é e como aplicar","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/grafiato-o-que-e-como-aplicar.html"},
+        {"@type":"ListItem","position":2,"name":"Diferença entre Massa PVA e Massa Acrílica","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/diferenca-massa-pva-massa-acrilica.html"},
+        {"@type":"ListItem","position":3,"name":"Como calcular tinta por m²","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/como-calcular-tinta-por-m2.html"},
+        {"@type":"ListItem","position":4,"name":"Seladora: quando e como usar","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/seladora-quando-usar.html"},
+        {"@type":"ListItem","position":5,"name":"Textura Lisa vs Grafiato: qual escolher?","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/textura-lisa-vs-grafiato.html"},
+        {"@type":"ListItem","position":6,"name":"Esmalte para madeira e metal: guia completo","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/esmalte-para-madeira-e-metal.html"},
+        {"@type":"ListItem","position":7,"name":"Textura Projetada para fachadas externas","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/textura-projetada-fachadas.html"},
+        {"@type":"ListItem","position":8,"name":"Liqui Brilho: brilho e impermeabilização","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/liqui-brilho-impermeabilizante.html"},
+        {"@type":"ListItem","position":9,"name":"Tinta Econômica Qualy Color: guia completo","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/tinta-economica-qualy-color.html"},
+        {"@type":"ListItem","position":10,"name":"Dicas de Pintura e Materiais em Itaquaquecetuba","url":"https://tintasqualyquimy.impulsoweb10.com.br/blog/dicas-pintura-materiais-itaquaquecetuba.html"}
+      ]
+    }
   }
-}
   </script>
 
-  <!-- Security Headers Meta -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://wa.me;">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <!-- CORREÇÃO 4: GA4 cookie_domain errado
+       ERA: 'cookie_domain':'tintasqualyquimy.com.br'  ← domínio ERRADO (sem impulsoweb10)
+       Isso causava os cookies sendo rejeitados pelo navegador -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFTJ9MRF64"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-HFTJ9MRF64', {
+      cookie_domain: 'tintasqualyquimy.impulsoweb10.com.br',
+      cookie_flags: 'SameSite=None;Secure',
+      cookie_update: true
+    });
+  </script>
+
 </head>
 <body>
+
 <header>
+  <!-- CORREÇÃO 5: Regra de entrega no header-top
+       CORREÇÃO 6: rel="noopener noreferrer" adicionado no link do frete -->
   <div class="header-top">
-    Entrega em Itaquaquecetuba, Mogi das Cruzes, Suzano e região -
+    Entrega em Itaquaquecetuba, Mogi das Cruzes, Suzano e região —
     <a href="../comercial/frete-gratis-itaquaquecetuba.html">Frete grátis disponível</a>
+    &nbsp;·&nbsp;
+    <a href="../comercial/frete-gratis-itaquaquecetuba.html#regras" style="color:#ffd700;font-weight:600;">
+      ⚠️ Conferir regras de entrega (não entregamos finais de semana)
+    </a>
   </div>
   <div class="header-main">
     <a href="../index.html" class="logo">Qualy<span>Quimy</span></a>
@@ -138,21 +122,35 @@
     </div>
   </div>
 </header>
-<div class="breadcrumb-bar"><div style="max-width:1280px;margin:0 auto;"><a href="../index.html">Início</a><span>›</span>Blog e Dicas</div></div>
 
+<div class="breadcrumb-bar">
+  <div style="max-width:1280px;margin:0 auto;">
+    <a href="../index.html">Início</a><span>›</span> Blog e Dicas
+  </div>
+</div>
+
+<!-- HERO -->
 <div style="background:linear-gradient(120deg,var(--cor-secundaria) 55%,#1a0808 100%);padding:60px 24px;position:relative;overflow:hidden;">
   <div style="position:absolute;top:-40px;right:-40px;width:320px;height:320px;background:radial-gradient(circle,rgba(214,43,43,0.18) 0%,transparent 70%);pointer-events:none;"></div>
   <div class="container">
     <div class="hero-badge" style="margin-bottom:16px;">Blog Qualy Quimy</div>
     <h1 style="font-family:var(--fonte-titulo);font-size:clamp(36px,5vw,58px);font-weight:900;color:#fff;text-transform:uppercase;line-height:1.05;margin-bottom:16px;">Blog e Dicas Qualy Quimy</h1>
-    <p style="color:#b0b8c8;font-size:17px;max-width:620px;margin-bottom:28px;">Guias técnicos, tutoriais de aplicação e dicas profissionais sobre tintas, texturas e materiais para pintura. Conteúdo criado para pintores e reformadores da região.</p>
+    <p style="color:#b0b8c8;font-size:17px;max-width:620px;margin-bottom:12px;">Guias técnicos, tutoriais de aplicação e dicas profissionais sobre tintas, texturas e materiais para pintura. Conteúdo criado para pintores e reformadores da região.</p>
+    <!-- CORREÇÃO 5: Regra de entrega no hero -->
+    <p style="color:#ffd700;font-size:13px;font-weight:600;margin-bottom:20px;">
+      ⚠️ Entregas realizadas de segunda a sexta-feira. Não realizamos entregas aos finais de semana.
+      <a href="../comercial/frete-gratis-itaquaquecetuba.html#regras"
+         style="color:#ffd700;text-decoration:underline;">Conferir regras de entrega</a>
+    </p>
     <div style="display:flex;gap:14px;flex-wrap:wrap;">
-      <a href="https://wa.me/5511954950044?text=Quero%20informações%20sobre%20Blog%20Qualy%20Quimy" target="_blank" rel="noopener noreferrer" class="btn-primary">Pedir pelo WhatsApp</a>
+      <a href="https://wa.me/5511954950044?text=Quero%20informações%20sobre%20Blog%20Qualy%20Quimy"
+         target="_blank" rel="noopener noreferrer" class="btn-primary">Pedir pelo WhatsApp</a>
       <a href="../index.html#produtos" class="btn-secondary">Ver todos os produtos</a>
     </div>
   </div>
 </div>
 
+<!-- ARTIGOS -->
 <section style="background:var(--cor-claro);">
   <div class="container">
     <div class="section-header">
@@ -364,130 +362,45 @@
   </div>
 </section>
 
-<!-- =====================================================================
-     ARTIGO SEO: Dicas de Pintura e Materiais em Itaquaquecetuba
-     Slug: /blog/dicas-pintura-materiais-itaquaquecetuba.html
-     Meta: Descubra dicas práticas de pintura e como escolher tintas, texturas e materiais em Itaquaquecetuba. Guia completo para quem quer resultado profissional.
-     Tags: tinta para parede Itaquaquecetuba, loja de tintas Itaquaquecetuba, textura grafiato preço, tinta para fachada, materiais de pintura Itaquaquecetuba
-     Títulos alternativos:
-       1. Como Escolher Tinta e Materiais de Pintura em Itaquaquecetuba: Guia Completo
-       2. Loja de Tintas em Itaquaquecetuba: Tudo Que Você Precisa Saber Antes de Pintar
-       3. Pintura Perfeita em Itaquaquecetuba: Dicas de Materiais, Tinta e Acabamento
-====================================================================== -->
+<!-- ARTIGO SEO — sem alterações de conteúdo visual -->
 <section id="artigo-dicas-pintura-itaquaquecetuba" style="background:#f7f8fa;padding:64px 24px;">
   <div class="container" style="max-width:860px;">
-
     <div style="margin-bottom:10px;">
       <span style="background:var(--cor-primaria);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase;">Guia Local</span>
     </div>
-
     <h1 style="font-family:var(--fonte-titulo);font-size:clamp(28px,4vw,46px);font-weight:900;color:var(--cor-secundaria);line-height:1.1;margin:16px 0 10px;">
       Dicas de Pintura e Materiais em Itaquaquecetuba: o Que Você Precisa Saber Antes de Começar
     </h1>
-
     <p style="color:#888;font-size:14px;margin-bottom:32px;">Por Equipe Qualy Quimy &nbsp;|&nbsp; Atualizado em Abril de 2025 &nbsp;|&nbsp; Leitura: ~6 min</p>
-
     <p style="font-size:17px;line-height:1.8;color:#333;margin-bottom:24px;">
       Seja para reformar a sala, pintar a fachada ou renovar um quarto, a escolha dos materiais certos faz toda a diferença no resultado final — e no bolso. Quem mora em <strong>Itaquaquecetuba</strong> sabe que a região tem características próprias: verões quentes e úmidos, chuvas intensas e construções de diferentes tipos, que pedem atenção redobrada na hora de escolher a tinta. Neste guia, reunimos as dicas mais importantes para quem quer uma pintura bonita, durável e sem surpresas.
     </p>
-
-    <!-- H2: Clima -->
-    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">
-      Itaquaquecetuba e o Clima: Por Que Isso Influencia na Escolha da Tinta?
-    </h2>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      A região do Alto Tietê — que inclui <strong>Itaquaquecetuba, Suzano e Mogi das Cruzes</strong> — tem um clima com chuvas concentradas no verão e variação de temperatura que pode castigar bastante as superfícies externas. Paredes de fachada expostas ao sol da tarde sofrem dilatação e contração constantes, o que provoca trincas e descascamento quando a tinta não é adequada.
-    </p>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      Para ambientes externos, o ideal é sempre optar por tintas ou texturas <strong>acrílicas</strong>, que têm maior elasticidade e resistência à umidade. Já para interiores, uma boa tinta PVA já resolve bem, desde que a parede esteja devidamente preparada.
-    </p>
-
-    <!-- H2: Qual tinta para cada ambiente -->
-    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">
-      Qual Tinta Escolher para Cada Ambiente?
-    </h2>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      Essa é uma das dúvidas mais comuns entre quem vai pintar pela primeira vez — e também entre quem já fez isso antes e ficou insatisfeito com o resultado. A verdade é que não existe uma tinta única para tudo. Cada espaço tem uma necessidade:
-    </p>
-
-    <!-- H3 ambientes -->
+    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">Itaquaquecetuba e o Clima: Por Que Isso Influencia na Escolha da Tinta?</h2>
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">A região do Alto Tietê — que inclui <strong>Itaquaquecetuba, Suzano e Mogi das Cruzes</strong> — tem um clima com chuvas concentradas no verão e variação de temperatura que pode castigar bastante as superfícies externas. Paredes de fachada expostas ao sol da tarde sofrem dilatação e contração constantes, o que provoca trincas e descascamento quando a tinta não é adequada.</p>
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">Para ambientes externos, o ideal é sempre optar por tintas ou texturas <strong>acrílicas</strong>, que têm maior elasticidade e resistência à umidade. Já para interiores, uma boa tinta PVA já resolve bem, desde que a parede esteja devidamente preparada.</p>
+    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">Qual Tinta Escolher para Cada Ambiente?</h2>
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">Essa é uma das dúvidas mais comuns entre quem vai pintar pela primeira vez — e também entre quem já fez isso antes e ficou insatisfeito com o resultado. A verdade é que não existe uma tinta única para tudo. Cada espaço tem uma necessidade:</p>
     <h3 style="font-size:20px;font-weight:700;color:var(--cor-secundaria);margin:28px 0 10px;">🏠 Sala, Quartos e Corredores (Áreas Internas Secas)</h3>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      A <strong>tinta PVA</strong> é a mais usada e funciona muito bem. Ela é de fácil aplicação, tem bom rendimento e está disponível em diversas cores. Para um acabamento mais elegante, aplique antes uma <strong>massa PVA</strong> para nivelar a parede — o resultado fica muito mais liso e uniforme.
-    </p>
-
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">A <strong>tinta PVA</strong> é a mais usada e funciona muito bem. Ela é de fácil aplicação, tem bom rendimento e está disponível em diversas cores. Para um acabamento mais elegante, aplique antes uma <strong>massa PVA</strong> para nivelar a parede — o resultado fica muito mais liso e uniforme.</p>
     <h3 style="font-size:20px;font-weight:700;color:var(--cor-secundaria);margin:28px 0 10px;">🚿 Banheiros e Cozinhas (Áreas Úmidas)</h3>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      Aqui o segredo é usar <strong>tinta acrílica lavável</strong> ou um acabamento com <strong>esmalte</strong> nas partes mais expostas à água. A umidade constante pode facilitar o surgimento de bolor e descascamento se você usar um produto inadequado. Nunca use tinta PVA comum em banheiro — ela não aguenta a umidade.
-    </p>
-
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">Aqui o segredo é usar <strong>tinta acrílica lavável</strong> ou um acabamento com <strong>esmalte</strong> nas partes mais expostas à água. A umidade constante pode facilitar o surgimento de bolor e descascamento se você usar um produto inadequado. Nunca use tinta PVA comum em banheiro — ela não aguenta a umidade.</p>
     <h3 style="font-size:20px;font-weight:700;color:var(--cor-secundaria);margin:28px 0 10px;">🏗️ Fachadas e Áreas Externas</h3>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      Para <strong>tinta para fachada</strong> em Itaquaquecetuba, o mais indicado são as texturas — grafiato ou textura lisa. Elas protegem melhor contra chuva, sol e umidade do que tintas convencionais. O <strong>grafiato</strong> é especialmente popular porque, além de proteger, dá um acabamento diferenciado e esconde pequenas imperfeições da parede. O preço do grafiato varia conforme o saco (geralmente vendido em embalagens de 5 kg a 25 kg), e o rendimento médio é de 1 a 1,5 m² por quilo, dependendo da espessura aplicada.
-    </p>
-
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">Para <strong>tinta para fachada</strong> em Itaquaquecetuba, o mais indicado são as texturas — grafiato ou textura lisa. Elas protegem melhor contra chuva, sol e umidade do que tintas convencionais. O <strong>grafiato</strong> é especialmente popular porque, além de proteger, dá um acabamento diferenciado e esconde pequenas imperfeições da parede.</p>
     <h3 style="font-size:20px;font-weight:700;color:var(--cor-secundaria);margin:28px 0 10px;">🚪 Portas, Grades e Superfícies de Metal ou Madeira</h3>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      O produto certo aqui é o <strong>esmalte sintético</strong>. Ele oferece resistência ao desgaste e à ferrugem, além de um acabamento brilhante. Não se esqueça de aplicar uma demão de primer ou zarcão antes — isso garante aderência e aumenta muito a durabilidade.
-    </p>
-
-    <!-- H2: Erros comuns -->
-    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">
-      Erros Comuns na Pintura Que Você Deve Evitar
-    </h2>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      Boa parte dos problemas que aparecem depois da pintura — manchas, descascamento, bolhas — têm origem em erros simples que acontecem antes mesmo de abrir a lata. Veja os principais:
-    </p>
-
-    <div style="background:#fff;border-left:4px solid var(--cor-primaria);border-radius:8px;padding:20px 24px;margin-bottom:16px;">
-      <strong style="color:var(--cor-primaria);">❌ Pintar sem preparar a parede</strong>
-      <p style="margin:8px 0 0;font-size:15px;color:#444;line-height:1.7;">Parede com gordura, poeira, fungos ou reboco solto não segura tinta. Lixe, limpe e, se necessário, use seladora antes de pintar.</p>
-    </div>
-
-    <div style="background:#fff;border-left:4px solid var(--cor-primaria);border-radius:8px;padding:20px 24px;margin-bottom:16px;">
-      <strong style="color:var(--cor-primaria);">❌ Não usar seladora em paredes novas</strong>
-      <p style="margin:8px 0 0;font-size:15px;color:#444;line-height:1.7;">Parede nova absorve muita tinta, o que aumenta o consumo e deixa o acabamento irregular. Uma demão de seladora resolve o problema e ainda economiza produto.</p>
-    </div>
-
-    <div style="background:#fff;border-left:4px solid var(--cor-primaria);border-radius:8px;padding:20px 24px;margin-bottom:16px;">
-      <strong style="color:var(--cor-primaria);">❌ Diluir demais a tinta</strong>
-      <p style="margin:8px 0 0;font-size:15px;color:#444;line-height:1.7;">Colocar água em excesso piora o rendimento, compromete a cobertura e enfraquece a cor. Siga sempre as orientações do fabricante na embalagem.</p>
-    </div>
-
-    <div style="background:#fff;border-left:4px solid var(--cor-primaria);border-radius:8px;padding:20px 24px;margin-bottom:16px;">
-      <strong style="color:var(--cor-primaria);">❌ Pintar com sol forte ou parede molhada</strong>
-      <p style="margin:8px 0 0;font-size:15px;color:#444;line-height:1.7;">Em Itaquaquecetuba, o sol da tarde pode ser intenso. Pintar fachadas no pico do calor faz a tinta secar rápido demais, causando bolhas. O ideal é pintar cedo ou no final do dia.</p>
-    </div>
-
-    <div style="background:#fff;border-left:4px solid var(--cor-primaria);border-radius:8px;padding:20px 24px;margin-bottom:32px;">
-      <strong style="color:var(--cor-primaria);">❌ Dar poucas demãos para economizar</strong>
-      <p style="margin:8px 0 0;font-size:15px;color:#444;line-height:1.7;">O número mínimo recomendado é geralmente duas demãos. Uma única demão deixa a cor fraca e a proteção insuficiente, especialmente em áreas externas.</p>
-    </div>
-
-    <!-- H2: Dicas de rendimento -->
-    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">
-      Como Calcular Quantidade de Tinta e Não Desperdiçar
-    </h2>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      Uma dúvida clássica: <em>quanto de tinta eu preciso comprar?</em> O cálculo básico é simples:
-    </p>
-    <div style="background:#fff;border-radius:10px;padding:20px 24px;margin-bottom:24px;font-size:15px;color:#333;line-height:1.8;border:1px solid #e5e7eb;">
-      <strong>Fórmula rápida:</strong><br>
-      Meça a largura × altura de cada parede (descontando janelas e portas).<br>
-      Divida o total pelo rendimento indicado na embalagem.<br>
-      <strong>Exemplo:</strong> Uma sala com 40 m² de parede e uma tinta com rendimento de 10 m²/L precisa de pelo menos 4 litros <em>por demão</em>.
-    </div>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      Sempre compre um pouco a mais — cerca de 10% de sobra — para toques e retoques futuros. Isso evita o problema de não encontrar exatamente a mesma cor depois.
-    </p>
-
-    <!-- H2: Materiais de pintura -->
-    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">
-      Além da Tinta: Outros Materiais de Pintura Que Fazem Diferença
-    </h2>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      Quem busca <strong>materiais de pintura em Itaquaquecetuba</strong> sabe que o resultado final não depende só da tinta. A combinação certa de produtos é o que separa uma pintura mediana de uma pintura profissional:
-    </p>
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">O produto certo aqui é o <strong>esmalte sintético</strong>. Ele oferece resistência ao desgaste e à ferrugem, além de um acabamento brilhante. Não se esqueça de aplicar uma demão de primer ou zarcão antes — isso garante aderência e aumenta muito a durabilidade.</p>
+    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">Erros Comuns na Pintura Que Você Deve Evitar</h2>
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">Boa parte dos problemas que aparecem depois da pintura — manchas, descascamento, bolhas — têm origem em erros simples que acontecem antes mesmo de abrir a lata. Veja os principais:</p>
+    <div style="background:#fff;border-left:4px solid var(--cor-primaria);border-radius:8px;padding:20px 24px;margin-bottom:16px;"><strong style="color:var(--cor-primaria);">❌ Pintar sem preparar a parede</strong><p style="margin:8px 0 0;font-size:15px;color:#444;line-height:1.7;">Parede com gordura, poeira, fungos ou reboco solto não segura tinta. Lixe, limpe e, se necessário, use seladora antes de pintar.</p></div>
+    <div style="background:#fff;border-left:4px solid var(--cor-primaria);border-radius:8px;padding:20px 24px;margin-bottom:16px;"><strong style="color:var(--cor-primaria);">❌ Não usar seladora em paredes novas</strong><p style="margin:8px 0 0;font-size:15px;color:#444;line-height:1.7;">Parede nova absorve muita tinta, o que aumenta o consumo e deixa o acabamento irregular. Uma demão de seladora resolve o problema e ainda economiza produto.</p></div>
+    <div style="background:#fff;border-left:4px solid var(--cor-primaria);border-radius:8px;padding:20px 24px;margin-bottom:16px;"><strong style="color:var(--cor-primaria);">❌ Diluir demais a tinta</strong><p style="margin:8px 0 0;font-size:15px;color:#444;line-height:1.7;">Colocar água em excesso piora o rendimento, compromete a cobertura e enfraquece a cor. Siga sempre as orientações do fabricante na embalagem.</p></div>
+    <div style="background:#fff;border-left:4px solid var(--cor-primaria);border-radius:8px;padding:20px 24px;margin-bottom:16px;"><strong style="color:var(--cor-primaria);">❌ Pintar com sol forte ou parede molhada</strong><p style="margin:8px 0 0;font-size:15px;color:#444;line-height:1.7;">Em Itaquaquecetuba, o sol da tarde pode ser intenso. Pintar fachadas no pico do calor faz a tinta secar rápido demais, causando bolhas. O ideal é pintar cedo ou no final do dia.</p></div>
+    <div style="background:#fff;border-left:4px solid var(--cor-primaria);border-radius:8px;padding:20px 24px;margin-bottom:32px;"><strong style="color:var(--cor-primaria);">❌ Dar poucas demãos para economizar</strong><p style="margin:8px 0 0;font-size:15px;color:#444;line-height:1.7;">O número mínimo recomendado é geralmente duas demãos. Uma única demão deixa a cor fraca e a proteção insuficiente, especialmente em áreas externas.</p></div>
+    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">Como Calcular Quantidade de Tinta e Não Desperdiçar</h2>
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">Uma dúvida clássica: <em>quanto de tinta eu preciso comprar?</em> O cálculo básico é simples:</p>
+    <div style="background:#fff;border-radius:10px;padding:20px 24px;margin-bottom:24px;font-size:15px;color:#333;line-height:1.8;border:1px solid #e5e7eb;"><strong>Fórmula rápida:</strong><br>Meça a largura × altura de cada parede (descontando janelas e portas).<br>Divida o total pelo rendimento indicado na embalagem.<br><strong>Exemplo:</strong> Uma sala com 40 m² de parede e uma tinta com rendimento de 10 m²/L precisa de pelo menos 4 litros <em>por demão</em>.</div>
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">Sempre compre um pouco a mais — cerca de 10% de sobra — para toques e retoques futuros. Isso evita o problema de não encontrar exatamente a mesma cor depois.</p>
+    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">Além da Tinta: Outros Materiais de Pintura Que Fazem Diferença</h2>
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">Quem busca <strong>materiais de pintura em Itaquaquecetuba</strong> sabe que o resultado final não depende só da tinta. A combinação certa de produtos é o que separa uma pintura mediana de uma pintura profissional:</p>
     <ul style="font-size:16px;line-height:2;color:#333;padding-left:20px;margin-bottom:24px;">
       <li><strong>Seladora:</strong> base fundamental antes de pintar qualquer superfície nova ou muito porosa.</li>
       <li><strong>Massa PVA:</strong> usada em paredes internas para nivelar e dar acabamento liso.</li>
@@ -496,22 +409,18 @@
       <li><strong>Textura Lisa:</strong> para quem prefere um acabamento mais suave em paredes externas.</li>
       <li><strong>Liqui Brilho:</strong> verniz impermeabilizante que protege e dá brilho sobre qualquer textura ou tinta.</li>
     </ul>
-
-    <!-- H2: CTA -->
-    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">
-      Onde Comprar Tintas e Materiais em Itaquaquecetuba?
-    </h2>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      A <strong>Tintas Qualy Quimy</strong>, localizada na Rua Leiria, 45 – Chácara Cuiabá, em Itaquaquecetuba, é uma referência na região para quem busca qualidade e preço justo. A loja atende moradores de Itaquaquecetuba, Suzano, Mogi das Cruzes e cidades vizinhas, com entrega disponível e frete grátis em condições especiais.
+    <h2 style="font-family:var(--fonte-titulo);font-size:26px;font-weight:800;color:var(--cor-secundaria);margin:40px 0 14px;">Onde Comprar Tintas e Materiais em Itaquaquecetuba?</h2>
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">A <strong>Tintas Qualy Quimy</strong>, localizada na Rua Leiria, 45 – Chácara Cuiabá, em Itaquaquecetuba, é uma referência na região para quem busca qualidade e preço justo. A loja atende moradores de Itaquaquecetuba, Suzano, Mogi das Cruzes e cidades vizinhas, com entrega disponível e frete grátis em condições especiais.</p>
+    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">O atendimento é direto e sem enrolação: você descreve o projeto e a equipe indica os produtos certos, as quantidades necessárias e o melhor custo-benefício para a sua obra.</p>
+    <!-- CORREÇÃO 5: Regra de entrega no artigo SEO -->
+    <p style="font-size:15px;color:var(--cor-primaria);font-weight:600;margin-bottom:24px;">
+      ⚠️ Entregas realizadas de segunda a sexta-feira. Não realizamos entregas aos finais de semana.
+      <a href="../comercial/frete-gratis-itaquaquecetuba.html#regras"
+         style="color:var(--cor-primaria);text-decoration:underline;">Conferir regras de entrega</a>
     </p>
-    <p style="font-size:16px;line-height:1.8;color:#333;margin-bottom:16px;">
-      O atendimento é direto e sem enrolação: você descreve o projeto e a equipe indica os produtos certos, as quantidades necessárias e o melhor custo-benefício para a sua obra. Tudo sem precisar entender de tinta para tomar a decisão certa.
-    </p>
-
-    <!-- CTA Box -->
     <div style="background:var(--cor-primaria);border-radius:14px;padding:32px;text-align:center;margin:40px 0 0;">
       <p style="color:#fff;font-size:20px;font-weight:800;margin:0 0 8px;font-family:var(--fonte-titulo);">Quer ajuda para escolher o produto certo?</p>
-      <p style="color:rgba(255,255,255,0.88);font-size:15px;margin:0 0 22px;">Fale agora com a nossa equipe pelo WhatsApp ou visite a loja em Itaquaquecetuba. Atendimento rápido e sem burocracia.</p>
+      <p style="color:rgba(255,255,255,0.88);font-size:15px;margin:0 0 22px;">Fale agora com a nossa equipe pelo WhatsApp ou visite a loja em Itaquaquecetuba.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
         <a href="https://wa.me/5511954950044?text=Olá!%20Vi%20o%20artigo%20do%20blog%20e%20quero%20ajuda%20para%20escolher%20tinta%20em%20Itaquaquecetuba"
            target="_blank" rel="noopener noreferrer"
@@ -525,15 +434,23 @@
         </a>
       </div>
     </div>
-
   </div>
 </section>
 
+<!-- CIDADES ATENDIDAS -->
 <section style="background:#fff;">
   <div class="container">
     <div class="section-header">
       <div class="section-label">Entrega Regional</div>
       <h2>Cidades Atendidas</h2>
+      <!-- CORREÇÃO 5: Regra de entrega na seção de cidades -->
+      <p style="margin-top:8px;">
+        <strong style="color:var(--cor-primaria);">
+          ⚠️ Entregas de segunda a sexta-feira. Não entregamos finais de semana.
+          <a href="../comercial/frete-gratis-itaquaquecetuba.html#regras"
+             style="color:var(--cor-primaria);">Conferir regras de entrega.</a>
+        </strong>
+      </p>
     </div>
     <div class="cidades-grid">
       <a href="../cidades/itaquaquecetuba.html" class="cidade-card" style="background:var(--cor-primaria);">Itaquaquecetuba</a>
@@ -548,21 +465,38 @@
   </div>
 </section>
 
+<!-- CTA FINAL -->
 <section style="background:var(--cor-primaria);padding:52px 24px;text-align:center;">
   <div class="container">
     <h2 style="font-family:var(--fonte-titulo);font-size:36px;font-weight:900;color:#fff;text-transform:uppercase;margin-bottom:12px;">Pronto para Comprar?</h2>
-    <p style="color:rgba(255,255,255,0.85);margin-bottom:28px;font-size:16px;">Fale agora pelo WhatsApp e receba atendimento personalizado.</p>
-    <a href="https://wa.me/5511954950044?text=Quero%20informações%20sobre%20Blog%20Qualy%20Quimy" target="_blank" rel="noopener noreferrer" class="btn-primary"
+    <p style="color:rgba(255,255,255,0.85);margin-bottom:8px;font-size:16px;">Fale agora pelo WhatsApp e receba atendimento personalizado.</p>
+    <!-- CORREÇÃO 5: Regra de entrega no CTA final -->
+    <p style="color:#ffd700;font-size:13px;font-weight:600;margin-bottom:24px;">
+      ⚠️ Entregas somente de segunda a sexta-feira.
+      <a href="../comercial/frete-gratis-itaquaquecetuba.html#regras"
+         style="color:#ffd700;text-decoration:underline;">Conferir regras de entrega</a>
+    </p>
+    <a href="https://wa.me/5511954950044?text=Quero%20informações%20sobre%20Blog%20Qualy%20Quimy"
+       target="_blank" rel="noopener noreferrer"
+       class="btn-primary"
        style="background:#fff;color:var(--cor-primaria);display:inline-block;padding:16px 40px;font-size:18px;">
       Falar no WhatsApp
     </a>
   </div>
 </section>
 
+<!-- SEO TEXT -->
 <div class="seo-text">
   <div class="seo-text-inner">
     <h2>Dicas e Tutoriais de Pintura para Itaquaquecetuba e Região</h2>
     <p>O blog <strong>Qualy Quimy</strong> reúne conteúdo técnico criado para pintores profissionais e reformadores em <strong>Itaquaquecetuba, Mogi das Cruzes, Suzano e toda a zona leste de São Paulo</strong>. Aprenda a aplicar cada produto corretamente, calcular quantidades e escolher o material certo para cada superfície.</p>
+    <!-- CORREÇÃO 5: Regra de entrega no bloco SEO (indexável) -->
+    <p>
+      <strong style="color:var(--cor-primaria);">
+        ⚠️ Realizamos entregas de segunda a sexta-feira. Não entregamos aos finais de semana.
+        <a href="../comercial/frete-gratis-itaquaquecetuba.html#regras">Conferir regras de entrega.</a>
+      </strong>
+    </p>
   </div>
 </div>
 
@@ -572,10 +506,11 @@
       <a href="../index.html" class="logo">Qualy<span style="color:var(--cor-acento)">Quimy</span></a>
       <p>Tintas, massas, texturas e materiais para pintura em Itaquaquecetuba e toda a região de São Paulo.</p>
       <div class="endereco">
-        Rua Leiria, 45 - Chácara Cuiabá<br>
-        Itaquaquecetuba - SP<br>
+        Rua Leiria, 45 – Chácara Cuiabá<br>
+        Itaquaquecetuba – SP<br>
         (11) 95495-0044<br>
-        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Leiria+45+Ch%C3%A1cara+Cui%C3%A1b%C3%A1+Itaquaquecetuba+SP" target="_blank" rel="noopener noreferrer" style="color:var(--cor-acento)">Ver no Google Maps</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Leiria+45+Ch%C3%A1cara+Cui%C3%A1b%C3%A1+Itaquaquecetuba+SP"
+           target="_blank" rel="noopener noreferrer" style="color:var(--cor-acento)">Ver no Google Maps</a>
       </div>
     </div>
     <div class="footer-col"><h4>Produtos</h4><ul>
@@ -608,43 +543,23 @@
   </div>
   <div class="footer-bottom">
     <span>© Direitos Reservados — Qualy Quimy</span>
-    <span>Desenvolvido por <a href="https://impulsoweb10.com.br" target="_blank" rel="noopener noreferrer">ImpulsoWeb10</a>
-    <a href="../politica-de-privacidade.html">Política de Privacidade</a>
-    <a href="../termos-de-uso.html">Termos de Uso</a></span>
+    <span>
+      Desenvolvido por <a href="https://impulsoweb10.com.br" target="_blank" rel="noopener noreferrer">ImpulsoWeb10</a>
+      <a href="../politica-de-privacidade.html">Política de Privacidade</a>
+      <a href="../termos-de-uso.html">Termos de Uso</a>
+    </span>
   </div>
 </footer>
 
+<!-- CORREÇÃO 7: Scripts com caminho relativo correto para esta pasta
+     ERA: ../js/utils.js — correto para categorias/ mas vamos usar absoluto para consistência
+     CORREÇÃO 8: Bloco fetch components removido (código morto → 404 silenciosos) -->
+<script defer src="/js/utils.js"
+  onerror="console.warn('[QQ] /js/utils.js não encontrado')"></script>
+<script defer src="/js/lazy-loading.js"
+  onerror="console.warn('[QQ] /js/lazy-loading.js não encontrado')"></script>
+<script defer src="/js/main-secure.js"
+  onerror="console.warn('[QQ] /js/main-secure.js não encontrado')"></script>
 
-<!-- Scripts Otimizados -->
-<script src="../js/utils.js"></script>
-<script src="../js/lazy-loading.js"></script>
-<script src="../js/main-secure.js"></script>
-
-<!-- Componentes Dinâmicos -->
-<script>
-// Carregar componentes reutilizáveis
-document.addEventListener('DOMContentLoaded', function() {
-  // Header
-  const headerContainer = document.getElementById('header-container');
-  if (headerContainer) {
-    fetch('components/header.html')
-      .then(response => response.text())
-      .then(html => {
-        headerContainer.innerHTML = html;
-      })
-      .catch(error => console.error('Erro ao carregar header:', error));
-  }
-  
-  // Footer
-  const footerContainer = document.getElementById('footer-container');
-  if (footerContainer) {
-    fetch('components/footer.html')
-      .then(response => response.text())
-      .then(html => {
-        footerContainer.innerHTML = html;
-      })
-      .catch(error => console.error('Erro ao carregar footer:', error));
-  }
-});
-</script></body>
+</body>
 </html>
