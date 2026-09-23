@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Tintas e Texturas | QUALYQUIMY</title>
+    
+    <!-- Google Fonts: Inter & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FF6B00',
+                            neon: '#00FF9D',
+                            neonDark: '#00D683',
+                            darkBg: '#080E18',
+                            cardBg: '#0D1726',
+                            inputBg: '#09121F',
+                            borderColor: '#192C45'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        brand: ['Montserrat', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'neon-glow': '0 0 20px rgba(0, 255, 157, 0.35)',
+                        'neon-button': '0 4px 20px rgba(0, 255, 157, 0.4)',
+                        'card-depth': '0 20px 50px rgba(0, 0, 0, 0.7)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles for dark theme, floating elements & scrollbars -->
+    <style>
+        body {
+            background: radial-gradient(circle at 50% 20%, #102035 0%, #060B12 100%);
+            min-height: 100vh;
+        }
+
+        /* Glassmorphic floating card frame */
+        .floating-card {
+            background: rgba(13, 23, 38, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(25, 44, 69, 0.8);
+        }
+
+        /* Custom Input styling */
+        .app-input {
+            background-color: #08111e;
+            border: 1px solid #1c2e47;
+            color: #ffffff;
+            transition: all 0.25s ease;
+        }
+        .app-input:focus {
+            border-color: #00FF9D;
+            box-shadow: 0 0 10px rgba(0, 255, 157, 0.25);
+            outline: none;
+        }
+
+        /* Neon gradient text */
+        .text-neon-gradient {
+            background: linear-gradient(135deg, #00FF9D 0%, #00B8FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom scrollbar for dropdowns */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080E18;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1c2e47;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00FF9D;
+        }
+    </style>
+</head>
+<body class="text-slate-100 font-sans flex items-center justify-center p-3 sm:p-6 md:p-10">
+
+    <!-- Main Calculator Outer Box -->
+    <div class="w-full max-w-xl floating-card rounded-3xl p-5 sm:p-8 shadow-card-depth relative overflow-hidden my-auto">
+        
+        <!-- Decorative Ambient Lights -->
+        <div class="absolute -top-24 -left-24 w-60 h-60 bg-brand-neon/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Brand Header Logo -->
+        <div class="text-center mb-5">
+            <div class="inline-flex flex-col items-center">
+                <span class="font-brand font-black text-2xl sm:text-3xl tracking-tight text-white flex items-center gap-1">
+                    QUALY<span class="text-brand-orange">QUIMY</span>
+                </span>
+                <span class="text-[10px] sm:text-xs tracking-[0.25em] text-slate-400 font-semibold uppercase -mt-1">
+                    Tintas e Texturas
+                </span>
+            </div>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="text-center mb-6">
+            <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+                Calculadora de <span class="text-neon-gradient">Tintas e Texturas</span>
+            </h1>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1.5 max-w-md mx-auto leading-relaxed">
+                Informe as medidas do seu ambiente e encontre a quantidade ideal de produto.
+            </p>
+        </div>
+
+        <!-- Mode Tabs Navigation -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-3 p-1.5 bg-[#070e17] rounded-2xl border border-slate-800/80 mb-6">
+            <button type="button" id="tabTinta" onclick="switchMode('tinta')" 
+                    class="tab-btn flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-medium text-xs sm:text-sm transition-all duration-300">
+                <i class="fa-solid fa-paint-roller text-sm"></i>
+                <span>Tinta</span>
+            </button>
+            <button type="button" id="tabTextura" onclick="switchMode('textura')" 
+                    class="tab-btn flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-medium text-xs sm:text-sm transition-all duration-300">
+                <i class="fa-solid fa-brush text-sm"></i>
+                <span>Textura</span>
+            </button>
+            <button type="button" id="tabGrafiato" onclick="switchMode('grafiato')" 
+                    class="tab-btn flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-medium text-xs sm:text-sm transition-all duration-300">
+                <i class="fa-solid fa-cubes text-sm"></i>
+                <span>Grafiato</span>
+            </button>
+        </div>
+
+        <!-- Calculator Form -->
+        <form id="calcForm" onsubmit="event.preventDefault(); calculate();" class="space-y-4 sm:space-y-5">
+            
+            <!-- Tipo de ambiente -->
+            <div>
+                <label for="ambiente" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                    Tipo de ambiente
+                </label>
+                <div class="relative">
+                    <select id="ambiente" onchange="saveFormState()" class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm appearance-none cursor-pointer pr-10">
+                        <option value="Sala de Estar">Sala de Estar</option>
+                        <option value="Quarto">Quarto</option>
+                        <option value="Cozinha">Cozinha</option>
+                        <option value="Fachada Externa">Fachada Externa</option>
+                        <option value="Muro">Muro / Área Externa</option>
+                        <option value="Garagem">Garagem</option>
+                        <option value="Comercial">Espaço Comercial</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-slate-400">
+                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Largura e Comprimento -->
+            <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                <div>
+                    <label for="largura" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                        Largura (m)
+                    </label>
+                    <input type="number" step="0.01" min="0.1" id="largura" value="4" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm">
+                </div>
+                <div>
+                    <label for="comprimento" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                        Comprimento (m)
+                    </label>
+                    <input type="number" step="0.01" min="0.1" id="comprimento" value="5" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm">
+                </div>
+            </div>
+
+            <!-- Pé-direito, Janelas e Portas -->
+            <div class="grid grid-cols-3 gap-2.5 sm:gap-3">
+                <div>
+                    <label for="pedireito" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Pé-direito (m)">
+                        Pé-direito (m)
+                    </label>
+                    <input type="number" step="0.01" min="0.1" id="pedireito" value="2.80" oninput="saveFormState()" placeholder="2.80" required class="app-input w-full rounded-xl px-3 py-2.5 text-sm text-center">
+                </div>
+                <div>
+                    <label for="janelas" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Janelas (m²)">
+                        Janelas (m²)
+                    </label>
+                    <input type="number" step="0.01" min="0" id="janelas" value="5" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-3 py-2.5 text-sm text-center">
+                </div>
+                <div>
+                    <label for="portas" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Portas (m²)">
+                        Portas (m²)
+                    </label>
+                    <input type="number" step="0.01" min="0" id="portas" value="0" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-3 py-2.5 text-sm text-center">
+                </div>
+            </div>
+
+            <!-- Produto Select -->
+            <div>
+                <label for="produto" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                    Produto
+                </label>
+                <div class="relative">
+                    <select id="produto" onchange="saveFormState()" class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm appearance-none cursor-pointer pr-10">
+                        <!-- Options injected dynamically by JS based on Mode -->
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-slate-400">
+                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </div>
+                </div>
+                <div id="coverageNote" class="text-[11px] text-slate-400 mt-1 flex items-center gap-1">
+                    <!-- Dynamic info about average yield rate -->
+                </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button type="submit" class="w-full py-3.5 px-6 rounded-2xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-bold text-base sm:text-lg flex items-center justify-center gap-2.5 transition-all duration-300 shadow-neon-button hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
+                <i class="fa-solid fa-calculator text-lg sm:text-xl"></i>
+                <span>Calcular</span>
+            </button>
+        </form>
+
+        <!-- Result Box (Hidden until calculated or if saved) -->
+        <div id="resultBox" class="mt-6 border-2 border-brand-neon/80 bg-brand-cardBg/90 rounded-2xl p-4 sm:p-5 relative overflow-hidden transition-all duration-500">
+            <!-- Neon glow outline effect -->
+            <div class="absolute inset-0 bg-brand-neon/5 pointer-events-none"></div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 relative z-10">
+                
+                <!-- Product Can / Bucket Image -->
+                <div class="w-28 sm:w-32 shrink-0 flex items-center justify-center">
+                    <img id="productImage" src="https://placehold.co/180x220/003322/00FF9D?text=Q+Color" alt="Lata do Produto" class="w-auto h-28 sm:h-36 object-contain drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]">
+                </div>
+
+                <!-- Result Details -->
+                <div class="flex-grow text-center sm:text-left space-y-2">
+                    <h2 class="text-xl font-bold text-brand-neon flex items-center justify-center sm:justify-start gap-2">
+                        <span>Resultado</span>
+                    </h2>
+
+                    <!-- Área Líquida -->
+                    <div class="text-sm text-slate-300">
+                        Área líquida: <span id="resArea" class="font-bold text-white">0 m²</span>
+                    </div>
+
+                    <!-- Quantidade de Produto -->
+                    <div class="text-sm sm:text-base font-semibold text-slate-200">
+                        Quantidade de produto: <span id="resQuantidade" class="font-bold text-white">0 L</span>
+                    </div>
+
+                    <!-- Sugestão de Compras -->
+                    <div class="pt-1 border-t border-slate-800 text-xs sm:text-sm text-slate-300 leading-snug">
+                        Comprar: <span id="resEmbalagem" class="font-semibold text-white">--</span>
+                        <span id="resTotalLitros" class="text-brand-neon font-bold inline-flex items-center gap-1 ml-1">
+                            <span>(0)</span>
+                            <i class="fa-solid fa-circle-check text-brand-neon text-sm"></i>
+                        </span>
+                    </div>
+
+                    <!-- Observation badge for Grafiato -->
+                    <div id="grafiatoBadge" class="hidden mt-2 text-[11px] bg-slate-900/90 border border-brand-neon/30 text-slate-300 p-2 rounded-lg leading-tight">
+                        <i class="fa-solid fa-circle-info text-brand-orange mr-1"></i>
+                        Rendimento médio do Grafiato: <strong>4.54 kg/m²</strong> (pode variar de acordo com a superfície e aplicação).
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Application Logic Script -->
+    <script>
+        // Product Catalog grouped by categories
+        const PRODUCTS = {
+            tinta: [
+                { id: 'qcolor', name: 'Q Color (Tinta Acrílica)', yieldPerM2: 0.18, unit: 'L', img: 'https://placehold.co/180x220/003322/00FF9D?text=Q+Color', packages: [{ size: 18, label: 'emb. 18L' }, { size: 3.6, label: 'emb. 3.6L' }, { size: 1, label: 'emb. 1L' }] },
+                { id: 'qpremium', name: 'Q Premium Acrílico Fosco', yieldPerM2: 0.16, unit: 'L', img: 'https://placehold.co/180x220/0a2840/00FF9D?text=Q+Premium', packages: [{ size: 18, label: 'emb. 18L' }, { size: 3.6, label: 'emb. 3.6L' }, { size: 1, label: 'emb. 1L' }] },
+                { id: 'qlavavel', name: 'Q Lavável Super Acabamento', yieldPerM2: 0.17, unit: 'L', img: 'https://placehold.co/180x220/381040/00FF9D?text=Q+Lavavel', packages: [{ size: 18, label: 'emb. 18L' }, { size: 3.6, label: 'emb. 3.6L' }, { size: 1, label: 'emb. 1L' }] }
+            ],
+            textura: [
+                { id: 'qtextura_fina', name: 'Q Textura Rústica Fina', yieldPerM2: 1.80, unit: 'kg', img: 'https://placehold.co/180x220/221100/00FF9D?text=Textura+Fina', packages: [{ size: 25, label: 'barrica 25kg' }, { size: 18, label: 'balde 18kg' }, { size: 5, label: 'galão 5kg' }] },
+                { id: 'qtextura_media', name: 'Q Textura Rústica Média', yieldPerM2: 2.20, unit: 'kg', img: 'https://placehold.co/180x220/331a00/00FF9D?text=Textura+Media', packages: [{ size: 25, label: 'barrica 25kg' }, { size: 18, label: 'balde 18kg' }, { size: 5, label: 'galão 5kg' }] }
+            ],
+            grafiato: [
+                { id: 'qgrafiato_std', name: 'Q Grafiato Rústico Premium (4,54kg/m²)', yieldPerM2: 4.54, unit: 'kg', img: 'https://placehold.co/180x220/1c1917/00FF9D?text=Q+Grafiato', packages: [{ size: 25, label: 'barrica 25kg' }, { size: 18, label: 'balde 18kg' }, { size: 5, label: 'galão 5kg' }] }
+            ]
+        };
+
+        // State variables
+        let currentMode = 'tinta'; // 'tinta', 'textura', 'grafiato'
+
+        // Switch Mode / Tab
+        function switchMode(mode) {
+            currentMode = mode;
+            
+            // Update Tab UI
+            ['tinta', 'textura', 'grafiato'].forEach(m => {
+                const btn = document.getElementById('tab' + m.charAt(0).toUpperCase() + m.slice(1));
+                if (m === mode) {
+                    btn.className = "tab-btn flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm bg-brand-neon text-slate-950 shadow-neon-glow transition-all duration-300";
+                } else {
+                    btn.className = "tab-btn flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-medium text-xs sm:text-sm text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all duration-300";
+                }
+            });
+
+            // Populate Product Dropdown
+            populateProducts();
+
+            // Show/Hide Grafiato Specific Note Badge
+            const grafiatoBadge = document.getElementById('grafiatoBadge');
+            if (mode === 'grafiato') {
+                grafiatoBadge.classList.remove('hidden');
+            } else {
+                grafiatoBadge.classList.add('hidden');
+            }
+
+            saveFormState();
+            calculate();
+        }
+
+        // Populate Product Dropdown based on active mode
+        function populateProducts(selectedProductId = null) {
+            const productSelect = document.getElementById('produto');
+            const list = PRODUCTS[currentMode] || [];
+            
+            productSelect.innerHTML = '';
+            list.forEach(prod => {
+                const opt = document.createElement('option');
+                opt.value = prod.id;
+                opt.textContent = prod.name;
+                productSelect.appendChild(opt);
+            });
+
+            if (selectedProductId) {
+                productSelect.value = selectedProductId;
+            }
+
+            updateCoverageNote();
+        }
+
+        // Update Coverage Note below product select
+        function updateCoverageNote() {
+            const prodSelect = document.getElementById('produto');
+            const list = PRODUCTS[currentMode] || [];
+            const selected = list.find(p => p.id === prodSelect.value) || list[0];
+            const coverageNote = document.getElementById('coverageNote');
+
+            if (selected) {
+                if (currentMode === 'grafiato') {
+                    coverageNote.innerHTML = `<i class="fa-solid fa-scale-balanced text-brand-neon"></i> Consumo médio: <strong class="text-slate-200">4.54 kg/m²</strong>`;
+                } else {
+                    coverageNote.innerHTML = `<i class="fa-solid fa-droplet text-brand-neon"></i> Rendimento estimado: <strong class="text-slate-200">${selected.yieldPerM2} ${selected.unit}/m²</strong> por demão`;
+                }
+            }
+        }
+
+        // Calculation logic
+        function calculate() {
+            // Get user input values
+            const largura = parseFloat(document.getElementById('largura').value) || 0;
+            const comprimento = parseFloat(document.getElementById('comprimento').value) || 0;
+            const pedireito = parseFloat(document.getElementById('pedireito').value) || 0;
+            const janelas = parseFloat(document.getElementById('janelas').value) || 0;
+            const portas = parseFloat(document.getElementById('portas').value) || 0;
+
+            // Wall area calculation = 2*(largura*pedireito) + 2*(comprimento*pedireito) - janelas - portas
+            let areaParede = ((largura + comprimento) * 2 * pedireito) - janelas - portas;
+            if (areaParede < 0) areaParede = 0;
+
+            // Get selected product object
+            const prodId = document.getElementById('produto').value;
+            const list = PRODUCTS[currentMode] || [];
+            const product = list.find(p => p.id === prodId) || list[0];
+
+            if (!product) return;
+
+            // Calculate total quantity required (Area * yield rate)
+            const totalNecessario = areaParede * product.yieldPerM2;
+
+            // Calculate packaging recommendation (Greedy packaging algorithm)
+            const packagingResult = getPackagingSuggestion(totalNecessario, product.packages, product.unit);
+
+            // Render Results in UI
+            document.getElementById('resArea').textContent = `${areaParede.toFixed(1).replace('.', ',')} m²`;
+            document.getElementById('resQuantidade').textContent = `${totalNecessario.toFixed(1).replace('.', ',')} ${product.unit}`;
+            document.getElementById('resEmbalagem').textContent = packagingResult.text;
+            document.getElementById('resTotalLitros').innerHTML = `(${packagingResult.totalCovered.toFixed(1).replace('.', ',')}${product.unit}) <i class="fa-solid fa-circle-check text-brand-neon text-sm ml-1"></i>`;
+            
+            // Set image
+            document.getElementById('productImage').src = product.img;
+
+            // Save calculation to LocalStorage
+            saveFormState(true);
+        }
+
+        // Helper to suggest packaging combinations (e.g. 2x 18L + 1x 3.6L)
+        function getPackagingSuggestion(requiredAmount, packages, unit) {
+            if (requiredAmount <= 0) {
+                return { text: 'Nenhuma embalagem necessária', totalCovered: 0 };
+            }
+
+            // Sort packages descending by size
+            const sorted = [...packages].sort((a, b) => b.size - a.size);
+            let remaining = requiredAmount;
+            const chosen = [];
+            let totalCovered = 0;
+
+            for (let i = 0; i < sorted.length; i++) {
+                const pkg = sorted[i];
+                if (remaining <= 0) break;
+
+                // Check how many of this package size fits
+                const count = Math.floor(remaining / pkg.size);
+                if (count > 0) {
+                    chosen.push(`${count}× ${pkg.label}`);
+                    remaining -= count * pkg.size;
+                    totalCovered += count * pkg.size;
+                }
+            }
+
+            // If there's still a remainder left, add one smallest suitable package to cover it
+            if (remaining > 0) {
+                const smallest = sorted[sorted.length - 1];
+                // Check if a slightly larger single package is cleaner
+                let bestFit = smallest;
+                for (let i = sorted.length - 1; i >= 0; i--) {
+                    if (sorted[i].size >= remaining) {
+                        bestFit = sorted[i];
+                    }
+                }
+                
+                // Add to chosen
+                const existingIdx = chosen.findIndex(str => str.includes(bestFit.label));
+                if (existingIdx !== -1) {
+                    const currentQty = parseInt(chosen[existingIdx].split('×')[0]);
+                    chosen[existingIdx] = `${currentQty + 1}× ${bestFit.label}`;
+                } else {
+                    chosen.push(`1× ${bestFit.label}`);
+                }
+                totalCovered += bestFit.size;
+            }
+
+            return {
+                text: chosen.join(' + '),
+                totalCovered: totalCovered
+            };
+        }
+
+        // LocalStorage State Management
+        const STORAGE_KEY = 'QUALYQUIMY_CALC_STATE';
+
+        function saveFormState(hasCalculated = false) {
+            const state = {
+                mode: currentMode,
+                ambiente: document.getElementById('ambiente').value,
+                largura: document.getElementById('largura').value,
+                comprimento: document.getElementById('comprimento').value,
+                pedireito: document.getElementById('pedireito').value,
+                janelas: document.getElementById('janelas').value,
+                portas: document.getElementById('portas').value,
+                produto: document.getElementById('produto').value,
+                hasCalculated: hasCalculated
+            };
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+            } catch (e) {
+                console.warn('LocalStorage não disponível:', e);
+            }
+        }
+
+        function loadFormState() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (!saved) {
+                    // Default initialization
+                    switchMode('tinta');
+                    return;
+                }
+
+                const state = JSON.parse(saved);
+                
+                if (state.ambiente) document.getElementById('ambiente').value = state.ambiente;
+                if (state.largura) document.getElementById('largura').value = state.largura;
+                if (state.comprimento) document.getElementById('comprimento').value = state.comprimento;
+                if (state.pedireito) document.getElementById('pedireito').value = state.pedireito;
+                if (state.janelas) document.getElementById('janelas').value = state.janelas;
+                if (state.portas) document.getElementById('portas').value = state.portas;
+
+                // Restore active mode & product
+                const modeToLoad = state.mode || 'tinta';
+                currentMode = modeToLoad;
+                
+                // Update tabs visually
+                ['tinta', 'textura', 'grafiato'].forEach(m => {
+                    const btn = document.getElementById('tab' + m.charAt(0).toUpperCase() + m.slice(1));
+                    if (m === modeToLoad) {
+                        btn.className = "tab-btn flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm bg-brand-neon text-slate-950 shadow-neon-glow transition-all duration-300";
+                    } else {
+                        btn.className = "tab-btn flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-medium text-xs sm:text-sm text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all duration-300";
+                    }
+                });
+
+                populateProducts(state.produto);
+
+                const grafiatoBadge = document.getElementById('grafiatoBadge');
+                if (modeToLoad === 'grafiato') {
+                    grafiatoBadge.classList.remove('hidden');
+                } else {
+                    grafiatoBadge.classList.add('hidden');
+                }
+
+                // Run calculation with restored values
+                calculate();
+
+            } catch (e) {
+                console.error('Erro ao carregar dados do localStorage:', e);
+                switchMode('tinta');
+            }
+        }
+
+        // Initialize application on page load
+        window.onload = function() {
+            loadFormState();
+        };
+    </script>
+</body>
+</html>
