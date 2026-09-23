@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="Xz_2AAmdPmp8Z-4dD1Ji-ZoX2YU2kUZovEK9f03HgBM" />
+ <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://wa.me;" />
+ <meta name="google-site-verification" content="Xz_2AAmdPmp8Z-4dD1Ji-ZoX2YU2kUZovEK9f03HgBM" />
   <title>Como Calcular Tinta por m² | Dicas Tintas Qualy Quimy</title>
   <meta name="description" content="Aprenda como calcular a quantidade certa de tinta por metro quadrado e evite desperdício ou falta de material. Guia completo com fórmula, exemplos práticos e calculadora online grátis.">
   <link rel="canonical" href="https://tintasqualyquimy.com.br/blog/como-calcular-tinta-por-m2.html">
@@ -14,8 +16,8 @@
   <meta property="og:image" content="https://tintasqualyquimy.com.br/imagens/como-calcular-tinta-m2-qualy-quimy.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="google-site-verification" content="Xz_2AAmdPmp8Z-4dD1Ji-ZoX2YU2kUZovEK9f03HgBM">
-  <link rel="stylesheet" href="../css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="../css/style-min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -25,7 +27,11 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-HFTJ9MRF64');
+    gtag('config', 'G-HFTJ9MRF64', {
+  cookie_domain: 'tintasqualyquimy.impulsoweb10.com.br',
+  cookie_flags: 'SameSite=None;Secure',
+  cookie_update: true
+});
   </script>
 
   <!-- Schema JSON-LD: Article + FAQPage + BreadcrumbList -->
@@ -650,7 +656,7 @@
 <!-- NAV -->
 <nav class="nav-blog">
   <a href="../index.html" class="logo">Qualy<span>Quimy</span></a>
-  <a href="https://wa.me/5511954950044?text=Olá!%20Vi%20o%20artigo%20sobre%20calcular%20tinta%20e%20quero%20um%20orçamento" class="btn-whats" target="_blank" rel="noopener">📱 Pedir Orçamento</a>
+  <a href="https://wa.me/5511954950044?text=Olá!%20Vi%20o%20artigo%20sobre%20calcular%20tinta%20e%20quero%20um%20orçamento" class="btn-whats" target="_blank" rel="noopener noreferrer">📱 Pedir Orçamento</a>
 </nav>
 
 <!-- HERO -->
@@ -809,15 +815,15 @@
         <div class="calc-field">
           <label for="produto">Produto</label>
           <select id="produto">
-            <option value="8,30">Q Color (11 m²/L)</option>
-            <option value="8">Seladora (8 m²/L)</option>
-            <option value="12">Esmalte (12 m²/L)</option>
-            <option value="8l">Liqui Brilho (15 m²/L)</option>
-            <option value="1m">Massa PVA (1 kg/m²)</option>
-            <option value="1ma">Massa Acrílica (1 kg/m²)</option>
-            <option value="3.1t">Textura Lisa (3,1 kg/m²)</option>
-            <option value="3.1tp">Textura Projetada (3,1 kg/m²)</option>
-            <option value="4.5g">Grafiato (4,5 kg/m²)</option>
+            <option value="qcolor">Q Color (8,30 m²/L)</option>
+            <option value="seladora">Seladora (8 m²/L)</option>
+            <option value="esmalte">Esmalte (12 m²/L)</option>
+            <option value="liqui">Liqui Brilho (15 m²/L)</option>
+            <option value="massaPva">Massa PVA (1 kg/m²)</option>
+            <option value="massaAcrilica">Massa Acrílica (1 kg/m²)</option>
+            <option value="texturaLisa">Textura Lisa (3,1 kg/m²)</option>
+            <option value="texturaProjetada">Textura Projetada (3,1 kg/m²)</option>
+            <option value="grafiato">Grafiato (4,5 kg/m²)</option>
           </select>
         </div>
         <div class="calc-field">
@@ -893,7 +899,7 @@
       <h3>Já tem o m² em mãos?<br>A gente faz o cálculo por você.</h3>
       <p>Mande o tamanho das suas paredes pelo WhatsApp e nossa equipe indica o produto certo e a quantidade exata — sem custo, sem compromisso.</p>
       <div class="cta-buttons">
-        <a href="https://wa.me/5511954950044?text=Olá!%20Quero%20calcular%20a%20quantidade%20de%20tinta%20para%20minha%20obra" class="btn-wpp-cta" target="_blank" rel="noopener">
+        <a href="https://wa.me/5511954950044?text=Olá!%20Quero%20calcular%20a%20quantidade%20de%20tinta%20para%20minha%20obra" class="btn-wpp-cta" target="_blank" rel="noopener noreferrer">
           💬 Calcular pelo WhatsApp
         </a>
         <a href="../produtos/q-color.html" class="btn-ver-produto">Ver Produtos</a>
@@ -979,10 +985,10 @@
       <h3>Pronto para comprar?<br>Entregamos em Itaquaquecetuba e Região.</h3>
       <p>Frete grátis e entrega rápida. Todos os produtos deste guia estão disponíveis na Qualy Quimy.</p>
       <div class="cta-buttons">
-        <a href="https://wa.me/5511954950044?text=Olá!%20Quero%20pedir%20tinta%20para%20minha%20obra.%20Vi%20o%20guia%20de%20cálculo%20de%20m²" class="btn-wpp-cta" target="_blank" rel="noopener">
+        <a href="https://wa.me/5511954950044?text=Olá!%20Quero%20pedir%20tinta%20para%20minha%20obra.%20Vi%20o%20guia%20de%20cálculo%20de%20m²" class="btn-wpp-cta" target="_blank" rel="noopener noreferrer">
           💬 Pedir pelo WhatsApp
         </a>
-        <a href="https://shopee.com.br/qualyquimy" class="btn-ver-produto" target="_blank" rel="noopener">Ver na Shopee</a>
+        <a href="https://shopee.com.br/qualyquimy" class="btn-ver-produto" target="_blank" rel="noopener noreferrer">Ver na Shopee</a>
       </div>
     </div>
 
@@ -1014,26 +1020,28 @@
   <div class="footer-links">
     <a href="../politica-de-privacidade.html">Política de Privacidade</a>
     <a href="../termos-de-uso.html">Termos de Uso</a>
-    <a href="https://impulsoweb10.com.br" target="_blank" rel="noopener">Desenvolvido por ImpulsoWeb10</a>
+    <a href="https://impulsoweb10.com.br" target="_blank" rel="noopener noreferrer">Desenvolvido por ImpulsoWeb10</a>
   </div>
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/5511954950044?text=Olá!%20Quero%20calcular%20a%20quantidade%20de%20tinta%20para%20minha%20obra" class="wpp-float" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">💬</a>
+<a href="https://wa.me/5511954950044?text=Olá!%20Quero%20calcular%20a%20quantidade%20de%20tinta%20para%20minha%20obra" class="wpp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">💬</a>
 
-<script src="../js/main.js" defer></script>
+<script defer src="/js/utils.js" onerror="console.warn('[QQ] /js/utils.js não encontrado')"></script>
+<script defer src="/js/lazy-loading.js" onerror="console.warn('[QQ] /js/lazy-loading.js não encontrado')"></script>
+<script defer src="/js/main-secure.js" onerror="console.warn('[QQ] /js/main-secure.js não encontrado')"></script>
 <script>
   // Calculadora inline
   const rendimentos = {
-    '8,30':   { fator: 8,30,  unidade: 'litros', tipo: 'L' },
-    '8':    { fator: 8,   unidade: 'litros', tipo: 'L' },
-    '12':   { fator: 12,  unidade: 'litros', tipo: 'L' },
-    '8l':   { fator: 8,   unidade: 'litros', tipo: 'L' },
-    '1m':   { fator: 1,   unidade: 'kg',     tipo: 'kg' },
-    '1ma':  { fator: 1,   unidade: 'kg',     tipo: 'kg' },
-    '3.1t': { fator: 3.1, unidade: 'kg',     tipo: 'kg' },
-    '3.1tp':{ fator: 3.1, unidade: 'kg',     tipo: 'kg' },
-    '4.5g': { fator: 4.5, unidade: 'kg',     tipo: 'kg' },
+    'qcolor':            { fator: 8.30, unidade: 'litros', tipo: 'L' },
+    'seladora':          { fator: 8,    unidade: 'litros', tipo: 'L' },
+    'esmalte':           { fator: 12,   unidade: 'litros', tipo: 'L' },
+    'liqui':             { fator: 15,   unidade: 'litros', tipo: 'L' },
+    'massaPva':          { fator: 1,    unidade: 'kg',     tipo: 'kg' },
+    'massaAcrilica':     { fator: 1,    unidade: 'kg',     tipo: 'kg' },
+    'texturaLisa':       { fator: 3.1,  unidade: 'kg',     tipo: 'kg' },
+    'texturaProjetada':  { fator: 3.1,  unidade: 'kg',     tipo: 'kg' },
+    'grafiato':          { fator: 4.5,  unidade: 'kg',     tipo: 'kg' },
   };
 
   function calcularTinta() {
@@ -1050,7 +1058,7 @@
     }
 
     const areaTotal = (larg * alt * paredes) - abert;
-    const r = rendimentos[prod];
+    const r = rendimentos[prod] || rendimentos['qcolor'];
     let qtd;
 
     if (r.tipo === 'L') {
