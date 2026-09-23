@@ -242,7 +242,7 @@
                 
                 <!-- Product Can / Bucket Image -->
                 <div class="w-28 sm:w-32 shrink-0 flex items-center justify-center">
-                    <img id="productImage" src="https://placehold.co/180x220/003322/00FF9D?text=Q+Color" alt="Lata do Produto" class="w-auto h-28 sm:h-36 object-contain drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]">
+                    <img id="productImage" src="galao36ls.png" onerror="this.onerror=null; this.src='https://placehold.co/180x220/003322/00FF9D?text=Produto';" alt="Embalagem do Produto" class="w-auto h-28 sm:h-36 object-contain drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]">
                 </div>
 
                 <!-- Result Details -->
@@ -283,19 +283,19 @@
 
     <!-- Application Logic Script -->
     <script>
-        // Product Catalog grouped by categories
+        // Product Catalog grouped by categories with localized custom images
         const PRODUCTS = {
             tinta: [
-                { id: 'qcolor', name: 'Q Color (Tinta Acrílica)', yieldPerM2: 0.18, unit: 'L', img: 'https://placehold.co/180x220/003322/00FF9D?text=Q+Color', packages: [{ size: 18, label: 'emb. 18L' }, { size: 3.6, label: 'emb. 3.6L' }, { size: 1, label: 'emb. 1L' }] },
-                { id: 'qpremium', name: 'Q Premium Acrílico Fosco', yieldPerM2: 0.16, unit: 'L', img: 'https://placehold.co/180x220/0a2840/00FF9D?text=Q+Premium', packages: [{ size: 18, label: 'emb. 18L' }, { size: 3.6, label: 'emb. 3.6L' }, { size: 1, label: 'emb. 1L' }] },
-                { id: 'qlavavel', name: 'Q Lavável Super Acabamento', yieldPerM2: 0.17, unit: 'L', img: 'https://placehold.co/180x220/381040/00FF9D?text=Q+Lavavel', packages: [{ size: 18, label: 'emb. 18L' }, { size: 3.6, label: 'emb. 3.6L' }, { size: 1, label: 'emb. 1L' }] }
+                { id: 'qcolor', name: 'Q Color (Tinta Acrílica)', yieldPerM2: 0.18, unit: 'L', defaultImg: 'galao36ls.png', packages: [{ size: 18, label: 'emb. 18L', img: 'balde16lts.png' }, { size: 3.6, label: 'emb. 3.6L', img: 'galao36ls.png' }, { size: 1, label: 'emb. 1L', img: 'galao36ls.png' }] },
+                { id: 'qpremium', name: 'Q Premium Acrílico Fosco', yieldPerM2: 0.16, unit: 'L', defaultImg: 'galao36ls.png', packages: [{ size: 18, label: 'emb. 18L', img: 'balde16lts.png' }, { size: 3.6, label: 'emb. 3.6L', img: 'galao36ls.png' }, { size: 1, label: 'emb. 1L', img: 'galao36ls.png' }] },
+                { id: 'qlavavel', name: 'Q Lavável Super Acabamento', yieldPerM2: 0.17, unit: 'L', defaultImg: 'galao36ls.png', packages: [{ size: 18, label: 'emb. 18L', img: 'balde16lts.png' }, { size: 3.6, label: 'emb. 3.6L', img: 'galao36ls.png' }, { size: 1, label: 'emb. 1L', img: 'galao36ls.png' }] }
             ],
             textura: [
-                { id: 'qtextura_fina', name: 'Q Textura Rústica Fina', yieldPerM2: 1.80, unit: 'kg', img: 'https://placehold.co/180x220/221100/00FF9D?text=Textura+Fina', packages: [{ size: 25, label: 'barrica 25kg' }, { size: 18, label: 'balde 18kg' }, { size: 5, label: 'galão 5kg' }] },
-                { id: 'qtextura_media', name: 'Q Textura Rústica Média', yieldPerM2: 2.20, unit: 'kg', img: 'https://placehold.co/180x220/331a00/00FF9D?text=Textura+Media', packages: [{ size: 25, label: 'barrica 25kg' }, { size: 18, label: 'balde 18kg' }, { size: 5, label: 'galão 5kg' }] }
+                { id: 'qtextura_fina', name: 'Q Textura Rústica Fina', yieldPerM2: 1.80, unit: 'kg', defaultImg: 'barrica25kg.png', packages: [{ size: 25, label: 'barrica 25kg', img: 'barrica25kg.png' }, { size: 16, label: 'balde 16kg', img: 'balde16lts.png' }, { size: 3.6, label: 'galão 3.6kg', img: 'galao36ls.png' }] },
+                { id: 'qtextura_media', name: 'Q Textura Rústica Média', yieldPerM2: 2.20, unit: 'kg', defaultImg: 'barrica25kg.png', packages: [{ size: 25, label: 'barrica 25kg', img: 'barrica25kg.png' }, { size: 16, label: 'balde 16kg', img: 'balde16lts.png' }, { size: 3.6, label: 'galão 3.6kg', img: 'galao36ls.png' }] }
             ],
             grafiato: [
-                { id: 'qgrafiato_std', name: 'Q Grafiato Rústico Premium (4,54kg/m²)', yieldPerM2: 4.54, unit: 'kg', img: 'https://placehold.co/180x220/1c1917/00FF9D?text=Q+Grafiato', packages: [{ size: 25, label: 'barrica 25kg' }, { size: 18, label: 'balde 18kg' }, { size: 5, label: 'galão 5kg' }] }
+                { id: 'qgrafiato_std', name: 'Q Grafiato Rústico Premium (4,54kg/m²)', yieldPerM2: 4.54, unit: 'kg', defaultImg: 'barrica25kg.png', packages: [{ size: 25, label: 'barrica 25kg', img: 'barrica25kg.png' }, { size: 16, label: 'balde 16kg', img: 'balde16lts.png' }, { size: 3.6, label: 'galão 3.6kg', img: 'galao36ls.png' }] }
             ]
         };
 
@@ -391,7 +391,7 @@
             const totalNecessario = areaParede * product.yieldPerM2;
 
             // Calculate packaging recommendation (Greedy packaging algorithm)
-            const packagingResult = getPackagingSuggestion(totalNecessario, product.packages, product.unit);
+            const packagingResult = getPackagingSuggestion(totalNecessario, product.packages, product.unit, product.defaultImg);
 
             // Render Results in UI
             document.getElementById('resArea').textContent = `${areaParede.toFixed(1).replace('.', ',')} m²`;
@@ -399,17 +399,18 @@
             document.getElementById('resEmbalagem').textContent = packagingResult.text;
             document.getElementById('resTotalLitros').innerHTML = `(${packagingResult.totalCovered.toFixed(1).replace('.', ',')}${product.unit}) <i class="fa-solid fa-circle-check text-brand-neon text-sm ml-1"></i>`;
             
-            // Set image
-            document.getElementById('productImage').src = product.img;
+            // Set dynamic image based on recommended package
+            const imgEl = document.getElementById('productImage');
+            imgEl.src = packagingResult.recommendedImg || product.defaultImg;
 
             // Save calculation to LocalStorage
             saveFormState(true);
         }
 
-        // Helper to suggest packaging combinations (e.g. 2x 18L + 1x 3.6L)
-        function getPackagingSuggestion(requiredAmount, packages, unit) {
+        // Helper to suggest packaging combinations & return corresponding image
+        function getPackagingSuggestion(requiredAmount, packages, unit, defaultImg) {
             if (requiredAmount <= 0) {
-                return { text: 'Nenhuma embalagem necessária', totalCovered: 0 };
+                return { text: 'Nenhuma embalagem necessária', totalCovered: 0, recommendedImg: defaultImg };
             }
 
             // Sort packages descending by size
@@ -417,6 +418,7 @@
             let remaining = requiredAmount;
             const chosen = [];
             let totalCovered = 0;
+            let primaryImg = null;
 
             for (let i = 0; i < sorted.length; i++) {
                 const pkg = sorted[i];
@@ -428,21 +430,19 @@
                     chosen.push(`${count}× ${pkg.label}`);
                     remaining -= count * pkg.size;
                     totalCovered += count * pkg.size;
+                    if (!primaryImg) primaryImg = pkg.img;
                 }
             }
 
             // If there's still a remainder left, add one smallest suitable package to cover it
             if (remaining > 0) {
-                const smallest = sorted[sorted.length - 1];
-                // Check if a slightly larger single package is cleaner
-                let bestFit = smallest;
+                let bestFit = sorted[sorted.length - 1];
                 for (let i = sorted.length - 1; i >= 0; i--) {
                     if (sorted[i].size >= remaining) {
                         bestFit = sorted[i];
                     }
                 }
                 
-                // Add to chosen
                 const existingIdx = chosen.findIndex(str => str.includes(bestFit.label));
                 if (existingIdx !== -1) {
                     const currentQty = parseInt(chosen[existingIdx].split('×')[0]);
@@ -451,11 +451,13 @@
                     chosen.push(`1× ${bestFit.label}`);
                 }
                 totalCovered += bestFit.size;
+                if (!primaryImg) primaryImg = bestFit.img;
             }
 
             return {
                 text: chosen.join(' + '),
-                totalCovered: totalCovered
+                totalCovered: totalCovered,
+                recommendedImg: primaryImg || defaultImg
             };
         }
 
