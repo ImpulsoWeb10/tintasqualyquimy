@@ -25,9 +25,9 @@
                             orange: '#FF6B00',
                             neon: '#00FF9D',
                             neonDark: '#00D683',
-                            darkBg: '#080E18',
+                            darkBg: '#050B14',
                             cardBg: '#0D1726',
-                            inputBg: '#09121F',
+                            inputBg: '#08111E',
                             borderColor: '#192C45'
                         }
                     },
@@ -36,65 +36,65 @@
                         brand: ['Montserrat', 'sans-serif']
                     },
                     boxShadow: {
+                        'neon-white': '0 0 25px rgba(255, 255, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.15)',
                         'neon-glow': '0 0 20px rgba(0, 255, 157, 0.35)',
                         'neon-button': '0 4px 20px rgba(0, 255, 157, 0.4)',
-                        'card-depth': '0 20px 50px rgba(0, 0, 0, 0.7)'
+                        'card-depth': '0 25px 60px rgba(0, 0, 0, 0.8)'
                     }
                 }
             }
         }
     </script>
     
-    <!-- Custom Styles for dark theme, floating elements & modal -->
+    <!-- Custom Styles -->
     <style>
         body {
-            background: radial-gradient(circle at 50% 20%, #102035 0%, #060B12 100%);
+            background: radial-gradient(circle at 50% 20%, #0c182b 0%, #040810 100%);
             min-height: 100vh;
         }
 
-        /* Glassmorphic floating card frame */
-        .floating-card {
-            background: rgba(13, 23, 38, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(25, 44, 69, 0.8);
+        /* Glassmorphic card frame with crisp glowing white neon border */
+        .white-neon-frame {
+            background: rgba(11, 20, 35, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.35), inset 0 0 15px rgba(255, 255, 255, 0.1);
         }
 
-        /* Custom Input styling */
+        /* Inputs */
         .app-input {
-            background-color: #08111e;
+            background-color: #060D18;
             border: 1px solid #1c2e47;
             color: #ffffff;
             transition: all 0.25s ease;
         }
         .app-input:focus {
             border-color: #00FF9D;
-            box-shadow: 0 0 10px rgba(0, 255, 157, 0.25);
+            box-shadow: 0 0 12px rgba(0, 255, 157, 0.3);
             outline: none;
         }
 
-        /* Neon gradient text */
         .text-neon-gradient {
             background: linear-gradient(135deg, #00FF9D 0%, #00B8FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Modal backdrop animation */
+        /* Modal animations */
         .modal-fade-in {
-            animation: fadeIn 0.3s ease-out forwards;
+            animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
+            from { opacity: 0; transform: scale(0.92); }
             to { opacity: 1; transform: scale(1); }
         }
 
-        /* Custom scrollbar for dropdowns */
         ::-webkit-scrollbar {
             width: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: #080E18;
+            background: #050B14;
         }
         ::-webkit-scrollbar-thumb {
             background: #1c2e47;
@@ -105,313 +105,336 @@
         }
     </style>
 </head>
-<body class="text-slate-100 font-sans flex items-center justify-center p-3 sm:p-6 md:p-10">
+<body class="text-slate-100 font-sans flex flex-col justify-between items-center min-h-screen p-3 sm:p-6 md:p-8">
 
-    <!-- Main Calculator Outer Box -->
-    <div class="w-full max-w-xl floating-card rounded-3xl p-5 sm:p-8 shadow-card-depth relative overflow-hidden my-auto">
+    <!-- Main Container Wrapper -->
+    <div class="w-full max-w-xl my-auto">
         
-        <!-- Decorative Ambient Lights -->
-        <div class="absolute -top-24 -left-24 w-60 h-60 bg-brand-neon/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-24 -right-24 w-90 h-90 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <!-- Brand Header Logo with logo.jpg on the left -->
-        <div class="text-center mb-5">
-            <div class="inline-flex items-center justify-center gap-3">
-                <!-- Logo image on left side -->
-                <img src="logo.jpg" onerror="this.onerror=null; this.src='https://placehold.co/120x120/FF6B00/000000?text=QUALY';" alt="Qualyquimy Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-md">
-                
-                <div class="flex flex-col items-start">
-                    <span class="font-brand font-black text-2xl sm:text-3xl tracking-tight text-white flex items-center gap-1 leading-none">
-                        QUALY<span class="text-brand-orange">QUIMY</span>
-                    </span>
-                    <span class="text-[10px] sm:text-xs tracking-[0.25em] text-slate-400 font-semibold uppercase mt-0.5">
-                        Tintas e Texturas
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Title & Subtitle -->
-        <div class="text-center mb-6">
-            <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight">
-                Calculadora <span class="text-neon-gradient">Textura Grafiato Premium</span> da Qualy
-            </h1>
-            <p class="text-xs sm:text-sm text-slate-400 mt-1.5 max-w-md mx-auto leading-relaxed">
-                Informe as medidas do seu ambiente e encontre a quantidade ideal de produto.
-            </p>
-        </div>
-
-        <!-- Buttons Navigation: Only Grafiato & Exemplo de medidas side-by-side -->
-        <div class="grid grid-cols-2 gap-2 sm:gap-3 p-1.5 bg-[#070e17] rounded-2xl border border-slate-800/80 mb-6">
-            <!-- Grafiato Button -->
-            <button type="button" id="btnGrafiato" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm bg-brand-neon text-slate-950 shadow-neon-glow transition-all duration-300">
-                <i class="fa-solid fa-cubes text-sm"></i>
-                <span>Grafiato</span>
-            </button>
-
-            <!-- Exemplo de medidas Button -->
-            <button type="button" onclick="openExampleModal()" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-xs sm:text-sm bg-slate-800/80 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700/80 hover:border-brand-neon/50 transition-all duration-300 cursor-pointer">
-                <i class="fa-solid fa-ruler-combined text-brand-neon text-sm"></i>
-                <span>Exemplo de medidas</span>
-            </button>
-        </div>
-
-        <!-- Calculator Form -->
-        <form id="calcForm" onsubmit="event.preventDefault(); calculate();" class="space-y-4 sm:space-y-5">
+        <!-- White Neon Frame Box -->
+        <div class="white-neon-frame rounded-3xl p-5 sm:p-8 relative overflow-hidden shadow-card-depth">
             
-            <!-- Tipo de ambiente -->
-            <div>
-                <label for="ambiente" class="block text-xs font-semibold text-slate-300 mb-1.5">
-                    Tipo de ambiente
-                </label>
-                <div class="relative">
-                    <select id="ambiente" onchange="saveFormState()" class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm appearance-none cursor-pointer pr-10">
-                        <option value="Sala de Estar">Sala de Estar</option>
-                        <option value="Quarto">Quarto</option>
-                        <option value="Cozinha">Cozinha</option>
-                        <option value="Fachada Externa">Fachada Externa</option>
-                        <option value="Muro">Muro / Área Externa</option>
-                        <option value="Garagem">Garagem</option>
-                        <option value="Comercial">Espaço Comercial</option>
-                    </select>
-                    <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-slate-400">
-                        <i class="fa-solid fa-chevron-down text-xs"></i>
-                    </div>
-                </div>
-            </div>
+            <!-- Ambient Lighting -->
+            <div class="absolute -top-24 -left-24 w-60 h-60 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-brand-neon/10 rounded-full blur-3xl pointer-events-none"></div>
 
-            <!-- Largura e Comprimento -->
-            <div class="grid grid-cols-2 gap-3 sm:gap-4">
-                <div>
-                    <label for="largura" class="block text-xs font-semibold text-slate-300 mb-1.5">
-                        Largura (m)
-                    </label>
-                    <input type="number" step="0.01" min="0.1" id="largura" value="4" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm">
-                </div>
-                <div>
-                    <label for="comprimento" class="block text-xs font-semibold text-slate-300 mb-1.5">
-                        Comprimento (m)
-                    </label>
-                    <input type="number" step="0.01" min="0.1" id="comprimento" value="5" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm">
-                </div>
-            </div>
-
-            <!-- Pé-direito, Janelas e Portas -->
-            <div class="grid grid-cols-3 gap-2.5 sm:gap-3">
-                <div>
-                    <label for="pedireito" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Pé-direito (m)">
-                        Pé-direito (m)
-                    </label>
-                    <input type="number" step="0.01" min="0.1" id="pedireito" value="2.80" oninput="saveFormState()" placeholder="2.80" required class="app-input w-full rounded-xl px-3 py-2.5 text-sm text-center">
-                </div>
-                <div>
-                    <label for="janelas" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Janelas (m²)">
-                        Janelas (m²)
-                    </label>
-                    <input type="number" step="0.01" min="0" id="janelas" value="5" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-3 py-2.5 text-sm text-center">
-                </div>
-                <div>
-                    <label for="portas" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Portas (m²)">
-                        Portas (m²)
-                    </label>
-                    <input type="number" step="0.01" min="0" id="portas" value="0" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-3 py-2.5 text-sm text-center">
-                </div>
-            </div>
-
-            <!-- Produto Select (Grafiato Defaults) -->
-            <div>
-                <label for="produto" class="block text-xs font-semibold text-slate-300 mb-1.5">
-                    Produto
-                </label>
-                <div class="relative">
-                    <select id="produto" onchange="saveFormState()" class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm appearance-none cursor-pointer pr-10">
-                        <option value="qgrafiato_std">Q Grafiato Rústico Premium (4,54kg/m²)</option>
-                    </select>
-                    <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-slate-400">
-                        <i class="fa-solid fa-chevron-down text-xs"></i>
-                    </div>
-                </div>
-                <div id="coverageNote" class="text-[11px] text-slate-400 mt-1.5 flex items-center gap-1.5">
-                    <i class="fa-solid fa-scale-balanced text-brand-neon"></i>
-                    <span>Consumo médio: <strong class="text-slate-200">4.54 kg/m²</strong></span>
-                </div>
-            </div>
-
-            <!-- Calculate Button -->
-            <button type="submit" class="w-full py-3.5 px-6 rounded-2xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-bold text-base sm:text-lg flex items-center justify-center gap-2.5 transition-all duration-300 shadow-neon-button hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
-                <i class="fa-solid fa-calculator text-lg sm:text-xl"></i>
-                <span>Calcular</span>
-            </button>
-        </form>
-
-        <!-- Result Box -->
-        <div id="resultBox" class="mt-6 border-2 border-brand-neon/80 bg-brand-cardBg/90 rounded-2xl p-4 sm:p-5 relative overflow-hidden transition-all duration-500">
-            <!-- Neon glow outline effect -->
-            <div class="absolute inset-0 bg-brand-neon/5 pointer-events-none"></div>
-
-            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 relative z-10">
-                
-                <!-- Product Can / Bucket Image -->
-                <div class="w-28 sm:w-32 shrink-0 flex items-center justify-center">
-                    <img id="productImage" src="barrica25kg.png" onerror="this.onerror=null; this.src='https://placehold.co/180x220/003322/00FF9D?text=Barrica+25kg';" alt="Embalagem do Grafiato" class="w-auto h-28 sm:h-36 object-contain drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]">
-                </div>
-
-                <!-- Result Details -->
-                <div class="flex-grow text-center sm:text-left space-y-2">
-                    <h2 class="text-xl font-bold text-brand-neon flex items-center justify-center sm:justify-start gap-2">
-                        <span>Resultado</span>
-                    </h2>
-
-                    <!-- Área Líquida -->
-                    <div class="text-sm text-slate-300">
-                        Área líquida: <span id="resArea" class="font-bold text-white">0 m²</span>
-                    </div>
-
-                    <!-- Quantidade de Produto -->
-                    <div class="text-sm sm:text-base font-semibold text-slate-200">
-                        Quantidade de produto: <span id="resQuantidade" class="font-bold text-white">0 kg</span>
-                    </div>
-
-                    <!-- Sugestão de Compras -->
-                    <div class="pt-1 border-t border-slate-800 text-xs sm:text-sm text-slate-300 leading-snug">
-                        Comprar: <span id="resEmbalagem" class="font-semibold text-white">--</span>
-                        <span id="resTotalKg" class="text-brand-neon font-bold inline-flex items-center gap-1 ml-1">
-                            <span>(0 kg)</span>
-                            <i class="fa-solid fa-circle-check text-brand-neon text-sm"></i>
+            <!-- Header with logo.png on the left -->
+            <div class="text-center mb-5">
+                <div class="inline-flex items-center justify-center gap-3">
+                    <img src="logo.png" onerror="this.onerror=null; this.src='https://placehold.co/120x120/FF6B00/FFFFFF?text=QUALY';" alt="Qualyquimy Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-md">
+                    
+                    <div class="flex flex-col items-start">
+                        <span class="font-brand font-black text-2xl sm:text-3xl tracking-tight text-white flex items-center gap-1 leading-none">
+                            QUALY<span class="text-brand-orange">QUIMY</span>
+                        </span>
+                        <span class="text-[10px] sm:text-xs tracking-[0.25em] text-slate-400 font-semibold uppercase mt-0.5">
+                            Tintas e Texturas
                         </span>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Observation badge for Grafiato -->
-                    <div id="grafiatoBadge" class="mt-2 text-[11px] bg-slate-900/90 border border-brand-neon/30 text-slate-300 p-2 rounded-lg leading-tight">
-                        <i class="fa-solid fa-circle-info text-brand-orange mr-1"></i>
-                        Rendimento médio do Grafiato: <strong>4.54 kg/m²</strong> (pode variar de acordo com a superfície e aplicação).
+            <!-- Main Title -->
+            <div class="text-center mb-6">
+                <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-tight">
+                    Calculadora <span class="text-neon-gradient">Textura Grafiato Premium</span> da Qualy
+                </h1>
+                <p class="text-xs sm:text-sm text-slate-400 mt-1.5 max-w-md mx-auto leading-relaxed">
+                    Informe as medidas do ambiente para calcular os quilos necessários.
+                </p>
+            </div>
+
+            <!-- Action Bar Buttons: GRAFIATO -> EXEMPLO DE MEDIDAS -> CONSUMO MÉDIO -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 p-1.5 bg-[#050C16] rounded-2xl border border-slate-800/80 mb-6">
+                
+                <!-- 1. Grafiato Button -->
+                <button type="button" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl font-bold text-xs bg-brand-neon text-slate-950 shadow-neon-glow transition-all duration-300">
+                    <i class="fa-solid fa-cubes text-sm"></i>
+                    <span>Grafiato</span>
+                </button>
+
+                <!-- 2. Exemplo de medidas Button -->
+                <button type="button" onclick="openExampleModal()" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl font-semibold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 hover:border-brand-neon/50 transition-all duration-300 cursor-pointer">
+                    <i class="fa-solid fa-ruler-combined text-brand-neon text-xs"></i>
+                    <span>Exemplo de medidas</span>
+                </button>
+
+                <!-- 3. Consumo Médio Badge Button -->
+                <div class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl font-semibold text-[11px] bg-slate-900/90 text-amber-300 border border-amber-500/30 text-center select-none">
+                    <i class="fa-solid fa-scale-balanced text-amber-400 text-xs"></i>
+                    <span>Consumo Médio: 4,5KG/M²</span>
+                </div>
+            </div>
+
+            <!-- Form Input Fields (Largura, Comprimento, Pé-direito, Janelas, Portas) -->
+            <form id="calcForm" onsubmit="event.preventDefault(); openResultModal();" class="space-y-4">
+                
+                <!-- Largura & Comprimento -->
+                <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                    <div>
+                        <label for="largura" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                            Largura (m)
+                        </label>
+                        <input type="number" step="0.01" min="0.1" id="largura" value="4" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm">
+                    </div>
+                    <div>
+                        <label for="comprimento" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                            Comprimento (m)
+                        </label>
+                        <input type="number" step="0.01" min="0.1" id="comprimento" value="5" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm">
+                    </div>
+                </div>
+
+                <!-- Pé-direito, Janelas e Portas -->
+                <div class="grid grid-cols-3 gap-2.5 sm:gap-3">
+                    <div>
+                        <label for="pedireito" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Pé-direito (m)">
+                            Pé-direito (m)
+                        </label>
+                        <input type="number" step="0.01" min="0.1" id="pedireito" value="2.80" oninput="saveFormState()" placeholder="2.80" required class="app-input w-full rounded-xl px-2.5 py-2.5 text-sm text-center">
+                    </div>
+                    <div>
+                        <label for="janelas" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Janelas (m²)">
+                            Janelas (m²)
+                        </label>
+                        <input type="number" step="0.01" min="0" id="janelas" value="5" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-2.5 py-2.5 text-sm text-center">
+                    </div>
+                    <div>
+                        <label for="portas" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Portas (m²)">
+                            Portas (m²)
+                        </label>
+                        <input type="number" step="0.01" min="0" id="portas" value="0" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-2.5 py-2.5 text-sm text-center">
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full mt-2 py-3.5 px-6 rounded-2xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-extrabold text-base sm:text-lg flex items-center justify-center gap-2.5 transition-all duration-300 shadow-neon-button hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
+                    <i class="fa-solid fa-calculator text-lg"></i>
+                    <span>Calcular</span>
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- LARGE ELEGANT RESULT MODAL -->
+    <div id="resultModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-lg p-3 sm:p-6 transition-all duration-300 overflow-y-auto">
+        <div class="relative w-full max-w-3xl bg-[#0a1322] border-2 border-brand-neon/60 rounded-3xl p-5 sm:p-8 shadow-2xl modal-fade-in my-auto max-h-[92vh] flex flex-col justify-between overflow-y-auto">
+            
+            <!-- Close "X" Button -->
+            <button onclick="closeResultModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-800/80 hover:bg-red-500/20 text-slate-300 hover:text-red-400 border border-slate-700 flex items-center justify-center transition-all cursor-pointer z-20">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <!-- Modal Body Content -->
+            <div class="space-y-6">
+                <!-- Header -->
+                <div class="text-center border-b border-slate-800 pb-4 pr-8">
+                    <span class="inline-flex items-center gap-2 text-brand-neon text-xs sm:text-sm font-bold tracking-widest uppercase">
+                        <i class="fa-solid fa-circle-check"></i> Cálculo Concluído
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">
+                        Resultado do Cálculo Grafiato
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-1">
+                        Estimativa calculada com consumo médio de 4.5kg por m²
+                    </p>
+                </div>
+
+                <!-- Main Grid Details -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                    
+                    <!-- Left Column: Product Image -->
+                    <div class="md:col-span-5 flex flex-col items-center justify-center p-4 bg-slate-900/60 rounded-2xl border border-slate-800">
+                        <img id="modalProductImg" src="barrica25kg.png" onerror="this.onerror=null; this.src='https://placehold.co/220x260/003322/00FF9D?text=Barrica+25kg';" alt="Embalagem Recomendada" class="h-44 sm:h-52 object-contain drop-shadow-[0_12px_20px_rgba(0,0,0,0.6)]">
+                        <span id="modalImgLabel" class="text-xs text-slate-400 mt-3 font-semibold text-center">Embalagem sugerida</span>
+                    </div>
+
+                    <!-- Right Column: Values and Recommendation -->
+                    <div class="md:col-span-7 space-y-4">
+                        
+                        <!-- Area & Required Weight Badges -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-[#050c18] border border-slate-800 p-3.5 rounded-2xl text-center">
+                                <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Área Líquida</span>
+                                <span id="modalResArea" class="text-xl sm:text-2xl font-black text-white mt-0.5 block">0 m²</span>
+                            </div>
+                            <div class="bg-[#050c18] border border-slate-800 p-3.5 rounded-2xl text-center">
+                                <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Necessário</span>
+                                <span id="modalResQuantidade" class="text-xl sm:text-2xl font-black text-brand-neon mt-0.5 block">0 kg</span>
+                            </div>
+                        </div>
+
+                        <!-- Package combination Box -->
+                        <div class="bg-gradient-to-r from-slate-900 via-slate-900 to-[#0c1c30] border border-brand-neon/40 p-4 rounded-2xl space-y-2">
+                            <span class="text-xs font-bold text-slate-300 uppercase tracking-wide block">
+                                <i class="fa-solid fa-boxes-packing text-brand-neon mr-1"></i> Sugestão de Compra:
+                            </span>
+                            <div id="modalResEmbalagem" class="text-base sm:text-lg font-bold text-white leading-snug">
+                                --
+                            </div>
+                            <div id="modalResTotalCovered" class="text-xs text-slate-400 pt-1 border-t border-slate-800/80 flex items-center gap-1.5">
+                                <i class="fa-solid fa-circle-check text-brand-neon"></i>
+                                <span>Total fornecido pelas embalagens: <strong id="modalCoveredKg" class="text-slate-200">0 kg</strong></span>
+                            </div>
+                        </div>
+
+                        <!-- Technical info note -->
+                        <p class="text-[11px] text-slate-400 bg-slate-900/40 p-2.5 rounded-xl border border-slate-800/60 leading-relaxed">
+                            <i class="fa-solid fa-circle-info text-brand-orange mr-1"></i>
+                            O rendimento do Grafiato varia conforme o tipo de parede e aplicação do profissional.
+                        </p>
+
                     </div>
                 </div>
             </div>
-        </div>
 
+            <!-- Modal Actions Footer (Voltar + Saiba Mais WhatsApp) -->
+            <div class="mt-8 pt-5 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+                
+                <!-- Voltar Button -->
+                <button onclick="closeResultModal()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer border border-slate-700">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Voltar</span>
+                </button>
+
+                <!-- Saiba Mais WhatsApp Button -->
+                <a href="https://wa.me/5511954950044" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm transition-all flex items-center justify-center gap-2.5 shadow-lg shadow-emerald-950/50 hover:scale-[1.02] cursor-pointer">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Saiba mais no WhatsApp</span>
+                </a>
+            </div>
+
+        </div>
     </div>
 
-    <!-- Modal for "Exemplo de medidas" (exemplo1.png) -->
-    <div id="exampleModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4 transition-all duration-300">
-        <div class="relative w-full max-w-2xl md:max-w-[50vw] bg-[#0c1624] border border-brand-neon/40 rounded-3xl p-4 sm:p-6 shadow-2xl modal-fade-in flex flex-col items-center">
+    <!-- MODAL FOR "EXEMPLO DE MEDIDAS" (exemplo1.png) -->
+    <div id="exampleModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 transition-all duration-300">
+        <div class="relative w-full max-w-2xl bg-[#0c1624] border border-brand-neon/40 rounded-3xl p-4 sm:p-6 shadow-2xl modal-fade-in flex flex-col items-center">
             
             <!-- Close Button X -->
             <button onclick="closeExampleModal()" class="absolute top-3 right-3 sm:top-4 sm:right-4 w-9 h-9 rounded-full bg-slate-800 hover:bg-red-500/20 text-slate-300 hover:text-red-400 border border-slate-700 flex items-center justify-center transition-all cursor-pointer">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
 
-            <!-- Modal Header -->
             <div class="text-center mb-4 pr-6 pl-2">
                 <h3 class="text-base sm:text-xl font-bold text-white flex items-center justify-center gap-2">
                     <i class="fa-solid fa-ruler-combined text-brand-neon"></i>
                     <span>Exemplo de Medidas para Cálculo</span>
                 </h3>
-                <p class="text-xs text-slate-400 mt-1">Veja como medir a largura, comprimento, altura (pé-direito) e vãos do seu ambiente.</p>
+                <p class="text-xs text-slate-400 mt-1">Veja como medir a largura, comprimento, pé-direito e vãos do ambiente.</p>
             </div>
 
-            <!-- Image Container occupying ~half screen on desktop -->
             <div class="w-full overflow-hidden rounded-2xl bg-black/40 border border-slate-800 flex items-center justify-center p-2">
                 <img src="exemplo1.png" onerror="this.onerror=null; this.src='https://placehold.co/600x400/08111e/00FF9D?text=Exemplo+de+Medidas';" alt="Exemplo de Medidas de Paredes" class="w-full max-h-[65vh] object-contain rounded-xl">
             </div>
 
-            <!-- Modal Footer button -->
             <button onclick="closeExampleModal()" class="mt-4 px-6 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-semibold transition-all cursor-pointer">
-                Entendi, Fechar
+                Fechar
             </button>
         </div>
     </div>
 
-    <!-- Application Logic Script -->
-    <script>
-        // Product Definition for Grafiato
-        const GRAFIATO_PRODUCT = {
-            id: 'qgrafiato_std',
-            name: 'Q Grafiato Rústico Premium',
-            yieldPerM2: 4.54, // 4.54 kg/m²
-            unit: 'kg',
-            defaultImg: 'barrica25kg.png',
-            packages: [
-                { size: 25, label: 'barrica 25kg', img: 'barrica25kg.png' },
-                { size: 16, label: 'balde 16kg', img: 'balde16lts.png' },
-                { size: 3.6, label: 'galão 3.6kg', img: 'galao36ls.png' }
-            ]
-        };
+    <!-- Discreet Footer -->
+    <footer class="mt-6 mb-2 text-center text-[11px] text-slate-500 font-medium tracking-wide">
+        Desenvolvido por <a href="https://impulsoweb10.com.br" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-neon underline underline-offset-2 transition-colors">ImpulsoWeb10</a>
+    </footer>
 
-        // Modal Handlers
+    <!-- JavaScript Application Logic -->
+    <script>
+        const GRAFIATO_CONSUMPTION = 4.50; // 4.5kg per m²
+        
+        const PACKAGES = [
+            { size: 25, label: 'barrica 25kg', img: 'barrica25kg.png' },
+            { size: 16, label: 'balde 16kg', img: 'balde16lts.png' },
+            { size: 3.6, label: 'galão 3.6kg', img: 'galao36ls.png' }
+        ];
+
+        // Example Modal Handlers
         function openExampleModal() {
             const modal = document.getElementById('exampleModal');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-            document.body.style.overflow = 'hidden'; // Prevent body scroll
+            document.body.style.overflow = 'hidden';
         }
 
         function closeExampleModal() {
             const modal = document.getElementById('exampleModal');
             modal.classList.add('hidden');
             modal.classList.remove('flex');
-            document.body.style.overflow = ''; // Restore body scroll
+            document.body.style.overflow = '';
         }
 
-        // Close modal when clicking outside of it
-        document.getElementById('exampleModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeExampleModal();
-            }
-        });
+        // Result Modal Handlers
+        function openResultModal() {
+            const data = calculate();
+            
+            // Populate Modal Fields
+            document.getElementById('modalResArea').textContent = `${data.areaParede.toFixed(1).replace('.', ',')} m²`;
+            document.getElementById('modalResQuantidade').textContent = `${data.totalKg.toFixed(1).replace('.', ',')} kg`;
+            document.getElementById('modalResEmbalagem').textContent = data.packaging.text;
+            document.getElementById('modalCoveredKg').textContent = `${data.packaging.totalCovered.toFixed(1).replace('.', ',')} kg`;
+            
+            const imgEl = document.getElementById('modalProductImg');
+            imgEl.src = data.packaging.recommendedImg || 'barrica25kg.png';
 
-        // Close modal on Escape key press
+            const modal = document.getElementById('resultModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeResultModal() {
+            const modal = document.getElementById('resultModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Click Outside Modals to Close
+        window.onclick = function(e) {
+            const resModal = document.getElementById('resultModal');
+            const exModal = document.getElementById('exampleModal');
+            if (e.target === resModal) closeResultModal();
+            if (e.target === exModal) closeExampleModal();
+        };
+
+        // ESC Key Handler
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
+                closeResultModal();
                 closeExampleModal();
             }
         });
 
-        // Calculation logic
+        // Calculation Logic
         function calculate() {
-            // Get user input values
             const largura = parseFloat(document.getElementById('largura').value) || 0;
             const comprimento = parseFloat(document.getElementById('comprimento').value) || 0;
             const pedireito = parseFloat(document.getElementById('pedireito').value) || 0;
             const janelas = parseFloat(document.getElementById('janelas').value) || 0;
             const portas = parseFloat(document.getElementById('portas').value) || 0;
 
-            // Wall area calculation = 2*(largura*pedireito) + 2*(comprimento*pedireito) - janelas - portas
             let areaParede = ((largura + comprimento) * 2 * pedireito) - janelas - portas;
             if (areaParede < 0) areaParede = 0;
 
-            // Calculate total quantity required in Kg (Area * 4.54 kg/m²)
-            const totalKgNecessario = areaParede * GRAFIATO_PRODUCT.yieldPerM2;
+            const totalKg = areaParede * GRAFIATO_CONSUMPTION;
+            const packaging = getPackagingSuggestion(totalKg, PACKAGES);
 
-            // Calculate packaging recommendation
-            const packagingResult = getPackagingSuggestion(
-                totalKgNecessario, 
-                GRAFIATO_PRODUCT.packages, 
-                GRAFIATO_PRODUCT.unit, 
-                GRAFIATO_PRODUCT.defaultImg
-            );
+            saveFormState();
 
-            // Render Results in UI
-            document.getElementById('resArea').textContent = `${areaParede.toFixed(1).replace('.', ',')} m²`;
-            document.getElementById('resQuantidade').textContent = `${totalKgNecessario.toFixed(1).replace('.', ',')} kg`;
-            document.getElementById('resEmbalagem').textContent = packagingResult.text;
-            document.getElementById('resTotalKg').innerHTML = `(${packagingResult.totalCovered.toFixed(1).replace('.', ',')} kg) <i class="fa-solid fa-circle-check text-brand-neon text-sm ml-1"></i>`;
-            
-            // Set dynamic image based on recommended package
-            const imgEl = document.getElementById('productImage');
-            imgEl.src = packagingResult.recommendedImg || GRAFIATO_PRODUCT.defaultImg;
-
-            // Save calculation inputs to LocalStorage
-            saveFormState(true);
+            return {
+                areaParede,
+                totalKg,
+                packaging
+            };
         }
 
-        // Packaging Greedy Algorithm for combinations
-        function getPackagingSuggestion(requiredAmount, packages, unit, defaultImg) {
+        // Package Allocation Algorithm
+        function getPackagingSuggestion(requiredAmount, packages) {
             if (requiredAmount <= 0) {
-                return { text: 'Nenhuma embalagem necessária', totalCovered: 0, recommendedImg: defaultImg };
+                return { text: 'Nenhuma embalagem necessária', totalCovered: 0, recommendedImg: 'barrica25kg.png' };
             }
 
-            // Sort packages descending by size (25kg -> 16kg -> 3.6kg)
             const sorted = [...packages].sort((a, b) => b.size - a.size);
             let remaining = requiredAmount;
             const chosen = [];
@@ -431,7 +454,6 @@
                 }
             }
 
-            // Cover leftover amount with smallest fitting package
             if (remaining > 0) {
                 let bestFit = sorted[sorted.length - 1];
                 for (let i = sorted.length - 1; i >= 0; i--) {
@@ -454,27 +476,25 @@
             return {
                 text: chosen.join(' + '),
                 totalCovered: totalCovered,
-                recommendedImg: primaryImg || defaultImg
+                recommendedImg: primaryImg || 'barrica25kg.png'
             };
         }
 
-        // LocalStorage State Persistence
-        const STORAGE_KEY = 'QUALYQUIMY_GRAFIATO_CALC_STATE';
+        // LocalStorage State Handling
+        const STORAGE_KEY = 'QUALYQUIMY_GRAFIATO_V2';
 
-        function saveFormState(hasCalculated = false) {
+        function saveFormState() {
             const state = {
-                ambiente: document.getElementById('ambiente').value,
                 largura: document.getElementById('largura').value,
                 comprimento: document.getElementById('comprimento').value,
                 pedireito: document.getElementById('pedireito').value,
                 janelas: document.getElementById('janelas').value,
-                portas: document.getElementById('portas').value,
-                hasCalculated: hasCalculated
+                portas: document.getElementById('portas').value
             };
             try {
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
             } catch (e) {
-                console.warn('LocalStorage não disponível:', e);
+                console.warn('LocalStorage error:', e);
             }
         }
 
@@ -483,20 +503,17 @@
                 const saved = localStorage.getItem(STORAGE_KEY);
                 if (saved) {
                     const state = JSON.parse(saved);
-                    if (state.ambiente) document.getElementById('ambiente').value = state.ambiente;
                     if (state.largura) document.getElementById('largura').value = state.largura;
                     if (state.comprimento) document.getElementById('comprimento').value = state.comprimento;
                     if (state.pedireito) document.getElementById('pedireito').value = state.pedireito;
-                    if (state.janelas) document.getElementById('janelas').value = state.janelas;
-                    if (state.portas) document.getElementById('portas').value = state.portas;
+                    if (state.janelas !== undefined) document.getElementById('janelas').value = state.janelas;
+                    if (state.portas !== undefined) document.getElementById('portas').value = state.portas;
                 }
             } catch (e) {
-                console.error('Erro ao carregar dados do localStorage:', e);
+                console.error('Error loading form state:', e);
             }
-            calculate();
         }
 
-        // Initialize application on load
         window.onload = function() {
             loadFormState();
         };
