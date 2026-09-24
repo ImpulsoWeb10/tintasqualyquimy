@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Textura Grafiato Premium da Qualy</title>
     
-    <!-- Google Fonts: Inter & Montserrat -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@
         }
     </script>
     
-    <!-- Custom Styles -->
+    <!-- Custom Styles & Animations -->
     <style>
         body {
             background: radial-gradient(circle at 50% 20%, #0c182b 0%, #040810 100%);
@@ -81,28 +81,50 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* Logo Pulsing Animation */
+        .pulse-subtle {
+            animation: pulseSubtle 3s infinite ease-in-out;
+        }
+        @keyframes pulseSubtle {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(255,107,0,0.4)); }
+            50% { transform: scale(1.06); filter: drop-shadow(0 0 14px rgba(0,255,157,0.7)); }
+        }
+
+        /* Logo & Brand Shine Sweep */
+        .shine-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-container::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -150%;
+            width: 100%;
+            height: 200%;
+            background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+            transform: rotate(25deg);
+            animation: shineSweep 4.5s infinite;
+            pointer-events: none;
+        }
+        @keyframes shineSweep {
+            0% { left: -150%; }
+            30%, 100% { left: 150%; }
+        }
+
         /* Modal animations */
         .modal-fade-in {
-            animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.92); }
+            from { opacity: 0; transform: scale(0.95); }
             to { opacity: 1; transform: scale(1); }
         }
 
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #050B14;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1c2e47;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #00FF9D;
-        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050B14; }
+        ::-webkit-scrollbar-thumb { background: #1c2e47; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00FF9D; }
     </style>
 </head>
 <body class="text-slate-100 font-sans flex flex-col justify-between items-center min-h-screen p-3 sm:p-6 md:p-8">
@@ -111,16 +133,16 @@
     <div class="w-full max-w-xl my-auto">
         
         <!-- White Neon Frame Box -->
-        <div class="white-neon-frame rounded-3xl p-5 sm:p-8 relative overflow-hidden shadow-card-depth">
+        <div class="white-neon-frame rounded-3xl p-5 sm:p-7 relative overflow-hidden shadow-card-depth">
             
             <!-- Ambient Lighting -->
             <div class="absolute -top-24 -left-24 w-60 h-60 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-brand-neon/10 rounded-full blur-3xl pointer-events-none"></div>
 
-            <!-- Header with logo.jpg on the left -->
-            <div class="text-center mb-5">
-                <div class="inline-flex items-center justify-center gap-3">
-                    <img src="logo.jpg" onerror="this.onerror=null; this.src='https://placehold.co/120x120/FF6B00/FFFFFF?text=QUALY';" alt="Qualyquimy Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-md">
+            <!-- Header with logo.png on the left + pulsing animation & shine -->
+            <div class="text-center mb-4">
+                <div class="shine-container inline-flex items-center justify-center gap-3 p-2 rounded-2xl">
+                    <img src="logo.png" onerror="this.onerror=null; this.src='https://placehold.co/120x120/FF6B00/FFFFFF?text=QUALY';" alt="Qualyquimy Logo" class="pulse-subtle w-10 h-10 sm:w-12 sm:h-12 object-contain">
                     
                     <div class="flex flex-col items-start">
                         <span class="font-brand font-black text-2xl sm:text-3xl tracking-tight text-white flex items-center gap-1 leading-none">
@@ -134,81 +156,81 @@
             </div>
 
             <!-- Main Title -->
-            <div class="text-center mb-6">
-                <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-tight">
+            <div class="text-center mb-5">
+                <h1 class="text-lg sm:text-2xl font-extrabold text-white tracking-tight leading-tight">
                     Calculadora <span class="text-neon-gradient">Textura Grafiato Premium</span> da Qualy
                 </h1>
-                <p class="text-xs sm:text-sm text-slate-400 mt-1.5 max-w-md mx-auto leading-relaxed">
-                    Informe as medidas do ambiente para calcular os quilos necessários.
+                <p class="text-xs text-slate-400 mt-1 max-w-md mx-auto">
+                    Informe as medidas do ambiente para calcular a quantidade ideal.
                 </p>
             </div>
 
             <!-- Action Bar Buttons: GRAFIATO -> EXEMPLO DE MEDIDAS -> CONSUMO MÉDIO -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 p-1.5 bg-[#050C16] rounded-2xl border border-slate-800/80 mb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 p-1.5 bg-[#050C16] rounded-2xl border border-slate-800/80 mb-5">
                 
                 <!-- 1. Grafiato Button -->
-                <button type="button" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl font-bold text-xs bg-brand-neon text-slate-950 shadow-neon-glow transition-all duration-300">
-                    <i class="fa-solid fa-cubes text-sm"></i>
+                <button type="button" class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl font-bold text-xs bg-brand-neon text-slate-950 shadow-neon-glow transition-all duration-300">
+                    <i class="fa-solid fa-cubes text-xs"></i>
                     <span>Grafiato</span>
                 </button>
 
                 <!-- 2. Exemplo de medidas Button -->
-                <button type="button" onclick="openExampleModal()" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl font-semibold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 hover:border-brand-neon/50 transition-all duration-300 cursor-pointer">
+                <button type="button" onclick="openExampleModal()" class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl font-semibold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 hover:border-brand-neon/50 transition-all duration-300 cursor-pointer">
                     <i class="fa-solid fa-ruler-combined text-brand-neon text-xs"></i>
                     <span>Exemplo de medidas</span>
                 </button>
 
                 <!-- 3. Consumo Médio Badge Button -->
-                <div class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl font-semibold text-[11px] bg-slate-900/90 text-amber-300 border border-amber-500/30 text-center select-none">
+                <div class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl font-semibold text-[10px] sm:text-[11px] bg-slate-900/90 text-amber-300 border border-amber-500/30 text-center select-none">
                     <i class="fa-solid fa-scale-balanced text-amber-400 text-xs"></i>
                     <span>Consumo Médio: 4,5KG/M²</span>
                 </div>
             </div>
 
             <!-- Form Input Fields (Largura, Comprimento, Pé-direito, Janelas, Portas) -->
-            <form id="calcForm" onsubmit="event.preventDefault(); openResultModal();" class="space-y-4">
+            <form id="calcForm" onsubmit="event.preventDefault(); openResultModal();" class="space-y-3.5">
                 
                 <!-- Largura & Comprimento -->
-                <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                <div class="grid grid-cols-2 gap-3">
                     <div>
-                        <label for="largura" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                        <label for="largura" class="block text-xs font-semibold text-slate-300 mb-1">
                             Largura (m)
                         </label>
-                        <input type="number" step="0.01" min="0.1" id="largura" value="4" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm">
+                        <input type="number" step="0.01" min="0.1" id="largura" value="4" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3 py-2 text-sm">
                     </div>
                     <div>
-                        <label for="comprimento" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                        <label for="comprimento" class="block text-xs font-semibold text-slate-300 mb-1">
                             Comprimento (m)
                         </label>
-                        <input type="number" step="0.01" min="0.1" id="comprimento" value="5" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3.5 py-2.5 text-sm">
+                        <input type="number" step="0.01" min="0.1" id="comprimento" value="5" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3 py-2 text-sm">
                     </div>
                 </div>
 
                 <!-- Pé-direito, Janelas e Portas -->
-                <div class="grid grid-cols-3 gap-2.5 sm:gap-3">
+                <div class="grid grid-cols-3 gap-2">
                     <div>
-                        <label for="pedireito" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Pé-direito (m)">
+                        <label for="pedireito" class="block text-xs font-semibold text-slate-300 mb-1 truncate" title="Pé-direito (m)">
                             Pé-direito (m)
                         </label>
-                        <input type="number" step="0.01" min="0.1" id="pedireito" value="2.80" oninput="saveFormState()" placeholder="2.80" required class="app-input w-full rounded-xl px-2.5 py-2.5 text-sm text-center">
+                        <input type="number" step="0.01" min="0.1" id="pedireito" value="2.80" oninput="saveFormState()" placeholder="2.80" required class="app-input w-full rounded-xl px-2 py-2 text-sm text-center">
                     </div>
                     <div>
-                        <label for="janelas" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Janelas (m²)">
+                        <label for="janelas" class="block text-xs font-semibold text-slate-300 mb-1 truncate" title="Janelas (m²)">
                             Janelas (m²)
                         </label>
-                        <input type="number" step="0.01" min="0" id="janelas" value="5" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-2.5 py-2.5 text-sm text-center">
+                        <input type="number" step="0.01" min="0" id="janelas" value="5" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-2 text-sm text-center">
                     </div>
                     <div>
-                        <label for="portas" class="block text-xs font-semibold text-slate-300 mb-1.5 truncate" title="Portas (m²)">
+                        <label for="portas" class="block text-xs font-semibold text-slate-300 mb-1 truncate" title="Portas (m²)">
                             Portas (m²)
                         </label>
-                        <input type="number" step="0.01" min="0" id="portas" value="0" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-2.5 py-2.5 text-sm text-center">
+                        <input type="number" step="0.01" min="0" id="portas" value="0" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-2 text-sm text-center">
                     </div>
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="w-full mt-2 py-3.5 px-6 rounded-2xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-extrabold text-base sm:text-lg flex items-center justify-center gap-2.5 transition-all duration-300 shadow-neon-button hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
-                    <i class="fa-solid fa-calculator text-lg"></i>
+                <button type="submit" class="w-full mt-2 py-3 px-5 rounded-2xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-extrabold text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-neon-button hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
+                    <i class="fa-solid fa-calculator text-base"></i>
                     <span>Calcular</span>
                 </button>
             </form>
@@ -216,91 +238,84 @@
         </div>
     </div>
 
-    <!-- LARGE ELEGANT RESULT MODAL -->
+    <!-- RESULT MODAL (SAME SIZE AS MAIN CONTAINER) -->
     <div id="resultModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-lg p-3 sm:p-6 transition-all duration-300 overflow-y-auto">
-        <div class="relative w-full max-w-3xl bg-[#0a1322] border-2 border-brand-neon/60 rounded-3xl p-5 sm:p-8 shadow-2xl modal-fade-in my-auto max-h-[92vh] flex flex-col justify-between overflow-y-auto">
+        <div class="w-full max-w-xl white-neon-frame rounded-3xl p-5 sm:p-7 relative shadow-card-depth modal-fade-in my-auto max-h-[92vh] flex flex-col justify-between overflow-y-auto">
             
             <!-- Close "X" Button -->
-            <button onclick="closeResultModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-800/80 hover:bg-red-500/20 text-slate-300 hover:text-red-400 border border-slate-700 flex items-center justify-center transition-all cursor-pointer z-20">
-                <i class="fa-solid fa-xmark text-xl"></i>
+            <button onclick="closeResultModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-800/80 hover:bg-red-500/20 text-slate-300 hover:text-red-400 border border-slate-700 flex items-center justify-center transition-all cursor-pointer z-20">
+                <i class="fa-solid fa-xmark text-base"></i>
             </button>
 
-            <!-- Modal Body Content -->
-            <div class="space-y-6">
+            <!-- Modal Content -->
+            <div class="space-y-4">
                 <!-- Header -->
-                <div class="text-center border-b border-slate-800 pb-4 pr-8">
-                    <span class="inline-flex items-center gap-2 text-brand-neon text-xs sm:text-sm font-bold tracking-widest uppercase">
-                        <i class="fa-solid fa-circle-check"></i> Cálculo Concluído
+                <div class="text-center border-b border-slate-800/80 pb-3 pr-6">
+                    <span class="inline-flex items-center gap-1.5 text-brand-neon text-xs font-bold tracking-wider uppercase">
+                        <i class="fa-solid fa-circle-check"></i> Resultado do Cálculo
                     </span>
-                    <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">
-                        Resultado do Cálculo Grafiato
+                    <h2 class="text-lg sm:text-xl font-extrabold text-white mt-0.5">
+                        Necessidade de Grafiato Premium
                     </h2>
-                    <p class="text-xs sm:text-sm text-slate-400 mt-1">
-                        Estimativa calculada com consumo médio de 4.5kg por m²
-                    </p>
                 </div>
 
                 <!-- Main Grid Details -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                <div class="space-y-3">
                     
-                    <!-- Left Column: Product Image -->
-                    <div class="md:col-span-5 flex flex-col items-center justify-center p-4 bg-slate-900/60 rounded-2xl border border-slate-800">
-                        <img id="modalProductImg" src="barrica25kg.png" onerror="this.onerror=null; this.src='https://placehold.co/220x260/003322/00FF9D?text=Barrica+25kg';" alt="Embalagem Recomendada" class="h-44 sm:h-52 object-contain drop-shadow-[0_12px_20px_rgba(0,0,0,0.6)]">
-                        <span id="modalImgLabel" class="text-xs text-slate-400 mt-3 font-semibold text-center">Embalagem sugerida</span>
+                    <!-- Area & Required Weight Badges -->
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <div class="bg-[#050c18] border border-slate-800 p-2.5 rounded-2xl text-center">
+                            <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider block">Área Líquida</span>
+                            <span id="modalResArea" class="text-lg sm:text-xl font-black text-white mt-0.5 block">0 m²</span>
+                        </div>
+                        <div class="bg-[#050c18] border border-slate-800 p-2.5 rounded-2xl text-center">
+                            <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider block">Necessário</span>
+                            <span id="modalResQuantidade" class="text-lg sm:text-xl font-black text-brand-neon mt-0.5 block">0 kg</span>
+                        </div>
                     </div>
 
-                    <!-- Right Column: Values and Recommendation -->
-                    <div class="md:col-span-7 space-y-4">
+                    <!-- Dynamic Packaging Images (Side-by-side if > 5.6kg) -->
+                    <div class="p-3 bg-slate-900/80 rounded-2xl border border-slate-800/90 text-center">
+                        <span class="text-[11px] text-slate-400 font-semibold mb-2 block uppercase tracking-wider">
+                            Embalagem(ns) Recomendada(s)
+                        </span>
                         
-                        <!-- Area & Required Weight Badges -->
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="bg-[#050c18] border border-slate-800 p-3.5 rounded-2xl text-center">
-                                <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Área Líquida</span>
-                                <span id="modalResArea" class="text-xl sm:text-2xl font-black text-white mt-0.5 block">0 m²</span>
-                            </div>
-                            <div class="bg-[#050c18] border border-slate-800 p-3.5 rounded-2xl text-center">
-                                <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Necessário</span>
-                                <span id="modalResQuantidade" class="text-xl sm:text-2xl font-black text-brand-neon mt-0.5 block">0 kg</span>
-                            </div>
+                        <!-- Image Container -->
+                        <div id="imageContainer" class="flex items-center justify-center gap-3 py-1 min-h-[120px]">
+                            <!-- Injected by JS -->
                         </div>
-
-                        <!-- Package combination Box -->
-                        <div class="bg-gradient-to-r from-slate-900 via-slate-900 to-[#0c1c30] border border-brand-neon/40 p-4 rounded-2xl space-y-2">
-                            <span class="text-xs font-bold text-slate-300 uppercase tracking-wide block">
-                                <i class="fa-solid fa-boxes-packing text-brand-neon mr-1"></i> Sugestão de Compra:
-                            </span>
-                            <div id="modalResEmbalagem" class="text-base sm:text-lg font-bold text-white leading-snug">
-                                --
-                            </div>
-                            <div id="modalResTotalCovered" class="text-xs text-slate-400 pt-1 border-t border-slate-800/80 flex items-center gap-1.5">
-                                <i class="fa-solid fa-circle-check text-brand-neon"></i>
-                                <span>Total fornecido pelas embalagens: <strong id="modalCoveredKg" class="text-slate-200">0 kg</strong></span>
-                            </div>
-                        </div>
-
-                        <!-- Technical info note -->
-                        <p class="text-[11px] text-slate-400 bg-slate-900/40 p-2.5 rounded-xl border border-slate-800/60 leading-relaxed">
-                            <i class="fa-solid fa-circle-info text-brand-orange mr-1"></i>
-                            O rendimento do Grafiato varia conforme o tipo de parede e aplicação do profissional.
-                        </p>
-
                     </div>
+
+                    <!-- Package combination Box -->
+                    <div class="bg-gradient-to-r from-slate-900 via-slate-900 to-[#0c1c30] border border-brand-neon/40 p-3 rounded-2xl space-y-1">
+                        <span class="text-[11px] font-bold text-slate-300 uppercase tracking-wide block">
+                            <i class="fa-solid fa-boxes-packing text-brand-neon mr-1"></i> Sugestão de Compra:
+                        </span>
+                        <div id="modalResEmbalagem" class="text-sm sm:text-base font-bold text-white leading-snug">
+                            --
+                        </div>
+                        <div id="modalResTotalCovered" class="text-[11px] text-slate-400 pt-1 border-t border-slate-800/80 flex items-center gap-1.5">
+                            <i class="fa-solid fa-circle-check text-brand-neon"></i>
+                            <span>Total fornecido: <strong id="modalCoveredKg" class="text-slate-200">0 kg</strong></span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
             <!-- Modal Actions Footer (Voltar + Saiba Mais WhatsApp) -->
-            <div class="mt-8 pt-5 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2.5">
                 
                 <!-- Voltar Button -->
-                <button onclick="closeResultModal()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer border border-slate-700">
+                <button onclick="closeResultModal()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer border border-slate-700">
                     <i class="fa-solid fa-arrow-left"></i>
                     <span>Voltar</span>
                 </button>
 
                 <!-- Saiba Mais WhatsApp Button -->
-                <a href="https://wa.me/5511954950044" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm transition-all flex items-center justify-center gap-2.5 shadow-lg shadow-emerald-950/50 hover:scale-[1.02] cursor-pointer">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span>Saiba mais no WhatsApp</span>
+                <a href="https://wa.me/5511954950044" target="_blank" rel="noopener noreferrer" class="px-5 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs transition-all flex items-center justify-center gap-2 shadow-md shadow-emerald-950/50 hover:scale-[1.02] cursor-pointer">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>Saiba mais</span>
                 </a>
             </div>
 
@@ -309,34 +324,34 @@
 
     <!-- MODAL FOR "EXEMPLO DE MEDIDAS" (exemplo1.png) -->
     <div id="exampleModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 transition-all duration-300">
-        <div class="relative w-full max-w-2xl bg-[#0c1624] border border-brand-neon/40 rounded-3xl p-4 sm:p-6 shadow-2xl modal-fade-in flex flex-col items-center">
+        <div class="relative w-full max-w-xl white-neon-frame rounded-3xl p-4 sm:p-6 shadow-2xl modal-fade-in flex flex-col items-center">
             
             <!-- Close Button X -->
-            <button onclick="closeExampleModal()" class="absolute top-3 right-3 sm:top-4 sm:right-4 w-9 h-9 rounded-full bg-slate-800 hover:bg-red-500/20 text-slate-300 hover:text-red-400 border border-slate-700 flex items-center justify-center transition-all cursor-pointer">
-                <i class="fa-solid fa-xmark text-lg"></i>
+            <button onclick="closeExampleModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-800 hover:bg-red-500/20 text-slate-300 hover:text-red-400 border border-slate-700 flex items-center justify-center transition-all cursor-pointer">
+                <i class="fa-solid fa-xmark text-base"></i>
             </button>
 
-            <div class="text-center mb-4 pr-6 pl-2">
-                <h3 class="text-base sm:text-xl font-bold text-white flex items-center justify-center gap-2">
+            <div class="text-center mb-3 pr-6 pl-2">
+                <h3 class="text-base font-bold text-white flex items-center justify-center gap-2">
                     <i class="fa-solid fa-ruler-combined text-brand-neon"></i>
                     <span>Exemplo de Medidas para Cálculo</span>
                 </h3>
-                <p class="text-xs text-slate-400 mt-1">Veja como medir a largura, comprimento, pé-direito e vãos do ambiente.</p>
+                <p class="text-xs text-slate-400 mt-0.5">Veja como medir a largura, comprimento, pé-direito e vãos do ambiente.</p>
             </div>
 
             <div class="w-full overflow-hidden rounded-2xl bg-black/40 border border-slate-800 flex items-center justify-center p-2">
-                <img src="exemplo1.png" onerror="this.onerror=null; this.src='https://placehold.co/600x400/08111e/00FF9D?text=Exemplo+de+Medidas';" alt="Exemplo de Medidas de Paredes" class="w-full max-h-[65vh] object-contain rounded-xl">
+                <img src="exemplo1.png" onerror="this.onerror=null; this.src='https://placehold.co/600x400/08111e/00FF9D?text=Exemplo+de+Medidas';" alt="Exemplo de Medidas de Paredes" class="w-full max-h-[60vh] object-contain rounded-xl">
             </div>
 
-            <button onclick="closeExampleModal()" class="mt-4 px-6 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-semibold transition-all cursor-pointer">
+            <button onclick="closeExampleModal()" class="mt-3 px-5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all cursor-pointer">
                 Fechar
             </button>
         </div>
     </div>
 
     <!-- Discreet Footer -->
-    <footer class="mt-6 mb-2 text-center text-[11px] text-slate-500 font-medium tracking-wide">
-        Desenvolvido por <a href="https://impulsoweb10.com.br" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-neon underline underline-offset-2 transition-colors">ImpulsoWeb10</a>
+    <footer class="mt-4 mb-2 text-center text-[11px] text-slate-500 font-medium tracking-wide">
+        Desenvolvido por <a href="https://avaliar.impulsoweb10.com.br" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-neon underline underline-offset-2 transition-colors">ImpulsoWeb10</a>
     </footer>
 
     <!-- JavaScript Application Logic -->
@@ -374,8 +389,34 @@
             document.getElementById('modalResEmbalagem').textContent = data.packaging.text;
             document.getElementById('modalCoveredKg').textContent = `${data.packaging.totalCovered.toFixed(1).replace('.', ',')} kg`;
             
-            const imgEl = document.getElementById('modalProductImg');
-            imgEl.src = data.packaging.recommendedImg || 'barrica25kg.png';
+            // Render Dynamic Images (If > 5.6kg show both Balde and Barrica side-by-side)
+            const imgContainer = document.getElementById('imageContainer');
+            imgContainer.innerHTML = '';
+
+            if (data.totalKg > 5.6) {
+                // Show both options side by side
+                imgContainer.innerHTML = `
+                    <div class="flex flex-col items-center">
+                        <img src="balde16lts.png" onerror="this.onerror=null; this.src='https://placehold.co/120x140/003322/00FF9D?text=Balde+16kg';" alt="Balde 16kg" class="h-24 sm:h-28 object-contain drop-shadow-md">
+                        <span class="text-[10px] text-slate-300 font-semibold mt-1">Balde 16kg</span>
+                    </div>
+                    <div class="text-slate-600 font-bold text-xs sm:text-sm self-center">OU</div>
+                    <div class="flex flex-col items-center">
+                        <img src="barrica25kg.png" onerror="this.onerror=null; this.src='https://placehold.co/120x140/003322/00FF9D?text=Barrica+25kg';" alt="Barrica 25kg" class="h-24 sm:h-28 object-contain drop-shadow-md">
+                        <span class="text-[10px] text-slate-300 font-semibold mt-1">Barrica 25kg</span>
+                    </div>
+                `;
+            } else {
+                // Show standard recommended image (Galao or Balde)
+                const singleImg = data.packaging.recommendedImg || 'galao36ls.png';
+                const label = data.totalKg <= 3.6 ? 'Galão 3,6kg' : 'Balde 16kg';
+                imgContainer.innerHTML = `
+                    <div class="flex flex-col items-center">
+                        <img src="${singleImg}" onerror="this.onerror=null; this.src='https://placehold.co/120x140/003322/00FF9D?text=Embalagem';" alt="Embalagem" class="h-28 sm:h-32 object-contain drop-shadow-md">
+                        <span class="text-[10px] text-slate-300 font-semibold mt-1">${label}</span>
+                    </div>
+                `;
+            }
 
             const modal = document.getElementById('resultModal');
             modal.classList.remove('hidden');
@@ -432,7 +473,7 @@
         // Package Allocation Algorithm
         function getPackagingSuggestion(requiredAmount, packages) {
             if (requiredAmount <= 0) {
-                return { text: 'Nenhuma embalagem necessária', totalCovered: 0, recommendedImg: 'barrica25kg.png' };
+                return { text: 'Nenhuma embalagem necessária', totalCovered: 0, recommendedImg: 'galao36ls.png' };
             }
 
             const sorted = [...packages].sort((a, b) => b.size - a.size);
@@ -481,7 +522,7 @@
         }
 
         // LocalStorage State Handling
-        const STORAGE_KEY = 'QUALYQUIMY_GRAFIATO_V2';
+        const STORAGE_KEY = 'QUALYQUIMY_GRAFIATO_V3';
 
         function saveFormState() {
             const state = {
