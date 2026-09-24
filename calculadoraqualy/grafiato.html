@@ -515,7 +515,7 @@
         
         const PACKAGES = [
             { size: 25, label: 'barrica 25kg', img: 'barrica25kg.png' },
-            { size: 16, label: 'balde 16kg', img: 'balde16lts.png' },
+            { size: 16, label: 'balde 25kg', img: 'balde25kg.png' },
             { size: 3.6, label: 'galão 3.6kg', img: 'galao36ls.png' }
         ];
 
@@ -597,10 +597,10 @@
             
             const container = document.getElementById('productImgContainer');
             
-            // If calculated total > 5.6kg show both balde16lts.png and barrica25kg.png side by side
+            // If calculated total > 5.6kg show both balde25kg.png and barrica25kg.png side by side
             if (data.totalKg > 5.6) {
                 container.innerHTML = `
-                    <img src="balde16lts.png" onerror="this.onerror=null; this.src='https://placehold.co/120x150/400010/00FF9D?text=Balde+16kg';" alt="Balde 16kg" class="h-24 sm:h-28 object-contain drop-shadow-[0_8px_12px_rgba(0,0,0,0.9)]">
+                    <img src="balde25kg.png" onerror="this.onerror=null; this.src='https://placehold.co/120x150/400010/00FF9D?text=Balde+16kg';" alt="Balde 16kg" class="h-24 sm:h-28 object-contain drop-shadow-[0_8px_12px_rgba(0,0,0,0.9)]">
                     <img src="barrica25kg.png" onerror="this.onerror=null; this.src='https://placehold.co/120x150/400010/00FF9D?text=Barrica+25kg';" alt="Barrica 25kg" class="h-28 sm:h-32 object-contain drop-shadow-[0_8px_12px_rgba(0,0,0,0.9)]">
                 `;
                 document.getElementById('modalImgLabel').textContent = 'Embalagens sugeridas (Balde 16kg e Barrica 25kg)';
