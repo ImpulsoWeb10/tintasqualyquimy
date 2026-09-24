@@ -1,1 +1,701 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-33MEN928R2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-33MEN928R2');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Textura Lisa ou Rolada Premium - QUALYQUIMY</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FF6B00',
+                            neon: '#00FF9D',
+                            neonDark: '#00D683',
+                            neonRed: '#FF0055',
+                            neonRedDark: '#CC0044',
+                            darkBg: '#050B14',
+                            cardBg: '#0D1726',
+                            inputBg: '#08111E',
+                            borderColor: '#192C45'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        brand: ['Montserrat', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'neon-white': '0 0 25px rgba(255, 255, 255, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.2)',
+                        'neon-glow': '0 0 20px rgba(0, 255, 157, 0.35)',
+                        'neon-button': '0 4px 20px rgba(0, 255, 157, 0.4)',
+                        'card-depth': '0 25px 60px rgba(0, 0, 0, 0.8)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Estilos Customizados -->
+    <style>
+        body {
+            background: radial-gradient(circle at 50% 20%, #0c182b 0%, #040810 100%);
+            min-height: 100vh;
+        }
+
+        /* Moldura de Vidro com Bordas Neon Branco */
+        .white-neon-frame {
+            background: rgba(11, 20, 35, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 2.5px solid rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), inset 0 0 15px rgba(255, 255, 255, 0.15);
+        }
+
+        /* Modal com Fundo Vermelho Neon e Luz de Fundo com Moldura Branca */
+        .modal-red-neon-frame {
+            background: linear-gradient(145deg, #2b020d 0%, #150006 100%);
+            border: 2.5px solid #ffffff;
+            box-shadow: 0 0 60px rgba(255, 0, 85, 0.75), 0 0 25px rgba(255, 255, 255, 0.9), inset 0 0 25px rgba(255, 0, 85, 0.4);
+        }
+
+        /* Campos de Entrada */
+        .app-input {
+            background-color: #060D18;
+            border: 1px solid #1c2e47;
+            color: #ffffff;
+            transition: all 0.25s ease;
+        }
+        .app-input:focus {
+            border-color: #00FF9D;
+            box-shadow: 0 0 12px rgba(0, 255, 157, 0.3);
+            outline: none;
+        }
+
+        .text-neon-gradient {
+            background: linear-gradient(135deg, #00FF9D 0%, #00B8FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Animação do Logo (Pulsante) */
+        .pulse-subtle {
+            animation: pulseSubtle 3s infinite ease-in-out;
+        }
+        @keyframes pulseSubtle {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(255,107,0,0.4)); }
+            50% { transform: scale(1.06); filter: drop-shadow(0 0 14px rgba(0,255,157,0.7)); }
+        }
+
+        /* Brilho no Logo */
+        .shine-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-container::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -150%;
+            width: 100%;
+            height: 200%;
+            background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+            transform: rotate(25deg);
+            animation: shineSweep 4.5s infinite;
+            pointer-events: none;
+        }
+        @keyframes shineSweep {
+            0% { left: -150%; }
+            30%, 100% { left: 150%; }
+        }
+
+        /* Marquee Continuo */
+        .marquee-track {
+            display: flex;
+            width: 200%;
+            animation: marquee 14s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Modal Animações */
+        .modal-fade-in {
+            animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Pulse para o Botão do WhatsApp */
+        .pulse-btn {
+            animation: pulseBtn 2s infinite;
+        }
+        @keyframes pulseBtn {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
+            100% { shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050B14; }
+        ::-webkit-scrollbar-thumb { background: #1c2e47; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00FF9D; }
+    </style>
+</head>
+<body class="text-slate-100 font-sans flex flex-col justify-between items-center min-h-screen p-2 sm:p-4 md:p-6">
+
+    <!-- Container Principal do App -->
+    <div class="w-full max-w-lg my-auto">
+        
+        <!-- Moldura Neon Branca -->
+        <div class="white-neon-frame rounded-3xl p-4 sm:p-6 relative overflow-hidden shadow-card-depth">
+            
+            <!-- Iluminação de Fundo -->
+            <div class="absolute -top-24 -left-24 w-60 h-60 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-brand-neon/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Cabeçalho com Logo -->
+            <div class="text-center mb-3">
+                <div class="shine-container inline-flex items-center justify-center gap-3 p-1.5 rounded-2xl">
+                    <img src="logo.jpg" onerror="this.onerror=null; this.src='logo.png';" alt="Qualyquimy Logo" class="pulse-subtle w-10 h-10 sm:w-11 sm:h-11 object-contain">
+                    
+                    <div class="flex flex-col items-start">
+                        <span class="font-brand font-black text-2xl sm:text-3xl tracking-tight text-white flex items-center gap-1 leading-none">
+                            QUALY<span class="text-brand-orange">QUIMY</span>
+                        </span>
+                        <span class="text-[9px] sm:text-[10px] tracking-[0.25em] text-slate-400 font-semibold uppercase mt-0.5">
+                            Tintas e Texturas
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Título Principal Atualizado -->
+            <div class="text-center mb-4">
+                <h1 class="text-base sm:text-xl font-extrabold text-white tracking-tight leading-tight">
+                    Calculadora <span class="text-neon-gradient">Textura Lisa ou Rolada Premium</span>
+                </h1>
+                <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5 max-w-xs mx-auto">
+                    Informe as medidas do ambiente para calcular a quantidade ideal.
+                </p>
+            </div>
+
+            <!-- Botoes Superiores (Textura com Modal / Exemplo / Consumo Médio 3,33kg) -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5 p-1 bg-[#050C16] rounded-2xl border border-slate-800/80 mb-4">
+                
+                <!-- 1. Textura / Veja - Clique Aqui -->
+                <button type="button" onclick="openTexturaModal()" class="flex items-center justify-center gap-1 py-2 px-1.5 rounded-xl font-bold text-[11px] sm:text-xs bg-brand-neon hover:bg-brand-neonDark text-slate-950 shadow-neon-glow transition-all duration-300 cursor-pointer">
+                    <i class="fa-solid fa-cubes text-xs"></i>
+                    <span>Textura/Veja-clique aqui</span>
+                </button>
+
+                <!-- 2. Exemplo de medidas (exemplo2.png) -->
+                <button type="button" onclick="openExampleModal()" class="flex items-center justify-center gap-1 py-2 px-1.5 rounded-xl font-semibold text-[11px] sm:text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 hover:border-brand-neon/50 transition-all duration-300 cursor-pointer">
+                    <i class="fa-solid fa-ruler-combined text-brand-neon text-xs"></i>
+                    <span>Exemplo de medidas</span>
+                </button>
+
+                <!-- 3. Consumo Médio 3,33KG/M² -->
+                <div class="flex items-center justify-center gap-1 py-2 px-1.5 rounded-xl font-semibold text-[10px] sm:text-[11px] bg-slate-900/90 text-amber-300 border border-amber-500/30 text-center select-none">
+                    <i class="fa-solid fa-scale-balanced text-amber-400 text-xs"></i>
+                    <span>Consumo Médio: 3,33KG/M²</span>
+                </div>
+            </div>
+
+            <!-- Formulário de Entrada -->
+            <form id="calcForm" onsubmit="event.preventDefault(); openResultModal();" class="space-y-3">
+                
+                <!-- Largura e Comprimento -->
+                <div class="grid grid-cols-2 gap-2.5">
+                    <div>
+                        <label for="largura" class="block text-[11px] font-semibold text-slate-300 mb-1">
+                            Largura (m)
+                        </label>
+                        <input type="number" step="0.01" min="0.1" id="largura" value="4" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3 py-1.5 text-sm">
+                    </div>
+                    <div>
+                        <label for="comprimento" class="block text-[11px] font-semibold text-slate-300 mb-1">
+                            Comprimento (m)
+                        </label>
+                        <input type="number" step="0.01" min="0.1" id="comprimento" value="5" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3 py-1.5 text-sm">
+                    </div>
+                </div>
+
+                <!-- Pé-direito, Janelas e Portas -->
+                <div class="grid grid-cols-3 gap-2">
+                    <div>
+                        <label for="pedireito" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Pé-direito (m)">
+                            Pé-direito (m)
+                        </label>
+                        <input type="number" step="0.01" min="0.1" id="pedireito" value="2.80" oninput="saveFormState()" placeholder="2.80" required class="app-input w-full rounded-xl px-2 py-1.5 text-sm text-center">
+                    </div>
+                    <div>
+                        <label for="janelas" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Janelas (m²)">
+                            Janelas (m²)
+                        </label>
+                        <input type="number" step="0.01" min="0" id="janelas" value="5" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-1.5 text-sm text-center">
+                    </div>
+                    <div>
+                        <label for="portas" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Portas (m²)">
+                            Portas (m²)
+                        </label>
+                        <input type="number" step="0.01" min="0" id="portas" value="0" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-1.5 text-sm text-center">
+                    </div>
+                </div>
+
+                <!-- Botão Calcular -->
+                <button type="submit" class="w-full mt-2 py-2.5 px-4 rounded-2xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-neon-button hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
+                    <i class="fa-solid fa-calculator text-base"></i>
+                    <span>Calcular</span>
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Banner Rotativo (Marquee) Contínuo Clicável para o WhatsApp -->
+    <a href="https://wa.me/5511954950044?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20link%20personalizado%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="w-full max-w-lg mt-3 overflow-hidden bg-slate-950/90 border border-amber-500/40 hover:border-amber-400 rounded-xl py-2 transition-all cursor-pointer block group">
+        <div class="marquee-track text-[11px] font-bold text-amber-300 group-hover:text-white whitespace-nowrap">
+            <span class="px-4"><i class="fa-solid fa-star text-brand-orange mr-1.5"></i>Crie seu link igual esse personalizado para sua empresa</span>
+            <span class="px-4"><i class="fa-solid fa-star text-brand-orange mr-1.5"></i>Crie seu link igual esse personalizado para sua empresa</span>
+            <span class="px-4"><i class="fa-solid fa-star text-brand-orange mr-1.5"></i>Crie seu link igual esse personalizado para sua empresa</span>
+            <span class="px-4"><i class="fa-solid fa-star text-brand-orange mr-1.5"></i>Crie seu link igual esse personalizado para sua empresa</span>
+        </div>
+    </a>
+
+    <!-- Rodapé com SSL, Conexão e ImpulsoWeb10 -->
+    <footer class="w-full max-w-lg mt-3 mb-1 pt-2 border-t border-slate-800/80 flex flex-col items-center gap-1.5 text-center text-[10px] sm:text-[11px] text-slate-400">
+        
+        <!-- SSL Certificado e Conexão -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-900/90 rounded-full border border-slate-800 text-slate-300">
+            <i class="fa-solid fa-shield-halved text-emerald-400 text-xs"></i>
+            <span>SSL Certificado 100% Seguro</span>
+            <span class="text-slate-600">•</span>
+            <i class="fa-solid fa-lock text-brand-neon text-xs"></i>
+            <span>Conexão Criptografada</span>
+        </div>
+
+        <!-- Crédito de Desenvolvimento -->
+        <div class="text-slate-500 font-medium">
+            Desenvolvido por <a href="https://avaliar.impulsoweb10.com.br" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-brand-neon underline underline-offset-2 font-semibold transition-colors">ImpulsoWeb10</a>
+        </div>
+    </footer>
+
+    <!-- MODAL DE RESULTADO (VERMELHO NEON + MOLDURA BRANCA) -->
+    <div id="resultModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-3 transition-all duration-300 overflow-y-auto">
+        <div class="w-full max-w-md modal-red-neon-frame rounded-3xl p-4 sm:p-5 relative modal-fade-in my-auto flex flex-col justify-between overflow-hidden">
+            
+            <!-- Botão Fechar X -->
+            <button onclick="closeResultModal()" class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/60 hover:bg-red-600 text-slate-200 border border-slate-600 flex items-center justify-center transition-all cursor-pointer z-20">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+
+            <div class="space-y-3">
+                <!-- Cabeçalho -->
+                <div class="text-center border-b border-red-900/60 pb-2 pr-5">
+                    <span class="inline-flex items-center gap-1 text-brand-neon text-[11px] font-extrabold uppercase tracking-wider">
+                        <i class="fa-solid fa-circle-check"></i> Resultado Calculado
+                    </span>
+                    <h2 class="text-base sm:text-lg font-black text-white mt-0.5">
+                        Necessidade de Textura Lisa/Rolada
+                    </h2>
+                </div>
+
+                <!-- Medidas e Total -->
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="bg-black/60 border border-red-900/60 p-2 rounded-2xl text-center">
+                        <span class="text-[9px] font-semibold text-slate-300 uppercase block">Área Líquida</span>
+                        <span id="modalResArea" class="text-base sm:text-lg font-black text-white block">0 m²</span>
+                    </div>
+                    <div class="bg-black/60 border border-red-900/60 p-2 rounded-2xl text-center">
+                        <span class="text-[9px] font-semibold text-slate-300 uppercase block">Necessário</span>
+                        <span id="modalResQuantidade" class="text-base sm:text-lg font-black text-brand-neon block">0 kg</span>
+                    </div>
+                </div>
+
+                <!-- Exibição Dinâmica das Embalagens -->
+                <div class="p-2.5 bg-black/50 rounded-2xl border border-white/20 text-center">
+                    <span class="text-[10px] text-slate-300 font-semibold mb-1 block uppercase tracking-wider">
+                        Embalagem(ns) Recomendada(s)
+                    </span>
+                    <div id="imageContainer" class="flex items-center justify-center gap-3 py-1 min-h-[90px]">
+                        <!-- Injetado via JS -->
+                    </div>
+                </div>
+
+                <!-- Sugestão de Compra com Letras Maiores -->
+                <div class="bg-black/80 border-2 border-brand-neon p-3 rounded-2xl space-y-1 shadow-lg shadow-black">
+                    <span class="text-xs font-black text-brand-neon uppercase tracking-wider block flex items-center gap-1.5">
+                        <i class="fa-solid fa-boxes-packing text-sm"></i> Sugestão de Compra:
+                    </span>
+                    <div id="modalResEmbalagem" class="text-base sm:text-lg font-black text-white leading-tight">
+                        --
+                    </div>
+                    <div id="modalResTotalCovered" class="text-xs text-slate-300 pt-1.5 border-t border-slate-800 flex items-center gap-1.5 font-semibold">
+                        <i class="fa-solid fa-circle-check text-brand-neon"></i>
+                        <span>Total fornecido: <strong id="modalCoveredKg" class="text-white font-bold">0 kg</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botões de Ação na Modal de Resultado -->
+            <div class="mt-4 pt-2.5 border-t border-red-900/60 flex flex-col gap-2">
+                
+                <div class="flex items-center justify-between gap-2">
+                    <!-- Botão Voltar (Menor) -->
+                    <button onclick="closeResultModal()" class="px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold text-xs transition-all flex items-center justify-center gap-1 border border-slate-700 cursor-pointer">
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                        <span>Voltar</span>
+                    </button>
+
+                    <!-- Botão Saiba Mais WhatsApp (Maior) -->
+                    <a href="https://wa.me/5511954950044?text=Ol%C3%A1%2C%20fiz%20o%20c%C3%A1lculo%20de%20Textura%20Lisa%2FRolada%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="pulse-btn px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-lg cursor-pointer flex-1">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Saiba mais no WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Botão Pequeno Secundário para Link Personalizado -->
+                <a href="https://wa.me/5511954950044?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20link%20personalizado%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="w-full text-center py-1 px-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-amber-300 hover:text-amber-200 border border-amber-500/30 text-[10px] font-semibold transition-all">
+                    <i class="fa-solid fa-wand-magic-sparkles mr-1"></i>Clique aqui para ter um link personalizado para sua empresa
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL DO CARROSSEL TEXTURA (2.png, 3.png, 4.png - IMAGENS MAIORES) -->
+    <div id="texturaModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-2 sm:p-4 transition-all duration-300">
+        <div class="relative w-full max-w-lg white-neon-frame rounded-3xl p-3 sm:p-5 shadow-2xl modal-fade-in flex flex-col items-center max-h-[92vh]">
+            
+            <button onclick="closeTexturaModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-800 hover:bg-red-500/20 text-slate-300 border border-slate-700 flex items-center justify-center transition-all cursor-pointer z-10">
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+
+            <div class="text-center mb-2 pr-8">
+                <h3 class="text-base font-extrabold text-white flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-cubes text-brand-neon"></i>
+                    <span>Exemplos de Textura Lisa / Rolada</span>
+                </h3>
+            </div>
+
+            <!-- Conteúdo do Carrossel com Imagem Ampliada -->
+            <div class="relative w-full overflow-hidden rounded-2xl bg-black/70 border border-slate-800 p-1 flex-1 flex flex-col justify-center items-center">
+                <div class="relative h-[55vh] sm:h-[65vh] w-full flex items-center justify-center">
+                    <img id="carouselImg" src="2.png" onerror="this.onerror=null; this.src='https://placehold.co/600x500/08111e/00FF9D?text=Imagem+Textura';" alt="Textura Exemplo" class="max-h-full max-w-full object-contain rounded-xl">
+                </div>
+
+                <!-- Botões de Navegação -->
+                <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white flex items-center justify-center border border-slate-700 cursor-pointer shadow-lg">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                </button>
+                <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white flex items-center justify-center border border-slate-700 cursor-pointer shadow-lg">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                </button>
+
+                <!-- Indicadores de Pontos -->
+                <div class="flex items-center justify-center gap-2 py-2">
+                    <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-brand-neon"></span>
+                    <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-slate-600"></span>
+                    <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-slate-600"></span>
+                </div>
+            </div>
+
+            <button onclick="closeTexturaModal()" class="mt-3 px-6 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all cursor-pointer border border-slate-700">
+                Voltar
+            </button>
+        </div>
+    </div>
+
+    <!-- MODAL "EXEMPLO DE MEDIDAS" (exemplo2.png - AMPLIAÇÃO DA IMAGEM) -->
+    <div id="exampleModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-2 sm:p-4 transition-all duration-300">
+        <div class="relative w-full max-w-lg white-neon-frame rounded-3xl p-3 sm:p-5 shadow-2xl modal-fade-in flex flex-col items-center max-h-[92vh]">
+            
+            <button onclick="closeExampleModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-800 hover:bg-red-500/20 text-slate-300 border border-slate-700 flex items-center justify-center transition-all cursor-pointer z-10">
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+
+            <div class="text-center mb-2 pr-8">
+                <h3 class="text-base font-extrabold text-white flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-ruler-combined text-brand-neon"></i>
+                    <span>Exemplo de Medidas do Ambiente</span>
+                </h3>
+            </div>
+
+            <!-- Imagem do Exemplo 2 Ampliada -->
+            <div class="w-full overflow-hidden rounded-2xl bg-black/70 border border-slate-800 p-1 flex items-center justify-center flex-1">
+                <img src="exemplo2.png" onerror="this.onerror=null; this.src='https://placehold.co/600x450/08111e/00FF9D?text=Exemplo+de+Medidas+2';" alt="Exemplo de Medidas" class="w-full max-h-[65vh] object-contain rounded-xl">
+            </div>
+
+            <button onclick="closeExampleModal()" class="mt-3 px-6 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all cursor-pointer border border-slate-700">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <!-- Lógica em JavaScript -->
+    <script>
+        const TEXTURA_CONSUMPTION = 3.33; // 3,33 kg por m² para Textura Lisa/Rolada
+        
+        const PACKAGES = [
+            { size: 25, label: 'barrica 25kg', img: 'barrica25kg.png' },
+            { size: 16, label: 'balde 16kg', img: 'balde16lts.png' },
+            { size: 3.6, label: 'galão 3.6kg', img: 'galao36ls.png' }
+        ];
+
+        // Lógica do Carrossel com imagens 2.png, 3.png e 4.png
+        const carouselImages = ['2.png', '3.png', '4.png'];
+        let currentSlide = 0;
+
+        function updateCarousel() {
+            const imgEl = document.getElementById('carouselImg');
+            imgEl.src = carouselImages[currentSlide];
+            
+            const dots = document.querySelectorAll('.dot-indicator');
+            dots.forEach((dot, idx) => {
+                if (idx === currentSlide) {
+                    dot.className = 'dot-indicator w-3 h-3 rounded-full bg-brand-neon';
+                } else {
+                    dot.className = 'dot-indicator w-2.5 h-2.5 rounded-full bg-slate-600';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % carouselImages.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + carouselImages.length) % carouselImages.length;
+            updateCarousel();
+        }
+
+        // Handlers dos Modais
+        function openTexturaModal() {
+            currentSlide = 0;
+            updateCarousel();
+            const modal = document.getElementById('texturaModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeTexturaModal() {
+            const modal = document.getElementById('texturaModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function openExampleModal() {
+            const modal = document.getElementById('exampleModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeExampleModal() {
+            const modal = document.getElementById('exampleModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function openResultModal() {
+            const data = calculate();
+            
+            document.getElementById('modalResArea').textContent = `${data.areaParede.toFixed(1).replace('.', ',')} m²`;
+            document.getElementById('modalResQuantidade').textContent = `${data.totalKg.toFixed(1).replace('.', ',')} kg`;
+            document.getElementById('modalResEmbalagem').textContent = data.packaging.text;
+            document.getElementById('modalCoveredKg').textContent = `${data.packaging.totalCovered.toFixed(1).replace('.', ',')} kg`;
+            
+            const imgContainer = document.getElementById('imageContainer');
+            imgContainer.innerHTML = '';
+
+            // Se for acima de 5,6 kg exibe Balde e Barrica lado a lado
+            if (data.totalKg > 5.6) {
+                imgContainer.innerHTML = `
+                    <div class="flex flex-col items-center">
+                        <img src="balde16lts.png" onerror="this.onerror=null; this.src='https://placehold.co/100x120/003322/00FF9D?text=Balde+16kg';" alt="Balde 16kg" class="h-20 sm:h-24 object-contain drop-shadow">
+                        <span class="text-[9px] text-slate-200 font-semibold mt-0.5">Balde 16kg</span>
+                    </div>
+                    <div class="text-slate-400 font-bold text-xs">OU</div>
+                    <div class="flex flex-col items-center">
+                        <img src="barrica25kg.png" onerror="this.onerror=null; this.src='https://placehold.co/100x120/003322/00FF9D?text=Barrica+25kg';" alt="Barrica 25kg" class="h-20 sm:h-24 object-contain drop-shadow">
+                        <span class="text-[9px] text-slate-200 font-semibold mt-0.5">Barrica 25kg</span>
+                    </div>
+                `;
+            } else {
+                const singleImg = data.packaging.recommendedImg || 'galao36ls.png';
+                const label = data.totalKg <= 3.6 ? 'Galão 3,6kg' : 'Balde 16kg';
+                imgContainer.innerHTML = `
+                    <div class="flex flex-col items-center">
+                        <img src="${singleImg}" onerror="this.onerror=null; this.src='https://placehold.co/100x120/003322/00FF9D?text=Embalagem';" alt="Embalagem" class="h-22 sm:h-26 object-contain drop-shadow">
+                        <span class="text-[9px] text-slate-200 font-semibold mt-0.5">${label}</span>
+                    </div>
+                `;
+            }
+
+            const modal = document.getElementById('resultModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeResultModal() {
+            const modal = document.getElementById('resultModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        window.onclick = function(e) {
+            if (e.target === document.getElementById('resultModal')) closeResultModal();
+            if (e.target === document.getElementById('exampleModal')) closeExampleModal();
+            if (e.target === document.getElementById('texturaModal')) closeTexturaModal();
+        };
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeResultModal();
+                closeExampleModal();
+                closeTexturaModal();
+            }
+        });
+
+        // Cálculo da Área e Consumo (3,33 kg/m²)
+        function calculate() {
+            const largura = parseFloat(document.getElementById('largura').value) || 0;
+            const comprimento = parseFloat(document.getElementById('comprimento').value) || 0;
+            const pedireito = parseFloat(document.getElementById('pedireito').value) || 0;
+            const janelas = parseFloat(document.getElementById('janelas').value) || 0;
+            const portas = parseFloat(document.getElementById('portas').value) || 0;
+
+            let areaParede = ((largura + comprimento) * 2 * pedireito) - janelas - portas;
+            if (areaParede < 0) areaParede = 0;
+
+            const totalKg = areaParede * TEXTURA_CONSUMPTION;
+            const packaging = getPackagingSuggestion(totalKg, PACKAGES);
+
+            saveFormState();
+
+            return { areaParede, totalKg, packaging };
+        }
+
+        function getPackagingSuggestion(requiredAmount, packages) {
+            if (requiredAmount <= 0) {
+                return { text: 'Nenhuma embalagem necessária', totalCovered: 0, recommendedImg: 'galao36ls.png' };
+            }
+
+            const sorted = [...packages].sort((a, b) => b.size - a.size);
+            let remaining = requiredAmount;
+            const chosen = [];
+            let totalCovered = 0;
+            let primaryImg = null;
+
+            for (let i = 0; i < sorted.length; i++) {
+                const pkg = sorted[i];
+                if (remaining <= 0) break;
+
+                const count = Math.floor(remaining / pkg.size);
+                if (count > 0) {
+                    chosen.push(`${count}× ${pkg.label}`);
+                    remaining -= count * pkg.size;
+                    totalCovered += count * pkg.size;
+                    if (!primaryImg) primaryImg = pkg.img;
+                }
+            }
+
+            if (remaining > 0) {
+                let bestFit = sorted[sorted.length - 1];
+                for (let i = sorted.length - 1; i >= 0; i--) {
+                    if (sorted[i].size >= remaining) {
+                        bestFit = sorted[i];
+                    }
+                }
+                
+                const existingIdx = chosen.findIndex(str => str.includes(bestFit.label));
+                if (existingIdx !== -1) {
+                    const currentQty = parseInt(chosen[existingIdx].split('×')[0]);
+                    chosen[existingIdx] = `${currentQty + 1}× ${bestFit.label}`;
+                } else {
+                    chosen.push(`1× ${bestFit.label}`);
+                }
+                totalCovered += bestFit.size;
+                if (!primaryImg) primaryImg = bestFit.img;
+            }
+
+            return {
+                text: chosen.join(' + '),
+                totalCovered: totalCovered,
+                recommendedImg: primaryImg || 'barrica25kg.png'
+            };
+        }
+
+        // LocalStorage para salvar estado
+        const STORAGE_KEY = 'QUALYQUIMY_TEXTURA_LISA_V1';
+
+        function saveFormState() {
+            const state = {
+                largura: document.getElementById('largura').value,
+                comprimento: document.getElementById('comprimento').value,
+                pedireito: document.getElementById('pedireito').value,
+                janelas: document.getElementById('janelas').value,
+                portas: document.getElementById('portas').value
+            };
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+            } catch (e) {
+                console.warn('LocalStorage error:', e);
+            }
+        }
+
+        function loadFormState() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) {
+                    const state = JSON.parse(saved);
+                    if (state.largura) document.getElementById('largura').value = state.largura;
+                    if (state.comprimento) document.getElementById('comprimento').value = state.comprimento;
+                    if (state.pedireito) document.getElementById('pedireito').value = state.pedireito;
+                    if (state.janelas !== undefined) document.getElementById('janelas').value = state.janelas;
+                    if (state.portas !== undefined) document.getElementById('portas').value = state.portas;
+                }
+            } catch (e) {
+                console.error('Error loading form state:', e);
+            }
+        }
+
+        window.onload = function() {
+            loadFormState();
+        };
+    </script>
+</body>
+</html>
