@@ -215,7 +215,7 @@
             </div>
         </div>
 
-        <!-- Main Title & FAQ Toggle Button -->
+        <!-- Main Title & Action Buttons -->
         <div class="text-center mb-3 space-y-1.5">
             <h1 class="text-base sm:text-xl font-extrabold text-white tracking-tight leading-tight">
                 Calculadora <span class="text-neon-gradient">de Tintas Inteligente</span>
@@ -224,12 +224,19 @@
                 Passe o mouse nas tintas para ver detalhes e calcule rapidamente.
             </p>
 
-            <!-- FAQ Trigger Button -->
-            <button onclick="openFaqModal()" class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-slate-900/90 hover:bg-brand-neon/20 border border-brand-neon/50 text-brand-neon font-bold text-[11px] transition-all shadow-sm cursor-pointer mt-0.5">
-                <i class="fa-solid fa-circle-question"></i>
-                <span>Dúvidas Frequentes (FAQ)</span>
-                <i class="fa-solid fa-arrow-right text-[9px] ml-0.5"></i>
-            </button>
+            <div class="flex items-center justify-center gap-2 pt-1">
+                <!-- FAQ Trigger Button -->
+                <button onclick="openFaqModal()" class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-slate-900/90 hover:bg-brand-neon/20 border border-brand-neon/50 text-brand-neon font-bold text-[11px] transition-all shadow-sm cursor-pointer">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>Dúvidas (FAQ)</span>
+                </button>
+
+                <!-- Peça sua tinta Button -->
+                <a href="https://wa.me/55119549650044?text=Usei%20a%20calculadora%20de%20tintas%20da%20Qualy%20e%20quero%20saber%20a%20respeito." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 border border-emerald-400 text-white font-bold text-[11px] transition-all shadow-md cursor-pointer">
+                    <i class="fa-brands fa-whatsapp text-xs"></i>
+                    <span>Peça sua tinta</span>
+                </a>
+            </div>
         </div>
 
         <!-- Form Input Fields -->
@@ -351,12 +358,12 @@
 </div>
 
 <!-- Marquee Banner Floating at Bottom -->
-<a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20link%20personalizado%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-t border-brand-neon/40 py-1.5 overflow-hidden z-40 select-none shadow-2xl hover:bg-slate-900 transition-colors group" title="Clique para saber sobre link personalizado">
+<a href="https://wa.me/55119549650044?text=Usei%20a%20calculadora%20de%20tintas%20da%20Qualy%20e%20quero%20saber%20a%20respeito." target="_blank" rel="noopener noreferrer" class="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-t border-brand-neon/40 py-1.5 overflow-hidden z-40 select-none shadow-2xl hover:bg-slate-900 transition-colors group" title="Peça sua tinta no WhatsApp">
     <div class="marquee-track flex items-center gap-6 whitespace-nowrap text-xs font-bold text-slate-200">
         <div class="flex items-center gap-6">
             <span class="flex items-center gap-1.5 text-brand-neon group-hover:underline">
-                <i class="fa-solid fa-wand-magic-sparkles text-amber-300 animate-pulse"></i>
-                <span class="tracking-wide">Crie seu link igual esse personalizado para sua empresa <strong class="text-white bg-emerald-600/80 px-1.5 py-0.5 rounded-full text-[9px] ml-1 uppercase">Clique Aqui</strong></span>
+                <i class="fa-brands fa-whatsapp text-emerald-400 animate-pulse text-sm"></i>
+                <span class="tracking-wide">Peça sua tinta agora no WhatsApp <strong class="text-white bg-emerald-600/80 px-1.5 py-0.5 rounded-full text-[9px] ml-1 uppercase">Clique Aqui</strong></span>
             </span>
             <span class="text-slate-600">•</span>
             <span class="flex items-center gap-1.5 text-amber-300">
@@ -367,8 +374,8 @@
         </div>
         <div class="flex items-center gap-6">
             <span class="flex items-center gap-1.5 text-brand-neon group-hover:underline">
-                <i class="fa-solid fa-wand-magic-sparkles text-amber-300 animate-pulse"></i>
-                <span class="tracking-wide">Crie seu link igual esse personalizado para sua empresa <strong class="text-white bg-emerald-600/80 px-1.5 py-0.5 rounded-full text-[9px] ml-1 uppercase">Clique Aqui</strong></span>
+                <i class="fa-brands fa-whatsapp text-emerald-400 animate-pulse text-sm"></i>
+                <span class="tracking-wide">Peça sua tinta agora no WhatsApp <strong class="text-white bg-emerald-600/80 px-1.5 py-0.5 rounded-full text-[9px] ml-1 uppercase">Clique Aqui</strong></span>
             </span>
             <span class="text-slate-600">•</span>
             <span class="flex items-center gap-1.5 text-amber-300">
@@ -405,7 +412,7 @@
             <div class="space-y-2.5 text-xs mt-3 max-h-[48vh] overflow-y-auto pr-1">
                 <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
                     <h3 class="font-bold text-brand-neon mb-0.5 text-xs">1. Qual a diferença entre tinta Econômica, Standard e Premium?</h3>
-                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta econômica é ideal para interiores e paredes já emassadas. A Standard oferece maior durabilidade, enquanto a Premium possui rendimento superior (14 m²/L), excelente lavabilidade e alta resistência.</p>
+                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta econômica faz 8,3 m²/L, ideal para paredes novas e internas já emassadas. A Standard faz 11 m²/L e a Premium alcança 14 m²/L, oferecendo excelente cobertura e rendimento superior.</p>
                 </div>
 
                 <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
@@ -420,12 +427,12 @@
 
                 <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
                     <h3 class="font-bold text-brand-neon mb-0.5 text-xs">4. Para que serve a tinta emborrachada e onde aplicar?</h3>
-                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta emborrachada cria uma película elástica ideal para áreas externas sujeitas a fissuras e infiltrações, impermeabilizando fachadas e paredes batidas de chuva.</p>
+                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta emborrachada faz até 10 m²/L, criando uma película elástica ideal para áreas externas sujeitas a fissuras e infiltrações, impermeabilizando fachadas.</p>
                 </div>
 
                 <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
                     <h3 class="font-bold text-brand-neon mb-0.5 text-xs">5. Qual o rendimento da tinta para piso em comparação às outras?</h3>
-                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta para piso foi desenvolvida para suportar tráfego de pessoas e veículos leves, tendo um rendimento aproximado de até 6 m² por litro com camada resistente.</p>
+                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta para piso rende até 6 m²/L por demão, sendo desenvolvida especialmente para suportar tráfego de pessoas e veículos leves com alta resistência.</p>
                 </div>
             </div>
         </div>
@@ -470,7 +477,7 @@
                 </p>
             </div>
 
-            <!-- Product Image Container with optimized responsive height (h-36 to h-40, object-contain, centered) -->
+            <!-- Product Image Container with optimized mobile height -->
             <div class="w-full flex items-center justify-center bg-black/40 rounded-xl p-2 border border-white/10">
                 <img id="modalPaintImage" src="" alt="Lata de Tinta" class="h-36 sm:h-40 w-auto object-contain drop-shadow-[0_10px_15px_rgba(0,255,157,0.25)]">
             </div>
@@ -510,7 +517,7 @@
         <div class="mt-2.5 pt-2 border-t border-white/20 flex flex-col gap-2">
             <a id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/80 hover:scale-[1.01] active:scale-[0.99] cursor-pointer uppercase tracking-wider">
                 <i class="fa-brands fa-whatsapp text-lg"></i>
-                <span>Pedir Orçamento no WhatsApp</span>
+                <span>Peça sua tinta no WhatsApp</span>
             </a>
 
             <div class="flex items-center justify-between gap-2">
@@ -519,7 +526,7 @@
                     <span>Voltar</span>
                 </button>
 
-                <a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Quero%20saber%20como%20ter%20um%20link%20personalizado%20igual%20a%20esse%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="py-2 px-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-amber-300 hover:text-amber-200 border border-amber-500/40 text-[10px] font-bold transition-all flex items-center justify-center gap-1 text-center truncate">
+                <a href="https://wa.me/55119549650044?text=Usei%20a%20calculadora%20de%20tintas%20da%20Qualy%20e%20quero%20saber%20a%20respeito." target="_blank" rel="noopener noreferrer" class="py-2 px-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-amber-300 hover:text-amber-200 border border-amber-500/40 text-[10px] font-bold transition-all flex items-center justify-center gap-1 text-center truncate">
                     <i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i>
                     <span>Sobre link personalizado</span>
                 </a>
@@ -537,7 +544,7 @@
             yieldPerL: 8.3, 
             desc: 'Tinta qualy color economica, indicada para paredes novas, já emassadas, uso interno, parede sem umidade.',
             yieldText: 'Rendimento: 8,3 m² por Litro (por demão)',
-            img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80' // Ilustração representativa de lata de tinta
+            img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80'
         },
         standard: { 
             name: 'Tinta Standard', 
@@ -617,13 +624,12 @@
         document.getElementById('modalResEmbalagem').textContent = data.packaging.text;
         document.getElementById('modalCoveredLitros').textContent = `${data.packaging.totalCovered.toFixed(1).replace('.', ',')} L`;
         
-        // Set paint image with ideal mobile height (h-36 sm:h-40, object-contain)
         const imgEl = document.getElementById('modalPaintImage');
         imgEl.src = paintInfo.img;
         imgEl.alt = data.paintName;
 
-        const waText = encodeURIComponent(`Olá! Fiz o cálculo para *${data.paintName}* (${data.demaos} demãos) para uma área de ${data.areaLiquida.toFixed(1)} m². O sistema indicou ${data.totalLitros.toFixed(1)} Litros (${data.packaging.text}). Gostaria de fazer um orçamento.`);
-        document.getElementById('whatsappBtn').href = `https://wa.me/5511954950044?text=${waText}`;
+        const waText = encodeURIComponent(`Usei a calculadora de tintas da qualy e quero saber a respeito. Fiz o cálculo para *${data.paintName}* (${data.demaos} demãos), área de ${data.areaLiquida.toFixed(1)} m², total de ${data.totalLitros.toFixed(1)} Litros (${data.packaging.text}).`);
+        document.getElementById('whatsappBtn').href = `https://wa.me/55119549650044?text=${waText}`;
 
         const modal = document.getElementById('resultModal');
         modal.classList.remove('hidden');
@@ -696,7 +702,7 @@
 
             const count = Math.floor(remaining / pkg.size);
             if (count > 0) {
-                chosen.push(`${count}× ${pkg.label}`);
+                chosen.puts ? chosen.puts(`${count}× ${pkg.label}`) : chosen.push(`${count}× ${pkg.label}`);
                 remaining -= count * pkg.size;
                 totalCovered += count * pkg.size;
             }
