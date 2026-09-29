@@ -1,3 +1,12 @@
+<!-- Google Analytics (G-HFTJ9MRF64) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HFTJ9MRF64"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HFTJ9MRF64');
+</script>
+
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +52,10 @@
         min-height: 100vh;
         position: relative;
         overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
 
     /* Ambient Neon Glow behind the screen */
@@ -68,7 +81,7 @@
         box-shadow: 0 0 35px rgba(0, 255, 157, 0.25), 0 0 15px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(0, 255, 157, 0.1);
     }
 
-    .result-modal-frame {
+    .result-modal-frame, .faq-modal-frame {
         background: radial-gradient(circle at 50% 30%, #0c2338 0%, #060e18 60%, #03070d 100%);
         border: 2px solid #00FF9D;
         box-shadow: 0 0 50px rgba(0, 255, 157, 0.5), 0 0 20px rgba(255, 255, 255, 0.7), inset 0 0 25px rgba(0, 255, 157, 0.3);
@@ -174,7 +187,7 @@
 <div class="ambient-neon-bg"></div>
 
 <!-- Main Container Wrapper -->
-<div class="w-full max-w-lg px-3 py-6 sm:p-6 my-auto z-10">
+<div class="w-full max-w-lg px-2 py-4 my-auto z-10">
     
     <!-- White Neon Frame Box -->
     <div class="white-neon-frame rounded-3xl p-4 sm:p-7 relative overflow-hidden shadow-card-depth">
@@ -184,7 +197,7 @@
         <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-brand-neon/15 rounded-full blur-3xl pointer-events-none"></div>
 
         <!-- Header with logo -->
-        <div class="text-center mb-4">
+        <div class="text-center mb-3">
             <div class="inline-flex items-center justify-center gap-2.5">
                 <img src="logo.jpg" onerror="this.onerror=null; this.src='logo.png'; this.onerror=function(){this.src='https://placehold.co/120x120/FF6B00/FFFFFF?text=QUALY';};" alt="Qualyquimy Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain logo-pulse rounded-lg">
                 
@@ -199,14 +212,21 @@
             </div>
         </div>
 
-        <!-- Main Title -->
-        <div class="text-center mb-4">
+        <!-- Main Title & FAQ Toggle Button -->
+        <div class="text-center mb-4 space-y-2">
             <h1 class="text-lg sm:text-2xl font-extrabold text-white tracking-tight leading-tight">
                 Calculadora <span class="text-neon-gradient">Inteligente de Tintas</span>
             </h1>
-            <p class="text-[11px] sm:text-xs text-slate-300 mt-1 max-w-md mx-auto leading-normal">
+            <p class="text-[11px] sm:text-xs text-slate-300 max-w-md mx-auto leading-normal">
                 Passe o mouse sobre as tintas para ver características e calcule com precisão.
             </p>
+
+            <!-- FAQ Trigger Button (Opens interactive modal without scrolling) -->
+            <button onclick="openFaqModal()" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-slate-900/90 hover:bg-brand-neon/20 border border-brand-neon/50 text-brand-neon font-bold text-xs transition-all shadow-md cursor-pointer mt-1">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>Dúvidas Frequentes (FAQ)</span>
+                <i class="fa-solid fa-arrow-right text-[10px] ml-0.5"></i>
+            </button>
         </div>
 
         <!-- Form Input Fields -->
@@ -300,51 +320,10 @@
         </form>
 
     </div>
-
-    <!-- Semantic FAQ Section (SEO Optimized - 5 Key Questions) -->
-    <section class="mt-8 white-neon-frame rounded-3xl p-4 sm:p-6 text-slate-200">
-        <h2 class="text-base sm:text-lg font-black text-white mb-3 flex items-center gap-2">
-            <i class="fa-solid fa-circle-question text-brand-neon"></i>
-            <span>Dúvidas Frequentes sobre Pintura e Tintas</span>
-        </h2>
-        
-        <div class="space-y-3 text-xs">
-            <!-- FAQ Item 1 -->
-            <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
-                <h3 class="font-bold text-brand-neon mb-1">1. Qual a diferença entre tinta Econômica, Standard e Premium?</h3>
-                <p class="text-slate-300 leading-relaxed">A tinta econômica é ideal para interiores e paredes já emassadas. A Standard oferece maior durabilidade e cobertura intermediária para ambientes internos e externos, enquanto a Premium possui rendimento superior ($14\text{ m}^2/\text{L}$), excelente lavabilidade e alta resistência a intempéries.</p>
-            </div>
-
-            <!-- FAQ Item 2 -->
-            <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
-                <h3 class="font-bold text-brand-neon mb-1">2. Posso pintar em dias chuvosos ou com alta umidade?</h3>
-                <p class="text-slate-300 leading-relaxed">Não! Conforme recomendado nas instruções técnicas, **nunca aplique tinta em dias úmidos ou chuvosos**. A umidade excessiva compromete a secagem, pode causar manchas, bolhas e perda de aderência da película de tinta na parede.</p>
-            </div>
-
-            <!-- FAQ Item 3 -->
-            <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
-                <h3 class="font-bold text-brand-neon mb-1">3. Como calcular quantas demãos devo passar na parede?</h3>
-                <p class="text-slate-300 leading-relaxed">Geralmente recomenda-se o uso de **2 demãos** para uma cobertura perfeita e uniforme. Em superfícies novas sem pintura anterior (fundo preparado), pode ser necessária uma terceira demão para um acabamento impecável.</p>
-            </div>
-
-            <!-- FAQ Item 4 -->
-            <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
-                <h3 class="font-bold text-brand-neon mb-1">4. Para que serve a tinta emborrachada e onde aplicar?</h3>
-                <p class="text-slate-300 leading-relaxed">A tinta emborrachada cria uma película elástica ideal para áreas externas sujeitas a fissuras e infiltrações, como fachadas, telhados e paredes batidas de chuva. Ela impermeabiliza e acompanha a dilatação natural da parede.</p>
-            </div>
-
-            <!-- FAQ Item 5 -->
-            <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
-                <h3 class="font-bold text-brand-neon mb-1">5. Qual o rendimento da tinta para piso em comparação às outras?</h3>
-                <p class="text-slate-300 leading-relaxed">A tinta para piso foi desenvolvida para suportar tráfego de pessoas e veículos leves, tendo um rendimento aproximado de até $6\text{ m}^2$ por litro, necessitando de uma camada mais espessa e resistente.</p>
-            </div>
-        </div>
-    </section>
-
 </div>
 
 <!-- Unified SSL, Security & Developer Footer Section with Google Maps Link -->
-<div class="w-full max-w-lg px-3 text-center space-y-2 mt-auto mb-2 z-10">
+<div class="w-full max-w-lg px-3 text-center space-y-2 mt-auto mb-10 z-10">
     <div class="flex flex-wrap items-center justify-center gap-2 text-emerald-400 text-xs font-semibold bg-slate-900/90 py-2 px-3 rounded-xl border border-emerald-500/20 backdrop-blur-sm shadow-lg">
         <div class="flex items-center gap-1.5">
             <i class="fa-solid fa-location-dot text-brand-neon"></i>
@@ -400,9 +379,74 @@
     </div>
 </a>
 
+<!-- INTERACTIVE FAQ MODAL (Opens without scrolling) -->
+<div id="faqModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-3 transition-all duration-300 overflow-y-auto">
+    <div class="absolute inset-0 bg-brand-neon/15 pointer-events-none blur-3xl"></div>
+
+    <div class="relative w-full max-w-lg faq-modal-frame rounded-3xl p-4 sm:p-6 shadow-2xl modal-fade-in my-auto max-h-[90vh] flex flex-col justify-between overflow-y-auto z-10">
+        
+        <!-- Close Button 'X' -->
+        <button onclick="closeFaqModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 hover:bg-brand-neon/30 text-slate-200 hover:text-white border border-white/40 flex items-center justify-center transition-all cursor-pointer z-20" title="Fechar">
+            <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+
+        <div>
+            <div class="text-center border-b border-white/20 pb-3 pr-8">
+                <span class="inline-flex items-center gap-1.5 text-brand-neon text-xs font-extrabold tracking-wider uppercase">
+                    <i class="fa-solid fa-circle-question"></i> FAQ Semântico
+                </span>
+                <h2 class="text-xl sm:text-2xl font-black text-white mt-0.5 tracking-tight">
+                    Dúvidas Frequentes sobre Tintas
+                </h2>
+            </div>
+
+            <!-- FAQ Semantic List (5 Key Ideas) -->
+            <div class="space-y-3 text-xs mt-3.5 max-h-[50vh] overflow-y-auto pr-1">
+                <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
+                    <h3 class="font-bold text-brand-neon mb-1">1. Qual a diferença entre tinta Econômica, Standard e Premium?</h3>
+                    <p class="text-slate-300 leading-relaxed">A tinta econômica é ideal para interiores e paredes já emassadas. A Standard oferece maior durabilidade e cobertura intermediária para ambientes internos e externos, enquanto a Premium possui rendimento superior (14 m²/L), excelente lavabilidade e alta resistência.</p>
+                </div>
+
+                <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
+                    <h3 class="font-bold text-brand-neon mb-1">2. Posso pintar em dias chuvosos ou com alta umidade?</h3>
+                    <p class="text-slate-300 leading-relaxed text-amber-300 font-semibold">Não! Conforme recomendado nas instruções técnicas, nunca aplique tinta em dias úmidos ou chuvosos. A umidade excessiva compromete a secagem, causando manchas, bolhas e perda de aderência.</p>
+                </div>
+
+                <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
+                    <h3 class="font-bold text-brand-neon mb-1">3. Como calcular quantas demãos devo passar na parede?</h3>
+                    <p class="text-slate-300 leading-relaxed">Geralmente recomenda-se o uso de 2 demãos para uma cobertura perfeita e uniforme. Em superfícies novas sem pintura anterior, pode ser necessária uma terceira demão para um acabamento impecável.</p>
+                </div>
+
+                <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
+                    <h3 class="font-bold text-brand-neon mb-1">4. Para que serve a tinta emborrachada e onde aplicar?</h3>
+                    <p class="text-slate-300 leading-relaxed">A tinta emborrachada cria uma película elástica ideal para áreas externas sujeitas a fissuras e infiltrações, como fachadas, telhados e paredes batidas de chuva. Ela impermeabiliza e acompanha a dilatação natural.</p>
+                </div>
+
+                <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
+                    <h3 class="font-bold text-brand-neon mb-1">5. Qual o rendimento da tinta para piso em comparação às outras?</h3>
+                    <p class="text-slate-300 leading-relaxed">A tinta para piso foi desenvolvida para suportar tráfego de pessoas e veículos leves, tendo um rendimento aproximado de até 6 m² por litro, necessitando de uma camada mais espessa e resistente.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Bottom Controls: Voltar & Atualizar -->
+        <div class="mt-4 pt-3 border-t border-white/20 flex items-center justify-between gap-2">
+            <button onclick="closeFaqModal()" class="py-2.5 px-4 rounded-xl bg-black/60 hover:bg-black/80 text-slate-300 hover:text-white font-bold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer border border-white/30">
+                <i class="fa-solid fa-arrow-left text-xs"></i>
+                <span>Voltar</span>
+            </button>
+
+            <button onclick="refreshApp()" class="py-2.5 px-4 rounded-xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-black text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-md">
+                <i class="fa-solid fa-rotate text-xs"></i>
+                <span>Atualizar</span>
+            </button>
+        </div>
+
+    </div>
+</div>
+
 <!-- RESULT MODAL -->
 <div id="resultModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-3 transition-all duration-300 overflow-y-auto">
-    
     <div class="absolute inset-0 bg-brand-neon/15 pointer-events-none blur-3xl"></div>
 
     <div class="relative w-full max-w-lg result-modal-frame rounded-3xl p-4 sm:p-6 shadow-2xl modal-fade-in my-auto max-h-[92vh] flex flex-col justify-between overflow-y-auto z-10">
@@ -546,6 +590,24 @@
         updateYieldInfo();
     };
 
+    function openFaqModal() {
+        const modal = document.getElementById('faqModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeFaqModal() {
+        const modal = document.getElementById('faqModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+
+    function refreshApp() {
+        window.location.reload();
+    }
+
     function openResultModal() {
         const data = calculate();
         
@@ -574,12 +636,15 @@
 
     window.onclick = function(e) {
         const resModal = document.getElementById('resultModal');
+        const faqModal = document.getElementById('faqModal');
         if (e.target === resModal) closeResultModal();
+        if (e.target === faqModal) closeFaqModal();
     };
 
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             closeResultModal();
+            closeFaqModal();
         }
     });
 
