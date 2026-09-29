@@ -1,0 +1,527 @@
+<!-- Google Fonts: Inter & Montserrat -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    brand: {
+                        orange: '#FF6B00',
+                        neon: '#00FF9D',
+                        neonDark: '#00D683',
+                        neonRed: '#FF0055',
+                        darkBg: '#050B14',
+                        cardBg: '#0D1726'
+                    }
+                },
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                    brand: ['Montserrat', 'sans-serif']
+                },
+                boxShadow: {
+                    'neon-white': '0 0 25px rgba(255, 255, 255, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.3)',
+                    'neon-glow': '0 0 20px rgba(0, 255, 157, 0.35)',
+                    'neon-button': '0 4px 20px rgba(0, 255, 157, 0.4)',
+                    'card-depth': '0 25px 60px rgba(0, 0, 0, 0.85)'
+                }
+            }
+        }
+    }
+</script>
+
+<style>
+    body {
+        background: radial-gradient(circle at 50% 20%, #0c182b 0%, #040810 100%);
+        min-height: 100vh;
+    }
+
+    .white-neon-frame {
+        background: rgba(11, 20, 35, 0.94);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 2px solid #ffffff;
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.15);
+    }
+
+    .result-modal-frame {
+        background: radial-gradient(circle at 50% 30%, #0a203a 0%, #050d18 60%, #02050a 100%);
+        border: 2px solid #00FF9D;
+        box-shadow: 0 0 45px rgba(0, 255, 157, 0.4), 0 0 15px rgba(255, 255, 255, 0.6), inset 0 0 25px rgba(0, 255, 157, 0.2);
+    }
+
+    .app-input, .app-select {
+        background-color: #060D18;
+        border: 1px solid #1c2e47;
+        color: #ffffff;
+        transition: all 0.25s ease;
+    }
+    .app-input:focus, .app-select:focus {
+        border-color: #00FF9D;
+        box-shadow: 0 0 12px rgba(0, 255, 157, 0.3);
+        outline: none;
+    }
+
+    .text-neon-gradient {
+        background: linear-gradient(135deg, #00FF9D 0%, #00B8FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .modal-fade-in {
+        animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    .logo-pulse {
+        animation: softPulse 3s infinite ease-in-out;
+    }
+    @keyframes softPulse {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(255, 107, 0, 0.4)); }
+        50% { transform: scale(1.05); filter: drop-shadow(0 0 14px rgba(255, 107, 0, 0.8)); }
+    }
+
+    .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marquee 22s linear infinite;
+    }
+    .marquee-track:hover {
+        animation-play-state: paused;
+    }
+    @keyframes marquee {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #050B14;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #1c2e47;
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #00FF9D;
+    }
+</style>
+
+
+<!-- Main Container Wrapper -->
+<div class="w-full max-w-lg px-3 py-4 sm:p-6 my-auto">
+    
+    <!-- White Neon Frame Box -->
+    <div class="white-neon-frame rounded-3xl p-4 sm:p-7 relative overflow-hidden shadow-card-depth">
+        
+        <!-- Ambient Lighting -->
+        <div class="absolute -top-24 -left-24 w-60 h-60 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-brand-neon/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Header with logo -->
+        <div class="text-center mb-4">
+            <div class="inline-flex items-center justify-center gap-2.5">
+                <img src="logo.jpg" onerror="this.onerror=null; this.src='logo.png'; this.onerror=function(){this.src='https://placehold.co/120x120/FF6B00/FFFFFF?text=QUALY';};" alt="Qualyquimy Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain logo-pulse rounded-lg">
+                
+                <div class="flex flex-col items-start">
+                    <span class="font-brand font-black text-2xl sm:text-3xl tracking-tight text-white flex items-center gap-1 leading-none">
+                        QUALY<span class="text-brand-orange">QUIMY</span>
+                    </span>
+                    <span class="text-[10px] sm:text-xs tracking-[0.25em] text-slate-400 font-semibold uppercase mt-0.5">
+                        Tintas e Revestimentos
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Title -->
+        <div class="text-center mb-4">
+            <h1 class="text-lg sm:text-2xl font-extrabold text-white tracking-tight leading-tight">
+                Calculadora <span class="text-neon-gradient">Inteligente de Tintas</span>
+            </h1>
+            <p class="text-[11px] sm:text-xs text-slate-300 mt-1 max-w-md mx-auto leading-normal">
+                Selecione o tipo de tinta e informe as medidas para calcular a quantidade exata.
+            </p>
+        </div>
+
+        <!-- Form Input Fields -->
+        <form id="calcForm" onsubmit="event.preventDefault(); openResultModal();" class="space-y-3">
+            
+            <!-- Paint Type Selection -->
+            <div>
+                <label for="tipoTinta" class="block text-xs font-semibold text-slate-300 mb-1">
+                    Selecione a Tinta / Categoria
+                </label>
+                <select id="tipoTinta" onchange="updateYieldInfo()" class="app-select w-full rounded-xl px-3 py-2 text-sm font-medium cursor-pointer">
+                    <option value="premium">Tinta Premium (Rendimento: 14 m²/L)</option>
+                    <option value="standard">Tinta Standard (Rendimento: 11 m²/L)</option>
+                    <option value="emborrachada">Tinta Emborrachada (Rendimento: 10 m²/L)</option>
+                    <option value="economica">Tinta Econômica Qualy Color (Rendimento: 8,3 m²/L)</option>
+                    <option value="piso">Tinta para Piso (Rendimento: 6 m²/L)</option>
+                </select>
+                <p id="yieldDescription" class="text-[11px] text-brand-neon mt-1 font-semibold">
+                    Rendimento: 14 m² por Litro (por demão)
+                </p>
+            </div>
+
+            <!-- Number of Demãos -->
+            <div>
+                <label for="demaos" class="block text-xs font-semibold text-slate-300 mb-1">
+                    Número de Demãos (Camadas)
+                </label>
+                <select id="demaos" class="app-select w-full rounded-xl px-3 py-2 text-sm font-medium cursor-pointer">
+                    <option value="1">1 Demão</option>
+                    <option value="2" selected>2 Demãos (Recomendado)</option>
+                    <option value="3">3 Demãos</option>
+                </select>
+            </div>
+
+            <!-- Largura & Comprimento -->
+            <div class="grid grid-cols-2 gap-2.5 sm:gap-3.5">
+                <div>
+                    <label for="largura" class="block text-xs font-semibold text-slate-300 mb-1">
+                        Largura (m)
+                    </label>
+                    <input type="number" step="0.01" min="0.1" id="largura" value="4" placeholder="0.00" required class="app-input w-full rounded-xl px-3 py-2 text-sm">
+                </div>
+                <div>
+                    <label for="comprimento" class="block text-xs font-semibold text-slate-300 mb-1">
+                        Comprimento (m)
+                    </label>
+                    <input type="number" step="0.01" min="0.1" id="comprimento" value="5" placeholder="0.00" required class="app-input w-full rounded-xl px-3 py-2 text-sm">
+                </div>
+            </div>
+
+            <!-- Pé-direito, Janelas e Portas -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-3">
+                <div>
+                    <label for="pedireito" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Pé-direito (m)">
+                        Pé-direito (m)
+                    </label>
+                    <input type="number" step="0.01" min="0.1" id="pedireito" value="2.80" placeholder="2.80" required class="app-input w-full rounded-xl px-2 py-2 text-sm text-center">
+                </div>
+                <div>
+                    <label for="janelas" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Janelas (m²)">
+                        Janelas (m²)
+                    </label>
+                    <input type="number" step="0.01" min="0" id="janelas" value="5" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-2 text-sm text-center">
+                </div>
+                <div>
+                    <label for="portas" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Portas (m²)">
+                        Portas (m²)
+                    </label>
+                    <input type="number" step="0.01" min="0" id="portas" value="0" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-2 text-sm text-center">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full mt-2 py-3 px-5 rounded-2xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-extrabold text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-neon-button hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
+                <i class="fa-solid fa-calculator text-lg"></i>
+                <span>Calcular Quantidade de Tinta</span>
+            </button>
+        </form>
+
+    </div>
+</div>
+
+<!-- Unified SSL, Security & Developer Footer Section -->
+<div class="w-full max-w-lg px-3 text-center space-y-2 mt-auto mb-2">
+    <div class="flex flex-wrap items-center justify-center gap-2 text-emerald-400 text-xs font-semibold bg-slate-900/80 py-2 px-3 rounded-xl border border-emerald-500/20 backdrop-blur-sm">
+        <div class="flex items-center gap-1.5">
+            <i class="fa-solid fa-lock text-emerald-400"></i>
+            <span>SSL Certificado 100% Seguro</span>
+        </div>
+        <span class="text-slate-600 hidden sm:inline">•</span>
+        <span class="text-slate-300 text-[11px]">Conexão Criptografada</span>
+    </div>
+
+    <div class="w-full border-t border-slate-800/80 my-1"></div>
+
+    <footer class="text-[11px] text-slate-400 font-medium tracking-wide">
+        Desenvolvido por <a href="https://avaliar.impulsoweb10.com.br" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-brand-neon font-semibold underline underline-offset-2 transition-colors">ImpulsoWeb10</a>
+    </footer>
+</div>
+
+<!-- Marquee Banner Floating at Bottom -->
+<a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20link%20personalizado%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-t border-brand-neon/40 py-2 overflow-hidden z-40 select-none shadow-2xl hover:bg-slate-900 transition-colors group" title="Clique para saber sobre link personalizado">
+    <div class="marquee-track flex items-center gap-8 whitespace-nowrap text-xs sm:text-sm font-bold text-slate-200">
+        <div class="flex items-center gap-8">
+            <span class="flex items-center gap-2 text-brand-neon group-hover:underline">
+                <i class="fa-solid fa-wand-magic-sparkles text-amber-300 animate-pulse"></i>
+                <span class="tracking-wide">Crie seu link igual esse personalizado para sua empresa <strong class="text-white bg-emerald-600/80 px-2 py-0.5 rounded-full text-[10px] ml-1 uppercase">Clique Aqui</strong></span>
+            </span>
+            <span class="text-slate-600">•</span>
+            <span class="flex items-center gap-2 text-amber-300">
+                <i class="fa-solid fa-rocket"></i>
+                <span>Calculadora Interativa de Tintas Qualyquimy</span>
+            </span>
+            <span class="text-slate-600">•</span>
+        </div>
+        <div class="flex items-center gap-8">
+            <span class="flex items-center gap-2 text-brand-neon group-hover:underline">
+                <i class="fa-solid fa-wand-magic-sparkles text-amber-300 animate-pulse"></i>
+                <span class="tracking-wide">Crie seu link igual esse personalizado para sua empresa <strong class="text-white bg-emerald-600/80 px-2 py-0.5 rounded-full text-[10px] ml-1 uppercase">Clique Aqui</strong></span>
+            </span>
+            <span class="text-slate-600">•</span>
+            <span class="flex items-center gap-2 text-amber-300">
+                <i class="fa-solid fa-rocket"></i>
+                <span>Calculadora Interativa de Tintas Qualyquimy</span>
+            </span>
+            <span class="text-slate-600">•</span>
+        </div>
+    </div>
+</a>
+
+<!-- RESULT MODAL -->
+<div id="resultModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-3 transition-all duration-300 overflow-y-auto">
+    
+    <!-- Ambient Background Glow -->
+    <div class="absolute inset-0 bg-brand-neon/15 pointer-events-none blur-3xl"></div>
+
+    <!-- Result Frame -->
+    <div class="relative w-full max-w-lg result-modal-frame rounded-3xl p-4 sm:p-6 shadow-2xl modal-fade-in my-auto max-h-[92vh] flex flex-col justify-between overflow-y-auto z-10">
+        
+        <!-- Close "X" Button -->
+        <button onclick="closeResultModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 hover:bg-brand-neon/30 text-slate-200 hover:text-white border border-white/40 flex items-center justify-center transition-all cursor-pointer z-20">
+            <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+
+        <!-- Modal Content -->
+        <div class="space-y-3.5">
+            
+            <!-- Header -->
+            <div class="text-center border-b border-white/20 pb-2.5 pr-6">
+                <span class="inline-flex items-center gap-1.5 text-brand-neon text-xs font-extrabold tracking-wider uppercase">
+                    <i class="fa-solid fa-circle-check"></i> Cálculo Concluído com Sucesso
+                </span>
+                <h2 id="modalResTitle" class="text-xl sm:text-2xl font-black text-white mt-0.5 tracking-tight">
+                    Resultado da Tinta
+                </h2>
+                <p id="modalResSubtitle" class="text-[11px] sm:text-xs text-slate-300 mt-0.5">
+                    Categoria e rendimento aplicado
+                </p>
+            </div>
+
+            <!-- Product Display and Stats Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
+                
+                <!-- Left: Icon / Illustration Box -->
+                <div class="sm:col-span-5 flex flex-col items-center justify-center p-3 bg-black/50 rounded-2xl border border-white/30">
+                    <div class="flex items-center justify-center min-h-[120px] text-brand-neon text-5xl">
+                        <i class="fa-solid fa-paint-roller drop-shadow-[0_0_15px_rgba(0,255,157,0.5)]"></i>
+                    </div>
+                    <span id="modalImgLabel" class="text-[10px] text-slate-300 mt-2 font-semibold text-center leading-tight">Embalagens sugeridas</span>
+                </div>
+
+                <!-- Right: Values & Suggestions -->
+                <div class="sm:col-span-7 space-y-2.5">
+                    
+                    <!-- Area & Required Liters -->
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="bg-black/60 border border-white/20 p-2.5 rounded-xl text-center">
+                            <span class="text-[10px] font-semibold text-slate-300 uppercase tracking-wider block">Área Líquida</span>
+                            <span id="modalResArea" class="text-base sm:text-lg font-black text-white mt-0.5 block">0 m²</span>
+                        </div>
+                        <div class="bg-black/60 border border-white/20 p-2.5 rounded-xl text-center">
+                            <span class="text-[10px] font-semibold text-slate-300 uppercase tracking-wider block">Necessário</span>
+                            <span id="modalResLitros" class="text-base sm:text-lg font-black text-brand-neon mt-0.5 block">0 L</span>
+                        </div>
+                    </div>
+
+                    <!-- Package Combination Box -->
+                    <div class="bg-black/80 border-2 border-brand-neon p-3 sm:p-3.5 rounded-xl space-y-1 shadow-lg">
+                        <span class="text-xs font-bold text-brand-neon uppercase tracking-wider block">
+                            <i class="fa-solid fa-boxes-packing text-brand-neon mr-1"></i> Sugestão de Embalagens:
+                        </span>
+                        <div id="modalResEmbalagem" class="text-base sm:text-lg font-black text-amber-300 leading-snug tracking-wide">
+                            --
+                        </div>
+                        <div id="modalResTotalCovered" class="text-xs text-slate-200 pt-1.5 border-t border-white/15 flex items-center gap-1 font-medium">
+                            <i class="fa-solid fa-circle-check text-brand-neon text-sm"></i>
+                            <span>Total fornecido: <strong id="modalCoveredLitros" class="text-white font-extrabold text-sm">0 L</strong></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Info note -->
+            <p class="text-[10px] text-slate-300 bg-black/40 p-2 rounded-xl border border-white/10 leading-snug">
+                <i class="fa-solid fa-circle-info text-amber-400 mr-1"></i>
+                O rendimento prático pode variar conforme a rugosidade da parede, absorção e técnica de aplicação.
+            </p>
+        </div>
+
+        <!-- Modal Actions Footer -->
+        <div class="mt-3 pt-3 border-t border-white/20 flex flex-col gap-2">
+            <a id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/80 hover:scale-[1.01] active:scale-[0.99] cursor-pointer uppercase tracking-wider">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Pedir Orçamento no WhatsApp</span>
+            </a>
+
+            <div class="flex items-center justify-between gap-2">
+                <button onclick="closeResultModal()" class="py-2 px-3 rounded-xl bg-black/60 hover:bg-black/80 text-slate-300 hover:text-white font-bold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer border border-white/30 shrink-0">
+                    <i class="fa-solid fa-arrow-left text-xs"></i>
+                    <span>Voltar</span>
+                </button>
+
+                <a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Quero%20saber%20como%20ter%20um%20link%20personalizado%20igual%20a%20esse%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-amber-300 hover:text-amber-200 border border-amber-500/40 text-[11px] font-bold transition-all flex items-center justify-center gap-1.5 text-center truncate">
+                    <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+                    <span>Sobre link personalizado</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- JavaScript Application Logic -->
+<script>
+    // Yield specifications (m² per Liter per coat)
+    const PAINT_TYPES = {
+        premium: { name: 'Tinta Premium', yieldPerL: 14.0, desc: 'Rendimento: 14 m² por Litro (por demão)' },
+        standard: { name: 'Tinta Standard', yieldPerL: 11.0, desc: 'Rendimento: 11 m² por Litro (por demão)' },
+        emborrachada: { name: 'Tinta Emborrachada', yieldPerL: 10.0, desc: 'Rendimento: Até 10 m² por Litro (por demão)' },
+        economica: { name: 'Tinta Econômica Qualy Color', yieldPerL: 8.3, desc: 'Rendimento: 8,3 m² por Litro (por demão)' },
+        piso: { name: 'Tinta para Piso', yieldPerL: 6.0, desc: 'Rendimento: Até 6 m² por Litro (por demão)' }
+    };
+
+    // Standard Commercial Package sizes in Liters
+    const PACKAGES = [
+        { size: 18, label: 'lata 18L' },
+        { size: 3.6, label: 'galão 3.6L' },
+        { size: 0.9, label: 'lata 900ml' }
+    ];
+
+    function updateYieldInfo() {
+        const select = document.getElementById('tipoTinta');
+        const info = PAINT_TYPES[select.value];
+        document.getElementById('yieldDescription').textContent = info.desc;
+    }
+
+    function openResultModal() {
+        const data = calculate();
+        
+        document.getElementById('modalResTitle').textContent = data.paintName;
+        document.getElementById('modalResSubtitle').textContent = `${data.demaos} demão(s) | Rendimento: ${data.yieldPerL} m²/L`;
+        document.getElementById('modalResArea').textContent = `${data.areaLiquida.toFixed(1).replace('.', ',')} m²`;
+        document.getElementById('modalResLitros').textContent = `${data.totalLitros.toFixed(1).replace('.', ',')} L`;
+        document.getElementById('modalResEmbalagem').textContent = data.packaging.text;
+        document.getElementById('modalCoveredLitros').textContent = `${data.packaging.totalCovered.toFixed(1).replace('.', ',')} L`;
+        
+        // Setup dynamic WhatsApp link with details
+        const waText = encodeURIComponent(`Olá! Fiz o cálculo para *${data.paintName}* (${data.demaos} demãos) para uma área de ${data.areaLiquida.toFixed(1)} m². O sistema indicou ${data.totalLitros.toFixed(1)} Litros (${data.packaging.text}). Gostaria de fazer um orçamento.`);
+        document.getElementById('whatsappBtn').href = `https://wa.me/5511954950044?text=${waText}`;
+
+        const modal = document.getElementById('resultModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeResultModal() {
+        const modal = document.getElementById('resultModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+
+    window.onclick = function(e) {
+        const resModal = document.getElementById('resultModal');
+        if (e.target === resModal) closeResultModal();
+    };
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeResultModal();
+        }
+    });
+
+    function calculate() {
+        const tipoKey = document.getElementById('tipoTinta').value;
+        const paintInfo = PAINT_TYPES[tipoKey];
+        const demaos = parseInt(document.getElementById('demaos').value) || 1;
+        
+        const largura = parseFloat(document.getElementById('largura').value) || 0;
+        const comprimento = parseFloat(document.getElementById('comprimento').value) || 0;
+        const pedireito = parseFloat(document.getElementById('pedireito').value) || 0;
+        const janelas = parseFloat(document.getElementById('janelas').value) || 0;
+        const portas = parseFloat(document.getElementById('portas').value) || 0;
+
+        let areaBruta = (largura + comprimento) * 2 * pedireito;
+        let areaLiquida = areaBruta - janelas - portas;
+        if (areaLiquida < 0) areaLiquida = 0;
+
+        // Total Liters = (Area * Demãos) / Yield per Liter
+        const totalLitros = (areaLiquida * demaos) / paintInfo.yieldPerL;
+        const packaging = getPackagingSuggestion(totalLitros, PACKAGES);
+
+        return {
+            paintName: paintInfo.name,
+            yieldPerL: paintInfo.yieldPerL,
+            demaos: demaos,
+            areaLiquida: areaLiquida,
+            totalLitros: totalLitros,
+            packaging: packaging
+        };
+    }
+
+    function getPackagingSuggestion(requiredLiters, packages) {
+        if (requiredLiters <= 0) {
+            return { text: 'Nenhuma embalagem necessária', totalCovered: 0 };
+        }
+
+        const sorted = [...packages].sort((a, b) => b.size - a.size);
+        let remaining = requiredLiters;
+        const chosen = [];
+        let totalCovered = 0;
+
+        for (let i = 0; i < sorted.length; i++) {
+            const pkg = sorted[i];
+            if (remaining <= 0) break;
+
+            const count = Math.floor(remaining / pkg.size);
+            if (count > 0) {
+                chosen.push(`${count}× ${pkg.label}`);
+                remaining -= count * pkg.size;
+                totalCovered += count * pkg.size;
+            }
+        }
+
+        if (remaining > 0) {
+            let bestFit = sorted[sorted.length - 1];
+            for (let i = sorted.length - 1; i >= 0; i--) {
+                if (sorted[i].size >= remaining) {
+                    bestFit = sorted[i];
+                }
+            }
+            
+            const existingIdx = chosen.findIndex(str => str.includes(bestFit.label));
+            if (existingIdx !== -1) {
+                const currentQty = parseInt(chosen[existingIdx].split('×')[0]);
+                chosen[existingIdx] = `${currentQty + 1}× ${bestFit.label}`;
+            } else {
+                chosen.push(`1× ${bestFit.label}`);
+            }
+            totalCovered += bestFit.size;
+        }
+
+        return {
+            text: chosen.join(' + '),
+            totalCovered: totalCovered
+        };
+    }
+</script>
