@@ -27,7 +27,6 @@
                         orange: '#FF6B00',
                         neon: '#00FF9D',
                         neonDark: '#00D683',
-                        neonRed: '#FF0055',
                         darkBg: '#03070C',
                         cardBg: '#0A111C'
                     }
@@ -37,9 +36,9 @@
                     brand: ['Montserrat', 'sans-serif']
                 },
                 boxShadow: {
-                    'neon-glow': '0 0 25px rgba(0, 255, 157, 0.4), inset 0 0 15px rgba(0, 255, 157, 0.15)',
-                    'neon-button': '0 4px 20px rgba(0, 255, 157, 0.4)',
-                    'card-depth': '0 25px 60px rgba(0, 0, 0, 0.85)'
+                    'neon-glow': '0 0 25px rgba(0, 255, 157, 0.35), inset 0 0 12px rgba(0, 255, 157, 0.1)',
+                    'neon-button': '0 4px 18px rgba(0, 255, 157, 0.35)',
+                    'card-depth': '0 20px 40px rgba(0, 0, 0, 0.85)'
                 }
             }
         }
@@ -47,10 +46,17 @@
 </script>
 
 <style>
-    body {
+    * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
         background-color: #03070C;
+        width: 100%;
         min-height: 100vh;
-        position: relative;
+        margin: 0;
+        padding: 0;
         overflow-x: hidden;
         display: flex;
         flex-direction: column;
@@ -64,38 +70,38 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 75vw;
-        height: 75vh;
-        background: radial-gradient(circle, rgba(0, 255, 157, 0.18) 0%, rgba(255, 107, 0, 0.12) 40%, transparent 75%);
-        filter: blur(80px);
+        width: 85vw;
+        height: 85vh;
+        background: radial-gradient(circle, rgba(0, 255, 157, 0.16) 0%, rgba(255, 107, 0, 0.1) 45%, transparent 75%);
+        filter: blur(70px);
         z-index: -1;
         pointer-events: none;
     }
 
-    /* Glassmorphism main card frame */
+    /* Glassmorphism main card frame optimized for mobile */
     .white-neon-frame {
-        background: rgba(10, 17, 28, 0.95);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 2px solid rgba(255, 255, 255, 0.85);
-        box-shadow: 0 0 35px rgba(0, 255, 157, 0.25), 0 0 15px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(0, 255, 157, 0.1);
+        background: rgba(10, 17, 28, 0.96);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1.5px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 30px rgba(0, 255, 157, 0.22), 0 0 12px rgba(255, 255, 255, 0.25), inset 0 0 15px rgba(0, 255, 157, 0.08);
     }
 
     .result-modal-frame, .faq-modal-frame {
         background: radial-gradient(circle at 50% 30%, #0c2338 0%, #060e18 60%, #03070d 100%);
         border: 2px solid #00FF9D;
-        box-shadow: 0 0 50px rgba(0, 255, 157, 0.5), 0 0 20px rgba(255, 255, 255, 0.7), inset 0 0 25px rgba(0, 255, 157, 0.3);
+        box-shadow: 0 0 45px rgba(0, 255, 157, 0.45), 0 0 15px rgba(255, 255, 255, 0.6), inset 0 0 20px rgba(0, 255, 157, 0.25);
     }
 
     .app-input, .app-select {
         background-color: #050A12;
         border: 1px solid #1c2e47;
         color: #ffffff;
-        transition: all 0.25s ease;
+        transition: all 0.2s ease;
     }
     .app-input:focus, .app-select:focus {
         border-color: #00FF9D;
-        box-shadow: 0 0 12px rgba(0, 255, 157, 0.3);
+        box-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
         outline: none;
     }
 
@@ -106,10 +112,10 @@
     }
 
     .modal-fade-in {
-        animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
     @keyframes fadeIn {
-        from { opacity: 0; transform: scale(0.95); }
+        from { opacity: 0; transform: scale(0.96); }
         to { opacity: 1; transform: scale(1); }
     }
 
@@ -117,14 +123,14 @@
         animation: softPulse 3s infinite ease-in-out;
     }
     @keyframes softPulse {
-        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(255, 107, 0, 0.4)); }
-        50% { transform: scale(1.05); filter: drop-shadow(0 0 14px rgba(255, 107, 0, 0.8)); }
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(255, 107, 0, 0.4)); }
+        50% { transform: scale(1.04); filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.7)); }
     }
 
     .marquee-track {
         display: flex;
         width: max-content;
-        animation: marquee 24s linear infinite;
+        animation: marquee 22s linear infinite;
     }
     .marquee-track:hover {
         animation-play-state: paused;
@@ -144,21 +150,21 @@
         visibility: hidden;
         opacity: 0;
         position: absolute;
-        bottom: 115%;
+        bottom: 112%;
         left: 50%;
         transform: translateX(-50%);
-        width: 290px;
+        width: 275px;
         background: rgba(8, 15, 26, 0.98);
         color: #f1f5f9;
         text-align: left;
-        padding: 10px 14px;
-        border-radius: 12px;
+        padding: 9px 12px;
+        border-radius: 10px;
         border: 1px solid #00FF9D;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 15px rgba(0,255,157,0.3);
-        transition: opacity 0.25s ease, visibility 0.25s ease;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.8), 0 0 12px rgba(0,255,157,0.25);
+        transition: opacity 0.2s ease, visibility 0.2s ease;
         z-index: 50;
-        font-size: 11.5px;
-        line-height: 1.4;
+        font-size: 11px;
+        line-height: 1.35;
         pointer-events: none;
     }
 
@@ -168,7 +174,7 @@
     }
 
     ::-webkit-scrollbar {
-        width: 6px;
+        width: 4px;
     }
     ::-webkit-scrollbar-track {
         background: #03070C;
@@ -177,35 +183,32 @@
         background: #1c2e47;
         border-radius: 4px;
     }
-    ::-webkit-scrollbar-thumb:hover {
-        background: #00FF9D;
-    }
 </style>
 
 
 <!-- Ambient Neon Backlight behind screen -->
 <div class="ambient-neon-bg"></div>
 
-<!-- Main Container Wrapper -->
-<div class="w-full max-w-lg px-2 py-4 my-auto z-10">
+<!-- Main Container Wrapper - Centered & Compact for Mobile -->
+<div class="w-full max-w-md my-auto z-10 py-1 px-3">
     
     <!-- White Neon Frame Box -->
-    <div class="white-neon-frame rounded-3xl p-4 sm:p-7 relative overflow-hidden shadow-card-depth">
+    <div class="white-neon-frame rounded-2xl p-3.5 sm:p-5 relative overflow-hidden shadow-card-depth">
         
         <!-- Inner Ambient Glow -->
-        <div class="absolute -top-24 -left-24 w-60 h-60 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-brand-neon/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -top-20 -left-20 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="absolute -bottom-20 -right-20 w-48 h-48 bg-brand-neon/15 rounded-full blur-2xl pointer-events-none"></div>
 
         <!-- Header with logo -->
-        <div class="text-center mb-3">
-            <div class="inline-flex items-center justify-center gap-2.5">
-                <img src="logo.jpg" onerror="this.onerror=null; this.src='logo.png'; this.onerror=function(){this.src='https://placehold.co/120x120/FF6B00/FFFFFF?text=QUALY';};" alt="Qualyquimy Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain logo-pulse rounded-lg">
+        <div class="text-center mb-2">
+            <div class="inline-flex items-center justify-center gap-2">
+                <img src="logo.jpg" onerror="this.onerror=null; this.src='logo.png'; this.onerror=function(){this.src='https://placehold.co/100x100/FF6B00/FFFFFF?text=QUALY';};" alt="Qualyquimy Logo" class="w-9 h-9 sm:w-11 sm:h-11 object-contain logo-pulse rounded-lg">
                 
                 <div class="flex flex-col items-start">
-                    <span class="font-brand font-black text-2xl sm:text-3xl tracking-tight text-white flex items-center gap-1 leading-none">
+                    <span class="font-brand font-black text-xl sm:text-2xl tracking-tight text-white flex items-center gap-1 leading-none">
                         QUALY<span class="text-brand-orange">QUIMY</span>
                     </span>
-                    <span class="text-[10px] sm:text-xs tracking-[0.25em] text-slate-400 font-semibold uppercase mt-0.5">
+                    <span class="text-[9px] sm:text-[10px] tracking-[0.2em] text-slate-400 font-semibold uppercase mt-0.5">
                         Tintas e Revestimentos
                     </span>
                 </div>
@@ -213,35 +216,35 @@
         </div>
 
         <!-- Main Title & FAQ Toggle Button -->
-        <div class="text-center mb-4 space-y-2">
-            <h1 class="text-lg sm:text-2xl font-extrabold text-white tracking-tight leading-tight">
-                Calculadora <span class="text-neon-gradient">Inteligente de Tintas</span>
+        <div class="text-center mb-3 space-y-1.5">
+            <h1 class="text-base sm:text-xl font-extrabold text-white tracking-tight leading-tight">
+                Calculadora <span class="text-neon-gradient">de Tintas Inteligente</span>
             </h1>
-            <p class="text-[11px] sm:text-xs text-slate-300 max-w-md mx-auto leading-normal">
-                Passe o mouse sobre as tintas para ver características e calcule com precisão.
+            <p class="text-[11px] text-slate-300 max-w-xs mx-auto leading-tight">
+                Passe o mouse nas tintas para ver detalhes e calcule rapidamente.
             </p>
 
-            <!-- FAQ Trigger Button (Opens interactive modal without scrolling) -->
-            <button onclick="openFaqModal()" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-slate-900/90 hover:bg-brand-neon/20 border border-brand-neon/50 text-brand-neon font-bold text-xs transition-all shadow-md cursor-pointer mt-1">
+            <!-- FAQ Trigger Button -->
+            <button onclick="openFaqModal()" class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-slate-900/90 hover:bg-brand-neon/20 border border-brand-neon/50 text-brand-neon font-bold text-[11px] transition-all shadow-sm cursor-pointer mt-0.5">
                 <i class="fa-solid fa-circle-question"></i>
                 <span>Dúvidas Frequentes (FAQ)</span>
-                <i class="fa-solid fa-arrow-right text-[10px] ml-0.5"></i>
+                <i class="fa-solid fa-arrow-right text-[9px] ml-0.5"></i>
             </button>
         </div>
 
         <!-- Form Input Fields -->
-        <form id="calcForm" onsubmit="event.preventDefault(); openResultModal();" class="space-y-3">
+        <form id="calcForm" onsubmit="event.preventDefault(); openResultModal();" class="space-y-2.5">
             
             <!-- Paint Type Selection with Hover Tooltips -->
             <div>
-                <label for="tipoTinta" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center justify-between">
+                <label for="tipoTinta" class="block text-[11px] font-semibold text-slate-300 mb-1 flex items-center justify-between">
                     <span>Selecione a Tinta / Categoria</span>
-                    <span class="text-[10px] text-brand-neon font-bold"><i class="fa-solid fa-circle-info mr-1"></i>Passe o mouse p/ detalhes</span>
+                    <span class="text-[9px] text-brand-neon font-bold"><i class="fa-solid fa-circle-info mr-0.5"></i>Hover p/ detalhes</span>
                 </label>
                 
                 <!-- Tooltip Hover Wrapper -->
                 <div class="tooltip-container">
-                    <select id="tipoTinta" onchange="updateYieldInfo()" class="app-select w-full rounded-xl px-3 py-2.5 text-sm font-medium cursor-pointer">
+                    <select id="tipoTinta" onchange="updateYieldInfo()" class="app-select w-full rounded-xl px-2.5 py-2 text-xs sm:text-sm font-medium cursor-pointer">
                         <option value="economica">Tinta Econômica Qualy Color (8,3 m²/L)</option>
                         <option value="standard">Tinta Standard (11 m²/L)</option>
                         <option value="premium">Tinta Premium (14 m²/L)</option>
@@ -251,23 +254,23 @@
                     
                     <!-- Floating Tooltip Box -->
                     <div id="paintTooltip" class="custom-tooltip">
-                        <strong id="tooltipTitle" class="text-brand-neon block mb-1 uppercase font-bold text-xs">Econômica Qualy Color</strong>
+                        <strong id="tooltipTitle" class="text-brand-neon block mb-1 uppercase font-bold text-[11px]">Econômica Qualy Color</strong>
                         <span id="tooltipDesc" class="text-slate-200 block">Tinta qualy color economica, indicada para paredes novas, já emassadas, uso interno, parede sem umidade.</span>
-                        <span class="text-amber-300 block mt-1.5 font-semibold text-[10px]"><i class="fa-solid fa-triangle-exclamation mr-1"></i>Obs: não aplicar em dias úmidos, ou chuvosos.</span>
+                        <span class="text-amber-300 block mt-1 font-semibold text-[10px]"><i class="fa-solid fa-triangle-exclamation mr-1"></i>Obs: não aplicar em dias úmidos, ou chuvosos.</span>
                     </div>
                 </div>
 
-                <p id="yieldDescription" class="text-[11px] text-brand-neon mt-1 font-semibold">
+                <p id="yieldDescription" class="text-[10px] text-brand-neon mt-1 font-semibold">
                     Rendimento: 8,3 m² por Litro (por demão)
                 </p>
             </div>
 
             <!-- Number of Demãos -->
             <div>
-                <label for="demaos" class="block text-xs font-semibold text-slate-300 mb-1">
+                <label for="demaos" class="block text-[11px] font-semibold text-slate-300 mb-1">
                     Número de Demãos (Camadas)
                 </label>
-                <select id="demaos" class="app-select w-full rounded-xl px-3 py-2 text-sm font-medium cursor-pointer">
+                <select id="demaos" class="app-select w-full rounded-xl px-2.5 py-1.5 text-xs sm:text-sm font-medium cursor-pointer">
                     <option value="1">1 Demão</option>
                     <option value="2" selected>2 Demãos (Recomendado)</option>
                     <option value="3">3 Demãos</option>
@@ -275,46 +278,46 @@
             </div>
 
             <!-- Largura & Comprimento -->
-            <div class="grid grid-cols-2 gap-2.5 sm:gap-3.5">
+            <div class="grid grid-cols-2 gap-2">
                 <div>
-                    <label for="largura" class="block text-xs font-semibold text-slate-300 mb-1">
+                    <label for="largura" class="block text-[11px] font-semibold text-slate-300 mb-1">
                         Largura (m)
                     </label>
-                    <input type="number" step="0.01" min="0.1" id="largura" value="4" placeholder="0.00" required class="app-input w-full rounded-xl px-3 py-2 text-sm">
+                    <input type="number" step="0.01" min="0.1" id="largura" value="4" placeholder="0.00" required class="app-input w-full rounded-xl px-2.5 py-1.5 text-xs sm:text-sm">
                 </div>
                 <div>
-                    <label for="comprimento" class="block text-xs font-semibold text-slate-300 mb-1">
+                    <label for="comprimento" class="block text-[11px] font-semibold text-slate-300 mb-1">
                         Comprimento (m)
                     </label>
-                    <input type="number" step="0.01" min="0.1" id="comprimento" value="5" placeholder="0.00" required class="app-input w-full rounded-xl px-3 py-2 text-sm">
+                    <input type="number" step="0.01" min="0.1" id="comprimento" value="5" placeholder="0.00" required class="app-input w-full rounded-xl px-2.5 py-1.5 text-xs sm:text-sm">
                 </div>
             </div>
 
             <!-- Pé-direito, Janelas e Portas -->
-            <div class="grid grid-cols-3 gap-2 sm:gap-3">
+            <div class="grid grid-cols-3 gap-2">
                 <div>
-                    <label for="pedireito" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Pé-direito (m)">
+                    <label for="pedireito" class="block text-[10px] font-semibold text-slate-300 mb-1 truncate" title="Pé-direito (m)">
                         Pé-direito (m)
                     </label>
-                    <input type="number" step="0.01" min="0.1" id="pedireito" value="2.80" placeholder="2.80" required class="app-input w-full rounded-xl px-2 py-2 text-sm text-center">
+                    <input type="number" step="0.01" min="0.1" id="pedireito" value="2.80" placeholder="2.80" required class="app-input w-full rounded-xl px-2 py-1.5 text-xs text-center">
                 </div>
                 <div>
-                    <label for="janelas" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Janelas (m²)">
+                    <label for="janelas" class="block text-[10px] font-semibold text-slate-300 mb-1 truncate" title="Janelas (m²)">
                         Janelas (m²)
                     </label>
-                    <input type="number" step="0.01" min="0" id="janelas" value="5" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-2 text-sm text-center">
+                    <input type="number" step="0.01" min="0" id="janelas" value="5" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-1.5 text-xs text-center">
                 </div>
                 <div>
-                    <label for="portas" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Portas (m²)">
+                    <label for="portas" class="block text-[10px] font-semibold text-slate-300 mb-1 truncate" title="Portas (m²)">
                         Portas (m²)
                     </label>
-                    <input type="number" step="0.01" min="0" id="portas" value="0" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-2 text-sm text-center">
+                    <input type="number" step="0.01" min="0" id="portas" value="0" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-1.5 text-xs text-center">
                 </div>
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="w-full mt-2 py-3 px-5 rounded-2xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-extrabold text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-neon-button hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
-                <i class="fa-solid fa-calculator text-lg"></i>
+            <button type="submit" class="w-full mt-1.5 py-2.5 px-4 rounded-xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-extrabold text-sm flex items-center justify-center gap-2 transition-all duration-300 shadow-neon-button hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
+                <i class="fa-solid fa-calculator text-base"></i>
                 <span>Calcular Quantidade de Tinta</span>
             </button>
         </form>
@@ -322,55 +325,53 @@
     </div>
 </div>
 
-<!-- Unified SSL, Security & Developer Footer Section with Google Maps Link -->
-<div class="w-full max-w-lg px-3 text-center space-y-2 mt-auto mb-10 z-10">
-    <div class="flex flex-wrap items-center justify-center gap-2 text-emerald-400 text-xs font-semibold bg-slate-900/90 py-2 px-3 rounded-xl border border-emerald-500/20 backdrop-blur-sm shadow-lg">
-        <div class="flex items-center gap-1.5">
-            <i class="fa-solid fa-location-dot text-brand-neon"></i>
-            <a href="https://maps.google.com/?q=Rua+Leiria,+45+-+Chácara+Cuiabá,+Itaquaquecetuba+-+SP" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-brand-neon underline underline-offset-2 transition-colors">
+<!-- Footer Section with Google Maps Link -->
+<div class="w-full max-w-md px-3 text-center space-y-1.5 mt-2 mb-8 z-10">
+    <div class="flex flex-wrap items-center justify-center gap-1.5 text-emerald-400 text-[11px] font-semibold bg-slate-900/90 py-1.5 px-2.5 rounded-xl border border-emerald-500/20 backdrop-blur-sm shadow-md">
+        <div class="flex items-center gap-1 truncate">
+            <i class="fa-solid fa-location-dot text-brand-neon shrink-0"></i>
+            <a href="https://maps.google.com/?q=Rua+Leiria,+45+-+Chácara+Cuiabá,+Itaquaquecetuba+-+SP" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-brand-neon underline underline-offset-2 transition-colors truncate">
                 Rua Leiria, 45 - Chácara Cuiabá, Itaquaquecetuba - SP
             </a>
         </div>
     </div>
 
-    <div class="flex flex-wrap items-center justify-center gap-2 text-emerald-400 text-xs font-semibold bg-slate-900/80 py-2 px-3 rounded-xl border border-emerald-500/20 backdrop-blur-sm">
-        <div class="flex items-center gap-1.5">
+    <div class="flex flex-wrap items-center justify-center gap-2 text-emerald-400 text-[10px] font-semibold bg-slate-900/80 py-1.5 px-2.5 rounded-xl border border-emerald-500/20 backdrop-blur-sm">
+        <div class="flex items-center gap-1">
             <i class="fa-solid fa-lock text-emerald-400"></i>
             <span>SSL Certificado 100% Seguro</span>
         </div>
-        <span class="text-slate-600 hidden sm:inline">•</span>
-        <span class="text-slate-300 text-[11px]">Conexão Criptografada</span>
+        <span class="text-slate-600">•</span>
+        <span class="text-slate-300">Conexão Criptografada</span>
     </div>
 
-    <div class="w-full border-t border-slate-800/80 my-1"></div>
-
-    <footer class="text-[11px] text-slate-400 font-medium tracking-wide">
+    <footer class="text-[10px] text-slate-400 font-medium tracking-wide pt-0.5">
         Desenvolvido por <a href="https://avaliar.impulsoweb10.com.br" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-brand-neon font-semibold underline underline-offset-2 transition-colors">ImpulsoWeb10</a>
     </footer>
 </div>
 
 <!-- Marquee Banner Floating at Bottom -->
-<a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20link%20personalizado%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-t border-brand-neon/40 py-2 overflow-hidden z-40 select-none shadow-2xl hover:bg-slate-900 transition-colors group" title="Clique para saber sobre link personalizado">
-    <div class="marquee-track flex items-center gap-8 whitespace-nowrap text-xs sm:text-sm font-bold text-slate-200">
-        <div class="flex items-center gap-8">
-            <span class="flex items-center gap-2 text-brand-neon group-hover:underline">
+<a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20link%20personalizado%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-t border-brand-neon/40 py-1.5 overflow-hidden z-40 select-none shadow-2xl hover:bg-slate-900 transition-colors group" title="Clique para saber sobre link personalizado">
+    <div class="marquee-track flex items-center gap-6 whitespace-nowrap text-xs font-bold text-slate-200">
+        <div class="flex items-center gap-6">
+            <span class="flex items-center gap-1.5 text-brand-neon group-hover:underline">
                 <i class="fa-solid fa-wand-magic-sparkles text-amber-300 animate-pulse"></i>
-                <span class="tracking-wide">Crie seu link igual esse personalizado para sua empresa <strong class="text-white bg-emerald-600/80 px-2 py-0.5 rounded-full text-[10px] ml-1 uppercase">Clique Aqui</strong></span>
+                <span class="tracking-wide">Crie seu link igual esse personalizado para sua empresa <strong class="text-white bg-emerald-600/80 px-1.5 py-0.5 rounded-full text-[9px] ml-1 uppercase">Clique Aqui</strong></span>
             </span>
             <span class="text-slate-600">•</span>
-            <span class="flex items-center gap-2 text-amber-300">
+            <span class="flex items-center gap-1.5 text-amber-300">
                 <i class="fa-solid fa-rocket"></i>
                 <span>Calculadora Interativa de Tintas Qualyquimy</span>
             </span>
             <span class="text-slate-600">•</span>
         </div>
-        <div class="flex items-center gap-8">
-            <span class="flex items-center gap-2 text-brand-neon group-hover:underline">
+        <div class="flex items-center gap-6">
+            <span class="flex items-center gap-1.5 text-brand-neon group-hover:underline">
                 <i class="fa-solid fa-wand-magic-sparkles text-amber-300 animate-pulse"></i>
-                <span class="tracking-wide">Crie seu link igual esse personalizado para sua empresa <strong class="text-white bg-emerald-600/80 px-2 py-0.5 rounded-full text-[10px] ml-1 uppercase">Clique Aqui</strong></span>
+                <span class="tracking-wide">Crie seu link igual esse personalizado para sua empresa <strong class="text-white bg-emerald-600/80 px-1.5 py-0.5 rounded-full text-[9px] ml-1 uppercase">Clique Aqui</strong></span>
             </span>
             <span class="text-slate-600">•</span>
-            <span class="flex items-center gap-2 text-amber-300">
+            <span class="flex items-center gap-1.5 text-amber-300">
                 <i class="fa-solid fa-rocket"></i>
                 <span>Calculadora Interativa de Tintas Qualyquimy</span>
             </span>
@@ -379,65 +380,65 @@
     </div>
 </a>
 
-<!-- INTERACTIVE FAQ MODAL (Opens without scrolling) -->
+<!-- INTERACTIVE FAQ MODAL -->
 <div id="faqModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-3 transition-all duration-300 overflow-y-auto">
     <div class="absolute inset-0 bg-brand-neon/15 pointer-events-none blur-3xl"></div>
 
-    <div class="relative w-full max-w-lg faq-modal-frame rounded-3xl p-4 sm:p-6 shadow-2xl modal-fade-in my-auto max-h-[90vh] flex flex-col justify-between overflow-y-auto z-10">
+    <div class="relative w-full max-w-md faq-modal-frame rounded-2xl p-4 shadow-2xl modal-fade-in my-auto max-h-[88vh] flex flex-col justify-between overflow-y-auto z-10">
         
         <!-- Close Button 'X' -->
-        <button onclick="closeFaqModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 hover:bg-brand-neon/30 text-slate-200 hover:text-white border border-white/40 flex items-center justify-center transition-all cursor-pointer z-20" title="Fechar">
-            <i class="fa-solid fa-xmark text-base"></i>
+        <button onclick="closeFaqModal()" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/50 hover:bg-brand-neon/30 text-slate-200 hover:text-white border border-white/40 flex items-center justify-center transition-all cursor-pointer z-20" title="Fechar">
+            <i class="fa-solid fa-xmark text-sm"></i>
         </button>
 
         <div>
-            <div class="text-center border-b border-white/20 pb-3 pr-8">
-                <span class="inline-flex items-center gap-1.5 text-brand-neon text-xs font-extrabold tracking-wider uppercase">
+            <div class="text-center border-b border-white/20 pb-2.5 pr-6">
+                <span class="inline-flex items-center gap-1 text-brand-neon text-[10px] font-extrabold tracking-wider uppercase">
                     <i class="fa-solid fa-circle-question"></i> FAQ Semântico
                 </span>
-                <h2 class="text-xl sm:text-2xl font-black text-white mt-0.5 tracking-tight">
+                <h2 class="text-lg sm:text-xl font-black text-white mt-0.5 tracking-tight">
                     Dúvidas Frequentes sobre Tintas
                 </h2>
             </div>
 
             <!-- FAQ Semantic List (5 Key Ideas) -->
-            <div class="space-y-3 text-xs mt-3.5 max-h-[50vh] overflow-y-auto pr-1">
-                <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
-                    <h3 class="font-bold text-brand-neon mb-1">1. Qual a diferença entre tinta Econômica, Standard e Premium?</h3>
-                    <p class="text-slate-300 leading-relaxed">A tinta econômica é ideal para interiores e paredes já emassadas. A Standard oferece maior durabilidade e cobertura intermediária para ambientes internos e externos, enquanto a Premium possui rendimento superior (14 m²/L), excelente lavabilidade e alta resistência.</p>
+            <div class="space-y-2.5 text-xs mt-3 max-h-[48vh] overflow-y-auto pr-1">
+                <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
+                    <h3 class="font-bold text-brand-neon mb-0.5 text-xs">1. Qual a diferença entre tinta Econômica, Standard e Premium?</h3>
+                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta econômica é ideal para interiores e paredes já emassadas. A Standard oferece maior durabilidade, enquanto a Premium possui rendimento superior (14 m²/L), excelente lavabilidade e alta resistência.</p>
                 </div>
 
-                <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
-                    <h3 class="font-bold text-brand-neon mb-1">2. Posso pintar em dias chuvosos ou com alta umidade?</h3>
-                    <p class="text-slate-300 leading-relaxed text-amber-300 font-semibold">Não! Conforme recomendado nas instruções técnicas, nunca aplique tinta em dias úmidos ou chuvosos. A umidade excessiva compromete a secagem, causando manchas, bolhas e perda de aderência.</p>
+                <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
+                    <h3 class="font-bold text-brand-neon mb-0.5 text-xs">2. Posso pintar em dias chuvosos ou com alta umidade?</h3>
+                    <p class="text-slate-300 text-[11px] leading-relaxed text-amber-300 font-semibold">Não! Nunca aplique tinta em dias úmidos ou chuvosos. A umidade excessiva compromete a secagem, causando manchas, bolhas e perda de aderência.</p>
                 </div>
 
-                <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
-                    <h3 class="font-bold text-brand-neon mb-1">3. Como calcular quantas demãos devo passar na parede?</h3>
-                    <p class="text-slate-300 leading-relaxed">Geralmente recomenda-se o uso de 2 demãos para uma cobertura perfeita e uniforme. Em superfícies novas sem pintura anterior, pode ser necessária uma terceira demão para um acabamento impecável.</p>
+                <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
+                    <h3 class="font-bold text-brand-neon mb-0.5 text-xs">3. Como calcular quantas demãos devo passar na parede?</h3>
+                    <p class="text-slate-300 text-[11px] leading-relaxed">Geralmente recomenda-se o uso de 2 demãos para uma cobertura perfeita e uniforme. Em superfícies novas, pode ser necessária uma terceira demão para acabamento impecável.</p>
                 </div>
 
-                <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
-                    <h3 class="font-bold text-brand-neon mb-1">4. Para que serve a tinta emborrachada e onde aplicar?</h3>
-                    <p class="text-slate-300 leading-relaxed">A tinta emborrachada cria uma película elástica ideal para áreas externas sujeitas a fissuras e infiltrações, como fachadas, telhados e paredes batidas de chuva. Ela impermeabiliza e acompanha a dilatação natural.</p>
+                <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
+                    <h3 class="font-bold text-brand-neon mb-0.5 text-xs">4. Para que serve a tinta emborrachada e onde aplicar?</h3>
+                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta emborrachada cria uma película elástica ideal para áreas externas sujeitas a fissuras e infiltrações, impermeabilizando fachadas e paredes batidas de chuva.</p>
                 </div>
 
-                <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
-                    <h3 class="font-bold text-brand-neon mb-1">5. Qual o rendimento da tinta para piso em comparação às outras?</h3>
-                    <p class="text-slate-300 leading-relaxed">A tinta para piso foi desenvolvida para suportar tráfego de pessoas e veículos leves, tendo um rendimento aproximado de até 6 m² por litro, necessitando de uma camada mais espessa e resistente.</p>
+                <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
+                    <h3 class="font-bold text-brand-neon mb-0.5 text-xs">5. Qual o rendimento da tinta para piso em comparação às outras?</h3>
+                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta para piso foi desenvolvida para suportar tráfego de pessoas e veículos leves, tendo um rendimento aproximado de até 6 m² por litro com camada resistente.</p>
                 </div>
             </div>
         </div>
 
         <!-- Modal Bottom Controls: Voltar & Atualizar -->
-        <div class="mt-4 pt-3 border-t border-white/20 flex items-center justify-between gap-2">
-            <button onclick="closeFaqModal()" class="py-2.5 px-4 rounded-xl bg-black/60 hover:bg-black/80 text-slate-300 hover:text-white font-bold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer border border-white/30">
-                <i class="fa-solid fa-arrow-left text-xs"></i>
+        <div class="mt-3 pt-2.5 border-t border-white/20 flex items-center justify-between gap-2">
+            <button onclick="closeFaqModal()" class="py-2 px-3.5 rounded-xl bg-black/60 hover:bg-black/80 text-slate-300 hover:text-white font-bold text-xs transition-all flex items-center justify-center gap-1 cursor-pointer border border-white/30">
+                <i class="fa-solid fa-arrow-left text-[11px]"></i>
                 <span>Voltar</span>
             </button>
 
-            <button onclick="refreshApp()" class="py-2.5 px-4 rounded-xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-black text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-md">
-                <i class="fa-solid fa-rotate text-xs"></i>
+            <button onclick="refreshApp()" class="py-2 px-3.5 rounded-xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-black text-xs transition-all flex items-center justify-center gap-1 cursor-pointer shadow-md">
+                <i class="fa-solid fa-rotate text-[11px]"></i>
                 <span>Atualizar</span>
             </button>
         </div>
@@ -449,61 +450,54 @@
 <div id="resultModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-3 transition-all duration-300 overflow-y-auto">
     <div class="absolute inset-0 bg-brand-neon/15 pointer-events-none blur-3xl"></div>
 
-    <div class="relative w-full max-w-lg result-modal-frame rounded-3xl p-4 sm:p-6 shadow-2xl modal-fade-in my-auto max-h-[92vh] flex flex-col justify-between overflow-y-auto z-10">
+    <div class="relative w-full max-w-md result-modal-frame rounded-2xl p-4 shadow-2xl modal-fade-in my-auto max-h-[90vh] flex flex-col justify-between overflow-y-auto z-10">
         
-        <button onclick="closeResultModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 hover:bg-brand-neon/30 text-slate-200 hover:text-white border border-white/40 flex items-center justify-center transition-all cursor-pointer z-20">
-            <i class="fa-solid fa-xmark text-base"></i>
+        <button onclick="closeResultModal()" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/50 hover:bg-brand-neon/30 text-slate-200 hover:text-white border border-white/40 flex items-center justify-center transition-all cursor-pointer z-20">
+            <i class="fa-solid fa-xmark text-sm"></i>
         </button>
 
-        <div class="space-y-3.5">
+        <div class="space-y-2.5">
             
-            <div class="text-center border-b border-white/20 pb-2.5 pr-6">
-                <span class="inline-flex items-center gap-1.5 text-brand-neon text-xs font-extrabold tracking-wider uppercase">
-                    <i class="fa-solid fa-circle-check"></i> Cálculo Concluído com Sucesso
+            <div class="text-center border-b border-white/20 pb-2 pr-6">
+                <span class="inline-flex items-center gap-1 text-brand-neon text-[10px] font-extrabold tracking-wider uppercase">
+                    <i class="fa-solid fa-circle-check"></i> Cálculo Concluído
                 </span>
-                <h2 id="modalResTitle" class="text-xl sm:text-2xl font-black text-white mt-0.5 tracking-tight">
+                <h2 id="modalResTitle" class="text-lg sm:text-xl font-black text-white mt-0.5 tracking-tight">
                     Resultado da Tinta
                 </h2>
-                <p id="modalResSubtitle" class="text-[11px] sm:text-xs text-slate-300 mt-0.5">
+                <p id="modalResSubtitle" class="text-[10px] sm:text-xs text-slate-300 mt-0.5">
                     Categoria e rendimento aplicado
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
-                
-                <div class="sm:col-span-5 flex flex-col items-center justify-center p-3 bg-black/50 rounded-2xl border border-white/30">
-                    <div class="flex items-center justify-center min-h-[120px] text-brand-neon text-5xl">
-                        <i class="fa-solid fa-paint-roller drop-shadow-[0_0_15px_rgba(0,255,157,0.5)]"></i>
+            <!-- Product Image Container with optimized responsive height (h-36 to h-40, object-contain, centered) -->
+            <div class="w-full flex items-center justify-center bg-black/40 rounded-xl p-2 border border-white/10">
+                <img id="modalPaintImage" src="" alt="Lata de Tinta" class="h-36 sm:h-40 w-auto object-contain drop-shadow-[0_10px_15px_rgba(0,255,157,0.25)]">
+            </div>
+
+            <div class="grid grid-cols-1 gap-2">
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="bg-black/60 border border-white/20 p-2 rounded-xl text-center">
+                        <span class="text-[9px] font-semibold text-slate-300 uppercase tracking-wider block">Área Líquida</span>
+                        <span id="modalResArea" class="text-sm sm:text-base font-black text-white mt-0.5 block">0 m²</span>
                     </div>
-                    <span id="modalImgLabel" class="text-[10px] text-slate-300 mt-2 font-semibold text-center leading-tight">Embalagens sugeridas</span>
+                    <div class="bg-black/60 border border-white/20 p-2 rounded-xl text-center">
+                        <span class="text-[9px] font-semibold text-slate-300 uppercase tracking-wider block">Necessário</span>
+                        <span id="modalResLitros" class="text-sm sm:text-base font-black text-brand-neon mt-0.5 block">0 L</span>
+                    </div>
                 </div>
 
-                <div class="sm:col-span-7 space-y-2.5">
-                    
-                    <div class="grid grid-cols-2 gap-2">
-                        <div class="bg-black/60 border border-white/20 p-2.5 rounded-xl text-center">
-                            <span class="text-[10px] font-semibold text-slate-300 uppercase tracking-wider block">Área Líquida</span>
-                            <span id="modalResArea" class="text-base sm:text-lg font-black text-white mt-0.5 block">0 m²</span>
-                        </div>
-                        <div class="bg-black/60 border border-white/20 p-2.5 rounded-xl text-center">
-                            <span class="text-[10px] font-semibold text-slate-300 uppercase tracking-wider block">Necessário</span>
-                            <span id="modalResLitros" class="text-base sm:text-lg font-black text-brand-neon mt-0.5 block">0 L</span>
-                        </div>
+                <div class="bg-black/80 border-2 border-brand-neon p-2.5 rounded-xl space-y-1 shadow-lg">
+                    <span class="text-[11px] font-bold text-brand-neon uppercase tracking-wider block">
+                        <i class="fa-solid fa-boxes-packing text-brand-neon mr-1"></i> Sugestão de Embalagens:
+                    </span>
+                    <div id="modalResEmbalagem" class="text-sm sm:text-base font-black text-amber-300 leading-snug tracking-wide">
+                        --
                     </div>
-
-                    <div class="bg-black/80 border-2 border-brand-neon p-3 sm:p-3.5 rounded-xl space-y-1 shadow-lg">
-                        <span class="text-xs font-bold text-brand-neon uppercase tracking-wider block">
-                            <i class="fa-solid fa-boxes-packing text-brand-neon mr-1"></i> Sugestão de Embalagens:
-                        </span>
-                        <div id="modalResEmbalagem" class="text-base sm:text-lg font-black text-amber-300 leading-snug tracking-wide">
-                            --
-                        </div>
-                        <div id="modalResTotalCovered" class="text-xs text-slate-200 pt-1.5 border-t border-white/15 flex items-center gap-1 font-medium">
-                            <i class="fa-solid fa-circle-check text-brand-neon text-sm"></i>
-                            <span>Total fornecido: <strong id="modalCoveredLitros" class="text-white font-extrabold text-sm">0 L</strong></span>
-                        </div>
+                    <div id="modalResTotalCovered" class="text-[11px] text-slate-200 pt-1 border-t border-white/15 flex items-center gap-1 font-medium">
+                        <i class="fa-solid fa-circle-check text-brand-neon"></i>
+                        <span>Total fornecido: <strong id="modalCoveredLitros" class="text-white font-extrabold text-xs">0 L</strong></span>
                     </div>
-
                 </div>
             </div>
 
@@ -513,20 +507,20 @@
             </p>
         </div>
 
-        <div class="mt-3 pt-3 border-t border-white/20 flex flex-col gap-2">
-            <a id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/80 hover:scale-[1.01] active:scale-[0.99] cursor-pointer uppercase tracking-wider">
-                <i class="fa-brands fa-whatsapp text-xl"></i>
+        <div class="mt-2.5 pt-2 border-t border-white/20 flex flex-col gap-2">
+            <a id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/80 hover:scale-[1.01] active:scale-[0.99] cursor-pointer uppercase tracking-wider">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
                 <span>Pedir Orçamento no WhatsApp</span>
             </a>
 
             <div class="flex items-center justify-between gap-2">
-                <button onclick="closeResultModal()" class="py-2 px-3 rounded-xl bg-black/60 hover:bg-black/80 text-slate-300 hover:text-white font-bold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer border border-white/30 shrink-0">
-                    <i class="fa-solid fa-arrow-left text-xs"></i>
+                <button onclick="closeResultModal()" class="py-2 px-3 rounded-xl bg-black/60 hover:bg-black/80 text-slate-300 hover:text-white font-bold text-xs transition-all flex items-center justify-center gap-1 cursor-pointer border border-white/30 shrink-0">
+                    <i class="fa-solid fa-arrow-left text-[11px]"></i>
                     <span>Voltar</span>
                 </button>
 
-                <a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Quero%20saber%20como%20ter%20um%20link%20personalizado%20igual%20a%20esse%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-amber-300 hover:text-amber-200 border border-amber-500/40 text-[11px] font-bold transition-all flex items-center justify-center gap-1.5 text-center truncate">
-                    <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+                <a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Quero%20saber%20como%20ter%20um%20link%20personalizado%20igual%20a%20esse%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="py-2 px-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-amber-300 hover:text-amber-200 border border-amber-500/40 text-[10px] font-bold transition-all flex items-center justify-center gap-1 text-center truncate">
+                    <i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i>
                     <span>Sobre link personalizado</span>
                 </a>
             </div>
@@ -542,31 +536,36 @@
             name: 'Tinta Econômica Qualy Color', 
             yieldPerL: 8.3, 
             desc: 'Tinta qualy color economica, indicada para paredes novas, já emassadas, uso interno, parede sem umidade.',
-            yieldText: 'Rendimento: 8,3 m² por Litro (por demão)'
+            yieldText: 'Rendimento: 8,3 m² por Litro (por demão)',
+            img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80' // Ilustração representativa de lata de tinta
         },
         standard: { 
             name: 'Tinta Standard', 
             yieldPerL: 11.0, 
             desc: 'Tinta standard, uso interno externo, ótima cobertura e rendimento.',
-            yieldText: 'Rendimento: 11 m² por Litro (por demão)'
+            yieldText: 'Rendimento: 11 m² por Litro (por demão)',
+            img: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80'
         },
         premium: { 
             name: 'Tinta Premium', 
             yieldPerL: 14.0, 
             desc: 'Tinta premium, uso interno externo, ótima cobertura e rendimento.',
-            yieldText: 'Rendimento: 14 m² por Litro (por demão)'
+            yieldText: 'Rendimento: 14 m² por Litro (por demão)',
+            img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80'
         },
         piso: { 
             name: 'Tinta para Piso', 
             yieldPerL: 6.0, 
             desc: 'Tinta piso, uso interno externo, ótima cobertura e rendimento.',
-            yieldText: 'Rendimento: Até 6 m² por Litro (por demão)'
+            yieldText: 'Rendimento: Até 6 m² por Litro (por demão)',
+            img: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80'
         },
         emborrachada: { 
             name: 'Tinta Emborrachada', 
             yieldPerL: 10.0, 
             desc: 'Tinta emborrachada, uso interno externo, ótima cobertura e rendimento.',
-            yieldText: 'Rendimento: Até 10 m² por Litro (por demão)'
+            yieldText: 'Rendimento: Até 10 m² por Litro (por demão)',
+            img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80'
         }
     };
 
@@ -585,7 +584,6 @@
         document.getElementById('tooltipDesc').textContent = info.desc;
     }
 
-    // Initialize tooltip text on page load
     window.onload = function() {
         updateYieldInfo();
     };
@@ -610,6 +608,7 @@
 
     function openResultModal() {
         const data = calculate();
+        const paintInfo = PAINT_TYPES[document.getElementById('tipoTinta').value];
         
         document.getElementById('modalResTitle').textContent = data.paintName;
         document.getElementById('modalResSubtitle').textContent = `${data.demaos} demão(s) | Rendimento: ${data.yieldPerL} m²/L`;
@@ -618,6 +617,11 @@
         document.getElementById('modalResEmbalagem').textContent = data.packaging.text;
         document.getElementById('modalCoveredLitros').textContent = `${data.packaging.totalCovered.toFixed(1).replace('.', ',')} L`;
         
+        // Set paint image with ideal mobile height (h-36 sm:h-40, object-contain)
+        const imgEl = document.getElementById('modalPaintImage');
+        imgEl.src = paintInfo.img;
+        imgEl.alt = data.paintName;
+
         const waText = encodeURIComponent(`Olá! Fiz o cálculo para *${data.paintName}* (${data.demaos} demãos) para uma área de ${data.areaLiquida.toFixed(1)} m². O sistema indicou ${data.totalLitros.toFixed(1)} Litros (${data.packaging.text}). Gostaria de fazer um orçamento.`);
         document.getElementById('whatsappBtn').href = `https://wa.me/5511954950044?text=${waText}`;
 
