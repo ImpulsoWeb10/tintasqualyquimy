@@ -1,734 +1,938 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
 <!-- Google Analytics (G-HFTJ9MRF64) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFTJ9MRF64"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-HFTJ9MRF64');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HFTJ9MRF64');
 </script>
 
-<!-- Google Fonts -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Calculadora de tintas Qualy Quimy: informe as medidas do ambiente e descubra quantos litros e quais embalagens você precisa. Itaquaquecetuba - SP.">
+<meta property="og:title" content="Calculadora de Tintas | Qualy Quimy">
+<meta property="og:description" content="Calcule a quantidade de tinta para sua parede em segundos e peça pelo WhatsApp.">
+<meta name="theme-color" content="#03070C">
+<title>Calculadora de Tintas | Qualy Quimy</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-
-<!-- Font Awesome Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-    tailwind.config = {
-        darkMode: 'class',
-        theme: {
-            extend: {
-                colors: {
-                    brand: {
-                        orange: '#FF6B00',
-                        neon: '#00FF9D',
-                        neonDark: '#00D683',
-                        darkBg: '#03070C',
-                        cardBg: '#0A111C'
-                    }
-                },
-                fontFamily: {
-                    sans: ['Inter', 'sans-serif'],
-                    brand: ['Montserrat', 'sans-serif']
-                },
-                boxShadow: {
-                    'neon-glow': '0 0 25px rgba(0, 255, 157, 0.35), inset 0 0 12px rgba(0, 255, 157, 0.1)',
-                    'neon-button': '0 4px 18px rgba(0, 255, 157, 0.35)',
-                    'card-depth': '0 20px 40px rgba(0, 0, 0, 0.85)'
-                }
-            }
-        }
-    }
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
-    * {
-        box-sizing: border-box;
-        -webkit-tap-highlight-color: transparent;
-    }
+:root{
+  --neon:#00ff9d;
+  --neon-dark:#00d683;
+  --accent:#ff6b00;
+  --amber:#ffc66b;
+  --bg:#03070c;
+  --line:rgba(0,255,157,.55);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{width:100%}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:#f5f5f5;
+  min-height:100vh;
+  min-height:100dvh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:.4rem .8rem;
+  overflow-x:hidden;
+  position:relative;
+}
 
-    html, body {
-        background-color: #03070C;
-        width: 100%;
-        min-height: 100vh;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
+/* Iluminação neon atrás da moldura */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(0,255,157,.22) 0%, rgba(0,255,157,.07) 40%, transparent 70%),
+    radial-gradient(circle at 50% 25%, rgba(255,107,0,.2) 0%, transparent 60%);
+  pointer-events:none;
+  z-index:0;
+}
 
-    /* Ambient Neon Glow behind the screen */
-    .ambient-neon-bg {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 85vw;
-        height: 85vh;
-        background: radial-gradient(circle, rgba(0, 255, 157, 0.16) 0%, rgba(255, 107, 0, 0.1) 45%, transparent 75%);
-        filter: blur(70px);
-        z-index: -1;
-        pointer-events: none;
-    }
+/* Moldura estilo smartphone */
+.device-frame{
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:410px;
+  background:linear-gradient(175deg,#0d1622 0%,#050a12 100%);
+  border:1.5px solid var(--line);
+  border-radius:28px;
+  box-shadow:
+    0 0 25px rgba(0,255,157,.35),
+    0 0 50px rgba(255,107,0,.22),
+    inset 0 0 15px rgba(0,255,157,.1);
+  padding:1.3rem 1.1rem 1rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:.85rem;
+}
+.page{display:flex;flex-direction:column;align-items:center;gap:.85rem;width:100%}
 
-    /* Glassmorphism main card frame optimized for mobile */
-    .white-neon-frame {
-        background: rgba(10, 17, 28, 0.96);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1.5px solid rgba(255, 255, 255, 0.8);
-        box-shadow: 0 0 30px rgba(0, 255, 157, 0.22), 0 0 12px rgba(255, 255, 255, 0.25), inset 0 0 15px rgba(0, 255, 157, 0.08);
-    }
+/* Logo com brilho */
+.logo-wrap{display:flex;flex-direction:column;align-items:center;gap:.35rem}
+.logo-frame{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  display:inline-block;
+  animation:logo-pulse 2.6s ease-in-out infinite;
+}
+.logo-frame::after{
+  content:'';
+  position:absolute;top:0;left:-110%;
+  width:55%;height:100%;
+  background:linear-gradient(105deg,transparent 20%,rgba(0,255,157,.55) 50%,transparent 80%);
+  transform:skewX(-18deg);
+  animation:logo-shimmer 2.6s ease-in-out infinite;
+  pointer-events:none;z-index:2;
+}
+@keyframes logo-pulse{
+  0%,100%{box-shadow:0 0 8px rgba(0,255,157,.3),0 4px 15px rgba(0,0,0,.8)}
+  50%{box-shadow:0 0 20px rgba(0,255,157,.65),0 4px 20px rgba(255,107,0,.4)}
+}
+@keyframes logo-shimmer{0%{left:-110%}45%,100%{left:160%}}
+.logo-img{
+  display:block;
+  width:120px;height:auto;max-height:64px;
+  border-radius:12px;
+  border:1.5px solid rgba(0,255,157,.7);
+  object-fit:contain;
+  background:#0a0a0a;
+  position:relative;z-index:1;
+}
+.logo-fallback{
+  display:none;width:120px;height:60px;border-radius:12px;
+  border:1.5px solid rgba(0,255,157,.7);background:#0a0f18;
+  align-items:center;justify-content:center;
+  font-family:'Poppins',sans-serif;font-size:1rem;font-weight:800;color:var(--accent);text-transform:uppercase;
+}
+.brand{
+  font-family:'Poppins',sans-serif;
+  font-size:1.35rem;font-weight:800;color:#fff;
+  letter-spacing:.02em;line-height:1.1;text-transform:uppercase;
+  text-shadow:0 0 10px rgba(0,255,157,.3);
+}
+.brand em{color:var(--accent);font-style:normal}
+.tagline{font-size:.72rem;color:var(--neon);font-weight:600;letter-spacing:.05em;text-transform:uppercase}
 
-    .result-modal-frame, .faq-modal-frame {
-        background: radial-gradient(circle at 50% 30%, #0c2338 0%, #060e18 60%, #03070d 100%);
-        border: 2px solid #00FF9D;
-        box-shadow: 0 0 45px rgba(0, 255, 157, 0.45), 0 0 15px rgba(255, 255, 255, 0.6), inset 0 0 20px rgba(0, 255, 157, 0.25);
-    }
+.title{font-family:'Poppins',sans-serif;font-size:1.02rem;font-weight:700;color:#fff;line-height:1.2}
+.subtitle{font-size:.74rem;color:#b5bfcc;margin-top:.2rem}
 
-    .app-input, .app-select {
-        background-color: #050A12;
-        border: 1px solid #1c2e47;
-        color: #ffffff;
-        transition: all 0.2s ease;
-    }
-    .app-input:focus, .app-select:focus {
-        border-color: #00FF9D;
-        box-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
-        outline: none;
-    }
+/* Formulário */
+.form{width:100%;display:flex;flex-direction:column;gap:.6rem;text-align:left}
+.field label,.label{
+  display:block;font-size:.7rem;font-weight:700;color:#c9d3df;
+  margin-bottom:.25rem;letter-spacing:.02em;
+}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.55rem}
 
-    .text-neon-gradient {
-        background: linear-gradient(135deg, #00FF9D 0%, #00B8FF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+.input{
+  width:100%;
+  background:#050a12;
+  border:1px solid rgba(0,255,157,.25);
+  color:#fff;
+  border-radius:12px;
+  padding:.6rem .7rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:.92rem;
+  transition:border-color .2s,box-shadow .2s;
+}
+.input.center{text-align:center;padding-left:.3rem;padding-right:.3rem}
+.input:focus{outline:none;border-color:var(--neon);box-shadow:0 0 10px rgba(0,255,157,.35)}
+.input::placeholder{color:#5b6878}
 
-    .modal-fade-in {
-        animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; transform: scale(0.96); }
-        to { opacity: 1; transform: scale(1); }
-    }
+/* Botão que abre a lista de tintas */
+.pick-btn{
+  width:100%;
+  background:rgba(0,255,157,.06);
+  border:1px solid rgba(0,255,157,.45);
+  border-radius:14px;
+  padding:.6rem .8rem;
+  color:#fff;
+  font-family:'DM Sans',sans-serif;
+  text-align:left;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+  box-shadow:0 0 12px rgba(0,255,157,.15);
+  transition:all .2s;
+}
+.pick-btn:hover,.pick-btn:focus-visible{border-color:var(--neon);box-shadow:0 0 16px rgba(0,255,157,.4);outline:none}
+.pick-name{display:block;font-size:.86rem;font-weight:700;line-height:1.25}
+.pick-yield{display:block;font-size:.72rem;color:var(--neon);font-weight:600;margin-top:.1rem}
+.pick-btn svg{width:16px;height:16px;flex-shrink:0;color:var(--neon)}
 
-    .logo-pulse {
-        animation: softPulse 3s infinite ease-in-out;
-    }
-    @keyframes softPulse {
-        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(255, 107, 0, 0.4)); }
-        50% { transform: scale(1.04); filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.7)); }
-    }
+/* Demãos em pílulas */
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:.45rem}
+.seg button{
+  background:#050a12;
+  border:1px solid rgba(255,255,255,.18);
+  color:#c9d3df;
+  border-radius:999px;
+  padding:.5rem .3rem;
+  font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:700;
+  cursor:pointer;transition:all .2s;
+}
+.seg button.on{
+  border-color:var(--neon);color:#03130c;background:var(--neon);
+  box-shadow:0 0 14px rgba(0,255,157,.5);
+}
+.seg button:focus-visible{outline:2px solid var(--neon);outline-offset:2px}
 
-    .marquee-track {
-        display: flex;
-        width: max-content;
-        animation: marquee 22s linear infinite;
-    }
-    .marquee-track:hover {
-        animation-play-state: paused;
-    }
-    @keyframes marquee {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-50%); }
-    }
+/* Botão calcular */
+.btn-calc{
+  width:100%;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  background:linear-gradient(135deg,var(--neon),var(--neon-dark));
+  color:#03130c;font-family:'Poppins',sans-serif;font-weight:700;font-size:.92rem;
+  padding:.8rem;border:none;border-radius:50px;cursor:pointer;
+  box-shadow:0 4px 18px rgba(0,255,157,.4);
+  transition:transform .2s,box-shadow .2s;
+  animation:pulse-calc 2.4s ease-in-out infinite;
+}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(0,255,157,.6)}
+.btn-calc:active{transform:scale(.99)}
+.btn-calc svg{width:18px;height:18px}
+@keyframes pulse-calc{
+  0%,100%{box-shadow:0 4px 16px rgba(0,255,157,.35)}
+  50%{box-shadow:0 4px 26px rgba(0,255,157,.65)}
+}
+.form-msg{font-size:.72rem;color:var(--amber);text-align:center;min-height:0}
 
-    /* Tooltip Container Styles */
-    .tooltip-container {
-        position: relative;
-        display: block;
-    }
+/* Ícones de acesso rápido */
+.social-row{display:flex;gap:.9rem;justify-content:center;align-items:flex-start;width:100%}
+.social-btn{
+  display:flex;flex-direction:column;align-items:center;gap:.3rem;
+  text-decoration:none;background:none;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+  transition:transform .22s cubic-bezier(.34,1.56,.64,1);
+}
+.social-btn:hover{transform:translateY(-3px)}
+.social-icon{
+  width:42px;height:42px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  border:1.5px solid rgba(0,255,157,.4);
+  box-shadow:0 0 10px rgba(0,255,157,.2),0 6px 16px rgba(0,0,0,.6);
+  transition:all .2s;
+}
+.social-btn:hover .social-icon{border-color:var(--neon);box-shadow:0 0 15px rgba(0,255,157,.6),0 8px 20px rgba(255,107,0,.3)}
+.social-icon svg{width:20px;height:20px}
+.social-label{font-size:.68rem;color:#c9d3df;font-weight:500}
 
-    .custom-tooltip {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        bottom: 112%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 275px;
-        background: rgba(8, 15, 26, 0.98);
-        color: #f1f5f9;
-        text-align: left;
-        padding: 9px 12px;
-        border-radius: 10px;
-        border: 1px solid #00FF9D;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.8), 0 0 12px rgba(0,255,157,0.25);
-        transition: opacity 0.2s ease, visibility 0.2s ease;
-        z-index: 50;
-        font-size: 11px;
-        line-height: 1.35;
-        pointer-events: none;
-    }
+/* Endereço */
+.address{font-size:.72rem;color:#9aa6b5;line-height:1.4}
+.address a{color:#cfd8e3;text-decoration:none;border-bottom:1px solid rgba(0,255,157,.35)}
+.address a:hover{color:var(--neon)}
 
-    .tooltip-container:hover .custom-tooltip {
-        visibility: visible;
-        opacity: 1;
-    }
+/* Faixa rolante */
+.quote-banner{
+  width:100%;
+  display:flex;white-space:nowrap;overflow:hidden;
+  background:linear-gradient(90deg,rgba(0,255,157,.05),rgba(0,255,157,.18) 50%,rgba(0,255,157,.05));
+  border-top:1px solid rgba(0,255,157,.4);
+  border-bottom:1px solid rgba(0,255,157,.4);
+  padding:.42rem 0;
+  text-decoration:none;
+}
+.quote-track{display:flex;width:max-content;animation:scroll-left 22s linear infinite}
+.quote-item{
+  font-size:.72rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.04em;
+  text-shadow:0 0 8px rgba(0,255,157,.6);padding:0 1.6rem;
+}
+@keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-    ::-webkit-scrollbar {
-        width: 4px;
-    }
-    ::-webkit-scrollbar-track {
-        background: #03070C;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: #1c2e47;
-        border-radius: 4px;
-    }
+/* Rodapé */
+.footer{
+  font-size:.65rem;color:#777;
+  display:flex;flex-direction:column;align-items:center;gap:.35rem;
+  width:100%;border-top:1px solid rgba(255,255,255,.1);padding-top:.65rem;
+}
+.footer-promo{font-size:.68rem;color:#99a3b0;line-height:1.35;text-align:center}
+.footer-promo a{color:var(--neon);text-decoration:none;font-weight:500;border-bottom:1px solid rgba(0,255,157,.3);padding-bottom:1px}
+.footer-promo a:hover{color:#fff}
+.footer-bottom-row{display:flex;align-items:center;justify-content:center;gap:.7rem;width:100%;font-size:.63rem;color:#66707d}
+.footer-ssl{display:flex;align-items:center;gap:.25rem}
+.footer-ssl svg{width:10px;height:10px;flex-shrink:0;opacity:.8;stroke:#25d366}
+.footer-dev a{color:#8994a1;text-decoration:none}
+.footer-dev a:hover{color:#ccc}
+
+/* ===== MODAL (bottom sheet) ===== */
+.overlay{
+  position:fixed;inset:0;z-index:100;
+  background:rgba(0,0,0,.88);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  display:flex;align-items:flex-end;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .3s ease;
+}
+.overlay.open{opacity:1;pointer-events:all}
+.sheet{
+  background:linear-gradient(175deg,#111b29 0%,#070d16 100%);
+  border:1.5px solid var(--line);border-bottom:none;
+  border-radius:24px 24px 0 0;
+  width:100%;max-width:410px;
+  transform:translateY(100%);
+  transition:transform .4s cubic-bezier(.32,1,.36,1);
+  max-height:88vh;max-height:88dvh;
+  box-shadow:0 -5px 25px rgba(0,255,157,.25);
+  display:flex;flex-direction:column;
+}
+.overlay.open .sheet{transform:translateY(0)}
+.sheet-handle{width:40px;height:4px;background:rgba(255,255,255,.3);border-radius:2px;margin:12px auto 4px;flex-shrink:0}
+.sheet-inner{position:relative;width:100%;overflow-y:auto;min-height:0;padding-bottom:1.2rem}
+.panel{display:none;flex-direction:column;width:100%}
+.panel.visible{display:flex}
+
+.sheet-head,.answer-head{
+  display:flex;align-items:center;gap:.7rem;
+  padding:.75rem 1.2rem;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  background:rgba(0,0,0,.4);
+}
+.sheet-head{justify-content:space-between}
+.sheet-title{font-family:'Poppins',sans-serif;font-size:1.02rem;font-weight:600;color:#fff;text-shadow:0 0 8px rgba(0,255,157,.3)}
+.answer-title{font-family:'Poppins',sans-serif;font-size:.92rem;font-weight:600;color:#fff;line-height:1.3;flex:1}
+.btn-close,.btn-back{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);
+  color:#fff;cursor:pointer;
+  width:32px;height:32px;border-radius:50%;
+  font-size:.9rem;display:flex;align-items:center;justify-content:center;
+  transition:all .2s;flex-shrink:0;
+}
+.btn-back{color:var(--neon)}
+.btn-close:hover,.btn-back:hover{background:rgba(255,255,255,.25);box-shadow:0 0 8px rgba(255,255,255,.4)}
+
+/* Listas (tintas e FAQ) */
+.faq-list{padding:.9rem 1.1rem;display:flex;flex-direction:column;gap:.55rem}
+.item-btn{
+  width:100%;background:rgba(255,255,255,.05);
+  border:1px solid rgba(0,255,157,.2);
+  border-radius:12px;padding:.8rem .95rem;
+  color:#dde3ea;font-size:.85rem;font-family:'DM Sans',sans-serif;
+  text-align:left;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:.8rem;
+  transition:all .22s;line-height:1.35;
+}
+.item-btn:hover{background:rgba(0,255,157,.12);border-color:var(--neon);color:#fff;box-shadow:0 0 10px rgba(0,255,157,.2)}
+.item-btn svg{flex-shrink:0;opacity:.6;width:14px;height:14px}
+.item-btn:hover svg{opacity:1}
+.item-btn.on{border-color:var(--neon);background:rgba(0,255,157,.14);box-shadow:0 0 12px rgba(0,255,157,.3)}
+.paint-name{display:block;font-weight:700;color:#fff;font-size:.88rem}
+.paint-yield{display:block;font-size:.72rem;color:var(--neon);font-weight:700;margin:.1rem 0 .25rem}
+.paint-desc{display:block;font-size:.74rem;color:#b5bfcc;line-height:1.4}
+.paint-obs{display:block;font-size:.7rem;color:var(--amber);font-weight:600;margin-top:.25rem}
+
+.refresh-btn{
+  align-self:center;margin:.3rem 0 0;
+  background:none;border:1px solid rgba(255,255,255,.25);color:#c9d3df;
+  font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:600;
+  padding:.4rem .9rem;border-radius:20px;cursor:pointer;
+  display:flex;align-items:center;gap:.4rem;transition:all .2s;
+}
+.refresh-btn:hover{border-color:var(--neon);color:var(--neon)}
+.refresh-btn svg{width:13px;height:13px}
+
+/* Resposta / resultado */
+.answer-body{padding:1.1rem 1.3rem .4rem;text-align:center;display:flex;flex-direction:column;align-items:center}
+.answer-icon{font-size:2.2rem;margin-bottom:.5rem;display:block}
+.answer-text{font-size:.88rem;color:#ccd3dc;line-height:1.6;margin-bottom:1.2rem;word-break:break-word}
+.answer-text.warn{color:var(--amber);font-weight:600}
+.answer-cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  width:100%;
+  background:linear-gradient(135deg,#25d366,#1aab55);
+  color:#fff;font-weight:700;font-size:.88rem;
+  padding:.85rem;border-radius:50px;
+  text-decoration:none;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+  box-shadow:0 4px 16px rgba(37,211,102,.3);
+  transition:transform .2s,box-shadow .2s;
+}
+.answer-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,211,102,.5)}
+.answer-cta svg{width:18px;height:18px}
+.answer-cta.ghost{
+  background:transparent;border:1px solid rgba(255,255,255,.3);color:#dde3ea;
+  box-shadow:none;margin-top:.55rem;
+}
+.answer-cta.ghost:hover{border-color:var(--neon);color:var(--neon);box-shadow:none}
+
+.res-photo{
+  width:100%;height:104px;border-radius:14px;
+  background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;margin-bottom:.7rem;overflow:hidden;
+}
+.res-photo img{height:92px;width:auto;object-fit:contain;filter:drop-shadow(0 8px 12px rgba(0,255,157,.25))}
+.res-photo .emoji{font-size:3rem}
+.res-stats{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;width:100%;margin-bottom:.55rem}
+.stat{background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:.5rem}
+.stat span{display:block}
+.stat .k{font-size:.66rem;color:#aeb8c5;font-weight:600}
+.stat .v{font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;margin-top:.1rem}
+.stat .v.neon{color:var(--neon);text-shadow:0 0 10px rgba(0,255,157,.4)}
+.pack-box{
+  width:100%;background:rgba(0,0,0,.6);border:1.5px solid var(--neon);
+  border-radius:14px;padding:.65rem .8rem;margin-bottom:.7rem;
+  box-shadow:0 0 16px rgba(0,255,157,.2);
+}
+.pack-box .k{font-size:.7rem;color:var(--neon);font-weight:700}
+.pack-box .v{font-family:'Poppins',sans-serif;font-size:1.02rem;font-weight:700;color:var(--amber);line-height:1.3;margin:.2rem 0 .35rem}
+.pack-box .t{font-size:.72rem;color:#ccd3dc;border-top:1px solid rgba(255,255,255,.15);padding-top:.35rem}
+.pack-box .t b{color:#fff}
+.res-warn{width:100%;font-size:.72rem;color:var(--amber);font-weight:600;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:.5rem .7rem;margin-bottom:.9rem;line-height:1.4}
+
+/* Telas baixas: tudo continua cabendo */
+@media (max-height:760px){
+  .device-frame{padding:1rem .95rem .8rem;gap:.65rem}
+  .page{gap:.65rem}
+  .logo-img{width:100px;max-height:52px}
+  .logo-fallback{width:100px;height:50px}
+  .brand{font-size:1.15rem}
+  .form{gap:.5rem}
+  .input{padding:.5rem .6rem}
+  .social-icon{width:38px;height:38px}
+  .footer{padding-top:.5rem;gap:.25rem}
+}
+@media (max-height:660px){
+  .tagline,.subtitle{display:none}
+  .address{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
 </style>
+</head>
+<body>
 
+<div class="device-frame">
+  <div class="page">
 
-<!-- Ambient Neon Backlight behind screen -->
-<div class="ambient-neon-bg"></div>
-
-<!-- Main Container Wrapper - Centered & Compact for Mobile -->
-<div class="w-full max-w-md my-auto z-10 py-1 px-3">
-    
-    <!-- White Neon Frame Box -->
-    <div class="white-neon-frame rounded-2xl p-3.5 sm:p-5 relative overflow-hidden shadow-card-depth">
-        
-        <!-- Inner Ambient Glow -->
-        <div class="absolute -top-20 -left-20 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
-        <div class="absolute -bottom-20 -right-20 w-48 h-48 bg-brand-neon/15 rounded-full blur-2xl pointer-events-none"></div>
-
-        <!-- Header with logo -->
-        <div class="text-center mb-2">
-            <div class="inline-flex items-center justify-center gap-2">
-                <img src="logo.jpg" onerror="this.onerror=null; this.src='logo.jpg'; this.onerror=function(){this.src='https://placehold.co/100x100/FF6B00/FFFFFF?text=QUALY';};" alt="Qualyquimy Logo" class="w-9 h-9 sm:w-11 sm:h-11 object-contain logo-pulse rounded-lg">
-                
-                <div class="flex flex-col items-start">
-                    <span class="font-brand font-black text-xl sm:text-2xl tracking-tight text-white flex items-center gap-1 leading-none">
-                        QUALY<span class="text-brand-orange">QUIMY</span>
-                    </span>
-                    <span class="text-[9px] sm:text-[10px] tracking-[0.2em] text-slate-400 font-semibold uppercase mt-0.5">
-                        Tintas e Revestimentos
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Title & Action Buttons -->
-        <div class="text-center mb-3 space-y-1.5">
-            <h1 class="text-base sm:text-xl font-extrabold text-white tracking-tight leading-tight">
-                Calculadora <span class="text-neon-gradient">de Tintas Inteligente</span>
-            </h1>
-            <p class="text-[11px] text-slate-300 max-w-xs mx-auto leading-tight">
-                Passe o mouse nas tintas para ver detalhes e calcule rapidamente.
-            </p>
-
-            <div class="flex items-center justify-center gap-2 pt-1">
-                <!-- FAQ Trigger Button -->
-                <button onclick="openFaqModal()" class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-slate-900/90 hover:bg-brand-neon/20 border border-brand-neon/50 text-brand-neon font-bold text-[11px] transition-all shadow-sm cursor-pointer">
-                    <i class="fa-solid fa-circle-question"></i>
-                    <span>Dúvidas (FAQ)</span>
-                </button>
-
-                <!-- Peça sua tinta Button -->
-                <a href="https://wa.me/55119549650044?text=Usei%20a%20calculadora%20de%20tintas%20da%20Qualy%20e%20quero%20saber%20a%20respeito." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 border border-emerald-400 text-white font-bold text-[11px] transition-all shadow-md cursor-pointer">
-                    <i class="fa-brands fa-whatsapp text-xs"></i>
-                    <span>Peça sua tinta</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Form Input Fields -->
-        <form id="calcForm" onsubmit="event.preventDefault(); openResultModal();" class="space-y-2.5">
-            
-            <!-- Paint Type Selection with Hover Tooltips -->
-            <div>
-                <label for="tipoTinta" class="block text-[11px] font-semibold text-slate-300 mb-1 flex items-center justify-between">
-                    <span>Selecione a Tinta / Categoria</span>
-                    <span class="text-[9px] text-brand-neon font-bold"><i class="fa-solid fa-circle-info mr-0.5"></i>Hover p/ detalhes</span>
-                </label>
-                
-                <!-- Tooltip Hover Wrapper -->
-                <div class="tooltip-container">
-                    <select id="tipoTinta" onchange="updateYieldInfo()" class="app-select w-full rounded-xl px-2.5 py-2 text-xs sm:text-sm font-medium cursor-pointer">
-                        <option value="economica">Tinta Econômica Qualy Color (8,3 m²/L)</option>
-                        <option value="standard">Tinta Standard (11 m²/L)</option>
-                        <option value="premium">Tinta Premium (14 m²/L)</option>
-                        <option value="piso">Tinta para Piso (Até 6 m²/L)</option>
-                        <option value="emborrachada">Tinta Emborrachada (Até 10 m²/L)</option>
-                    </select>
-                    
-                    <!-- Floating Tooltip Box -->
-                    <div id="paintTooltip" class="custom-tooltip">
-                        <strong id="tooltipTitle" class="text-brand-neon block mb-1 uppercase font-bold text-[11px]">Econômica Qualy Color</strong>
-                        <span id="tooltipDesc" class="text-slate-200 block">Tinta qualy color economica, indicada para paredes novas, já emassadas, uso interno, parede sem umidade.</span>
-                        <span class="text-amber-300 block mt-1 font-semibold text-[10px]"><i class="fa-solid fa-triangle-exclamation mr-1"></i>Obs: não aplicar em dias úmidos, ou chuvosos.</span>
-                    </div>
-                </div>
-
-                <p id="yieldDescription" class="text-[10px] text-brand-neon mt-1 font-semibold">
-                    Rendimento: 8,3 m² por Litro (por demão)
-                </p>
-            </div>
-
-            <!-- Number of Demãos -->
-            <div>
-                <label for="demaos" class="block text-[11px] font-semibold text-slate-300 mb-1">
-                    Número de Demãos (Camadas)
-                </label>
-                <select id="demaos" class="app-select w-full rounded-xl px-2.5 py-1.5 text-xs sm:text-sm font-medium cursor-pointer">
-                    <option value="1">1 Demão</option>
-                    <option value="2" selected>2 Demãos (Recomendado)</option>
-                    <option value="3">3 Demãos</option>
-                </select>
-            </div>
-
-            <!-- Largura & Comprimento -->
-            <div class="grid grid-cols-2 gap-2">
-                <div>
-                    <label for="largura" class="block text-[11px] font-semibold text-slate-300 mb-1">
-                        Largura (m)
-                    </label>
-                    <input type="number" step="0.01" min="0.1" id="largura" value="4" placeholder="0.00" required class="app-input w-full rounded-xl px-2.5 py-1.5 text-xs sm:text-sm">
-                </div>
-                <div>
-                    <label for="comprimento" class="block text-[11px] font-semibold text-slate-300 mb-1">
-                        Comprimento (m)
-                    </label>
-                    <input type="number" step="0.01" min="0.1" id="comprimento" value="5" placeholder="0.00" required class="app-input w-full rounded-xl px-2.5 py-1.5 text-xs sm:text-sm">
-                </div>
-            </div>
-
-            <!-- Pé-direito, Janelas e Portas -->
-            <div class="grid grid-cols-3 gap-2">
-                <div>
-                    <label for="pedireito" class="block text-[10px] font-semibold text-slate-300 mb-1 truncate" title="Pé-direito (m)">
-                        Pé-direito (m)
-                    </label>
-                    <input type="number" step="0.01" min="0.1" id="pedireito" value="2.80" placeholder="2.80" required class="app-input w-full rounded-xl px-2 py-1.5 text-xs text-center">
-                </div>
-                <div>
-                    <label for="janelas" class="block text-[10px] font-semibold text-slate-300 mb-1 truncate" title="Janelas (m²)">
-                        Janelas (m²)
-                    </label>
-                    <input type="number" step="0.01" min="0" id="janelas" value="5" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-1.5 text-xs text-center">
-                </div>
-                <div>
-                    <label for="portas" class="block text-[10px] font-semibold text-slate-300 mb-1 truncate" title="Portas (m²)">
-                        Portas (m²)
-                    </label>
-                    <input type="number" step="0.01" min="0" id="portas" value="0" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-1.5 text-xs text-center">
-                </div>
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" class="w-full mt-1.5 py-2.5 px-4 rounded-xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-extrabold text-sm flex items-center justify-center gap-2 transition-all duration-300 shadow-neon-button hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
-                <i class="fa-solid fa-calculator text-base"></i>
-                <span>Calcular Quantidade de Tinta</span>
-            </button>
-        </form>
-
-    </div>
-</div>
-
-<!-- Footer Section with Google Maps Link -->
-<div class="w-full max-w-md px-3 text-center space-y-1.5 mt-2 mb-8 z-10">
-    <div class="flex flex-wrap items-center justify-center gap-1.5 text-emerald-400 text-[11px] font-semibold bg-slate-900/90 py-1.5 px-2.5 rounded-xl border border-emerald-500/20 backdrop-blur-sm shadow-md">
-        <div class="flex items-center gap-1 truncate">
-            <i class="fa-solid fa-location-dot text-brand-neon shrink-0"></i>
-            <a href="https://maps.google.com/?q=Rua+Leiria,+45+-+Chácara+Cuiabá,+Itaquaquecetuba+-+SP" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-brand-neon underline underline-offset-2 transition-colors truncate">
-                Rua Leiria, 45 - Chácara Cuiabá, Itaquaquecetuba - SP
-            </a>
-        </div>
+    <!-- Logo / Marca -->
+    <div class="logo-wrap">
+      <div class="logo-frame">
+        <img class="logo-img" src="logo.jpg" alt="Logo Qualy Quimy"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="logo-fallback">QUALY</div>
+      </div>
+      <div>
+        <div class="brand">Qualy <em>Quimy</em></div>
+        <div class="tagline">Tintas e Revestimentos · Itaquaquecetuba</div>
+      </div>
     </div>
 
-    <div class="flex flex-wrap items-center justify-center gap-2 text-emerald-400 text-[10px] font-semibold bg-slate-900/80 py-1.5 px-2.5 rounded-xl border border-emerald-500/20 backdrop-blur-sm">
-        <div class="flex items-center gap-1">
-            <i class="fa-solid fa-lock text-emerald-400"></i>
-            <span>SSL Certificado 100% Seguro</span>
-        </div>
-        <span class="text-slate-600">•</span>
-        <span class="text-slate-300">Conexão Criptografada</span>
+    <!-- Título -->
+    <div>
+      <h1 class="title">Calculadora de Tintas</h1>
+      <p class="subtitle">Informe as medidas e veja quantos litros você precisa.</p>
     </div>
 
-    <footer class="text-[10px] text-slate-400 font-medium tracking-wide pt-0.5">
-        Desenvolvido por <a href="https://avaliar.impulsoweb10.com.br" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-brand-neon font-semibold underline underline-offset-2 transition-colors">ImpulsoWeb10</a>
-    </footer>
-</div>
+    <!-- Formulário -->
+    <form class="form" id="calcForm" novalidate>
 
-<!-- Marquee Banner Floating at Bottom -->
-<a href="https://wa.me/55119549650044?text=Usei%20a%20calculadora%20de%20tintas%20da%20Qualy%20e%20quero%20saber%20a%20respeito." target="_blank" rel="noopener noreferrer" class="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-t border-brand-neon/40 py-1.5 overflow-hidden z-40 select-none shadow-2xl hover:bg-slate-900 transition-colors group" title="Peça sua tinta no WhatsApp">
-    <div class="marquee-track flex items-center gap-6 whitespace-nowrap text-xs font-bold text-slate-200">
-        <div class="flex items-center gap-6">
-            <span class="flex items-center gap-1.5 text-brand-neon group-hover:underline">
-                <i class="fa-brands fa-whatsapp text-emerald-400 animate-pulse text-sm"></i>
-                <span class="tracking-wide">Peça sua tinta agora no WhatsApp <strong class="text-white bg-emerald-600/80 px-1.5 py-0.5 rounded-full text-[9px] ml-1 uppercase">Clique Aqui</strong></span>
-            </span>
-            <span class="text-slate-600">•</span>
-            <span class="flex items-center gap-1.5 text-amber-300">
-                <i class="fa-solid fa-rocket"></i>
-                <span>Calculadora Interativa de Tintas Qualyquimy</span>
-            </span>
-            <span class="text-slate-600">•</span>
-        </div>
-        <div class="flex items-center gap-6">
-            <span class="flex items-center gap-1.5 text-brand-neon group-hover:underline">
-                <i class="fa-brands fa-whatsapp text-emerald-400 animate-pulse text-sm"></i>
-                <span class="tracking-wide">Peça sua tinta agora no WhatsApp <strong class="text-white bg-emerald-600/80 px-1.5 py-0.5 rounded-full text-[9px] ml-1 uppercase">Clique Aqui</strong></span>
-            </span>
-            <span class="text-slate-600">•</span>
-            <span class="flex items-center gap-1.5 text-amber-300">
-                <i class="fa-solid fa-rocket"></i>
-                <span>Calculadora Interativa de Tintas Qualyquimy</span>
-            </span>
-            <span class="text-slate-600">•</span>
-        </div>
-    </div>
-</a>
-
-<!-- INTERACTIVE FAQ MODAL -->
-<div id="faqModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-3 transition-all duration-300 overflow-y-auto">
-    <div class="absolute inset-0 bg-brand-neon/15 pointer-events-none blur-3xl"></div>
-
-    <div class="relative w-full max-w-md faq-modal-frame rounded-2xl p-4 shadow-2xl modal-fade-in my-auto max-h-[88vh] flex flex-col justify-between overflow-y-auto z-10">
-        
-        <!-- Close Button 'X' -->
-        <button onclick="closeFaqModal()" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/50 hover:bg-brand-neon/30 text-slate-200 hover:text-white border border-white/40 flex items-center justify-center transition-all cursor-pointer z-20" title="Fechar">
-            <i class="fa-solid fa-xmark text-sm"></i>
+      <div class="field">
+        <span class="label">Tinta</span>
+        <button type="button" class="pick-btn" onclick="openSheet('panelPaint')" aria-haspopup="dialog" aria-label="Escolher tipo de tinta">
+          <span>
+            <span class="pick-name" id="pickName">Tinta Econômica Qualy Color</span>
+            <span class="pick-yield" id="pickYield">Rende 8,3 m² por litro (por demão)</span>
+          </span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
         </button>
+      </div>
 
-        <div>
-            <div class="text-center border-b border-white/20 pb-2.5 pr-6">
-                <span class="inline-flex items-center gap-1 text-brand-neon text-[10px] font-extrabold tracking-wider uppercase">
-                    <i class="fa-solid fa-circle-question"></i> FAQ Semântico
-                </span>
-                <h2 class="text-lg sm:text-xl font-black text-white mt-0.5 tracking-tight">
-                    Dúvidas Frequentes sobre Tintas
-                </h2>
-            </div>
-
-            <!-- FAQ Semantic List (5 Key Ideas) -->
-            <div class="space-y-2.5 text-xs mt-3 max-h-[48vh] overflow-y-auto pr-1">
-                <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
-                    <h3 class="font-bold text-brand-neon mb-0.5 text-xs">1. Qual a diferença entre tinta Econômica, Standard e Premium?</h3>
-                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta econômica faz 8,3 m²/L, ideal para paredes novas e internas já emassadas. A Standard faz 11 m²/L e a Premium alcança 14 m²/L, oferecendo excelente cobertura e rendimento superior.</p>
-                </div>
-
-                <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
-                    <h3 class="font-bold text-brand-neon mb-0.5 text-xs">2. Posso pintar em dias chuvosos ou com alta umidade?</h3>
-                    <p class="text-slate-300 text-[11px] leading-relaxed text-amber-300 font-semibold">Não! Nunca aplique tinta em dias úmidos ou chuvosos. A umidade excessiva compromete a secagem, causando manchas, bolhas e perda de aderência.</p>
-                </div>
-
-                <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
-                    <h3 class="font-bold text-brand-neon mb-0.5 text-xs">3. Como calcular quantas demãos devo passar na parede?</h3>
-                    <p class="text-slate-300 text-[11px] leading-relaxed">Geralmente recomenda-se o uso de 2 demãos para uma cobertura perfeita e uniforme. Em superfícies novas, pode ser necessária uma terceira demão para acabamento impecável.</p>
-                </div>
-
-                <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
-                    <h3 class="font-bold text-brand-neon mb-0.5 text-xs">4. Para que serve a tinta emborrachada e onde aplicar?</h3>
-                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta emborrachada faz até 10 m²/L, criando uma película elástica ideal para áreas externas sujeitas a fissuras e infiltrações, impermeabilizando fachadas.</p>
-                </div>
-
-                <div class="bg-black/50 p-2.5 rounded-xl border border-slate-800">
-                    <h3 class="font-bold text-brand-neon mb-0.5 text-xs">5. Qual o rendimento da tinta para piso em comparação às outras?</h3>
-                    <p class="text-slate-300 text-[11px] leading-relaxed">A tinta para piso rende até 6 m²/L por demão, sendo desenvolvida especialmente para suportar tráfego de pessoas e veículos leves com alta resistência.</p>
-                </div>
-            </div>
+      <div class="field">
+        <span class="label">Demãos</span>
+        <div class="seg" id="seg" role="group" aria-label="Número de demãos">
+          <button type="button" data-d="1">1 demão</button>
+          <button type="button" data-d="2" class="on">2 demãos</button>
+          <button type="button" data-d="3">3 demãos</button>
         </div>
+      </div>
 
-        <!-- Modal Bottom Controls: Voltar & Atualizar -->
-        <div class="mt-3 pt-2.5 border-t border-white/20 flex items-center justify-between gap-2">
-            <button onclick="closeFaqModal()" class="py-2 px-3.5 rounded-xl bg-black/60 hover:bg-black/80 text-slate-300 hover:text-white font-bold text-xs transition-all flex items-center justify-center gap-1 cursor-pointer border border-white/30">
-                <i class="fa-solid fa-arrow-left text-[11px]"></i>
-                <span>Voltar</span>
-            </button>
-
-            <button onclick="refreshApp()" class="py-2 px-3.5 rounded-xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-black text-xs transition-all flex items-center justify-center gap-1 cursor-pointer shadow-md">
-                <i class="fa-solid fa-rotate text-[11px]"></i>
-                <span>Atualizar</span>
-            </button>
+      <div class="grid2">
+        <div class="field">
+          <label for="largura">Largura (m)</label>
+          <input class="input" type="number" inputmode="decimal" step="0.01" min="0.1" id="largura" value="4" placeholder="0,00">
         </div>
+        <div class="field">
+          <label for="comprimento">Comprimento (m)</label>
+          <input class="input" type="number" inputmode="decimal" step="0.01" min="0.1" id="comprimento" value="5" placeholder="0,00">
+        </div>
+      </div>
 
+      <div class="grid3">
+        <div class="field">
+          <label for="pedireito">Pé-direito (m)</label>
+          <input class="input center" type="number" inputmode="decimal" step="0.01" min="0.1" id="pedireito" value="2.80" placeholder="2,80">
+        </div>
+        <div class="field">
+          <label for="janelas">Janelas (m²)</label>
+          <input class="input center" type="number" inputmode="decimal" step="0.01" min="0" id="janelas" value="5" placeholder="0,00">
+        </div>
+        <div class="field">
+          <label for="portas">Portas (m²)</label>
+          <input class="input center" type="number" inputmode="decimal" step="0.01" min="0" id="portas" value="0" placeholder="0,00">
+        </div>
+      </div>
+
+      <p class="form-msg" id="formMsg" role="alert"></p>
+
+      <button type="submit" class="btn-calc">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 18.5h.01M12 18.5h.01M16 18.5h.01"/></svg>
+        Calcular tinta
+      </button>
+    </form>
+
+    <!-- Acesso rápido -->
+    <div class="social-row" aria-label="Contato e ajuda">
+      <a class="social-btn" id="waQuick" href="#" target="_blank" rel="noopener" aria-label="Pedir tinta pelo WhatsApp">
+        <div class="social-icon" style="background:linear-gradient(135deg,#25d366,#128c7e)">
+          <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.84L.057 23.057a.75.75 0 0 0 .916.927l5.358-1.476A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        </div>
+        <span class="social-label">WhatsApp</span>
+      </a>
+
+      <a class="social-btn" href="https://maps.google.com/?q=Rua+Leiria,+45+-+Chácara+Cuiabá,+Itaquaquecetuba+-+SP" target="_blank" rel="noopener" aria-label="Como chegar no Google Maps">
+        <div class="social-icon" style="background:linear-gradient(135deg,#ea4335,#c5221f)">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#fff"/><circle cx="12" cy="9" r="2.5" fill="#ea4335"/></svg>
+        </div>
+        <span class="social-label">Maps</span>
+      </a>
+
+      <a class="social-btn" href="https://tintasqualyquimy.com.br" target="_blank" rel="noopener" aria-label="Visitar o site">
+        <div class="social-icon" style="background:linear-gradient(135deg,#ff6b00,#b84a00)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        </div>
+        <span class="social-label">Site</span>
+      </a>
+
+      <button type="button" class="social-btn" onclick="openFaq()" aria-haspopup="dialog" aria-label="Abrir perguntas frequentes">
+        <div class="social-icon" style="background:linear-gradient(135deg,#0f2a3f,#07131e)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00ff9d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <span class="social-label">Dúvidas</span>
+      </button>
     </div>
+
+    <!-- Endereço -->
+    <div class="address">
+      <a href="https://maps.google.com/?q=Rua+Leiria,+45+-+Chácara+Cuiabá,+Itaquaquecetuba+-+SP" target="_blank" rel="noopener">Rua Leiria, 45</a> · Chácara Cuiabá<br>
+      Itaquaquecetuba, SP
+    </div>
+
+    <!-- Faixa rolante -->
+    <a class="quote-banner" id="waBanner" href="#" target="_blank" rel="noopener" aria-label="Peça sua tinta no WhatsApp">
+      <div class="quote-track">
+        <span class="quote-item">Peça sua tinta no WhatsApp</span>
+        <span class="quote-item">Calcule e economize</span>
+        <span class="quote-item">Qualy Quimy · Tintas e Revestimentos</span>
+        <span class="quote-item">Peça sua tinta no WhatsApp</span>
+        <span class="quote-item">Calcule e economize</span>
+        <span class="quote-item">Qualy Quimy · Tintas e Revestimentos</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Rodapé -->
+  <div class="footer">
+    <p class="footer-promo">Quer uma calculadora personalizada assim para o seu negócio?<br>
+      <a href="https://wa.me/5511954950044?text=Ol%C3%A1!%20Vi%20a%20calculadora%20da%20Qualy%20Quimy%20e%20quero%20um%20projeto%20assim." target="_blank" rel="noopener">👉 Saiba mais aqui</a>
+    </p>
+    <div class="footer-bottom-row">
+      <div class="footer-ssl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>Protegido por SSL</span>
+      </div>
+      <span>•</span>
+      <p class="footer-dev">Desenvolvido por <a href="https://avaliar.impulsoweb10.com.br" target="_blank" rel="noopener">ImpulsoWeb10</a></p>
+    </div>
+  </div>
 </div>
 
-<!-- RESULT MODAL -->
-<div id="resultModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-3 transition-all duration-300 overflow-y-auto">
-    <div class="absolute inset-0 bg-brand-neon/15 pointer-events-none blur-3xl"></div>
+<!-- Modal (bottom sheet) -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Detalhes da calculadora">
+  <div class="sheet" id="sheet">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="sheet-inner">
 
-    <div class="relative w-full max-w-md result-modal-frame rounded-2xl p-4 shadow-2xl modal-fade-in my-auto max-h-[90vh] flex flex-col justify-between overflow-y-auto z-10">
-        
-        <button onclick="closeResultModal()" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/50 hover:bg-brand-neon/30 text-slate-200 hover:text-white border border-white/40 flex items-center justify-center transition-all cursor-pointer z-20">
-            <i class="fa-solid fa-xmark text-sm"></i>
+      <!-- Painel: escolher tinta -->
+      <div class="panel" id="panelPaint">
+        <div class="sheet-head">
+          <span class="sheet-title">Escolha a tinta</span>
+          <button class="btn-close" onclick="closeSheet()" aria-label="Fechar">✕</button>
+        </div>
+        <div class="faq-list" id="paintList"></div>
+      </div>
+
+      <!-- Painel: lista de dúvidas -->
+      <div class="panel" id="panelFaq">
+        <div class="sheet-head">
+          <span class="sheet-title">Dúvidas Frequentes</span>
+          <button class="btn-close" onclick="closeSheet()" aria-label="Fechar">✕</button>
+        </div>
+        <div class="faq-list" id="faqList" role="list"></div>
+        <button type="button" class="refresh-btn" onclick="window.location.reload()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          Atualizar
         </button>
+      </div>
 
-        <div class="space-y-2.5">
-            
-            <div class="text-center border-b border-white/20 pb-2 pr-6">
-                <span class="inline-flex items-center gap-1 text-brand-neon text-[10px] font-extrabold tracking-wider uppercase">
-                    <i class="fa-solid fa-circle-check"></i> Cálculo Concluído
-                </span>
-                <h2 id="modalResTitle" class="text-lg sm:text-xl font-black text-white mt-0.5 tracking-tight">
-                    Resultado da Tinta
-                </h2>
-                <p id="modalResSubtitle" class="text-[10px] sm:text-xs text-slate-300 mt-0.5">
-                    Categoria e rendimento aplicado
-                </p>
-            </div>
-
-            <!-- Product Image Container with optimized mobile height -->
-            <div class="w-full flex items-center justify-center bg-black/40 rounded-xl p-2 border border-white/10">
-                <img id="modalPaintImage" src="" alt="Lata de Tinta" class="h-36 sm:h-40 w-auto object-contain drop-shadow-[0_10px_15px_rgba(0,255,157,0.25)]">
-            </div>
-
-            <div class="grid grid-cols-1 gap-2">
-                <div class="grid grid-cols-2 gap-2">
-                    <div class="bg-black/60 border border-white/20 p-2 rounded-xl text-center">
-                        <span class="text-[9px] font-semibold text-slate-300 uppercase tracking-wider block">Área Líquida</span>
-                        <span id="modalResArea" class="text-sm sm:text-base font-black text-white mt-0.5 block">0 m²</span>
-                    </div>
-                    <div class="bg-black/60 border border-white/20 p-2 rounded-xl text-center">
-                        <span class="text-[9px] font-semibold text-slate-300 uppercase tracking-wider block">Necessário</span>
-                        <span id="modalResLitros" class="text-sm sm:text-base font-black text-brand-neon mt-0.5 block">0 L</span>
-                    </div>
-                </div>
-
-                <div class="bg-black/80 border-2 border-brand-neon p-2.5 rounded-xl space-y-1 shadow-lg">
-                    <span class="text-[11px] font-bold text-brand-neon uppercase tracking-wider block">
-                        <i class="fa-solid fa-boxes-packing text-brand-neon mr-1"></i> Sugestão de Embalagens:
-                    </span>
-                    <div id="modalResEmbalagem" class="text-sm sm:text-base font-black text-amber-300 leading-snug tracking-wide">
-                        --
-                    </div>
-                    <div id="modalResTotalCovered" class="text-[11px] text-slate-200 pt-1 border-t border-white/15 flex items-center gap-1 font-medium">
-                        <i class="fa-solid fa-circle-check text-brand-neon"></i>
-                        <span>Total fornecido: <strong id="modalCoveredLitros" class="text-white font-extrabold text-xs">0 L</strong></span>
-                    </div>
-                </div>
-            </div>
-
-            <p class="text-[10px] text-amber-300 bg-black/40 p-2 rounded-xl border border-white/10 leading-snug font-semibold">
-                <i class="fa-solid fa-triangle-exclamation mr-1"></i>
-                Atenção: Não aplicar em dias úmidos, ou chuvosos.
-            </p>
+      <!-- Painel: resposta da dúvida -->
+      <div class="panel" id="panelAnswer">
+        <div class="answer-head">
+          <button class="btn-back" onclick="showPanel('panelFaq')" aria-label="Voltar">←</button>
+          <div class="answer-title" id="answerTitle"></div>
+          <button class="btn-close" onclick="closeSheet()" aria-label="Fechar">✕</button>
         </div>
-
-        <div class="mt-2.5 pt-2 border-t border-white/20 flex flex-col gap-2">
-            <a id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/80 hover:scale-[1.01] active:scale-[0.99] cursor-pointer uppercase tracking-wider">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
-                <span>Peça sua tinta no WhatsApp</span>
-            </a>
-
-            <div class="flex items-center justify-between gap-2">
-                <button onclick="closeResultModal()" class="py-2 px-3 rounded-xl bg-black/60 hover:bg-black/80 text-slate-300 hover:text-white font-bold text-xs transition-all flex items-center justify-center gap-1 cursor-pointer border border-white/30 shrink-0">
-                    <i class="fa-solid fa-arrow-left text-[11px]"></i>
-                    <span>Voltar</span>
-                </button>
-
-                <a href="https://wa.me/55119549650044?text=Usei%20a%20calculadora%20de%20tintas%20da%20Qualy%20e%20quero%20saber%20a%20respeito." target="_blank" rel="noopener noreferrer" class="py-2 px-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-amber-300 hover:text-amber-200 border border-amber-500/40 text-[10px] font-bold transition-all flex items-center justify-center gap-1 text-center truncate">
-                    <i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i>
-                    <span>Sobre link personalizado</span>
-                </a>
-            </div>
+        <div class="answer-body">
+          <span class="answer-icon" id="answerIcon"></span>
+          <p class="answer-text" id="answerText"></p>
+          <a id="answerCta" href="#" class="answer-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.84L.057 23.057a.75.75 0 0 0 .916.927l5.358-1.476A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            <span>Falar no WhatsApp</span>
+          </a>
         </div>
+      </div>
+
+      <!-- Painel: resultado -->
+      <div class="panel" id="panelResult">
+        <div class="sheet-head">
+          <span class="sheet-title">Sua tinta</span>
+          <button class="btn-close" onclick="closeSheet()" aria-label="Fechar">✕</button>
+        </div>
+        <div class="answer-body">
+          <div class="res-photo" id="resPhoto"></div>
+          <div class="answer-title" id="resTitle" style="flex:none;margin-bottom:.1rem"></div>
+          <p class="subtitle" id="resSub" style="margin:0 0 .7rem"></p>
+
+          <div class="res-stats">
+            <div class="stat"><span class="k">Área a pintar</span><span class="v" id="resArea">0 m²</span></div>
+            <div class="stat"><span class="k">Tinta necessária</span><span class="v neon" id="resLitros">0 L</span></div>
+          </div>
+
+          <div class="pack-box">
+            <div class="k">Embalagens sugeridas</div>
+            <div class="v" id="resPack">--</div>
+            <div class="t">Total: <b id="resCovered">0 L</b></div>
+          </div>
+
+          <p class="res-warn">⚠️ Não aplicar em dias úmidos ou chuvosos.</p>
+
+          <a id="resWa" href="#" class="answer-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.84L.057 23.057a.75.75 0 0 0 .916.927l5.358-1.476A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            <span>Peça sua tinta no WhatsApp</span>
+          </a>
+          <button type="button" class="answer-cta ghost" onclick="closeSheet()">← Voltar e ajustar medidas</button>
+        </div>
+      </div>
 
     </div>
+  </div>
 </div>
 
-<!-- JavaScript Application Logic -->
 <script>
-    const PAINT_TYPES = {
-        economica: { 
-            name: 'Tinta Econômica Qualy Color', 
-            yieldPerL: 8.3, 
-            desc: 'Tinta qualy color economica, indicada para paredes novas, já emassadas, uso interno, parede sem umidade.',
-            yieldText: 'Rendimento: 8,3 m² por Litro (por demão)',
-            img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80'
-        },
-        standard: { 
-            name: 'Tinta Standard', 
-            yieldPerL: 11.0, 
-            desc: 'Tinta standard, uso interno externo, ótima cobertura e rendimento.',
-            yieldText: 'Rendimento: 11 m² por Litro (por demão)',
-            img: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80'
-        },
-        premium: { 
-            name: 'Tinta Premium', 
-            yieldPerL: 14.0, 
-            desc: 'Tinta premium, uso interno externo, ótima cobertura e rendimento.',
-            yieldText: 'Rendimento: 14 m² por Litro (por demão)',
-            img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80'
-        },
-        piso: { 
-            name: 'Tinta para Piso', 
-            yieldPerL: 6.0, 
-            desc: 'Tinta piso, uso interno externo, ótima cobertura e rendimento.',
-            yieldText: 'Rendimento: Até 6 m² por Litro (por demão)',
-            img: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80'
-        },
-        emborrachada: { 
-            name: 'Tinta Emborrachada', 
-            yieldPerL: 10.0, 
-            desc: 'Tinta emborrachada, uso interno externo, ótima cobertura e rendimento.',
-            yieldText: 'Rendimento: Até 10 m² por Litro (por demão)',
-            img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80'
-        }
-    };
+/* ===== Configuração ===== */
+// Número do WhatsApp usado em todos os botões (mantido igual ao do arquivo original)
+const WA_NUMBER = '55119549650044';
+const WA_BASE_MSG = 'Usei a calculadora de tintas da Qualy e quero saber a respeito.';
 
-    const PACKAGES = [
-        { size: 18, label: 'lata 18L' },
-        { size: 3.6, label: 'galão 3.6L' },
-        { size: 0.9, label: 'lata 900ml' }
-    ];
+const PAINT_TYPES = {
+  economica: {
+    name: 'Tinta Econômica Qualy Color',
+    yieldPerL: 8.3,
+    yieldText: '8,3 m² por litro (por demão)',
+    desc: 'Indicada para paredes novas, já emassadas, uso interno e parede sem umidade.',
+    obs: 'Não aplicar em dias úmidos ou chuvosos.',
+    img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80'
+  },
+  standard: {
+    name: 'Tinta Standard',
+    yieldPerL: 11.0,
+    yieldText: '11 m² por litro (por demão)',
+    desc: 'Uso interno e externo, ótima cobertura e rendimento.',
+    img: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80'
+  },
+  premium: {
+    name: 'Tinta Premium',
+    yieldPerL: 14.0,
+    yieldText: '14 m² por litro (por demão)',
+    desc: 'Uso interno e externo, ótima cobertura e rendimento.',
+    img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80'
+  },
+  piso: {
+    name: 'Tinta para Piso',
+    yieldPerL: 6.0,
+    yieldText: 'Até 6 m² por litro (por demão)',
+    desc: 'Uso interno e externo, ótima cobertura e rendimento.',
+    img: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80'
+  },
+  emborrachada: {
+    name: 'Tinta Emborrachada',
+    yieldPerL: 10.0,
+    yieldText: 'Até 10 m² por litro (por demão)',
+    desc: 'Uso interno e externo, ótima cobertura e rendimento.',
+    img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80'
+  }
+};
 
-    function updateYieldInfo() {
-        const select = document.getElementById('tipoTinta');
-        const info = PAINT_TYPES[select.value];
-        
-        document.getElementById('yieldDescription').textContent = info.yieldText;
-        document.getElementById('tooltipTitle').textContent = info.name;
-        document.getElementById('tooltipDesc').textContent = info.desc;
+const PACKAGES = [
+  { size: 18,  label: 'lata 18L' },
+  { size: 3.6, label: 'galão 3.6L' },
+  { size: 0.9, label: 'lata 900ml' }
+];
+
+const FAQS = [
+  {
+    q: 'Qual a diferença entre tinta Econômica, Standard e Premium?',
+    icon: '🎨',
+    a: 'A econômica rende 8,3 m²/L e é ideal para paredes novas e internas já emassadas. A Standard rende 11 m²/L e a Premium chega a 14 m²/L, com excelente cobertura.',
+    msg: 'Olá! Quero saber a diferença entre as tintas Econômica, Standard e Premium.'
+  },
+  {
+    q: 'Posso pintar em dias chuvosos ou úmidos?',
+    icon: '🌧️',
+    a: 'Não! Nunca aplique tinta em dias úmidos ou chuvosos. A umidade em excesso prejudica a secagem e causa manchas, bolhas e perda de aderência.',
+    warn: true,
+    msg: 'Olá! Tenho uma dúvida sobre a melhor hora para aplicar a tinta.'
+  },
+  {
+    q: 'Quantas demãos devo passar na parede?',
+    icon: '🖌️',
+    a: 'O recomendado são 2 demãos para uma cobertura uniforme. Em superfícies novas, pode ser necessária uma terceira demão para um acabamento perfeito.',
+    msg: 'Olá! Quero ajuda para saber quantas demãos preciso passar.'
+  },
+  {
+    q: 'Para que serve a tinta emborrachada?',
+    icon: '🏠',
+    a: 'Rende até 10 m²/L e forma uma película elástica, ideal para áreas externas com fissuras e infiltrações, protegendo fachadas.',
+    msg: 'Olá! Quero saber mais sobre a tinta emborrachada.'
+  },
+  {
+    q: 'Qual o rendimento da tinta para piso?',
+    icon: '🧱',
+    a: 'A tinta para piso rende até 6 m²/L por demão e foi feita para resistir ao tráfego de pessoas e veículos leves.',
+    msg: 'Olá! Quero saber mais sobre a tinta para piso.'
+  }
+];
+
+const CHEVRON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>';
+
+/* ===== Estado ===== */
+let currentPaint = 'economica';
+let currentDemaos = 2;
+
+const overlay = document.getElementById('overlay');
+const PANELS = ['panelPaint', 'panelFaq', 'panelAnswer', 'panelResult'];
+
+function waLink(text) {
+  return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
+}
+const fmt = n => n.toFixed(1).replace('.', ',');
+
+/* ===== Modal ===== */
+function showPanel(id) {
+  PANELS.forEach(p => document.getElementById(p).classList.toggle('visible', p === id));
+  document.querySelector('.sheet-inner').scrollTop = 0;
+}
+function openSheet(id) {
+  showPanel(id);
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSheet() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function openFaq() { openSheet('panelFaq'); }
+
+overlay.addEventListener('click', e => { if (e.target === overlay) closeSheet(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+
+/* ===== Lista de tintas ===== */
+function renderPaintList() {
+  const list = document.getElementById('paintList');
+  list.innerHTML = '';
+  Object.keys(PAINT_TYPES).forEach(key => {
+    const p = PAINT_TYPES[key];
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'item-btn' + (key === currentPaint ? ' on' : '');
+    btn.innerHTML =
+      '<span>' +
+        '<span class="paint-name"></span>' +
+        '<span class="paint-yield"></span>' +
+        '<span class="paint-desc"></span>' +
+        (p.obs ? '<span class="paint-obs"></span>' : '') +
+      '</span>' + CHEVRON;
+    btn.querySelector('.paint-name').textContent = p.name;
+    btn.querySelector('.paint-yield').textContent = 'Rende ' + p.yieldText;
+    btn.querySelector('.paint-desc').textContent = p.desc;
+    if (p.obs) btn.querySelector('.paint-obs').textContent = '⚠️ ' + p.obs;
+    btn.onclick = () => selectPaint(key);
+    list.appendChild(btn);
+  });
+}
+
+function selectPaint(key) {
+  currentPaint = key;
+  const p = PAINT_TYPES[key];
+  document.getElementById('pickName').textContent = p.name;
+  document.getElementById('pickYield').textContent = 'Rende ' + p.yieldText;
+  renderPaintList();
+  closeSheet();
+}
+
+/* ===== FAQ ===== */
+function renderFaq() {
+  const list = document.getElementById('faqList');
+  FAQS.forEach((faq, i) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'item-btn';
+    btn.setAttribute('role', 'listitem');
+    btn.innerHTML = '<span></span>' + CHEVRON;
+    btn.firstChild.textContent = faq.q;
+    btn.onclick = () => showAnswer(i);
+    list.appendChild(btn);
+  });
+}
+
+function showAnswer(i) {
+  const faq = FAQS[i];
+  document.getElementById('answerTitle').textContent = faq.q;
+  document.getElementById('answerIcon').textContent = faq.icon;
+  const txt = document.getElementById('answerText');
+  txt.textContent = faq.a;
+  txt.classList.toggle('warn', !!faq.warn);
+  document.getElementById('answerCta').href = waLink(faq.msg);
+  showPanel('panelAnswer');
+}
+
+/* ===== Demãos ===== */
+document.getElementById('seg').addEventListener('click', e => {
+  const b = e.target.closest('button[data-d]');
+  if (!b) return;
+  currentDemaos = parseInt(b.dataset.d, 10);
+  document.querySelectorAll('#seg button').forEach(x => x.classList.toggle('on', x === b));
+});
+
+/* ===== Cálculo ===== */
+function num(id) { return parseFloat(document.getElementById(id).value) || 0; }
+
+function calculate() {
+  const paint = PAINT_TYPES[currentPaint];
+  const largura = num('largura');
+  const comprimento = num('comprimento');
+  const pedireito = num('pedireito');
+  const janelas = num('janelas');
+  const portas = num('portas');
+
+  const areaBruta = (largura + comprimento) * 2 * pedireito;
+  const areaLiquida = Math.max(areaBruta - janelas - portas, 0);
+  const totalLitros = (areaLiquida * currentDemaos) / paint.yieldPerL;
+
+  return {
+    paint, areaLiquida, totalLitros,
+    demaos: currentDemaos,
+    packaging: getPackagingSuggestion(totalLitros, PACKAGES),
+    valid: largura > 0 && comprimento > 0 && pedireito > 0
+  };
+}
+
+function getPackagingSuggestion(requiredLiters, packages) {
+  if (requiredLiters <= 0) return { text: 'Nenhuma embalagem necessária', totalCovered: 0 };
+
+  const sorted = [...packages].sort((a, b) => b.size - a.size);
+  const counts = new Map();
+  let remaining = requiredLiters;
+  let totalCovered = 0;
+
+  // Preenche com as embalagens maiores primeiro
+  sorted.forEach(pkg => {
+    const count = Math.floor((remaining + 1e-9) / pkg.size);
+    if (count > 0) {
+      counts.set(pkg, count);
+      remaining -= count * pkg.size;
+      totalCovered += count * pkg.size;
     }
+  });
 
-    window.onload = function() {
-        updateYieldInfo();
-    };
+  // O que sobrar: usa a MENOR embalagem que cobre o resto
+  if (remaining > 1e-6) {
+    const fit = [...sorted].reverse().find(p => p.size >= remaining - 1e-9) || sorted[sorted.length - 1];
+    counts.set(fit, (counts.get(fit) || 0) + 1);
+    totalCovered += fit.size;
+  }
 
-    function openFaqModal() {
-        const modal = document.getElementById('faqModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.body.style.overflow = 'hidden';
-    }
+  const text = sorted
+    .filter(p => counts.has(p))
+    .map(p => counts.get(p) + '× ' + p.label)
+    .join(' + ');
 
-    function closeFaqModal() {
-        const modal = document.getElementById('faqModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        document.body.style.overflow = '';
-    }
+  return { text, totalCovered };
+}
 
-    function refreshApp() {
-        window.location.reload();
-    }
+function showResult() {
+  const msg = document.getElementById('formMsg');
+  const d = calculate();
 
-    function openResultModal() {
-        const data = calculate();
-        const paintInfo = PAINT_TYPES[document.getElementById('tipoTinta').value];
-        
-        document.getElementById('modalResTitle').textContent = data.paintName;
-        document.getElementById('modalResSubtitle').textContent = `${data.demaos} demão(s) | Rendimento: ${data.yieldPerL} m²/L`;
-        document.getElementById('modalResArea').textContent = `${data.areaLiquida.toFixed(1).replace('.', ',')} m²`;
-        document.getElementById('modalResLitros').textContent = `${data.totalLitros.toFixed(1).replace('.', ',')} L`;
-        document.getElementById('modalResEmbalagem').textContent = data.packaging.text;
-        document.getElementById('modalCoveredLitros').textContent = `${data.packaging.totalCovered.toFixed(1).replace('.', ',')} L`;
-        
-        const imgEl = document.getElementById('modalPaintImage');
-        imgEl.src = paintInfo.img;
-        imgEl.alt = data.paintName;
+  if (!d.valid) {
+    msg.textContent = 'Preencha largura, comprimento e pé-direito.';
+    return;
+  }
+  if (d.areaLiquida <= 0) {
+    msg.textContent = 'Janelas e portas ocupam toda a parede. Confira os valores.';
+    return;
+  }
+  msg.textContent = '';
 
-        const waText = encodeURIComponent(`Usei a calculadora de tintas da qualy e quero saber a respeito. Fiz o cálculo para *${data.paintName}* (${data.demaos} demãos), área de ${data.areaLiquida.toFixed(1)} m², total de ${data.totalLitros.toFixed(1)} Litros (${data.packaging.text}).`);
-        document.getElementById('whatsappBtn').href = `https://wa.me/55119549650044?text=${waText}`;
+  document.getElementById('resTitle').textContent = d.paint.name;
+  document.getElementById('resSub').textContent =
+    d.demaos + (d.demaos > 1 ? ' demãos' : ' demão') + ' · rende ' + d.paint.yieldText;
+  document.getElementById('resArea').textContent = fmt(d.areaLiquida) + ' m²';
+  document.getElementById('resLitros').textContent = fmt(d.totalLitros) + ' L';
+  document.getElementById('resPack').textContent = d.packaging.text;
+  document.getElementById('resCovered').textContent = fmt(d.packaging.totalCovered) + ' L';
 
-        const modal = document.getElementById('resultModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.body.style.overflow = 'hidden';
-    }
+  const photo = document.getElementById('resPhoto');
+  photo.innerHTML = '';
+  const img = document.createElement('img');
+  img.src = d.paint.img;
+  img.alt = d.paint.name;
+  img.onerror = () => { photo.innerHTML = '<span class="emoji">🎨</span>'; };
+  photo.appendChild(img);
 
-    function closeResultModal() {
-        const modal = document.getElementById('resultModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        document.body.style.overflow = '';
-    }
+  document.getElementById('resWa').href = waLink(
+    WA_BASE_MSG + ' Fiz o cálculo para *' + d.paint.name + '* (' + d.demaos +
+    ' demãos), área de ' + fmt(d.areaLiquida) + ' m², total de ' + fmt(d.totalLitros) +
+    ' litros (' + d.packaging.text + ').'
+  );
 
-    window.onclick = function(e) {
-        const resModal = document.getElementById('resultModal');
-        const faqModal = document.getElementById('faqModal');
-        if (e.target === resModal) closeResultModal();
-        if (e.target === faqModal) closeFaqModal();
-    };
+  openSheet('panelResult');
+}
 
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeResultModal();
-            closeFaqModal();
-        }
-    });
+document.getElementById('calcForm').addEventListener('submit', e => {
+  e.preventDefault();
+  showResult();
+});
 
-    function calculate() {
-        const tipoKey = document.getElementById('tipoTinta').value;
-        const paintInfo = PAINT_TYPES[tipoKey];
-        const demaos = parseInt(document.getElementById('demaos').value) || 1;
-        
-        const largura = parseFloat(document.getElementById('largura').value) || 0;
-        const comprimento = parseFloat(document.getElementById('comprimento').value) || 0;
-        const pedireito = parseFloat(document.getElementById('pedireito').value) || 0;
-        const janelas = parseFloat(document.getElementById('janelas').value) || 0;
-        const portas = parseFloat(document.getElementById('portas').value) || 0;
-
-        let areaBruta = (largura + comprimento) * 2 * pedireito;
-        let areaLiquida = areaBruta - janelas - portas;
-        if (areaLiquida < 0) areaLiquida = 0;
-
-        const totalLitros = (areaLiquida * demaos) / paintInfo.yieldPerL;
-        const packaging = getPackagingSuggestion(totalLitros, PACKAGES);
-
-        return {
-            paintName: paintInfo.name,
-            yieldPerL: paintInfo.yieldPerL,
-            demaos: demaos,
-            areaLiquida: areaLiquida,
-            totalLitros: totalLitros,
-            packaging: packaging
-        };
-    }
-
-    function getPackagingSuggestion(requiredLiters, packages) {
-        if (requiredLiters <= 0) {
-            return { text: 'Nenhuma embalagem necessária', totalCovered: 0 };
-        }
-
-        const sorted = [...packages].sort((a, b) => b.size - a.size);
-        let remaining = requiredLiters;
-        const chosen = [];
-        let totalCovered = 0;
-
-        for (let i = 0; i < sorted.length; i++) {
-            const pkg = sorted[i];
-            if (remaining <= 0) break;
-
-            const count = Math.floor(remaining / pkg.size);
-            if (count > 0) {
-                chosen.puts ? chosen.puts(`${count}× ${pkg.label}`) : chosen.push(`${count}× ${pkg.label}`);
-                remaining -= count * pkg.size;
-                totalCovered += count * pkg.size;
-            }
-        }
-
-        if (remaining > 0) {
-            let bestFit = sorted[sorted.length - 1];
-            for (let i = sorted.length - 1; i >= 0; i--) {
-                if (sorted[i].size >= remaining) {
-                    bestFit = sorted[i];
-                }
-            }
-            
-            const existingIdx = chosen.findIndex(str => str.includes(bestFit.label));
-            if (existingIdx !== -1) {
-                const currentQty = parseInt(chosen[existingIdx].split('×')[0]);
-                chosen[existingIdx] = `${currentQty + 1}× ${bestFit.label}`;
-            } else {
-                chosen.push(`1× ${bestFit.label}`);
-            }
-            totalCovered += bestFit.size;
-        }
-
-        return {
-            text: chosen.join(' + '),
-            totalCovered: totalCovered
-        };
-    }
+/* ===== Início ===== */
+document.getElementById('waQuick').href = waLink(WA_BASE_MSG);
+document.getElementById('waBanner').href = waLink(WA_BASE_MSG);
+renderPaintList();
+renderFaq();
 </script>
+
+</body>
+</html>
