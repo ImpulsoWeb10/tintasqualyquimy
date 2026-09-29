@@ -1,4 +1,4 @@
-<!-- Google Fonts: Inter & Montserrat -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
@@ -19,8 +19,8 @@
                         neon: '#00FF9D',
                         neonDark: '#00D683',
                         neonRed: '#FF0055',
-                        darkBg: '#050B14',
-                        cardBg: '#0D1726'
+                        darkBg: '#03070C',
+                        cardBg: '#0A111C'
                     }
                 },
                 fontFamily: {
@@ -28,8 +28,7 @@
                     brand: ['Montserrat', 'sans-serif']
                 },
                 boxShadow: {
-                    'neon-white': '0 0 25px rgba(255, 255, 255, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.3)',
-                    'neon-glow': '0 0 20px rgba(0, 255, 157, 0.35)',
+                    'neon-glow': '0 0 25px rgba(0, 255, 157, 0.4), inset 0 0 15px rgba(0, 255, 157, 0.15)',
                     'neon-button': '0 4px 20px rgba(0, 255, 157, 0.4)',
                     'card-depth': '0 25px 60px rgba(0, 0, 0, 0.85)'
                 }
@@ -40,26 +39,43 @@
 
 <style>
     body {
-        background: radial-gradient(circle at 50% 20%, #0c182b 0%, #040810 100%);
+        background-color: #03070C;
         min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
     }
 
+    /* Ambient Neon Glow behind the screen */
+    .ambient-neon-bg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75vw;
+        height: 75vh;
+        background: radial-gradient(circle, rgba(0, 255, 157, 0.18) 0%, rgba(255, 107, 0, 0.12) 40%, transparent 75%);
+        filter: blur(80px);
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    /* Glassmorphism main card frame */
     .white-neon-frame {
-        background: rgba(11, 20, 35, 0.94);
+        background: rgba(10, 17, 28, 0.95);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border: 2px solid #ffffff;
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.15);
+        border: 2px solid rgba(255, 255, 255, 0.85);
+        box-shadow: 0 0 35px rgba(0, 255, 157, 0.25), 0 0 15px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(0, 255, 157, 0.1);
     }
 
     .result-modal-frame {
-        background: radial-gradient(circle at 50% 30%, #0a203a 0%, #050d18 60%, #02050a 100%);
+        background: radial-gradient(circle at 50% 30%, #0c2338 0%, #060e18 60%, #03070d 100%);
         border: 2px solid #00FF9D;
-        box-shadow: 0 0 45px rgba(0, 255, 157, 0.4), 0 0 15px rgba(255, 255, 255, 0.6), inset 0 0 25px rgba(0, 255, 157, 0.2);
+        box-shadow: 0 0 50px rgba(0, 255, 157, 0.5), 0 0 20px rgba(255, 255, 255, 0.7), inset 0 0 25px rgba(0, 255, 157, 0.3);
     }
 
     .app-input, .app-select {
-        background-color: #060D18;
+        background-color: #050A12;
         border: 1px solid #1c2e47;
         color: #ffffff;
         transition: all 0.25s ease;
@@ -95,7 +111,7 @@
     .marquee-track {
         display: flex;
         width: max-content;
-        animation: marquee 22s linear infinite;
+        animation: marquee 24s linear infinite;
     }
     .marquee-track:hover {
         animation-play-state: paused;
@@ -105,11 +121,44 @@
         100% { transform: translateX(-50%); }
     }
 
+    /* Tooltip Container Styles */
+    .tooltip-container {
+        position: relative;
+        display: block;
+    }
+
+    .custom-tooltip {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        bottom: 115%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 290px;
+        background: rgba(8, 15, 26, 0.98);
+        color: #f1f5f9;
+        text-align: left;
+        padding: 10px 14px;
+        border-radius: 12px;
+        border: 1px solid #00FF9D;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 15px rgba(0,255,157,0.3);
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+        z-index: 50;
+        font-size: 11.5px;
+        line-height: 1.4;
+        pointer-events: none;
+    }
+
+    .tooltip-container:hover .custom-tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+
     ::-webkit-scrollbar {
         width: 6px;
     }
     ::-webkit-scrollbar-track {
-        background: #050B14;
+        background: #03070C;
     }
     ::-webkit-scrollbar-thumb {
         background: #1c2e47;
@@ -121,15 +170,18 @@
 </style>
 
 
+<!-- Ambient Neon Backlight behind screen -->
+<div class="ambient-neon-bg"></div>
+
 <!-- Main Container Wrapper -->
-<div class="w-full max-w-lg px-3 py-4 sm:p-6 my-auto">
+<div class="w-full max-w-lg px-3 py-6 sm:p-6 my-auto z-10">
     
     <!-- White Neon Frame Box -->
     <div class="white-neon-frame rounded-3xl p-4 sm:p-7 relative overflow-hidden shadow-card-depth">
         
-        <!-- Ambient Lighting -->
+        <!-- Inner Ambient Glow -->
         <div class="absolute -top-24 -left-24 w-60 h-60 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-brand-neon/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-brand-neon/15 rounded-full blur-3xl pointer-events-none"></div>
 
         <!-- Header with logo -->
         <div class="text-center mb-4">
@@ -153,27 +205,40 @@
                 Calculadora <span class="text-neon-gradient">Inteligente de Tintas</span>
             </h1>
             <p class="text-[11px] sm:text-xs text-slate-300 mt-1 max-w-md mx-auto leading-normal">
-                Selecione o tipo de tinta e informe as medidas para calcular a quantidade exata.
+                Passe o mouse sobre as tintas para ver características e calcule com precisão.
             </p>
         </div>
 
         <!-- Form Input Fields -->
         <form id="calcForm" onsubmit="event.preventDefault(); openResultModal();" class="space-y-3">
             
-            <!-- Paint Type Selection -->
+            <!-- Paint Type Selection with Hover Tooltips -->
             <div>
-                <label for="tipoTinta" class="block text-xs font-semibold text-slate-300 mb-1">
-                    Selecione a Tinta / Categoria
+                <label for="tipoTinta" class="block text-xs font-semibold text-slate-300 mb-1 flex items-center justify-between">
+                    <span>Selecione a Tinta / Categoria</span>
+                    <span class="text-[10px] text-brand-neon font-bold"><i class="fa-solid fa-circle-info mr-1"></i>Passe o mouse p/ detalhes</span>
                 </label>
-                <select id="tipoTinta" onchange="updateYieldInfo()" class="app-select w-full rounded-xl px-3 py-2 text-sm font-medium cursor-pointer">
-                    <option value="premium">Tinta Premium (Rendimento: 14 m²/L)</option>
-                    <option value="standard">Tinta Standard (Rendimento: 11 m²/L)</option>
-                    <option value="emborrachada">Tinta Emborrachada (Rendimento: 10 m²/L)</option>
-                    <option value="economica">Tinta Econômica Qualy Color (Rendimento: 8,3 m²/L)</option>
-                    <option value="piso">Tinta para Piso (Rendimento: 6 m²/L)</option>
-                </select>
+                
+                <!-- Tooltip Hover Wrapper -->
+                <div class="tooltip-container">
+                    <select id="tipoTinta" onchange="updateYieldInfo()" class="app-select w-full rounded-xl px-3 py-2.5 text-sm font-medium cursor-pointer">
+                        <option value="economica">Tinta Econômica Qualy Color (8,3 m²/L)</option>
+                        <option value="standard">Tinta Standard (11 m²/L)</option>
+                        <option value="premium">Tinta Premium (14 m²/L)</option>
+                        <option value="piso">Tinta para Piso (Até 6 m²/L)</option>
+                        <option value="emborrachada">Tinta Emborrachada (Até 10 m²/L)</option>
+                    </select>
+                    
+                    <!-- Floating Tooltip Box -->
+                    <div id="paintTooltip" class="custom-tooltip">
+                        <strong id="tooltipTitle" class="text-brand-neon block mb-1 uppercase font-bold text-xs">Econômica Qualy Color</strong>
+                        <span id="tooltipDesc" class="text-slate-200 block">Tinta qualy color economica, indicada para paredes novas, já emassadas, uso interno, parede sem umidade.</span>
+                        <span class="text-amber-300 block mt-1.5 font-semibold text-[10px]"><i class="fa-solid fa-triangle-exclamation mr-1"></i>Obs: não aplicar em dias úmidos, ou chuvosos.</span>
+                    </div>
+                </div>
+
                 <p id="yieldDescription" class="text-[11px] text-brand-neon mt-1 font-semibold">
-                    Rendimento: 14 m² por Litro (por demão)
+                    Rendimento: 8,3 m² por Litro (por demão)
                 </p>
             </div>
 
@@ -235,10 +300,60 @@
         </form>
 
     </div>
+
+    <!-- Semantic FAQ Section (SEO Optimized - 5 Key Questions) -->
+    <section class="mt-8 white-neon-frame rounded-3xl p-4 sm:p-6 text-slate-200">
+        <h2 class="text-base sm:text-lg font-black text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-circle-question text-brand-neon"></i>
+            <span>Dúvidas Frequentes sobre Pintura e Tintas</span>
+        </h2>
+        
+        <div class="space-y-3 text-xs">
+            <!-- FAQ Item 1 -->
+            <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
+                <h3 class="font-bold text-brand-neon mb-1">1. Qual a diferença entre tinta Econômica, Standard e Premium?</h3>
+                <p class="text-slate-300 leading-relaxed">A tinta econômica é ideal para interiores e paredes já emassadas. A Standard oferece maior durabilidade e cobertura intermediária para ambientes internos e externos, enquanto a Premium possui rendimento superior ($14\text{ m}^2/\text{L}$), excelente lavabilidade e alta resistência a intempéries.</p>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
+                <h3 class="font-bold text-brand-neon mb-1">2. Posso pintar em dias chuvosos ou com alta umidade?</h3>
+                <p class="text-slate-300 leading-relaxed">Não! Conforme recomendado nas instruções técnicas, **nunca aplique tinta em dias úmidos ou chuvosos**. A umidade excessiva compromete a secagem, pode causar manchas, bolhas e perda de aderência da película de tinta na parede.</p>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
+                <h3 class="font-bold text-brand-neon mb-1">3. Como calcular quantas demãos devo passar na parede?</h3>
+                <p class="text-slate-300 leading-relaxed">Geralmente recomenda-se o uso de **2 demãos** para uma cobertura perfeita e uniforme. Em superfícies novas sem pintura anterior (fundo preparado), pode ser necessária uma terceira demão para um acabamento impecável.</p>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
+                <h3 class="font-bold text-brand-neon mb-1">4. Para que serve a tinta emborrachada e onde aplicar?</h3>
+                <p class="text-slate-300 leading-relaxed">A tinta emborrachada cria uma película elástica ideal para áreas externas sujeitas a fissuras e infiltrações, como fachadas, telhados e paredes batidas de chuva. Ela impermeabiliza e acompanha a dilatação natural da parede.</p>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="bg-black/50 p-3 rounded-xl border border-slate-800">
+                <h3 class="font-bold text-brand-neon mb-1">5. Qual o rendimento da tinta para piso em comparação às outras?</h3>
+                <p class="text-slate-300 leading-relaxed">A tinta para piso foi desenvolvida para suportar tráfego de pessoas e veículos leves, tendo um rendimento aproximado de até $6\text{ m}^2$ por litro, necessitando de uma camada mais espessa e resistente.</p>
+            </div>
+        </div>
+    </section>
+
 </div>
 
-<!-- Unified SSL, Security & Developer Footer Section -->
-<div class="w-full max-w-lg px-3 text-center space-y-2 mt-auto mb-2">
+<!-- Unified SSL, Security & Developer Footer Section with Google Maps Link -->
+<div class="w-full max-w-lg px-3 text-center space-y-2 mt-auto mb-2 z-10">
+    <div class="flex flex-wrap items-center justify-center gap-2 text-emerald-400 text-xs font-semibold bg-slate-900/90 py-2 px-3 rounded-xl border border-emerald-500/20 backdrop-blur-sm shadow-lg">
+        <div class="flex items-center gap-1.5">
+            <i class="fa-solid fa-location-dot text-brand-neon"></i>
+            <a href="https://maps.google.com/?q=Rua+Leiria,+45+-+Chácara+Cuiabá,+Itaquaquecetuba+-+SP" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-brand-neon underline underline-offset-2 transition-colors">
+                Rua Leiria, 45 - Chácara Cuiabá, Itaquaquecetuba - SP
+            </a>
+        </div>
+    </div>
+
     <div class="flex flex-wrap items-center justify-center gap-2 text-emerald-400 text-xs font-semibold bg-slate-900/80 py-2 px-3 rounded-xl border border-emerald-500/20 backdrop-blur-sm">
         <div class="flex items-center gap-1.5">
             <i class="fa-solid fa-lock text-emerald-400"></i>
@@ -288,21 +403,16 @@
 <!-- RESULT MODAL -->
 <div id="resultModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-3 transition-all duration-300 overflow-y-auto">
     
-    <!-- Ambient Background Glow -->
     <div class="absolute inset-0 bg-brand-neon/15 pointer-events-none blur-3xl"></div>
 
-    <!-- Result Frame -->
     <div class="relative w-full max-w-lg result-modal-frame rounded-3xl p-4 sm:p-6 shadow-2xl modal-fade-in my-auto max-h-[92vh] flex flex-col justify-between overflow-y-auto z-10">
         
-        <!-- Close "X" Button -->
         <button onclick="closeResultModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 hover:bg-brand-neon/30 text-slate-200 hover:text-white border border-white/40 flex items-center justify-center transition-all cursor-pointer z-20">
             <i class="fa-solid fa-xmark text-base"></i>
         </button>
 
-        <!-- Modal Content -->
         <div class="space-y-3.5">
             
-            <!-- Header -->
             <div class="text-center border-b border-white/20 pb-2.5 pr-6">
                 <span class="inline-flex items-center gap-1.5 text-brand-neon text-xs font-extrabold tracking-wider uppercase">
                     <i class="fa-solid fa-circle-check"></i> Cálculo Concluído com Sucesso
@@ -315,10 +425,8 @@
                 </p>
             </div>
 
-            <!-- Product Display and Stats Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
                 
-                <!-- Left: Icon / Illustration Box -->
                 <div class="sm:col-span-5 flex flex-col items-center justify-center p-3 bg-black/50 rounded-2xl border border-white/30">
                     <div class="flex items-center justify-center min-h-[120px] text-brand-neon text-5xl">
                         <i class="fa-solid fa-paint-roller drop-shadow-[0_0_15px_rgba(0,255,157,0.5)]"></i>
@@ -326,10 +434,8 @@
                     <span id="modalImgLabel" class="text-[10px] text-slate-300 mt-2 font-semibold text-center leading-tight">Embalagens sugeridas</span>
                 </div>
 
-                <!-- Right: Values & Suggestions -->
                 <div class="sm:col-span-7 space-y-2.5">
                     
-                    <!-- Area & Required Liters -->
                     <div class="grid grid-cols-2 gap-2">
                         <div class="bg-black/60 border border-white/20 p-2.5 rounded-xl text-center">
                             <span class="text-[10px] font-semibold text-slate-300 uppercase tracking-wider block">Área Líquida</span>
@@ -341,7 +447,6 @@
                         </div>
                     </div>
 
-                    <!-- Package Combination Box -->
                     <div class="bg-black/80 border-2 border-brand-neon p-3 sm:p-3.5 rounded-xl space-y-1 shadow-lg">
                         <span class="text-xs font-bold text-brand-neon uppercase tracking-wider block">
                             <i class="fa-solid fa-boxes-packing text-brand-neon mr-1"></i> Sugestão de Embalagens:
@@ -358,14 +463,12 @@
                 </div>
             </div>
 
-            <!-- Info note -->
-            <p class="text-[10px] text-slate-300 bg-black/40 p-2 rounded-xl border border-white/10 leading-snug">
-                <i class="fa-solid fa-circle-info text-amber-400 mr-1"></i>
-                O rendimento prático pode variar conforme a rugosidade da parede, absorção e técnica de aplicação.
+            <p class="text-[10px] text-amber-300 bg-black/40 p-2 rounded-xl border border-white/10 leading-snug font-semibold">
+                <i class="fa-solid fa-triangle-exclamation mr-1"></i>
+                Atenção: Não aplicar em dias úmidos, ou chuvosos.
             </p>
         </div>
 
-        <!-- Modal Actions Footer -->
         <div class="mt-3 pt-3 border-t border-white/20 flex flex-col gap-2">
             <a id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/80 hover:scale-[1.01] active:scale-[0.99] cursor-pointer uppercase tracking-wider">
                 <i class="fa-brands fa-whatsapp text-xl"></i>
@@ -390,16 +493,39 @@
 
 <!-- JavaScript Application Logic -->
 <script>
-    // Yield specifications (m² per Liter per coat)
     const PAINT_TYPES = {
-        premium: { name: 'Tinta Premium', yieldPerL: 14.0, desc: 'Rendimento: 14 m² por Litro (por demão)' },
-        standard: { name: 'Tinta Standard', yieldPerL: 11.0, desc: 'Rendimento: 11 m² por Litro (por demão)' },
-        emborrachada: { name: 'Tinta Emborrachada', yieldPerL: 10.0, desc: 'Rendimento: Até 10 m² por Litro (por demão)' },
-        economica: { name: 'Tinta Econômica Qualy Color', yieldPerL: 8.3, desc: 'Rendimento: 8,3 m² por Litro (por demão)' },
-        piso: { name: 'Tinta para Piso', yieldPerL: 6.0, desc: 'Rendimento: Até 6 m² por Litro (por demão)' }
+        economica: { 
+            name: 'Tinta Econômica Qualy Color', 
+            yieldPerL: 8.3, 
+            desc: 'Tinta qualy color economica, indicada para paredes novas, já emassadas, uso interno, parede sem umidade.',
+            yieldText: 'Rendimento: 8,3 m² por Litro (por demão)'
+        },
+        standard: { 
+            name: 'Tinta Standard', 
+            yieldPerL: 11.0, 
+            desc: 'Tinta standard, uso interno externo, ótima cobertura e rendimento.',
+            yieldText: 'Rendimento: 11 m² por Litro (por demão)'
+        },
+        premium: { 
+            name: 'Tinta Premium', 
+            yieldPerL: 14.0, 
+            desc: 'Tinta premium, uso interno externo, ótima cobertura e rendimento.',
+            yieldText: 'Rendimento: 14 m² por Litro (por demão)'
+        },
+        piso: { 
+            name: 'Tinta para Piso', 
+            yieldPerL: 6.0, 
+            desc: 'Tinta piso, uso interno externo, ótima cobertura e rendimento.',
+            yieldText: 'Rendimento: Até 6 m² por Litro (por demão)'
+        },
+        emborrachada: { 
+            name: 'Tinta Emborrachada', 
+            yieldPerL: 10.0, 
+            desc: 'Tinta emborrachada, uso interno externo, ótima cobertura e rendimento.',
+            yieldText: 'Rendimento: Até 10 m² por Litro (por demão)'
+        }
     };
 
-    // Standard Commercial Package sizes in Liters
     const PACKAGES = [
         { size: 18, label: 'lata 18L' },
         { size: 3.6, label: 'galão 3.6L' },
@@ -409,8 +535,16 @@
     function updateYieldInfo() {
         const select = document.getElementById('tipoTinta');
         const info = PAINT_TYPES[select.value];
-        document.getElementById('yieldDescription').textContent = info.desc;
+        
+        document.getElementById('yieldDescription').textContent = info.yieldText;
+        document.getElementById('tooltipTitle').textContent = info.name;
+        document.getElementById('tooltipDesc').textContent = info.desc;
     }
+
+    // Initialize tooltip text on page load
+    window.onload = function() {
+        updateYieldInfo();
+    };
 
     function openResultModal() {
         const data = calculate();
@@ -422,7 +556,6 @@
         document.getElementById('modalResEmbalagem').textContent = data.packaging.text;
         document.getElementById('modalCoveredLitros').textContent = `${data.packaging.totalCovered.toFixed(1).replace('.', ',')} L`;
         
-        // Setup dynamic WhatsApp link with details
         const waText = encodeURIComponent(`Olá! Fiz o cálculo para *${data.paintName}* (${data.demaos} demãos) para uma área de ${data.areaLiquida.toFixed(1)} m². O sistema indicou ${data.totalLitros.toFixed(1)} Litros (${data.packaging.text}). Gostaria de fazer um orçamento.`);
         document.getElementById('whatsappBtn').href = `https://wa.me/5511954950044?text=${waText}`;
 
@@ -465,7 +598,6 @@
         let areaLiquida = areaBruta - janelas - portas;
         if (areaLiquida < 0) areaLiquida = 0;
 
-        // Total Liters = (Area * Demãos) / Yield per Liter
         const totalLitros = (areaLiquida * demaos) / paintInfo.yieldPerL;
         const packaging = getPackagingSuggestion(totalLitros, PACKAGES);
 
