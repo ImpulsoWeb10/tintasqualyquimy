@@ -1,701 +1,836 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+<html lang="pt-BR">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-33MEN928R2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-33MEN928R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-33MEN928R2');
+</script>
 
-      gtag('config', 'G-33MEN928R2');
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Calculadora de Textura Lisa ou Rolada Premium Qualy Quimy: informe as medidas do ambiente e descubra quantos quilos e quais embalagens você precisa. Itaquaquecetuba - SP.">
+<meta property="og:title" content="Calculadora Textura Lisa ou Rolada Premium | Qualy Quimy">
+<meta property="og:description" content="Calcule a quantidade de textura para sua parede em segundos.">
+<meta name="theme-color" content="#03070C">
+<title>Calculadora Textura Lisa ou Rolada Premium - QUALYQUIMY</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Textura Lisa ou Rolada Premium - QUALYQUIMY</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            orange: '#FF6B00',
-                            neon: '#00FF9D',
-                            neonDark: '#00D683',
-                            neonRed: '#FF0055',
-                            neonRedDark: '#CC0044',
-                            darkBg: '#050B14',
-                            cardBg: '#0D1726',
-                            inputBg: '#08111E',
-                            borderColor: '#192C45'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        brand: ['Montserrat', 'sans-serif']
-                    },
-                    boxShadow: {
-                        'neon-white': '0 0 25px rgba(255, 255, 255, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.2)',
-                        'neon-glow': '0 0 20px rgba(0, 255, 157, 0.35)',
-                        'neon-button': '0 4px 20px rgba(0, 255, 157, 0.4)',
-                        'card-depth': '0 25px 60px rgba(0, 0, 0, 0.8)'
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Estilos Customizados -->
-    <style>
-        body {
-            background: radial-gradient(circle at 50% 20%, #0c182b 0%, #040810 100%);
-            min-height: 100vh;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-        /* Moldura de Vidro com Bordas Neon Branco */
-        .white-neon-frame {
-            background: rgba(11, 20, 35, 0.92);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 2.5px solid rgba(255, 255, 255, 0.95);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), inset 0 0 15px rgba(255, 255, 255, 0.15);
-        }
+<style>
+:root{
+  --neon:#00ff9d;
+  --neon-dark:#00d683;
+  --accent:#ff6b00;
+  --red:#ff0055;
+  --amber:#ffc66b;
+  --bg:#03070c;
+  --line:rgba(0,255,157,.55);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{width:100%}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:#f5f5f5;
+  min-height:100vh;
+  min-height:100dvh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:.4rem .8rem;
+  overflow-x:hidden;
+  position:relative;
+}
 
-        /* Modal com Fundo Vermelho Neon e Luz de Fundo com Moldura Branca */
-        .modal-red-neon-frame {
-            background: linear-gradient(145deg, #2b020d 0%, #150006 100%);
-            border: 2.5px solid #ffffff;
-            box-shadow: 0 0 60px rgba(255, 0, 85, 0.75), 0 0 25px rgba(255, 255, 255, 0.9), inset 0 0 25px rgba(255, 0, 85, 0.4);
-        }
+/* Iluminação neon atrás da moldura */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(0,255,157,.22) 0%, rgba(0,255,157,.07) 40%, transparent 70%),
+    radial-gradient(circle at 50% 25%, rgba(255,107,0,.2) 0%, transparent 60%);
+  pointer-events:none;
+  z-index:0;
+}
 
-        /* Campos de Entrada */
-        .app-input {
-            background-color: #060D18;
-            border: 1px solid #1c2e47;
-            color: #ffffff;
-            transition: all 0.25s ease;
-        }
-        .app-input:focus {
-            border-color: #00FF9D;
-            box-shadow: 0 0 12px rgba(0, 255, 157, 0.3);
-            outline: none;
-        }
+/* Moldura estilo smartphone */
+.device-frame{
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:410px;
+  background:linear-gradient(175deg,#0d1622 0%,#050a12 100%);
+  border:1.5px solid var(--line);
+  border-radius:28px;
+  box-shadow:
+    0 0 25px rgba(0,255,157,.35),
+    0 0 50px rgba(255,107,0,.22),
+    inset 0 0 15px rgba(0,255,157,.1);
+  padding:1.3rem 1.1rem 1rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:.85rem;
+}
+.page{display:flex;flex-direction:column;align-items:center;gap:.85rem;width:100%}
 
-        .text-neon-gradient {
-            background: linear-gradient(135deg, #00FF9D 0%, #00B8FF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+/* Logo com brilho */
+.logo-wrap{display:flex;flex-direction:column;align-items:center;gap:.35rem}
+.logo-frame{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  display:inline-block;
+  animation:logo-pulse 2.6s ease-in-out infinite;
+}
+.logo-frame::after{
+  content:'';
+  position:absolute;top:0;left:-110%;
+  width:55%;height:100%;
+  background:linear-gradient(105deg,transparent 20%,rgba(0,255,157,.55) 50%,transparent 80%);
+  transform:skewX(-18deg);
+  animation:logo-shimmer 2.6s ease-in-out infinite;
+  pointer-events:none;z-index:2;
+}
+@keyframes logo-pulse{
+  0%,100%{box-shadow:0 0 8px rgba(0,255,157,.3),0 4px 15px rgba(0,0,0,.8)}
+  50%{box-shadow:0 0 20px rgba(0,255,157,.65),0 4px 20px rgba(255,107,0,.4)}
+}
+@keyframes logo-shimmer{0%{left:-110%}45%,100%{left:160%}}
+.logo-img{
+  display:block;
+  width:120px;height:auto;max-height:64px;
+  border-radius:12px;
+  border:1.5px solid rgba(0,255,157,.7);
+  object-fit:contain;
+  background:#0a0a0a;
+  position:relative;z-index:1;
+}
+.logo-fallback{
+  display:none;width:120px;height:60px;border-radius:12px;
+  border:1.5px solid rgba(0,255,157,.7);background:#0a0f18;
+  align-items:center;justify-content:center;
+  font-family:'Poppins',sans-serif;font-size:1rem;font-weight:800;color:var(--accent);text-transform:uppercase;
+}
+.brand{
+  font-family:'Poppins',sans-serif;
+  font-size:1.35rem;font-weight:800;color:#fff;
+  letter-spacing:.02em;line-height:1.1;text-transform:uppercase;
+  text-shadow:0 0 10px rgba(0,255,157,.3);
+}
+.brand em{color:var(--accent);font-style:normal}
+.tagline{font-size:.72rem;color:var(--neon);font-weight:600;letter-spacing:.05em;text-transform:uppercase}
 
-        /* Animação do Logo (Pulsante) */
-        .pulse-subtle {
-            animation: pulseSubtle 3s infinite ease-in-out;
-        }
-        @keyframes pulseSubtle {
-            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(255,107,0,0.4)); }
-            50% { transform: scale(1.06); filter: drop-shadow(0 0 14px rgba(0,255,157,0.7)); }
-        }
+.title{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;color:#fff;line-height:1.25}
+.subtitle{font-size:.74rem;color:#b5bfcc;margin-top:.2rem}
 
-        /* Brilho no Logo */
-        .shine-container {
-            position: relative;
-            overflow: hidden;
-        }
-        .shine-container::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -150%;
-            width: 100%;
-            height: 200%;
-            background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
-            transform: rotate(25deg);
-            animation: shineSweep 4.5s infinite;
-            pointer-events: none;
-        }
-        @keyframes shineSweep {
-            0% { left: -150%; }
-            30%, 100% { left: 150%; }
-        }
+/* Formulário */
+.form{width:100%;display:flex;flex-direction:column;gap:.6rem;text-align:left}
+.field label{
+  display:block;font-size:.7rem;font-weight:700;color:#c9d3df;
+  margin-bottom:.25rem;letter-spacing:.02em;
+}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.55rem}
 
-        /* Marquee Continuo */
-        .marquee-track {
-            display: flex;
-            width: 200%;
-            animation: marquee 14s linear infinite;
-        }
-        @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-        }
+.input{
+  width:100%;
+  background:#050a12;
+  border:1px solid rgba(0,255,157,.25);
+  color:#fff;
+  border-radius:12px;
+  padding:.6rem .7rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:.92rem;
+  transition:border-color .2s,box-shadow .2s;
+}
+.input.center{text-align:center;padding-left:.3rem;padding-right:.3rem}
+.input:focus{outline:none;border-color:var(--neon);box-shadow:0 0 10px rgba(0,255,157,.35)}
+.input::placeholder{color:#5b6878}
 
-        /* Modal Animações */
-        .modal-fade-in {
-            animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
+/* Botões de ação (textura / exemplo) */
+.act-btn{
+  background:rgba(0,255,157,.06);
+  border:1px solid rgba(0,255,157,.45);
+  border-radius:14px;
+  padding:.6rem .55rem;
+  color:#fff;
+  font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:700;line-height:1.2;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:.45rem;text-align:center;
+  box-shadow:0 0 12px rgba(0,255,157,.15);
+  transition:all .2s;
+}
+.act-btn:hover,.act-btn:focus-visible{border-color:var(--neon);box-shadow:0 0 16px rgba(0,255,157,.4);outline:none}
+.act-btn svg{width:18px;height:18px;flex-shrink:0;color:var(--neon)}
+.act-btn.solid{background:linear-gradient(135deg,var(--neon),var(--neon-dark));color:#03130c;border-color:transparent;box-shadow:0 0 16px rgba(0,255,157,.4)}
+.act-btn.solid svg{color:#03130c}
+.chip{
+  display:flex;align-items:center;justify-content:center;gap:.4rem;
+  font-size:.74rem;font-weight:700;color:var(--amber);
+  border:1px solid rgba(255,198,107,.35);background:rgba(255,198,107,.06);
+  border-radius:999px;padding:.35rem .8rem;
+}
+.chip svg{width:14px;height:14px}
 
-        /* Pulse para o Botão do WhatsApp */
-        .pulse-btn {
-            animation: pulseBtn 2s infinite;
-        }
-        @keyframes pulseBtn {
-            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
-            100% { shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-        }
+/* Botão calcular */
+.btn-calc{
+  width:100%;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  background:linear-gradient(135deg,var(--neon),var(--neon-dark));
+  color:#03130c;font-family:'Poppins',sans-serif;font-weight:700;font-size:.92rem;
+  padding:.8rem;border:none;border-radius:50px;cursor:pointer;
+  box-shadow:0 4px 18px rgba(0,255,157,.4);
+  transition:transform .2s,box-shadow .2s;
+  animation:pulse-calc 2.4s ease-in-out infinite;
+}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(0,255,157,.6)}
+.btn-calc:active{transform:scale(.99)}
+.btn-calc svg{width:18px;height:18px}
+@keyframes pulse-calc{
+  0%,100%{box-shadow:0 4px 16px rgba(0,255,157,.35)}
+  50%{box-shadow:0 4px 26px rgba(0,255,157,.65)}
+}
+.form-msg{font-size:.72rem;color:var(--amber);text-align:center}
+.form-msg:empty{display:none}
 
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #050B14; }
-        ::-webkit-scrollbar-thumb { background: #1c2e47; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #00FF9D; }
-    </style>
+/* Ícones de acesso rápido */
+.social-row{display:flex;gap:1.1rem;justify-content:center;align-items:flex-start;width:100%}
+.social-btn{
+  display:flex;flex-direction:column;align-items:center;gap:.3rem;
+  text-decoration:none;background:none;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+  transition:transform .22s cubic-bezier(.34,1.56,.64,1);
+}
+.social-btn:hover{transform:translateY(-3px)}
+.social-icon{
+  width:42px;height:42px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  border:1.5px solid rgba(0,255,157,.4);
+  box-shadow:0 0 10px rgba(0,255,157,.2),0 6px 16px rgba(0,0,0,.6);
+  transition:all .2s;
+}
+.social-btn:hover .social-icon{border-color:var(--neon);box-shadow:0 0 15px rgba(0,255,157,.6),0 8px 20px rgba(255,107,0,.3)}
+.social-icon svg{width:20px;height:20px}
+.social-label{font-size:.68rem;color:#c9d3df;font-weight:500}
+
+/* Endereço */
+.address{font-size:.72rem;color:#9aa6b5;line-height:1.4}
+.address a{color:#cfd8e3;text-decoration:none;border-bottom:1px solid rgba(0,255,157,.35)}
+.address a:hover{color:var(--neon)}
+
+/* Faixa rolante */
+.quote-banner{
+  width:100%;
+  display:flex;white-space:nowrap;overflow:hidden;
+  background:linear-gradient(90deg,rgba(0,255,157,.05),rgba(0,255,157,.18) 50%,rgba(0,255,157,.05));
+  border-top:1px solid rgba(0,255,157,.4);
+  border-bottom:1px solid rgba(0,255,157,.4);
+  padding:.42rem 0;
+  text-decoration:none;
+}
+.quote-track{display:flex;width:max-content;animation:scroll-left 24s linear infinite}
+.quote-item{
+  font-size:.7rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.04em;
+  text-shadow:0 0 8px rgba(0,255,157,.6);padding:0 1.6rem;
+}
+@keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* Rodapé */
+.footer{
+  font-size:.65rem;color:#777;
+  display:flex;flex-direction:column;align-items:center;gap:.35rem;
+  width:100%;border-top:1px solid rgba(255,255,255,.1);padding-top:.65rem;
+}
+.footer-bottom-row{display:flex;align-items:center;justify-content:center;gap:.7rem;width:100%;font-size:.63rem;color:#66707d;flex-wrap:wrap}
+.footer-ssl{display:flex;align-items:center;gap:.25rem}
+.footer-ssl svg{width:10px;height:10px;flex-shrink:0;opacity:.8;stroke:#25d366}
+.footer-dev a{color:#8994a1;text-decoration:none}
+.footer-dev a:hover{color:#ccc}
+
+/* ===== MODAL (bottom sheet) ===== */
+.overlay{
+  position:fixed;inset:0;z-index:100;
+  background:rgba(0,0,0,.88);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  display:flex;align-items:flex-end;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .3s ease;
+}
+.overlay.open{opacity:1;pointer-events:all}
+.sheet{
+  background:linear-gradient(175deg,#111b29 0%,#070d16 100%);
+  border:1.5px solid var(--line);border-bottom:none;
+  border-radius:24px 24px 0 0;
+  width:100%;max-width:410px;
+  transform:translateY(100%);
+  transition:transform .4s cubic-bezier(.32,1,.36,1),border-color .3s,box-shadow .3s;
+  max-height:90vh;max-height:90dvh;
+  box-shadow:0 -5px 25px rgba(0,255,157,.25);
+  display:flex;flex-direction:column;
+}
+.overlay.open .sheet{transform:translateY(0)}
+/* Resultado: vermelho neon, como na textura original */
+.sheet.red{
+  background:linear-gradient(175deg,#2b020d 0%,#0f0004 100%);
+  border-color:rgba(255,0,85,.75);
+  box-shadow:0 -5px 32px rgba(255,0,85,.5),0 0 14px rgba(255,255,255,.25);
+}
+.sheet.red .sheet-head{border-bottom-color:rgba(255,0,85,.35)}
+.sheet-handle{width:40px;height:4px;background:rgba(255,255,255,.3);border-radius:2px;margin:12px auto 4px;flex-shrink:0}
+.sheet-inner{position:relative;width:100%;overflow-y:auto;min-height:0;padding-bottom:1.2rem}
+.panel{display:none;flex-direction:column;width:100%}
+.panel.visible{display:flex}
+
+.sheet-head{
+  display:flex;align-items:center;justify-content:space-between;gap:.7rem;
+  padding:.75rem 1.2rem;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  background:rgba(0,0,0,.4);
+}
+.sheet-title{font-family:'Poppins',sans-serif;font-size:.98rem;font-weight:600;color:#fff;text-shadow:0 0 8px rgba(0,255,157,.3);line-height:1.25}
+.btn-close{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);
+  color:#fff;cursor:pointer;
+  width:32px;height:32px;border-radius:50%;
+  font-size:.9rem;display:flex;align-items:center;justify-content:center;
+  transition:all .2s;flex-shrink:0;
+}
+.btn-close:hover{background:rgba(255,255,255,.25);box-shadow:0 0 8px rgba(255,255,255,.4)}
+
+.answer-body{padding:1.1rem 1.3rem .4rem;text-align:center;display:flex;flex-direction:column;align-items:center}
+.answer-cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  width:100%;
+  background:linear-gradient(135deg,#25d366,#1aab55);
+  color:#fff;font-weight:700;font-size:.88rem;
+  padding:.85rem;border-radius:50px;
+  text-decoration:none;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+  box-shadow:0 4px 16px rgba(37,211,102,.3);
+  transition:transform .2s,box-shadow .2s;
+}
+.answer-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,211,102,.5)}
+.answer-cta svg{width:18px;height:18px}
+.answer-cta.ghost{
+  background:transparent;border:1px solid rgba(255,255,255,.3);color:#dde3ea;
+  box-shadow:none;margin-top:.55rem;
+}
+.answer-cta.ghost:hover{border-color:var(--neon);color:var(--neon);box-shadow:none}
+.link-mini{
+  display:block;width:100%;margin-top:.6rem;text-align:center;
+  font-size:.68rem;font-weight:600;color:var(--amber);text-decoration:none;
+  border:1px solid rgba(255,198,107,.3);background:rgba(0,0,0,.35);
+  border-radius:12px;padding:.4rem .6rem;line-height:1.3;
+}
+.link-mini:hover{border-color:var(--amber)}
+
+/* Carrossel / exemplo */
+.viewer{
+  position:relative;width:100%;
+  background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.12);border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  height:52vh;height:52dvh;max-height:440px;padding:.25rem;overflow:hidden;
+}
+.viewer img{max-width:100%;max-height:100%;object-fit:contain;border-radius:12px;touch-action:pan-y}
+.nav-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(5,10,18,.9);border:1px solid rgba(0,255,157,.5);color:#fff;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 0 10px rgba(0,255,157,.25);
+}
+.nav-btn:hover{border-color:var(--neon);box-shadow:0 0 14px rgba(0,255,157,.5)}
+.nav-btn svg{width:16px;height:16px}
+.nav-btn.prev{left:.5rem}
+.nav-btn.next{right:.5rem}
+.dots{display:flex;gap:.5rem;justify-content:center;padding:.7rem 0 .2rem}
+.dot{width:9px;height:9px;border-radius:50%;background:#3a4656;transition:all .2s}
+.dot.on{background:var(--neon);box-shadow:0 0 8px rgba(0,255,157,.7);transform:scale(1.25)}
+
+/* Resultado */
+.res-photo{
+  width:100%;min-height:118px;border-radius:14px;
+  background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.14);
+  display:flex;align-items:flex-end;justify-content:center;gap:.9rem;
+  padding:.5rem .6rem;margin-bottom:.7rem;
+}
+.res-cap{font-size:.62rem;font-weight:700;color:#e6ebf1;text-transform:uppercase;letter-spacing:.06em;width:100%;margin-bottom:.35rem}
+.pack-fig{display:flex;flex-direction:column;align-items:center;gap:.25rem}
+.pack-fig img{height:88px;width:auto;object-fit:contain;filter:drop-shadow(0 8px 12px rgba(0,0,0,.6))}
+.pack-fig span{font-size:.62rem;font-weight:600;color:#e6ebf1}
+.pack-or{align-self:center;font-size:.72rem;font-weight:800;color:#9aa6b5}
+.res-stats{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;width:100%;margin-bottom:.55rem}
+.stat{background:rgba(0,0,0,.55);border:1px solid rgba(255,0,85,.35);border-radius:12px;padding:.5rem}
+.stat span{display:block}
+.stat .k{font-size:.66rem;color:#c3ccd8;font-weight:600}
+.stat .v{font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;margin-top:.1rem}
+.stat .v.neon{color:var(--neon);text-shadow:0 0 10px rgba(0,255,157,.4)}
+.pack-box{
+  width:100%;background:rgba(0,0,0,.65);border:1.5px solid var(--neon);
+  border-radius:14px;padding:.65rem .8rem;margin-bottom:.9rem;
+  box-shadow:0 0 16px rgba(0,255,157,.2);
+}
+.pack-box .k{font-size:.7rem;color:var(--neon);font-weight:700}
+.pack-box .v{font-family:'Poppins',sans-serif;font-size:1.02rem;font-weight:700;color:#fff;line-height:1.3;margin:.2rem 0 .35rem}
+.pack-box .t{font-size:.72rem;color:#ccd3dc;border-top:1px solid rgba(255,255,255,.15);padding-top:.35rem}
+.pack-box .t b{color:#fff}
+
+/* Telas baixas: tudo continua cabendo */
+@media (max-height:760px){
+  .device-frame{padding:1rem .95rem .8rem;gap:.65rem}
+  .page{gap:.65rem}
+  .logo-img{width:100px;max-height:52px}
+  .logo-fallback{width:100px;height:50px}
+  .brand{font-size:1.15rem}
+  .form{gap:.5rem}
+  .input{padding:.5rem .6rem}
+  .social-icon{width:38px;height:38px}
+  .footer{padding-top:.5rem;gap:.25rem}
+}
+@media (max-height:660px){
+  .tagline,.subtitle{display:none}
+  .address{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
 </head>
-<body class="text-slate-100 font-sans flex flex-col justify-between items-center min-h-screen p-2 sm:p-4 md:p-6">
+<body>
 
-    <!-- Container Principal do App -->
-    <div class="w-full max-w-lg my-auto">
-        
-        <!-- Moldura Neon Branca -->
-        <div class="white-neon-frame rounded-3xl p-4 sm:p-6 relative overflow-hidden shadow-card-depth">
-            
-            <!-- Iluminação de Fundo -->
-            <div class="absolute -top-24 -left-24 w-60 h-60 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-brand-neon/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="device-frame">
+  <div class="page">
 
-            <!-- Cabeçalho com Logo -->
-            <div class="text-center mb-3">
-                <div class="shine-container inline-flex items-center justify-center gap-3 p-1.5 rounded-2xl">
-                    <img src="logo.jpg" onerror="this.onerror=null; this.src='logo.png';" alt="Qualyquimy Logo" class="pulse-subtle w-10 h-10 sm:w-11 sm:h-11 object-contain">
-                    
-                    <div class="flex flex-col items-start">
-                        <span class="font-brand font-black text-2xl sm:text-3xl tracking-tight text-white flex items-center gap-1 leading-none">
-                            QUALY<span class="text-brand-orange">QUIMY</span>
-                        </span>
-                        <span class="text-[9px] sm:text-[10px] tracking-[0.25em] text-slate-400 font-semibold uppercase mt-0.5">
-                            Tintas e Texturas
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Título Principal Atualizado -->
-            <div class="text-center mb-4">
-                <h1 class="text-base sm:text-xl font-extrabold text-white tracking-tight leading-tight">
-                    Calculadora <span class="text-neon-gradient">Textura Lisa ou Rolada Premium</span>
-                </h1>
-                <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5 max-w-xs mx-auto">
-                    Informe as medidas do ambiente para calcular a quantidade ideal.
-                </p>
-            </div>
-
-            <!-- Botoes Superiores (Textura com Modal / Exemplo / Consumo Médio 3,33kg) -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5 p-1 bg-[#050C16] rounded-2xl border border-slate-800/80 mb-4">
-                
-                <!-- 1. Textura / Veja - Clique Aqui -->
-                <button type="button" onclick="openTexturaModal()" class="flex items-center justify-center gap-1 py-2 px-1.5 rounded-xl font-bold text-[11px] sm:text-xs bg-brand-neon hover:bg-brand-neonDark text-slate-950 shadow-neon-glow transition-all duration-300 cursor-pointer">
-                    <i class="fa-solid fa-cubes text-xs"></i>
-                    <span>Textura/Veja-clique aqui</span>
-                </button>
-
-                <!-- 2. Exemplo de medidas (exemplo2.png) -->
-                <button type="button" onclick="openExampleModal()" class="flex items-center justify-center gap-1 py-2 px-1.5 rounded-xl font-semibold text-[11px] sm:text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 hover:border-brand-neon/50 transition-all duration-300 cursor-pointer">
-                    <i class="fa-solid fa-ruler-combined text-brand-neon text-xs"></i>
-                    <span>Exemplo de medidas</span>
-                </button>
-
-                <!-- 3. Consumo Médio 3,33KG/M² -->
-                <div class="flex items-center justify-center gap-1 py-2 px-1.5 rounded-xl font-semibold text-[10px] sm:text-[11px] bg-slate-900/90 text-amber-300 border border-amber-500/30 text-center select-none">
-                    <i class="fa-solid fa-scale-balanced text-amber-400 text-xs"></i>
-                    <span>Consumo Médio: 3,33KG/M²</span>
-                </div>
-            </div>
-
-            <!-- Formulário de Entrada -->
-            <form id="calcForm" onsubmit="event.preventDefault(); openResultModal();" class="space-y-3">
-                
-                <!-- Largura e Comprimento -->
-                <div class="grid grid-cols-2 gap-2.5">
-                    <div>
-                        <label for="largura" class="block text-[11px] font-semibold text-slate-300 mb-1">
-                            Largura (m)
-                        </label>
-                        <input type="number" step="0.01" min="0.1" id="largura" value="4" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3 py-1.5 text-sm">
-                    </div>
-                    <div>
-                        <label for="comprimento" class="block text-[11px] font-semibold text-slate-300 mb-1">
-                            Comprimento (m)
-                        </label>
-                        <input type="number" step="0.01" min="0.1" id="comprimento" value="5" oninput="saveFormState()" placeholder="0.00" required class="app-input w-full rounded-xl px-3 py-1.5 text-sm">
-                    </div>
-                </div>
-
-                <!-- Pé-direito, Janelas e Portas -->
-                <div class="grid grid-cols-3 gap-2">
-                    <div>
-                        <label for="pedireito" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Pé-direito (m)">
-                            Pé-direito (m)
-                        </label>
-                        <input type="number" step="0.01" min="0.1" id="pedireito" value="2.80" oninput="saveFormState()" placeholder="2.80" required class="app-input w-full rounded-xl px-2 py-1.5 text-sm text-center">
-                    </div>
-                    <div>
-                        <label for="janelas" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Janelas (m²)">
-                            Janelas (m²)
-                        </label>
-                        <input type="number" step="0.01" min="0" id="janelas" value="5" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-1.5 text-sm text-center">
-                    </div>
-                    <div>
-                        <label for="portas" class="block text-[11px] font-semibold text-slate-300 mb-1 truncate" title="Portas (m²)">
-                            Portas (m²)
-                        </label>
-                        <input type="number" step="0.01" min="0" id="portas" value="0" oninput="saveFormState()" placeholder="0.00" class="app-input w-full rounded-xl px-2 py-1.5 text-sm text-center">
-                    </div>
-                </div>
-
-                <!-- Botão Calcular -->
-                <button type="submit" class="w-full mt-2 py-2.5 px-4 rounded-2xl bg-brand-neon hover:bg-brand-neonDark text-slate-950 font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-neon-button hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
-                    <i class="fa-solid fa-calculator text-base"></i>
-                    <span>Calcular</span>
-                </button>
-            </form>
-
-        </div>
+    <!-- Logo / Marca -->
+    <div class="logo-wrap">
+      <div class="logo-frame">
+        <img class="logo-img" src="logo.jpg" alt="Logo Qualy Quimy"
+          onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logo.png';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+        <div class="logo-fallback">QUALY</div>
+      </div>
+      <div>
+        <div class="brand">Qualy <em>Quimy</em></div>
+        <div class="tagline">Tintas e Texturas · Itaquaquecetuba</div>
+      </div>
     </div>
 
-    <!-- Banner Rotativo (Marquee) Contínuo Clicável para o WhatsApp -->
-    <a href="https://wa.me/5511954950044?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20link%20personalizado%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="w-full max-w-lg mt-3 overflow-hidden bg-slate-950/90 border border-amber-500/40 hover:border-amber-400 rounded-xl py-2 transition-all cursor-pointer block group">
-        <div class="marquee-track text-[11px] font-bold text-amber-300 group-hover:text-white whitespace-nowrap">
-            <span class="px-4"><i class="fa-solid fa-star text-brand-orange mr-1.5"></i>Crie seu link igual esse personalizado para sua empresa</span>
-            <span class="px-4"><i class="fa-solid fa-star text-brand-orange mr-1.5"></i>Crie seu link igual esse personalizado para sua empresa</span>
-            <span class="px-4"><i class="fa-solid fa-star text-brand-orange mr-1.5"></i>Crie seu link igual esse personalizado para sua empresa</span>
-            <span class="px-4"><i class="fa-solid fa-star text-brand-orange mr-1.5"></i>Crie seu link igual esse personalizado para sua empresa</span>
+    <!-- Título -->
+    <div>
+      <h1 class="title">Calculadora Textura Lisa ou Rolada Premium</h1>
+      <p class="subtitle">Informe as medidas do ambiente para calcular a quantidade ideal.</p>
+    </div>
+
+    <!-- Botões: textura / exemplo / consumo -->
+    <div style="width:100%;display:flex;flex-direction:column;gap:.5rem">
+      <div class="grid2">
+        <button type="button" class="act-btn solid" onclick="openTextura()" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+          <span>Textura<br>Veja, clique aqui</span>
+        </button>
+        <button type="button" class="act-btn" onclick="openExample()" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="8" width="20" height="8" rx="1.5"/><path d="M6 8v4M10 8v3M14 8v4M18 8v3"/></svg>
+          <span>Exemplo<br>de medidas</span>
+        </button>
+      </div>
+      <div class="chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 8l7-5 7 5M5 8l-2 7a3 3 0 0 0 4 0L5 8zm14 0l-2 7a3 3 0 0 0 4 0l-2-7z"/></svg>
+        Consumo médio: 3,33 kg/m²
+      </div>
+    </div>
+
+    <!-- Formulário -->
+    <form class="form" id="calcForm" novalidate>
+
+      <div class="grid2">
+        <div class="field">
+          <label for="largura">Largura (m)</label>
+          <input class="input" type="number" inputmode="decimal" step="0.01" min="0.1" id="largura" value="4" placeholder="0,00">
         </div>
+        <div class="field">
+          <label for="comprimento">Comprimento (m)</label>
+          <input class="input" type="number" inputmode="decimal" step="0.01" min="0.1" id="comprimento" value="5" placeholder="0,00">
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="field">
+          <label for="pedireito">Pé-direito (m)</label>
+          <input class="input center" type="number" inputmode="decimal" step="0.01" min="0.1" id="pedireito" value="2.80" placeholder="2,80">
+        </div>
+        <div class="field">
+          <label for="janelas">Janelas (m²)</label>
+          <input class="input center" type="number" inputmode="decimal" step="0.01" min="0" id="janelas" value="5" placeholder="0,00">
+        </div>
+        <div class="field">
+          <label for="portas">Portas (m²)</label>
+          <input class="input center" type="number" inputmode="decimal" step="0.01" min="0" id="portas" value="0" placeholder="0,00">
+        </div>
+      </div>
+
+      <p class="form-msg" id="formMsg" role="alert"></p>
+
+      <button type="submit" class="btn-calc">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 18.5h.01M12 18.5h.01M16 18.5h.01"/></svg>
+        Calcular
+      </button>
+    </form>
+
+    <!-- Acesso rápido -->
+    <div class="social-row" aria-label="Contato">
+      <a class="social-btn" id="waQuick" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <div class="social-icon" style="background:linear-gradient(135deg,#25d366,#128c7e)">
+          <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.84L.057 23.057a.75.75 0 0 0 .916.927l5.358-1.476A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        </div>
+        <span class="social-label">WhatsApp</span>
+      </a>
+
+      <a class="social-btn" href="https://maps.google.com/?q=Rua+Leiria,+45+-+Chácara+Cuiabá,+Itaquaquecetuba+-+SP" target="_blank" rel="noopener" aria-label="Como chegar no Google Maps">
+        <div class="social-icon" style="background:linear-gradient(135deg,#ea4335,#c5221f)">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#fff"/><circle cx="12" cy="9" r="2.5" fill="#ea4335"/></svg>
+        </div>
+        <span class="social-label">Maps</span>
+      </a>
+
+      <a class="social-btn" href="https://tintasqualyquimy.com.br" target="_blank" rel="noopener" aria-label="Visitar o site">
+        <div class="social-icon" style="background:linear-gradient(135deg,#ff6b00,#b84a00)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        </div>
+        <span class="social-label">Site</span>
+      </a>
+    </div>
+
+    <!-- Endereço -->
+    <div class="address">
+      <a href="https://maps.google.com/?q=Rua+Leiria,+45+-+Chácara+Cuiabá,+Itaquaquecetuba+-+SP" target="_blank" rel="noopener">Rua Leiria, 45</a> · Chácara Cuiabá<br>
+      Itaquaquecetuba, SP
+    </div>
+
+    <!-- Faixa rolante -->
+    <a class="quote-banner" href="https://wa.me/5511954950044?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20link%20personalizado%20para%20minha%20empresa." target="_blank" rel="noopener" aria-label="Criar link personalizado para sua empresa">
+      <div class="quote-track">
+        <span class="quote-item">★ Crie seu link igual esse personalizado para sua empresa</span>
+        <span class="quote-item">★ Crie seu link igual esse personalizado para sua empresa</span>
+        <span class="quote-item">★ Crie seu link igual esse personalizado para sua empresa</span>
+        <span class="quote-item">★ Crie seu link igual esse personalizado para sua empresa</span>
+      </div>
     </a>
 
-    <!-- Rodapé com SSL, Conexão e ImpulsoWeb10 -->
-    <footer class="w-full max-w-lg mt-3 mb-1 pt-2 border-t border-slate-800/80 flex flex-col items-center gap-1.5 text-center text-[10px] sm:text-[11px] text-slate-400">
-        
-        <!-- SSL Certificado e Conexão -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-900/90 rounded-full border border-slate-800 text-slate-300">
-            <i class="fa-solid fa-shield-halved text-emerald-400 text-xs"></i>
-            <span>SSL Certificado 100% Seguro</span>
-            <span class="text-slate-600">•</span>
-            <i class="fa-solid fa-lock text-brand-neon text-xs"></i>
-            <span>Conexão Criptografada</span>
-        </div>
+  </div>
 
-        <!-- Crédito de Desenvolvimento -->
-        <div class="text-slate-500 font-medium">
-            Desenvolvido por <a href="https://avaliar.impulsoweb10.com.br" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-brand-neon underline underline-offset-2 font-semibold transition-colors">ImpulsoWeb10</a>
-        </div>
-    </footer>
-
-    <!-- MODAL DE RESULTADO (VERMELHO NEON + MOLDURA BRANCA) -->
-    <div id="resultModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-3 transition-all duration-300 overflow-y-auto">
-        <div class="w-full max-w-md modal-red-neon-frame rounded-3xl p-4 sm:p-5 relative modal-fade-in my-auto flex flex-col justify-between overflow-hidden">
-            
-            <!-- Botão Fechar X -->
-            <button onclick="closeResultModal()" class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/60 hover:bg-red-600 text-slate-200 border border-slate-600 flex items-center justify-center transition-all cursor-pointer z-20">
-                <i class="fa-solid fa-xmark text-sm"></i>
-            </button>
-
-            <div class="space-y-3">
-                <!-- Cabeçalho -->
-                <div class="text-center border-b border-red-900/60 pb-2 pr-5">
-                    <span class="inline-flex items-center gap-1 text-brand-neon text-[11px] font-extrabold uppercase tracking-wider">
-                        <i class="fa-solid fa-circle-check"></i> Resultado Calculado
-                    </span>
-                    <h2 class="text-base sm:text-lg font-black text-white mt-0.5">
-                        Necessidade de Textura Lisa/Rolada
-                    </h2>
-                </div>
-
-                <!-- Medidas e Total -->
-                <div class="grid grid-cols-2 gap-2">
-                    <div class="bg-black/60 border border-red-900/60 p-2 rounded-2xl text-center">
-                        <span class="text-[9px] font-semibold text-slate-300 uppercase block">Área Líquida</span>
-                        <span id="modalResArea" class="text-base sm:text-lg font-black text-white block">0 m²</span>
-                    </div>
-                    <div class="bg-black/60 border border-red-900/60 p-2 rounded-2xl text-center">
-                        <span class="text-[9px] font-semibold text-slate-300 uppercase block">Necessário</span>
-                        <span id="modalResQuantidade" class="text-base sm:text-lg font-black text-brand-neon block">0 kg</span>
-                    </div>
-                </div>
-
-                <!-- Exibição Dinâmica das Embalagens -->
-                <div class="p-2.5 bg-black/50 rounded-2xl border border-white/20 text-center">
-                    <span class="text-[10px] text-slate-300 font-semibold mb-1 block uppercase tracking-wider">
-                        Embalagem(ns) Recomendada(s)
-                    </span>
-                    <div id="imageContainer" class="flex items-center justify-center gap-3 py-1 min-h-[90px]">
-                        <!-- Injetado via JS -->
-                    </div>
-                </div>
-
-                <!-- Sugestão de Compra com Letras Maiores -->
-                <div class="bg-black/80 border-2 border-brand-neon p-3 rounded-2xl space-y-1 shadow-lg shadow-black">
-                    <span class="text-xs font-black text-brand-neon uppercase tracking-wider block flex items-center gap-1.5">
-                        <i class="fa-solid fa-boxes-packing text-sm"></i> Sugestão de Compra:
-                    </span>
-                    <div id="modalResEmbalagem" class="text-base sm:text-lg font-black text-white leading-tight">
-                        --
-                    </div>
-                    <div id="modalResTotalCovered" class="text-xs text-slate-300 pt-1.5 border-t border-slate-800 flex items-center gap-1.5 font-semibold">
-                        <i class="fa-solid fa-circle-check text-brand-neon"></i>
-                        <span>Total fornecido: <strong id="modalCoveredKg" class="text-white font-bold">0 kg</strong></span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Botões de Ação na Modal de Resultado -->
-            <div class="mt-4 pt-2.5 border-t border-red-900/60 flex flex-col gap-2">
-                
-                <div class="flex items-center justify-between gap-2">
-                    <!-- Botão Voltar (Menor) -->
-                    <button onclick="closeResultModal()" class="px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold text-xs transition-all flex items-center justify-center gap-1 border border-slate-700 cursor-pointer">
-                        <i class="fa-solid fa-arrow-left text-xs"></i>
-                        <span>Voltar</span>
-                    </button>
-
-                    <!-- Botão Saiba Mais WhatsApp (Maior) -->
-                    <a href="https://wa.me/5511954950044?text=Ol%C3%A1%2C%20fiz%20o%20c%C3%A1lculo%20de%20Textura%20Lisa%2FRolada%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="pulse-btn px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-lg cursor-pointer flex-1">
-                        <i class="fa-brands fa-whatsapp text-base"></i>
-                        <span>Saiba mais no WhatsApp</span>
-                    </a>
-                </div>
-
-                <!-- Botão Pequeno Secundário para Link Personalizado -->
-                <a href="https://wa.me/5511954950044?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20link%20personalizado%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="w-full text-center py-1 px-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-amber-300 hover:text-amber-200 border border-amber-500/30 text-[10px] font-semibold transition-all">
-                    <i class="fa-solid fa-wand-magic-sparkles mr-1"></i>Clique aqui para ter um link personalizado para sua empresa
-                </a>
-            </div>
-
-        </div>
+  <!-- Rodapé -->
+  <div class="footer">
+    <div class="footer-bottom-row">
+      <div class="footer-ssl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>SSL Certificado 100% Seguro</span>
+      </div>
+      <span>•</span>
+      <span>Conexão Criptografada</span>
     </div>
+    <p class="footer-dev" style="font-size:.63rem;color:#66707d">Desenvolvido por <a href="https://avaliar.impulsoweb10.com.br" target="_blank" rel="noopener">ImpulsoWeb10</a></p>
+  </div>
+</div>
 
-    <!-- MODAL DO CARROSSEL TEXTURA (4.png, 5.png, 5.png - IMAGENS MAIORES) -->
-    <div id="texturaModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-2 sm:p-4 transition-all duration-300">
-        <div class="relative w-full max-w-lg white-neon-frame rounded-3xl p-3 sm:p-5 shadow-2xl modal-fade-in flex flex-col items-center max-h-[92vh]">
-            
-            <button onclick="closeTexturaModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-800 hover:bg-red-500/20 text-slate-300 border border-slate-700 flex items-center justify-center transition-all cursor-pointer z-10">
-                <i class="fa-solid fa-xmark text-base"></i>
-            </button>
+<!-- Modal (bottom sheet) -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Detalhes da calculadora">
+  <div class="sheet" id="sheet">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="sheet-inner">
 
-            <div class="text-center mb-2 pr-8">
-                <h3 class="text-base font-extrabold text-white flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-cubes text-brand-neon"></i>
-                    <span>Exemplos de Textura Lisa / Rolada</span>
-                </h3>
-            </div>
-
-            <!-- Conteúdo do Carrossel com Imagem Ampliada -->
-            <div class="relative w-full overflow-hidden rounded-2xl bg-black/70 border border-slate-800 p-1 flex-1 flex flex-col justify-center items-center">
-                <div class="relative h-[55vh] sm:h-[65vh] w-full flex items-center justify-center">
-                    <img id="carouselImg" src="2.png" onerror="this.onerror=null; this.src='https://placehold.co/600x500/08111e/00FF9D?text=Imagem+Textura';" alt="Textura Exemplo" class="max-h-full max-w-full object-contain rounded-xl">
-                </div>
-
-                <!-- Botões de Navegação -->
-                <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white flex items-center justify-center border border-slate-700 cursor-pointer shadow-lg">
-                    <i class="fa-solid fa-chevron-left text-sm"></i>
-                </button>
-                <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white flex items-center justify-center border border-slate-700 cursor-pointer shadow-lg">
-                    <i class="fa-solid fa-chevron-right text-sm"></i>
-                </button>
-
-                <!-- Indicadores de Pontos -->
-                <div class="flex items-center justify-center gap-2 py-2">
-                    <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-brand-neon"></span>
-                    <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-slate-600"></span>
-                    <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-slate-600"></span>
-                </div>
-            </div>
-
-            <button onclick="closeTexturaModal()" class="mt-3 px-6 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all cursor-pointer border border-slate-700">
-                Voltar
-            </button>
+      <!-- Painel: carrossel de texturas -->
+      <div class="panel" id="panelTextura">
+        <div class="sheet-head">
+          <span class="sheet-title">Exemplos de Textura Lisa / Rolada</span>
+          <button class="btn-close" onclick="closeSheet()" aria-label="Fechar">✕</button>
         </div>
-    </div>
-
-    <!-- MODAL "EXEMPLO DE MEDIDAS" (exemplo2.png - AMPLIAÇÃO DA IMAGEM) -->
-    <div id="exampleModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md p-2 sm:p-4 transition-all duration-300">
-        <div class="relative w-full max-w-lg white-neon-frame rounded-3xl p-3 sm:p-5 shadow-2xl modal-fade-in flex flex-col items-center max-h-[92vh]">
-            
-            <button onclick="closeExampleModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-800 hover:bg-red-500/20 text-slate-300 border border-slate-700 flex items-center justify-center transition-all cursor-pointer z-10">
-                <i class="fa-solid fa-xmark text-base"></i>
+        <div class="answer-body">
+          <div class="viewer" id="viewer">
+            <img id="carouselImg" src="4.png" alt="Exemplo de textura"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x500/08111e/00FF9D?text=Imagem+Textura';">
+            <button type="button" class="nav-btn prev" onclick="prevSlide()" aria-label="Imagem anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
             </button>
-
-            <div class="text-center mb-2 pr-8">
-                <h3 class="text-base font-extrabold text-white flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-ruler-combined text-brand-neon"></i>
-                    <span>Exemplo de Medidas do Ambiente</span>
-                </h3>
-            </div>
-
-            <!-- Imagem do Exemplo 2 Ampliada -->
-            <div class="w-full overflow-hidden rounded-2xl bg-black/70 border border-slate-800 p-1 flex items-center justify-center flex-1">
-                <img src="exemplo2.png" onerror="this.onerror=null; this.src='https://placehold.co/600x450/08111e/00FF9D?text=Exemplo+de+Medidas+2';" alt="Exemplo de Medidas" class="w-full max-h-[65vh] object-contain rounded-xl">
-            </div>
-
-            <button onclick="closeExampleModal()" class="mt-3 px-6 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all cursor-pointer border border-slate-700">
-                Fechar
+            <button type="button" class="nav-btn next" onclick="nextSlide()" aria-label="Próxima imagem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
             </button>
+          </div>
+          <div class="dots" id="dots" aria-hidden="true"></div>
+          <button type="button" class="answer-cta ghost" onclick="closeSheet()">← Voltar</button>
         </div>
+      </div>
+
+      <!-- Painel: exemplo de medidas -->
+      <div class="panel" id="panelExample">
+        <div class="sheet-head">
+          <span class="sheet-title">Exemplo de Medidas do Ambiente</span>
+          <button class="btn-close" onclick="closeSheet()" aria-label="Fechar">✕</button>
+        </div>
+        <div class="answer-body">
+          <div class="viewer">
+            <img src="exemplo2.png" alt="Exemplo de medidas do ambiente"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x450/08111e/00FF9D?text=Exemplo+de+Medidas+2';">
+          </div>
+          <button type="button" class="answer-cta ghost" style="margin-top:.8rem" onclick="closeSheet()">← Voltar</button>
+        </div>
+      </div>
+
+      <!-- Painel: resultado -->
+      <div class="panel" id="panelResult">
+        <div class="sheet-head">
+          <span class="sheet-title">Textura Lisa/Rolada: quanto comprar</span>
+          <button class="btn-close" onclick="closeSheet()" aria-label="Fechar">✕</button>
+        </div>
+        <div class="answer-body">
+          <div class="res-photo" id="resPhoto"></div>
+
+          <div class="res-stats">
+            <div class="stat"><span class="k">Área líquida</span><span class="v" id="resArea">0 m²</span></div>
+            <div class="stat"><span class="k">Necessário</span><span class="v neon" id="resKg">0 kg</span></div>
+          </div>
+
+          <div class="pack-box">
+            <div class="k">Sugestão de compra</div>
+            <div class="v" id="resPack">--</div>
+            <div class="t">Total fornecido: <b id="resCovered">0 kg</b></div>
+          </div>
+
+          <a id="resWa" href="#" class="answer-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.84L.057 23.057a.75.75 0 0 0 .916.927l5.358-1.476A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            <span>Saiba mais no WhatsApp</span>
+          </a>
+          <button type="button" class="answer-cta ghost" onclick="closeSheet()">← Voltar e ajustar medidas</button>
+          <a class="link-mini" href="https://wa.me/5511954950044?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20link%20personalizado%20para%20minha%20empresa." target="_blank" rel="noopener">✨ Clique aqui para ter um link personalizado para sua empresa</a>
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
 
-    <!-- Lógica em JavaScript -->
-    <script>
-        const TEXTURA_CONSUMPTION = 3.33; // 3,33 kg por m² para Textura Lisa/Rolada
-        
-        const PACKAGES = [
-            { size: 25, label: 'barrica 25kg', img: 'barrica25kg.png' },
-            { size: 16, label: 'balde 16kg', img: 'balde25kg.png' },
-            { size: 3.6, label: 'galão 3.6kg', img: 'galao36ls.png' }
-        ];
+<script>
+/* ===== Configuração ===== */
+const WA_NUMBER = '5511954950044';
+const TEXTURA_CONSUMPTION = 3.33; // kg por m² de Textura Lisa/Rolada
 
-        // Lógica do Carrossel com imagens 4.png, 5.png e 6.png
-        const carouselImages = ['4.png', '5.png', '6.png'];
-        let currentSlide = 0;
+// Embalagens e fotos (cada foto tenta os arquivos na ordem; se falhar, usa imagem provisória)
+const PACKAGES = [
+  { size: 25,  label: 'barrica 25kg', short: 'Barrica 25kg', imgs: ['barrica25kg.png'] },
+  { size: 16,  label: 'balde 16kg',   short: 'Balde 16kg',   imgs: ['balde16lts.png', 'balde25kg.png'] },
+  { size: 3.6, label: 'galão 3.6kg',  short: 'Galão 3,6kg',  imgs: ['galao36ls.png'] }
+];
+const PKG_BARRICA = PACKAGES[0];
+const PKG_BALDE = PACKAGES[1];
 
-        function updateCarousel() {
-            const imgEl = document.getElementById('carouselImg');
-            imgEl.src = carouselImages[currentSlide];
-            
-            const dots = document.querySelectorAll('.dot-indicator');
-            dots.forEach((dot, idx) => {
-                if (idx === currentSlide) {
-                    dot.className = 'dot-indicator w-3 h-3 rounded-full bg-brand-neon';
-                } else {
-                    dot.className = 'dot-indicator w-2.5 h-2.5 rounded-full bg-slate-600';
-                }
-            });
-        }
+const CAROUSEL_IMAGES = ['4.png', '5.png', '6.png'];
+let currentSlide = 0;
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % carouselImages.length;
-            updateCarousel();
-        }
+const overlay = document.getElementById('overlay');
+const sheet = document.getElementById('sheet');
+const PANELS = ['panelTextura', 'panelExample', 'panelResult'];
 
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + carouselImages.length) % carouselImages.length;
-            updateCarousel();
-        }
+const fmt = n => n.toFixed(1).replace('.', ',');
+function waLink(text) { return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text); }
 
-        // Handlers dos Modais
-        function openTexturaModal() {
-            currentSlide = 0;
-            updateCarousel();
-            const modal = document.getElementById('texturaModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        }
+/* ===== Modal ===== */
+function openSheet(id) {
+  PANELS.forEach(p => document.getElementById(p).classList.toggle('visible', p === id));
+  sheet.classList.toggle('red', id === 'panelResult');
+  document.querySelector('.sheet-inner').scrollTop = 0;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSheet() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+overlay.addEventListener('click', e => { if (e.target === overlay) closeSheet(); });
+document.addEventListener('keydown', e => {
+  if (!overlay.classList.contains('open')) return;
+  if (e.key === 'Escape') closeSheet();
+  if (document.getElementById('panelTextura').classList.contains('visible')) {
+    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  }
+});
 
-        function closeTexturaModal() {
-            const modal = document.getElementById('texturaModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            document.body.style.overflow = '';
-        }
+/* ===== Carrossel ===== */
+const dotsEl = document.getElementById('dots');
+CAROUSEL_IMAGES.forEach(() => { const d = document.createElement('span'); d.className = 'dot'; dotsEl.appendChild(d); });
 
-        function openExampleModal() {
-            const modal = document.getElementById('exampleModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        }
+function updateCarousel() {
+  document.getElementById('carouselImg').src = CAROUSEL_IMAGES[currentSlide];
+  dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('on', i === currentSlide));
+}
+function nextSlide() { currentSlide = (currentSlide + 1) % CAROUSEL_IMAGES.length; updateCarousel(); }
+function prevSlide() { currentSlide = (currentSlide - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length; updateCarousel(); }
+function openTextura() { currentSlide = 0; updateCarousel(); openSheet('panelTextura'); }
+function openExample() { openSheet('panelExample'); }
 
-        function closeExampleModal() {
-            const modal = document.getElementById('exampleModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            document.body.style.overflow = '';
-        }
+// Arrastar para o lado troca a imagem
+(function () {
+  const v = document.getElementById('viewer');
+  let x0 = null;
+  v.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  v.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) { dx < 0 ? nextSlide() : prevSlide(); }
+    x0 = null;
+  });
+})();
 
-        function openResultModal() {
-            const data = calculate();
-            
-            document.getElementById('modalResArea').textContent = `${data.areaParede.toFixed(1).replace('.', ',')} m²`;
-            document.getElementById('modalResQuantidade').textContent = `${data.totalKg.toFixed(1).replace('.', ',')} kg`;
-            document.getElementById('modalResEmbalagem').textContent = data.packaging.text;
-            document.getElementById('modalCoveredKg').textContent = `${data.packaging.totalCovered.toFixed(1).replace('.', ',')} kg`;
-            
-            const imgContainer = document.getElementById('imageContainer');
-            imgContainer.innerHTML = '';
+/* ===== Cálculo ===== */
+function num(id) { return parseFloat(document.getElementById(id).value) || 0; }
 
-            // Se for acima de 5,6 kg exibe Balde e Barrica lado a lado
-            if (data.totalKg > 5.6) {
-                imgContainer.innerHTML = `
-                    <div class="flex flex-col items-center">
-                        <img src="balde16lts.png" onerror="this.onerror=null; this.src='https://placehold.co/100x120/003322/00FF9D?text=Balde+16kg';" alt="Balde 16kg" class="h-20 sm:h-24 object-contain drop-shadow">
-                        <span class="text-[9px] text-slate-200 font-semibold mt-0.5">Balde 16kg</span>
-                    </div>
-                    <div class="text-slate-400 font-bold text-xs">OU</div>
-                    <div class="flex flex-col items-center">
-                        <img src="barrica25kg.png" onerror="this.onerror=null; this.src='https://placehold.co/100x120/003322/00FF9D?text=Barrica+25kg';" alt="Barrica 25kg" class="h-20 sm:h-24 object-contain drop-shadow">
-                        <span class="text-[9px] text-slate-200 font-semibold mt-0.5">Barrica 25kg</span>
-                    </div>
-                `;
-            } else {
-                const singleImg = data.packaging.recommendedImg || 'galao36ls.png';
-                const label = data.totalKg <= 3.6 ? 'Galão 3,6kg' : 'Balde 16kg';
-                imgContainer.innerHTML = `
-                    <div class="flex flex-col items-center">
-                        <img src="${singleImg}" onerror="this.onerror=null; this.src='https://placehold.co/100x120/003322/00FF9D?text=Embalagem';" alt="Embalagem" class="h-22 sm:h-26 object-contain drop-shadow">
-                        <span class="text-[9px] text-slate-200 font-semibold mt-0.5">${label}</span>
-                    </div>
-                `;
-            }
+function calculate() {
+  const largura = num('largura');
+  const comprimento = num('comprimento');
+  const pedireito = num('pedireito');
+  const janelas = num('janelas');
+  const portas = num('portas');
 
-            const modal = document.getElementById('resultModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        }
+  const areaParede = Math.max((largura + comprimento) * 2 * pedireito - janelas - portas, 0);
+  const totalKg = areaParede * TEXTURA_CONSUMPTION;
 
-        function closeResultModal() {
-            const modal = document.getElementById('resultModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            document.body.style.overflow = '';
-        }
+  saveFormState();
 
-        window.onclick = function(e) {
-            if (e.target === document.getElementById('resultModal')) closeResultModal();
-            if (e.target === document.getElementById('exampleModal')) closeExampleModal();
-            if (e.target === document.getElementById('texturaModal')) closeTexturaModal();
-        };
+  return {
+    areaParede, totalKg,
+    packaging: getPackagingSuggestion(totalKg, PACKAGES),
+    valid: largura > 0 && comprimento > 0 && pedireito > 0
+  };
+}
 
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeResultModal();
-                closeExampleModal();
-                closeTexturaModal();
-            }
-        });
+function getPackagingSuggestion(required, packages) {
+  if (required <= 0) return { text: 'Nenhuma embalagem necessária', totalCovered: 0, primary: PACKAGES[2] };
 
-        // Cálculo da Área e Consumo (3,33 kg/m²)
-        function calculate() {
-            const largura = parseFloat(document.getElementById('largura').value) || 0;
-            const comprimento = parseFloat(document.getElementById('comprimento').value) || 0;
-            const pedireito = parseFloat(document.getElementById('pedireito').value) || 0;
-            const janelas = parseFloat(document.getElementById('janelas').value) || 0;
-            const portas = parseFloat(document.getElementById('portas').value) || 0;
+  const sorted = [...packages].sort((a, b) => b.size - a.size);
+  const counts = new Map();
+  let remaining = required;
+  let totalCovered = 0;
+  let primary = null;
 
-            let areaParede = ((largura + comprimento) * 2 * pedireito) - janelas - portas;
-            if (areaParede < 0) areaParede = 0;
+  // Preenche com as embalagens maiores primeiro
+  sorted.forEach(pkg => {
+    const count = Math.floor((remaining + 1e-9) / pkg.size);
+    if (count > 0) {
+      counts.set(pkg, count);
+      remaining -= count * pkg.size;
+      totalCovered += count * pkg.size;
+      if (!primary) primary = pkg;
+    }
+  });
 
-            const totalKg = areaParede * TEXTURA_CONSUMPTION;
-            const packaging = getPackagingSuggestion(totalKg, PACKAGES);
+  // O que sobrar: usa a MENOR embalagem que cobre o resto
+  if (remaining > 1e-6) {
+    const fit = [...sorted].reverse().find(p => p.size >= remaining - 1e-9) || sorted[sorted.length - 1];
+    counts.set(fit, (counts.get(fit) || 0) + 1);
+    totalCovered += fit.size;
+    if (!primary) primary = fit;
+  }
 
-            saveFormState();
+  const text = sorted.filter(p => counts.has(p)).map(p => counts.get(p) + '× ' + p.label).join(' + ');
+  return { text, totalCovered, primary };
+}
 
-            return { areaParede, totalKg, packaging };
-        }
+/* ===== Fotos das embalagens ===== */
+function packFigure(pkg) {
+  const fig = document.createElement('div');
+  fig.className = 'pack-fig';
+  const img = document.createElement('img');
+  let i = 0;
+  img.alt = pkg.short;
+  img.onerror = function () {
+    i++;
+    if (i < pkg.imgs.length) { img.src = pkg.imgs[i]; }
+    else { img.onerror = null; img.src = 'https://placehold.co/100x120/003322/00FF9D?text=' + encodeURIComponent(pkg.short); }
+  };
+  img.src = pkg.imgs[0];
+  const cap = document.createElement('span');
+  cap.textContent = pkg.short;
+  fig.appendChild(img);
+  fig.appendChild(cap);
+  return fig;
+}
 
-        function getPackagingSuggestion(requiredAmount, packages) {
-            if (requiredAmount <= 0) {
-                return { text: 'Nenhuma embalagem necessária', totalCovered: 0, recommendedImg: 'galao36ls.png' };
-            }
+function showResult() {
+  const msg = document.getElementById('formMsg');
+  const d = calculate();
 
-            const sorted = [...packages].sort((a, b) => b.size - a.size);
-            let remaining = requiredAmount;
-            const chosen = [];
-            let totalCovered = 0;
-            let primaryImg = null;
+  if (!d.valid) { msg.textContent = 'Preencha largura, comprimento e pé-direito.'; return; }
+  if (d.areaParede <= 0) { msg.textContent = 'Janelas e portas ocupam toda a parede. Confira os valores.'; return; }
+  msg.textContent = '';
 
-            for (let i = 0; i < sorted.length; i++) {
-                const pkg = sorted[i];
-                if (remaining <= 0) break;
+  document.getElementById('resArea').textContent = fmt(d.areaParede) + ' m²';
+  document.getElementById('resKg').textContent = fmt(d.totalKg) + ' kg';
+  document.getElementById('resPack').textContent = d.packaging.text;
+  document.getElementById('resCovered').textContent = fmt(d.packaging.totalCovered) + ' kg';
 
-                const count = Math.floor(remaining / pkg.size);
-                if (count > 0) {
-                    chosen.push(`${count}× ${pkg.label}`);
-                    remaining -= count * pkg.size;
-                    totalCovered += count * pkg.size;
-                    if (!primaryImg) primaryImg = pkg.img;
-                }
-            }
+  // Acima de 5,6 kg: mostra Balde e Barrica lado a lado; abaixo, a embalagem indicada
+  const photo = document.getElementById('resPhoto');
+  photo.innerHTML = '';
+  const cap = document.createElement('div');
+  cap.className = 'res-cap';
+  cap.textContent = 'Embalagem(ns) recomendada(s)';
+  photo.style.flexWrap = 'wrap';
+  photo.appendChild(cap);
 
-            if (remaining > 0) {
-                let bestFit = sorted[sorted.length - 1];
-                for (let i = sorted.length - 1; i >= 0; i--) {
-                    if (sorted[i].size >= remaining) {
-                        bestFit = sorted[i];
-                    }
-                }
-                
-                const existingIdx = chosen.findIndex(str => str.includes(bestFit.label));
-                if (existingIdx !== -1) {
-                    const currentQty = parseInt(chosen[existingIdx].split('×')[0]);
-                    chosen[existingIdx] = `${currentQty + 1}× ${bestFit.label}`;
-                } else {
-                    chosen.push(`1× ${bestFit.label}`);
-                }
-                totalCovered += bestFit.size;
-                if (!primaryImg) primaryImg = bestFit.img;
-            }
+  if (d.totalKg > 5.6) {
+    const or = document.createElement('div');
+    or.className = 'pack-or';
+    or.textContent = 'OU';
+    photo.appendChild(packFigure(PKG_BALDE));
+    photo.appendChild(or);
+    photo.appendChild(packFigure(PKG_BARRICA));
+  } else {
+    photo.appendChild(packFigure(d.packaging.primary));
+  }
 
-            return {
-                text: chosen.join(' + '),
-                totalCovered: totalCovered,
-                recommendedImg: primaryImg || 'barrica25kg.png'
-            };
-        }
+  document.getElementById('resWa').href = waLink(
+    'Olá, fiz o cálculo de Textura Lisa/Rolada e gostaria de mais informações. Área de ' +
+    fmt(d.areaParede) + ' m², total de ' + fmt(d.totalKg) + ' kg (' + d.packaging.text + ').'
+  );
 
-        // LocalStorage para salvar estado
-        const STORAGE_KEY = 'QUALYQUIMY_TEXTURA_LISA_V1';
+  openSheet('panelResult');
+}
 
-        function saveFormState() {
-            const state = {
-                largura: document.getElementById('largura').value,
-                comprimento: document.getElementById('comprimento').value,
-                pedireito: document.getElementById('pedireito').value,
-                janelas: document.getElementById('janelas').value,
-                portas: document.getElementById('portas').value
-            };
-            try {
-                localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-            } catch (e) {
-                console.warn('LocalStorage error:', e);
-            }
-        }
+document.getElementById('calcForm').addEventListener('submit', e => {
+  e.preventDefault();
+  showResult();
+});
 
-        function loadFormState() {
-            try {
-                const saved = localStorage.getItem(STORAGE_KEY);
-                if (saved) {
-                    const state = JSON.parse(saved);
-                    if (state.largura) document.getElementById('largura').value = state.largura;
-                    if (state.comprimento) document.getElementById('comprimento').value = state.comprimento;
-                    if (state.pedireito) document.getElementById('pedireito').value = state.pedireito;
-                    if (state.janelas !== undefined) document.getElementById('janelas').value = state.janelas;
-                    if (state.portas !== undefined) document.getElementById('portas').value = state.portas;
-                }
-            } catch (e) {
-                console.error('Error loading form state:', e);
-            }
-        }
+/* ===== Salva as medidas no aparelho ===== */
+const STORAGE_KEY = 'QUALYQUIMY_TEXTURA_LISA_V1';
+const FIELDS = ['largura', 'comprimento', 'pedireito', 'janelas', 'portas'];
 
-        window.onload = function() {
-            loadFormState();
-        };
-    </script>
+function saveFormState() {
+  const state = {};
+  FIELDS.forEach(id => { state[id] = document.getElementById(id).value; });
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+}
+function loadFormState() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return;
+    const state = JSON.parse(saved);
+    FIELDS.forEach(id => { if (state[id] !== undefined && state[id] !== '') document.getElementById(id).value = state[id]; });
+  } catch (e) {}
+}
+FIELDS.forEach(id => document.getElementById(id).addEventListener('input', saveFormState));
+
+/* ===== Início ===== */
+document.getElementById('waQuick').href = waLink('Olá, quero saber mais sobre a Textura Lisa/Rolada Premium.');
+loadFormState();
+updateCarousel();
+</script>
+
 </body>
 </html>
