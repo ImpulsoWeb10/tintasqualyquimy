@@ -643,7 +643,6 @@ body::before{
 
 <script>
 /* ===== Configuração ===== */
-// Número do WhatsApp usado em todos os botões (mantido igual ao do arquivo original)
 const WA_NUMBER = '5511954950044';
 const WA_BASE_MSG = 'Usei a calculadora de tintas da Qualy e quero saber a respeito.';
 
@@ -858,7 +857,6 @@ function getPackagingSuggestion(requiredLiters, packages) {
   let remaining = requiredLiters;
   let totalCovered = 0;
 
-  // Preenche com as embalagens maiores primeiro
   sorted.forEach(pkg => {
     const count = Math.floor((remaining + 1e-9) / pkg.size);
     if (count > 0) {
@@ -868,7 +866,6 @@ function getPackagingSuggestion(requiredLiters, packages) {
     }
   });
 
-  // O que sobrar: usa a MENOR embalagem que cobre o resto
   if (remaining > 1e-6) {
     const fit = [...sorted].reverse().find(p => p.size >= remaining - 1e-9) || sorted[sorted.length - 1];
     counts.set(fit, (counts.get(fit) || 0) + 1);
