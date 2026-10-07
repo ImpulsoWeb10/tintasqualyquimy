@@ -1,0 +1,232 @@
+<meta charset="utf-8">
+<!--
+  SEJA UM DISTRIBUIDOR - Qualy Quimy (versao 2)
+  COMO USAR: copie tudo a partir de <style> e cole no index.html onde a secao deve aparecer.
+  Nao copie a linha <meta charset> se o index ja tiver uma. Salve o index em UTF-8.
+  Link para a secao: <a href="#seja-distribuidor">Seja um distribuidor</a>
+  Cores: edite so as variaveis --qqd-... no inicio do CSS.
+-->
+<style>
+.qqd{--qqd-ink:#12233F;--qqd-ink2:#1B3358;--qqd-brass:#C8A04A;--qqd-brass-hi:#DDB968;--qqd-brass-lo:#9C7A2E;--qqd-text:#1B2433;--qqd-muted:#5A667A;--qqd-line:#D5DBE5;--qqd-err:#B3261E;
+  position:relative;background-color:var(--qqd-ink);background-image:radial-gradient(rgba(255,255,255,.07) 1.2px,transparent 1.4px);background-size:18px 18px;color:#fff;padding:84px 20px 64px;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.5;box-sizing:border-box}
+.qqd *,.qqd *::before,.qqd *::after{box-sizing:border-box}
+.qqd-wrap{max-width:1080px;margin:0 auto;display:grid;gap:44px;grid-template-columns:1fr;align-items:start}
+@media(min-width:900px){.qqd-wrap{grid-template-columns:1fr 1fr;gap:64px}}
+.qqd-kicker{display:inline-block;margin:0 0 18px;padding:6px 14px;font-size:14px;font-weight:600;color:var(--qqd-brass-hi);border:1px solid rgba(200,160,74,.55);border-radius:999px}
+.qqd h2{margin:0 0 18px;font-size:clamp(30px,4.8vw,46px);line-height:1.08;font-weight:800;letter-spacing:-.025em;color:#fff}
+.qqd-bar{width:64px;height:5px;margin:0 0 22px;background:var(--qqd-brass);border-radius:3px}
+.qqd-lead{margin:0 0 32px;font-size:18px;color:#D9E0EC;max-width:46ch}
+.qqd-feats{display:grid;gap:14px}
+.qqd-feat{display:flex;gap:16px;align-items:flex-start;padding:16px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px}
+.qqd-ico{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:10px;background:rgba(200,160,74,.16);color:var(--qqd-brass-hi)}
+.qqd-ico svg{width:24px;height:24px}
+.qqd-feat b{display:block;margin-bottom:2px;font-size:16px;color:#fff}
+.qqd-feat span{font-size:14.5px;color:#C9D3E3}
+.qqd-card{background:#fff;color:var(--qqd-text);border-radius:16px;padding:32px 28px 26px;border-top:6px solid var(--qqd-brass);box-shadow:0 24px 50px rgba(5,12,28,.45)}
+.qqd-card h3{margin:0 0 4px;font-size:24px;font-weight:800;letter-spacing:-.01em;color:var(--qqd-ink)}
+.qqd-sub{margin:0 0 22px;font-size:15px;color:var(--qqd-muted)}
+.qqd-row{display:grid;gap:0 14px;grid-template-columns:1fr}
+@media(min-width:560px){.qqd-row{grid-template-columns:1fr 1fr}}
+.qqd-field{margin-bottom:16px}
+.qqd-field label{display:block;margin-bottom:6px;font-size:14px;font-weight:700;color:var(--qqd-ink)}
+.qqd-field small{font-weight:500;color:var(--qqd-muted)}
+.qqd-field input{width:100%;height:52px;padding:0 14px;font:inherit;font-size:16px;color:var(--qqd-text);background:#F7F9FC;border:1.5px solid var(--qqd-line);border-radius:10px;transition:border-color .15s,box-shadow .15s,background .15s}
+.qqd-field input:hover{border-color:#B7C0CF}
+.qqd-field input:focus{outline:none;background:#fff;border-color:var(--qqd-ink2);box-shadow:0 0 0 3px rgba(200,160,74,.45)}
+.qqd-field input[aria-invalid="true"]{border-color:var(--qqd-err);background:#FFF7F6}
+.qqd-err{display:none;margin-top:5px;font-size:13px;color:var(--qqd-err)}
+.qqd-field input[aria-invalid="true"]+.qqd-err{display:block}
+.qqd-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:58px;margin-top:4px;padding:0 20px;font:inherit;font-size:18px;font-weight:800;color:var(--qqd-ink);background:linear-gradient(180deg,var(--qqd-brass-hi),var(--qqd-brass));border:0;border-radius:12px;cursor:pointer;box-shadow:0 4px 0 var(--qqd-brass-lo),0 12px 22px rgba(156,122,46,.35);transition:filter .15s,transform .1s,box-shadow .1s}
+.qqd-btn:hover{filter:brightness(1.06)}
+.qqd-btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--qqd-brass-lo)}
+.qqd-btn:focus-visible{outline:3px solid var(--qqd-ink);outline-offset:3px}
+.qqd-btn svg{width:22px;height:22px;flex:none}
+.qqd-promise{display:flex;align-items:center;justify-content:center;gap:8px;margin:16px 0 0;padding:10px 14px;font-size:14.5px;font-weight:700;color:var(--qqd-ink);background:#FBF4E2;border-radius:10px}
+.qqd-promise svg{width:19px;height:19px;flex:none;color:var(--qqd-brass-lo)}
+.qqd-note{margin:12px 0 0;font-size:12.5px;color:var(--qqd-muted);text-align:center}
+.qqd-note a{color:var(--qqd-ink2)}
+.qqd-status{min-height:20px;margin:10px 0 0;font-size:14px;font-weight:600;color:var(--qqd-ink);text-align:center}
+.qqd-trust{max-width:1080px;margin:52px auto 0;padding-top:28px;border-top:1px solid rgba(255,255,255,.16);display:grid;gap:18px;grid-template-columns:repeat(3,1fr);text-align:center}
+.qqd-trust strong{display:block;font-size:clamp(24px,4vw,34px);font-weight:800;color:var(--qqd-brass-hi);line-height:1.1}
+.qqd-trust span{font-size:14px;color:#C9D3E3}
+@media(prefers-reduced-motion:reduce){.qqd *{transition:none!important}}
+</style>
+
+<section class="qqd" id="seja-distribuidor" aria-labelledby="qqd-titulo">
+  <div class="qqd-wrap">
+    <div>
+      <span class="qqd-kicker">Atendimento VIP para atacado</span>
+      <h2 id="qqd-titulo">Seja um Distribuidor Qualy Quimy</h2>
+      <div class="qqd-bar" aria-hidden="true"></div>
+      <p class="qqd-lead">Compre no atacado com atendimento comercial direto de Itaquaquecetuba. Preencha o cadastro e nossa equipe retorna em at&eacute; 30 minutos.</p>
+      <div class="qqd-feats">
+        <div class="qqd-feat">
+          <div class="qqd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.5 11a2 2 0 0 1-2 1.7h-7a2 2 0 0 1-2-1.7L5 8z"/><path d="M5 8c0-2 3.1-3 7-3s7 1 7 3"/></svg></div>
+          <div><b>Marca pr&oacute;pria completa</b><span>Grafiato, Textura Lisa, Massa PVA, Massa Acr&iacute;lica, Seladora, Tinta Econ&ocirc;mica Qualy Color, Esmalte e Liqui Brilho.</span></div>
+        </div>
+        <div class="qqd-feat">
+          <div class="qqd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg></div>
+          <div><b>Embalagens para obra e revenda</b><span>De 1 litro a 25 kg, conforme o produto.</span></div>
+        </div>
+        <div class="qqd-feat">
+          <div class="qqd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h11v10H2zM13 10h4.5l3.5 3.5V16h-8z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div>
+          <div><b>Entrega na regi&atilde;o</b><span>Itaquaquecetuba, Mogi das Cruzes, Suzano, Ferraz de Vasconcelos e cidades pr&oacute;ximas, com op&ccedil;&atilde;o de dia programado. Condi&ccedil;&otilde;es de atacado apresentadas no primeiro contato.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qqd-card">
+      <h3>Cadastro de distribuidor</h3>
+      <p class="qqd-sub">Leva menos de um minuto.</p>
+      <form id="qqd-form" novalidate>
+        <div class="qqd-field">
+          <label for="qqd-nome">Nome ou raz&atilde;o social</label>
+          <input id="qqd-nome" type="text" autocomplete="name" required>
+          <span class="qqd-err">Informe seu nome.</span>
+        </div>
+        <div class="qqd-row">
+          <div class="qqd-field">
+            <label for="qqd-doc">CNPJ ou CPF</label>
+            <input id="qqd-doc" type="text" inputmode="numeric" autocomplete="off" maxlength="18" placeholder="Somente n&uacute;meros" required>
+            <span class="qqd-err">Informe um CNPJ ou CPF v&aacute;lido.</span>
+          </div>
+          <div class="qqd-field">
+            <label for="qqd-ie">Inscri&ccedil;&atilde;o Estadual <small>(se tiver)</small></label>
+            <input id="qqd-ie" type="text" autocomplete="off" maxlength="20" placeholder="N&uacute;meros ou ISENTO">
+            <span class="qqd-err">Informe s&oacute; os n&uacute;meros da IE ou ISENTO.</span>
+          </div>
+        </div>
+        <div class="qqd-row">
+          <div class="qqd-field">
+            <label for="qqd-cidade">Cidade</label>
+            <input id="qqd-cidade" type="text" autocomplete="address-level2" required>
+            <span class="qqd-err">Informe sua cidade.</span>
+          </div>
+          <div class="qqd-field">
+            <label for="qqd-zap">WhatsApp</label>
+            <input id="qqd-zap" type="tel" inputmode="tel" autocomplete="tel-national" maxlength="15" placeholder="(11) 90000-0000" required>
+            <span class="qqd-err">Informe um WhatsApp com DDD.</span>
+          </div>
+        </div>
+        <button type="submit" class="qqd-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Quero ser distribuidor
+        </button>
+        <p class="qqd-promise">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Retorno comercial em at&eacute; 30 minutos
+        </p>
+        <p class="qqd-note">De segunda a sexta, das 8h &agrave;s 17h30. Ao enviar, abrimos o WhatsApp com seus dados prontos. Veja a <a href="https://tintasqualyquimy.com.br/politica-de-privacidade.html">Pol&iacute;tica de Privacidade</a>.</p>
+        <p class="qqd-status" id="qqd-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="qqd-trust">
+    <div><strong>9</strong><span>produtos da marca</span></div>
+    <div><strong>12+</strong><span>cidades atendidas</span></div>
+    <div><strong>4,9</strong><span>avalia&ccedil;&atilde;o m&eacute;dia no Google</span></div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var NUMERO = "5511954950044"; /* WhatsApp da Qualy Quimy */
+  var form = document.getElementById("qqd-form");
+  if (!form) return;
+  var f = {
+    nome: document.getElementById("qqd-nome"),
+    doc: document.getElementById("qqd-doc"),
+    ie: document.getElementById("qqd-ie"),
+    cidade: document.getElementById("qqd-cidade"),
+    zap: document.getElementById("qqd-zap")
+  };
+  var status = document.getElementById("qqd-status");
+
+  function digits(v) { return String(v).replace(/\D/g, ""); }
+
+  function maskDoc(v) {
+    var d = digits(v).slice(0, 14);
+    if (d.length <= 11) {
+      return d.replace(/(\d{3})(\d)/, "$1.$2").replace(/(\d{3})(\d)/, "$1.$2").replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+    }
+    return d.replace(/^(\d{2})(\d)/, "$1.$2").replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3").replace(/\.(\d{3})(\d)/, ".$1/$2").replace(/(\d{4})(\d{1,2})$/, "$1-$2");
+  }
+
+  function maskZap(v) {
+    var d = digits(v).slice(0, 11);
+    if (d.length > 10) return d.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+    if (d.length > 6) return d.replace(/^(\d{2})(\d{4})(\d{0,4})$/, "($1) $2-$3");
+    if (d.length > 2) return d.replace(/^(\d{2})(\d{0,5})$/, "($1) $2");
+    return d;
+  }
+
+  function cpfOk(d) {
+    if (d.length !== 11 || /^(\d)\1+$/.test(d)) return false;
+    for (var t = 9; t < 11; t++) {
+      var s = 0;
+      for (var i = 0; i < t; i++) s += d[i] * (t + 1 - i);
+      if ((s * 10) % 11 % 10 != d[t]) return false;
+    }
+    return true;
+  }
+
+  function cnpjOk(d) {
+    if (d.length !== 14 || /^(\d)\1+$/.test(d)) return false;
+    var w = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+    for (var t = 12; t < 14; t++) {
+      var s = 0, p = w.slice(13 - t);
+      for (var i = 0; i < t; i++) s += d[i] * p[i];
+      var r = s % 11, dv = r < 2 ? 0 : 11 - r;
+      if (dv != d[t]) return false;
+    }
+    return true;
+  }
+
+  /* IE: opcional; aceita ISENTO ou 8 a 14 digitos (varia por estado) */
+  function ieOk(v) {
+    v = v.trim();
+    if (!v || /^isento$/i.test(v)) return true;
+    if (/[^\d.\-\/\s]/.test(v)) return false;
+    var n = digits(v).length;
+    return n >= 8 && n <= 14;
+  }
+
+  function mark(el, ok) { el.setAttribute("aria-invalid", ok ? "false" : "true"); return ok; }
+
+  f.doc.addEventListener("input", function () { f.doc.value = maskDoc(f.doc.value); });
+  f.zap.addEventListener("input", function () { f.zap.value = maskZap(f.zap.value); });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var dd = digits(f.doc.value), dz = digits(f.zap.value);
+    var r = [
+      mark(f.nome, f.nome.value.trim().length >= 3),
+      mark(f.doc, cpfOk(dd) || cnpjOk(dd)),
+      mark(f.ie, ieOk(f.ie.value)),
+      mark(f.cidade, f.cidade.value.trim().length >= 2),
+      mark(f.zap, dz.length >= 10)
+    ];
+    if (r.indexOf(false) !== -1) {
+      status.textContent = "Corrija os campos destacados.";
+      form.querySelector('[aria-invalid="true"]').focus();
+      return;
+    }
+    var ie = f.ie.value.trim();
+    var msg = "Ol\u00E1! Quero ser distribuidor Qualy Quimy.\n\n" +
+      "*Nome:* " + f.nome.value.trim() + "\n" +
+      "*" + (dd.length === 14 ? "CNPJ" : "CPF") + ":* " + f.doc.value + "\n" +
+      (ie ? "*Inscri\u00E7\u00E3o Estadual:* " + ie.toUpperCase() + "\n" : "") +
+      "*Cidade:* " + f.cidade.value.trim() + "\n" +
+      "*WhatsApp:* " + f.zap.value;
+    var url = "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(msg);
+    status.textContent = "";
+    var a = document.createElement("a");
+    a.href = url; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = "Se o WhatsApp n\u00E3o abriu, toque aqui.";
+    status.appendChild(document.createTextNode("Abrindo o WhatsApp com seus dados. "));
+    status.appendChild(a);
+    window.open(url, "_blank", "noopener");
+  });
+})();
+</script>
